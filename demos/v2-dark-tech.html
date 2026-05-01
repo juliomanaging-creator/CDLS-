@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CDLS OPS — Lumin Folsom Network</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --void: #030812;
+  --navy: #060f24;
+  --panel: #0b1628;
+  --surface: #101e36;
+  --border: rgba(61,214,245,0.08);
+  --border2: rgba(255,255,255,0.04);
+  --cyan: #3dd6f5;
+  --cyan-dim: rgba(61,214,245,0.6);
+  --green: #00ff9d;
+  --amber: #f59e0b;
+  --red: #ff4466;
+  --text: #c8d8f0;
+  --muted: #4a6480;
+  --gold: #d4a843;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: var(--void);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+/* Scanlines */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,200,255,0.008) 2px, rgba(0,200,255,0.008) 4px);
+  pointer-events: none;
+  z-index: 0;
+}
+/* Grid */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(rgba(61,214,245,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(61,214,245,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Top bar */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(3,8,18,0.95);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 32px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tb-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.tb-logo {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cyan);
+  letter-spacing: 0.08em;
+}
+.tb-sep { width: 1px; height: 24px; background: var(--border); }
+.tb-nav {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+.tb-nav a {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.tb-nav a:hover { color: var(--cyan); }
+.tb-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.status-dot {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--green);
+}
+.dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  animation: blink 1.5s infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.tb-btn {
+  background: rgba(61,214,245,0.08);
+  border: 1px solid var(--border);
+  color: var(--cyan);
+  font-size: 11px;
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 0.08em;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.tb-btn:hover {
+  background: rgba(61,214,245,0.15);
+  border-color: var(--cyan-dim);
+}
+
+/* Ticker */
+.ticker {
+  position: relative;
+  z-index: 1;
+  background: rgba(6,15,36,0.8);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 0;
+  overflow: hidden;
+}
+.ticker-inner {
+  display: flex;
+  gap: 48px;
+  animation: ticker 25s linear infinite;
+  white-space: nowrap;
+}
+.tick { font-family: 'Space Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.08em; }
+.tick strong { color: var(--cyan); }
+.tick-sep { color: rgba(61,214,245,0.2); }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* Hero KPI grid */
+.kpi-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-bottom: 1px solid var(--border);
+}
+.kpi {
+  padding: 24px;
+  border-right: 1px solid var(--border2);
+}
+.kpi:last-child { border-right: none; }
+.kpi-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.kpi-val {
+  font-family: 'Space Mono', monospace;
+  font-size: 28px;
+  font-weight: 700;
+  display: block;
+}
+.kpi-unit { font-size: 13px; font-weight: 400; }
+.kpi-delta {
+  font-size: 10px;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.delta-up { color: var(--green); }
+.delta-neutral { color: var(--muted); }
+
+/* Main layout */
+.main {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  min-height: calc(100vh - 120px);
+}
+
+/* Map / hero area */
+.map-area {
+  padding: 32px;
+  border-right: 1px solid var(--border2);
+}
+.area-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.area-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+.area-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+/* California map SVG */
+.ca-map {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+/* MCMC chart */
+.chart-panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+}
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.chart-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Sidebar */
+.sidebar {
+  background: var(--panel);
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-section {
+  padding: 20px;
+  border-bottom: 1px solid var(--border2);
+}
+.ss-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+/* Vehicle table */
+.vehicle-table { width: 100%; border-collapse: collapse; }
+.vehicle-table tr {
+  border-bottom: 1px solid var(--border2);
+  transition: background 0.15s;
+}
+.vehicle-table tr:hover { background: rgba(61,214,245,0.03); }
+.vehicle-table td { padding: 10px 0; font-size: 12px; }
+.vt-name { color: var(--text); font-weight: 500; }
+.vt-type { color: var(--muted); font-size: 10px; }
+.vt-price { color: var(--gold); font-family: 'Space Mono', monospace; font-size: 11px; }
+.vt-score {
+  color: var(--cyan);
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  text-align: right;
+}
+
+/* Activity feed */
+.activity-feed { display: flex; flex-direction: column; gap: 8px; }
+.activity-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 8px;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.2);
+  border: 1px solid var(--border2);
+}
+.ai-icon {
+  width: 28px; height: 28px;
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+.ai-cyan { background: rgba(61,214,245,0.1); border: 1px solid rgba(61,214,245,0.2); }
+.ai-green { background: rgba(0,255,157,0.1); border: 1px solid rgba(0,255,157,0.2); }
+.ai-amber { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.2); }
+.ai-body { flex: 1; }
+.ai-event {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+.ai-detail { font-size: 11px; color: var(--text); line-height: 1.4; }
+.ai-time { font-family: 'Space Mono', monospace; font-size: 9px; color: var(--muted); }
+
+/* Grant cards in sidebar */
+.grant-mini {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.2);
+  border: 1px solid var(--border2);
+  margin-bottom: 8px;
+}
+.gm-icon {
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(61,214,245,0.06);
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.gm-name { font-size: 11px; font-weight: 500; color: var(--text); }
+.gm-amount { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--gold); }
+
+/* Contact strip */
+.contact-strip {
+  position: relative;
+  z-index: 1;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--text);
+}
+.ci-label { color: var(--muted); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+  <div class="tb-left">
+    <div class="tb-logo">CDLS // OPS</div>
+    <div class="tb-sep"></div>
+    <ul class="tb-nav">
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Inventory</a></li>
+      <li><a href="#">Routes</a></li>
+      <li><a href="#">Grants</a></li>
+      <li><a href="#">Analytics</a></li>
+    </ul>
+  </div>
+  <div class="tb-right">
+    <div class="status-dot"><div class="dot"></div>LIVE · Folsom CA</div>
+    <a href="#" class="tb-btn">Schedule Haul</a>
+  </div>
+</div>
+
+<!-- Ticker -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="tick">ROUTE_OPT <strong>FOLSOM→SACTO</strong> score:97 savings:38%</span>
+    <span class="tick-sep">|</span>
+    <span class="tick">MCMC_CONF <strong>94.7%</strong> p=.003 AB_PASS</span>
+    <span class="tick-sep">|</span>
+    <span class="tick">CARBON_CREDIT <strong>$24.68/haul</strong> 14.2 hauls/mo</span>
+    <span class="tick-sep">|</span>
+    <span class="tick">GRANT_STATUS CARB:<strong>ELIGIBLE</strong> CEC:<strong>ELIGIBLE</strong> CalPERS:<strong>ACTIVE</strong></span>
+    <span class="tick-sep">|</span>
+    <span class="tick">INVENTORY <strong>103 vehicles</strong> ZEV:<strong>42</strong> PHEV:<strong>31</strong></span>
+    <span class="tick-sep">|</span>
+    <span class="tick">HUMAN_FIT <strong>91.3%</strong> behavioral calibration active</span>
+    <span class="tick-sep">|</span>
+    <span class="tick">ROUTE_OPT <strong>FOLSOM→SACTO</strong> score:97 savings:38%</span>
+    <span class="tick-sep">|</span>
+    <span class="tick">MCMC_CONF <strong>94.7%</strong> p=.003 AB_PASS</span>
+    <span class="tick-sep">|</span>
+    <span class="tick">CARBON_CREDIT <strong>$24.68/haul</strong> 14.2 hauls/mo</span>
+    <span class="tick-sep">|</span>
+    <span class="tick">GRANT_STATUS CARB:<strong>ELIGIBLE</strong> CEC:<strong>ELIGIBLE</strong> CalPERS:<strong>ACTIVE</strong></span>
+    <span class="tick-sep">|</span>
+    <span class="tick">INVENTORY <strong>103 vehicles</strong> ZEV:<strong>42</strong> PHEV:<strong>31</strong></span>
+    <span class="tick-sep">|</span>
+    <span class="tick">HUMAN_FIT <strong>91.3%</strong> behavioral calibration active</span>
+  </div>
+</div>
+
+<!-- KPI Bar -->
+<div class="kpi-grid">
+  <div class="kpi">
+    <div class="kpi-label">Route Confidence</div>
+    <span class="kpi-val" style="color:var(--cyan)">94.7<span class="kpi-unit">%</span></span>
+    <div class="kpi-delta delta-up">▲ MCMC p=.003</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Cost Reduction</div>
+    <span class="kpi-val" style="color:var(--green)">38<span class="kpi-unit">%</span></span>
+    <div class="kpi-delta delta-up">▲ vs broker model</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Carbon/Haul</div>
+    <span class="kpi-val" style="color:var(--gold)">$24<span class="kpi-unit">.68</span></span>
+    <div class="kpi-delta delta-neutral">14.2 hauls/mo avg</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">In Stock</div>
+    <span class="kpi-val" style="color:var(--text)">103<span class="kpi-unit"> veh</span></span>
+    <div class="kpi-delta delta-up">▲ 42 ZEV eligible</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Grant Pool</div>
+    <span class="kpi-val" style="color:var(--amber)">$7.5<span class="kpi-unit">M</span></span>
+    <div class="kpi-delta delta-neutral">CARB + CEC + CalPERS</div>
+  </div>
+</div>
+
+<!-- Main -->
+<div class="main">
+  <!-- Map Area -->
+  <div class="map-area">
+    <div class="area-header">
+      <div>
+        <div class="area-title">// California Route Intelligence</div>
+        <div class="area-sub">MCMC-optimized corridors · Lumin Folsom Mitsubishi</div>
+      </div>
+      <div style="display:flex;gap:12px;">
+        <div style="font-family:'Space Mono',monospace;font-size:9px;color:var(--green);border:1px solid rgba(0,255,157,0.2);padding:5px 10px;border-radius:4px;">● LIVE</div>
+        <div style="font-family:'Space Mono',monospace;font-size:9px;color:var(--muted);border:1px solid var(--border2);padding:5px 10px;border-radius:4px;">847K RECORDS</div>
+      </div>
+    </div>
+
+    <!-- CA Map -->
+    <div class="ca-map">
+      <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+        <!-- CA state outline simplified -->
+        <path d="M160,20 L200,25 L230,40 L250,70 L260,110 L270,150 L275,190 L280,230 L285,270 L290,310 L295,340 L290,360 L270,375 L250,380 L230,375 L200,360 L170,340 L150,310 L140,280 L130,250 L135,220 L140,190 L130,160 L120,130 L115,100 L120,70 L130,50 L145,30 Z" fill="none" stroke="rgba(61,214,245,0.15)" stroke-width="1.5"/>
+        
+        <!-- Route lines -->
+        <line x1="200" y1="120" x2="210" y2="190" stroke="rgba(61,214,245,0.15)" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="210" y1="190" x2="220" y2="260" stroke="rgba(61,214,245,0.15)" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="200" y1="120" x2="240" y2="140" stroke="rgba(61,214,245,0.1)" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="210" y1="190" x2="240" y2="210" stroke="rgba(61,214,245,0.1)" stroke-width="1" stroke-dasharray="3,3"/>
+
+        <!-- Optimal routes -->
+        <path d="M200,120 C202,150 206,170 210,190" stroke="var(--cyan)" stroke-width="2" fill="none" opacity="0.7"/>
+        <path d="M210,190 C212,220 216,240 220,260" stroke="var(--green)" stroke-width="2" fill="none" opacity="0.7"/>
+
+        <!-- Nodes -->
+        <circle cx="200" cy="120" r="6" fill="var(--panel)" stroke="var(--cyan)" stroke-width="1.5"/>
+        <circle cx="200" cy="120" r="3" fill="var(--cyan)"/>
+        <text x="208" y="118" fill="var(--cyan)" font-size="9" font-family="monospace">FOLSOM</text>
+
+        <circle cx="210" cy="190" r="6" fill="var(--panel)" stroke="var(--cyan)" stroke-width="1.5"/>
+        <circle cx="210" cy="190" r="3" fill="var(--cyan)"/>
+        <text x="218" y="188" fill="var(--text)" font-size="9" font-family="monospace">SACRAMENTO</text>
+
+        <circle cx="220" cy="260" r="5" fill="var(--panel)" stroke="rgba(61,214,245,0.5)" stroke-width="1"/>
+        <circle cx="220" cy="260" r="2" fill="rgba(61,214,245,0.5)"/>
+        <text x="228" y="258" fill="var(--muted)" font-size="8" font-family="monospace">STOCKTON</text>
+
+        <circle cx="240" cy="140" r="4" fill="var(--panel)" stroke="rgba(61,214,245,0.3)" stroke-width="1"/>
+        <text x="246" y="138" fill="var(--muted)" font-size="8" font-family="monospace">AUBURN</text>
+
+        <circle cx="240" cy="210" r="4" fill="var(--panel)" stroke="rgba(61,214,245,0.3)" stroke-width="1"/>
+        <text x="246" y="208" fill="var(--muted)" font-size="8" font-family="monospace">ROSEVILLE</text>
+
+        <!-- Moving truck -->
+        <circle r="4" fill="var(--green)" opacity="0.9">
+          <animateMotion dur="4s" repeatCount="indefinite" path="M200,120 C202,150 206,170 210,190 C212,220 216,240 220,260"/>
+        </circle>
+
+        <!-- Legend -->
+        <rect x="20" y="350" width="200" height="40" rx="4" fill="rgba(0,0,0,0.4)" stroke="var(--border)" stroke-width="1"/>
+        <line x1="30" y1="364" x2="50" y2="364" stroke="var(--cyan)" stroke-width="2"/>
+        <text x="54" y="368" fill="var(--muted)" font-size="8" font-family="monospace">OPTIMAL ROUTE</text>
+        <circle cx="120" cy="364" r="3" fill="var(--green)"/>
+        <text x="126" y="368" fill="var(--muted)" font-size="8" font-family="monospace">LIVE DISPATCH</text>
+      </svg>
+    </div>
+
+    <!-- MCMC Chart -->
+    <div class="chart-panel">
+      <div class="chart-header">
+        <div class="chart-label">// MCMC Regression · 10yr · 847K Records</div>
+        <div class="chart-label" style="color:var(--cyan)">94.7% CONF</div>
+      </div>
+      <svg viewBox="0 0 500 130" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+        <defs>
+          <linearGradient id="cg2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#3dd6f5" stop-opacity="0.1"/>
+            <stop offset="100%" stop-color="#3dd6f5" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <!-- Grid -->
+        <line x1="0" y1="30" x2="500" y2="30" stroke="rgba(61,214,245,0.04)" stroke-width="1"/>
+        <line x1="0" y1="60" x2="500" y2="60" stroke="rgba(61,214,245,0.04)" stroke-width="1"/>
+        <line x1="0" y1="90" x2="500" y2="90" stroke="rgba(61,214,245,0.04)" stroke-width="1"/>
+        <!-- Noise band -->
+        <path d="M0,70 C50,55 90,82 140,65 C190,48 230,78 280,60 C330,42 390,72 450,55 C470,49 490,62 500,57" fill="none" stroke="rgba(61,214,245,0.04)" stroke-width="14"/>
+        <!-- MCMC -->
+        <path d="M0,70 C100,64 200,60 300,57 C400,54 460,52 500,50" fill="url(#cg2)" stroke="rgba(61,214,245,0.35)" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <!-- A/B stabilized -->
+        <path d="M0,70 C100,65 200,62 300,59 C400,56 460,54 500,52" fill="none" stroke="rgba(0,255,157,0.4)" stroke-width="1.5" stroke-dasharray="6,3"/>
+        <!-- Human optimized -->
+        <path d="M0,70 C100,66 200,63 300,61 C400,58 460,56 500,54" fill="none" stroke="#3dd6f5" stroke-width="2"/>
+        <!-- Labels -->
+        <text x="4" y="115" fill="var(--muted)" font-size="8" font-family="monospace">2014</text>
+        <text x="242" y="115" fill="var(--muted)" font-size="8" font-family="monospace">2019</text>
+        <text x="480" y="115" fill="var(--muted)" font-size="8" font-family="monospace">2024</text>
+        <!-- Legend row -->
+        <line x1="0" y1="126" x2="16" y2="126" stroke="rgba(61,214,245,0.04)" stroke-width="8"/>
+        <text x="20" y="130" fill="var(--muted)" font-size="7" font-family="monospace">NOISE</text>
+        <line x1="60" y1="126" x2="76" y2="126" stroke="rgba(61,214,245,0.35)" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <text x="80" y="130" fill="var(--muted)" font-size="7" font-family="monospace">MCMC</text>
+        <line x1="120" y1="126" x2="136" y2="126" stroke="rgba(0,255,157,0.4)" stroke-width="1.5" stroke-dasharray="6,3"/>
+        <text x="140" y="130" fill="var(--muted)" font-size="7" font-family="monospace">A/B STABILIZED</text>
+        <line x1="230" y1="126" x2="246" y2="126" stroke="#3dd6f5" stroke-width="2"/>
+        <text x="250" y="130" fill="var(--muted)" font-size="7" font-family="monospace">HUMAN OPTIMIZED</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-section">
+      <div class="ss-title">// Live Inventory · 103 Vehicles</div>
+      <table class="vehicle-table">
+        <tr>
+          <td><div class="vt-name">Outlander PHEV</div><div class="vt-type">2024 · ZEV ELIGIBLE</div></td>
+          <td class="vt-price">$36,995</td>
+          <td class="vt-score">97↑</td>
+        </tr>
+        <tr>
+          <td><div class="vt-name">Eclipse Cross</div><div class="vt-type">2024 · GRANT READY</div></td>
+          <td class="vt-price">$29,490</td>
+          <td class="vt-score">91↑</td>
+        </tr>
+        <tr>
+          <td><div class="vt-name">Galant EV</div><div class="vt-type">2024 · ZEV ELIGIBLE</div></td>
+          <td class="vt-price">$41,250</td>
+          <td class="vt-score">99↑</td>
+        </tr>
+        <tr>
+          <td><div class="vt-name">Mirage G4</div><div class="vt-type">2024</div></td>
+          <td class="vt-price">$17,190</td>
+          <td class="vt-score">84↑</td>
+        </tr>
+        <tr>
+          <td><div class="vt-name">Outlander Sport</div><div class="vt-type">2024 · PHEV</div></td>
+          <td class="vt-price">$27,740</td>
+          <td class="vt-score">88↑</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="ss-title">// Activity Feed · Real-Time</div>
+      <div class="activity-feed">
+        <div class="activity-item">
+          <div class="ai-icon ai-cyan">🛣️</div>
+          <div class="ai-body">
+            <div class="ai-event">ROUTE_DISPATCH</div>
+            <div class="ai-detail">Folsom → Sacramento · 9 vehicles · Score: 97</div>
+          </div>
+          <div class="ai-time">now</div>
+        </div>
+        <div class="activity-item">
+          <div class="ai-icon ai-green">💰</div>
+          <div class="ai-body">
+            <div class="ai-event">GRANT_ALERT</div>
+            <div class="ai-detail">CARB ZEV window open · $2.5M available</div>
+          </div>
+          <div class="ai-time">4m</div>
+        </div>
+        <div class="activity-item">
+          <div class="ai-icon ai-amber">📊</div>
+          <div class="ai-body">
+            <div class="ai-event">AB_TEST_RESULT</div>
+            <div class="ai-detail">Route B wins · p=.003 · deploy to fleet</div>
+          </div>
+          <div class="ai-time">12m</div>
+        </div>
+        <div class="activity-item">
+          <div class="ai-icon ai-cyan">🌿</div>
+          <div class="ai-body">
+            <div class="ai-event">CARBON_MINT</div>
+            <div class="ai-detail">$24.68 credit generated · haul #1,847</div>
+          </div>
+          <div class="ai-time">18m</div>
+        </div>
+        <div class="activity-item">
+          <div class="ai-icon ai-green">🚗</div>
+          <div class="ai-body">
+            <div class="ai-event">INVENTORY_UPDATE</div>
+            <div class="ai-detail">Outlander PHEV arrived · CDLS route score: 97</div>
+          </div>
+          <div class="ai-time">31m</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="ss-title">// Grant Programs</div>
+      <div class="grant-mini">
+        <div class="gm-icon">🌿</div>
+        <div><div class="gm-name">CARB ZEV Incentive</div><div class="gm-amount">$2.0M–$2.5M</div></div>
+      </div>
+      <div class="grant-mini">
+        <div class="gm-icon">⚡</div>
+        <div><div class="gm-name">CEC Clean Transport</div><div class="gm-amount">$150K–$500K</div></div>
+      </div>
+      <div class="grant-mini">
+        <div class="gm-icon">🏛️</div>
+        <div><div class="gm-name">CalPERS Impact Fund</div><div class="gm-amount">$5M Committed</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact strip -->
+<div class="contact-strip">
+  <div class="contact-item">
+    <div><div class="ci-label">Sales</div><div>916-890-0231</div></div>
+  </div>
+  <div style="width:1px;height:32px;background:var(--border2)"></div>
+  <div class="contact-item">
+    <div><div class="ci-label">Service</div><div>916-409-6957</div></div>
+  </div>
+  <div style="width:1px;height:32px;background:var(--border2)"></div>
+  <div class="contact-item">
+    <div><div class="ci-label">Parts</div><div>916-409-6990</div></div>
+  </div>
+  <div style="width:1px;height:32px;background:var(--border2)"></div>
+  <div class="contact-item">
+    <div><div class="ci-label">Location</div><div>Folsom, California</div></div>
+  </div>
+  <div style="flex:1"></div>
+  <div style="font-family:'Space Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:0.1em;">CDLS AURNAUT NETWORK · DESIGN V2 · DARK TECH DASHBOARD</div>
+</div>
+
+</body>
+</html>
