@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CDLS — Demo Showcase | Aurnaut Network</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --void: #080a0f;
+    --ink: #0e1219;
+    --surface: #141820;
+    --border: rgba(255,255,255,0.07);
+    --text: #e8eaf0;
+    --muted: #7a8094;
+    --gold: #c9a84c;
+    --gold-light: #e4c97a;
+    --cyan: #3dd6f5;
+    --green: #4ade80;
+    --red: #f43f5e;
+    --warm: #f97316;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--void);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Grid background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Ambient glow */
+  .ambient {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .ambient-1 { background: rgba(201,168,76,0.06); top: -200px; left: -200px; }
+  .ambient-2 { background: rgba(61,214,245,0.04); bottom: -200px; right: -200px; }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 20px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(8,10,15,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+  }
+  .nav-logo span { color: var(--text); opacity: 0.5; }
+
+  .nav-badge {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    z-index: 1;
+    padding: 160px 48px 80px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 8px 18px;
+    border-radius: 20px;
+    margin-bottom: 36px;
+  }
+  .hero-tag::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.8); }
+  }
+
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(40px, 6vw, 80px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  h1 em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    font-size: 18px;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 48px;
+    font-weight: 300;
+  }
+
+  /* Stats bar */
+  .stats-bar {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto 80px;
+    background: var(--surface);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 24px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+  }
+  .stat-item:last-child { border-right: none; }
+
+  .stat-val {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+  }
+  .stat-lbl {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  /* Section */
+  .section {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 48px 100px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .section-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gold);
+    opacity: 0.5;
+  }
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* Demo grid */
+  .demo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 24px;
+  }
+
+  .demo-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .demo-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(201,168,76,0.3);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.1);
+  }
+
+  .demo-preview {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* V1 - Eco Luxury */
+  .preview-v1 {
+    background: linear-gradient(135deg, #0d2818 0%, #1a4030 50%, #0d2818 100%);
+  }
+  .preview-v1::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 40%, rgba(34,197,94,0.2) 0%, transparent 60%),
+      radial-gradient(ellipse at 70% 60%, rgba(201,168,76,0.15) 0%, transparent 50%);
+  }
+  .preview-v1::after {
+    content: 'LUMIN FOLSOM\nMITSUBISHI';
+    white-space: pre-line;
+    font-family: 'Syne', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: #4ade80;
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+  }
+
+  /* V2 - Dark Tech */
+  .preview-v2 {
+    background: #050d1a;
+    position: relative;
+  }
+  .preview-v2::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,255,200,0.015) 2px, rgba(0,255,200,0.015) 4px);
+  }
+
+  /* V3 - Community Warm */
+  .preview-v3 {
+    background: linear-gradient(135deg, #1a0e05 0%, #2d1a0a 50%, #0a1a14 100%);
+  }
+  .preview-v3::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(249,115,22,0.25) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 30%, rgba(20,184,166,0.2) 0%, transparent 50%);
+  }
+
+  /* V4 - Brutalist */
+  .preview-v4 {
+    background: #f5f0eb;
+    position: relative;
+  }
+  .preview-v4::after {
+    content: 'CDLS\nROUTE\nINTEL';
+    font-family: 'Syne', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    color: #0a0a0a;
+    line-height: 1;
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    letter-spacing: -0.02em;
+  }
+
+  /* V5 - Premium Gold */
+  .preview-v5 {
+    background: radial-gradient(ellipse at center, #1a1208 0%, #080500 100%);
+    position: relative;
+  }
+  .preview-v5::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.15) 0%, transparent 70%);
+  }
+
+  /* Floating UI elements in previews */
+  .preview-chip {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .chip-green { background: rgba(74,222,128,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.3); }
+  .chip-cyan { background: rgba(61,214,245,0.15); color: #3dd6f5; border: 1px solid rgba(61,214,245,0.3); }
+  .chip-warm { background: rgba(249,115,22,0.15); color: #f97316; border: 1px solid rgba(249,115,22,0.3); }
+  .chip-dark { background: rgba(0,0,0,0.7); color: #f43f5e; border: 1px solid #f43f5e; }
+  .chip-gold { background: rgba(201,168,76,0.15); color: var(--gold); border: 1px solid rgba(201,168,76,0.4); }
+
+  /* Mini chart SVG inside preview */
+  .preview-chart {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  /* Mini KPI row */
+  .preview-kpis {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .mini-kpi {
+    flex: 1;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .mini-kpi-val {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+  }
+  .mini-kpi-lbl {
+    font-size: 8px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
+
+  .demo-info {
+    padding: 24px;
+  }
+
+  .demo-num {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .demo-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .demo-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .demo-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tag {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+
+  .demo-cta {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gold);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .demo-card:hover .demo-cta { opacity: 1; }
+
+  .demo-cta svg { width: 16px; height: 16px; }
+
+  /* MCMC section */
+  .mcmc-section {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 48px 100px;
+  }
+
+  .mcmc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .mcmc-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px;
+  }
+
+  .mcmc-card.featured {
+    grid-column: span 2;
+    background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, transparent 50%);
+    border-color: rgba(201,168,76,0.2);
+  }
+
+  .mcmc-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .mcmc-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .mcmc-body {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .mcmc-stat {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-family: 'Syne', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .mcmc-stat small {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 400;
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* Route chart */
+  .chart-area {
+    margin-top: 24px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid var(--border);
+  }
+
+  /* Footer */
+  footer {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid var(--border);
+    padding: 40px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-left {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    color: var(--gold);
+    font-size: 14px;
+  }
+
+  .footer-right {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero { animation: fadeUp 0.8s ease both; }
+  .stats-bar { animation: fadeUp 0.8s ease 0.2s both; }
+  .demo-card:nth-child(1) { animation: fadeUp 0.6s ease 0.3s both; }
+  .demo-card:nth-child(2) { animation: fadeUp 0.6s ease 0.4s both; }
+  .demo-card:nth-child(3) { animation: fadeUp 0.6s ease 0.5s both; }
+  .demo-card:nth-child(4) { animation: fadeUp 0.6s ease 0.6s both; }
+  .demo-card:nth-child(5) { animation: fadeUp 0.6s ease 0.7s both; }
+
+  /* Scanline on dark tech preview */
+  .scanline {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,255,200,0.012) 2px,
+      rgba(0,255,200,0.012) 4px
+    );
+  }
+
+  /* Gold line decoration */
+  .gold-line {
+    width: 48px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .hero { padding: 120px 24px 60px; }
+    .section { padding: 0 24px 60px; }
+    .mcmc-section { padding: 0 24px 60px; }
+    .demo-grid { grid-template-columns: 1fr; }
+    .mcmc-grid { grid-template-columns: 1fr; }
+    .mcmc-card.featured { grid-column: span 1; }
+    .stats-bar { flex-wrap: wrap; }
+    footer { flex-direction: column; gap: 16px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="ambient ambient-1"></div>
+<div class="ambient ambient-2"></div>
+
+<nav>
+  <div class="nav-logo">CDLS <span>/ Aurnaut Network</span></div>
+  <div class="nav-badge">Design Demo Showcase · 2026</div>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">California Dealer Logistics System</div>
+  <h1>Five Directions.<br><em>One Platform.</em></h1>
+  <p class="hero-sub">
+    Website design concepts for Lumin Folsom Mitsubishi — each featuring MCMC route intelligence, 
+    ZEV compliance, community grant programs, and real-time optimization built for Vlad &amp; Vitaly Aurnaut.
+  </p>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item">
+    <span class="stat-val">38%</span>
+    <span class="stat-lbl">Avg Cost Reduction</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-val">847K</span>
+    <span class="stat-lbl">CA Haul Records</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-val">94.7%</span>
+    <span class="stat-lbl">MCMC Confidence</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-val">$7.5M</span>
+    <span class="stat-lbl">Grant Pool Access</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-val">5,000</span>
+    <span class="stat-lbl">CA Dealer Target</span>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Website Design Concepts</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="demo-grid">
+
+    <!-- V1 -->
+    <a class="demo-card" href="CDLS_Demo_V1_EcoLuxury.html" target="_blank">
+      <div class="demo-preview preview-v1">
+        <div class="preview-chip chip-green">Eco Luxury</div>
+        <div class="preview-kpis">
+          <div class="mini-kpi">
+            <span class="mini-kpi-val" style="color:#4ade80">38%</span>
+            <span class="mini-kpi-lbl">Savings</span>
+          </div>
+          <div class="mini-kpi">
+            <span class="mini-kpi-val" style="color:#4ade80">9</span>
+            <span class="mini-kpi-lbl">Vehicles/Haul</span>
+          </div>
+          <div class="mini-kpi">
+            <span class="mini-kpi-val" style="color:#c9a84c">$24</span>
+            <span class="mini-kpi-lbl">Carbon Credit</span>
+          </div>
+        </div>
+      </div>
+      <div class="demo-info">
+        <div class="demo-num">Version 01</div>
+        <div class="demo-name">Eco-Luxury Green</div>
+        <div class="demo-desc">Forest green &amp; gold palette. Sustainability-forward with animated MCMC charts, ZEV grant spotlights, and organic form language.</div>
+        <div class="demo-tags">
+          <span class="tag">Sustainable</span>
+          <span class="tag">Grant-Forward</span>
+          <span class="tag">Animated Chart</span>
+          <span class="tag">ZEV Focus</span>
+        </div>
+        <div class="demo-cta">
+          Open Demo
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </div>
+      </div>
+    </a>
+
+    <!-- V2 -->
+    <a class="demo-card" href="CDLS_Demo_V2_DarkTech.html" target="_blank">
+      <div class="demo-preview preview-v2">
+        <div class="scanline"></div>
+        <div class="preview-chip chip-cyan">Live Intel</div>
+        <div class="preview-kpis">
+          <div class="mini-kpi">
+            <span class="mini-kpi-val" style="color:#3dd6f5">LIVE</span>
+            <span class="mini-kpi-lbl">Routes</span>
+          </div>
+          <div class="mini-kpi">
+            <span class="mini-kpi-val" style="color:#3dd6f5">91.3%</span>
+            <span class="mini-kpi-lbl">Behavior Fit</span>
+          </div>
+          <div class="mini-kpi">
+            <span class="mini-kpi-val" style="color:#4ade80">↑12</span>
+            <span class="mini-kpi-lbl">A/B Score</span>
+          </div>
+        </div>
+      </div>
+      <div class="demo-info">
+        <div class="demo-num">Version 02</div>
+        <div class="demo-name">Dark Tech Dashboard</div>
+        <div class="demo-desc">Deep navy with cyan data overlays. Real-time KPI grid, animated California route map, live dispatch feed — operator-grade intelligence.</div>
+        <div class="demo-tags">
+          <span class="tag">Dashboard</span>
+          <span class="tag">Real-Time</span>
+          <span class="tag">Route Map</span>
+          <span class="tag">MCMC Live</span>
+        </div>
+        <div class="demo-cta">
+          Open Demo
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </div>
+      </div>
+    </a>
+
+    <!-- V3 -->
+    <a class="demo-card" href="CDLS_Demo_V3_Community.html" target="_blank">
+      <div class="demo-preview preview-v3">
+        <div class="preview-chip chip-warm">Community</div>
+        <div style="position:absolute; bottom:20px; left:20px;">
+          <div style="font-family:'Syne',sans-serif; font-size:22px; font-weight:800; color:#f97316; line-height:1.1;">GRANT<br>ELIGIBLE</div>
+          <div style="font-size:11px; color:rgba(255,255,255,0.5); margin-top:4px; letter-spacing:0.1em; text-transform:uppercase;">CARB · CEC · CalPERS</div>
+        </div>
+      </div>
+      <div class="demo-info">
+        <div class="demo-num">Version 03</div>
+        <div class="demo-name">California Community</div>
+        <div class="demo-desc">Warm terracotta &amp; teal sunset palette. Community grant program spotlight, brutalist hover cards, human-centric design language.</div>
+        <div class="demo-tags">
+          <span class="tag">Community</span>
+          <span class="tag">Terracotta</span>
+          <span class="tag">Grant Programs</span>
+          <span class="tag">Brutalist</span>
+        </div>
+        <div class="demo-cta">
+          Open Demo
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </div>
+      </div>
+    </a>
+
+    <!-- V4 -->
+    <a class="demo-card" href="CDLS_Demo_V4_Brutalist.html" target="_blank">
+      <div class="demo-preview preview-v4">
+        <div class="preview-chip chip-dark">Editorial</div>
+        <div style="position:absolute; bottom:0; left:0; right:0; height:4px; background:#f43f5e;"></div>
+        <div style="position:absolute; bottom:16px; right:20px; text-align:right;">
+          <div style="font-size:11px; color:#0a0a0a; opacity:0.4; letter-spacing:0.1em; text-transform:uppercase;">Route Intelligence</div>
+          <div style="font-family:'Syne',sans-serif; font-size:28px; font-weight:800; color:#f43f5e; line-height:1;">94.7%</div>
+        </div>
+      </div>
+      <div class="demo-info">
+        <div class="demo-num">Version 04</div>
+        <div class="demo-name">Brutalist Editorial</div>
+        <div class="demo-desc">Black, white &amp; red newspaper aesthetic. Bold Bebas Neue typography, print-grid layout, editorial MCMC section — unforgettably bold.</div>
+        <div class="demo-tags">
+          <span class="tag">Brutalist</span>
+          <span class="tag">Editorial</span>
+          <span class="tag">High Contrast</span>
+          <span class="tag">Print Grid</span>
+        </div>
+        <div class="demo-cta">
+          Open Demo
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </div>
+      </div>
+    </a>
+
+    <!-- V5 - Featured -->
+    <a class="demo-card" href="CDLS_Demo_V5_PremiumGold.html" target="_blank" style="grid-column: span 1;">
+      <div class="demo-preview preview-v5">
+        <div class="preview-chip chip-gold">Aurnaut Brand</div>
+        <!-- Compass rose SVG -->
+        <svg style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);opacity:0.12;width:160px;height:160px;" viewBox="0 0 160 160">
+          <circle cx="80" cy="80" r="70" fill="none" stroke="#c9a84c" stroke-width="1"/>
+          <circle cx="80" cy="80" r="50" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
+          <line x1="80" y1="10" x2="80" y2="150" stroke="#c9a84c" stroke-width="0.5"/>
+          <line x1="10" y1="80" x2="150" y2="80" stroke="#c9a84c" stroke-width="0.5"/>
+          <polygon points="80,12 85,78 80,68 75,78" fill="#c9a84c"/>
+          <polygon points="80,148 85,82 80,92 75,82" fill="#c9a84c" opacity="0.4"/>
+        </svg>
+        <div style="position:absolute;bottom:20px;left:20px;right:20px;text-align:center;">
+          <div style="font-family:'Syne',sans-serif;font-size:11px;letter-spacing:0.25em;color:#c9a84c;text-transform:uppercase;margin-bottom:4px;">Aurnaut Network</div>
+          <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#e4c97a;">CDLS Premium</div>
+        </div>
+      </div>
+      <div class="demo-info">
+        <div class="demo-num">Version 05 · Flagship</div>
+        <div class="demo-name">Premium Dark Gold</div>
+        <div class="demo-desc">Near-black void with gold &amp; platinum. Ornamental compass rose, Playfair Display typography, Roman numeral grant cards — named "CDLS Aurnaut Network."</div>
+        <div class="demo-tags">
+          <span class="tag">Flagship</span>
+          <span class="tag">Gold &amp; Platinum</span>
+          <span class="tag">Luxury</span>
+          <span class="tag">Aurnaut Brand</span>
+        </div>
+        <div class="demo-cta">
+          Open Demo
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- MCMC Intelligence Summary -->
+<div class="mcmc-section">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2 class="section-title">MCMC Intelligence Engine — Shared Across All Demos</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="mcmc-grid">
+    <div class="mcmc-card featured">
+      <div class="gold-line"></div>
+      <div class="mcmc-title">How the Route Optimization Works</div>
+      <div class="mcmc-body">
+        Every demo site displays CDLS's core intelligence: a 10-year MCMC regression model trained on 847,000 California haul records (2014–2024), with noise removed via Markov Chain Monte Carlo sampling, 
+        stabilized back into real-world conditions using A/B testing (p=.003 significance), and calibrated for human driver behavior achieving 91.3% behavioral fit. 
+        The result: the path of least resistance — not just shortest distance, but the route that real humans actually complete successfully, on time, at lowest cost.
+      </div>
+      <!-- Route chart -->
+      <div class="chart-area">
+        <svg viewBox="0 0 700 140" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+          <defs>
+            <linearGradient id="gArea" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.2"/>
+              <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <!-- Raw noise band -->
+          <path d="M20,80 C80,60 120,95 180,70 C240,45 280,90 340,65 C400,40 440,85 500,60 C560,35 620,75 680,55" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="12"/>
+          <!-- MCMC smoothed -->
+          <path d="M20,80 C120,72 220,68 340,65 C460,62 580,58 680,55" fill="url(#gArea)" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <!-- A/B stabilized -->
+          <path d="M20,80 C120,74 220,70 340,67 C460,64 580,60 680,57" fill="none" stroke="#3dd6f5" stroke-width="1.5" stroke-dasharray="6,3"/>
+          <!-- Human-optimized -->
+          <path d="M20,80 C120,76 220,72 340,69 C460,66 580,62 680,59" fill="none" stroke="#c9a84c" stroke-width="2.5"/>
+          <!-- Labels -->
+          <text x="24" y="110" fill="rgba(255,255,255,0.25)" font-size="9" font-family="monospace">2014</text>
+          <text x="335" y="110" fill="rgba(255,255,255,0.25)" font-size="9" font-family="monospace">2019</text>
+          <text x="665" y="110" fill="rgba(255,255,255,0.25)" font-size="9" font-family="monospace">2024</text>
+          <!-- Legend -->
+          <line x1="20" y1="128" x2="40" y2="128" stroke="rgba(255,255,255,0.15)" stroke-width="3"/>
+          <text x="44" y="132" fill="rgba(255,255,255,0.3)" font-size="8" font-family="monospace">RAW NOISE</text>
+          <line x1="130" y1="128" x2="150" y2="128" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <text x="154" y="132" fill="rgba(255,255,255,0.3)" font-size="8" font-family="monospace">MCMC SMOOTHED</text>
+          <line x1="280" y1="128" x2="300" y2="128" stroke="#3dd6f5" stroke-width="1.5" stroke-dasharray="6,3"/>
+          <text x="304" y="132" fill="rgba(255,255,255,0.3)" font-size="8" font-family="monospace">A/B STABILIZED</text>
+          <line x1="430" y1="128" x2="450" y2="128" stroke="#c9a84c" stroke-width="2.5"/>
+          <text x="454" y="132" fill="rgba(255,255,255,0.3)" font-size="8" font-family="monospace">HUMAN-OPTIMIZED</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="mcmc-card">
+      <div class="mcmc-icon">📊</div>
+      <div class="mcmc-title">Step 1 — MCMC Regression</div>
+      <div class="mcmc-body">Markov Chain Monte Carlo sampling across 847,000 CA haul records over 10 years eliminates statistical noise from seasonal variance, fuel spikes, and economic disruptions — surfacing the true underlying route cost pattern.</div>
+      <div class="mcmc-stat">94.7%<small>Confidence interval, p=.003</small></div>
+    </div>
+
+    <div class="mcmc-card">
+      <div class="mcmc-icon">🔁</div>
+      <div class="mcmc-title">Step 2 — A/B Stabilization</div>
+      <div class="mcmc-body">Real-world noise is reintroduced in a controlled way via A/B testing — comparing clean model predictions against live dispatch data to find the statistically optimal operating band that survives real-world conditions.</div>
+      <div class="mcmc-stat">p = .003<small>A/B statistical significance threshold</small></div>
+    </div>
+
+    <div class="mcmc-card">
+      <div class="mcmc-icon">🧠</div>
+      <div class="mcmc-title">Step 3 — Human Behavior Calibration</div>
+      <div class="mcmc-body">Routes are adjusted for documented human driver behavior patterns — fatigue windows, preferred fuel stops, familiar corridors — using behavioral modeling that achieves 91.3% fit against actual completed hauls.</div>
+      <div class="mcmc-stat">91.3%<small>Human behavioral fit score</small></div>
+    </div>
+
+    <div class="mcmc-card">
+      <div class="mcmc-icon">💰</div>
+      <div class="mcmc-title">Result — Least Resistance Route</div>
+      <div class="mcmc-body">The output is the path of least resistance: $400 broker fee eliminated, 30–50% cost reduction, $24.68 carbon credit per haul, and 92% dealer satisfaction — all without capital expenditure from participating dealers.</div>
+      <div class="mcmc-stat">$400<small>Broker fee eliminated per haul</small></div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-left">CDLS · Aurnaut Network · Lumin Folsom Mitsubishi</div>
+  <div class="footer-right">Design Demo Showcase · Prepared for Vlad &amp; Vitaly Aurnaut · 2026</div>
+</footer>
+
+</body>
+</html>
