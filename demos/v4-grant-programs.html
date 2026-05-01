@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 EV Grant Programs — Lumin Folsom Mitsubishi</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #0a0a0a;
+  --paper: #f0ebe2;
+  --white: #ffffff;
+  --ink: #1a1a1a;
+  --muted: #6a6a6a;
+  --border: #d4cfc6;
+  --border-dark: rgba(10,10,10,0.1);
+  --green: #1a6e3a;
+  --green-light: #2a9d56;
+  --green-pale: #eaf4ee;
+  --gold: #b87c2a;
+  --gold-pale: #faf0e2;
+  --red: #cc2222;
+  --amber: #c27520;
+  --blue: #1a4e8a;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'IBM Plex Sans', sans-serif;
+  min-height: 100vh;
+}
+
+/* Nav */
+nav {
+  padding: 0 40px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--black);
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 0.06em; }
+.nav-logo span { color: var(--green); }
+.nav-links { display: flex; gap: 0; list-style: none; }
+.nav-links a {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0 18px;
+  border-right: 1px solid var(--border-dark);
+  line-height: 64px;
+  transition: color 0.2s;
+}
+.nav-links a:last-child { border-right: none; }
+.nav-links a:hover, .nav-links a.active { color: var(--green); }
+.nav-cta {
+  background: var(--green);
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.nav-cta:hover { background: var(--green-light); }
+
+/* Page header */
+.page-header {
+  padding: 56px 40px 0;
+  border-bottom: 3px solid var(--black);
+}
+.ph-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.ph-tag::before { content: ''; width: 32px; height: 2px; background: var(--green); }
+.ph-h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(54px, 8vw, 100px);
+  line-height: 0.93;
+  margin-bottom: 24px;
+}
+.ph-h1 span { color: var(--green); }
+.ph-bottom {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: end;
+  padding: 20px 0;
+  border-top: 1px solid var(--border-dark);
+}
+.ph-summary {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 640px;
+  font-weight: 300;
+}
+.ph-total-val {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 52px;
+  line-height: 1;
+  color: var(--green);
+  display: block;
+  text-align: right;
+}
+.ph-total-lbl {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 4px;
+  text-align: right;
+}
+
+/* Expired notice banner */
+.expired-banner {
+  background: #2a0808;
+  color: white;
+  padding: 14px 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.eb-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: var(--red);
+  padding: 4px 10px;
+  flex-shrink: 0;
+}
+.eb-text {
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.5;
+}
+.eb-text strong { color: rgba(255,255,255,0.8); }
+
+/* Section band */
+.section-band {
+  padding: 10px 40px;
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.sb-label { font-family: 'Bebas Neue', sans-serif; font-size: 15px; letter-spacing: 0.08em; color: white; }
+.sb-line { flex: 1; height: 1px; background: rgba(255,255,255,0.1); }
+.sb-note { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; }
+.sb-live {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6ddfaa;
+  background: rgba(109,223,170,0.12);
+  border: 1px solid rgba(109,223,170,0.25);
+  padding: 3px 10px;
+}
+.sb-deadline {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffbb55;
+  background: rgba(255,187,85,0.1);
+  border: 1px solid rgba(255,187,85,0.25);
+  padding: 3px 10px;
+}
+
+/* =====================
+   FEATURED GRANT — CC4A / DCAP
+   ===================== */
+.grant-featured {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  border-bottom: 1px solid var(--border-dark);
+}
+.gf-body {
+  padding: 40px;
+  border-right: 1px solid var(--border-dark);
+}
+.gf-kicker {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 12px;
+  border-top: 2px solid var(--green);
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.gf-name { font-family: 'Bebas Neue', sans-serif; font-size: clamp(32px, 4.5vw, 54px); line-height: 1; margin-bottom: 16px; }
+.gf-sub { font-size: 14px; color: var(--muted); line-height: 1.75; max-width: 520px; margin-bottom: 20px; font-weight: 300; }
+.gf-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 28px; }
+.gf-tag {
+  background: var(--green-pale);
+  border: 1px solid rgba(26,110,58,0.15);
+  color: var(--green);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.07em;
+  padding: 4px 10px;
+}
+.gf-pathways {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.pathway {
+  border: 1px solid var(--border-dark);
+  padding: 16px;
+  background: white;
+}
+.pw-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.pw-amount {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  color: var(--green);
+  line-height: 1;
+  display: block;
+  margin-bottom: 4px;
+}
+.pw-note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+.gf-cta {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 13px 26px;
+  text-decoration: none;
+  margin-right: 12px;
+  transition: background 0.2s;
+}
+.gf-cta:hover { background: var(--green-light); }
+.gf-cta-sec {
+  display: inline-block;
+  border: 1px solid var(--border-dark);
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 13px 26px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.gf-cta-sec:hover { border-color: var(--green); color: var(--green); }
+
+.gf-aside { padding: 40px; }
+.gfa-amount {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 80px;
+  line-height: 1;
+  color: var(--green);
+  display: block;
+  margin-bottom: 2px;
+}
+.gfa-unit {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.gfa-plus {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  margin-bottom: 24px;
+  padding: 6px 10px;
+  background: var(--gold-pale);
+  border: 1px solid rgba(184,124,42,0.15);
+  display: inline-block;
+}
+.gfa-list { list-style: none; }
+.gfa-list li {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border-dark);
+  display: flex;
+  gap: 10px;
+}
+.gfa-list li::before { content: '→'; color: var(--green); flex-shrink: 0; }
+
+/* =====================
+   3-COL GRANTS
+   ===================== */
+.grants-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid var(--border-dark);
+}
+.g3-card {
+  padding: 32px 28px;
+  border-right: 1px solid var(--border-dark);
+  transition: background 0.2s;
+}
+.g3-card:last-child { border-right: none; }
+.g3-card:hover { background: white; }
+.g3-kicker {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 10px;
+  border-top: 1.5px solid var(--green);
+  padding-top: 10px;
+}
+.g3-kicker.amber { color: var(--amber); border-top-color: var(--amber); }
+.g3-kicker.blue { color: var(--blue); border-top-color: var(--blue); }
+.g3-name { font-family: 'Bebas Neue', sans-serif; font-size: 26px; line-height: 1.1; margin-bottom: 6px; }
+.g3-amount { font-family: 'Bebas Neue', sans-serif; font-size: 44px; display: block; line-height: 1; margin-bottom: 12px; }
+.amount-gold { color: var(--gold); }
+.amount-amber { color: var(--amber); }
+.amount-blue { color: var(--blue); }
+.g3-desc { font-size: 12px; color: var(--muted); line-height: 1.75; margin-bottom: 14px; font-weight: 300; }
+.deadline-flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(255,187,85,0.1);
+  border: 1px solid rgba(255,187,85,0.3);
+  color: var(--amber);
+  padding: 4px 10px;
+  margin-bottom: 10px;
+}
+.deadline-flag::before { content: '⚠'; font-size: 10px; }
+.g3-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px; }
+.g3-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid var(--border-dark);
+  color: var(--muted);
+  padding: 3px 7px;
+}
+
+/* =====================
+   UTILITY SECTION — 2 col
+   ===================== */
+.grants-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border-dark);
+}
+.g2-card {
+  padding: 36px 40px;
+  border-right: 1px solid var(--border-dark);
+  transition: background 0.2s;
+}
+.g2-card:last-child { border-right: none; }
+.g2-card:hover { background: white; }
+.g2-kicker {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 10px;
+  border-top: 1.5px solid var(--blue);
+  padding-top: 10px;
+}
+.g2-name { font-family: 'Bebas Neue', sans-serif; font-size: 28px; line-height: 1.1; margin-bottom: 6px; }
+.g2-amount { font-family: 'Bebas Neue', sans-serif; font-size: 44px; color: var(--blue); display: block; line-height: 1; margin-bottom: 12px; }
+.g2-desc { font-size: 13px; color: var(--muted); line-height: 1.75; margin-bottom: 14px; font-weight: 300; }
+.g2-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.g2-tag { font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid var(--border-dark); color: var(--muted); padding: 3px 7px; }
+
+/* =====================
+   DEALER NETWORK GRANTS
+   ===================== */
+.network-section {
+  background: var(--black);
+  padding: 48px 40px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 56px;
+  align-items: center;
+}
+.ns-left h2 { font-family: 'Bebas Neue', sans-serif; font-size: 48px; line-height: 1.05; color: white; margin-bottom: 14px; }
+.ns-left h2 span { color: #6ddfaa; }
+.ns-left p { font-size: 13px; color: rgba(255,255,255,0.35); line-height: 1.75; font-weight: 300; margin-bottom: 24px; }
+.ns-cta {
+  display: inline-block;
+  border: 1px solid rgba(109,223,170,0.3);
+  color: #6ddfaa;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 22px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.ns-cta:hover { background: rgba(109,223,170,0.08); }
+.ns-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.ns-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); padding: 22px; }
+.nsc-kicker { font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(109,223,170,0.55); margin-bottom: 8px; }
+.nsc-name { font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: white; line-height: 1.1; margin-bottom: 6px; }
+.nsc-amount { font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: #6ddfaa; display: block; margin-bottom: 8px; }
+.nsc-desc { font-size: 11px; color: rgba(255,255,255,0.28); line-height: 1.6; }
+
+/* =====================
+   ELIGIBILITY
+   ===================== */
+.eligibility-section {
+  padding: 48px 40px;
+  border-top: 3px solid var(--black);
+  border-bottom: 3px solid var(--black);
+  background: white;
+}
+.elig-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 28px;
+}
+.elig-h2 { font-family: 'Bebas Neue', sans-serif; font-size: 44px; line-height: 1; }
+.elig-note {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border-dark);
+  padding: 8px 14px;
+}
+.elig-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 2px solid var(--black);
+}
+.elig-col { padding: 22px 20px; border-right: 1px solid var(--border-dark); }
+.elig-col:last-child { border-right: none; }
+.elig-col-head {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  margin-bottom: 4px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--black);
+}
+.elig-col-sub {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+}
+.elig-item { display: flex; gap: 8px; font-size: 11px; color: var(--muted); line-height: 1.5; margin-bottom: 9px; }
+.ei-yes { color: var(--green); flex-shrink: 0; font-size: 12px; }
+.ei-no { color: var(--red); flex-shrink: 0; font-size: 12px; }
+
+/* =====================
+   HOW TO APPLY
+   ===================== */
+.apply-section { padding: 48px 40px; border-bottom: 3px solid var(--black); }
+.apply-h2 { font-family: 'Bebas Neue', sans-serif; font-size: 44px; line-height: 1; margin-bottom: 6px; }
+.apply-sub { font-size: 13px; color: var(--muted); font-weight: 300; margin-bottom: 32px; }
+.apply-steps { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--border-dark); }
+.apply-step { padding: 28px; border-right: 1px solid var(--border-dark); }
+.apply-step:last-child { border-right: none; }
+.as-big { font-family: 'Bebas Neue', sans-serif; font-size: 64px; color: var(--border); line-height: 1; display: block; margin-bottom: -8px; }
+.as-title { font-family: 'Bebas Neue', sans-serif; font-size: 22px; margin-bottom: 8px; }
+.as-desc { font-size: 12px; color: var(--muted); line-height: 1.7; font-weight: 300; }
+.as-time { margin-top: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--green); letter-spacing: 0.06em; }
+.as-warn { margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--amber); letter-spacing: 0.06em; }
+
+/* =====================
+   WHAT'S GONE NOTE
+   ===================== */
+.expired-section {
+  background: #1a0505;
+  padding: 32px 40px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+.exp-head {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(204,34,34,0.7);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.exp-head::after { content: ''; flex: 1; height: 1px; background: rgba(204,34,34,0.15); }
+.expired-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.exp-item {
+  padding: 16px;
+  border: 1px solid rgba(204,34,34,0.12);
+  background: rgba(204,34,34,0.04);
+}
+.exp-name { font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: rgba(255,255,255,0.4); margin-bottom: 4px; text-decoration: line-through; text-decoration-color: rgba(204,34,34,0.4); }
+.exp-date { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: rgba(204,34,34,0.6); margin-bottom: 6px; }
+.exp-desc { font-size: 11px; color: rgba(255,255,255,0.2); line-height: 1.5; }
+
+/* Footer */
+footer {
+  background: var(--black);
+  color: white;
+  padding: 48px 40px 24px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 32px;
+  border-top: 4px solid var(--green);
+}
+.ft-logo { font-family: 'Bebas Neue', sans-serif; font-size: 26px; margin-bottom: 6px; }
+.ft-logo span { color: #6ddfaa; }
+.ft-sub { font-size: 12px; color: rgba(255,255,255,0.3); line-height: 1.7; font-weight: 300; margin-bottom: 14px; }
+.ft-hotline { font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #6ddfaa; }
+.ft-h { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(109,223,170,0.6); margin-bottom: 12px; }
+.ft-link { display: block; font-size: 12px; color: rgba(255,255,255,0.35); text-decoration: none; line-height: 2.1; transition: color 0.2s; }
+.ft-link:hover { color: white; }
+.footer-bar {
+  background: var(--black);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 14px 40px;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: rgba(255,255,255,0.2);
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 960px) {
+  .grant-featured, .grants-3col, .grants-2col, .network-section, .ns-cards, .elig-grid, .apply-steps, .expired-grid, .ph-bottom, footer { grid-template-columns: 1fr; }
+  .gf-body, .g3-card, .g2-card { border-right: none; border-bottom: 1px solid var(--border-dark); }
+  .ph-total-val, .ph-total-lbl { text-align: left; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Lumin Folsom <span>Mitsubishi</span></div>
+  <ul class="nav-links">
+    <li><a href="#">Inventory</a></li>
+    <li><a href="#" class="active">2026 Grants</a></li>
+    <li><a href="#">Financing</a></li>
+    <li><a href="#">Service</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <a href="tel:9168900231" class="nav-cta">Grant Specialist: 916-890-0231</a>
+</nav>
+
+<!-- Page header -->
+<div class="page-header">
+  <div class="ph-tag">Verified · Current as of May 2026 · Lumin Folsom Mitsubishi</div>
+  <div class="ph-h1">2026 EV <span>SAVINGS</span><br>PROGRAMS</div>
+  <div class="ph-bottom">
+    <p class="ph-summary">
+      The EV incentive landscape changed significantly in 2025. The federal $7,500 tax credit and California's CVRP rebate
+      are both gone — but substantial savings remain for buyers who know where to look. Our grant specialists 
+      have mapped every program still active in 2026 and handle the paperwork on your behalf.
+    </p>
+    <div>
+      <span class="ph-total-val">Up to $14,000</span>
+      <div class="ph-total-lbl">Max verified savings · Income-qualified buyers</div>
+    </div>
+  </div>
+</div>
+
+<!-- Expired notice -->
+<div class="expired-banner">
+  <span class="eb-label">Important Update</span>
+  <p class="eb-text">
+    <strong>The federal IRA $7,500 EV tax credit expired September 30, 2025.</strong> &nbsp;The California CVRP rebate closed November 2023. &nbsp;CAV/HOV lane decals expired October 2025. &nbsp;The programs below are what is actually available today.
+  </p>
+</div>
+
+<!-- ============================================
+     SECTION 1 — INCOME-QUALIFIED STATE PROGRAMS
+     ============================================ -->
+<div class="section-band">
+  <span class="sb-label">California State Programs</span>
+  <div class="sb-line"></div>
+  <span class="sb-live">Active · 2026</span>
+  <span class="sb-note">Income-qualified buyers · Applied before purchase</span>
+</div>
+
+<!-- Featured: DCAP / CC4A -->
+<div class="grant-featured">
+  <div class="gf-body">
+    <div class="gf-kicker">CARB · Statewide · Driving Clean Assistance Program</div>
+    <div class="gf-name">Clean Cars 4 All &amp;<br>DCAP — Down Payment Grants</div>
+    <p class="gf-sub">
+      California's primary active EV incentive for 2026. The Driving Clean Assistance Program (DCAP) 
+      provides upfront down-payment grants paid directly to the dealer — no repayment required. 
+      Two pathways depending on your situation: scrap-and-replace (higher amount) or financing assistance.
+      Income must be at or below 300% of the federal poverty level (~$93,600 for a family of four).
+      Vehicles must be priced at $45,000 or less. <strong>You must apply before purchasing — not retroactive.</strong>
+    </p>
+    <div class="gf-tags">
+      <span class="gf-tag">Income ≤ 300% FPL</span>
+      <span class="gf-tag">Apply Before Purchase</span>
+      <span class="gf-tag">Vehicle Max $45,000</span>
+      <span class="gf-tag">New or Used EV / PHEV</span>
+      <span class="gf-tag">Paid Direct to Dealer</span>
+      <span class="gf-tag">Statewide · All CA Residents</span>
+    </div>
+    <div class="gf-pathways">
+      <div class="pathway">
+        <div class="pw-label">Pathway A — Scrap &amp; Replace</div>
+        <span class="pw-amount">$12,000</span>
+        <p class="pw-note">Scrap a 2010 or older gas/diesel vehicle + purchase qualifying EV or PHEV. DAC residents may qualify for up to $12,000 in total grants.</p>
+      </div>
+      <div class="pathway">
+        <div class="pw-label">Pathway B — Financing Assistance</div>
+        <span class="pw-amount">$7,500</span>
+        <p class="pw-note">No vehicle to scrap? Still receive up to $7,500 toward EV purchase, plus access to low-interest loans capped at 8% APR up to $45,000.</p>
+      </div>
+    </div>
+    <a href="#" class="gf-cta">Check Eligibility &amp; Apply →</a>
+    <a href="tel:9168900231" class="gf-cta-sec">Talk to Our Specialist</a>
+  </div>
+  <div class="gf-aside">
+    <span class="gfa-amount">$14,000</span>
+    <div class="gfa-unit">Max total · Scrap + charging grant</div>
+    <div class="gfa-plus">+ $2,000 charging incentive included</div>
+    <ul class="gfa-list">
+      <li>Grant is paid directly to the dealership at time of sale — no out-of-pocket advance</li>
+      <li>+$2,000 for home Level 2 charger installation or public charging prepaid card</li>
+      <li>Income limit: ≤300% FPL (~$93,600 for family of 4, updated annually)</li>
+      <li>Must apply and receive approval <em>before</em> purchasing — program is not retroactive</li>
+      <li>First-time CARB incentive participants only (not available if you used CVRP, CC4A, or CVAP previously)</li>
+      <li>Vehicle must be on CARB's eligible vehicle list — all qualifying Mitsubishi EVs and PHEVs included</li>
+      <li>Low-interest auto loans available up to $45,000 at ≤8% APR through program credit union partners</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================================
+     SECTION 2 — FEDERAL SURVIVING PROGRAMS
+     ============================================ -->
+<div class="section-band">
+  <span class="sb-label">Federal Programs — Still Active</span>
+  <div class="sb-line"></div>
+  <span class="sb-deadline">⚠ Deadline: June 30, 2026</span>
+  <span class="sb-note">Act before these also expire</span>
+</div>
+
+<div class="grants-3col">
+  <!-- Home Charger Credit -->
+  <div class="g3-card">
+    <div class="g3-kicker amber">Federal · IRS Section 30C · Expires June 30, 2026</div>
+    <div class="g3-name">Home EV Charger Tax Credit</div>
+    <div class="deadline-flag">Expires June 30, 2026</div>
+    <span class="g3-amount amount-amber">$1,000</span>
+    <p class="g3-desc">
+      The Alternative Fuel Vehicle Refueling Property Credit (Section 30C) covers 30% of the cost of 
+      purchasing and installing a qualifying Level 2 home EV charger — up to $1,000 for homeowners. 
+      Equipment must be installed and placed in service before July 1, 2026. 
+      Eligible census tracts only — our team verifies your address at no charge. 
+      Claimed on your federal tax return (Form 8911).
+    </p>
+    <div class="g3-tags">
+      <span class="g3-tag">Homeowners</span>
+      <span class="g3-tag">Level 2 / 240V Charger</span>
+      <span class="g3-tag">30% of Cost</span>
+      <span class="g3-tag">Eligible Census Tracts</span>
+      <span class="g3-tag">Form 8911</span>
+    </div>
+  </div>
+
+  <!-- Auto Loan Interest Deduction -->
+  <div class="g3-card">
+    <div class="g3-kicker amber">Federal · OBBBA · 2025–2028</div>
+    <div class="g3-name">Vehicle Loan Interest Deduction</div>
+    <span class="g3-amount amount-amber">$10,000/yr</span>
+    <p class="g3-desc">
+      New under the One Big Beautiful Bill Act (July 2025): buyers can deduct up to $10,000 per year 
+      in interest paid on a qualifying new vehicle loan. Applies 2025–2028. Vehicle must have 
+      final assembly in the United States. Income limit: MAGI up to $100,000 single / $200,000 joint 
+      for the full deduction. Above-the-line deduction — no itemizing required.
+      Ask us which Mitsubishi models qualify under the US-assembly requirement.
+    </p>
+    <div class="g3-tags">
+      <span class="g3-tag">US-Assembled Vehicles</span>
+      <span class="g3-tag">Above-the-Line</span>
+      <span class="g3-tag">2025–2028 Loans</span>
+      <span class="g3-tag">Income Limit $100K/$200K</span>
+    </div>
+  </div>
+
+  <!-- SMUD / PG&E charger -->
+  <div class="g3-card">
+    <div class="g3-kicker blue">Utility Rebates · PG&amp;E &amp; SMUD</div>
+    <div class="g3-name">Home Charger &amp; EV Rate Rebates</div>
+    <span class="g3-amount amount-blue">Up to $1,000+</span>
+    <p class="g3-desc">
+      SMUD and PG&amp;E offer rebates for Level 2 home charger purchase and installation, 
+      plus reduced time-of-use electricity rates for EV owners charging off-peak. 
+      Income-qualified customers receive larger rebates — up to $1,500 in some territories. 
+      Panel upgrade support also available in select programs. 
+      We coordinate directly with your utility as part of your purchase process.
+    </p>
+    <div class="g3-tags">
+      <span class="g3-tag">PG&amp;E Service Area</span>
+      <span class="g3-tag">SMUD Service Area</span>
+      <span class="g3-tag">Level 2 Charger</span>
+      <span class="g3-tag">TOU Rate Discount</span>
+      <span class="g3-tag">Income Bonus</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     SECTION 3 — REGIONAL & ZIP-SPECIFIC
+     ============================================ -->
+<div class="section-band">
+  <span class="sb-label">Regional &amp; Zip-Code Programs</span>
+  <div class="sb-line"></div>
+  <span class="sb-live">Varies by Location</span>
+  <span class="sb-note">Check DriveClean.ca.gov for your address</span>
+</div>
+
+<div class="grants-2col">
+  <div class="g2-card">
+    <div class="g2-kicker">Sacramento Region · SMUD Territory</div>
+    <div class="g2-name">SMUD EV Advantage Programs</div>
+    <span class="g2-amount">Varies</span>
+    <p class="g2-desc">
+      SMUD (Sacramento Municipal Utility District) customers in Folsom and the greater Sacramento 
+      region have access to EV-specific rate plans, home charger rebates, and income-qualified 
+      EV purchase assistance programs. Folsom falls within SMUD's territory — 
+      programs include EV Home Charging rebates, the EV Advantage rate (reduced overnight rates), 
+      and income-qualified additional support.
+      We confirm your specific eligibility based on your service address at the time of purchase.
+    </p>
+    <div class="g2-tags">
+      <span class="g2-tag">Folsom SMUD Territory</span>
+      <span class="g2-tag">EV Home Charging Rebate</span>
+      <span class="g2-tag">Off-Peak Rate Plans</span>
+      <span class="g2-tag">Income-Qualified Bonus</span>
+    </div>
+  </div>
+
+  <div class="g2-card">
+    <div class="g2-kicker">DriveClean · CARB Incentive Finder</div>
+    <div class="g2-name">ZIP Code Incentive Search</div>
+    <span class="g2-amount" style="font-size:28px;line-height:1.2;">Your ZIP<br>May Qualify</span>
+    <p class="g2-desc">
+      California's DriveClean.ca.gov tool surfaces every active incentive program available 
+      at your specific zip code — including regional air district programs, municipal utility rebates, 
+      employer programs, and income-based bonuses that aren't visible at the state level. 
+      Programs vary significantly by location and change frequently. 
+      Our grant specialist runs this search for every customer at no cost, and identifies 
+      programs you may not have found on your own.
+    </p>
+    <div class="g2-tags">
+      <span class="g2-tag">DriveClean.ca.gov</span>
+      <span class="g2-tag">Air District Programs</span>
+      <span class="g2-tag">Municipal Utility Rebates</span>
+      <span class="g2-tag">We Run the Search for You</span>
+    </div>
+  </div>
+</div>
+
+<!-- How dealer network helps -->
+<div class="section-band">
+  <span class="sb-label">How Our Network Helps</span>
+  <div class="sb-line"></div>
+  <span class="sb-note">Institutional grants that reduce what you pay</span>
+</div>
+
+<div class="network-section">
+  <div class="ns-left">
+    <h2>OUR GRANTS.<br>YOUR <span>SAVINGS.</span></h2>
+    <p>As a CDLS certified partner, we access $7.5M in institutional grants from CARB, CEC, and CalPERS. 
+    These grants fund our zero-emission delivery network — eliminating broker fees and reducing 
+    the true delivered cost of every vehicle on our lot.</p>
+    <a href="#" class="ns-cta">Talk to a Grant Specialist →</a>
+  </div>
+  <div class="ns-cards">
+    <div class="ns-card">
+      <div class="nsc-kicker">CARB · ZEV Program</div>
+      <div class="nsc-name">ZEV Incentive Pool</div>
+      <span class="nsc-amount">$2.5M</span>
+      <p class="nsc-desc">CARB ZEV funding accessed through our network — enables lower delivery costs and broader EV inventory for our buyers.</p>
+    </div>
+    <div class="ns-card">
+      <div class="nsc-kicker">CEC · Clean Transport</div>
+      <div class="nsc-name">CEC Clean Transport</div>
+      <span class="nsc-amount">$500K</span>
+      <p class="nsc-desc">California Energy Commission funding supports our clean delivery infrastructure — reducing per-vehicle costs passed to you.</p>
+    </div>
+    <div class="ns-card">
+      <div class="nsc-kicker">CalPERS · Impact Capital</div>
+      <div class="nsc-name">CalPERS Fund</div>
+      <span class="nsc-amount">$5M</span>
+      <p class="nsc-desc">Institutional backing enables zero-capital ZEV compliance — we absorb regulatory transition costs so they never appear in your price.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Eligibility -->
+<div class="eligibility-section">
+  <div class="elig-header">
+    <div class="elig-h2">2026 Eligibility<br>Quick Guide</div>
+    <div class="elig-note">Our specialists confirm your exact situation at no charge</div>
+  </div>
+  <div class="elig-grid">
+    <div class="elig-col">
+      <div class="elig-col-head">DCAP — Scrap &amp; Replace</div>
+      <div class="elig-col-sub">Up to $12,000 + $2,000 charging</div>
+      <div class="elig-item"><span class="ei-yes">✓</span> CA resident · 18 or older</div>
+      <div class="elig-item"><span class="ei-yes">✓</span> Income ≤300% FPL (~$93,600 family of 4)</div>
+      <div class="elig-item"><span class="ei-yes">✓</span> Own a 2010 or older gas/diesel to scrap</div>
+      <div class="elig-item"><span class="ei-yes">✓</span> Vehicle ≤$45,000 purchase price</div>
+      <div class="elig-item"><span class="ei-yes">✓</span> Apply and be approved BEFORE purchase</div>
+      <div class="elig-item"><span class="ei-no">✗</span> Prior CARB program recipients excluded</div>
+    </div>
+    <div class="elig-col">
+      <div class="elig-col-head">DCAP — Financing</div>
+      <div class="elig-col-sub">Up to $7,500 + $2,000 charging</div>
+      <div class="elig-item"><span class="ei-yes">✓</span> CA resident · 18 or older</div>
+      <div class="elig-item"><span class="ei-yes">✓</span> Income ≤300% FPL</div>
+      <div class="elig-item"><span class="ei-yes">✓</span> No scrap vehicle required</div>
+      <div class="elig-item"><span class="ei-yes">✓</span> New or used EV/PHEV ≤$45,000</div>
+      <div class="elig-item"><span class="ei-yes">✓</span> Low-interest loan ≤8% APR also available</div>
+      <div class="elig-item"><span class="ei-no">✗</span> Apply before purchase — not retroactive</div>
+    </div>
+    <div class="elig-col">
+      <div class="elig-col-head">Home Charger Credit</div>
+      <div class="elig-col-sub">Up to $1,000 · Expires June 30, 2026</div>
+      <div class="elig-item"><span class="ei-yes">✓</span> Homeowner installing Level 2 charger</div>
+      <div class="elig-item"><span class="ei-yes">✓</span> Equipment in service before July 1, 2026</div>
+      <div class="elig-item"><span class="ei-yes">✓</span> Located in an eligible census tract</div>
+      <div class="elig-item"><span class="ei-yes">✓</span> 30% of purchase + installation cost</div>
+      <div class="elig-item"><span class="ei-no">✗</span> Renters typically not eligible</div>
+      <div class="elig-item"><span class="ei-no">✗</span> Expires in weeks — act immediately</div>
+    </div>
+    <div class="elig-col">
+      <div class="elig-col-head">Loan Interest Deduction</div>
+      <div class="elig-col-sub">Up to $10,000/yr · 2025–2028</div>
+      <div class="elig-item"><span class="ei-yes">✓</span> New vehicle loan originated 2025–2028</div>
+      <div class="elig-item"><span class="ei-yes">✓</span> US final assembly required</div>
+      <div class="elig-item"><span class="ei-yes">✓</span> MAGI ≤$100K single / $200K joint</div>
+      <div class="elig-item"><span class="ei-yes">✓</span> Above-the-line — no itemizing needed</div>
+      <div class="elig-item"><span class="ei-no">✗</span> Benefit phases out above income caps</div>
+      <div class="elig-item"><span class="ei-no">✗</span> Vehicle must be US-assembled — verify VIN</div>
+    </div>
+  </div>
+</div>
+
+<!-- How to apply -->
+<div class="apply-section">
+  <div class="apply-h2">How to Apply</div>
+  <div class="apply-sub">We guide you through every program. Here's what the process looks like.</div>
+  <div class="apply-steps">
+    <div class="apply-step">
+      <span class="as-big">01</span>
+      <div class="as-title">Grant Assessment First</div>
+      <p class="as-desc">Before you choose a vehicle, meet with our grant specialist. DCAP requires approval before purchase — not after. We identify every program you qualify for and start your DCAP application if applicable.</p>
+      <div class="as-time">Free · 30 minutes · No obligation</div>
+    </div>
+    <div class="apply-step">
+      <span class="as-big">02</span>
+      <div class="as-title">Select Your Vehicle</div>
+      <p class="as-desc">Browse our qualifying inventory — all eligible EVs and PHEVs priced under $45,000 are flagged. We confirm CARB eligibility list status and coordinate with DCAP administrators on your behalf.</p>
+      <div class="as-time">Same day · Inventory matched to grants</div>
+    </div>
+    <div class="apply-step">
+      <span class="as-big">03</span>
+      <div class="as-title">Grants Applied at Sale</div>
+      <p class="as-desc">DCAP grants are paid directly to us at point of sale — your down payment is immediately reduced. We also submit your charger credit paperwork and SMUD enrollment simultaneously.</p>
+      <div class="as-time">Day of purchase · Instant savings</div>
+      <div class="as-warn">⚠ Home charger credit expires June 30</div>
+    </div>
+    <div class="apply-step">
+      <span class="as-big">04</span>
+      <div class="as-title">Drive &amp; Collect</div>
+      <p class="as-desc">Charger installation is coordinated through DCAP's GRID Alternatives partner. Loan interest deduction is claimed annually on your federal taxes. We provide documentation for all programs.</p>
+      <div class="as-time">Ongoing · Full support</div>
+    </div>
+  </div>
+</div>
+
+<!-- What's gone -->
+<div class="expired-section">
+  <div class="exp-head">Programs That Are No Longer Available in 2026</div>
+  <div class="expired-grid">
+    <div class="exp-item">
+      <div class="exp-name">Federal IRA EV Tax Credit</div>
+      <div class="exp-date">Expired: September 30, 2025</div>
+      <p class="exp-desc">The $7,500 new EV credit and $4,000 used EV credit were eliminated by the One Big Beautiful Bill Act signed July 4, 2025. Not available for vehicles acquired after September 30, 2025.</p>
+    </div>
+    <div class="exp-item">
+      <div class="exp-name">California CVRP Rebate</div>
+      <div class="exp-date">Closed: November 8, 2023</div>
+      <p class="exp-desc">The Clean Vehicle Rebate Project stopped accepting applications in November 2023. All funding was reserved for applicants on the waitlist at that time. No new applications accepted.</p>
+    </div>
+    <div class="exp-item">
+      <div class="exp-name">CAV / HOV Lane Decals</div>
+      <div class="exp-date">Expired: October 1, 2025</div>
+      <p class="exp-desc">All California Clean Air Vehicle decals expired October 1, 2025. Solo HOV lane access for EV owners is no longer part of the active incentive picture as of 2026.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div>
+    <div class="ft-logo">Lumin Folsom <span>Mitsubishi</span></div>
+    <p class="ft-sub">Folsom, California · CARB Compliant · ZEV Certified<br>CDLS Network Partner · DCAP Participating Dealer<br>Serving the greater Sacramento region</p>
+    <div style="margin-top:6px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(109,223,170,0.45);margin-bottom:4px;">Grant Specialist Direct Line</div>
+      <div class="ft-hotline">916-890-0231</div>
+    </div>
+  </div>
+  <div>
+    <div class="ft-h">Contact</div>
+    <a href="tel:9168900231" class="ft-link">Sales · 916-890-0231</a>
+    <a href="tel:9164096957" class="ft-link">Service · 916-409-6957</a>
+    <a href="tel:9164096990" class="ft-link">Parts · 916-409-6990</a>
+  </div>
+  <div>
+    <div class="ft-h">Active Programs</div>
+    <a href="#" class="ft-link">DCAP — Scrap &amp; Replace</a>
+    <a href="#" class="ft-link">DCAP — Financing Assist</a>
+    <a href="#" class="ft-link">Home Charger Credit</a>
+    <a href="#" class="ft-link">Loan Interest Deduction</a>
+  </div>
+  <div>
+    <div class="ft-h">Resources</div>
+    <a href="https://drivingcleanca.org" class="ft-link">DrivingCleanCA.org</a>
+    <a href="https://driveclean.ca.gov" class="ft-link">DriveClean.ca.gov</a>
+    <a href="https://smud.org" class="ft-link">SMUD EV Programs</a>
+    <a href="https://irs.gov/clean-vehicle-tax-credits" class="ft-link">IRS.gov Credit Info</a>
+  </div>
+</footer>
+<div class="footer-bar">
+  <span>© 2026 Lumin Folsom Mitsubishi · Folsom CA · CDLS Network Partner</span>
+  <span>Grant info verified May 2026 · Always confirm with official sources before purchase</span>
+</div>
+
+</body>
+</html>
