@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CDLS Aurnaut Network — Lumin Folsom Mitsubishi</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --void: #060504;
+  --obsidian: #0c0a08;
+  --surface: #12100d;
+  --panel: #1a1712;
+  --gold: #c9a84c;
+  --gold-light: #e4c97a;
+  --gold-dim: rgba(201,168,76,0.4);
+  --platinum: #d4d0c8;
+  --cream: #f0ece0;
+  --muted: #6a6050;
+  --border: rgba(201,168,76,0.1);
+  --border2: rgba(255,255,255,0.04);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: var(--void);
+  color: var(--cream);
+  font-family: 'Jost', sans-serif;
+  min-height: 100vh;
+}
+/* Noise texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+/* Gold marquee */
+.marquee {
+  background: var(--gold);
+  padding: 10px 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.marquee-inner {
+  display: flex;
+  gap: 48px;
+  animation: marquee 20s linear infinite;
+  white-space: nowrap;
+}
+.mi { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--void); font-weight: 600; }
+.mi-dot { color: rgba(6,5,4,0.3); }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* Nav */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(6,5,4,0.96);
+  backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 60px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: var(--gold-light);
+}
+.logo span { color: rgba(228,201,122,0.5); font-style: italic; }
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: 400;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-reserve {
+  border: 1px solid var(--gold-dim);
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.nav-reserve:hover {
+  background: var(--gold);
+  color: var(--void);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  z-index: 1;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 60px;
+}
+
+/* Compass rose background */
+.compass-bg {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 560px;
+  height: 560px;
+  opacity: 0.07;
+}
+
+/* Ambient glow */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px; height: 800px;
+  background: radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-content {
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-ornament {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.ornament-line { flex: 1; max-width: 48px; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); }
+.ornament-text {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 400;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(48px, 6vw, 84px);
+  font-weight: 700;
+  line-height: 1.08;
+  margin-bottom: 8px;
+  color: var(--cream);
+}
+h1 em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+.h1-sub {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(24px, 3vw, 40px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 32px;
+  line-height: 1.3;
+}
+
+.hero-desc {
+  font-size: 16px;
+  color: rgba(240,236,224,0.45);
+  line-height: 1.8;
+  font-weight: 300;
+  max-width: 480px;
+  margin-bottom: 48px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.btn-gold {
+  background: var(--gold);
+  color: var(--void);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.btn-gold:hover { background: var(--gold-light); }
+.btn-outline-gold {
+  border: 1px solid var(--border);
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.btn-outline-gold:hover { border-color: var(--gold); }
+
+/* Hero card — right side intelligence panel -->
+.intel-panel {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 340px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 32px;
+  z-index: 2;
+}
+
+.ip-title {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ip-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* Route trace SVG */
+.route-trace { margin-bottom: 24px; }
+
+.ip-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.ip-metric {
+  background: var(--panel);
+  border: 1px solid var(--border2);
+  padding: 14px;
+}
+.ip-m-val {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 2px;
+}
+.ip-m-lbl { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+.ip-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+.ip-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: ipblink 2s infinite;
+}
+@keyframes ipblink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Metrics strip */
+.metrics-strip {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.ms-item {
+  padding: 32px 40px;
+  border-right: 1px solid var(--border);
+  position: relative;
+}
+.ms-item:last-child { border-right: none; }
+.ms-num {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+  color: var(--gold);
+  display: block;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.ms-lbl {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.ms-desc { font-size: 12px; color: rgba(240,236,224,0.3); margin-top: 4px; }
+
+/* Section */
+section {
+  position: relative;
+  z-index: 1;
+}
+.section-ornament {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.so-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 12px;
+  font-style: italic;
+  color: var(--gold);
+  opacity: 0.6;
+}
+.so-title {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.so-line { flex: 1; height: 1px; background: linear-gradient(90deg, var(--border), transparent); }
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+h2 em { font-style: italic; color: var(--gold-light); }
+
+/* Vehicles */
+.vehicles-section { padding: 80px 60px; }
+.vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.vehicle-card {
+  background: var(--surface);
+  padding: 0;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+.vehicle-card:hover { background: var(--panel); }
+.vc-img {
+  height: 200px;
+  background: linear-gradient(135deg, var(--panel), var(--obsidian));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 60px;
+  position: relative;
+  border-bottom: 1px solid var(--border);
+}
+.vc-badge {
+  position: absolute;
+  top: 0; left: 0;
+  background: var(--gold);
+  color: var(--void);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+}
+.vc-score {
+  position: absolute;
+  top: 12px; right: 12px;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gold);
+}
+.vc-score span { font-size: 9px; font-family: 'Jost', sans-serif; color: var(--muted); display: block; text-align: right; }
+.vc-body { padding: 24px; }
+.vc-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.vc-type { font-size: 11px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px; }
+.vc-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.vc-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gold);
+}
+.vc-cta {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+.vc-cta:hover { border-color: var(--gold); }
+
+/* MCMC & Grants */
+.intel-section {
+  padding: 80px 60px;
+  background: var(--obsidian);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.intel-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.mcmc-steps { display: flex; flex-direction: column; gap: 0; }
+.mcmc-step {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+}
+.mcmc-step:first-child { padding-top: 0; }
+.mcmc-step:last-child { border-bottom: none; }
+.step-roman {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--gold);
+  opacity: 0.5;
+  width: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.step-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.step-content p { font-size: 13px; color: rgba(240,236,224,0.4); line-height: 1.7; font-weight: 300; }
+.step-stat {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--gold);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+/* Grant section */
+.grants-section { padding: 80px 60px; }
+.grant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.grant-card {
+  background: var(--surface);
+  padding: 36px;
+  transition: background 0.3s;
+}
+.grant-card:hover { background: var(--panel); }
+.gc-roman {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-style: italic;
+  color: var(--border);
+  display: block;
+  margin-bottom: 8px;
+}
+.gc-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.gc-org {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.gc-amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 16px;
+}
+.gc-desc { font-size: 13px; color: rgba(240,236,224,0.35); line-height: 1.7; font-weight: 300; }
+
+/* Chart section */
+.chart-section {
+  padding: 40px 60px;
+  background: var(--obsidian);
+  border-top: 1px solid var(--border);
+}
+.chart-title {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.chart-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+/* Footer */
+footer {
+  position: relative;
+  z-index: 1;
+  background: var(--obsidian);
+  border-top: 1px solid var(--border);
+  padding: 64px 60px 32px;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+}
+.fl-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin-bottom: 4px;
+}
+.fl-sub {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.fl-desc {
+  font-size: 13px;
+  color: rgba(240,236,224,0.3);
+  line-height: 1.7;
+  font-weight: 300;
+}
+.fl-h {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.6;
+  margin-bottom: 16px;
+}
+.fl-link {
+  display: block;
+  font-size: 13px;
+  color: rgba(240,236,224,0.3);
+  text-decoration: none;
+  line-height: 2.2;
+  font-weight: 300;
+  transition: color 0.2s;
+}
+.fl-link:hover { color: var(--gold); }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+</style>
+</head>
+<body>
+
+<!-- Gold marquee -->
+<div class="marquee">
+  <div class="marquee-inner">
+    <span class="mi">Lumin Folsom Mitsubishi</span><span class="mi-dot"> ◆ </span>
+    <span class="mi">CDLS Aurnaut Network</span><span class="mi-dot"> ◆ </span>
+    <span class="mi">MCMC Route Intelligence</span><span class="mi-dot"> ◆ </span>
+    <span class="mi">94.7% Confidence</span><span class="mi-dot"> ◆ </span>
+    <span class="mi">$7.5M Grant Pool</span><span class="mi-dot"> ◆ </span>
+    <span class="mi">38% Cost Reduction</span><span class="mi-dot"> ◆ </span>
+    <span class="mi">ZEV Certified · CARB Compliant</span><span class="mi-dot"> ◆ </span>
+    <span class="mi">103 Vehicles in Stock</span><span class="mi-dot"> ◆ </span>
+    <span class="mi">Lumin Folsom Mitsubishi</span><span class="mi-dot"> ◆ </span>
+    <span class="mi">CDLS Aurnaut Network</span><span class="mi-dot"> ◆ </span>
+    <span class="mi">MCMC Route Intelligence</span><span class="mi-dot"> ◆ </span>
+    <span class="mi">94.7% Confidence</span><span class="mi-dot"> ◆ </span>
+    <span class="mi">$7.5M Grant Pool</span><span class="mi-dot"> ◆ </span>
+    <span class="mi">38% Cost Reduction</span><span class="mi-dot"> ◆ </span>
+    <span class="mi">ZEV Certified · CARB Compliant</span><span class="mi-dot"> ◆ </span>
+    <span class="mi">103 Vehicles in Stock</span><span class="mi-dot"> ◆ </span>
+  </div>
+</div>
+
+<nav>
+  <div class="logo">Lumin Folsom <span>Mitsubishi</span></div>
+  <ul class="nav-links">
+    <li><a href="#">Collection</a></li>
+    <li><a href="#">Financing</a></li>
+    <li><a href="#">Grants</a></li>
+    <li><a href="#">CDLS Intelligence</a></li>
+    <li><a href="#">Service</a></li>
+  </ul>
+  <a href="#" class="nav-reserve">Reserve a Vehicle</a>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-ornament">
+      <div class="ornament-line"></div>
+      <span class="ornament-text">CDLS Aurnaut Network · Folsom California</span>
+    </div>
+    <h1>The <em>Optimal</em><br>Route Awaits</h1>
+    <div class="h1-sub">Intelligence. Precision. Community.</div>
+    <p class="hero-desc">
+      Lumin Folsom Mitsubishi — California Dealer Logistics System founding partner. 
+      MCMC route intelligence refined across 847,000 hauls. The path of least resistance, 
+      calibrated for the human journey.
+    </p>
+    <div class="hero-actions">
+      <a href="#" class="btn-gold">Explore 103 Vehicles</a>
+      <a href="#" class="btn-outline-gold">Grant Programs</a>
+    </div>
+  </div>
+
+  <!-- Compass Rose -->
+  <svg class="compass-bg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="200" cy="200" r="180" fill="none" stroke="#c9a84c" stroke-width="1"/>
+    <circle cx="200" cy="200" r="140" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
+    <circle cx="200" cy="200" r="100" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
+    <circle cx="200" cy="200" r="60" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
+    <line x1="200" y1="20" x2="200" y2="380" stroke="#c9a84c" stroke-width="0.5"/>
+    <line x1="20" y1="200" x2="380" y2="200" stroke="#c9a84c" stroke-width="0.5"/>
+    <line x1="73" y1="73" x2="327" y2="327" stroke="#c9a84c" stroke-width="0.3"/>
+    <line x1="327" y1="73" x2="73" y2="327" stroke="#c9a84c" stroke-width="0.3"/>
+    <!-- N pointer -->
+    <polygon points="200,22 207,198 200,185 193,198" fill="#c9a84c"/>
+    <polygon points="200,378 207,202 200,215 193,202" fill="#c9a84c" opacity="0.3"/>
+    <text x="195" y="14" fill="#c9a84c" font-size="12" font-family="serif">N</text>
+    <text x="195" y="392" fill="#c9a84c" font-size="12" font-family="serif" opacity="0.4">S</text>
+    <text x="384" y="205" fill="#c9a84c" font-size="12" font-family="serif" opacity="0.4">E</text>
+    <text x="8" y="205" fill="#c9a84c" font-size="12" font-family="serif" opacity="0.4">W</text>
+  </svg>
+
+  <!-- Intel panel -->
+  <div class="intel-panel">
+    <div class="ip-title">Route Intelligence</div>
+    <!-- Animated trace chart -->
+    <div class="route-trace">
+      <svg viewBox="0 0 280 90" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+        <defs>
+          <linearGradient id="tg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.1"/>
+            <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <line x1="0" y1="70" x2="280" y2="70" stroke="rgba(201,168,76,0.08)" stroke-width="1"/>
+        <path d="M0,55 C40,48 80,52 130,44 C180,36 230,40 280,35" fill="url(#tg)" stroke="rgba(201,168,76,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+        <path d="M0,55 C40,49 80,53 130,46 C180,39 230,43 280,38" fill="none" stroke="rgba(200,230,220,0.3)" stroke-width="1" stroke-dasharray="5,3"/>
+        <path d="M0,55 C40,50 80,54 130,47 C180,40 230,44 280,40" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+        <circle cx="0" cy="55" r="3" fill="#c9a84c"/>
+        <circle r="3" fill="#e4c97a">
+          <animateMotion dur="4s" repeatCount="indefinite" path="M0,55 C40,50 80,54 130,47 C180,40 230,44 280,40"/>
+        </circle>
+        <text x="0" y="84" fill="rgba(201,168,76,0.35)" font-size="8" font-family="serif">2014</text>
+        <text x="258" y="84" fill="rgba(201,168,76,0.35)" font-size="8" font-family="serif">2024</text>
+      </svg>
+    </div>
+    <div class="ip-metrics">
+      <div class="ip-metric">
+        <span class="ip-m-val">94.7%</span>
+        <span class="ip-m-lbl">MCMC Conf.</span>
+      </div>
+      <div class="ip-metric">
+        <span class="ip-m-val">38%</span>
+        <span class="ip-m-lbl">Cost Save</span>
+      </div>
+      <div class="ip-metric">
+        <span class="ip-m-val">91.3%</span>
+        <span class="ip-m-lbl">Human Fit</span>
+      </div>
+      <div class="ip-metric">
+        <span class="ip-m-val">$24.68</span>
+        <span class="ip-m-lbl">Carbon/Haul</span>
+      </div>
+    </div>
+    <div class="ip-status">
+      <div class="ip-dot"></div>
+      CDLS Network Active · Folsom CA
+    </div>
+  </div>
+</div>
+
+<!-- Metrics strip -->
+<div class="metrics-strip">
+  <div class="ms-item">
+    <span class="ms-num">847K</span>
+    <div class="ms-lbl">CA Haul Records</div>
+    <div class="ms-desc">10 years of regression data</div>
+  </div>
+  <div class="ms-item">
+    <span class="ms-num">$7.5M</span>
+    <div class="ms-lbl">Grant Pool Access</div>
+    <div class="ms-desc">CARB · CEC · CalPERS</div>
+  </div>
+  <div class="ms-item">
+    <span class="ms-num">5,000</span>
+    <div class="ms-lbl">CA Dealer Target</div>
+    <div class="ms-desc">20 founding partners active</div>
+  </div>
+  <div class="ms-item">
+    <span class="ms-num">103</span>
+    <div class="ms-lbl">Vehicles in Stock</div>
+    <div class="ms-desc">ZEV & PHEV ready</div>
+  </div>
+</div>
+
+<!-- Vehicles -->
+<section class="vehicles-section">
+  <div class="section-ornament">
+    <span class="so-num">I.</span>
+    <span class="so-title">The Collection</span>
+    <div class="so-line"></div>
+  </div>
+  <h2>103 Vehicles.<br>Every One <em>Optimized.</em></h2>
+  <p style="font-size:15px;color:rgba(240,236,224,0.35);font-weight:300;margin-bottom:40px;line-height:1.7;">Route-scored by CDLS intelligence. ZEV and grant-eligible models prioritized.</p>
+  <div class="vehicle-grid">
+    <div class="vehicle-card">
+      <div class="vc-img">🚗<span class="vc-badge">ZEV Eligible</span><span class="vc-score">97<span>Route Score</span></span></div>
+      <div class="vc-body">
+        <div class="vc-name">Outlander PHEV</div>
+        <div class="vc-type">2024 · Plug-In Hybrid</div>
+        <div class="vc-footer">
+          <span class="vc-price">$36,995</span>
+          <a href="#" class="vc-cta">Inquire →</a>
+        </div>
+      </div>
+    </div>
+    <div class="vehicle-card">
+      <div class="vc-img">🏎️<span class="vc-badge">Grant Ready</span><span class="vc-score">91<span>Route Score</span></span></div>
+      <div class="vc-body">
+        <div class="vc-name">Eclipse Cross</div>
+        <div class="vc-type">2024 · Crossover SUV</div>
+        <div class="vc-footer">
+          <span class="vc-price">$29,490</span>
+          <a href="#" class="vc-cta">Inquire →</a>
+        </div>
+      </div>
+    </div>
+    <div class="vehicle-card">
+      <div class="vc-img">🚙<span class="vc-badge">ZEV Priority</span><span class="vc-score">99<span>Route Score</span></span></div>
+      <div class="vc-body">
+        <div class="vc-name">Galant EV</div>
+        <div class="vc-type">2024 · Full Electric</div>
+        <div class="vc-footer">
+          <span class="vc-price">$41,250</span>
+          <a href="#" class="vc-cta">Inquire →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Intel & MCMC -->
+<section class="intel-section">
+  <div class="intel-grid">
+    <div>
+      <div class="section-ornament">
+        <span class="so-num">II.</span>
+        <span class="so-title">Route Intelligence</span>
+        <div class="so-line"></div>
+      </div>
+      <h2>The <em>Science</em><br>of Least Resistance</h2>
+      <p style="font-size:14px;color:rgba(240,236,224,0.35);font-weight:300;margin:20px 0 36px;line-height:1.7;">847,000 California haul records. A decade of MCMC regression. Human behavior woven into every route recommendation.</p>
+      <div class="mcmc-steps">
+        <div class="mcmc-step">
+          <span class="step-roman">I.</span>
+          <div class="step-content">
+            <h3>MCMC Regression — Noise Removal</h3>
+            <p>Markov Chain Monte Carlo sampling eliminates seasonal variance, fuel price disruptions, and economic noise from 847K haul records — revealing the signal beneath the chaos.</p>
+            <div class="step-stat">94.7% confidence · p=.003</div>
+          </div>
+        </div>
+        <div class="mcmc-step">
+          <span class="step-roman">II.</span>
+          <div class="step-content">
+            <h3>A/B Testing — Stabilization</h3>
+            <p>Controlled re-introduction of real-world variance. A/B testing at p=.003 significance validates the MCMC model against live dispatch data — ensuring it holds under actual California conditions.</p>
+            <div class="step-stat">A/B validated · Live dispatch comparison</div>
+          </div>
+        </div>
+        <div class="mcmc-step">
+          <span class="step-roman">III.</span>
+          <div class="step-content">
+            <h3>Human Behavior Calibration</h3>
+            <p>Routes adjusted for fatigue windows, preferred corridors, and familiar stops. The result: routes that real California drivers complete — successfully, on time, at lowest cost.</p>
+            <div class="step-stat">91.3% human behavioral fit</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="chart-section" style="background:rgba(0,0,0,0.4);border:1px solid var(--border);padding:28px;">
+        <div class="chart-title">10-Year MCMC Route Regression</div>
+        <svg viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+          <defs>
+            <linearGradient id="gg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.12"/>
+              <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <line x1="30" y1="20" x2="30" y2="180" stroke="rgba(201,168,76,0.06)" stroke-width="1"/>
+          <line x1="30" y1="180" x2="360" y2="180" stroke="rgba(201,168,76,0.06)" stroke-width="1"/>
+          <line x1="30" y1="120" x2="360" y2="120" stroke="rgba(201,168,76,0.04)" stroke-width="1" stroke-dasharray="4,4"/>
+          <line x1="30" y1="70" x2="360" y2="70" stroke="rgba(201,168,76,0.04)" stroke-width="1" stroke-dasharray="4,4"/>
+          <path d="M30,145 C80,125 130,158 180,138 C230,118 280,148 330,128 C345,122 355,130 360,123" fill="none" stroke="rgba(201,168,76,0.05)" stroke-width="14"/>
+          <path d="M30,145 C120,132 210,122 300,112 C330,108 350,106 360,104" fill="url(#gg)" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" stroke-dasharray="5,3"/>
+          <path d="M30,145 C120,133 210,124 300,115 C330,111 350,109 360,107" fill="none" stroke="rgba(180,220,215,0.35)" stroke-width="1.5" stroke-dasharray="7,3"/>
+          <path d="M30,145 C120,135 210,126 300,117 C330,113 350,111 360,109" fill="none" stroke="#c9a84c" stroke-width="2"/>
+          <text x="28" y="197" fill="rgba(201,168,76,0.3)" font-size="9" font-family="serif">2014</text>
+          <text x="182" y="197" fill="rgba(201,168,76,0.3)" font-size="9" font-family="serif">2019</text>
+          <text x="342" y="197" fill="rgba(201,168,76,0.3)" font-size="9" font-family="serif">2024</text>
+          <line x1="30" y1="212" x2="46" y2="212" stroke="rgba(201,168,76,0.05)" stroke-width="8"/>
+          <text x="50" y="216" fill="rgba(201,168,76,0.3)" font-size="8" font-family="serif">Raw noise</text>
+          <line x1="110" y1="212" x2="126" y2="212" stroke="rgba(201,168,76,0.4)" stroke-width="1.5" stroke-dasharray="5,3"/>
+          <text x="130" y="216" fill="rgba(201,168,76,0.3)" font-size="8" font-family="serif">MCMC</text>
+          <line x1="180" y1="212" x2="196" y2="212" stroke="rgba(180,220,215,0.35)" stroke-width="1.5" stroke-dasharray="7,3"/>
+          <text x="200" y="216" fill="rgba(201,168,76,0.3)" font-size="8" font-family="serif">A/B Stabilized</text>
+          <line x1="280" y1="212" x2="296" y2="212" stroke="#c9a84c" stroke-width="2"/>
+          <text x="300" y="216" fill="rgba(201,168,76,0.3)" font-size="8" font-family="serif">Optimized</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Grants -->
+<section class="grants-section">
+  <div class="section-ornament">
+    <span class="so-num">III.</span>
+    <span class="so-title">Grant Programs</span>
+    <div class="so-line"></div>
+  </div>
+  <h2>$7.5 Million in <em>Community</em><br>Grant Access</h2>
+  <p style="font-size:15px;color:rgba(240,236,224,0.35);font-weight:300;margin-bottom:40px;line-height:1.7;">CDLS network membership unlocks California's premier ZEV and clean transport grant programs — at no capital cost to dealer partners.</p>
+  <div class="grant-grid">
+    <div class="grant-card">
+      <span class="gc-roman">I.</span>
+      <div class="gc-name">CARB ZEV Incentive</div>
+      <div class="gc-org">California Air Resources Board</div>
+      <span class="gc-amount">$2.0–2.5M</span>
+      <p class="gc-desc">Zero-emission vehicle program funding for CDLS network dealers. Fleet ZEV transition, charging infrastructure, and compliance compliance support — zero capital required.</p>
+    </div>
+    <div class="grant-card">
+      <span class="gc-roman">II.</span>
+      <div class="gc-name">CEC Clean Transport</div>
+      <div class="gc-org">California Energy Commission</div>
+      <span class="gc-amount">$150K–500K</span>
+      <p class="gc-desc">Clean transportation program grants for EV charging infrastructure, route electrification, and dealer energy systems. Supports CDLS Tesla Semi integration and charging corridor planning.</p>
+    </div>
+    <div class="grant-card">
+      <span class="gc-roman">III.</span>
+      <div class="gc-name">CalPERS Impact Fund</div>
+      <div class="gc-org">CA Public Employees' Retirement System</div>
+      <span class="gc-amount">$5M Committed</span>
+      <p class="gc-desc">Institutional backing for CDLS founding dealer partners. Zero-capital partnership model enabling full ZEV compliance and logistics transformation without dealer expenditure.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="fl-logo">CDLS Aurnaut Network</div>
+      <div class="fl-sub">Lumin Folsom Mitsubishi</div>
+      <p class="fl-desc">Founded by Vlad &amp; Vitaly Aurnaut. CDLS founding partner. Folsom, California. CARB compliant · ZEV certified · CalPERS backed · 20 founding dealers · 5,000 CA dealer target.</p>
+    </div>
+    <div>
+      <div class="fl-h">Contact</div>
+      <a href="tel:9168900231" class="fl-link">Sales · 916-890-0231</a>
+      <a href="tel:9164096957" class="fl-link">Service · 916-409-6957</a>
+      <a href="tel:9164096990" class="fl-link">Parts · 916-409-6990</a>
+    </div>
+    <div>
+      <div class="fl-h">Grant Programs</div>
+      <a href="#" class="fl-link">CARB ZEV Incentive</a>
+      <a href="#" class="fl-link">CEC Clean Transport</a>
+      <a href="#" class="fl-link">CalPERS Impact Fund</a>
+    </div>
+    <div>
+      <div class="fl-h">Network</div>
+      <a href="#" class="fl-link">CDLS Platform</a>
+      <a href="#" class="fl-link">Route Intelligence</a>
+      <a href="#" class="fl-link">Carbon Credits</a>
+      <a href="#" class="fl-link">Dealer Portal</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Lumin Folsom Mitsubishi · CDLS Aurnaut Network</span>
+    <span>Design V · Premium Dark Gold · Aurnaut Flagship</span>
+  </div>
+</footer>
+
+</body>
+</html>
