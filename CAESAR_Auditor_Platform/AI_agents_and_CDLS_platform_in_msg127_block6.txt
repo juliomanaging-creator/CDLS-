@@ -1,0 +1,19 @@
+cdls_integrated_system_v2_final.tar.gz (32KB)
+├── README.md                                  # Complete system docs
+├── QUICKSTART.md                              # 15-minute setup
+├── INTEGRATION_GUIDE.md                       # Integration details
+│
+├── agents/
+│   ├── external_affairs_agent_SPEC.md        # 🆕 Full specification
+│   ├── external_affairs_agent.py             # 🆕 Python implementation
+│   ├── README_EXTERNAL_AFFAIRS.md            # 🆕 Quick reference
+│   └── [25 other agents]
+│
+├── orchestrator/
+│   └── multi_agent_orchestrator.py           # Coordinates all 26 agents
+│
+├── api/                                       # FastAPI server
+├── portal/                                    # React user interface
+├── dashboard/                                 # React monitoring
+├── database/                                  # PostgreSQL schema
+└── docker-compose.yml                        # One-command deploy

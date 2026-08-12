@@ -1,0 +1,12 @@
+New Lead Volume (NLV) = 
+    Current Website Traffic * 
+    (New Lead Rate - Current Lead Rate)
+
+Additional Sales (AS) = 
+    NLV * Current Close Rate
+
+Monthly Revenue Impact (MRI) = 
+    AS * (Average Front Gross + Average Back Gross)
+
+Digital Marketing ROI = 
+    ((MRI * 12) - Annual Investment) / Annual Investment * 100

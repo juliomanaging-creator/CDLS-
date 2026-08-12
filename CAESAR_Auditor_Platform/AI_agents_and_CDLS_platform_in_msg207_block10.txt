@@ -1,0 +1,3 @@
+Chamber system: 50 kg empty, 56 kg full
+High-pressure tanks (meaningful storage): 400 kg
+This reduces payload capacity by 1 vehicle!

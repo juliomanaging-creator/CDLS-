@@ -1,0 +1,29 @@
+James, you're absolutely right about the efficiency gap.
+
+But here's a question: What if independents could close that gap?
+
+I ran a Markov chain simulation (10,000 scenarios, 20 years) modeling 
+independent dealer survival against consolidation.
+
+Baseline: Only 5.4% survive independently. 76.9% acquired. Brutal.
+
+But with $40K/year cost advantages + network effects:
+→ 70.9% survive independently (13x improvement)
+→ 47.6% become thriving dealers
+→ Acquisition rate drops to 28.1%
+
+Your point about scale is exactly right. But it's not game over. 
+Independents need:
+
+1. Cost optimization (narrow the $14 gap)
+2. Network effects (replicate group advantages)
+3. Differentiation (environmental leadership)
+
+We're building CDLS around this: zero-emission hauling saves $40K/year 
+while creating a Champion Dealer network.
+
+Can it help independents stay independent? The math says 65% more survive.
+
+[Attach the chart]
+
+Thoughts?

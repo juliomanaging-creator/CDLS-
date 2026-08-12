@@ -1,0 +1,5 @@
+NODE_ENV=development
+PORT=3000
+JWT_SECRET=sacramento-auto-wholesale-julio-2025-secret-key-change-this
+SESSION_SECRET=another-random-secret-for-sessions-2025-change-this
+CORS_ORIGIN=http://localhost:3000

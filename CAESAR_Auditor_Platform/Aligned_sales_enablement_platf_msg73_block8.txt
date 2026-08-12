@@ -1,0 +1,18 @@
+If CARB approves (or doesn't prohibit):
+
+Launch limited pilot:
+├─ 5 dealers participate
+├─ Generate 500 credits
+├─ Tokenize and trade on-chain
+├─ Settle with CARB quarterly
+└─ Report results to CARB
+
+Demonstrate:
+✓ No disruption to CARB system
+✓ Increased market liquidity
+✓ Better price transparency
+✓ Faster settlement (for participants)
+✓ CARB still controls registry
+
+If successful: Scale to all dealers
+If issues: Refine and retry

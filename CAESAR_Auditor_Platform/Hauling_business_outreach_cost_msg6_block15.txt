@@ -1,0 +1,12 @@
+# Extract the updated platform
+tar -xzf cdls-platform-complete-with-carbon.tar.gz
+cd cdls-platform
+
+# Start backend
+cd backend && npm start
+
+# Start frontend (new terminal)
+cd frontend && npm start
+
+# Login at http://localhost:3000
+# Click "Carbon Tracking" in sidebar!

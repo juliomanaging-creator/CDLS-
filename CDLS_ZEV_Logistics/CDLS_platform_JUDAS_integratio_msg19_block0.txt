@@ -1,0 +1,5 @@
+# Download from Claude
+# You should have these files ready to download:
+- iron_halo_vault_builder.py
+- Iron_Halo_Vault/ (entire directory)
+- All JURE files

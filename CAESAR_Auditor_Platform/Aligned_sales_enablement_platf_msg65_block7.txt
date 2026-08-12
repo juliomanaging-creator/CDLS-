@@ -1,0 +1,25 @@
+EV Manufacturing:
+- Partner with BYD, Volvo, or Tesla for custom haulers
+- Or acquire small EV truck manufacturer
+- Capex: $200M for manufacturing facility
+- Revenue: $500M/year (sell to others, not just use internally)
+- Margin: 20% = $100M EBITDA
+- Valuation: $1.5B at 15x
+
+Public Charging Network:
+- Not just depots, but highway charging for all EVs
+- Compete with Electrify America, EVgo
+- Capex: $400M for 500 highway locations
+- Revenue: $200M/year
+- Margin: 40% = $80M EBITDA
+- Valuation: $1.2B at 15x
+
+Insurance (Captive):
+- Insure dealer EV fleets
+- Lower risk because you have telematics data
+- Underwrite at better rates than Geico/Progressive
+- Revenue: $100M/year in premiums
+- Underwriting profit: $15M/year
+- Valuation: $300M at 20x
+
+Total Additional Value: $3B from verticals

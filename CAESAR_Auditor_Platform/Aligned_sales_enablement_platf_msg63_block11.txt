@@ -1,0 +1,17 @@
+Price: $0/month
+Target Users: 5,000+ dealers (nationwide)
+Features:
+✓ EV vs diesel cost calculator
+✓ Basic route economics
+✓ Carbon credit estimator
+✓ Incentive tracking (HVIP, tax credits)
+✓ Payback period calculator
+
+Limitations:
+✗ No data export
+✗ 10 calculations/month limit
+✗ CDLS branding (not white-label)
+✗ No priority support
+
+Purpose: Lead generation and market education
+Conversion Goal: 15% to paid tier within 90 days

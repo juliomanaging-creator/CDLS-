@@ -1,0 +1,3 @@
+Dealer pays: $500/day rental
+├─ 80% → CDLS ($400/day)
+└─ 20% → CNCDA ($100/day, "referral fee")

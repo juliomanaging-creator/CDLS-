@@ -1,0 +1,35 @@
+Target: Bring in large investors
+
+Institutional Products:
+
+1. OTC Desk (Week 9):
+├─ Large block trades (>$100K)
+├─ No slippage (direct pricing)
+├─ Settlement: T+2
+└─ Partner: Cumberland, Wintermute
+
+2. Custody Integration (Week 10):
+├─ Coinbase Custody listing
+├─ Fireblocks integration
+├─ Institutional-grade security
+└─ Insurance: $100M (Lloyd's of London)
+
+3. Index Inclusion (Week 11):
+├─ Apply for DeFi Pulse Index
+├─ Apply for CoinMarketCap Climate Index
+├─ Increases passive inflows
+└─ Target: $10M+ AUM tracking $CDLS
+
+4. Derivatives Launch (Week 12):
+├─ Perpetual futures (dYdX, GMX)
+├─ Options (Ribbon, Dopex)
+├─ Leveraged tokens (FTX, Bybit)
+└─ Increases liquidity and price discovery
+
+Metrics by Day 90:
+├─ Token holders: 5,000+
+├─ Daily volume: $5M+
+├─ Market cap: $100M+ ($0.10 token price)
+├─ CEX listings: 5-7 exchanges
+├─ Staked: 200M $CDLS (20% of supply)
+└─ Platform users: 500+ dealers

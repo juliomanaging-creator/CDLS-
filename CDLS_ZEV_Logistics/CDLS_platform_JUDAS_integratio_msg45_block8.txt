@@ -1,0 +1,7 @@
+1. Open CDLS_Champion_One_Pager.docx
+2. Find "5 Champions committed" → Change to actual number
+3. Find "7 slots remaining" → Change to actual number  
+4. Find "(916) 555-CDLS" → Change to your actual phone
+5. Find "julio@cdls.io" → Verify or update
+6. Save as: CDLS_Champion_One_Pager_v2_2026-01-27.docx
+7. Export to PDF for printing

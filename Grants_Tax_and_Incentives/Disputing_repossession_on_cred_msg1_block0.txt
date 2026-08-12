@@ -1,0 +1,16 @@
+Oct 2019    — Account opened (auto loan, 48-month term)
+Apr 2020    — First 30-day late payment
+May 2020    — 60-day late
+Jun 2020    — Repossession initiated, then CANCELLED (06-29-20 shows "REPO CANCELLATION")
+Jun 30      — Estimated repo fee assessed: $425
+Jul 2020    — Repo fee finalized; NOI to Dispose Letter sent (07-06-20)
+Jul–Aug     — Late notices suppressed (repo'd — "NO NOTICE SENT")
+Sep 17, 2020 — Vehicle SOLD at auction for $4,958
+              — GAP rebate: $158.53
+              — Finance charge rebate: $4,589.12
+              — CHARGE-OFF: $11,124.24 ← Lobel's OWN number
+Sep 21, 2020 — Surplus/Deficiency Letter sent
+Jan 24, 2022 — Sales Tax Refund applied: $430.30
+              — Balance per Lobel ledger: $10,693.94
+Jul 25, 2022 — Lobel responds to your dispute, upholds the account
+Now (2026)  — Experian shows $23,851 ← $13,157 MORE than Lobel's own records

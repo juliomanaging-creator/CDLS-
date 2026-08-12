@@ -1,0 +1,8 @@
+# Navigate to Downloads
+cd C:\Users\%USERNAME%\Downloads
+
+# Extract
+tar -xf CA-Dealer-Logistics-COMPLETE-2025-CURRENT.zip
+
+# Or if tar doesn't work, use PowerShell:
+powershell -command "Expand-Archive -Path CA-Dealer-Logistics-COMPLETE-2025-CURRENT.zip -DestinationPath ."

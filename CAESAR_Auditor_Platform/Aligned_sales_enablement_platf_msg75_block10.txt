@@ -1,0 +1,8 @@
+Planning:
+├─ 10:00 AM: Review blockchain dev proposals
+├─ 2:00 PM: Technical evaluation scoring
+└─ 4:00 PM: Prepare final decision criteria
+
+Legal Work:
+- Cooley drafting token classification memo
+- CARB advisory opinion request (first draft)

@@ -1,0 +1,9 @@
+graph TD
+    A[Inventory Need] --> B[vAuto Analysis]
+    B --> C{Source Vehicle}
+    C -->|Wholesale| D[Manheim]
+    C -->|Trade| E[AiM Inspection]
+    D --> F[Transportation]
+    E --> G[Reconditioning]
+    F --> G
+    G --> H[Online Merchandising]

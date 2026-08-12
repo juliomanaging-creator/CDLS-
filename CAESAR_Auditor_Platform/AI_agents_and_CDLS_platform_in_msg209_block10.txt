@@ -1,0 +1,7 @@
+Solar: 94 kWh/day (while driving)
+Shortage: 106 kWh/day
+Solution: Shore power overnight at depot ($0.06/kWh)
+Annual cost: $1,500/year
+
+Savings vs diesel: $25,000 - $1,500 = $23,500/year!
+ROI: $33,000 / $23,500 = 1.4 years ✅✅✅

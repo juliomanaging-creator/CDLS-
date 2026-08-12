@@ -1,0 +1,1 @@
+savingsPerHaul = currentCost - cdlsCost (850)

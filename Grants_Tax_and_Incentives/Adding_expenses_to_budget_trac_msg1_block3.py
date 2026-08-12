@@ -1,0 +1,53 @@
+import { useState } from "react";
+
+const transactions = [
+  // FOOD
+  { date: "03/11", merchant: "COSTCO WHOLESALE", amount: -27.18, category: "Food", note: "Refund" },
+  { date: "03/11", merchant: "CHIMAS FOOD STORE LIQUOR", amount: 14.70, category: "Entertainment", note: "" },
+  { date: "03/10", merchant: "SPROUTS FARMERS MARKET", amount: 15.27, category: "Food", note: "" },
+  { date: "03/09", merchant: "COSTCO ONLINE", amount: 221.69, category: "Food", note: "" },
+  { date: "03/08", merchant: "SAFEWAY", amount: 12.97, category: "Food", note: "" },
+  { date: "03/08", merchant: "COSTCO WHOLESALE", amount: -64.14, category: "Food", note: "Refund" },
+  { date: "03/08", merchant: "SAFEWAY", amount: 15.99, category: "Food", note: "" },
+  { date: "03/07", merchant: "SP SUPERETTE MARKET", amount: 23.71, category: "Food", note: "" },
+  { date: "03/07", merchant: "COSTCO WHOLESALE", amount: 304.14, category: "Food", note: "" },
+  { date: "03/06", merchant: "SPROUTS FARMERS MARKET", amount: 29.45, category: "Food", note: "" },
+  { date: "03/06", merchant: "COSTCO WHOLESALE", amount: -10.87, category: "Food", note: "Refund" },
+  { date: "03/05", merchant: "ZOE COFFEE & TACOS LLC", amount: 18.48, category: "Entertainment", note: "" },
+  { date: "03/04", merchant: "COSTCO WHOLESALE", amount: 120.47, category: "Food", note: "" },
+  { date: "03/03", merchant: "LA SUPERIOR MERCADOS", amount: 12.15, category: "Food", note: "" },
+  { date: "03/02", merchant: "WALMART", amount: 104.35, category: "Food", note: "" },
+  { date: "03/01", merchant: "SAFEWAY", amount: 7.49, category: "Food", note: "" },
+  { date: "03/01", merchant: "SACRAMENTO NATURAL FOODS CO-OP", amount: 15.47, category: "Food", note: "" },
+  // ENTERTAINMENT
+  { date: "03/09", merchant: "ROSS STORES", amount: 21.53, category: "Entertainment", note: "" },
+  { date: "03/09", merchant: "ROSS STORES", amount: 38.04, category: "Entertainment", note: "" },
+  { date: "03/09", merchant: "MARSHALLS", amount: 35.03, category: "Entertainment", note: "" },
+  { date: "03/09", merchant: "DICK'S SPORTING GOODS", amount: 110.90, category: "Entertainment", note: "" },
+  { date: "03/07", merchant: "STARBUCKS", amount: 7.05, category: "Entertainment", note: "" },
+  { date: "03/05", merchant: "CV BARBER COLLEGE", amount: 15.00, category: "Entertainment", note: "" },
+  { date: "03/04", merchant: "ZEN DAY SPA", amount: 92.00, category: "Entertainment", note: "" },
+  { date: "03/04", merchant: "STARBUCKS", amount: 6.25, category: "Entertainment", note: "" },
+  { date: "03/01", merchant: "UBER", amount: 17.55, category: "Entertainment", note: "" },
+  { date: "03/01", merchant: "STARBUCKS", amount: 13.00, category: "Entertainment", note: "" },
+  // GAS
+  { date: "03/11", merchant: "BEST GAS AND BEAR RIVER", amount: 30.04, category: "Gas/Car Maint", note: "" },
+  { date: "03/10", merchant: "76", amount: 40.01, category: "Gas/Car Maint", note: "" },
+  { date: "03/06", merchant: "RADC ENTERPRISES INC", amount: 24.95, category: "Gas/Car Maint", note: "Gas" },
+  { date: "03/05", merchant: "ARCO", amount: 5.58, category: "Gas/Car Maint", note: "" },
+  { date: "03/05", merchant: "ARCO", amount: 20.16, category: "Gas/Car Maint", note: "" },
+  { date: "03/03", merchant: "FRANKLIN GAS MART", amount: 3.70, category: "Gas/Car Maint", note: "" },
+  { date: "03/02", merchant: "ARCO", amount: 20.00, category: "Gas/Car Maint", note: "" },
+  // PERSONAL/HOME
+  { date: "03/10", merchant: "MEMORYSTOCK", amount: 81.32, category: "Personal/Home", note: "Electronics" },
+  { date: "03/08", merchant: "CVS", amount: 4.70, category: "Personal/Home", note: "" },
+  { date: "03/07", merchant: "THE HOME DEPOT", amount: 47.25, category: "Personal/Home", note: "" },
+  { date: "03/06", merchant: "CVS", amount: 9.40, category: "Personal/Home", note: "" },
+  { date: "03/06", merchant: "DOLLAR TREE", amount: 10.33, category: "Personal/Home", note: "" },
+  { date: "03/04", merchant: "THE HOME DEPOT", amount: 75.07, category: "Personal/Home", note: "" },
+  { date: "03/02", merchant: "CVS", amount: 9.40, category: "Personal/Home", note: "" },
+  { date: "03/02", merchant: "HARBOR FREIGHT TOOLS", amount: 9.69, category: "Personal/Home", note: "" },
+  { date: "03/01", merchant: "THE HOME DEPOT", amount: -322.17, category: "Personal/Home", note: "Refund" },
+  // CAR PAYMENT
+  { date: "03/10", merchant: "MOCSE FCU - AUTO LOAN", amount: 604.95, category: "Car Payment", note: "" },
+];

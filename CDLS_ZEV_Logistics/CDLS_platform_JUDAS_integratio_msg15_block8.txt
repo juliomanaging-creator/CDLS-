@@ -1,0 +1,4 @@
+jure> start           # Day 1: Begin
+jure> monitor         # Enable 24/7 monitoring
+jure> daily           # Follow daily tasks
+jure> resolve         # Fix issues as detected

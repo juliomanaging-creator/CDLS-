@@ -1,0 +1,11 @@
+# Extract
+tar -xzf CDLS_Auditor_Agent_v2.0_Complete.tar.gz
+cd cdls-auditor-complete
+
+# Configure
+cp .env.example .env
+nano .env  # Add your credentials
+
+# Deploy
+chmod +x deploy_setup.sh
+./deploy_setup.sh

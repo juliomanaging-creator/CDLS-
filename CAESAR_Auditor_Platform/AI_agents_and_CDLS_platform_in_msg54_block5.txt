@@ -1,0 +1,6 @@
+Searched locations:
+- C:\Program Files\PostgreSQL\16\bin
+- C:\Program Files\PostgreSQL\15\bin
+- System PATH
+
+[X] ERROR: PostgreSQL not found!

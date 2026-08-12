@@ -1,0 +1,15 @@
+Recommendation: Increase option pool from 10% to 15%
+Rationale:
+├─ Need to hire 15 senior people (VP level)
+├─ Competitive market for talent
+├─ Pool currently at 3% available (not enough)
+└─ Industry standard: 15-20% for our stage
+
+Impact on Ownership:
+├─ Existing shareholders: Diluted 5%
+├─ Julio's stake: 50% → 47.5%
+└─ CalPERS: 20% → 19%
+
+Note: This dilution happens pre-Series A, so Sequoia shares in dilution
+
+Vote: Approve / Reject / Discuss

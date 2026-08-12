@@ -1,0 +1,12 @@
+# Export all time tracking data
+rd_tracker export --month [M] --year 2026
+team-tracker export-team --month [M] --year 2026
+claude_tracker export --month [M] --year 2026
+
+# Output files:
+~/Documents/CDLS_RD_Exports/
+  RD_Time_Export_2026_[M]_Julio.csv
+  Team_RD_Report_2026_[M].csv
+  Claude_RD_Activity_2026_[M].csv
+
+# Email to CPA (all 3 CSV files)

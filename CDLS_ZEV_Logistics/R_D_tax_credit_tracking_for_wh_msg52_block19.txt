@@ -1,0 +1,4 @@
+All 10 cities updated with December 2025 prices
+Sacramento: 4.58 → 4.82
+Modesto: 4.52 → 4.75
+(etc.)

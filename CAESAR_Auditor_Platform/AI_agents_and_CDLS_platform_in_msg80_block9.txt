@@ -1,0 +1,1 @@
+rd_tracker start --project AI-001 --name "Platform Development"

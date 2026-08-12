@@ -1,0 +1,38 @@
+IMMEDIATE ACTIONS (BEFORE END OF BUSINESS MONDAY):
+══════════════════════════════════════════════════
+
+☐ 1. Schedule daily 9am standup (recurring, all stakeholders)
+
+☐ 2. Create Slack channel: #cdls-tokenization
+
+☐ 3. Create Google Drive folder (structure shown above)
+
+☐ 4. Send Legal RFP to 10 firms
+    File: Use template from Document 3
+    Deadline: Jan 21, 5pm PST
+
+☐ 5. Send Blockchain RFP to 20 firms
+    File: Use template from Document 2
+    Deadline: Jan 21, 5pm PST
+
+☐ 6. Post blockchain RFP on job boards
+    Sites: Crypto Jobs List, Web3 Jobs, AngelList
+
+☐ 7. Call 20 founding dealers (15 min each)
+    Script: "We're tokenizing. Interested?"
+    Track: Responses in spreadsheet
+
+☐ 8. Schedule dealer webinar
+    Date: Thursday Jan 9, 7pm PST
+    Platform: Zoom (500 capacity)
+    Send: Calendar invites today
+
+☐ 9. Open Excel, start token economics model
+    Use: Template provided in planning section
+
+☐ 10. Block your calendar for next 90 days
+     Mark: TGE = April 13, 2026
+     Block: Daily standups, key milestones
+
+DONE? You're off to a great start. Everything else
+builds from these 10 actions.

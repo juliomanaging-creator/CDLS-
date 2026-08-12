@@ -1,0 +1,1 @@
+powershell -ExecutionPolicy Bypass -File "C:\path\to\Gather-ProjectFiles.ps1"

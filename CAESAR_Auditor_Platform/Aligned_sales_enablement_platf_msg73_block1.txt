@@ -1,0 +1,17 @@
+Argue $CDLS is utility, not security:
+
+Evidence:
+✓ Primary use: Platform access (stake to use)
+✓ Governance: Token holders control network
+✓ Revenue share: Automatic, not discretionary
+✓ Decentralization: DAO controls, not company
+✓ Network effects: Value from users, not team
+
+Precedent:
+- ETH (2018): SEC said "sufficiently decentralized"
+- UNI: Utility token, no SEC action (yet)
+- COMP: Governance token, no enforcement
+
+Risk: SEC could disagree (enforcement action)
+Cost: $200K legal (opinion letter)
+Timeline: 2-3 months

@@ -1,0 +1,25 @@
+Purpose: Represents ownership in the network
+Supply: 1 billion tokens (fixed, deflationary)
+Distribution:
+├─ 40%: Founding partners (you, initial dealers) - 4-year vest
+├─ 20%: Treasury (network growth, incentives)
+├─ 15%: Ecosystem partners (OEMs, utilities, CARB)
+├─ 10%: Team (employees, advisors) - 4-year vest
+├─ 10%: Public sale (decentralized fundraising)
+└─ 5%: Liquidity pools (DEX trading)
+
+Token Utility:
+✓ Governance rights (vote on network decisions)
+✓ Revenue share (claim % of network profit)
+✓ Platform access (stake to use advanced features)
+✓ Collateral (borrow against for fleet purchases)
+
+Vesting:
+- Founders: 1-year cliff, then 36-month linear
+- Early dealers: 6-month cliff, then 18-month linear
+- Public: No lock-up (immediate liquidity)
+
+Trading:
+- Listed on Uniswap, Coinbase, Binance
+- 24/7 global liquidity
+- Market cap = valuation (transparent)

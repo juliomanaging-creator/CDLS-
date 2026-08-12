@@ -1,0 +1,4 @@
+Input: "What do you pay per trip?" ($850)
+Input: "How many trips annually?" (25)
+Input: "Current capacity per trip?" (8 cars)
+Show capacity advantage of 9 vs 8

@@ -1,0 +1,7 @@
+YOUR CDFI HUB (Sacramento County)
+              │
+    ┌─────────┼─────────┐
+    │         │         │
+  LANE 1    LANE 2    LANE 3
+Floor Plan  Dealer Biz Consumer
+ Lending     Loans   Auto Loans

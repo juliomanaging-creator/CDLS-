@@ -1,0 +1,38 @@
+MONDAY 1/20 (MLK Day):
+☐ Light day - review blockchain proposals
+☐ Prepare for Tuesday decision
+
+TUESDAY 1/21 (RFP DEADLINE):
+☐ 9am: Standup
+☐ 10am: Final blockchain dev proposals received
+☐ 12pm: Evaluation meeting
+☐ 2pm: Reference checks (top 2 teams)
+☐ 4pm: DECISION - Select blockchain dev team
+☐ 5pm: Send engagement letter
+
+WEDNESDAY 1/22:
+☐ 9am: Standup
+☐ 10am: Blockchain team onboarding
+☐ 1pm: Requirements review (7 contracts)
+☐ 3pm: Architecture discussion
+☐ 5pm: Sprint 1 planning
+☐ EOD: GitHub setup, Hardhat env
+
+THURSDAY 1/23:
+☐ 9am: Standup
+☐ 10am: Receive token classification memo (legal)
+☐ 12pm: Review with Julio & CFO
+☐ 2pm: Approve legal strategy
+☐ 3pm: CARB opinion finalized
+☐ 4pm: SUBMIT TO CARB
+☐ EOD: KYC provider decision (Persona recommended)
+
+FRIDAY 1/24:
+☐ 9am: Standup
+☐ 10am: Website design kickoff (cdls.network)
+☐ 11am: Gnosis Safe deployment (testnet)
+☐ 1pm: Multi-sig config (3-of-5)
+☐ 3pm: Week 3 budget check ($850K spent)
+☐ 5pm: Week 3 complete!
+
+DELIVERABLE: All vendors hired, work begins ✅

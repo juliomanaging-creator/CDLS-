@@ -1,0 +1,19 @@
+Structure:
+├─ CDLS provides software only
+├─ Users trade peer-to-peer
+├─ Smart contracts hold escrow (not CDLS)
+├─ No USD custody (crypto-only or external processor)
+
+Requires:
+✓ Only federal MSB registration
+✓ No state licenses (non-custodial exemption)
+✓ $500K compliance cost
+
+Benefit:
+✓ Lower regulatory burden
+✓ Faster time to market
+✓ Blockchain-native
+
+Drawbacks:
+✗ Less revenue (lower fees)
+✗ User experience (more steps)

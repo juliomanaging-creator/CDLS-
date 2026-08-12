@@ -1,0 +1,10 @@
+Thought: "Air flows through gaps → No blockage → No drag"
+
+Reality: 
+- Gap areas (70%): 0 energy captured, 0 turbine drag ✓
+- Turbine areas (30%): Energy captured, drag created ✗
+- Lattice structure: Additional drag from framework ✗
+
+Net: You've reduced both energy AND drag proportionally
+But added structural drag penalty
+Ratio unchanged - still lose energy!

@@ -1,0 +1,5 @@
+The 5 kW cooling fan was consuming MORE energy than the heat engine generated!
+
+Your insight: Eliminate the fan!
+Solution: Large passive radiator + ram air (free airflow from truck motion)
+Result: System went from -36% to +30.7%!

@@ -1,0 +1,5 @@
+1. Download simple_setup.bat
+2. Double-click it
+3. Choose option 1 or 2
+4. Enter PostgreSQL password
+5. Done!

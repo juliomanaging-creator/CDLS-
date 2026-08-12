@@ -1,0 +1,65 @@
+┌─────────────────────────────────────────────────┐
+│           DATA COLLECTION LAYER                 │
+├─────────────────────────────────────────────────┤
+│                                                 │
+│  Source 1: Vehicle Telematics                   │
+│  - GPS location                                 │
+│  - Miles driven (odometer)                      │
+│  - Battery state of charge                      │
+│  - Charging events                              │
+│  - Driver behavior                              │
+│                                                 │
+│  Source 2: Charging Infrastructure              │
+│  - kWh consumed per session                     │
+│  - Charging duration                            │
+│  - Peak vs. off-peak usage                      │
+│  - Cost per kWh                                 │
+│                                                 │
+│  Source 3: Maintenance Records                  │
+│  - Service dates                                │
+│  - Parts replaced                               │
+│  - Labor hours                                  │
+│  - Cost per repair                              │
+│                                                 │
+│  Source 4: Route Planning                       │
+│  - Origin/destination pairs                     │
+│  - Actual vs. planned routes                    │
+│  - Weather conditions                           │
+│  - Traffic patterns                             │
+│                                                 │
+│  Source 5: Financial Data                       │
+│  - Fuel/electricity costs                       │
+│  - Revenue per haul                             │
+│  - Margin per route                             │
+│  - Carbon credit prices                         │
+│                                                 │
+└─────────────────────────────────────────────────┘
+           ↓
+┌─────────────────────────────────────────────────┐
+│           DATA PROCESSING LAYER                 │
+├─────────────────────────────────────────────────┤
+│  - Normalize formats                            │
+│  - Validate data quality                        │
+│  - Calculate derived metrics                    │
+│  - Flag anomalies                               │
+│  - Aggregate by time periods                    │
+└─────────────────────────────────────────────────┘
+           ↓
+┌─────────────────────────────────────────────────┐
+│           ANALYTICS LAYER                       │
+├─────────────────────────────────────────────────┤
+│  - Route efficiency analysis                    │
+│  - Cost modeling (EV vs. diesel)                │
+│  - Predictive maintenance                       │
+│  - Carbon credit optimization                   │
+│  - Dealer performance benchmarking              │
+└─────────────────────────────────────────────────┘
+           ↓
+┌─────────────────────────────────────────────────┐
+│           MOAT CREATION LAYER                   │
+├─────────────────────────────────────────────────┤
+│  - Proprietary algorithms                       │
+│  - Industry benchmarks                          │
+│  - Platform licensing data products             │
+│  - Competitive intelligence                     │
+└─────────────────────────────────────────────────┘

@@ -1,0 +1,39 @@
+[HERO SECTION]
+CALIFORNIA DEALER LOGISTICS SOLUTIONS
+AI-Powered Zero-Emission Automotive Logistics
+
+Building the future of automotive transportation with distributed AI, 
+edge computing, and complete data sovereignty.
+
+[CTA Button: "Learn About JUDAS Platform"]
+[CTA Button: "Contact Us"]
+
+[ABOUT SECTION - 3 COLUMNS]
+
+EDGE-FIRST ARCHITECTURE
+AI inference runs locally behind your firewall. 
+Raw data never leaves your infrastructure.
+
+ZERO-EMISSION FLEET
+100 electric haulers committed (MOU/LOI) 
+serving California's $2B logistics market.
+
+INSTITUTIONAL BACKED
+Negotiations with CalPERS for institutional 
+funding to accelerate deployment.
+
+[METRICS SECTION]
+20-25% | Reduction in empty miles
+15-20% | Fleet utilization improvement  
+80-90% | Manual coordination eliminated
+100% | Zero-emission operations
+
+[TECHNOLOGY HIGHLIGHTS]
+✓ Distributed ledger with HSM security
+✓ TLS 1.3 with Perfect Forward Secrecy
+✓ OAuth 2.0 with Mutual TLS authentication
+✓ SOC 2 / ISO 27001 architectural alignment
+
+[FOOTER]
+© 2026 California Dealer Logistics Solutions
+Sacramento, California

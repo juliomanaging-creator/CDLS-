@@ -1,0 +1,31 @@
+LEGAL COUNSEL:
+─────────────
+Firm: _______________
+Partner: _______________
+Email: _______________
+Phone: _______________
+Engagement: $_______ / Feb 1 - June 30
+
+BLOCKCHAIN DEVELOPERS:
+────────────────────
+Company: _______________
+Lead: _______________
+Email: _______________
+Phone: _______________
+Engagement: $_______ / Feb 1 - Apr 24
+
+SECURITY AUDITOR:
+───────────────
+Firm: Trail of Bits (booked)
+Contact: _______________
+Email: _______________
+Phone: _______________
+Dates: March 3-16, 2026
+
+KYC PROVIDER:
+────────────
+Company: Persona (recommended)
+Contact: _______________
+Email: _______________
+Phone: _______________
+Cost: $3/verification

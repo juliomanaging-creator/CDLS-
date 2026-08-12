@@ -1,0 +1,14 @@
+# Run the zero-cost agent
+python3 judas_zero_cost_agent.py
+
+# View cost savings
+judas-zero> savings
+
+# View hardware requirements  
+judas-zero> requirements
+
+# See migration path
+judas-zero> migrate
+
+# Start Day 1 tasks
+judas-zero> tasks 1

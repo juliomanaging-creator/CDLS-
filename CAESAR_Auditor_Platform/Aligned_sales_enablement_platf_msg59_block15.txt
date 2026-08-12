@@ -1,0 +1,8 @@
+For banking to make sense, future price must exceed:
+Current Price × (1 + Opportunity Cost)^Years
+
+Example:
+If you can earn 8% elsewhere, banking credits for 1 year only makes sense if price will be:
+$100 × 1.08 = $108 or higher
+
+If price only reaches $105, you'd have been better off selling now and investing the cash.

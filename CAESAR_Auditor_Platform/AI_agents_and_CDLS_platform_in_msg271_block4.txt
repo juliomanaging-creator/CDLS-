@@ -1,0 +1,19 @@
+PLANTS PRODUCE COMPOUNDS THAT "TRAP" METALS:
+
+Phytochelatins (Plant-Produced Peptides):
+- Structure: (γ-Glu-Cys)n-Gly (amino acid chains)
+- Function: Binds Cu²⁺, Zn²⁺, Cd²⁺ (forms stable complex)
+- Result: Copper becomes NON-REACTIVE (can't generate ROS!)
+- Storage: Chelated copper stored in vacuoles
+
+Organic Acids (Citric Acid, Malic Acid, Oxalic Acid):
+- Function: Forms copper-citrate, copper-malate complexes
+- Result: Reduces free Cu²⁺ ions (lower toxicity)
+- Example: Spinach naturally high in oxalic acid (binds metals safely)
+
+Metallothioneins (Metal-Binding Proteins):
+- Structure: Cysteine-rich proteins
+- Function: Binds copper tightly (1 protein binds 7-12 Cu atoms!)
+- Result: Copper sequestered, not bioavailable
+
+KEY INSIGHT: If copper is CHELATED, it's less toxic even at high concentrations!

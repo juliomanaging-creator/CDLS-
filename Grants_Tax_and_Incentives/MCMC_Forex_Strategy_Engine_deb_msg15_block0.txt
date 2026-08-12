@@ -1,0 +1,7 @@
+Stop-Loss distance = ATR × 2.5
+= 0.00785 × 2.5
+= 0.01963 (~197 pips)
+
+Entry ~1.1560
+Stop-Loss = 1.1560 + 0.0196
+= set Stop at 1.1756

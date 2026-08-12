@@ -1,0 +1,11 @@
+Year 1 Launch Fleet:
+├── Ram 3500 SRW Cummins    ~$65,000
+├── Switch 19               ~$36,299
+├── 4-place PWC trailer       ~5,500
+└── 2× Yamaha VX-C          ~22,000
+                     TOTAL: ~$128,800
+
+Year 1 Revenue Potential:
+├── Switch 19 (60 days × $700)    $42,000
+├── 2 skis (100 days × $1,000/day) $100,000  ← 2 skis × 5hrs × $100
+                             TOTAL: $142,000

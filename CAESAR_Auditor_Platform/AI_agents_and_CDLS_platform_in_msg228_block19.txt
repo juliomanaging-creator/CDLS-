@@ -1,0 +1,11 @@
+Problem: Copper corrodes, insulation cracks, 7 years
+Solution: Titanium nitride coating + PEEK insulation
+
+Coating: TiN (corrosion immune)
+Insulation: PEEK (30+ year life)
+
+Cost: $8,000
+Savings: $1,733/year
+ROI: 4.6 years
+
+Status: Available (aerospace-grade) ✅

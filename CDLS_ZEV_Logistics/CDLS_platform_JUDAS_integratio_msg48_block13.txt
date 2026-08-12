@@ -1,0 +1,5 @@
+1. Give assistant the Agent Briefing document
+2. They follow day-by-day schedule
+3. They report progress daily
+4. You handle escalations only
+5. Close 20 Champions by March 31

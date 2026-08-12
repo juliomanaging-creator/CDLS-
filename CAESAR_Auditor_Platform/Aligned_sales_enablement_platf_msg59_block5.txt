@@ -1,0 +1,21 @@
+Q1 2026 (Jan-Mar):
+- March 25: Collect all odometer readings from 20 dealers
+- March 28: Collect all electricity meter readings
+- March 30: Compile data into CARB template
+- April 15: Submit Q1 report to CARB (deadline: April 30)
+
+Q2 2026 (Apr-Jun):
+- June 25: Collect odometer readings
+- June 28: Collect meter readings  
+- June 30: Compile data
+- July 15: Submit Q2 report (deadline: July 30)
+
+Q3 2026 (Jul-Sep):
+- September 25: Collect readings
+- September 28: Compile data
+- October 15: Submit Q3 report (deadline: Oct 30)
+
+Q4 2026 (Oct-Dec):
+- December 25: Collect readings
+- December 30: Compile data
+- January 15, 2027: Submit Q4 report (deadline: Jan 30)

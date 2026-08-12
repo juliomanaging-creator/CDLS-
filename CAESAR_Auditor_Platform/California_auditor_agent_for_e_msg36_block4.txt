@@ -1,0 +1,7 @@
+Payment Amount: $2,450.00
+Recipient: John Doe (verified ✓)
+Method: ⚪ Direct Deposit (2-3 days)
+        ⚪ Paper Check (7-10 days)  
+        ⚪ Instant Transfer (same day, $0.25 fee)
+
+[Request Manager Approval]

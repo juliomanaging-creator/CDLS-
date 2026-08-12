@@ -1,0 +1,4 @@
+Automatically detects: currentCost < cdlsCost
+Displays: Gold banner with explanation
+Lists: All 5 additional value components
+Result: Dealer understands context immediately

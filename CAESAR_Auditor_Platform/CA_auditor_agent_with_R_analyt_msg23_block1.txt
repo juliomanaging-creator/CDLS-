@@ -1,0 +1,7 @@
+Access to sensitive data requires:
+✓ HIPAA-authorized role
+✓ Current training certification (within 12 months)
+✓ Multi-factor authentication
+✓ Business justification documented
+✓ Supervisor approval (for bulk access)
+✓ Every access permanently logged

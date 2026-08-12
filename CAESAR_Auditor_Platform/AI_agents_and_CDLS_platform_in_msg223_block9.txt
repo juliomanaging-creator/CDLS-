@@ -1,0 +1,9 @@
+Traditional: Truck pulls dead weight
+- Truck motor: 145 kW average load
+
+Your system: Trailer pushes itself
+- Truck motor: 130 kW average load
+- Savings: 15 kW continuous
+
+Over 350-mile trip: 180 kWh saved
+Range extension: +70 miles! ✅

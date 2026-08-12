@@ -1,0 +1,18 @@
+Infrastructure (92%)
+    ↓
+Domain/SSL (88%)
+    ↓
+AI Deployment (85%)
+    ↓
+Application (80%)
+    ↓
+Testing (75%)
+    ↓
+Combined = 37% theoretical
+
+With dealer retention (82%)
+= 30% theoretical
+
+Actual = 7.7% (due to correlations)
+
+WITH MITIGATIONS = 25-35% ✅

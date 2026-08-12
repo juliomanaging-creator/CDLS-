@@ -1,0 +1,6 @@
+Day 1: Dealer inquiry → Agent 1 qualifies dealer
+Day 2: Julio visits site → Agent 4 analyzes photos, generates SLD
+Day 3: Agent 7 auto-fills SMUD application → Agent 3 submits
+Day 21: SMUD approval → Agent 8 reserves $30K rebate
+Day 60: PTO received → Agent 5 activates V2G operations
+Day 90: Dealer earning from hauling + V2G + carbon credits

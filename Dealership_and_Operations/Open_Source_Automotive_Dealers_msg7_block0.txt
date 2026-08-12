@@ -1,0 +1,6 @@
+Average Vehicle Sales (AVS) = New Sales + Used Sales
+Average Front End Gross (AFG) = Total Front End Gross / AVS
+Average Back End Gross (ABG) = Total Back End Gross / AVS
+Average Service RO (ASR) = Total Service Revenue / Number of ROs
+Current Lead Close Rate (CLR) = Sales / Total Leads
+Current Website Lead Rate (CWL) = Website Leads / Website Visitors

@@ -1,0 +1,9 @@
+✅ C001: Build Carbon Credit Forecast Model
+   Due: Jan 31, 2026
+   Hours: 16 hrs
+   Deliverable: Excel model showing $682M NPV
+
+✅ P001: Apply for HVIP Vouchers
+   Due: Mar 13, 2026
+   Value: $6M in vouchers
+   CRITICAL: Apply in first hour portal opens

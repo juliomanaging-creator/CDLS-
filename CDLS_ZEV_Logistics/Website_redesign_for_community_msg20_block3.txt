@@ -1,0 +1,8 @@
+# Run this in your terminal — swap in your repo
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO
+cd YOUR_REPO
+
+# Download the 6 files from the links above into this folder, then:
+git add .
+git commit -m "Add CDLS Lumin Folsom demo sites + 2026 grant programs page"
+git push origin main

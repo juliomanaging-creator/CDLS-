@@ -1,0 +1,3 @@
+█░█░█░█░█  ← Lattice with gaps (70% open)
+ ↓ ↓ ↓ ↓   ← Air flows through
+  LESS?    ← Reduced drag?

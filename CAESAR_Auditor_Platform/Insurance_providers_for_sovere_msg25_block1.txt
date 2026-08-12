@@ -1,0 +1,6 @@
+1. Go to vanta.com
+2. Sign up for free trial (no credit card for 14 days)
+3. Connect AWS account (read-only)
+4. Connect GitHub (read-only)
+5. Connect Google Workspace
+6. Let Vanta start scanning your infrastructure

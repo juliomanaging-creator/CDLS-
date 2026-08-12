@@ -1,0 +1,19 @@
+cdls_30_agent_system_COMPLETE.tar.gz (39KB)
+├── NEW_AGENTS_SUMMARY.md          # ← Complete specs for 4 new agents
+├── README.md                       # System overview (26 agents)
+├── QUICKSTART.md                   # 15-minute deploy guide
+├── INTEGRATION_GUIDE.md            # Integration details
+│
+├── agents/
+│   ├── [26 previous agents]
+│   └── [4 new agent specs]
+│       ├── Insurance & Fraud
+│       ├── Community Affairs
+│       ├── Technology Research
+│       └── Materials Upcycling
+│
+├── orchestrator/
+│   └── multi_agent_orchestrator.py  # Coordinates all 30 agents
+│
+├── api/ portal/ dashboard/ database/
+└── docker-compose.yml               # One-command deployment

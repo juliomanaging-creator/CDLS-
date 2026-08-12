@@ -1,0 +1,5 @@
+Dealership Name,Contact Name,Email,Phone,Status,Monthly Hauls,First Contact Date,LOI Sent Date,LOI Signed Date,Investment Interest,Priority,Notes,Next Action,Next Action Date
+
+ABC Motors,John Smith,john@abc.com,(916) 555-1234,Contacted,15,2026-01-27,,,Yes,High,Interested in program,Follow up,2026-01-29
+
+XYZ Dealer,Jane Doe,jane@xyz.com,(916) 555-5678,Meeting Scheduled,20,2026-01-27,,,Maybe,High,Meeting Wed 2pm,Conduct meeting,2026-01-29

@@ -1,0 +1,10 @@
+Diesel displaced: 15,385 gallons (100K miles @ 6.5 mpg)
+Diesel emissions avoided: 200.23 MT CO₂e
+Electric emissions (actual): 47.41 MT CO₂e
+Net reduction: 152.82 MT CO₂e per truck! ✅
+
+LCFS credit value (2024 market):
+152.82 MT × $95/MT = $14,518/year per truck
+
+Fleet (20 trucks):
+3,056 MT/year × $95 = $290,360/year! 🎉

@@ -1,0 +1,20 @@
+Borrowing Against $CDLS:
+- Deposit $CDLS on Aave, Compound, or MakerDAO
+- Borrow USDC at 60% LTV (loan-to-value)
+- Use USDC to buy EV haulers
+- Keep $CDLS (no dilution)
+
+Example:
+Dealer holds $100,000 in $CDLS
+Deposits on Aave
+Borrows $60,000 USDC (60% LTV)
+Uses $60,000 as down payment on $230,000 hauler
+Hauler generates $5,000/month revenue
+After 12 months: Repays loan
+Still owns $CDLS (now worth $200,000)
+ROI: 300%
+
+vs. Traditional:
+Sell $60,000 in equity to buy hauler
+Diluted permanently
+Lower ROI

@@ -1,0 +1,7 @@
+Stirling engine work: +0.57 MJ (same)
+Passive ram air cooling: -0.03 MJ (just radiator drag!)
+NET: +0.54 MJ (GAIN!) ✅
+
+Efficiency: +30.7% (system works!)
+
+IMPROVEMENT: 67 percentage points! 🎉

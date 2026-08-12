@@ -1,0 +1,13 @@
+Interactive video walks them through:
+
+"Watch this 5-minute video, pause when 
+needed, do each step"
+
+Setup: Follow video step-by-step
+Time: 5 minutes
+Tech knowledge: Can you watch YouTube?
+
+Pros: Visual, self-paced, scales perfectly
+Cons: 5 minutes feels long
+
+Predicted: 55% completion, 60% retention

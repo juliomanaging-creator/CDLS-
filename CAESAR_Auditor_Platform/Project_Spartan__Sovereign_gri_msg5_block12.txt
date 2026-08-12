@@ -1,0 +1,3 @@
+# Anyone can verify royalty proofs
+curl https://integrity-mirror.spartantrust.org/verify
+curl https://integrity-mirror.spartantrust.org/statistics

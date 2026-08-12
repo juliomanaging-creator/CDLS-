@@ -1,0 +1,16 @@
+Build charging depots at 200 dealer locations:
+- Cost: $200K per depot (4x 150kW chargers)
+- Total investment: $40M
+- Revenue: Sell electricity at $0.22/kWh (vs. $0.18 cost)
+- Markup: 22% margin
+- Annual electricity sales: $52M × 0.22 = $11.4M
+- Annual electricity costs: $52M × 0.18 = $9.4M
+- Annual profit: $2M from charging alone
+
+Plus:
+- Dealer pays you rent: $2,000/month × 200 = $4.8M/year
+- Grid services revenue (demand response): $1M/year
+- Total charging business profit: $7.8M EBITDA
+
+At 15x multiple (infrastructure assets):
+Charging business value: $117M

@@ -1,0 +1,21 @@
+cdls_integrated_system_v2.tar.gz (14KB)
+├── README.md                          # Complete documentation
+├── QUICKSTART.md                      # 15-minute setup guide
+├── docker-compose.yml                 # One-command deployment
+├── requirements.txt                   # Python dependencies
+│
+├── orchestrator/
+│   └── multi_agent_orchestrator.py   # 🧠 Main brain (430 lines)
+│
+├── agents/                            # 🤖 25 agents (stubs + 1 full)
+│   ├── legal/ (6 agents)
+│   ├── research/ (5 agents)
+│   ├── carbon/ (3 agents)
+│   ├── financial/ (4 agents)
+│   ├── compliance/ (3 agents)
+│   └── operations/ (4 agents)
+│
+├── api/                               # 🌐 FastAPI server
+├── portal/                            # React user interface
+├── dashboard/                         # React agent monitoring
+└── database/                          # PostgreSQL schema

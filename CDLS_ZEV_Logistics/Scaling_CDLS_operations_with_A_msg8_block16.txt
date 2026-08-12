@@ -1,0 +1,4 @@
+Bad: "Hmm, what should I work on next?"
+Good: Agent: "Start W1D3-T2-ONBOARD. It's high priority,
+      all dependencies are complete, and it's on the
+      critical path for Week 2 goals."

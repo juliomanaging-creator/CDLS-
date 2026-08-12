@@ -1,0 +1,26 @@
+Core R Development:          60 hours (37.5%)
+├─ Monte Carlo simulations:  20 hours
+├─ Anomaly detection:        20 hours
+└─ Time series forecasting:  20 hours
+
+Python Integration:          40 hours (25%)
+├─ rpy2 bridge setup:        15 hours
+├─ Data conversion logic:    10 hours
+├─ Error handling:           10 hours
+└─ Performance optimization:  5 hours
+
+Testing:                     30 hours (18.8%)
+├─ Unit tests:              10 hours
+├─ Integration tests:       10 hours
+├─ Performance testing:      5 hours
+└─ User acceptance testing:  5 hours
+
+Documentation:               20 hours (12.5%)
+├─ Technical docs:          10 hours
+├─ User guides:              5 hours
+└─ Code comments:            5 hours
+
+Deployment:                  10 hours (6.2%)
+├─ Production setup:         5 hours
+├─ Monitoring:               3 hours
+└─ Backup procedures:        2 hours

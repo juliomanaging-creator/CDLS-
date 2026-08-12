@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>CDLS Field Portal — Julio Umanzor</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0F1E35;
+    --navy2: #1E3A5F;
+    --blue: #2563EB;
+    --teal: #0D9488;
+    --gold: #D97706;
+    --gold-light: #FCD34D;
+    --green: #16A34A;
+    --red: #DC2626;
+    --orange: #EA580C;
+    --purple: #7C3AED;
+    --bg: #080F1C;
+    --surface: #111827;
+    --surface2: #1F2937;
+    --border: rgba(255,255,255,0.08);
+    --text: #F9FAFB;
+    --muted: #9CA3AF;
+    --dim: #4B5563;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    overscroll-behavior: none;
+  }
+
+  /* ── TOP BAR ── */
+  .topbar {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(8,15,28,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 16px 10px;
+  }
+  .topbar-inner { max-width: 480px; margin: 0 auto; }
+  .topbar-row1 { display: flex; justify-content: space-between; align-items: center; }
+  .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 15px; letter-spacing: 0.05em; color: var(--gold-light); }
+  .logo span { color: var(--muted); font-weight: 400; }
+  .date-badge {
+    font-family: 'DM Mono', monospace; font-size: 11px;
+    color: var(--teal); background: rgba(13,148,136,0.12);
+    border: 1px solid rgba(13,148,136,0.3);
+    padding: 3px 8px; border-radius: 20px;
+  }
+  .topbar-row2 { margin-top: 8px; }
+  .dealer-input-row { display: flex; gap: 8px; align-items: center; }
+  .dealer-input {
+    flex: 1; background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 12px; color: var(--text);
+    font-size: 13px; font-family: 'Inter', sans-serif;
+    outline: none; transition: border-color 0.2s;
+  }
+  .dealer-input:focus { border-color: var(--gold); }
+  .dealer-input::placeholder { color: var(--dim); }
+  .new-btn {
+    background: var(--gold); color: #000; font-weight: 700;
+    font-size: 12px; padding: 8px 14px; border-radius: 8px;
+    border: none; cursor: pointer; font-family: 'Syne', sans-serif;
+    letter-spacing: 0.05em; white-space: nowrap;
+    transition: background 0.15s;
+  }
+  .new-btn:active { background: var(--gold-light); }
+
+  /* ── PROGRESS BAR ── */
+  .progress-wrap {
+    max-width: 480px; margin: 0 auto;
+    padding: 8px 16px 0;
+  }
+  .progress-row { display: flex; justify-content: space-between; margin-bottom: 4px; }
+  .progress-label { font-size: 11px; color: var(--muted); font-family: 'DM Mono', monospace; }
+  .progress-count { font-size: 11px; color: var(--gold); font-family: 'DM Mono', monospace; font-weight: 500; }
+  .progress-track {
+    height: 3px; background: var(--surface2); border-radius: 2px; overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%; background: linear-gradient(90deg, var(--teal), var(--gold));
+    border-radius: 2px; transition: width 0.5s ease;
+  }
+
+  /* ── TAB BAR ── */
+  .tabs {
+    max-width: 480px; margin: 10px auto 0;
+    display: flex; gap: 4px; padding: 0 16px;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab {
+    flex-shrink: 0; padding: 5px 12px; border-radius: 20px;
+    font-size: 12px; font-weight: 500; cursor: pointer;
+    border: 1px solid var(--border); color: var(--muted);
+    background: transparent; transition: all 0.2s;
+    font-family: 'Inter', sans-serif;
+  }
+  .tab.active { background: var(--blue); color: #fff; border-color: var(--blue); }
+  .tab:active { opacity: 0.7; }
+
+  /* ── MAIN CONTENT ── */
+  .main { max-width: 480px; margin: 0 auto; padding: 12px 16px 120px; }
+
+  /* ── SECTION ── */
+  .section { margin-bottom: 20px; }
+  .section-header {
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 10px; padding: 0 2px;
+  }
+  .section-icon { font-size: 16px; }
+  .section-title {
+    font-family: 'Syne', sans-serif; font-weight: 700;
+    font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .section-count {
+    margin-left: auto; font-family: 'DM Mono', monospace;
+    font-size: 11px; color: var(--dim);
+  }
+  .section-count.done { color: var(--green); }
+
+  /* ── CHECKLIST ITEM ── */
+  .item {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 14px 14px 14px 16px;
+    margin-bottom: 8px; cursor: pointer;
+    transition: all 0.2s; position: relative; overflow: hidden;
+    display: flex; gap: 12px; align-items: flex-start;
+    -webkit-user-select: none; user-select: none;
+  }
+  .item::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+    width: 3px; border-radius: 3px 0 0 3px;
+    background: var(--item-accent, var(--border));
+    transition: background 0.2s;
+  }
+  .item:active { transform: scale(0.99); }
+  .item.checked {
+    background: rgba(22,163,74,0.06);
+    border-color: rgba(22,163,74,0.2);
+  }
+  .item.checked::before { background: var(--green); }
+
+  .check-circle {
+    flex-shrink: 0; width: 22px; height: 22px;
+    border-radius: 50%; border: 2px solid var(--dim);
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.25s; margin-top: 1px;
+  }
+  .item.checked .check-circle {
+    background: var(--green); border-color: var(--green);
+  }
+  .check-mark { font-size: 12px; color: #fff; opacity: 0; transition: opacity 0.2s; }
+  .item.checked .check-mark { opacity: 1; }
+
+  .item-body { flex: 1; min-width: 0; }
+  .item-title {
+    font-size: 14px; font-weight: 500; color: var(--text);
+    line-height: 1.3; transition: color 0.2s;
+  }
+  .item.checked .item-title { color: var(--muted); text-decoration: line-through; }
+  .item-sub {
+    font-size: 12px; color: var(--muted); margin-top: 3px;
+    line-height: 1.4;
+  }
+  .item-tags { display: flex; gap: 4px; margin-top: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 10px; font-family: 'DM Mono', monospace;
+    padding: 2px 7px; border-radius: 10px; font-weight: 500;
+  }
+  .tag-urgent { background: rgba(220,38,38,0.15); color: #FCA5A5; border: 1px solid rgba(220,38,38,0.3); }
+  .tag-revenue { background: rgba(217,119,6,0.15); color: #FCD34D; border: 1px solid rgba(217,119,6,0.3); }
+  .tag-compliance { background: rgba(37,99,235,0.15); color: #93C5FD; border: 1px solid rgba(37,99,235,0.3); }
+  .tag-tech { background: rgba(124,58,237,0.15); color: #C4B5FD; border: 1px solid rgba(124,58,237,0.3); }
+  .tag-v2g { background: rgba(13,148,136,0.15); color: #5EEAD4; border: 1px solid rgba(13,148,136,0.3); }
+  .tag-grant { background: rgba(22,163,74,0.15); color: #86EFAC; border: 1px solid rgba(22,163,74,0.3); }
+
+  /* ── NOTES PANEL ── */
+  .item-note-row {
+    margin-top: 8px; display: none;
+  }
+  .item.has-note .item-note-row { display: block; }
+  .item-note {
+    width: 100%; background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 6px; padding: 8px; color: var(--text);
+    font-size: 12px; font-family: 'Inter', sans-serif;
+    resize: none; outline: none; min-height: 52px;
+    transition: border-color 0.2s;
+  }
+  .item-note:focus { border-color: var(--gold); }
+
+  .item-actions { display: flex; gap: 6px; margin-top: 6px; }
+  .action-btn {
+    font-size: 11px; padding: 3px 9px; border-radius: 6px;
+    border: 1px solid var(--border); background: transparent;
+    color: var(--muted); cursor: pointer; font-family: 'Inter', sans-serif;
+    transition: all 0.15s;
+  }
+  .action-btn:active { background: var(--surface2); }
+  .note-btn { color: var(--gold); border-color: rgba(217,119,6,0.3); }
+
+  /* ── DEALER CARD ── */
+  .dealer-card {
+    background: linear-gradient(135deg, var(--navy2) 0%, #0F2847 100%);
+    border: 1px solid rgba(37,99,235,0.3);
+    border-radius: 14px; padding: 16px;
+    margin-bottom: 16px; display: none;
+  }
+  .dealer-card.visible { display: block; }
+  .dealer-card-name {
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: 18px; color: var(--text);
+  }
+  .dealer-card-meta {
+    font-size: 12px; color: var(--muted); margin-top: 4px;
+    font-family: 'DM Mono', monospace;
+  }
+  .dealer-score-row {
+    display: flex; gap: 12px; margin-top: 12px;
+  }
+  .score-box {
+    flex: 1; background: rgba(0,0,0,0.3); border-radius: 8px;
+    padding: 10px; text-align: center;
+  }
+  .score-val {
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: 22px; color: var(--gold);
+  }
+  .score-lbl { font-size: 10px; color: var(--muted); margin-top: 2px; font-family: 'DM Mono', monospace; }
+
+  /* ── QUICK CAPTURE ── */
+  .quick-capture {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: rgba(8,15,28,0.98);
+    backdrop-filter: blur(16px);
+    border-top: 1px solid var(--border);
+    padding: 12px 16px 24px;
+  }
+  .quick-inner { max-width: 480px; margin: 0 auto; }
+  .quick-label { font-size: 10px; color: var(--dim); font-family: 'DM Mono', monospace; margin-bottom: 6px; letter-spacing: 0.08em; }
+  .quick-row { display: flex; gap: 8px; }
+  .quick-input {
+    flex: 1; background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 10px; padding: 10px 14px;
+    color: var(--text); font-size: 13px; font-family: 'Inter', sans-serif;
+    outline: none; transition: border-color 0.2s;
+  }
+  .quick-input:focus { border-color: var(--teal); }
+  .quick-input::placeholder { color: var(--dim); }
+  .quick-send {
+    background: var(--teal); color: #fff; border: none;
+    border-radius: 10px; padding: 10px 18px;
+    font-size: 18px; cursor: pointer; transition: background 0.15s;
+  }
+  .quick-send:active { background: #0F766E; }
+
+  /* ── COMPLETION FLASH ── */
+  .flash {
+    position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%) scale(0);
+    background: var(--green); color: #fff;
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: 16px; padding: 14px 28px; border-radius: 50px;
+    pointer-events: none; z-index: 999; opacity: 0;
+    transition: all 0.3s;
+  }
+  .flash.show { transform: translate(-50%,-50%) scale(1); opacity: 1; }
+  .flash.hide { opacity: 0; transform: translate(-50%,-60%) scale(0.9); }
+
+  /* ── EMPTY STATE ── */
+  .empty { text-align: center; padding: 40px 20px; color: var(--dim); }
+  .empty-icon { font-size: 40px; margin-bottom: 12px; }
+  .empty-text { font-size: 14px; }
+
+  /* ── HIDDEN ── */
+  .hidden { display: none !important; }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .item { animation: slideIn 0.25s ease both; }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-row1">
+      <div class="logo">CDLS <span>/ FIELD OPS</span></div>
+      <div class="date-badge" id="dateBadge"></div>
+    </div>
+    <div class="topbar-row2">
+      <div class="dealer-input-row">
+        <input class="dealer-input" id="dealerInput" placeholder="Enter dealer name or DBA..." autocomplete="off">
+        <button class="new-btn" onclick="startDealer()">START VISIT</button>
+      </div>
+    </div>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-row">
+      <span class="progress-label">VISIT PROGRESS</span>
+      <span class="progress-count" id="progressCount">0 / 0 complete</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill" style="width:0%"></div>
+    </div>
+  </div>
+  <div class="tabs" id="tabBar">
+    <div class="tab active" onclick="filterTab('all', this)">All</div>
+    <div class="tab" onclick="filterTab('urgent', this)">🚨 Urgent</div>
+    <div class="tab" onclick="filterTab('compliance', this)">Compliance</div>
+    <div class="tab" onclick="filterTab('revenue', this)">Revenue</div>
+    <div class="tab" onclick="filterTab('v2g', this)">V2G</div>
+    <div class="tab" onclick="filterTab('tech', this)">Tech/AI</div>
+    <div class="tab" onclick="filterTab('grant', this)">Grants</div>
+    <div class="tab" onclick="filterTab('done', this)">✅ Done</div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main" id="mainContent">
+
+  <!-- DEALER CARD -->
+  <div class="dealer-card" id="dealerCard">
+    <div class="dealer-card-name" id="dealerCardName">—</div>
+    <div class="dealer-card-meta" id="dealerCardMeta"></div>
+    <div class="dealer-score-row">
+      <div class="score-box">
+        <div class="score-val" id="scoreChecked">0</div>
+        <div class="score-lbl">CHECKED</div>
+      </div>
+      <div class="score-box">
+        <div class="score-val" id="scoreRemain">0</div>
+        <div class="score-lbl">REMAINING</div>
+      </div>
+      <div class="score-box">
+        <div class="score-val" id="scoreScore">—</div>
+        <div class="score-lbl">SCORE</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sectionsContainer"></div>
+</div>
+
+<!-- FLASH -->
+<div class="flash" id="flash">✓ Done!</div>
+
+<!-- QUICK CAPTURE -->
+<div class="quick-capture">
+  <div class="quick-inner">
+    <div class="quick-label">QUICK NOTE / ISSUE CAPTURE</div>
+    <div class="quick-row">
+      <input class="quick-input" id="quickInput" placeholder="Flag an issue, add a finding..." autocomplete="off">
+      <button class="quick-send" onclick="quickCapture()">＋</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── DATA ──────────────────────────────────────────────────────
+const CHECKLIST = [
+  // SECTION: First Contact
+  { section: 'First Contact', icon: '👋', items: [
+    { id:'fc1', title:'Confirm dealer legal name + DBA', sub:'Cross-reference with DMV license, note any discrepancies', tags:['compliance'], accent:'#2563EB' },
+    { id:'fc2', title:'Verify dealer license is current', sub:'CA Dealer License # — check expiry date on wall certificate', tags:['compliance','urgent'], accent:'#DC2626' },
+    { id:'fc3', title:'Introduce CDLS value prop (ZEV hauling + grants)', sub:'60-second pitch: logistics savings + grant eligibility + V2G revenue', tags:['revenue'], accent:'#D97706' },
+    { id:'fc4', title:'Get decision-maker contact info', sub:'Name, direct mobile, email — add to SALSA dealer record', tags:[], accent:'#6B7280' },
+    { id:'fc5', title:'Confirm inventory volume (vehicles/month)', sub:'Need monthly haul estimate for route optimization agent', tags:['revenue'], accent:'#D97706' },
+  ]},
+
+  // SECTION: Compliance Assessment
+  { section: 'Compliance Assessment', icon: '📋', items: [
+    { id:'ca1', title:'CARB ACF Registration — confirmed?', sub:'Visit arb.ca.gov — free, same-day. Required for HVIP eligibility', tags:['compliance','urgent'], accent:'#DC2626' },
+    { id:'ca2', title:'DMV Dealer License visible + current', sub:'Must be posted — check expiry, check bond amount ($50K min)', tags:['compliance'], accent:'#2563EB' },
+    { id:'ca3', title:'Smog station on-site or partner confirmed?', sub:'Every gas vehicle sale requires valid smog cert — ask about process', tags:['compliance'], accent:'#2563EB' },
+    { id:'ca4', title:'Form 8300 process — cash deal workflow?', sub:'Any cash deal >$10K requires IRS filing within 15 days', tags:['compliance'], accent:'#2563EB' },
+    { id:'ca5', title:'Odometer disclosure on all purchases?', sub:'Federal requirement — SALSA deal jacket system automates this', tags:['compliance'], accent:'#2563EB' },
+    { id:'ca6', title:'Used vehicle history disclosure (Carfax/AutoCheck)?', sub:'CA law requires disclosure of material defects', tags:['compliance'], accent:'#2563EB' },
+    { id:'ca7', title:'Advertising compliance check', sub:'Ask to see last 3 online ads — check required disclosures', tags:['compliance'], accent:'#2563EB' },
+  ]},
+
+  // SECTION: HVIP + Incentive Stack
+  { section: 'HVIP + Incentive Stack', icon: '💰', items: [
+    { id:'hv1', title:'HVIP Pre-Registration — done?', sub:'californiahvip.org — FREE. Deadline Sep 9, 2026 to get $330K/truck', tags:['urgent','revenue'], accent:'#DC2626' },
+    { id:'hv2', title:'How many ZEV trucks does dealer plan to acquire?', sub:'Each Tesla Semi qualifies for up to $330K HVIP + $40K IRA 45W', tags:['revenue'], accent:'#D97706' },
+    { id:'hv3', title:'Dealer aware of IRA Section 45W ($40K/truck)?', sub:'Commercial Clean Vehicle Credit — stackable with HVIP', tags:['revenue'], accent:'#D97706' },
+    { id:'hv4', title:'CDLS incentive matrix walkthrough completed?', sub:'Show CDLS Incentives Matrix 2026 — 54–97% cost reduction possible', tags:['revenue'], accent:'#D97706' },
+    { id:'hv5', title:'Current fuel/logistics spend per month?', sub:'Calculate ROI: CDLS logistics cost vs. current third-party hauler', tags:['revenue'], accent:'#D97706' },
+  ]},
+
+  // SECTION: V2G Site Assessment
+  { section: 'V2G Site Assessment', icon: '⚡', items: [
+    { id:'v1', title:'Confirm available parking stalls (min 2 for pilot)', sub:'Need stalls accessible to Tesla Semi + charger clearance', tags:['v2g'], accent:'#0D9488' },
+    { id:'v2', title:'Electrical panel capacity — 3-phase 480V available?', sub:'Fermata FE-20 requires 3-phase — check with facilities manager', tags:['v2g','tech'], accent:'#0D9488' },
+    { id:'v3', title:'Existing SMUD commercial account number', sub:'Required for SMUD Rule 21 interconnection application', tags:['v2g'], accent:'#0D9488' },
+    { id:'v4', title:'Photo of electrical panel / SLD (if available)', sub:'SLD Engineering Agent converts photo → diagram for SMUD submission', tags:['v2g','tech'], accent:'#0D9488' },
+    { id:'v5', title:'Internet connectivity at lot (Wi-Fi or cellular)?', sub:'Required for real-time CAISO price signals + V2G dispatch', tags:['v2g','tech'], accent:'#0D9488' },
+    { id:'v6', title:'Dealer interested in V2G revenue ($18K–$45K/truck/yr)?', sub:'Pitch: idle trucks earn grid revenue — zero capital cost to dealer', tags:['v2g','revenue'], accent:'#0D9488' },
+    { id:'v7', title:'Schedule SLD engineering agent photo capture', sub:'Take photo of panel + lot — upload to SALSA for automated SLD', tags:['v2g','tech'], accent:'#0D9488' },
+  ]},
+
+  // SECTION: SALSA + Grant Eligibility
+  { section: 'SALSA + Grant Eligibility', icon: '🌱', items: [
+    { id:'sg1', title:'CC4A Vehicle Refresh Grant eligibility confirmed?', sub:'$12K–$19.5K per qualifying vehicle — ask about fleet age', tags:['grant'], accent:'#16A34A' },
+    { id:'sg2', title:'Dealer qualifies as small business (<50 employees)?', sub:'Many SALSA grants require small business classification', tags:['grant'], accent:'#16A34A' },
+    { id:'sg3', title:'Existing non-profit or community programs?', sub:'SALSA partnership can unlock additional CBF grant tiers', tags:['grant'], accent:'#16A34A' },
+    { id:'sg4', title:'CVRP Clean Vehicle Rebate eligible vehicles on lot?', sub:'Any new ZEV qualifies — SALSA auto-submits rebate application', tags:['grant'], accent:'#16A34A' },
+    { id:'sg5', title:'Dealer signed SALSA partnership agreement?', sub:'Required for CDLS to file grants on dealer\'s behalf', tags:['grant','urgent'], accent:'#DC2626' },
+  ]},
+
+  // SECTION: Tech + CESAR Onboarding
+  { section: 'Tech + CESAR Onboarding', icon: '🤖', items: [
+    { id:'tc1', title:'DMS platform identified (CDK, Reynolds, DT, PBS...)', sub:'Required for SALSA Magic Link zero-friction onboarding', tags:['tech'], accent:'#7C3AED' },
+    { id:'tc2', title:'Magic Link email sent to dealer principal?', sub:'Single link → auto-connects DMS → generates compliance report in 60s', tags:['tech'], accent:'#7C3AED' },
+    { id:'tc3', title:'SALSA Deal Jacket demo completed?', sub:'Show how DMV audit package generates in 2 minutes vs 4 hours', tags:['tech'], accent:'#7C3AED' },
+    { id:'tc4', title:'CASAER compliance score generated for dealer?', sub:'Run casaer audit dealer [ID] — share score report with dealer', tags:['tech','compliance'], accent:'#7C3AED' },
+    { id:'tc5', title:'Dealer enrolled in $HAUL token program?', sub:'100 $HAUL tokens per vehicle delivered → cooperative equity', tags:['tech','revenue'], accent:'#7C3AED' },
+    { id:'tc6', title:'CESAR Agent 1 (Onboarding) confirmed active for this dealer', sub:'Verify in CESAR dashboard — 48-hour automated qualification running', tags:['tech'], accent:'#7C3AED' },
+  ]},
+
+  // SECTION: Close + Next Steps
+  { section: 'Close + Next Steps', icon: '🤝', items: [
+    { id:'cl1', title:'Founding Dealer Term Sheet presented?', sub:'20 founding dealers × $10M committed capital for CalPERS LP', tags:['revenue','urgent'], accent:'#DC2626' },
+    { id:'cl2', title:'$299/month SaaS subscription agreed?', sub:'Monthly: Deal Jackets + Compliance Monitoring + $HAUL tokens', tags:['revenue'], accent:'#D97706' },
+    { id:'cl3', title:'Next meeting / follow-up scheduled?', sub:'Set calendar invite before leaving the lot', tags:[], accent:'#6B7280' },
+    { id:'cl4', title:'Dealer referral requested (other lots)?', sub:'Every dealer knows 3–5 other dealers — ask for warm intro', tags:['revenue'], accent:'#D97706' },
+    { id:'cl5', title:'Visit summary note added to SALSA CRM', sub:'Document all findings, action items, and next steps', tags:['tech'], accent:'#7C3AED' },
+  ]},
+];
+
+// ── STATE ──────────────────────────────────────────────────────
+let checked = JSON.parse(localStorage.getItem('cdls_checked') || '{}');
+let notes   = JSON.parse(localStorage.getItem('cdls_notes')   || '{}');
+let visits  = JSON.parse(localStorage.getItem('cdls_visits')  || '[]');
+let currentDealer = '';
+let currentFilter = 'all';
+let expandedNotes = new Set();
+
+// ── INIT ──────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', ()=>{
+  document.getElementById('dateBadge').textContent = new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
+  render();
+
+  document.getElementById('dealerInput').addEventListener('keydown', e => {
+    if(e.key === 'Enter') startDealer();
+  });
+  document.getElementById('quickInput').addEventListener('keydown', e => {
+    if(e.key === 'Enter') quickCapture();
+  });
+});
+
+function startDealer(){
+  const val = document.getElementById('dealerInput').value.trim();
+  if(!val) return;
+  currentDealer = val;
+  const visitKey = currentDealer+'_'+Date.now();
+
+  // Update dealer card
+  const card = document.getElementById('dealerCard');
+  card.classList.add('visible');
+  document.getElementById('dealerCardName').textContent = currentDealer;
+  document.getElementById('dealerCardMeta').textContent = 
+    'Visit started: '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'})
+    +'  ·  Julio Umanzor, CEO  ·  CDLS Platform 3.0';
+
+  updateScore();
+  render();
+}
+
+function filterTab(filter, el){
+  currentFilter = filter;
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  render();
+}
+
+function toggleItem(id){
+  checked[id] = !checked[id];
+  localStorage.setItem('cdls_checked', JSON.stringify(checked));
+  updateScore();
+  render();
+
+  if(checked[id]){
+    showFlash('✓ Done!');
+  }
+}
+
+function toggleNote(id){
+  if(expandedNotes.has(id)) expandedNotes.delete(id);
+  else expandedNotes.add(id);
+  render();
+}
+
+function saveNote(id, val){
+  notes[id] = val;
+  localStorage.setItem('cdls_notes', JSON.stringify(notes));
+}
+
+function quickCapture(){
+  const input = document.getElementById('quickInput');
+  const val = input.value.trim();
+  if(!val) return;
+  const captures = JSON.parse(localStorage.getItem('cdls_captures') || '[]');
+  captures.push({ text: val, dealer: currentDealer||'General', time: new Date().toISOString() });
+  localStorage.setItem('cdls_captures', JSON.stringify(captures));
+  input.value = '';
+  showFlash('📝 Captured!');
+}
+
+function showFlash(msg){
+  const f = document.getElementById('flash');
+  f.textContent = msg;
+  f.className = 'flash show';
+  setTimeout(()=>{ f.classList.add('hide'); }, 800);
+  setTimeout(()=>{ f.className = 'flash'; }, 1100);
+}
+
+function updateScore(){
+  const all = CHECKLIST.flatMap(s=>s.items);
+  const total = all.length;
+  const done = all.filter(i=>checked[i.id]).length;
+  const pct = total ? Math.round(done/total*100) : 0;
+
+  document.getElementById('progressCount').textContent = done+' / '+total+' complete';
+  document.getElementById('progressFill').style.width = pct+'%';
+  document.getElementById('scoreChecked').textContent = done;
+  document.getElementById('scoreRemain').textContent = total - done;
+  document.getElementById('scoreScore').textContent = pct+'%';
+}
+
+// ── RENDER ────────────────────────────────────────────────────
+function render(){
+  const container = document.getElementById('sectionsContainer');
+  container.innerHTML = '';
+
+  CHECKLIST.forEach(sec => {
+    const filtered = sec.items.filter(item => {
+      if(currentFilter === 'all') return true;
+      if(currentFilter === 'done') return checked[item.id];
+      if(currentFilter === 'urgent') return item.tags.includes('urgent');
+      return item.tags.includes(currentFilter);
+    });
+    if(!filtered.length) return;
+
+    const secDone = filtered.filter(i=>checked[i.id]).length;
+
+    const secDiv = document.createElement('div');
+    secDiv.className = 'section';
+
+    // Section header
+    const hdr = document.createElement('div');
+    hdr.className = 'section-header';
+    const countClass = secDone === filtered.length && filtered.length > 0 ? 'section-count done' : 'section-count';
+    hdr.innerHTML = `
+      <span class="section-icon">${sec.icon}</span>
+      <span class="section-title">${sec.section}</span>
+      <span class="${countClass}">${secDone}/${filtered.length}</span>
+    `;
+    secDiv.appendChild(hdr);
+
+    // Items
+    filtered.forEach(item => {
+      const div = document.createElement('div');
+      div.className = 'item' + (checked[item.id] ? ' checked' : '') + (expandedNotes.has(item.id) ? ' has-note' : '');
+      div.style.setProperty('--item-accent', item.accent);
+      div.style.animationDelay = Math.random()*0.1+'s';
+
+      const tagHTML = item.tags.map(t=>`<span class="tag tag-${t}">${t}</span>`).join('');
+      const noteVal = notes[item.id] || '';
+      const hasNote = !!noteVal;
+
+      div.innerHTML = `
+        <div class="check-circle" onclick="toggleItem('${item.id}')">
+          <span class="check-mark">✓</span>
+        </div>
+        <div class="item-body">
+          <div class="item-title" onclick="toggleItem('${item.id}')">${item.title}</div>
+          <div class="item-sub">${item.sub}</div>
+          ${tagHTML ? `<div class="item-tags">${tagHTML}</div>` : ''}
+          <div class="item-actions">
+            <button class="action-btn note-btn" onclick="toggleNote('${item.id}')">
+              ${expandedNotes.has(item.id) ? 'Hide note' : (hasNote ? '📝 View note' : '+ Add note')}
+            </button>
+          </div>
+          <div class="item-note-row">
+            <textarea class="item-note" placeholder="Add field note for ${item.title}..."
+              oninput="saveNote('${item.id}', this.value)"
+            >${noteVal}</textarea>
+          </div>
+        </div>
+      `;
+      secDiv.appendChild(div);
+    });
+
+    container.appendChild(secDiv);
+  });
+
+  if(!container.children.length){
+    container.innerHTML = `
+      <div class="empty">
+        <div class="empty-icon">✅</div>
+        <div class="empty-text">Nothing to show for this filter.</div>
+      </div>`;
+  }
+
+  updateScore();
+}
+</script>
+</body>
+</html>

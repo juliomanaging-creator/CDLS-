@@ -1,0 +1,4 @@
+Your system: 64% efficient
+Battery → Motor → Wheels: 76.5% efficient
+
+Battery still wins by 20%!

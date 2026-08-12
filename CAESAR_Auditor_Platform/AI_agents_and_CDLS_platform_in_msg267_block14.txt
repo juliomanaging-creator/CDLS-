@@ -1,0 +1,35 @@
+WEEK 1: GERMINATION (same as copper protocol)
+
+WEEK 2-4: CARBON NANOTUBE INTRODUCTION
+Prepare CNT solution:
+1. Multi-walled carbon nanotubes (MWCNT): 100 mg/L
+2. Surfactant (Tween-20): 1 g/L (helps dispersion)
+3. Sonication: 30 minutes (ultrasonic bath, disperses nanotubes)
+   - Don't have ultrasonic bath? Vigorous shaking for 10 minutes works!
+
+Application:
+METHOD A (Hydroponic - Recommended):
+- Grow plant in water (no soil)
+- Add CNT solution to hydroponic reservoir
+- Roots absorb nanotubes over 7-14 days
+- Visible result: Roots turn dark gray/black (carbon uptake!)
+
+METHOD B (Foliar Spray):
+- Spray CNT solution on leaves (2× per week)
+- Stomata absorb nanotubes
+- Slower transport to roots (10-14 days)
+
+WEEK 5-6: MATURATION & TESTING
+- Roots should be dark-colored (carbon visible!)
+- Test conductivity (same method as copper protocol)
+- Expected: 1,000-10,000 S/m (higher than copper!) ✅
+
+BONUS: Photosynthesis enhancement!
+- Measure plant growth (height, leaf area)
+- CNT plants should be 20-30% larger (MIT study confirmed)
+- Healthier, faster-growing plants! 🌱
+
+SAFETY:
+- CNTs are potentially irritating (wear mask when handling powder)
+- Low toxicity (carbon-based, biocompatible)
+- Dispose of plant material carefully (CNTs don't biodegrade easily)

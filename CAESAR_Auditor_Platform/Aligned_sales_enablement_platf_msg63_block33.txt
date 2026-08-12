@@ -1,0 +1,27 @@
+Beginning Cash:                   $X
+
+Operating Cash Flow:              $X
+├─ Collections:                 $X
+├─ Operating expenses:         ($X)
+└─ Net from operations:         $X
+
+Investing Cash Flow:             ($X)
+├─ Fleet capex:                ($X)
+├─ Charging infrastructure:    ($X)
+├─ M&A:                        ($X)
+└─ Net investing:              ($X)
+
+Financing Cash Flow:              $X
+├─ Debt proceeds:               $X
+├─ Debt repayment:             ($X)
+├─ Equity raise:                $X
+└─ Net financing:               $X
+
+Ending Cash:                      $X
+Runway (months):                  X months
+
+Cash Management:
+├─ Target minimum: $5M
+├─ Current balance: $X
+├─ Next fundraise: Series B (X months)
+└─ Burn rate: $X/month

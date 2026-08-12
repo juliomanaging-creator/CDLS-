@@ -1,0 +1,7 @@
+# On your computer, check WHOIS:
+whois cdlslogistics.com
+
+# Should show:
+Registrant: Redacted for Privacy
+Registrant Organization: Redacted for Privacy
+Registrant Email: cdlslogistics.com@domainsbyproxy.com

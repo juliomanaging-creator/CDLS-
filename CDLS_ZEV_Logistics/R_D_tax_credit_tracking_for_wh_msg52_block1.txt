@@ -1,0 +1,6 @@
+# Copy just the data folder to your existing installation
+xcopy "ev-cost-platform\data" "C:\Projects\ev-cost-platform\data" /E /Y /I
+
+# The /Y flag means "yes to all" (no prompts)
+# The /E flag copies all subdirectories
+# The /I flag creates the folder if it doesn't exist

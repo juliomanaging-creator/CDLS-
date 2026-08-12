@@ -1,0 +1,5 @@
+# If agent escalates:
+agent> playbook EP00X   # Execute emergency procedure
+agent> help <topic>     # Get detailed guidance
+
+# Agents log everything - review later

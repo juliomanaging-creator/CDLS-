@@ -1,0 +1,2 @@
+cd Downloads\data-lake-setup
+python launch_app.py

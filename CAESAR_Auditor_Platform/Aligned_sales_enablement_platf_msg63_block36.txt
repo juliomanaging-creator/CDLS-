@@ -1,0 +1,10 @@
+Probability: Low
+Impact: Medium
+Mitigation:
+├─ Hire ahead of revenue (invest in team)
+├─ Build repeatable processes
+├─ Use M&A for scale (vs. organic only)
+└─ Partner vs. build (charging, maintenance)
+
+Current Status: Green
+Action: Continue hiring (5 open roles)

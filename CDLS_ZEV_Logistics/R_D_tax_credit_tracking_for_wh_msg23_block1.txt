@@ -1,0 +1,11 @@
+npm install
+  ↓
+Reads package.json
+  ↓
+Downloads 245 packages from npmjs.com
+  ↓
+Puts them in node_modules/ folder
+  ↓
+Creates package-lock.json (records exact versions)
+  ↓
+Done! Ready to run npm start

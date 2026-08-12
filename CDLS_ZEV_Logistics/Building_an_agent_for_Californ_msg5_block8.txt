@@ -1,0 +1,5 @@
+tar -xzf tesla-fleet-connector.tar.gz
+cd tesla-fleet-connector
+cp .env.example .env
+# Add your Tesla API credentials
+docker-compose up -d

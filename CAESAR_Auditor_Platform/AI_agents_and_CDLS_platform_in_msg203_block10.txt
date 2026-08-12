@@ -1,0 +1,4 @@
+Setup: Put fan on boat pointing at sail
+Thought: Fan creates wind → Sail pushes boat forward
+Reality: Fan pushes boat backward more than sail pushes forward
+Result: Boat moves backward (net)

@@ -1,0 +1,4 @@
+Vehicles + technology: $10,871,200
+Depot infrastructure (4 locations): $3,880,000  
+Program costs: $1,181,000
+TOTAL REQUIRED: $15,932,200

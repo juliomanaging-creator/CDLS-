@@ -1,0 +1,29 @@
+Program:
+
+Referee (New Dealer):
+├─ Gets 10% bonus on first token purchase
+├─ Example: Buy 10,000 $CDLS, get 1,000 free
+└─ Reduces risk, sweetens deal
+
+Referrer (Existing Dealer):
+├─ Earns 500 $HAUL per referral
+├─ Plus 5% of referral's $HAUL earnings (year 1)
+├─ Example: Referral earns 10,000 $HAUL → You get 500
+└─ Creates passive income stream
+
+Mechanics:
+1. Existing dealer shares referral link
+2. New dealer clicks, signs up
+3. New dealer makes first purchase
+4. Both receive bonuses immediately
+5. Ongoing earnings (5% share)
+
+Tracking:
+- Unique referral codes
+- On-chain attribution (smart contract)
+- Dashboard showing earnings
+- Monthly payouts
+
+Target: 50 referrals → 200 dealers (Year 1)
+Cost: 100K $HAUL (network incentive) + 10% bonus
+ROI: 200 dealers × $10K avg investment = $2M raised

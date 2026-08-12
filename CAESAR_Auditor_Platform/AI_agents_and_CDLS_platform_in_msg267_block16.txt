@@ -1,0 +1,9 @@
+100g conductive polymer root system:
+- Capacitance: 30,000 F
+- Voltage: 1.2 V
+- Energy: 6 Wh (small but functional!)
+- Cycles: 10,000+ (plant tissues regenerate!)
+
+1,000-plant "capacitor forest":
+- Total capacitance: 60 MF
+- Energy: 12 kWh (backup power for depot sensors!)

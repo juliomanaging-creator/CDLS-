@@ -1,0 +1,5 @@
+Account Balance × 1% risk ÷ (ATR × 2.5) = Units to trade
+
+Example with $1,000 account:
+$1,000 × 0.01 ÷ 0.01963 = ~$510 notional
+= 0.005 lots (micro)

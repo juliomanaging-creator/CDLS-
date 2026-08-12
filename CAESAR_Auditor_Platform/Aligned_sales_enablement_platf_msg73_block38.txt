@@ -1,0 +1,28 @@
+Sale Structure:
+
+Whitelist Phase (08:00-10:00 AM):
+├─ 500 addresses pre-approved
+├─ Limit: 100,000 $CDLS per address ($5,000)
+├─ Total: 50M $CDLS ($2.5M)
+
+Public Phase (10:00 AM-8:00 PM):
+├─ Open to all (with KYC)
+├─ Limit: 20,000 $CDLS per address ($1,000)
+├─ Total: 10M $CDLS ($500K)
+├─ Or until sold out
+
+Payment Methods:
+✓ ETH (primary)
+✓ USDC (secondary)
+✗ Credit card (too risky, chargebacks)
+
+Process:
+1. User connects wallet (MetaMask, WalletConnect)
+2. KYC verification (Persona, instant)
+3. Approve spend (ETH or USDC)
+4. Execute purchase (smart contract)
+5. Receive $CDLS (immediate)
+
+Gas Optimization:
+- Deploy on L2 (Base, Arbitrum) for lower fees
+- Or subsidize gas (cover up to $50 per user)

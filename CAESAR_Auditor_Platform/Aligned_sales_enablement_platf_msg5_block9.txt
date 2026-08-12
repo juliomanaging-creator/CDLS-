@@ -1,0 +1,8 @@
+GET    /api/calculators/templates        # List available templates
+GET    /api/calculators/templates/:id    # Get template details
+POST   /api/calculators/calculate        # Execute calculation
+POST   /api/calculators/sessions         # Save calculator session
+GET    /api/calculators/sessions/:id     # Load saved session
+PUT    /api/calculators/sessions/:id     # Update session
+POST   /api/calculators/scenarios        # Create scenario comparison
+GET    /api/calculators/export/:sessionId # Export to PDF/Excel

@@ -1,0 +1,14 @@
+C:\Projects\cdls-platform\          ← Pick any folder
+│
+├── backend\
+│   ├── server.js
+│   ├── package.json
+│   └── .env.example
+│
+├── database\
+│   └── schema.sql
+│
+├── frontend\
+│   └── index.html
+│
+└── fixed_setup.bat                 ← Put the script HERE!

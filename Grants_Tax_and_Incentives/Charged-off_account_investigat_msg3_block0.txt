@@ -1,0 +1,50 @@
+[Your Name]
+[Your Address]
+[City, State ZIP]
+[Date]
+
+Experian / Equifax
+[Address]
+
+Re: Formal Dispute - Account #67XXXX - Lobel Financial Corp
+Reference Number: [FROM PHONE CALL]
+
+Dear Sir or Madam:
+
+This letter confirms my telephone dispute filed on [DATE] regarding the above-referenced account. As I explained during my call with [REP NAME, ID#], this account contains material inaccuracies that violate the Fair Credit Reporting Act.
+
+DOCUMENTED DISCREPANCIES:
+
+1. Balance Variance: Experian reports $23,059 while Equifax reports $22,273 ($786 difference)
+
+2. Status Update Date Variance: Experian shows September 2020 while Equifax shows June 2025 (5-year difference)
+
+3. Last Payment Date Variance: Experian shows January 24, 2022 while Equifax shows January 1, 2022
+
+4. Unverified Balance Increase: Original balance of $14,830 has increased to over $23,000 (55% increase) without itemized documentation
+
+5. Previous Unresolved Dispute: Experian notation shows "consumer disagrees" from prior investigation
+
+LEGAL BASIS FOR DELETION:
+
+Under 15 U.S.C. § 1681i(a)(5)(A), you must delete information that cannot be verified. The discrepancies between bureaus prove the furnisher cannot accurately verify this account.
+
+Under 15 U.S.C. § 1681e(b), you must follow reasonable procedures to assure maximum possible accuracy. Reporting inconsistent information fails this standard.
+
+REQUESTED ACTION:
+
+I am requesting immediate deletion of this account based on inability to verify accurate information. If you refuse deletion, you must provide:
+
+1. Complete documentation from Lobel Financial reconciling all discrepancies
+2. Original signed loan agreement
+3. Complete payment history
+4. Itemized accounting of balance increase from $14,830 to $23,059
+5. Verification of proper charge-off date
+
+Please confirm deletion or provide required documentation within 30 days.
+
+Sincerely,
+[Signature]
+[Your Name]
+
+Enclosures: Copy of credit report(s)

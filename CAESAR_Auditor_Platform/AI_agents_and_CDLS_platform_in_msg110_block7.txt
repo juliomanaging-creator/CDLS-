@@ -1,0 +1,32 @@
+Pricing Model: Per-Trip
+Cost Per Trip: $850
+Trips Per Year: 125
+Current Capacity: 6 cars (EV competitor)
+
+CURRENT COST:
+125 trips × $850 = $106,250/year
+Total cars: 750 (125 × 6)
+
+CDLS COST:
+125 trips × $850 = $106,250/year  
+Total cars: 1,125 (125 × 9)
+
+RESULTS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Hauling Cost:            $0 (same!)
+Capacity Advantage:      $39,750/year
+  (375 extra cars × $106)
+Carbon Credit Revenue:   $21,825/year
+Capital Avoidance:       $90,000/year
+Compliance Value:        $37,500/year
+Dealer Equity:           $50,000/year
+─────────────────────────────────────
+TOTAL ANNUAL VALUE:      $239,075/year ✅
+5-Year Total:            $1,195,375
+
+Banner Shows:
+📊 "Your Current Situation"
+You're paying $850/trip (same as CDLS)
+BUT CDLS hauls 9 vehicles vs your 6
+= 50% more capacity per trip!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

@@ -1,0 +1,24 @@
+Each Carbon Credit NFT Contains:
+
+Metadata:
+{
+  "token_id": 12345,
+  "type": "LCFS Credit",
+  "vintage": "2026-Q1",
+  "generator": "CDLS Network",
+  "dealer_id": "SD_AUTO_001",
+  "vehicle_vin": "5YJSA1E14HF000001",
+  "miles_driven": 12500,
+  "co2_avoided_tons": 14.0,
+  "credit_amount": 1.0,
+  "carb_verification": "Pending" or "Verified",
+  "carb_report_id": "CA2026Q1-12345",
+  "timestamp": "2026-03-31T23:59:59Z",
+  "image_url": "ipfs://Qm.../carbon-credit.png",
+  "attributes": {
+    "fuel_source": "California Grid (PG&E)",
+    "carbon_intensity": 95.97,
+    "verification_date": "2026-05-15",
+    "expiration": "None"
+  }
+}

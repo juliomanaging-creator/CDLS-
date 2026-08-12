@@ -1,0 +1,12 @@
+Your Inventory
+══════════════════════════════════════════
+
+3 vehicles tracked
+Total invested: $67,788.99
+
+Each vehicle shows:
+- Purchase price
+- All parts costs
+- All labor costs  
+- Auto-calculated TOTAL
+- Profit (if sold)

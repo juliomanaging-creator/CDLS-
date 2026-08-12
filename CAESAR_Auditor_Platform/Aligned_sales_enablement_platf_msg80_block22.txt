@@ -1,0 +1,41 @@
+CDLS TOKENIZATION BUDGET TRACKER
+
+Total Budget: $5,200,000 (funded by CalPERS)
+
+WEEKLY TRACKING:
+────────────────
+
+Week 1 (Jan 6-12):
+Legal: $0
+Technical: $300 (job listing)
+Personnel: $0
+Marketing: $0
+Operations: $0
+Total: $300
+Remaining: $5,199,700
+
+Week 2 (Jan 13-19):
+Legal: $50,000 (retainer)
+Technical: $0
+Personnel: $0
+Marketing: $2,000 (design)
+Operations: $0
+Total: $52,000
+Cumulative: $52,300
+Remaining: $5,147,700
+
+[Continue weekly]
+
+CATEGORY TOTALS (Running):
+──────────────────────────
+Legal: $______ / $700,000 (___%)
+Technical: $______ / $1,200,000 (___%)
+Personnel: $______ / $2,000,000 (___%)
+Marketing: $______ / $800,000 (___%)
+Operations: $______ / $400,000 (___%)
+Reserve: $______ / $100,000 (___%)
+
+🚨 ALERTS:
+☐ Any category >80% spent (slow down)
+☐ Burn rate >$50K/week (investigate)
+☐ Unexpected expense >$10K (Julio approval)

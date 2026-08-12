@@ -1,0 +1,17 @@
+1. Download Mailcow:
+   cd /opt
+   git clone https://github.com/mailcow/mailcow-dockerized
+   cd mailcow-dockerized
+
+2. Generate config:
+   ./generate_config.sh
+
+3. Edit config:
+   nano mailcow.conf
+   Change: MAILCOW_HOSTNAME=mail.cdls.com
+   Save: Ctrl+X, Y, Enter
+
+4. Start Mailcow:
+   docker-compose up -d
+
+5. Wait 3 minutes → Email server live! ✅

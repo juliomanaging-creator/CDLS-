@@ -1,0 +1,14 @@
+Transaction Monitoring:
+├─ Flag large trades (>$10K)
+├─ Unusual patterns (rapid buying/selling)
+├─ Geographic risk (sanctioned countries)
+└─ Related party transactions
+
+Suspicious Activity:
+├─ File SAR if red flags (FinCEN)
+├─ Block account pending investigation
+├─ Report to law enforcement if needed
+
+Software: Chainalysis, TRM Labs, Elliptic
+Cost: $50K-$200K/year (volume-based)
+Staff: 1-2 compliance officers

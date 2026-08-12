@@ -1,0 +1,5 @@
+# Just double-click the file
+open /mnt/user-data/outputs/partner_portal.html
+
+# OR open in browser
+# File → Open → partner_portal.html

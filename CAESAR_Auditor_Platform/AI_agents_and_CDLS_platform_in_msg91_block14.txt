@@ -1,0 +1,26 @@
+Monday-Tuesday: Open Bank Accounts
+□ C-Corp Operating Account (Silicon Valley Bank or Chase)
+   - EIN: [New C-Corp EIN]
+   - Signers: You (as CEO/President)
+   - Initial deposit: $100 (minimum)
+   - Purpose: Operating expenses, payroll
+
+□ LP Capital Account (Mercury or SVB)
+   - EIN: [LP EIN]
+   - Signers: You (as GP)
+   - Initial deposit: $100
+   - Purpose: Investor capital, distributions
+
+Wednesday-Friday: ROBS Setup
+□ Contact Guidant Financial or Benetrends
+   - ROBS specialist: Will handle entire process
+   - Fee: $5,000-$6,000 (one-time)
+   - Timeline: 3-4 weeks once initiated
+   
+□ Rollover 401(k) to new ROBS 401(k)
+   - Source: Your existing 401(k)
+   - Amount: $40,000
+   - New 401(k) invests in C-Corp stock
+   - You receive $40,000 capital (tax-free!)
+
+Result: Bank accounts open, ROBS funded ✓

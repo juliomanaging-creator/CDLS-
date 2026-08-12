@@ -1,0 +1,14 @@
+# Docker configuration
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DB_CONNECTION=postgresql://user:pass@db:5432/transfer
+  db:
+    image: postgres:latest
+    volumes:
+      - pgdata:/var/lib/postgresql/data

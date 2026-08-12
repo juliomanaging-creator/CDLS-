@@ -1,0 +1,5 @@
+Impact Variables:
+- Traffic Volume: ±20%
+- Lead Rate: ±15%
+- Close Rate: ±10%
+- Average Gross: ±25%

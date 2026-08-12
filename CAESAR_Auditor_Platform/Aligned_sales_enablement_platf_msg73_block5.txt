@@ -1,0 +1,34 @@
+CARB System = Legal Record (source of truth)
+Blockchain = Trading Record (marketplace)
+
+How It Works:
+
+Step 1: Generation (Real-Time)
+├─ Vehicle drives miles
+├─ Telematics logs on-chain
+├─ Smart contract calculates credits
+├─ Mint "Pre-Verified" NFT
+└─ Status: Not yet legal LCFS credit
+
+Step 2: Quarterly CARB Reporting
+├─ Submit data to CARB (traditional process)
+├─ CARB verifies (45-60 days)
+├─ Receive official LCFS credits in LRT-CBTS
+├─ Smart contract upgrades NFT to "Verified"
+└─ Status: Now legal LCFS credit
+
+Step 3: Trading (24/7 on Blockchain)
+├─ Dealer lists verified NFT on marketplace
+├─ Buyer purchases NFT
+├─ Ownership on blockchain changes
+└─ Status: Pre-settlement (pending CARB transfer)
+
+Step 4: CARB Settlement (Quarterly)
+├─ CDLS batches all blockchain trades
+├─ Submits transfer requests to CARB
+├─ CARB processes batch
+├─ NFT burned (credit now in buyer's CARB account)
+└─ Status: Final settlement
+
+Key Principle: Blockchain is "internal ledger"
+CARB sees only final settled positions

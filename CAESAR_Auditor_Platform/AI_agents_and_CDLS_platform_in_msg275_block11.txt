@@ -1,0 +1,5 @@
+Julio: "Need PG&E grid integration brief"
+→ Agent generates 30-page technical document
+→ System diagrams, load analysis, safety specs
+→ Professional formatting, references
+→ CalTrans-engineer approved! ✅

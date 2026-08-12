@@ -1,0 +1,11 @@
+From 1.77 MJ compression heat:
+- Work extracted: 0.57 MJ (your heat engine)
+- Heat rejected: 1.20 MJ (MUST dump to environment)
+
+How to dump it:
+- Radiator: 10 m² surface
+- Cooling fan: 5 kW continuous power
+- Time to reject: 4 minutes
+
+Problem: Cooling fan uses MORE energy (5 kW) than heat engine generates!
+Net: NEGATIVE benefit after accounting for cooling

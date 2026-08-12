@@ -1,0 +1,2 @@
+tar -xzf claudio-local-backend.tar.gz
+cd claudio-local

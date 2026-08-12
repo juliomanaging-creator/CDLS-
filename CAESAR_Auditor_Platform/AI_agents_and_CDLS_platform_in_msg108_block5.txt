@@ -1,0 +1,9 @@
+Route: Sacramento → LA (350 miles)
+CDLS charges: $850 per trip
+Capacity: 9 vehicles per trip
+Effective per-car cost: $850 ÷ 9 = $94.44 per car
+
+Compare to:
+- Diesel hauler: $850/trip ÷ 8 cars = $106.25/car
+- EV competitor: $850/trip ÷ 6 cars = $141.67/car
+- Broker per-car: $400/car (4.2x more expensive!)

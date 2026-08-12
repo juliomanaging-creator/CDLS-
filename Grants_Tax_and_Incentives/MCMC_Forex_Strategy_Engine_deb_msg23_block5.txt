@@ -1,0 +1,9 @@
+Your Engine runs nightly
+        ↓
+Step 0: News Gate (forex_news_filter.py)
+        ↓ PASS / WARN / BLOCK
+Step 1-9: MCMC signals + backtesting
+        ↓
+You check OANDA calendar
+        ↓
+Place trade with correct size

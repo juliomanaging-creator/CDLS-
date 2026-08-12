@@ -1,0 +1,5 @@
+# Download jure_agent.py to your computer
+# Open terminal/command prompt
+# Navigate to folder with jure_agent.py
+
+python3 jure_agent.py

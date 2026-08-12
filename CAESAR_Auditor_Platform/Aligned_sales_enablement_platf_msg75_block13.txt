@@ -1,0 +1,18 @@
+Legal Progress:
+├─ 9:00 AM: Receive token classification memo
+├─ 10:00 AM: Review with Julio & CFO
+│   └─ Recommendation: Hybrid approach (international first)
+├─ 2:00 PM: Approve strategy
+├─ 3:00 PM: CARB advisory opinion ready
+└─ 4:00 PM: Submit to CARB
+
+KYC/AML Setup:
+├─ 11:00 AM: Evaluate KYC providers
+│   ├─ Persona: $3/verification, best UX
+│   ├─ Onfido: $5/verification, more thorough
+│   └─ Jumio: $4/verification, mid-tier
+├─ 2:00 PM: Decision: Persona (best UX)
+├─ 3:00 PM: Sign contract
+└─ 4:00 PM: Integration begins
+
+Expected: 2-week integration

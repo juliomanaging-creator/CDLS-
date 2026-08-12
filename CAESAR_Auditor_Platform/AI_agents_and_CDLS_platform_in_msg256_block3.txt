@@ -1,0 +1,10 @@
+Database: 500+ contacts tracked
+- Governor's office (Climate Policy Advisor)
+- CARB leadership (HVIP, VW Trust administrators)
+- 4 State legislators (depot district representatives)
+- 8 Environmental justice organizations
+- 4 Teamsters locals + International
+
+Relationship scoring: 1-10 scale (strength of relationship)
+Interaction history: Every email, meeting, outcome logged
+Decision authority: Who can approve grants, provide endorsements

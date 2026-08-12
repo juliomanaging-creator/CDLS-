@@ -1,0 +1,5 @@
+✓ Ceramic enables 70 bar pressure (vs 10 bar steel)
+✓ Ceramic enables 1,400°C operation (vs 500°C steel)
+✓ Ceramic turbines 85% efficient (vs 65% steel)
+✓ System efficiency 48.2% (vs 31% steel) = 55% improvement!
+✓ Weight 70% lighter (60 kg vs 200 kg)

@@ -1,0 +1,31 @@
+🔴 CRITICAL PATH ITEMS:
+
+Week 1-2 (Jan 6-19):
+☐ Select blockchain development team → Delays everything
+☐ Select legal counsel → Delays token structure
+☐ Announce to 20 founding dealers → Gauge interest
+
+Week 3-4 (Jan 20-Feb 2):
+☐ Sign blockchain dev contract → Development starts
+☐ Sign legal engagement letter → Legal work starts
+☐ Close CalPERS funding ($5M) → Funds operations
+
+Week 5-8 (Feb 3-Mar 2):
+☐ Complete smart contracts → Ready for audit
+☐ Receive token classification memo → Know legal position
+☐ Submit CARB advisory opinion → Get regulatory clarity
+
+Week 9-12 (Mar 3-30):
+☐ Pass security audit → Safe to launch
+☐ Complete legal documentation → Compliant to launch
+☐ Finalize marketing materials → Ready to promote
+
+Week 13-14 (Mar 31-Apr 13):
+☐ Deploy contracts to mainnet → Go live
+☐ Launch Token Generation Event → Raise $30M public
+☐ Enable trading on Uniswap → Liquidity available
+
+🚨 IF ANY RED ITEM IS DELAYED:
+- Immediately escalate to Julio
+- Adjust timeline (may need to postpone TGE)
+- Communicate to stakeholders

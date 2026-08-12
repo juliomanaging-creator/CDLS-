@@ -1,0 +1,6 @@
+rma> status               # System health dashboard
+rma> check                # Run health check cycle
+rma> monitor              # Start 24/7 monitoring
+rma> resolve              # Auto-fix detected issues
+rma> report               # Generate CalPERS report
+rma> dealer               # Check dealer activity

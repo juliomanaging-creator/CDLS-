@@ -1,0 +1,6 @@
+# From anywhere
+python3 iron_halo_vault_builder.py
+
+# Builds entire vault structure
+# Installs JURE automatically
+# Creates metadata and indexes

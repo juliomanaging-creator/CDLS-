@@ -1,0 +1,8 @@
+# Read master orientation guide:
+cat 10_DEPLOYMENT_GUIDES/README_START_HERE.md
+
+# Review comprehensive index:
+cat ARCHIVE_INDEX_FINAL.md
+
+# Import master index to Excel/Airtable:
+cat MASTER_INDEX.md  # CSV format inside

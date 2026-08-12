@@ -1,0 +1,14 @@
+// ENHANCEMENT: Add range proofs to prevent negative manipulation
+template EnhancedRoyaltyCheck() {
+    signal input totalEnergy;
+    signal input rate;
+    signal input expectedRoyalty;
+    signal input timestamp; // Prevent replay attacks
+    
+    // Add constraints:
+    component rangeCheck = RangeProof(64);
+    rangeCheck.in <== totalEnergy;
+    
+    signal calculation <== totalEnergy * rate;
+    calculation === expectedRoyalty;
+}

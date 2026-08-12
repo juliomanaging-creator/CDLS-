@@ -1,0 +1,10 @@
+YEAR 1 TOTAL: $492,045
+├─ Trust/OpSec infrastructure:  $27,045
+└─ CEO search + hire:           $465,000
+
+YEAR 2+ ANNUAL: $307,983
+├─ Maintenance:                 $7,983
+└─ CEO compensation:            $300,000
+
+COST PER ANONYMITY POINT: $5,467 Year 1
+                          $3,422/year ongoing

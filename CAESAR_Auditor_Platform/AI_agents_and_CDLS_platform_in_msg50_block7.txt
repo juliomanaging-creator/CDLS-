@@ -1,0 +1,12 @@
+C:\Projects\cdls-platform\
+├── backend\
+│   ├── server.js
+│   ├── package.json
+│   └── .env.example
+├── database\
+│   └── schema.sql
+├── frontend\
+│   └── index.html
+├── setup.bat          ← DOUBLE-CLICK THIS!
+├── setup.ps1
+└── QUICKSTART.md

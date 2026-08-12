@@ -1,0 +1,5 @@
+Electric axles capture braking energy
+Recovery: 20% of braking energy
+Benefit: +$12K/year
+Cost: $50K
+ROI: 4 years ✅

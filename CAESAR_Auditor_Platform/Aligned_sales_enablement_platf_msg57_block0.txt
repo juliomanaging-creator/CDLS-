@@ -1,0 +1,19 @@
+What you're collecting:
+- Actual fuel costs per route (diesel vs. EV)
+- Real-world range and charging times
+- Maintenance costs by vehicle age/mileage
+- Seasonal variation in efficiency
+- Driver behavior impact on costs
+- Charging infrastructure availability
+
+Why it's valuable:
+- Shows TRUE cost of ownership (not manufacturer claims)
+- Proves ROI to hesitant dealers
+- Optimizes route assignments
+- Predicts break-even points accurately
+
+Why competitors can't replicate:
+- Requires actual EV hauler operations (expensive)
+- Takes 12-24 months to collect meaningful data
+- Need dealer relationships to access their data
+- By the time they start, you have 2+ years head start

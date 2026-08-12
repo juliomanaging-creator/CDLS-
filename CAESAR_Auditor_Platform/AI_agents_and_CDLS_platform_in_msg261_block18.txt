@@ -1,0 +1,15 @@
+WITHOUT neutralization:
+- Oil & gas opposition: -40%
+- CEQA lawsuits: -15%
+- Fiscal conservatives: -5%
+- Other opposition: -15%
+Total likelihood: 85% - 75% = 10% ❌
+
+WITH neutralization ($4.1M investment):
+- Oil & gas co-opted: -2% (carbon credits alignment)
+- CEQA blocked: -0.15% (Programmatic EIR + exemption)
+- Fiscal concerns addressed: -0.05% (zero taxpayer cost)
+- All others neutralized: -0.8%
+Total likelihood: 85% + 14% = 99%! ✅
+
+Residual 1%: Uncontrollable events (earthquake, pandemic, etc.)

@@ -1,0 +1,5 @@
+[10:15:22] CRITICAL: Pod backend in CrashLoopBackOff
+Attempting resolution...
+  ✓ Deleted failing pod
+  ✓ Kubernetes recreating
+Recommendation: Monitor logs

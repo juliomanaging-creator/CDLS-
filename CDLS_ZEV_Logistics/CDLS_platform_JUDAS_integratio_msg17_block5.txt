@@ -1,0 +1,8 @@
+cd Iron_Halo_Vault
+./launch.sh
+
+# Select option:
+#  1) Launch JURE deployment system
+#  2) View vault index  
+#  3) Read README
+#  4) Emergency playbooks

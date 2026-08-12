@@ -1,0 +1,17 @@
+Construction Cost:           $120,000  (modular housing unit)
+CDLS Energy Pod:              $35,000  (V2G battery system)
+Installation (4-hour shift):   $2,400  (20 workers × 4 hrs × $30)
+────────────────────────────────────
+Total Unit Cost:             $157,400
+
+Worker Vesting:
+- Phase 1 (Training):        $30/hr + benefits
+- Phase 2 (1,000 hours):     Deed of title granted
+- Phase 3 (Sovereignty):     100% energy use + 10% V2G profits
+
+V2G Revenue per Unit:
+- Annual V2G arbitrage:       $4,200  (350 kWh × $0.12/kWh × 100 days)
+- Worker share (10%):           $420
+- NRD platform (90%):         $3,780
+────────────────────────────────────
+Total Platform Revenue:      $1.13B/year (300k × $3,780)

@@ -1,0 +1,26 @@
+Once you hit 500-1,000 dealers, growth accelerates naturally:
+
+Mechanisms:
+
+A. Platform Network Effects:
+├─ More dealers → More data → Better platform
+├─ Better platform → More valuable for everyone
+├─ More valuable → Easier to recruit new dealers
+└─ Flywheel effect (exponential growth)
+
+B. Marketplace Liquidity:
+├─ More dealers → More carbon credits listed
+├─ More liquidity → Better prices
+├─ Better prices → More buyers (oil companies)
+├─ More buyers → Higher credit values
+└─ Higher values → More dealers join
+
+C. Social Proof:
+├─ 1,000 dealers → "Everyone's doing it"
+├─ FOMO kicks in (fear of missing out)
+├─ Laggards feel pressure to join
+└─ Exponential adoption curve
+
+Result: Organic growth 2-3x paid growth
+Year 2: 2,000 dealers (2x Year 1)
+Year 3: 5,000 dealers (2.5x Year 2)

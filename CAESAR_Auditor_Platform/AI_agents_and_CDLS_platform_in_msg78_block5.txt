@@ -1,0 +1,11 @@
+R&D Activities (60%):
+  - Platform coding                    25%
+  - Technical architecture             15%
+  - Research & testing                 10%
+  - Code review & debugging           10%
+
+Non-R&D Activities (40%):
+  - Fundraising (CalPERS, dealers)    15%
+  - Business development              10%
+  - Hiring & HR                        8%
+  - Administration                     7%

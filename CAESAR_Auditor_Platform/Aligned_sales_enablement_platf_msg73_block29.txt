@@ -1,0 +1,21 @@
+Probability: Low (10%)
+Impact: High (Cannot tokenize credits)
+
+Triggers:
+├─ CARB rule change
+├─ Market manipulation concerns
+├─ Technology failure (blockchain)
+└─ Political pressure
+
+Mitigation:
+✓ Early engagement (advisory opinion)
+✓ Pilot program (prove concept)
+✓ Dual-ledger system (CARB remains authoritative)
+✓ Industry advocacy (CNCDA support)
+
+If Prohibition Happens:
+1. Pivot to pure SaaS (no tokenized credits)
+2. $CDLS still valuable (platform access)
+3. $HAUL still works (utility token)
+4. Revenue model shifts to subscriptions
+5. Still builds $1B+ company (just slower)

@@ -1,0 +1,10 @@
+# 1. Extract the ZIP file
+
+# 2. Open Command Prompt in that folder, then:
+npm install
+
+# 3. Initialize database
+node setup.js
+
+# 4. Start server
+npm start

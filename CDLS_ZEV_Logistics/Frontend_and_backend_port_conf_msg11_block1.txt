@@ -1,0 +1,30 @@
+# 1. Go to project root
+cd C:\Projects\ev-cost-platform
+
+# 2. Create frontend folder
+mkdir frontend
+cd frontend
+
+# 3. Copy package.json content (from frontend-package.json download)
+# Use notepad to create the file:
+notepad package.json
+
+# 4. Copy .env content (from frontend.env download)
+notepad .env
+
+# 5. Install dependencies
+npm install
+
+# 6. Create the src structure
+mkdir src
+mkdir src\services
+mkdir src\components
+mkdir public
+
+# 7. Create the required files with notepad
+notepad src\App.js
+notepad src\App.css
+notepad src\index.js
+notepad src\index.css
+notepad public\index.html
+notepad src\services\api.js

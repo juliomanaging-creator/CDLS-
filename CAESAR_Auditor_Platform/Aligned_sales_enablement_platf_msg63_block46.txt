@@ -1,0 +1,8 @@
+Key Results:
+├─ Launch mobile app (iOS + Android) by April 30
+├─ Achieve 100 paying dealers by June 30
+├─ NPS score >50 by June 30
+├─ Churn <5% monthly
+
+Owner: VP Product
+Status: Ahead (already at 85 dealers)

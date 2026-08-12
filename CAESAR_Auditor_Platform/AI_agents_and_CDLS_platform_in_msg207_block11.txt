@@ -1,0 +1,9 @@
+Charge tanks while PARKED (no drag penalty)
+800L at 4,500 psi = 6.5 kWh stored
+Use while driving for auxiliary power
+
+Problem: Battery has 6.5× better energy density
+- Compressed air: 40 Wh/kg
+- Lithium battery: 260 Wh/kg
+
+Verdict: Works in principle, but battery is superior

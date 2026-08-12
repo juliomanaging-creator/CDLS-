@@ -1,0 +1,20 @@
+┌─────────────────────────────────────────────────┐
+│  ACTIVITY LOG - Shared with Rebecca             │
+│  Last updated: 2 minutes ago                    │
+├─────────────────────────────────────────────────┤
+│                                                  │
+│  🕐 3:45 PM - Julio submitted HVIP application  │
+│       Status: ✅ Submitted (#HVIP-123456)       │
+│       Next: Wait 2-4 weeks for approval         │
+│       Rebecca: [✓ Reviewed] [I'll track this]  │
+│                                                  │
+│  🕐 2:30 PM - Julio emailed Patent 1 to attorney│
+│       Status: ⏳ Awaiting confirmation           │
+│       Next: Follow up tomorrow if no response   │
+│       Rebecca: [✓ Reviewed] [I'll call them]   │
+│                                                  │
+│  🕐 11:15 AM - Julio uploaded CalPERS docs      │
+│       Status: ✅ Complete (5 files)             │
+│       Rebecca: [✓ Reviewed] [Looks good!]      │
+│                                                  │
+└─────────────────────────────────────────────────┘

@@ -1,0 +1,293 @@
+#!/usr/bin/env Rscript
+
+# CA AUDITOR AGENT - BLACK SWAN MONTE CARLO MODULE
+# Stress testing with extreme weather, carbon market collapse, grid failures
+
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(jsonlite)
+  library(MASS)  # For multivariate normal distributions
+})
+
+args <- commandArgs(trailingOnly = TRUE)
+input_file <- args[1]
+model_params <- fromJSON(input_file, flatten = TRUE)
+
+# Extract parameters
+iterations <- model_params$iterations %||% 10000
+years <- model_params$projection_years %||% 5
+
+# Base case parameters
+revenue_mean <- model_params$revenue_mean
+revenue_sd <- model_params$revenue_sd
+cost_mean <- model_params$cost_mean
+cost_sd <- model_params$cost_sd
+
+# Black Swan parameters
+include_extreme_scenarios <- model_params$include_extreme_scenarios %||% TRUE
+extreme_probability <- 0.05  # 5% chance of extreme event per year
+
+set.seed(42)
+
+# Define extreme scenarios
+extreme_scenarios <- list(
+  grid_failure = list(
+    name = "California Grid Curtailment",
+    probability = 0.02,
+    v2g_revenue_impact = -0.80,  # 80% V2G revenue loss
+    duration_months = 6
+  ),
+  carbon_collapse = list(
+    name = "Voluntary Carbon Market Collapse",
+    probability = 0.03,
+    carbon_price_floor = 10,  # $10/MT (from $85 base)
+    duration_months = 24
+  ),
+  extreme_weather = list(
+    name = "Atmospheric River / Wildfire Season",
+    probability = 0.05,
+    operations_disruption = 0.30,  # 30% fewer hauls
+    insurance_premium_spike = 2.5,  # 2.5x normal
+    duration_months = 3
+  },
+  regulatory_shock = list(
+    name = "ACF Mandate Delay",
+    probability = 0.02,
+    market_adoption_slowdown = 0.40,  # 40% slower growth
+    duration_months = 12
+  }
+)
+
+# Run enhanced Monte Carlo simulation
+simulate_with_black_swans <- function(n_iter, years) {
+  results <- tibble(
+    iteration = 1:n_iter,
+    year_1_profit = numeric(n_iter),
+    year_2_profit = numeric(n_iter),
+    year_3_profit = numeric(n_iter),
+    year_4_profit = numeric(n_iter),
+    year_5_profit = numeric(n_iter),
+    total_profit = numeric(n_iter),
+    irr = numeric(n_iter),
+    min_annual_profit = numeric(n_iter),
+    experienced_black_swan = logical(n_iter),
+    black_swan_type = character(n_iter),
+    black_swan_impact = numeric(n_iter)
+  )
+  
+  for (i in 1:n_iter) {
+    yearly_profits <- numeric(years)
+    black_swan_occurred <- FALSE
+    black_swan_details <- list()
+    
+    for (year in 1:years) {
+      # Base case revenue and costs
+      base_revenue <- rnorm(1, 
+                           mean = revenue_mean * (1.15 ^ (year - 1)),
+                           sd = revenue_sd * (1.1 ^ (year - 1)))
+      
+      base_costs <- rnorm(1,
+                         mean = cost_mean * (0.95 ^ (year - 1)),
+                         sd = cost_sd)
+      
+      # Check for extreme events
+      if (include_extreme_scenarios && runif(1) < extreme_probability) {
+        # Randomly select extreme scenario
+        scenario <- sample(extreme_scenarios, 1)[[1]]
+        black_swan_occurred <- TRUE
+        black_swan_details <- scenario
+        
+        # Apply scenario impacts
+        if (scenario$name == "California Grid Curtailment") {
+          # Reduce V2G revenue (assumed 20% of total revenue)
+          base_revenue <- base_revenue * (1 + scenario$v2g_revenue_impact * 0.20)
+        }
+        
+        if (scenario$name == "Voluntary Carbon Market Collapse") {
+          # Reduce carbon credit revenue
+          carbon_revenue_share <- 0.15  # 15% of revenue from carbon
+          carbon_loss <- (85 - scenario$carbon_price_floor) / 85
+          base_revenue <- base_revenue * (1 - carbon_revenue_share * carbon_loss)
+        }
+        
+        if (scenario$name == "Atmospheric River / Wildfire Season") {
+          # Reduce operational volume
+          base_revenue <- base_revenue * (1 - scenario$operations_disruption)
+          # Increase insurance costs
+          base_costs <- base_costs * scenario$insurance_premium_spike
+        }
+        
+        if (scenario$name == "ACF Mandate Delay") {
+          # Slow growth
+          base_revenue <- base_revenue * (1 - scenario$market_adoption_slowdown)
+        }
+      }
+      
+      yearly_profits[year] <- base_revenue - base_costs
+    }
+    
+    results$year_1_profit[i] <- yearly_profits[1]
+    results$year_2_profit[i] <- yearly_profits[2]
+    results$year_3_profit[i] <- yearly_profits[3]
+    results$year_4_profit[i] <- yearly_profits[4]
+    results$year_5_profit[i] <- yearly_profits[5]
+    results$total_profit[i] <- sum(yearly_profits)
+    results$min_annual_profit[i] <- min(yearly_profits)
+    results$experienced_black_swan[i] <- black_swan_occurred
+    results$black_swan_type[i] <- ifelse(black_swan_occurred, 
+                                        black_swan_details$name, 
+                                        "None")
+    results$black_swan_impact[i] <- ifelse(black_swan_occurred,
+                                           min(yearly_profits) - mean(yearly_profits),
+                                           0)
+    
+    # Calculate IRR
+    initial_investment <- model_params$initial_investment %||% 5000000
+    cash_flows <- c(-initial_investment, yearly_profits)
+    
+    npv_at_rate <- function(rate) {
+      sum(cash_flows / (1 + rate) ^ (0:years))
+    }
+    
+    irr_estimate <- tryCatch({
+      uniroot(npv_at_rate, c(-0.5, 2))$root
+    }, error = function(e) NA)
+    
+    results$irr[i] <- irr_estimate
+  }
+  
+  results
+}
+
+# Run simulation
+cat("Running Black Swan Monte Carlo...\n", file = stderr())
+simulation_results <- simulate_with_black_swans(iterations, years)
+
+# Calculate comprehensive statistics
+base_case <- simulation_results %>%
+  filter(!experienced_black_swan)
+
+stress_case <- simulation_results %>%
+  filter(experienced_black_swan)
+
+stats <- list(
+  base_case = list(
+    n_iterations = nrow(base_case),
+    total_profit = list(
+      mean = mean(base_case$total_profit),
+      median = median(base_case$total_profit),
+      sd = sd(base_case$total_profit),
+      percentile_5 = quantile(base_case$total_profit, 0.05),
+      percentile_95 = quantile(base_case$total_profit, 0.95)
+    ),
+    irr = list(
+      mean = mean(base_case$irr, na.rm = TRUE),
+      median = median(base_case$irr, na.rm = TRUE),
+      percentile_5 = quantile(base_case$irr, 0.05, na.rm = TRUE),
+      percentile_95 = quantile(base_case$irr, 0.95, na.rm = TRUE),
+      probability_above_18pct = mean(base_case$irr > 0.18, na.rm = TRUE),
+      probability_above_24pct = mean(base_case$irr > 0.24, na.rm = TRUE)
+    )
+  ),
+  stress_case = list(
+    n_iterations = nrow(stress_case),
+    black_swan_frequency = nrow(stress_case) / nrow(simulation_results),
+    total_profit = list(
+      mean = mean(stress_case$total_profit),
+      median = median(stress_case$total_profit),
+      sd = sd(stress_case$total_profit),
+      percentile_5 = quantile(stress_case$total_profit, 0.05),
+      percentile_95 = quantile(stress_case$total_profit, 0.95)
+    ),
+    irr = list(
+      mean = mean(stress_case$irr, na.rm = TRUE),
+      median = median(stress_case$irr, na.rm = TRUE),
+      probability_above_18pct = mean(stress_case$irr > 0.18, na.rm = TRUE)
+    ),
+    avg_impact = mean(stress_case$black_swan_impact),
+    scenario_breakdown = stress_case %>%
+      group_by(black_swan_type) %>%
+      summarize(
+        count = n(),
+        avg_total_profit = mean(total_profit),
+        avg_irr = mean(irr, na.rm = TRUE)
+      )
+  ),
+  combined = list(
+    total_profit = list(
+      mean = mean(simulation_results$total_profit),
+      median = median(simulation_results$total_profit),
+      percentile_5 = quantile(simulation_results$total_profit, 0.05),
+      percentile_95 = quantile(simulation_results$total_profit, 0.95)
+    ),
+    irr = list(
+      mean = mean(simulation_results$irr, na.rm = TRUE),
+      median = median(simulation_results$irr, na.rm = TRUE),
+      probability_above_18pct = mean(simulation_results$irr > 0.18, na.rm = TRUE)
+    )
+  )
+)
+
+# Risk metrics
+risk_metrics <- list(
+  value_at_risk_95 = -quantile(simulation_results$total_profit, 0.05)[[1]],
+  conditional_var_95 = -mean(simulation_results$total_profit[
+    simulation_results$total_profit < quantile(simulation_results$total_profit, 0.05)
+  ]),
+  worst_case_annual = min(simulation_results$min_annual_profit),
+  probability_of_loss = mean(simulation_results$total_profit < 0),
+  black_swan_resilience = ifelse(
+    nrow(stress_case) > 0,
+    mean(stress_case$total_profit > 0),
+    1.0
+  )
+)
+
+# CalPERS-specific metrics
+calpers_metrics <- list(
+  target_irr_achievement = list(
+    base_case = stats$base_case$irr$probability_above_18pct,
+    stress_case = ifelse(nrow(stress_case) > 0,
+                        stats$stress_case$irr$probability_above_18pct,
+                        NA),
+    combined = stats$combined$irr$probability_above_18pct
+  ),
+  downside_protection = list(
+    probability_positive_returns = 1 - risk_metrics$probability_of_loss,
+    minimum_viable_scenario = quantile(simulation_results$total_profit, 0.05)[[1]],
+    stress_resilience = risk_metrics$black_swan_resilience
+  ),
+  institutional_grade_confidence = ifelse(
+    stats$combined$irr$probability_above_18pct > 0.70 &&
+    risk_metrics$black_swan_resilience > 0.60,
+    "HIGH",
+    ifelse(stats$combined$irr$probability_above_18pct > 0.50, "MEDIUM", "LOW")
+  )
+)
+
+# Output
+output <- list(
+  success = TRUE,
+  timestamp = format(Sys.time(), "%Y-%m-%d %H:%M:%S"),
+  parameters = list(
+    iterations = iterations,
+    years = years,
+    extreme_scenarios_enabled = include_extreme_scenarios
+  ),
+  statistics = stats,
+  risk_metrics = risk_metrics,
+  calpers_metrics = calpers_metrics,
+  interpretation = list(
+    base_case_viability = sprintf(
+      "%.1f%% probability of achieving 18-24%% IRR under normal conditions",
+      stats$base_case$irr$probability_above_18pct * 100
+    ),
+    stress_resilience = sprintf(
+      "%.1f%% probability of positive returns even with black swan events",
+      risk_metrics$black_swan_resilience * 100
+    ),
+    recommended_action = calpers_metrics$institutional_grade_confidence
+  )
+)
+
+cat(toJSON(output, auto_unbox = TRUE, pretty = TRUE))

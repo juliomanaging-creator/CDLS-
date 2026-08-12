@@ -1,0 +1,1 @@
+throw createError(404, 'Not Found')

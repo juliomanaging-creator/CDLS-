@@ -1,0 +1,31 @@
+Purpose: Let institutional investors model their returns
+Target Users: CalPERS, foundations, pension funds
+
+Features Needed:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+INPUT SECTION:
+□ Investment Amount ($10M - $100M)
+□ Investment Stage (Series A, B, C, Carbon FPA)
+□ Hold Period (3, 5, 7, 10 years)
+□ Risk Tolerance (Conservative, Moderate, Aggressive)
+
+CALCULATION OUTPUTS:
+□ IRR (18-24% range shown)
+□ Money Multiple (3.2x - 15x depending on hold)
+□ Exit Value at Year 5, 7, 10
+□ Carbon Credit Reserve Allocation
+□ Equity Ownership %
+□ Downside Protection (25th percentile scenarios)
+□ ESG Impact Metrics (MT CO2, jobs created, trees)
+
+COMPARISON BENCHMARKS:
+□ vs Public Equity (S&P 500: 10% annual)
+□ vs Private Equity (industry avg: 15-20%)
+□ vs Real Estate (CalPERS portfolio: 8-12%)
+□ Correlation Analysis (0.15-0.25 with public markets)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Why Critical:
+CalPERS needs to MODEL their returns before investing
+Your thesis shows 28-35% IRR, but you're pitching 18-24%
+Need to reconcile this and show conservative projections

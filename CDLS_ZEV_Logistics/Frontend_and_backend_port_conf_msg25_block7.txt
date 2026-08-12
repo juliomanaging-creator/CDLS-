@@ -1,0 +1,10 @@
+# Update specific package
+npm update axios
+
+# Or update all packages to latest versions
+npm update
+
+# Nuclear option - reinstall everything fresh
+rmdir /s /q node_modules
+del package-lock.json
+npm install

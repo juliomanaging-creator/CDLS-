@@ -1,0 +1,4 @@
+Agent 36: "Tell me about the aluminum trailer design"
+Tech Team: [Uploads specs, diagrams]
+Agent 36: [Generates 50-page patent application]
+Attorney: [Reviews, makes strategic edits - 10 hours vs 100 hours]

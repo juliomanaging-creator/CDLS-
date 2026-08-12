@@ -1,0 +1,9 @@
+Agent 36 → Engineering Lead + Operations Lead
+
+SUBJECT: Patent 1 Documentation - Day 2 of 3
+
+Great work on Section 1! Here's Section 2 (Hardware)
+Time Required: 2-3 hours
+Due: End of day Wednesday, January 22
+
+[Questions 1.2.1 through 1.2.5 from prompt template...]

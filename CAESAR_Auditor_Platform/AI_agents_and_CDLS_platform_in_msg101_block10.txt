@@ -1,0 +1,5 @@
+1. Open cdls_project_dashboard.html in browser
+2. Scroll through 6 critical milestones
+3. Click "Critical Only" filter button
+4. See 7 high-priority tasks highlighted
+5. Review 21 KPIs across 5 categories

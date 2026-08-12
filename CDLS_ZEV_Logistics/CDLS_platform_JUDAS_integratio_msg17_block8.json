@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "deployment_mode": "zero_cost",
+  "success_target": 0.335,
+  "simulation_runs": 10000,
+  "infrastructure_budget": 0,
+  "monitoring_interval": 60,
+  "auto_resolution_enabled": true,
+  "emergency_contacts": {
+    "cto": "julio@cdls.io",
+    "calpers": "liaison@calpers.ca.gov",
+    "emergency": "emergency@cdls.io"
+  }
+}

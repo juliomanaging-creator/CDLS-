@@ -1,0 +1,6 @@
+agent> pre-deploy          # 90% readiness check
+agent> daily 1             # Show Day 1 tasks
+agent> help memory         # Memory troubleshooting
+agent> kb docker           # Docker quick reference
+agent> playbook EP002      # Execute emergency response
+agent> monitor             # Health monitoring

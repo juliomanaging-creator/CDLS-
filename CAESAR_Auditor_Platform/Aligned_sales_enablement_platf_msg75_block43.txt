@@ -1,0 +1,22 @@
+Probability: 5%
+Impact: High (leadership vacuum)
+
+Triggers:
+├─ Health issue
+├─ Personal emergency
+└─ Burnout
+
+Mitigation:
+✓ Strong #2 (CFO or President/COO)
+✓ Succession plan (documented)
+✓ Board oversight (CalPERS engaged)
+✓ Insurance (key person life insurance)
+
+Response Plan:
+1. CFO assumes interim CEO role
+2. Board activates search (permanent CEO)
+3. Julio remains advisor/board (if able)
+4. Communicate transparently (stakeholders)
+5. Continue operations (minimal disruption)
+
+Budget: $5M key person life insurance

@@ -1,0 +1,3 @@
+Power generated: 84.3 kW × 40% efficiency = 33.7 kW
+After conversion losses (generator 90% × motor 90%):
+Power returned to truck: 33.7 kW × 81% = 27.3 kW

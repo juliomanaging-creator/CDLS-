@@ -1,0 +1,8 @@
+To compress air 10× (1 bar → 10 bar):
+- Air heats to 302°C (574°F!)
+- Heat radiates away (20-25% energy loss)
+- This is thermodynamically unavoidable
+
+Compression work: 1.26 MJ
+Heat wasted: 0.38 MJ
+Net stored: 0.88 MJ

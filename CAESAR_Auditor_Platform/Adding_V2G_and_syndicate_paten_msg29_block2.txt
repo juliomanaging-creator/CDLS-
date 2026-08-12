@@ -1,0 +1,8 @@
+Your Current Hauling Schedule:
+8 AM - 3 PM:  Active hauling ████████
+3 PM - 4 PM:  Return to depot ░░
+4 PM - 9 PM:  IDLE ⚡⚡⚡⚡⚡ ← PERFECT for V2G!
+10 PM - 6 AM: Charging █████
+
+Grid Peak Demand:
+5 PM - 9 PM:  ⚡⚡⚡⚡⚡ EXACT MATCH!

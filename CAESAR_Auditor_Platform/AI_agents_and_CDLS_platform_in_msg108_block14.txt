@@ -1,0 +1,4 @@
+Input: "What do you pay per vehicle moved?" ($400)
+Input: "How many vehicles moved annually?" (200)
+Auto-calculate trips needed: 200 ÷ 9 = 23 trips
+Show savings vs per-vehicle pricing

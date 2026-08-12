@@ -1,0 +1,10 @@
+Steel chamber (10 bar):
+- Stored energy: 0.88 MJ
+- Total weight: 450 kg (chamber + air)
+
+Ceramic chamber (70 bar):
+- Stored energy: 6.16 MJ (7× more!)
+- Total weight: 96 kg (78% lighter!)
+
+Weight savings: 354 kg! 🎉
+Energy density approaching lithium batteries!

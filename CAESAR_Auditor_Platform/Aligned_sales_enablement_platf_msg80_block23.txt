@@ -1,0 +1,63 @@
+CDLS TOKENIZATION RISK REGISTER
+
+Risk ID: R001
+Category: Regulatory
+Risk: SEC determines $CDLS is unregistered security
+Probability: 20%
+Impact: HIGH
+Status: OPEN
+Mitigation: Legal opinion, hybrid model, insurance
+Owner: CFO
+Review: Weekly
+
+Risk ID: R002
+Category: Technical
+Risk: Smart contract exploit (hack/bug)
+Probability: 5%
+Impact: CRITICAL
+Status: OPEN
+Mitigation: Audit, bounty, multi-sig, insurance
+Owner: CTO
+Review: Daily during development
+
+Risk ID: R003
+Category: Market
+Risk: Crypto market crash (bear market)
+Probability: 30%
+Impact: MEDIUM
+Status: OPEN
+Mitigation: Real revenue, fundamentals, runway
+Owner: CFO
+Review: Weekly
+
+Risk ID: R004
+Category: Regulatory
+Risk: CARB prohibits tokenizing credits
+Probability: 10%
+Impact: MEDIUM
+Status: OPEN
+Mitigation: Advisory opinion, pilot, pivot plan
+Owner: Julio
+Review: Weekly (waiting CARB response)
+
+Risk ID: R005
+Category: Execution
+Risk: Can't scale, tech breaks, team leaves
+Probability: 30%
+Impact: HIGH
+Status: OPEN
+Mitigation: Experienced team, capital, phasing
+Owner: Julio
+Review: Weekly
+
+[Add more risks as identified]
+
+RISK DASHBOARD:
+───────────────
+Critical: ___
+High: ___
+Medium: ___
+Low: ___
+
+Overall Risk Level: GREEN / YELLOW / RED
+Last Updated: __________

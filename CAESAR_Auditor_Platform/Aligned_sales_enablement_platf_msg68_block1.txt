@@ -1,0 +1,23 @@
+Purpose: Network activity token (use platform, earn rewards)
+Supply: Unlimited (inflationary, controlled rate)
+Distribution: 100% earned through participation
+
+How to Earn $HAUL:
+✓ Run calculations: 10 $HAUL per calculation
+✓ Complete hauls: 50 $HAUL per vehicle delivered
+✓ Generate carbon credits: 100 $HAUL per credit
+✓ Refer dealers: 500 $HAUL per referral
+✓ Stake $CDLS: Earn 8% APY in $HAUL
+✓ Provide liquidity: Earn fees in $HAUL
+
+How to Spend $HAUL:
+✓ Pay for platform subscription (instead of $499/month)
+✓ Access premium features (AI routing, predictions)
+✓ Mint carbon credit NFTs (on-chain proof)
+✓ Vote on feature roadmap (governance)
+✓ Convert to $CDLS (burn mechanism, deflationary)
+
+Burn Mechanisms:
+- 50% of platform fees paid in $HAUL are burned
+- Reduces supply → increases value
+- Creates deflationary pressure

@@ -1,0 +1,9 @@
+# Morning: Work on AI
+rd_tracker start --project AI-001 --name "Route Optimization"
+# ... code for 3 hours ...
+rd_tracker end 42 --activity "..." --uncertainty "..." --experiment "..."
+
+# Afternoon: Work on Blockchain
+rd_tracker start --project BLOCKCHAIN-001 --name "Carbon Credits"
+# ... code for 4 hours ...
+rd_tracker end 43 --activity "..." --uncertainty "..." --experiment "..."

@@ -1,0 +1,14 @@
+POST   /api/stakeholders                 # Create stakeholder
+GET    /api/stakeholders/dealroom/:id    # List deal room stakeholders
+PUT    /api/stakeholders/:id             # Update stakeholder
+DELETE /api/stakeholders/:id             # Remove stakeholder
+
+POST   /api/stakeholders/relationships   # Define relationship
+GET    /api/stakeholders/:id/orgchart    # Get org chart data
+
+POST   /api/stakeholders/interactions    # Log interaction
+GET    /api/stakeholders/:id/interactions # Get interaction history
+
+POST   /api/stakeholders/tasks           # Create task
+GET    /api/stakeholders/tasks/:dealroomId # Get all tasks for deal
+PUT    /api/stakeholders/tasks/:id       # Update task status

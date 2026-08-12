@@ -1,0 +1,8 @@
+[Category]-[Specific Topic]
+
+Examples:
+- General (default, required)
+- Announcements
+- Projects-GrantApplication
+- Meetings-Weekly
+- Resources-Templates

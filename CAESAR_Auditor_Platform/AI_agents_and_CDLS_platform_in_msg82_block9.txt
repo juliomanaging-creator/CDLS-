@@ -1,0 +1,27 @@
+# Check weekly progress
+rd_tracker summary
+
+# Output:
+# 📊 Weekly R&D Time Summary
+# ============================================================
+#    Monday     2026-01-13   8.00 hrs  (1 session)
+#    Tuesday    2026-01-14   7.50 hrs  (2 sessions)
+#    Wednesday  2026-01-15   6.00 hrs  (2 sessions)
+#    Thursday   2026-01-16   7.00 hrs  (1 session)
+#    Friday     2026-01-17   5.50 hrs  (1 session)
+# ============================================================
+#    TOTAL R&D TIME: 34.00 hours
+#    Percentage of 40-hr week: 85.0%
+#    ⚠️  Above 80% - ensure non-R&D work is not miscategorized
+
+# Check Claude activity specifically
+python3 claude_tracker.py summary --project AI-001
+
+# Output:
+# 📊 Claude Activity Summary: AI-001
+#    Month: 2026-01
+#    Total conversations: 4
+#    Total time: 8.5 hours (25% of weekly R&D!)
+#    Code generation sessions: 4
+#    Research sessions: 3
+#    Technical topics: machine learning, optimization, testing

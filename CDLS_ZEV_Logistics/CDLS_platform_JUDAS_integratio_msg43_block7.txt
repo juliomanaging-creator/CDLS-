@@ -1,0 +1,5 @@
+✓ Generate QR code (qr-code-generator.com)
+✓ Go to vistaprint.com
+✓ Design card using specs in Business_Card_Specs file
+✓ Order 500 cards with rush delivery
+✓ Cost: ~$100-150

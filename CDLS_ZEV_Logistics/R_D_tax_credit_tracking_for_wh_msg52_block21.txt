@@ -1,0 +1,11 @@
+□ Files downloaded and extracted
+□ Backup created of old data (optional but recommended)
+□ New files copied to correct location
+□ File dates show today's date
+□ carrier_cost_data.json shows "data_as_of": "December 8-16, 2025"
+□ state_average shows 4.862
+□ sacramento retail_average shows 4.82
+□ All 3 JSON files updated
+□ README.md updated
+□ Can still run npm start successfully
+□ Website still loads at localhost:3000

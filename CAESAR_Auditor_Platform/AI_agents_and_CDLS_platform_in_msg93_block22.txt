@@ -1,0 +1,15 @@
+1. Build Carbon Forecast Model (Excel)
+   □ 20-year projections (fleet growth, credits, pricing)
+   □ Sensitivity analysis (bear/base/bull cases)
+   □ NPV calculation (8% discount rate)
+   
+2. Apply for Verra VCS Certification
+   □ Select methodology: VM0044 (Transportation)
+   □ Hire verifier: SCS Global Services ($15K)
+   □ Submit Project Design Document
+   □ Timeline: 6-9 months to first credits
+   
+3. Design CCTI Index Structure
+   □ Smart contract (Solidity/ERC-20)
+   □ Exchange listings (CBL, Xpansiv, AirCarbon)
+   □ Custody solution (Fireblocks)

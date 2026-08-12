@@ -1,0 +1,13 @@
+Problem: Dealer has 10 credits, buyer wants 1,000
+Solution: Pool multiple dealers' credits
+
+Process:
+1. 100 dealers each deposit 10 credits
+2. Pool mints "Pooled Credit Token" (fungible)
+3. Buyer buys from pool (instant, no fragmentation)
+4. Pool splits payment to 100 dealers
+
+Benefits:
+✓ Liquidity for small generators
+✓ Simplicity for large buyers
+✓ Lower transaction costs

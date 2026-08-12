@@ -1,0 +1,5 @@
+# Pilot Infrastructure
+1. Deploy 100 trailers with Fermata Energy V2G chargers
+2. Install OpenADR 2.0 compliant demand response nodes
+3. Build SMUD API integration (their Green Button data feed)
+4. Establish ISO-NE RT-LMP price monitoring

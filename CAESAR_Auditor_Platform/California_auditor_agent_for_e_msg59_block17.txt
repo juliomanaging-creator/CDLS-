@@ -1,0 +1,7 @@
+# Show him how a dealer would use it:
+1. Import 5 vehicles from CSV (2 minutes)
+2. Add parts receipt to one vehicle (30 seconds)
+3. Show auto-calculated total costs
+4. Export to Excel report
+
+He'll say: "This is exactly what dealers need!"

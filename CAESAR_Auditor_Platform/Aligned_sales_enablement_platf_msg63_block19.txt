@@ -1,0 +1,10 @@
+Starter: $4,788/year × 3 years × 85% retention = $12,209
+LTV/CAC: 6.1x ✅
+
+Professional: $19,190/year × 4 years × 90% retention = $69,084
+LTV/CAC: 8.6x ✅
+
+Enterprise: $120,000/year × 5 years × 95% retention = $570,000
+LTV/CAC: 11.4x ✅
+
+Target: >3x LTV/CAC (we're hitting 6-11x)

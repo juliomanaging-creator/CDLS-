@@ -1,0 +1,4 @@
+# Compare old backup to new file
+fc backup\data\sample-data\carrier_cost_data.json data\sample-data\carrier_cost_data.json
+
+# Shows line-by-line differences

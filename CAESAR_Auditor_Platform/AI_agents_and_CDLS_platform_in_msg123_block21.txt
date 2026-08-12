@@ -1,0 +1,17 @@
+cdls_legal_agent_system.tar.gz (11KB)
+├── main.py                    # Main orchestrator
+├── README.md                  # Full documentation
+├── agents/
+│   ├── document_drafting_agent.py  # ✅ WORKING
+│   ├── sec_carb_compliance_agent.py  # Stub
+│   ├── contract_analysis_agent.py    # Stub
+│   ├── due_diligence_agent.py        # Stub
+│   ├── entity_structure_agent.py     # Stub
+│   └── carbon_legal_agent.py         # Stub
+├── config/
+│   ├── config.json            # System settings
+│   └── settings.py            # Config loader
+├── utils/
+│   └── logger.py              # Logging utilities
+└── data/
+    └── generated_documents/   # Output folder

@@ -1,0 +1,20 @@
+CDLS must issue:
+
+1. Form 1099-MISC:
+   ├─ For $HAUL rewards >$600/year
+   ├─ To all dealers who earned tokens
+   └─ Due: January 31
+
+2. Form 1099-DIV:
+   ├─ For revenue share >$10/year
+   ├─ USDC distributions to stakers
+   └─ Due: January 31
+
+3. Form 1099-B:
+   ├─ For token sales on platform
+   ├─ If CDLS acts as broker
+   └─ Due: February 15
+
+Software: TaxBit, CoinTracker, Lukka
+Cost: $50K-$200K/year (automated)
+Staff: 1 tax specialist or outsource

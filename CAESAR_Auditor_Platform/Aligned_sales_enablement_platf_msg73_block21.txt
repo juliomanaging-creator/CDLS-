@@ -1,0 +1,18 @@
+IRS Classification: Property (commodity)
+
+Taxable Events:
+1. Generating Credits:
+   ├─ Not taxable (similar to mining)
+   └─ Basis: $0 (self-created)
+
+2. Selling Credits:
+   ├─ Ordinary income (if business)
+   ├─ Or capital gains (if investment)
+   └─ Likely ordinary income for dealers
+
+Example:
+Generate 1,000 LCFS credits
+Sell for $105,000
+Ordinary income: $105,000
+Tax (37% top bracket): $38,850
+Net proceeds: $66,150

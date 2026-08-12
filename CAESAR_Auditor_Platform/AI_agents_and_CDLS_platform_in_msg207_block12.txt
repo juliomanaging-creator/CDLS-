@@ -1,0 +1,9 @@
+Capture air ONLY during braking (want drag then!)
+Energy per trip: 48 kWh (100 stops)
+Range extension: +19 miles
+
+Problem: Electric regen already captures 70% efficiently
+- Electric regen: 70% efficient, $50K, 4.2 yr ROI ✅
+- Air brake: 50% efficient, $75K, 25 yr ROI ❌
+
+Verdict: Electric regen is better

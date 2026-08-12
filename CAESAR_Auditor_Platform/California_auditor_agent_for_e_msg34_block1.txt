@@ -1,0 +1,17 @@
+⚠️ TRANSPARENCY NOTICE
+
+CA Auditor Agent is powered by Claude Sonnet 4.5, a large 
+language model created by Anthropic.
+
+Training Data Disclosure:
+- General categories: Publicly available internet data, 
+  licensed books and articles, filtered for quality and safety
+- Specific sources: Not fully disclosed by Anthropic
+- Knowledge cutoff: January 2025
+
+AB 2013 Compliance Status:
+- Partial disclosure available
+- Complete source manifest not available from model provider
+- Users should evaluate whether this meets their compliance needs
+
+For more information: https://www.anthropic.com

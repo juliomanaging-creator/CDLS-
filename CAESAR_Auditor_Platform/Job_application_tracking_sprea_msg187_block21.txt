@@ -1,0 +1,10 @@
+# Unzip and initialize
+unzip cdls-platform-github.zip
+cd cdls-platform
+git init
+git add .
+git commit -m "Initial commit — CDLS Platform v1.0"
+
+# Create repo at github.com (make it private first)
+git remote add origin https://github.com/YOUR_USERNAME/cdls-platform.git
+git push -u origin main

@@ -1,0 +1,10 @@
+"Click this link, we'll check your compliance"
+
+Setup: One click → Auto-connects to DMS
+Time: 60 seconds
+Tech knowledge: None (happens automatically)
+
+Pros: Truly effortless, automatic updates
+Cons: Feels "too easy" (trust issue)
+
+Predicted: 80% completion, 75% retention

@@ -1,0 +1,26 @@
+Complete these fields in CARB LRT-CBTS system:
+
+Legal Business Name: California Investment Auto, LP
+DBA (if any): CDLS Network
+Business Structure: Limited Partnership
+Federal Tax ID: [Your EIN]
+CARB Entity ID: [Assigned by CARB after registration]
+
+Mailing Address:
+[Your business address]
+
+Physical Location:
+[Your office/depot address]
+
+Primary Contact:
+Name: Julio [Last Name]
+Title: Managing Partner
+Email: julio@cdlsnetwork.com
+Phone: [Your number]
+
+Authorized Representatives:
+1. [Your name] - Managing Partner
+2. [CFO name] - Chief Financial Officer
+3. [Operations name] - Director of Operations
+
+(Limit 3-5 people who can submit reports to CARB)

@@ -1,0 +1,47 @@
+Activity-Based Rewards:
+
+1. Use Platform:
+├─ Run calculation: 10 $HAUL
+├─ Save scenario: 5 $HAUL
+├─ Share results: 3 $HAUL
+└─ Daily login: 1 $HAUL
+Annual potential: 5,000 $HAUL
+
+2. Complete Hauls:
+├─ Deliver 1 vehicle: 50 $HAUL
+├─ Complete route on-time: +10 $HAUL bonus
+├─ Zero damage delivery: +5 $HAUL bonus
+└─ EV hauler (vs diesel): +15 $HAUL bonus
+Annual potential: 25,000 $HAUL (500 hauls × 50)
+
+3. Generate Carbon Credits:
+├─ Generate 1 LCFS credit: 100 $HAUL
+├─ Sell on marketplace: +20 $HAUL
+├─ Bank credits (vs sell): +10 $HAUL bonus
+└─ Quarterly verification: +50 $HAUL bonus
+Annual potential: 150,000 $HAUL (1,000 credits × 100)
+
+4. Referrals:
+├─ Refer dealer: 500 $HAUL
+├─ Referred dealer completes haul: +100 $HAUL
+├─ Referred dealer subscribes: +250 $HAUL
+└─ Referred dealer refers another: +50 $HAUL
+Annual potential: Unlimited (10 referrals = 5,000+)
+
+5. Staking $CDLS:
+├─ Base yield: 8% APY in $HAUL
+├─ Long-term bonus (12+ months): +2% APY
+├─ Governance participation: +1% APY
+└─ Total: Up to 11% APY
+Example: Stake 100,000 $CDLS → Earn 11,000 $HAUL/year
+
+6. Liquidity Provision:
+├─ Provide $CDLS/ETH liquidity: 15% APY in $HAUL
+├─ Provide $HAUL/USDC liquidity: 25% APY in $HAUL
+└─ Risk: Impermanent loss (price volatility)
+
+7. Community Contributions:
+├─ Write tutorial: 1,000 $HAUL
+├─ Report bug: 500 $HAUL (severity-based)
+├─ Feature suggestion (implemented): 2,000 $HAUL
+└─ Community moderation: 100 $HAUL/month

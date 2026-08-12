@@ -1,0 +1,292 @@
+[INTRO - Camera on face]
+
+"Hey everyone, Julio here from California Investment Auto. Today I'm going to show you exactly how to build our proprietary ROI calculator that's helping us close dealer partnerships and raise institutional capital.
+
+By the end of this tutorial, you'll have a fully functional, data-driven calculator that:
+- Pulls live fuel prices
+- Personalizes for each dealer
+- Emails results automatically
+- Calculates carbon credit value
+- And looks absolutely professional
+
+Let's dive in."
+
+[SCREEN SHARE - retool.com]
+
+"First, head to retool.com. Click 'Start Free' and create an account. I'm using my email: julio@cdlsnetwork.com.
+
+[Wait for signup]
+
+Great, now we're in the Retool dashboard. Click 'Create New' and select 'App'. Choose 'Start from scratch' and name it 'CDLS ROI Calculator'.
+
+[New blank app opens]
+
+You'll see a blank canvas. This is where we build. On the left is your component library—buttons, inputs, charts, tables. On the right is where you configure properties.
+
+[Click Code icon]
+
+Now, I'm going to give you a shortcut. Instead of building from scratch, I've prepared the base code. Click this gear icon, select 'App JSON'...
+
+[Shows JSON editor]
+
+Delete everything here, and paste in the code from the GitHub link in the description.
+
+[Paste code]
+
+Click 'Save' and boom—you've got a working calculator!
+
+[Calculator appears on screen]
+
+Let me show you what we just imported. There are three main sections..."
+
+[Continue with detailed walkthrough of each component]
+
+---
+
+[LIVE DATA SECTION]
+
+"Now let's make this calculator truly powerful by connecting it to live data sources.
+
+First, we need an API key from the U.S. Energy Information Administration. In a new tab, go to eia.gov/opendata...
+
+[Shows registration process]
+
+Fill in your email, click 'Register'. Check your email—your API key arrives instantly.
+
+[Copy API key]
+
+Back in Retool, click 'Resources' in the left sidebar. Click '+ Create New' and select 'REST API'.
+
+Name it 'EIA_Fuel_Prices'. For the base URL, enter: https://api.eia.gov/v2/
+
+[Typing on screen]
+
+Now scroll down to 'Headers'. Add a new header:
+- Key: X-Params
+- Value: {"api_key": "paste-your-key-here"}
+
+[Paste API key]
+
+Click 'Test Connection'. You should see a green checkmark. Perfect!
+
+Now click 'Save'.
+
+[Shows query builder]
+
+Next, let's create a query. Click the '+' button to add a new query. Select our 'EIA_Fuel_Prices' resource.
+
+In the endpoint field, enter:
+/petroleum/pri/gnd/data/?frequency=daily&data[0]=value&facets[product][]=EPD2D&facets[area][]=SCA&sort[0][column]=period&sort[0][direction]=desc&offset=0&length=1
+
+[Types slowly so viewers can follow]
+
+This query gets the most recent California diesel price. Click 'Run Query'...
+
+[Shows result]
+
+Boom! There's our current diesel price: $4.862 per gallon, updated today.
+
+Now we need to use this in our calculator. Click on the diesel price input field. In the 'Default Value' property, change it from the hardcoded 4.862 to:
+
+{{ fuelPriceQuery.data[0].value }}
+
+[Types code]
+
+Save it. Now every time someone loads the calculator, it pulls the current price.
+
+[Refreshes page to show it working]
+
+See that? Live data. This is what separates us from competitors using Excel spreadsheets.
+
+Let's do the same for electricity rates..."
+
+[Continue with electricity API setup]
+
+---
+
+[DEALER PROFILES SECTION]
+
+"Alright, now let's add the personalization magic. We want dealers to see their own data pre-filled.
+
+First, we need a database to store dealer profiles. Click 'Resources' again, and this time select 'PostgreSQL'.
+
+If you don't have a database yet, you can use Retool's built-in database—it's free for small projects. Click 'Retool Database' and name it 'CDLS_Dealers'.
+
+[Creates database]
+
+Now let's create a table. Click 'Create Table' and name it 'dealers'.
+
+Add these columns:
+- id (auto-increment, primary key)
+- name (text)
+- fleet_size (integer)
+- annual_miles (integer)  
+- location (text)
+- electricity_rate (decimal)
+- equity_commitment (decimal)
+- created_at (timestamp)
+
+[Shows table creation]
+
+Great! Now let's add some sample dealers. Click 'Add Row'...
+
+[Enters data for San Diego Auto Transport]
+
+Name: San Diego Auto Transport
+Fleet Size: 8
+Annual Miles: 22000
+Location: San Diego
+Electricity Rate: 0.19
+Equity Commitment: 50000
+
+[Saves row]
+
+Perfect. Add a few more dealers so we have data to work with.
+
+[Adds 2-3 more]
+
+Now back in our app, let's add a dropdown to select dealers. Drag a 'Select' component from the left sidebar to the top of your calculator.
+
+[Drags component]
+
+In the properties, set:
+- Label: 'Select Dealer'
+- Data Source: {{ dealersQuery.data }}
+- Option Label: {{ item.name }}
+- Option Value: {{ item.id }}
+
+[Configures dropdown]
+
+Now create a query to load dealers. Click '+' to add a new query, select your database, and write:
+
+SELECT * FROM dealers ORDER BY name
+
+[Creates query]
+
+Name it 'dealersQuery' and set it to run on 'Page Load'.
+
+[Shows dropdown populating]
+
+Beautiful! Now when someone selects a dealer, we want to auto-fill their data.
+
+Click on the fleet size input. In the 'Default Value', change it to:
+
+{{ dealerDropdown.value ? dealers.data.find(d => d.id === dealerDropdown.value).fleet_size : '' }}
+
+[Shows code]
+
+Do the same for all other fields...annual miles, location, etc.
+
+[Quick montage of setting each field]
+
+Now test it. Select 'San Diego Auto Transport' from the dropdown...
+
+[Selects dealer]
+
+Boom! All their data populates instantly. This is incredibly powerful for demos. You can switch between dealers in seconds..."
+
+[Continue with custom links section]
+
+---
+
+[EMAIL AUTOMATION SECTION]
+
+"Now let's set up automatic email delivery of results. When a dealer completes a calculation, they should get a professional PDF report in their inbox within 60 seconds.
+
+First, we need an email service. I recommend SendGrid—it's free for 100 emails per day, which is plenty to start.
+
+Go to sendgrid.com and sign up...
+
+[Shows signup process]
+
+Once you're in, click 'Settings' → 'API Keys'. Click 'Create API Key'.
+
+[Creates key]
+
+Give it a name like 'CDLS_Calculator' and select 'Full Access'. Click 'Create & View'.
+
+[Copies API key]
+
+IMPORTANT: Copy this key now—you can't see it again. Save it somewhere safe.
+
+Back in Retool, go to Resources and add a new REST API. Name it 'SendGrid'.
+
+Base URL: https://api.sendgrid.com/v3/
+
+Headers:
+- Authorization: Bearer [paste-your-API-key]
+- Content-Type: application/json
+
+[Configures SendGrid]
+
+Test the connection...green checkmark. Excellent!
+
+Now let's create the email query. Add a new query, select SendGrid resource.
+
+Method: POST
+Endpoint: /mail/send
+
+Body (JSON):
+{
+  "personalizations": [{
+    "to": [{"email": "{{ dealerEmail.value }}"}]
+  }],
+  "from": {"email": "julio@cdlsnetwork.com"},
+  "subject": "Your EV ROI Analysis - {{ dealerName.value }}",
+  "content": [{
+    "type": "text/html",
+    "value": "{{ emailTemplate.value }}"
+  }]
+}
+
+[Types JSON]
+
+Now we need the email template. I've prepared a professional HTML template...
+
+[Shows template code from artifact]
+
+Create a new 'Text' component, paste this template, and name it 'emailTemplate'. Make it hidden so it's not visible to users.
+
+Finally, add a button labeled 'Email Results'. On the 'onClick' event, select 'Run Query' and choose your SendGrid query.
+
+[Configures button]
+
+Let's test it! Enter a test email, click the button...
+
+[Clicks]
+
+Check your inbox...
+
+[Opens email on split screen]
+
+There it is! Professional, branded, with all the calculation results. This is what dealers see.
+
+[Shows email]
+
+And here's the cool part—we can track opens and clicks..."
+
+[Continue with email tracking setup]
+
+---
+
+[CARBON CREDITS SECTION]
+
+"Now for the game-changer: carbon credits.
+
+California's LCFS program pays fleet operators for reducing emissions. This is real money, and most dealers don't know about it.
+
+Let's add a tab to our calculator. Drag a 'Tabs' component and create three tabs:
+1. Fleet Analysis
+2. Carbon Credits  
+3. Investment Returns
+
+[Creates tabs]
+
+On the Carbon Credits tab, we need to calculate:
+1. CO2 avoided by switching from diesel to EV
+2. LCFS credits generated
+3. Market value of those credits
+
+Here's the formula. Create a new JavaScript query called 'carbonCalculation':
+
+[Shows code]

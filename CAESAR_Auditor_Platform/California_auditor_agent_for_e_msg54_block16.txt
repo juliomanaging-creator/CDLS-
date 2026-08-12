@@ -1,0 +1,8 @@
+# Get your hardware ID
+python core/engine.py  # Will display Hardware ID on first run
+
+# Contact support@dealeraudit.ai with Hardware ID
+# Receive license key
+
+# Set license key
+export SALSA_LICENSE_KEY="your_license_key"

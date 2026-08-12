@@ -1,0 +1,4 @@
+NODE_ENV=development
+PORT=3000
+JWT_SECRET=your-secret-key-here-min-32-characters
+SESSION_SECRET=another-secret-key-here

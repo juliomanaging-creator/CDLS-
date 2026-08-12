@@ -1,0 +1,5 @@
+- Charger vendor: ChargePoint
+- Charger model: CPF50
+- Serial numbers: [List each charger]
+- API access for CARB: [Provide credentials]
+- Monthly kWh reports: [Automated from charger network]

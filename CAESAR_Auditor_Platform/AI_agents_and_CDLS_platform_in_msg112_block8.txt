@@ -1,0 +1,53 @@
+Thesis model shows: $96-132M exit, auto-only
+Updated model needs: $20.8B exit, 12 industries
+
+TABS NEEDED:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tab 1: Assumptions Dashboard
+  • Growth rates by industry
+  • Capital requirements per market
+  • Carbon credit pricing curves
+  • Exit valuation multiples
+
+Tab 2: Auto Hauling (Years 1-5)
+  • Sacramento pilot → Statewide CA
+  • 50 → 5,000 trucks
+  • 5 → 500 dealers
+  • Revenue: $7.5M → $187M
+
+Tab 3: Multi-Industry Expansion (Years 5-10)
+  • Heavy equipment, RV, ag, waste, etc.
+  • Sequential launches (1-2 per year)
+  • Revenue scaling: $187M → $4.94B
+
+Tab 4: Carbon Credit Banking
+  • 6.28M MT CO2 generation curve
+  • Three streams: Sell (40%), Bank (50%), Lend (10%)
+  • NPV calculation: $682M at 8% discount
+  • CCTI index modeling
+
+Tab 5: Investor Returns Calculator
+  • Input: Investment amount, stage, hold period
+  • Output: IRR, multiple, exit value
+  • Scenarios: Conservative, Base, Aggressive
+  • Sensitivity analysis
+
+Tab 6: CalPERS IRR Model
+  • $25M investment at Series A
+  • 18-24% IRR target path
+  • Exit scenarios: $10B, $20.8B, $30B
+  • Quarterly performance tracking
+
+Tab 7: Capital Raise Waterfall
+  • Carbon FPA: $10-25M (non-dilutive)
+  • CalPERS: $25-50M
+  • Foundations: $50-100M total
+  • Strategic: $50M+
+  • Use of funds allocation
+
+Tab 8: Exit Scenarios
+  • Strategic acquisition multiples
+  • IPO valuation analysis
+  • SPAC merger consideration
+  • Management buyout option
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

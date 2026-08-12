@@ -1,0 +1,12 @@
+Julio (Founder):           60% (36M shares)
+CalPERS (Series A):        30% (18M shares) - $5M invested
+James Wood (CEO):          8% (4.8M shares) - 4-year vest
+Rebecca McNeil (COO):      2% (1.2M shares) - 4-year vest
+Employee Stock Pool:       5% (3M shares) - future hires
+──────────────────────────────────────────────────────
+Total:                     105% → Adjust to:
+Julio:                     57.1%
+CalPERS:                   28.6%
+James:                     7.6%
+Rebecca:                   1.9%
+ESOP:                      4.8%

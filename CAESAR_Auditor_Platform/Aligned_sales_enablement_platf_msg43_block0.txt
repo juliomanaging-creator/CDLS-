@@ -1,0 +1,30 @@
+PROJECT CIA (Center)
+├── Core Business
+│   ├── ZEV Hauling Operations
+│   ├── Dealer Network (CDLS)
+│   ├── Regulatory Compliance
+│   └── Financial Structure
+├── Technology Platform
+│   ├── ROI Calculator
+│   ├── Engagement Analytics
+│   ├── Stakeholder Mapping
+│   ├── Document Management
+│   ├── Mutual Action Plans
+│   └── API Ecosystem
+├── Go-to-Market
+│   ├── CalPERS Campaign
+│   ├── Dealer Recruitment
+│   └── Platform Adoption
+├── IP Protection
+│   ├── Patent Strategy
+│   ├── Term Sheet Language
+│   └── Trademark Protection
+├── Financial Model
+│   ├── Revenue Streams
+│   ├── Cost Structure
+│   ├── IRR Enhancement
+│   └── Exit Strategy
+└── Implementation
+    ├── Phase 1: Foundation
+    ├── Phase 2: MVP
+    └── Phase 3: Scale

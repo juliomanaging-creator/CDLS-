@@ -1,0 +1,25 @@
+Target: Large dealer groups (50+ locations)
+
+Examples:
+├─ Penske Automotive: 300+ dealerships
+├─ Lithia Motors: 200+ locations
+├─ Group 1 Automotive: 150+ dealerships
+└─ Sonic Automotive: 100+ locations
+
+Pitch:
+"Deploy CDLS across your entire network.
+Save 30-50% on logistics costs.
+Standardize on one platform."
+
+Sales Motion:
+1. Executive intro (CEO → CEO)
+2. Pilot (10 locations, 90 days)
+3. Rollout (all locations, 12 months)
+4. Ongoing support (dedicated team)
+
+Economics:
+- 300 locations × $25K avg = $7.5M token purchase
+- 1-2 deals per year = $7.5M-$15M raised
+- Accelerates to 1,000+ dealers
+
+Team: Dedicated enterprise sales (2-3 AEs)

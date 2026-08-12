@@ -1,0 +1,45 @@
+Today (2026):
+├─ Ownership: 40%
+├─ Valuation: $134M
+└─ Your stake: $53.6M
+
+Post Series A (2027):
+├─ Ownership: 37.5% (25% dilution)
+├─ Valuation: $250M
+└─ Your stake: $93.75M
+
+Post Series B (2029):
+├─ Ownership: 31% (17% dilution)
+├─ Valuation: $500M
+└─ Your stake: $155M
+
+Post Series C (2031):
+├─ Ownership: 26% (15% dilution)
+├─ Valuation: $1.2B
+└─ Your stake: $312M
+
+Post Series D (2033) - NEW ROUND:
+├─ Raise: $200M at $3B pre-money
+├─ Ownership: 23% (12% dilution)
+├─ Valuation: $3.2B post-money
+└─ Your stake: $736M
+
+Post Series E (2034) - NEW ROUND:
+├─ Raise: $400M at $6B pre-money
+├─ Ownership: 20.7% (10% dilution)
+├─ Valuation: $6.4B post-money
+└─ Your stake: $1.325B
+
+IPO (2035):
+├─ Raise: $800M at $10B valuation
+├─ Ownership: 19% (8% dilution)
+├─ Public market cap: $10.8B
+└─ Your stake: $2.052B
+
+3 Years Post-IPO (2038):
+├─ Stock appreciation: 40%
+├─ Market cap: $15.1B
+├─ Your stake (after selling 20% for liquidity): 15.2%
+└─ Your remaining value: $2.295B
+└─ Cash from sales: $550M
+└─ Total wealth: $2.845B

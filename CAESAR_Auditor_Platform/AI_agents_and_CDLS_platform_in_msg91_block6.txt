@@ -1,0 +1,14 @@
+TIER 1: Operating Company (Owns Fleet)
+├─ California Dealer Logistics Solutions, Inc.
+├─ Delaware C-Corporation
+├─ Purpose: Operating company, employs staff, owns trucks
+├─ Tax Status: C-Corp (enables ROBS, R&D credits, EV credits)
+└─ Owner: California Investment Auto, LP (100%)
+
+TIER 2: Investment Vehicle (Raises Capital)
+├─ California Investment Auto, LP
+├─ Delaware Limited Partnership
+├─ Purpose: Raise $10M from dealers + CalPERS
+├─ Tax Status: Pass-through partnership
+├─ GP: California Investment Auto GP, LLC (1%)
+└─ LPs: 20 dealer partners + CalPERS (99%)

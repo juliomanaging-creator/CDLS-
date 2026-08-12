@@ -1,0 +1,13 @@
+{
+  "caAuditor_currentUser": {
+    "name": "Jane Smith",
+    "role": "CA State Auditor",
+    "agency": "DOT"
+  },
+  "caAuditor_auditSession": {
+    "user": {...},
+    "sessionData": {...},
+    "timestamp": "2026-02-01T20:15:30Z"
+  },
+  "caAuditor_loginTime": "2026-02-01T20:00:00Z"
+}

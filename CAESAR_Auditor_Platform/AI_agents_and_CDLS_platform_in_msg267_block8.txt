@@ -1,0 +1,37 @@
+Exploit plant's own metabolic processes:
+
+PLANT METABOLISM GENERATES ELECTRONS:
+- Photosynthesis: H2O + CO2 → glucose + O2 (produces electrons!)
+- Cellular respiration: Glucose → ATP (electron transfer chain)
+- Redox proteins: Naturally transport electrons
+
+MICROBIAL FUEL CELL ANALOGY:
+- Bacteria in soil oxidize organic matter (release electrons)
+- Electrons flow through external circuit (generate current)
+- Similar principle can work with plant roots!
+
+PLANT-BASED BIO-BATTERY:
+1. Genetically engineer plant (or use natural variants):
+   - Overexpress cytochrome proteins (electron carriers)
+   - Enhance root exudation (organic compounds released to soil)
+   
+2. Connect electrodes:
+   - Anode: Embedded in root system (collects electrons from metabolism)
+   - Cathode: In soil (accepts electrons, reduces oxygen)
+   
+3. Electron flow:
+   - Photosynthesis generates electrons in leaves
+   - Electrons transported to roots via plant's vascular system
+   - Anode collects electrons (generates current!)
+   
+4. Continuous power:
+   - As long as plant photosynthesizes (sunlight), generates power
+   - Self-charging battery! ☀️🔋
+
+Output (research data):
+- Power density: 1-10 mW/m² root surface area
+- For 100g root (~0.1 m² surface): 0.1-1 mW continuous power
+- Daily energy: 2.4-24 Wh (if operates 24 hours)
+
+Advantage: SELF-CHARGING (sunlight → electricity via plant!) ✅
+Disadvantage: Low power (suitable for sensors, not high-power applications)

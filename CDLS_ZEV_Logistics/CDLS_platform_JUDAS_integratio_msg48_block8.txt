@@ -1,0 +1,12 @@
+# Every morning, run:
+python3 jure_agent.py daily
+
+# This gives you:
+- Today's task list (print it!)
+- Updated dashboard
+- Priority dealers to contact
+
+# When you close a Champion:
+python3 jure_agent.py champion-closed
+
+# Celebrates with you! 🎉

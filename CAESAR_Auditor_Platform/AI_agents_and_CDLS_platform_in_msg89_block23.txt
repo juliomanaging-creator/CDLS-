@@ -1,0 +1,12 @@
+Without Tax Strategy:
+EBITDA: $62.5M
+Tax Rate: 29.84%
+After-Tax Income: $43.9M
+
+With Tax Strategy:
+EBITDA: $62.5M
+Effective Tax Rate: 17.5% (saves 12.3 points)
+After-Tax Income: $51.6M
+
+Additional Value: $7.7M/year
+Exit Multiple (8x): +$61.6M enterprise value ✅

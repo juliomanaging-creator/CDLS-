@@ -1,0 +1,4 @@
+# Build and run
+docker-compose up -d
+
+# Platform available at http://localhost:3001

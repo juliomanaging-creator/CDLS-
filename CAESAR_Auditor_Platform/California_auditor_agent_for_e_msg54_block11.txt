@@ -1,0 +1,4 @@
+# Download the tar.gz file
+# Extract it to your desired location
+tar -xzf SALSA_Complete_v2.0.tar.gz
+cd SALSA_Complete_v2.0

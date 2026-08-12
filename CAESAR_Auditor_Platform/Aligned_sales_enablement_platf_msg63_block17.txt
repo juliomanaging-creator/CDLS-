@@ -1,0 +1,36 @@
+2026:
+- 20 Starter: $120K
+- 0 Professional: $0
+- 0 Enterprise: $0
+Total ARR: $120K
+
+2027:
+- 50 Starter: $299K
+- 10 Professional: $240K
+- 0 Enterprise: $0
+Total ARR: $539K
+
+2028:
+- 500 Starter: $2.99M
+- 50 Professional: $1.20M
+- 10 Enterprise: $1.20M
+- Marketplace: $540K
+Total ARR: $5.93M
+
+2030:
+- 1,000 Starter: $5.99M
+- 300 Professional: $7.20M
+- 100 Enterprise: $12M
+- Marketplace: $2.94M
+- Add-ons: $1.2M
+Total ARR: $29.33M
+
+2032:
+- 1,500 Starter: $8.98M
+- 500 Professional: $11.99M
+- 200 Enterprise: $24M
+- Marketplace: $12M
+- Add-ons: $2.4M
+Total ARR: $59.37M
+
+At 10x ARR multiple: $593.7M platform value alone

@@ -1,0 +1,17 @@
+CalPERS Funding:
+├─ Needed: February 2026
+├─ Amount: $5M
+├─ Status: Term sheet signed ✅
+└─ Risk: LOW (closing on track)
+
+Dealer Commitment:
+├─ Needed: 1,000 whitelisted
+├─ Current: 18 of 20 interested
+├─ Path: Referrals + marketing
+└─ Risk: LOW (network effects)
+
+Team Execution:
+├─ Needed: Hire 10+ people
+├─ Timeline: Weeks 1-12
+├─ Recruiting: Active
+└─ Risk: MEDIUM (talent competitive)

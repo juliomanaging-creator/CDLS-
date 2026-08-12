@@ -1,0 +1,11 @@
+ev-cost-platform/
+├── server.js              # Secure backend (500+ lines)
+├── public/
+│   ├── index.html        # Main UI (700+ lines)
+│   ├── css/styles.css    # Professional styling (1000+ lines)
+│   └── js/app.js         # Frontend logic (700+ lines)
+├── README.md             # Full documentation
+├── QUICK_START.md        # Quick deployment guide
+├── .env                  # Configuration (update secrets!)
+├── .gitignore           # Security
+└── package.json         # Dependencies

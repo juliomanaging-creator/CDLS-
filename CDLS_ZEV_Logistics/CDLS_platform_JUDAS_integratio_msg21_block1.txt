@@ -1,0 +1,70 @@
+# CDLS Platform Validation Survey
+**For:** Founding Dealer Partners
+**Purpose:** Validate platform economics before deployment
+
+## Dealer Information
+1. Dealership Name: _______________
+2. Location: _______________
+3. Primary Contact: _______________
+4. Annual Vehicle Sales Volume: _______________
+
+## Current Hauling Operations
+
+### Monthly Vehicle Transport Needs
+5. How many vehicles do you haul per month (average)? _______________
+6. How many hauls do you make per month? _______________
+   (1 haul = 1 truck load, typically 8-9 vehicles)
+
+7. Current hauler cost per load: $_______________
+8. Current haul distance (average miles): _______________
+
+### Current Pain Points (Rate 1-5, 5 = Major Issue)
+9. Cost of hauling: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5
+10. Hauler reliability: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5
+11. Environmental compliance concerns: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5
+12. Scheduling flexibility: [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5
+
+## CDLS Platform Interest
+
+### Pricing & Value
+13. Would you pay $1,200/haul for zero-emission hauling? 
+    [ ] Yes, definitely
+    [ ] Yes, if it includes carbon credits
+    [ ] Maybe, need more info
+    [ ] No, too expensive
+
+14. If carbon credits reduce your cost by $25/haul, does that make it attractive?
+    [ ] Yes  [ ] No  [ ] Indifferent
+
+### Commitment Level
+15. Would you commit to using CDLS for 100% of your hauls?
+    [ ] Yes, exclusively
+    [ ] Yes, for 75%+
+    [ ] Yes, for 50%
+    [ ] No, test first
+
+16. Would you invest $500K as a founding dealer partner?
+    [ ] Yes, committed
+    [ ] Yes, likely
+    [ ] Maybe, need more info
+    [ ] No
+
+### Advanced Clean Fleets Compliance
+17. Are you aware of California's 2035 zero-emission requirement?
+    [ ] Yes, very concerned
+    [ ] Yes, somewhat aware
+    [ ] No, tell me more
+
+18. When do you plan to switch to zero-emission haulers?
+    [ ] Already researching (2024-2025)
+    [ ] Soon (2026-2028)
+    [ ] Later (2029-2032)
+    [ ] Last minute (2033-2035)
+
+## Calculated RER (You Fill This Out)
+- Vehicles hauled/month: _______
+- Hauls/month (÷8 vehicles): _______
+- Annual haul volume: _______
+- Revenue potential (@$1,200): $_______
+- CO₂ savings (×0.29 MT): _______ MT
+- Carbon credit value (@$85/MT): $_______

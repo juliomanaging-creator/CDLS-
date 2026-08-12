@@ -1,0 +1,37 @@
+1. Platform Subscriptions:
+Instead of paying $499/month in USD, pay in $HAUL
+
+Pricing:
+├─ Starter: 10,000 $HAUL/month (vs $499 USD)
+├─ Professional: 40,000 $HAUL/month (vs $1,999 USD)
+└─ Enterprise: 100,000 $HAUL/month (vs $5,000 USD)
+
+Benefit: Earn $HAUL through usage → Pay for subscription
+Net cost: Near zero for active users
+
+2. Premium Features:
+├─ AI route optimization: 500 $HAUL per route
+├─ Predictive maintenance alert: 200 $HAUL
+├─ Priority support ticket: 100 $HAUL
+└─ Custom report generation: 1,000 $HAUL
+
+3. Marketplace Fees:
+├─ List carbon credit: 50 $HAUL
+├─ Featured listing (higher visibility): 500 $HAUL
+├─ Reduce marketplace fee (2% → 1.5%): 1,000 $HAUL/trade
+└─ Instant settlement (vs. standard): 200 $HAUL
+
+4. NFT Minting:
+├─ Mint carbon credit NFT: 100 $HAUL
+├─ Mint achievement badge: 50 $HAUL
+└─ Mint vehicle ownership proof: 200 $HAUL
+
+5. Governance Proposals:
+├─ Submit proposal: 10,000 $HAUL (spam prevention)
+├─ Boost proposal visibility: 5,000 $HAUL
+└─ Get refunded if proposal passes
+
+6. Convert to $CDLS:
+├─ Burn 10,000 $HAUL → Receive 100 $CDLS
+├─ Conversion rate: Dynamic (based on treasury)
+└─ Creates deflationary pressure on $HAUL

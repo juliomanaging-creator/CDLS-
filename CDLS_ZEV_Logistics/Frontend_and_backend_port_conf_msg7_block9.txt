@@ -1,0 +1,7 @@
+REM From C:\Projects\ev-cost-platform\frontend
+npm install
+
+REM This might take a few minutes...
+
+REM After installation completes:
+npm start

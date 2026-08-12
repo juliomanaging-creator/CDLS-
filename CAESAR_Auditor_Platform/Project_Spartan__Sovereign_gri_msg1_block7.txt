@@ -1,0 +1,9 @@
+Per Trailer Annual Revenue:
+- Hauling fees: $45,000
+- Grid services (300 kWh × $0.15/kWh × 250 days): $11,250
+- Carbon credits (LCFS): $2,800
+TOTAL: $59,050/trailer
+
+- Driver share (70%): $41,335
+- Operating costs: $8,860
+- SPARTAN NET: $8,855 (15% margin)

@@ -1,0 +1,77 @@
+☐ 9:00 AM: Daily standup
+
+☐ 9:30 AM: Review blockchain dev applications
+   - Check job boards (how many responses?)
+   - Check email (direct submissions?)
+   - Create shortlist (target: 10-15 to interview)
+   
+   Scoring Rubric (/100):
+   - Experience (30 pts): Years, projects, deployed contracts
+   - Portfolio (25 pts): Quality of past work, audit reports
+   - Availability (15 pts): Can start Feb 1? Full-time?
+   - Communication (10 pts): Clear proposals, responsive
+   - Pricing (10 pts): Within budget ($350K-$450K)?
+   - Cultural fit (10 pts): Excited about project?
+   
+   ☐ Score all applications
+   ☐ Shortlist top 10
+   ☐ Send interview invites (Jan 15-20 slots)
+
+☐ 11:00 AM: Review legal RFP responses
+   - How many of 10 firms responded? (expect 6-8)
+   - Quick scan (are they qualified?)
+   - Create shortlist (target: 3-5 for presentations)
+   
+   ☐ Shortlist top 3-5
+   ☐ Schedule presentations (Jan 15-17)
+
+☐ 1:00 PM: Begin reference checks
+   
+   For top 2-3 blockchain dev candidates:
+   Call their past clients, ask:
+   1. What did they build for you?
+   2. Quality of work? (bugs, security)
+   3. Timeline? (on time, delays?)
+   4. Communication? (responsive, proactive?)
+   5. Would you hire again? (yes/no)
+   6. Any concerns?
+   
+   ☐ Call 2 references per candidate
+   ☐ Document responses
+   ☐ Factor into decision
+
+☐ 3:00 PM: Week 1 budget review
+   Spent so far:
+   - Legal RFP: $0 (internal time)
+   - Blockchain RFP: $300 (featured job listing)
+   - Operations: $0 (internal time)
+   Total: $300 / $5,200,000 (0.006%)
+   
+   On track ✅
+
+☐ 4:00 PM: Week 1 retrospective
+   
+   What went well this week:
+   -
+   -
+   -
+   
+   What didn't go well:
+   -
+   -
+   -
+   
+   Action items for Week 2:
+   -
+   -
+   -
+   
+   Team morale: ___ / 10
+   Confidence in timeline: ___ / 10
+   
+☐ 5:00 PM: Week 1 COMPLETE! 🎉
+   
+   Celebrate:
+   - Team dinner (optional)
+   - Rest this weekend
+   - Come back Monday ready for interviews

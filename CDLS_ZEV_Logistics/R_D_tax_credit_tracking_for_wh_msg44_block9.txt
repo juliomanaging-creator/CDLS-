@@ -1,0 +1,4 @@
+❌ "npm ERR! code ENOENT"
+❌ "npm ERR! peer dependency not met"
+❌ "found 15 high severity vulnerabilities"
+❌ Installation stops/crashes

@@ -1,0 +1,4 @@
+docker-compose up -d
+# System ready in ~5 minutes
+# Portal: http://localhost:3000
+# Dashboard: http://localhost:3001

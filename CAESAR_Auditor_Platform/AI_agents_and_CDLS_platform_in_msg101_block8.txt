@@ -1,0 +1,14 @@
+OLD DESIGN:
+❌ Generic Inter font
+❌ Purple gradients on white
+❌ Tailwind CSS (CDN dependency)
+❌ Cookie-cutter component patterns
+
+NEW DESIGN:
+✅ Distinctive Archivo Black + JetBrains Mono
+✅ Forest greens (#0A3A2A, #4A9D5F, #7FD99A) + gold (#DAA520)
+✅ Custom CSS (no framework, lighter weight)
+✅ Unique forest-inspired aesthetics
+✅ Animated background with radial gradients
+✅ Glowing effects and sophisticated shadows
+✅ Context-specific character and personality

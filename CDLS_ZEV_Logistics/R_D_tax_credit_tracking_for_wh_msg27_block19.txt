@@ -1,0 +1,5 @@
+1. Edit server.js
+2. Stop server (Ctrl+C)
+3. Start server (npm start)
+4. Test changes
+5. Repeat...

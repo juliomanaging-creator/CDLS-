@@ -1,0 +1,12 @@
+JULIO (Founder):
+  Salary: $160,000
+  R&D: 60%
+  Credits: $27,840
+
+ENGINEERS (15 employees @ avg $160K):
+  Total Salaries: $2,400,000
+  Avg R&D: 85%
+  Qualified Wages: $2,040,000
+  Credits: $591,600
+
+TOTAL YEAR 1: $619,440

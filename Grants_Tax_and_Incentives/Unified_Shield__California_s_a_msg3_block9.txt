@@ -1,0 +1,26 @@
+1. YOUR MODELS:
+   - Unified Shield pricing spreadsheet (Excel, all formulas visible)
+   - Reserve projection model
+   - Enrollment forecast by tier and region
+   
+2. CALIFORNIA DATA:
+   - CDI Market Share Reports (2020-2024)
+   - DMHC Annual Financial Reports (health plans)
+   - DMV collision statistics
+   - California EDD wage data (income distribution)
+   - US Census ACS (demographics)
+   
+3. INDUSTRY BENCHMARKS:
+   - NAIC data (national loss ratios by state)
+   - AM Best aggregates
+   - S&P catastrophic bond pricing
+   
+4. REGULATORY STANDARDS:
+   - CDI solvency regulations
+   - DMHC licensing requirements
+   - ACA MLR rules
+   
+5. PRECEDENT PROGRAMS:
+   - Massachusetts Health Connector data
+   - Washington State Cascadia earthquake modeling
+   - Florida Citizens Property Insurance (state-run comparison)

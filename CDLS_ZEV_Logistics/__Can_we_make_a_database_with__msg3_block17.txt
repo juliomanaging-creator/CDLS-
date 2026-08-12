@@ -1,0 +1,5 @@
+cd anthropic_kb
+python setup.py         # installs deps, creates .env
+# add your API key to .env
+python orchestrator.py  # runs the full pipeline
+python scheduler.py     # starts continuous updates

@@ -1,0 +1,9 @@
+Traditional differential:
+- Both wheels spin at same speed
+- Turning: Inside wheel MUST slip (energy waste!)
+
+Torque vectoring:
+- Each wheel has independent motor
+- Inside wheel: 90% power
+- Outside wheel: 110% power
+- NO slip, NO energy waste! ✅

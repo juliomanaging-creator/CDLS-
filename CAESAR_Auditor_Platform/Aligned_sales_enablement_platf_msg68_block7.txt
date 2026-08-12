@@ -1,0 +1,34 @@
+Solution:
+├─ Transparent pricing (public order book, real-time)
+├─ Instant settlement (smart contracts, seconds)
+├─ Low fees (2% take rate, automated)
+├─ Global buyers (anyone with crypto wallet)
+├─ Fractional trading (trade 0.01 credits)
+└─ Real-time generation (mint credits as miles driven)
+
+How It Works:
+
+Step 1: Credit Generation
+- CDLS vehicle drives 100 miles
+- Telematics automatically logs on-chain
+- Smart contract calculates CO2 avoided
+- Pre-mints "unverified" carbon credit NFT
+
+Step 2: Quarterly Verification
+- Submit data to CARB (traditional process)
+- Receive official verification
+- Smart contract upgrades NFT to "verified"
+- Now tradable on marketplace
+
+Step 3: Trading
+- Dealer lists 100 verified credits at $105 each
+- Buyer (oil company, DAO, individual) bids $104
+- Smart contract matches orders
+- Settlement instant (credit transferred, payment sent)
+- 2% fee to CDLS treasury (in $CDLS tokens, burned)
+
+Step 4: Delivery to CARB
+- At quarter end, buyer withdraws credits from chain
+- CDLS submits transfer to CARB on buyer's behalf
+- Credits officially transferred in CARB system
+- Blockchain record = proof for audit

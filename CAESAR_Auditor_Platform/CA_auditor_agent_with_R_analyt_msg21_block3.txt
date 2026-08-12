@@ -1,0 +1,5 @@
+Algorithm: AES-256-GCM (authenticated encryption)
+Key Management: Hardware Security Module (HSM)
+Key Rotation: Every 90 days
+Database: Transparent Data Encryption (TDE)
+Field-Level: Individual PHI/PII fields encrypted separately

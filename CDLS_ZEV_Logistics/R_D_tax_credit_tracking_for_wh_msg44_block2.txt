@@ -1,0 +1,9 @@
+You're on: Windows
+Skipped:   Linux-specific packages
+Skipped:   macOS-specific packages
+Skipped:   Native bindings you don't need
+
+Example packages that might be skipped:
+- fsevents (macOS file watcher)
+- cpu-features (specific CPU architectures)
+- Optional compression libraries

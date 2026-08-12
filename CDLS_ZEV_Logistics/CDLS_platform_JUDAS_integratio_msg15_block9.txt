@@ -1,0 +1,3 @@
+jure> status          # Daily health check
+jure> progress        # Track growth
+jure> save            # Preserve state

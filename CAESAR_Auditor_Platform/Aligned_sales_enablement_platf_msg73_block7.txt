@@ -1,0 +1,20 @@
+Submit formal request to CARB:
+
+"CDLS proposes to create a digital marketplace
+for LCFS credits, using blockchain technology
+to facilitate trading, while maintaining full
+compliance with CARB regulations through
+quarterly settlement in the LRT-CBTS system.
+
+We request CARB's advisory opinion on whether
+this structure is permissible under current
+LCFS regulations."
+
+Expected Response:
+├─ "Not prohibited" (best case)
+├─ "Permissible with modifications" (likely)
+├─ "Requires rulemaking" (slower, but still possible)
+└─ "Not allowed" (unlikely, but pivot to pure SaaS)
+
+Timeline: 60-90 days for response
+Cost: $50K (legal fees for submission)

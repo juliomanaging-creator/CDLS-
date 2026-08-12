@@ -1,0 +1,13 @@
+Price: $0.045 per $CDLS token
+Valuation: $500M FDV
+Minimum: $250,000 per investor
+Maximum: $2,000,000 per investor
+
+Terms:
+├─ 6-month lock-up (can't sell before Oct 13, 2026)
+├─ Priority access (whitelist for public round)
+├─ Governance rights (vote on platform decisions)
+└─ Revenue share (stake to earn USDC distributions)
+
+Closing: March 31, 2026
+Wire instructions provided upon commitment

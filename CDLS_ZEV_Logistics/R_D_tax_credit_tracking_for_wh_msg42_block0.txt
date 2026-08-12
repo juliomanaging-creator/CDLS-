@@ -1,0 +1,4 @@
+✓ Installation successful!
+✓ All packages working perfectly!
+ℹ️ 22 packages are looking for funding
+  run `npm fund` for details

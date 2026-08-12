@@ -1,0 +1,16 @@
+Component        Investment  Annual      Life       ROI
+                             Savings     Extension  
+────────────────────────────────────────────────────────
+Structure        $5,960      $8,000      5× cycles  9 mo ✅
+Tires (ceramic)  $54,000     $13,200     10× miles  4.1 yr
+Brakes           $3,200      $1,760      10× miles  1.8 yr
+Bearings         $3,600      $2,022      5× miles   1.8 yr
+Wiring           $8,000      $1,733      4× years   4.6 yr
+Coating          $2,000      $1,367      2× years   1.5 yr
+Straps           $1,800      $720        5× years   2.5 yr
+────────────────────────────────────────────────────────
+TOTAL            $78,560     $28,802     5-10×      2.7 yr ✅
+
+Weight saved: 805 lbs (HALF A VEHICLE worth!) 🎉
+Maintenance: -70% reduction
+Component life: 5-10× longer across entire system

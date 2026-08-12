@@ -1,0 +1,8 @@
+# Windows:
+build_package.bat
+
+# Mac/Linux:
+./build_package.sh
+
+# Gets you: Ready-to-share application (50-100 MB)
+# No Python needed to run!

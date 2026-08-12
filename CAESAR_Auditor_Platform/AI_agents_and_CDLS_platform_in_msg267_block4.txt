@@ -1,0 +1,45 @@
+Introduce carbon nanomaterials into plant:
+
+CARBON NANOMATERIALS (Conductive + Biocompatible):
+1. Single-Walled Carbon Nanotubes (SWCNT):
+   - Conductivity: 10⁶-10⁷ S/m (excellent!)
+   - Size: 1-2 nm diameter (small enough for plant uptake!)
+   - Biocompatibility: High (carbon-based, non-toxic)
+   
+2. Graphene Quantum Dots (GQD):
+   - Conductivity: 10⁵ S/m
+   - Size: 2-10 nm diameter
+   - Biocompatibility: Very high (used in medical applications)
+   
+3. Reduced Graphene Oxide (rGO):
+   - Conductivity: 10⁴-10⁵ S/m
+   - Size: 2D sheets, 1-10 nm thick
+   - Biocompatibility: High
+
+PROTOCOL:
+1. Prepare nanoparticle solution:
+   - Concentration: 100 mg/L (0.01%)
+   - Surfactant: Add 0.1% Tween-20 (helps plant uptake)
+   - Sonication: 30 minutes (disperses nanoparticles evenly)
+
+2. Apply to plant:
+   METHOD A (Root Absorption):
+   - Hydroponic setup (plant roots in water, no soil)
+   - Add nanoparticle solution to water
+   - Exposure: 7-14 days (continuous uptake)
+   
+   METHOD B (Foliar Spray):
+   - Spray nanoparticle solution on leaves
+   - Stomata (leaf pores) absorb nanoparticles
+   - Faster uptake, but less penetration to roots
+
+3. Monitor uptake:
+   - Day 3: Nanoparticles visible in leaves (dark color)
+   - Day 7: Nanoparticles in stems
+   - Day 14: Nanoparticles in roots (transported via phloem)
+
+Expected result:
+- Plant tissues: 0.01-0.1% carbon nanomaterial by weight
+- Conductivity: 10⁴-10⁶ S/m (semi-conductor to conductor!)
+- Photosynthesis: Enhanced 20-30% (MIT study confirmed!)
+- Energy storage: Moderate (carbon nanotubes can store some charge)

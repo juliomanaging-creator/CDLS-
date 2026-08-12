@@ -1,0 +1,42 @@
+Price: Starting at $5,000/month (negotiated based on size)
+Target Users: 100 large dealer groups by 2030
+Ideal Customer: Large dealer group (10+ locations, 100+ vehicles)
+
+Features:
+✓ Everything in Professional, plus:
+✓ Dedicated account manager
+✓ Custom integrations (DMS, CRM, ERP)
+✓ White-label platform (your brand)
+✓ Full API access (read/write)
+✓ Priority support (1-hour SLA)
+✓ Unlimited user seats
+✓ On-premise deployment option
+✓ Custom SLA and uptime guarantees
+
+Enterprise Services:
+✓ Quarterly business reviews
+✓ Custom feature development
+✓ Data science consulting
+✓ Training and change management
+✓ Strategic advisory (carbon strategy, fleet planning)
+
+Pricing Variables:
+- Base: $5,000/month
+- Per-vehicle charge: $50/vehicle/month (100+ vehicles)
+- Per-location: $200/location/month (10+ locations)
+- Professional services: $200/hour (custom dev)
+
+Example Pricing:
+Large Dealer Group: 20 locations, 200 vehicles
+- Base: $5,000
+- Vehicles: 200 × $50 = $10,000
+- Locations: 20 × $200 = $4,000
+- Total: $19,000/month = $228,000/year
+
+Value Proposition:
+- Full white-label = $500K+/year to build in-house
+- Avoids 2-year development timeline
+- ROI: 5x first year
+
+Revenue Target:
+- 100 dealers × $10,000 avg × 12 = $12M ARR (2030)

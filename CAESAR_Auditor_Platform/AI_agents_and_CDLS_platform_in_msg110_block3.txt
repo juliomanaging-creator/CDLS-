@@ -1,0 +1,16 @@
+Input: "What do you pay per car?" ($400)
+Input: "How many cars annually?" (200)
+
+Calculator Logic:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Model:
+  200 cars × $400/car = $80,000/year
+
+CDLS Model:
+  23 trips × $850/trip = $19,550/year
+  (200 cars ÷ 9 per trip = 23 trips)
+
+SAVINGS: $60,450/year (75.6%!)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Plus: Carbon credits, capital avoidance, etc.

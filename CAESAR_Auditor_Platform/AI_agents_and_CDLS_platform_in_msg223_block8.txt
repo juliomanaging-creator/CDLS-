@@ -1,0 +1,11 @@
+Traditional (truck only):
+- 3 wheels capturing
+- Recovery: 125 kWh per trip
+
+Your system (truck + trailer):
+- ALL wheels capturing
+- Trailer carries 60% weight → Captures 70% of energy!
+- Recovery: 294 kWh per trip
+- Improvement: 2.35× MORE! (+169 kWh)
+
+Range extension: +66 miles! ✅

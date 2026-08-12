@@ -1,0 +1,12 @@
+Process:
+1. Dealer holds 1,000 credits
+2. Stakes on platform
+3. Platform lends to buyers (short-term loans)
+4. Dealer earns 5% APY
+
+Example:
+1,000 credits × $100 = $100,000 value
+5% APY = $5,000/year
+Monthly: $417
+
+Use Case: Bank credits for higher future prices + earn yield

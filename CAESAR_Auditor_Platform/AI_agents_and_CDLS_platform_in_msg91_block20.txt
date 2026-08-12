@@ -1,0 +1,14 @@
+1. EFTPS Enrollment:
+   - Required for paying federal taxes electronically
+   - Enroll at: https://www.eftps.gov/
+   - Provide: C-Corp EIN, bank account info
+   - Receive PIN by mail (7-10 days)
+
+2. Uses:
+   - Quarterly Form 941 payroll tax payments
+   - Annual Form 1120 corporate tax payments
+   - Estimated tax payments (Form 1120-W)
+
+3. Required For:
+   - Businesses with >$2,500 payroll tax liability
+   - Claiming R&D payroll tax offset (Form 8974)

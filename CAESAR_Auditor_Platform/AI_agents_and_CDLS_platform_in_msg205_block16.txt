@@ -1,0 +1,8 @@
+F1 cars: 200+ mph (89 m/s)
+Available wind power: ENORMOUS (scales with v³)
+Budget: $100M+ per year for aerodynamics
+
+Yet NO F1 team uses wind turbines. Why?
+→ Turbine drag >> Energy captured
+→ Would slow car down MORE than energy helps
+→ They've tried everything - if it worked, they'd use it!

@@ -1,0 +1,6 @@
+T_reduction(t) = T_initial × e^(-0.033t) + Σ(Royalty_payments)
+
+Where:
+T_initial = $68B (2026 CA tax debt)
+-0.033 = Natural debt decay rate (3.3% annual reduction via GDP growth)
+Royalty_payments = 0.99 × CDLS_Revenue(t)

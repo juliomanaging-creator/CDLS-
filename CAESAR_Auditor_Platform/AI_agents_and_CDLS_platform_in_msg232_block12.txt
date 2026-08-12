@@ -1,0 +1,8 @@
+Technology: High-speed air sheet
+- Seals gap between truck and trailer
+- Prevents turbulent air entry
+- Major drag source eliminated
+
+Power: 10 kW
+Drag reduction: 8.2 kW saved
+Net: -1.8 kW (marginal loss)

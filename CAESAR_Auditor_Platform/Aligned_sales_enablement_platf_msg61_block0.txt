@@ -1,0 +1,10 @@
+California: 1,200 new car dealers
+Oregon: 180 dealers (LCFS program exists)
+Washington: 240 dealers (Clean Fuel Standard exists)
+Nevada: 120 dealers
+Arizona: 180 dealers
+Colorado: 150 dealers
+Total addressable: 2,070 dealers
+
+Current capture: 20 dealers (0.97%)
+Year 5 target: 200 dealers (9.7%)

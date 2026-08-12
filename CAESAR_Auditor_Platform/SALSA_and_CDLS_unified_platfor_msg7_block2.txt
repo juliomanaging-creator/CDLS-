@@ -1,0 +1,13 @@
+McNeil Family Trust (Wyoming) — Privacy layer, owns everything
+        │
+        ▼
+CDLS Holdings LLC (Wyoming or Delaware) — Master holding company
+        │
+        ├── CDLS Operations LLC (California) — Fleet, drivers, dispatch
+        ├── CDLS Technology LLC (Delaware) — CESAR IP, software, patents
+        ├── CDLS Energy LLC (California) — V2G, SMUD contracts, LCFS credits
+        └── CA Investment Auto GP, LLC (Delaware) — Controls the LP
+                └── California Investment Auto, LP (Delaware)
+                        └── 20 Dealer LPs + CalPERS (99% interest)
+
+SALSA — Completely separate 501(c)(3), arm's length contracts with CDLS Holdings

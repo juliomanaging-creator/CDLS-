@@ -1,0 +1,2 @@
+C:\Projects\ev-cost-platform\data\sample-data>findstr "state_average" carrier_cost_data.json
+        "state_average": 4.862,

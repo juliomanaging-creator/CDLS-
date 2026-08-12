@@ -1,0 +1,3 @@
+✓ Delaware Limited Partnership (LP)
+✓ C-Corporation (for ROBS structure)
+✓ Both entities needed for tax optimization

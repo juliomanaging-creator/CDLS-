@@ -1,0 +1,18 @@
+"Price Floor Protection":
+
+Treasury Buyback:
+├─ If token drops >50% in 7 days
+├─ Treasury buys $100K/day
+├─ Stabilizes price, builds confidence
+
+Dealer Put Option:
+├─ Dealers can sell back to treasury
+├─ At 50% of purchase price (guaranteed)
+├─ Maximum: 10% of holdings per quarter
+├─ Prevents panic selling
+
+Example:
+Dealer bought 100K $CDLS at $0.05 ($5,000)
+Price crashes to $0.02 ($2,000 loss)
+Dealer can sell 10K $CDLS at $0.025 ($250 vs. $200)
+Small protection, but builds trust

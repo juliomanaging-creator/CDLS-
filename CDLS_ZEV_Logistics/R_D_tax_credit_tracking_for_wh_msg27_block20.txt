@@ -1,0 +1,4 @@
+1. Edit server.js
+2. [nodemon detects change]
+3. [Auto-restarts server]
+4. Test changes immediately!

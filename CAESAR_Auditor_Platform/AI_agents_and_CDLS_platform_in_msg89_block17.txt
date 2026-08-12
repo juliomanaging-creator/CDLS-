@@ -1,0 +1,8 @@
+✅ Contemporaneous time tracking (rd_tracker logs)
+✅ Employee role documentation (employee_roles_rd_config.json)
+✅ Four-Part Test for every project (ai_agent_system.json)
+✅ Payroll reconciliation (team_rd_tracker exports)
+✅ Git commit history (supporting evidence)
+✅ R&D Credit Study (CPA-prepared defense)
+✅ Claude AI logs (development assistance records)
+✅ Manager review records (weekly summaries)

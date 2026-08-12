@@ -1,0 +1,7 @@
+Trigger: Dealer completes calculation
+Action: Send PDF report within 60 seconds
+Template: "Your EV ROI Analysis - {DealerName}"
+Includes: 
+  - Personalized results
+  - Next steps
+  - Calendar link to discuss

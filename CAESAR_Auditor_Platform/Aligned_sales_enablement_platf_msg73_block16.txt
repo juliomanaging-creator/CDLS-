@@ -1,0 +1,21 @@
+Tier 1: Basic KYC (All users)
+├─ Email verification
+├─ Phone number (SMS)
+├─ Basic info (name, country)
+└─ Limit: $1,000/month trading
+
+Tier 2: Enhanced KYC (Higher limits)
+├─ Government ID (passport, driver's license)
+├─ Selfie verification
+├─ Address proof
+└─ Limit: $50,000/month trading
+
+Tier 3: Institutional KYC (Unlimited)
+├─ Business verification
+├─ Beneficial ownership (25%+ owners)
+├─ Financial statements
+└─ Limit: Unlimited
+
+Provider: Persona, Onfido, or Jumio
+Cost: $1-5 per verification
+Processing: Instant (automated) or 24 hours (manual review)

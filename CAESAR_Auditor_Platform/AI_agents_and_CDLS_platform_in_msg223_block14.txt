@@ -1,0 +1,16 @@
+Component                    Cost        Benefit
+────────────────────────────────────────────────────
+2× BPW e-Drive axles         $110,000    300 kW propulsion
+200 kWh trailer battery      $40,000     +151 mi range
+CAN bus integration          $15,000     Coordination
+Installation + controls      $15,000     Professional
+────────────────────────────────────────────────────
+TOTAL INVESTMENT             $180,000
+
+Annual Benefits:
+- Energy savings: $13,800/year
+- Regen value: $7,500/year
+- Tire savings: $3,000/year
+TOTAL: $24,300/year
+
+ROI: 7.4 years

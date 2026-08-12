@@ -1,0 +1,11 @@
+You: "Claudio, prepare for CalPERS closing"
+
+Claudio orchestrates automatically:
+├─ Agent 36 (Legal): Generates operating agreement (3 min)
+├─ Agent 22 (Finance): Exports financial model (2 min)
+├─ Agent 37 (Contract): Reviews for issues (5 min)
+├─ Agent 39 (Email): Sends package to attorney (1 min)
+└─ Claudio (Logger): Logs activity, notifies Rebecca
+
+Result: "✅ CalPERS closing package sent. 
+         Attorney has all docs. Expected response: 2-3 days."

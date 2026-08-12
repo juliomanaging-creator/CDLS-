@@ -1,0 +1,24 @@
+Probability: 10%
+Impact: Medium (pivot required)
+
+Triggers:
+├─ CARB rule change
+├─ Market manipulation concerns
+└─ Political pressure
+
+Mitigation:
+✓ Early engagement (advisory opinion)
+✓ Pilot program (prove concept)
+✓ Dual-ledger system (CARB authoritative)
+✓ Industry advocacy (CNCDA support)
+
+Response Plan:
+1. Pivot to pure SaaS (no tokenized credits)
+2. $CDLS still valuable (platform access)
+3. $HAUL still works (utility token)
+4. Revenue model: Subscriptions only
+5. Still builds $500M-$1B company (slower)
+
+Impact on Timeline: Delay 6-12 months
+Impact on Valuation: -30% to -50%
+Still Achievable: $500M+ in 5 years

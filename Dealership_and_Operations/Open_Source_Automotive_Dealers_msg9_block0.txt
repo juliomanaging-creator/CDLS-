@@ -1,0 +1,8 @@
+graph TD
+    A[Website Lead] --> B[BDC Manager]
+    B --> C{Lead Quality Check}
+    C -->|Quality Lead| D[Sales Team]
+    C -->|Needs Nurturing| E[Marketing]
+    D --> F[Sales Process]
+    E --> G[Nurture Campaign]
+    G --> B

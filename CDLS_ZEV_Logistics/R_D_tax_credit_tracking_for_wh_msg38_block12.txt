@@ -1,0 +1,3 @@
+cd C:\Projects\ev-cost-platform
+npm install
+npm start

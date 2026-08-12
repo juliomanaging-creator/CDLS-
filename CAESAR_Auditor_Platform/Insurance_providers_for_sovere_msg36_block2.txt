@@ -1,0 +1,4 @@
+Registrant: [Anonymous LLC Name]
+Address: [Registered agent address]
+Email: [Proton Mail]
+Phone: [Virtual phone]

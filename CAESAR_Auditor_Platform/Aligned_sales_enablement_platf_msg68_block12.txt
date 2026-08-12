@@ -1,0 +1,19 @@
+Traditional:
+- Equity is illiquid
+- Can't use as collateral
+- Dead capital
+
+Tokenized:
+- Stake $CDLS on Aave → Borrow USDC
+- Use USDC to buy EV hauler
+- Earn revenue, repay loan
+- Keep $CDLS (no dilution)
+
+Example:
+Dealer holds $100K in $CDLS tokens
+Stakes on Aave, borrows $60K USDC (60% LTV)
+Buys 1 EV hauler ($230K, $60K down payment)
+Hauler generates $60K/year revenue
+Repays loan in 1 year
+Still owns $CDLS (now worth $200K due to appreciation)
+Total ROI: 300% (vs. locked equity)

@@ -1,0 +1,5 @@
+# Search for current California diesel price
+findstr "state_average" carrier_cost_data.json
+
+# You should see:
+# "state_average": 4.862,

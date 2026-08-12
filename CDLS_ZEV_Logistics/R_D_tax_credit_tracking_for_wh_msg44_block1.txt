@@ -1,0 +1,7 @@
+Example:
+Package A needs lodash@4.17.21
+Package B needs lodash@4.17.21
+Package C needs lodash@4.17.21
+
+Old npm: Install lodash 3 times (wasteful!)
+Modern npm: Install lodash ONCE (efficient!) ✓

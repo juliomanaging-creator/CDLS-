@@ -1,0 +1,9 @@
+# Install Python dependencies
+pip install -r requirements.txt --break-system-packages
+
+# Install Ollama (if not already installed)
+# Windows/Mac: Download from https://ollama.ai
+# Linux: curl https://ollama.ai/install.sh | sh
+
+# Pull AI model
+ollama pull llama3.2:3b

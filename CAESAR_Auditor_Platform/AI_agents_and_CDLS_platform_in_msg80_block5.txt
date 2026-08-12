@@ -1,0 +1,13 @@
+rd_tracker end 42 \
+  --activity "Tested gradient boosting vs random forest ML models..." \
+  --uncertainty "Uncertain which model would balance accuracy with speed..." \
+  --experiment "A/B testing: trained both models, measured accuracy/latency..."
+
+# Output:
+🔴 R&D Session Ended
+   Session ID: 42
+   Duration: 6.25 hours (375 minutes)
+   Qualified R&D: Yes
+   Git Commits: 3 commits tracked
+   
+✅ Session logged for IRS R&D credit documentation

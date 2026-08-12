@@ -1,0 +1,2 @@
+Close Rate Improvement = 
+    (New Close Rate - Baseline Close Rate) / Baseline Close Rate * 100

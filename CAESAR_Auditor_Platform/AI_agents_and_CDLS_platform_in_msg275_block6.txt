@@ -1,0 +1,6 @@
+START: Meet WSPA President
+├─ INTERESTED (60%) → Carbon credits → ACCEPT (75%) ✅
+├─ INTERESTED (60%) → Carbon credits → COUNTER (25%) → Negotiate ✅
+└─ HOSTILE (40%) → BATNA leverage → RECONSIDER (50%) → Return to offer
+
+Success Rate: 75% neutrality or partnership!

@@ -1,0 +1,29 @@
+Question: Can carbon credits be tokenized under CARB rules?
+
+Current CARB Rules:
+- Credits tracked in LRT-CBTS system (CARB's database)
+- Transfers require CARB approval
+- Quarterly reporting mandatory
+
+Our Approach: Dual-Ledger System
+- CARB system = Legal record (source of truth)
+- Blockchain = Trading record (marketplace)
+- Smart contract syncs with CARB
+- Quarterly settlements (blockchain → CARB)
+
+Process:
+1. Generate credits (CARB verifies)
+2. Mint NFT (blockchain proof)
+3. Trade on blockchain (24/7)
+4. Settle to CARB (quarterly batch)
+
+Legal Structure:
+- CDLS is registered LCFS entity
+- Maintains CARB compliance
+- Blockchain is "internal ledger"
+- CARB sees final settled positions
+
+Precedent:
+- Toucan Protocol (tokenized carbon offsets)
+- KlimaDAO (on-chain carbon marketplace)
+- Both operating legally in compliance markets

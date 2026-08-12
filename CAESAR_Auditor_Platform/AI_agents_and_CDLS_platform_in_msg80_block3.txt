@@ -1,0 +1,8 @@
+# Start your R&D session
+rd_tracker start --project AI-001 --name "AI Route Optimization"
+
+# Output:
+🟢 R&D Session Started
+   Session ID: 42
+   Project: AI-001 - AI Route Optimization
+   Start Time: 09:15 AM

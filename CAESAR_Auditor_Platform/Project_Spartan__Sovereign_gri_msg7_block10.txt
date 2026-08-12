@@ -1,0 +1,5 @@
+npm install -g vercel
+cd /mnt/user-data/outputs
+vercel --prod
+
+# Live URL: https://spartan-portal-[unique].vercel.app

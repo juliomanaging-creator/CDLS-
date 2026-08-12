@@ -1,0 +1,9 @@
+{
+  "domain": "model_capabilities | safety | api | products | research | pricing",
+  "model_version": "claude-3 | claude-3.5 | claude-4 | general",
+  "content_type": "documentation | research_paper | blog | interview | release_note",
+  "capability_tags": ["tool_use", "vision", "coding", "reasoning", "..."],
+  "date_captured": "2026-03-01",
+  "source_url": "https://...",
+  "confidence_score": 0.95
+}

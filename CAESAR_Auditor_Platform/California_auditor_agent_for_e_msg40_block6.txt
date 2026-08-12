@@ -1,0 +1,16 @@
+Real human calls dealer:
+
+"Hi! I'm Sarah. I'll set this up while 
+you watch. Takes 10 minutes."
+
+[Screen share, does everything for them]
+
+Setup: 15-minute call, zero work
+Time: 15 minutes
+Tech knowledge: None (Sarah does it all)
+
+Pros: Human connection, zero effort, highest satisfaction
+Cons: Scheduling friction, doesn't scale
+
+Predicted: 95% completion IF they schedule
+         (but only 15% will schedule call)

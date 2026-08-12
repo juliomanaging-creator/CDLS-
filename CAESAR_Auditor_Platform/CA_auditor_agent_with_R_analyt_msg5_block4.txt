@@ -1,0 +1,66 @@
+// contracts/AuditRegistry.sol
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract AuditRegistry {
+    struct AuditTrail {
+        bytes32 merkleRoot;
+        string metadata;
+        uint256 timestamp;
+        address auditor;
+    }
+    
+    mapping(bytes32 => AuditTrail) public auditTrails;
+    
+    event AuditRecorded(
+        bytes32 indexed transactionId,
+        bytes32 merkleRoot,
+        uint256 timestamp,
+        address auditor
+    );
+    
+    function recordAuditTrail(
+        bytes32 transactionId,
+        bytes32 merkleRoot,
+        string memory metadata
+    ) external {
+        require(
+            auditTrails[transactionId].timestamp == 0,
+            "Audit already recorded"
+        );
+        
+        auditTrails[transactionId] = AuditTrail({
+            merkleRoot: merkleRoot,
+            metadata: metadata,
+            timestamp: block.timestamp,
+            auditor: msg.sender
+        });
+        
+        emit AuditRecorded(
+            transactionId,
+            merkleRoot,
+            block.timestamp,
+            msg.sender
+        );
+    }
+    
+    function getAuditTrail(bytes32 transactionId)
+        external
+        view
+        returns (
+            bytes32 merkleRoot,
+            string memory metadata,
+            uint256 timestamp
+        )
+    {
+        AuditTrail memory trail = auditTrails[transactionId];
+        return (trail.merkleRoot, trail.metadata, trail.timestamp);
+    }
+    
+    function verifyAuditIntegrity(
+        bytes32 transactionId,
+        bytes32 recomputedRoot
+    ) external view returns (bool) {
+        return auditTrails[transactionId].merkleRoot == recomputedRoot;
+    }
+}

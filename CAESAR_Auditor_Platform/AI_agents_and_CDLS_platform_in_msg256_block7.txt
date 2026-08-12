@@ -1,0 +1,17 @@
+Certification Tracking:
+✅ Tesla HV Battery (required, all technicians)
+✅ BPW e-Drive training (Fleet Engineer + Supervisor)
+✅ Composite materials (online course, all technicians)
+✅ ASE renewals (track expiration dates, auto-enroll)
+✅ OSHA 30-hour (required, track compliance)
+
+Automated Enrollment:
+- Alert 60 days before certification expires
+- Auto-enroll in renewal course
+- Schedule around shop operations
+- Track training budget ($10K/year)
+
+Course Coordination:
+✅ Tesla Training (Fremont, 2-week, $5K/person)
+✅ BPW Training (Troy MI, 1-week, $3K)
+✅ Composite course (online, $500/person)

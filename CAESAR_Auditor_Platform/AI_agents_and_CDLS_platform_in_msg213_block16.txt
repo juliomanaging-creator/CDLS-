@@ -1,0 +1,5 @@
+Build for: Scientific validation, patent portfolio
+Not for: Commercial deployment (economics don't work)
+Benefit: CDLS credited in thermodynamics literature
+Cost: $79K prototype (Stirling engine + helium system)
+Timeline: 12-18 months to publication

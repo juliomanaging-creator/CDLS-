@@ -1,0 +1,21 @@
+DIESEL FLEET:
+- 10 vehicles × 50,000 miles/year = 500,000 miles
+- 500,000 miles ÷ 6.5 MPG = 76,923 gallons
+- 76,923 gallons × $4.862 = $374,088/year fuel
+- Maintenance: 10 × $15,000 = $150,000/year
+- TOTAL: $524,088/year
+
+EV FLEET:
+- 500,000 miles × 2.1 kWh/mile = 1,050,000 kWh
+- 1,050,000 kWh × $0.18 = $189,000/year electricity
+- Maintenance: 10 × $8,000 = $80,000/year
+- TOTAL: $269,000/year
+
+SAVINGS:
+- Annual: $524,088 - $269,000 = $255,088 (49% reduction)
+- Upfront cost: 10 × $45,000 premium = $450,000
+- Less incentives: 10 × $40,000 = -$400,000
+- Net upfront: $50,000
+- Payback: $50,000 ÷ $255,088 = 0.2 years (2.4 months!)
+- 5-year savings: $1,275,440
+- Carbon reduction: 389 tons CO2/year

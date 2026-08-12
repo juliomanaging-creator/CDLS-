@@ -1,0 +1,14 @@
+Specification:
+├─ Decentralized carbon credit marketplace
+├─ Features:
+│   ├─ List carbon NFTs for sale (USDC pricing)
+│   ├─ Buy carbon NFTs (instant settlement)
+│   ├─ Cancel listings (return NFT to seller)
+│   ├─ Marketplace fee (2%, 50% burned in $CDLS)
+│   ├─ Escrow (NFTs held by contract until sold)
+│   ├─ Order book queries (active listings)
+│   └─ Volume/stats tracking
+
+Complexity: High
+Estimated Hours: 140
+Reference: OpenSea Seaport, Uniswap V2 architecture

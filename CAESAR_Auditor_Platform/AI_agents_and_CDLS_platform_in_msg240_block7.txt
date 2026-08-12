@@ -1,0 +1,12 @@
+Materials:
+- Coils (26 per mile): $208K
+- Power electronics: $300K
+- Underground cables: $2.1M
+- Concrete: $400K
+- Transformers: $50K
+- Controls: $100K
+Total: $3.16M/mile
+
+Labor & Installation: $525K/mile
+
+Grand total: ~$2.2M per mile

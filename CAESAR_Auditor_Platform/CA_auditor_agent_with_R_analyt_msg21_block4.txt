@@ -1,0 +1,3 @@
+Protocol: TLS 1.3 (minimum)
+Cipher Suites: Forward secrecy required
+VPN: IPSec with AES-256

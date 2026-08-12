@@ -1,0 +1,77 @@
+Users
+------
+id (PK)
+email
+password_hash
+first_name
+last_name
+role (admin, sales_rep, viewer)
+created_at
+
+Investors (extending Users for investor portal access)
+---------
+id (PK)
+user_id (FK)
+organization
+investment_focus
+aum_range
+preferred_check_size
+
+DealRooms
+---------
+id (PK)
+investor_id (FK)
+deal_name
+deal_stage
+created_at
+settings (JSONB)
+
+Documents
+---------
+id (PK)
+dealroom_id (FK)
+file_name
+s3_key
+uploaded_by (FK)
+uploaded_at
+
+Stakeholders
+------------
+id (PK)
+dealroom_id (FK)
+name
+title
+role_type
+engagement_level
+
+EngagementEvents
+----------------
+id (PK)
+dealroom_id (FK)
+user_id (FK)
+event_type
+entity_id
+timestamp
+
+CalculatorSessions
+------------------
+id (PK)
+template_id (FK)
+dealroom_id (FK)
+inputs (JSONB)
+outputs (JSONB)
+
+ActionPlans
+-----------
+id (PK)
+dealroom_id (FK)
+target_close_date
+
+ActionItems
+-----------
+id (PK)
+action_plan_id (FK)
+title
+due_date
+status
+owner_type

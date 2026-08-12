@@ -1,0 +1,4 @@
+cd C:\Projects\ev-cost-platform
+copy .env .env.backup
+
+# This saves your configuration

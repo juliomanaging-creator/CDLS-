@@ -1,0 +1,6 @@
+Trigger: CalPERS views calculator
+Action: Send detailed tech specs within 24 hours
+Includes:
+  - Platform roadmap
+  - Dealer adoption metrics
+  - Patent strategy

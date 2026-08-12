@@ -1,0 +1,15 @@
+# 1. Extract the package
+cd ~/Downloads
+tar -xzf rd_tracker_automation.tar.gz
+cd rd_tracker_automation
+
+# 2. Open Chrome and go to:
+chrome://extensions/
+
+# 3. Enable "Developer mode" (toggle top right)
+
+# 4. Click "Load unpacked"
+
+# 5. Select: rd_tracker_automation/browser_extension
+
+# 6. Extension installed! Pin it to toolbar for easy access

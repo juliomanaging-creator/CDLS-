@@ -1,0 +1,13 @@
+Week 1-2: Select law firm
+├─ If delayed: Entire timeline slips
+└─ Mitigation: Start outreach NOW
+
+Week 2-4: Token classification
+├─ If unfavorable: Need to pivot
+└─ Mitigation: Hybrid approach (fallback)
+
+Week 4-8: CARB opinion
+├─ If negative: Can't tokenize credits
+└─ Mitigation: Pure SaaS model (backup)
+
+Risk: MEDIUM (manageable with good counsel)

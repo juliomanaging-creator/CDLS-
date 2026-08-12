@@ -1,0 +1,5 @@
+Stacked bar chart with:
+- All value components color-coded
+- Year-by-year growth (carbon +15%/year, equity +20%/year)
+- Tooltip shows total value each year
+- Clear visual: Value >> Cost

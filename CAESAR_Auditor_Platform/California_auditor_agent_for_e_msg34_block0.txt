@@ -1,0 +1,26 @@
+COMPLIANCE GAP IDENTIFIED
+
+Requirement: AB 2013 mandates disclosure of detailed training 
+data sources for generative AI systems
+
+Current State: CA Auditor Agent (powered by Claude Sonnet 4.5) 
+cannot provide complete training data disclosure
+
+Gap: 
+- General categories known (internet data, books, licensed datasets)
+- Specific sources unknown (which websites, which books, which licenses)
+- Proportions unknown (what % from each category)
+- Selection criteria partially unknown (quality filters applied, 
+  but specific thresholds not disclosed)
+
+Root Cause: Anthropic has not publicly disclosed complete 
+training data manifest
+
+Risk: Potential violation of AB 2013 if used in California 
+after January 1, 2026
+
+Recommendation: 
+1. Contact Anthropic for complete training data disclosure
+2. Evaluate whether partial disclosure meets AB 2013 requirements
+3. Consult legal counsel on compliance obligations
+4. Consider whether to continue using system pending full disclosure

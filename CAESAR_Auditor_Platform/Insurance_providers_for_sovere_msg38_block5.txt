@@ -1,0 +1,5 @@
+[Twilio Phone Number] ($1/mo)
+         ↓
+[AWS EC2 FreeSWITCH Server] ($8/mo)
+         ↓
+[Your Phone via SIP Client] (Free)

@@ -1,0 +1,37 @@
+Grow plant in soil enriched with conductive metal ions:
+
+CONDUCTIVE METALS (Water-Soluble Salts):
+1. Copper (Cu²⁺): Copper sulfate (CuSO4) - HIGHLY conductive!
+   - Electrical conductivity: 5.96 × 10⁷ S/m (excellent!)
+   - Plant tolerance: Moderate (toxic at high concentrations)
+   - Uptake mechanism: Plants use copper for photosynthesis (natural transporter exists!)
+   
+2. Silver (Ag⁺): Silver nitrate (AgNO3) - EXTREMELY conductive!
+   - Electrical conductivity: 6.30 × 10⁷ S/m (best metal!)
+   - Plant tolerance: Low (very toxic, even at low concentrations)
+   - Uptake mechanism: Mimics potassium (K+), enters via K+ channels
+   
+3. Iron (Fe²⁺/Fe³⁺): Iron sulfate (FeSO4) - Moderate conductivity
+   - Electrical conductivity: 1.0 × 10⁷ S/m
+   - Plant tolerance: HIGH (plants need iron for chlorophyll!)
+   - Uptake mechanism: Essential nutrient, dedicated transporters
+
+4. Zinc (Zn²⁺): Zinc sulfate (ZnSO4) - Moderate conductivity
+   - Electrical conductivity: 1.69 × 10⁷ S/m
+   - Plant tolerance: HIGH (essential micronutrient)
+   - Uptake mechanism: Essential nutrient, active transport
+
+PROTOCOL:
+1. Germinate seed in normal soil (establish healthy plant first)
+2. Week 2-4: Gradually increase metal ion concentration in water
+   - Start: 10 ppm (parts per million)
+   - Week 2: 50 ppm
+   - Week 3: 100 ppm
+   - Week 4: 200 ppm (monitor for toxicity signs - yellowing, wilting)
+3. Harvest after 6-8 weeks (measure conductivity)
+
+Expected result:
+- Plant tissues contain 0.1-1% metal by dry weight
+- Root conductivity: 10³-10⁵ S/m (vs 10⁻⁶ S/m normal plant)
+- Leaves/stems: 10²-10⁴ S/m
+- Energy storage: Minimal (metals don't store energy, just conduct)

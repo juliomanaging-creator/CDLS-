@@ -1,0 +1,9 @@
+# requirements.txt - COMPLETE DEPENDENCIES
+
+psycopg2-binary==2.9.9
+fpdf==1.7.2
+python-dotenv==1.0.1
+matplotlib==3.8.2
+numpy==1.26.3
+flask==3.0.0
+gunicorn==21.2.0

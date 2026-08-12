@@ -1,0 +1,6 @@
+Path A: $281M expected × 1.0 lifestyle score = $281M adjusted
+Path B: $625M expected × 0.7 lifestyle score = $437M adjusted
+Path C: $750M expected × 0.4 lifestyle score = $300M adjusted
+
+Optimal: Path B ($10.8B target)
+Best risk-adjusted return

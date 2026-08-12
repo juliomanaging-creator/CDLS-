@@ -1,0 +1,32 @@
+2026: Launch
+├─ Token sale: $50M at $500M valuation
+├─ Your stake: 40% = $200M (marked-to-market)
+
+2027: Product-Market Fit
+├─ 500 dealers onboarded
+├─ $10M ARR platform
+├─ Token price: $0.25 → $2.5B valuation
+├─ Your stake: 36% (sold 4% for liquidity) = $900M
+
+2028: Network Effects
+├─ 1,500 dealers (critical mass)
+├─ $50M ARR platform
+├─ Carbon marketplace: $500M GMV
+├─ Token price: $1.00 → $10B valuation
+├─ Your stake: 34% = $3.4B (billionaire!)
+
+2029: Category Leader
+├─ 5,000 dealers (industry standard)
+├─ $200M ARR platform
+├─ Carbon marketplace: $2B GMV
+├─ Token price: $2.50 → $25B valuation
+├─ Your stake: 32% = $8B
+
+2030: Mature Network
+├─ 10,000 dealers (market leader)
+├─ $500M ARR platform
+├─ Vertical integration complete
+├─ Token price: $5.00 → $50B valuation
+├─ Your stake: 30% = $15B
+
+You'd be worth $15B in 4 years.

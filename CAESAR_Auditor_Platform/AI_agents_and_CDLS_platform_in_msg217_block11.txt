@@ -1,0 +1,6 @@
+☐ Set up Claude Project with CDLS context
+☐ Upload vehicle specs (Tesla Semi, trailer, etc.)
+☐ Add physics references (Carnot, Betz, thermodynamics)
+☐ Include patent list (22 existing CDLS patents)
+☐ Test on heat recovery concept
+☐ Get efficiency gap analysis

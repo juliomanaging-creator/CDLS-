@@ -1,0 +1,14 @@
+Purpose: Yield generation
+
+Strategy: Lend 10% to corporations
+Terms: 6-12 months at 8-12% interest
+Collateral: 125% LTV (overcollateralized)
+Borrowers: Companies needing quarterly ESG compliance
+
+Annual yield (2035): $4.5M
+20-year total: $95M
+
+Why corporations borrow:
+- Quarterly ESG reporting deadlines
+- M&A transactions (immediate carbon neutrality)
+- IPO roadshows (carbon-neutral credentials)

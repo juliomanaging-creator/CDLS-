@@ -1,0 +1,4 @@
+Microsoft Windows [Version 10.0.xxxxx]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\User>_

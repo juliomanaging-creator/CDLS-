@@ -1,0 +1,23 @@
+Platform Development: $15M (30%)
+├─ Engineering team (15 people)
+├─ Product development (mobile, web)
+├─ Infrastructure (AWS, security)
+
+Geographic Expansion: $12M (24%)
+├─ Oregon & Washington launch
+├─ Dealer recruitment (500+ dealers)
+├─ Charging infrastructure
+
+Fleet Growth: $8M (16%)
+├─ 100 additional EV haulers
+├─ Working capital (vehicles expensive)
+
+Sales & Marketing: $7M (14%)
+├─ Dealer acquisition (CAC ~$2,000)
+├─ Brand building (conferences, PR)
+├─ Community growth (Discord, events)
+
+Operations & Reserves: $8M (16%)
+├─ Legal & compliance (ongoing)
+├─ 18-month runway buffer
+├─ Contingency fund

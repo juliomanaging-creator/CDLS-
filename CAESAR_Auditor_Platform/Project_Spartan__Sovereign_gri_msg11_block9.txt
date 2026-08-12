@@ -1,0 +1,13 @@
+DEALER SITE REVENUE (17 Energy Pods):
+─────────────────────────────────────
+Total Site Revenue: $122,792.70
+
+Revenue Distribution:
+- Dealer Hosting Fee (10%): $16,767.27
+- CDLS Platform Fee (20%): $24,558.54
+- Driver Pool (70%): $68,763.91
+- CDLS Net (30%): $29,470.25
+
+Per Driver (assume 17 drivers):
+- Annual Income: $4,044.94
+- Monthly Income: $337.08

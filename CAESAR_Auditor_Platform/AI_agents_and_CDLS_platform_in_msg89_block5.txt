@@ -1,0 +1,13 @@
+Qualified Wages: $2,199,000 (Julio + 15 engineers)
+Supplies: $50,000 (software, tools)
+Total QREs: $2,249,000
+
+Regular Credit (14%): $157,430
+Payroll Offset (Section C): $157,430
+TOTAL FEDERAL CREDIT: $314,860
+
+Automated Data Source:
+✅ rd_tracker.py (personal time)
+✅ team_rd_tracker.py (employee time)
+✅ claude_tracker.py (AI development)
+✅ Git commits (supporting evidence)

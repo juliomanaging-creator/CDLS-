@@ -1,0 +1,12 @@
+✅ Sacramento, Modesto, Fresno, Bakersfield
+✅ Los Angeles, San Diego, San Francisco
+✅ Oakland, San Jose, Stockton
+
+Per City Data:
+✅ Current diesel retail & fleet prices
+✅ Residential & commercial electricity rates
+✅ Time-of-use off-peak & peak rates
+✅ Public Level 2 & DC Fast charging costs
+✅ # of charging stations (Level 2 & DCFC)
+✅ Dealer concentration data
+✅ GPS coordinates for mapping

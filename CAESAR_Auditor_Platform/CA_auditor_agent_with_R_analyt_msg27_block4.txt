@@ -1,0 +1,9 @@
+Preparation:                  8 hours (20%)
+├─ Curriculum design:        4 hours
+├─ Slides/materials:         3 hours
+└─ Exercises creation:       1 hour
+
+Live Training:               32 hours (80%)
+├─ Lecture/presentation:    16 hours
+├─ Hands-on labs:           12 hours
+└─ Q&A/support:              4 hours

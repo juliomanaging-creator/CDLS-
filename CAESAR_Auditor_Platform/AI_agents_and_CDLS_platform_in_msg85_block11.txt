@@ -1,0 +1,12 @@
+# Export team report for CPA
+team-tracker export-team --month 1 --year 2026
+
+# Output:
+✅ Team R&D report exported: ~/Documents/CDLS_RD_Exports/Team_RD_Report_2026_01.csv
+
+# CSV includes:
+# - Every employee's R&D sessions
+# - Hours per project  
+# - Activity descriptions
+# - Qualified vs non-qualified breakdown
+# - Total credits by employee

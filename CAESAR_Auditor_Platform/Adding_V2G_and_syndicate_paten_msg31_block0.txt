@@ -1,0 +1,13 @@
+🌞 SOLAR ENERGY (excess daytime)
+              ↓
+        ⚡ TRUCKS CHARGE (cheap $0.08/kWh)
+              ↓
+        🚛 HAUL VEHICLES (8 AM - 3 PM)
+              ↓
+        🔋 DISCHARGE TO GRID (4 PM - 9 PM, peak demand)
+              ↓
+        💰 REVENUE ($240M/year by 2030)
+              ↓
+        🔄 REINVEST IN MORE TRUCKS
+              ↓
+        [CYCLE REPEATS - EXPONENTIAL GROWTH]

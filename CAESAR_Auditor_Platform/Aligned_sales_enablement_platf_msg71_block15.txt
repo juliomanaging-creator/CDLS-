@@ -1,0 +1,15 @@
+Process:
+1. Vehicle drives 100 miles
+2. Telematics logs on-chain
+3. Smart contract calculates CO2 avoided
+4. Pre-mints "Unverified Credit NFT"
+5. Status: Tradeable with disclaimer
+
+Benefits:
+✓ Immediate liquidity (don't wait 90 days)
+✓ Real-time credit generation
+✓ Forward markets (trade futures)
+
+Risk:
+⚠ CARB may reject (rare, <1%)
+⚠ Price discount (20-30% less than verified)

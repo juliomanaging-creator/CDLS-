@@ -1,0 +1,5 @@
+□ Deploy to Netlify (free, takes 5 minutes)
+□ Connect contact form to email backend
+□ Set up Google Analytics tracking
+□ Create social media preview images
+□ Present to CalPERS in pitch meeting

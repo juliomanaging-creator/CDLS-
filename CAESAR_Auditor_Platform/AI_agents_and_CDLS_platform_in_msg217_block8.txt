@@ -1,0 +1,5 @@
+Platform: Claude.ai (this conversation!)
+Cost: Free tier / Pro $20/month
+Setup: Upload CDLS specs, physics refs, patents
+Timeline: Today!
+Pros: Immediate, excellent for documents, 200K context

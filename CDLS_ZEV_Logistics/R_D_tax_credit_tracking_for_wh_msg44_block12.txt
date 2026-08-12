@@ -1,0 +1,7 @@
+System             Packages    Why?
+────────────────────────────────────────────
+Windows 10         177         Your system!
+Windows 11         183         Newer Windows APIs
+macOS              192         Different native modules
+Linux Ubuntu       168         Minimal dependencies
+Docker Container   156         Ultra-minimal setup

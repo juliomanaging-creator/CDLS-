@@ -1,0 +1,4 @@
+Current ATR 14  = 0.00733
+New stop option = 1.16104 + (0.00733 × 2.5)
+                = 1.16104 + 0.0183
+                = 1.1793  ← actually wider, keep original 1.1716

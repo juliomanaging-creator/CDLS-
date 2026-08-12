@@ -1,0 +1,13 @@
+Configuration:
+    [Trailer Top]
+        ↓
+   ┌────────┐  ← Top Casimir plate
+   │  F ↓↑ F│  ← Casimir force (attractive)
+   └────────┘  ← Bottom Casimir plate
+        ↓
+    [Trailer Bottom]
+
+Newton's 3rd Law:
+- Top plate pulls bottom UP: +F
+- Bottom plate pulls top DOWN: -F
+- Net force: F + (-F) = ZERO

@@ -1,0 +1,11 @@
+Crypto Market:
+├─ Bull market: Launch successful
+├─ Bear market: Postpone TGE
+└─ Current: Bitcoin $95K (bull) ✅
+
+Regulatory:
+├─ SEC crackdown: Pivot to utility
+├─ Favorable: Proceed as planned
+└─ Current: Gray area (manageable)
+
+Risk: LOW-MEDIUM (external, monitor closely)

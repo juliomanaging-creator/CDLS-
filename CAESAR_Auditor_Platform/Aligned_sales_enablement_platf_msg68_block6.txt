@@ -1,0 +1,7 @@
+Problems:
+├─ Opaque pricing (bilateral deals, no transparency)
+├─ Slow settlement (60-90 days via CARB system)
+├─ High fees (3-5% to brokers)
+├─ Limited buyers (only CA oil companies)
+├─ No fractional trading (minimum 100 credits)
+└─ Quarterly reporting lag (can't trade real-time)

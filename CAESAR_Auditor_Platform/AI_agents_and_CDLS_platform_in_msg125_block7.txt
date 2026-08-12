@@ -1,0 +1,15 @@
+User: "Prepare Series B for CalPERS"
+
+Agents Collaborate Automatically:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. financial_modeling → Calculate carbon allocation
+2. document_drafting → Generate term sheet (needs #1)
+3. document_drafting → Generate SPA (needs #2)
+4. due_diligence → Create data room (needs #2, #3)
+5. sec_carb_compliance → File Form D (needs #3)
+6. investor_relations → Send materials (needs all)
+
+Execution: 18 minutes
+Manual: 3 weeks
+Savings: 99.7% time reduction
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

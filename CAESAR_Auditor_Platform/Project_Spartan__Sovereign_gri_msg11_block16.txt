@@ -1,0 +1,7 @@
+CAISO Programs:
+✅ ELRP enrollment (emergency demand response)
+✅ Day-ahead market registration
+✅ Real-time energy market participation
+✅ LCFS credit generation (carbon credits)
+
+Expected Approval: 30-45 days

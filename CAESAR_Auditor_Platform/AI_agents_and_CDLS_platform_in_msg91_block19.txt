@@ -1,0 +1,15 @@
+1. FTB Account Setup:
+   - Automatic upon California registration
+   - Account number on Form 100 filing
+   - Used for paying $800 annual franchise tax
+
+2. Online Access:
+   - Register at: https://www.ftb.ca.gov/
+   - Create MyFTB account
+   - Link corporate EIN
+   - Used for e-filing tax returns
+
+3. First Filing:
+   - Form 100 (CA Corporate Tax) due April 15, 2027
+   - Form 100-ES (estimated taxes) due quarterly
+   - $800 minimum franchise tax (due by 15th day of 4th month)

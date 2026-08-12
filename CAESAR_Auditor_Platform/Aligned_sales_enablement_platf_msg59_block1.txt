@@ -1,0 +1,15 @@
+Complete in LRT-CBTS:
+
+Fuel Type: Electricity
+Fuel Use: Transportation (Medium/Heavy Duty Vehicles)
+Vehicle Class: Class 8 Trucks (Auto Haulers)
+Charging Type: Private Access (depot charging, not public)
+
+Carbon Intensity: 
+- If using grid power: 95.97 gCO2e/MJ (PG&E average)
+- If using solar: 0-20 gCO2e/MJ (must document with REC)
+- If using mix: Weighted average
+
+Energy Economy Ratio (EER):
+- Electric vehicle EER: 3.4 (CARB default for Class 8 EV)
+- This is the efficiency advantage vs. diesel

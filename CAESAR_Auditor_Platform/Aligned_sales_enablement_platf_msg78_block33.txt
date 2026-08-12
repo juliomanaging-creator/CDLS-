@@ -1,0 +1,9 @@
+Model: Subscription pricing ($499-$5,000/month)
+Year 1: $240K ARR (20 dealers)
+Year 3: $8M ARR (500 dealers)
+Year 5: $30M ARR (1,000 dealers)
+
+Margins: 75%+ gross margin (software economics)
+Why High: Low incremental costs, AWS infrastructure scales
+
+Growth: 50x over 5 years (network effects)

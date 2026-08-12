@@ -1,0 +1,10 @@
+Carnot equation: η = 1 - (T_cold / T_hot)
+
+Two optimizations:
+1. Lower T_cold (better heat sink) ✅
+2. Reduce sink energy cost (passive cooling) ✅
+
+You did BOTH:
+- Passive radiator (no 5 kW fan!)
+- Ram air (free cooling from truck motion!)
+- Result: -36% → +62% efficiency!

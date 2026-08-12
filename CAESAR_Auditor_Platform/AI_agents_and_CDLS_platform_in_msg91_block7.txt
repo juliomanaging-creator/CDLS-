@@ -1,0 +1,14 @@
+□ File Form LLC-4/7 (Certificate of Dissolution)
+   - Online: https://bizfileonline.sos.ca.gov/
+   - Fee: $0 (if no assets/liabilities)
+   - Reason: "Incorrect entity structure, dissolving before operations"
+
+□ File Final Form 568 (LLC tax return)
+   - Due: Within 3.5 months of dissolution
+   - Show $0 income/expenses (no activity)
+   - Fee: $800 minimum franchise tax (unfortunately owed even if dissolved)
+
+□ Close EIN with IRS
+   - Send letter to IRS stating LLC dissolved
+   - Request EIN closure
+   - Keep letter for records

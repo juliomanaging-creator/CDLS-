@@ -1,0 +1,14 @@
+Pricing: 3% of transaction value
+Available: Professional and Enterprise tiers
+
+How It Works:
+- Dealer generates 5,000 LCFS credits
+- Lists on CDLS marketplace at $105/credit
+- Sells for $525,000
+- CDLS fee: $15,750 (3%)
+- Dealer nets: $509,250
+
+Revenue Projection:
+- 2028: $18M GMV × 3% = $540K
+- 2030: $98M GMV × 3% = $2.94M
+- 2032: $400M GMV × 3% = $12M

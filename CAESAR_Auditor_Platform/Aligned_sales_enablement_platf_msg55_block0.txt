@@ -1,0 +1,6 @@
+Without Platform    With Platform    Delta
+Year 5 Revenue      $45M               $52M             +16%
+Year 5 EBITDA       $8.1M              $11.2M           +38%
+IRR                 18.3%              24.7%            +6.4 pts
+Exit Multiple       8x                 12x              +50%
+Exit Value          $64.8M             $134.4M          +107%

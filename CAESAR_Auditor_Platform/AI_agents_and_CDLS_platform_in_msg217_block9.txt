@@ -1,0 +1,5 @@
+Platform: ChatGPT Plus
+Cost: $20/month
+Setup: Create Agent 42 with master prompt
+Timeline: This week
+Pros: Shareable with team, persistent memory

@@ -1,0 +1,18 @@
+PLANT:
+- Fast-growing plant with substantial root system
+- Recommended: Sunflower (Helianthus annuus) - 2-month growth cycle
+- Alternative: Radish (Raphanus sativus) - 1-month cycle, large roots
+
+CHEMICALS:
+- Copper sulfate (CuSO4): $15/kg (Amazon, garden stores)
+- OR Carbon nanotubes (multi-walled, MWCNT): $50/gram (Sigma-Aldrich)
+- Surfactant: Tween-20 or dish soap (helps nanoparticle dispersion)
+
+EQUIPMENT:
+- Hydroponic setup OR pots with soil
+- Distilled water (chlorine-free, doesn't damage roots)
+- Multimeter (measures electrical conductivity)
+- pH meter (monitors acidity)
+- Grow light (if indoors, 12-16 hours/day)
+
+COST: ~$100 total (reusable for multiple experiments)

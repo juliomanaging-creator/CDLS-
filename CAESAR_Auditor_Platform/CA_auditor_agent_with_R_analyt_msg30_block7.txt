@@ -1,0 +1,2 @@
+"Build a fraud detection function that finds duplicate payments. Check for 
+exact duplicates within 7 days. Use multiple methods and provide confidence scores."

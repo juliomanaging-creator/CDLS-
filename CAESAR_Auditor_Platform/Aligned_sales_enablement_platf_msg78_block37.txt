@@ -1,0 +1,9 @@
+Pre-Money: N/A (token sale, not equity)
+Post-TGE Market Cap: $50M (10% circulating)
+Fully Diluted Valuation (FDV): $500M
+
+Comparable Valuations:
+├─ Convoy (freight): $3.8B peak (failed, no owned ops)
+├─ Flexport (logistics): $8B peak
+├─ Project44 (SaaS): $2.7B
+└─ CDLS: $500M (reasonable, room to grow)

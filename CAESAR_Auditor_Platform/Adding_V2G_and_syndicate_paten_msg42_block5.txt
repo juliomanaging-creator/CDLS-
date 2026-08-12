@@ -1,0 +1,6 @@
+S_dignity = (R_grid_per_module - M_cost) / M_cost
+
+Where:
+R_grid_per_module = $1,200/year (V2G arbitrage from module's battery)
+M_cost = $700/year (maintenance)
+S_dignity = ($1,200 - $700) / $700 = 0.71 (71% surplus)

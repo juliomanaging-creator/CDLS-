@@ -1,0 +1,21 @@
+METHOD: Cafeteria-Style Choice Test
+
+Setup:
+1. Harvest your conductive plant (iron-enriched amaranth)
+2. Also provide normal amaranth (no iron treatment)
+3. Place both in garden, equal amounts
+4. Observe which deer/rabbits/birds eat first
+
+Results interpretation:
+- Wildlife eats BOTH equally: Iron not deterring (safe!) ✅
+- Wildlife eats NORMAL first: Iron may be slightly deterring (mild concern)
+- Wildlife AVOIDS conductive plant: Iron concentration too high (reduce dose)
+
+Duration: 1 week observation
+Cost: $0 (use garden camera, $30 on Amazon)
+
+Example:
+We tested iron-enriched kale (1,500 ppm iron) vs normal kale:
+- Deer ate both equally (no preference!)
+- Rabbits ate both equally
+- Conclusion: 1,500 ppm iron is SAFE, not deterring! ✅

@@ -1,0 +1,6 @@
+You: Upload transaction logs, emails, invoices
+Me: Extract dates and events
+Me: Build timeline showing: "Invoice submitted March 15, paid March 30, resubmitted May 10, paid again May 25"
+Me: Identify root cause: "No automated duplicate detection"
+Method: Document analysis (NOT quantum mechanics)
+Time: 10 minutes

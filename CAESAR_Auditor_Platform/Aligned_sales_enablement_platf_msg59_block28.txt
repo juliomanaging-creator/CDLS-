@@ -1,0 +1,10 @@
+Your ownership: 40%
+Partner ownership: 60% (distributed across 20 partners)
+CalPERS preferred: $5M at 1.5x liquidation pref
+
+Exit at $134M:
+- CalPERS gets: $7.5M (liquidation preference)
+- Remaining: $126.5M split among common
+- Your share: 40% × $126.5M = $50.6M
+
+Net to you: $50.6M

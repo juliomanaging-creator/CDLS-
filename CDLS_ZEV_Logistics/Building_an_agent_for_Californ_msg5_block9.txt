@@ -1,0 +1,19 @@
+tesla-fleet-connector/
+├── docker-compose.yml          # Orchestration
+├── .env.example               # Configuration template
+├── README.md                  # Quick start guide
+├── tesla_connector/           # Main API service
+│   ├── Dockerfile
+│   ├── requirements.txt       # FastAPI, httpx, sqlalchemy
+│   ├── main.py               # 600+ lines REST API
+│   ├── tesla_client.py       # OAuth 2.0 + retry logic
+│   ├── database.py           # SQLite operations
+│   ├── models.py             # Pydantic schemas
+│   ├── scheduler.py          # Background telemetry
+│   └── config.py             # Settings management
+├── tesla_demo/                # Dashboard service
+│   ├── Dockerfile
+│   ├── requirements.txt      # Dash, Plotly, Pandas
+│   └── dashboard.py          # Real-time visualization
+└── data/                     # Shared SQLite database
+    └── tesla_fleet.db        # Auto-created

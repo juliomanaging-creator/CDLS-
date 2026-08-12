@@ -1,0 +1,9 @@
+# Navigate to your project
+cd C:\Projects\ev-cost-platform
+
+# Create a backup of your current data
+mkdir backup
+xcopy "data" "backup\data" /E /I
+
+# Timestamp shows backup was created
+echo Backup created at %date% %time%

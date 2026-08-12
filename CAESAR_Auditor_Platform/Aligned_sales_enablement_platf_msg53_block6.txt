@@ -1,0 +1,4 @@
+Reporting_Period,Dealer_Name,Vehicle_Count,Total_Miles,Diesel_Equivalent_Gallons,Emissions_Avoided_Tons,LCFS_Credits,Credit_Value
+2025-Q1,San Diego Auto Transport,8,176000,27077,121.5,108.3,$10289
+2025-Q1,NorCal Logistics,12,336000,51692,232.1,206.6,$19627
+...

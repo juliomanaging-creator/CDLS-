@@ -1,0 +1,4 @@
+Week 5:    Order Tesla Semis, trailers
+Week 6:    7-day platform deployment (JURE guides)
+Week 7:    Alpha testing (5 dealers)
+Week 8:    Beta launch (15 more dealers)

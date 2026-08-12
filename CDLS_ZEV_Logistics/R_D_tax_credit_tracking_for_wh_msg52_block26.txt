@@ -1,0 +1,11 @@
+# 1. Open CMD
+# 2. Navigate to Downloads
+cd C:\Users\%USERNAME%\Downloads
+
+# 3. Extract
+tar -xf CA-Dealer-Logistics-COMPLETE-2025-CURRENT.zip
+
+# 4. Copy data folder
+xcopy "ev-cost-platform\data" "C:\Projects\ev-cost-platform\data" /E /Y /I
+
+# 5. Done!

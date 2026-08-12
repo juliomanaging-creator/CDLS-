@@ -1,0 +1,6 @@
+# Web browser (easiest)
+Visit: https://ipfs.io/ipfs/[CID]
+
+# Or command line
+ipfs get [CID]
+sha256sum [downloaded_file]

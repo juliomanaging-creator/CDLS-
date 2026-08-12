@@ -1,0 +1,5 @@
+□ Add authentication for dealer portal
+□ Connect to real-time KPI database
+□ Build admin panel for content updates
+□ Integrate with dealer management systems
+□ Launch production version for pilot dealers

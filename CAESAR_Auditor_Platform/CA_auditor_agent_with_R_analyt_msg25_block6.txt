@@ -1,0 +1,12 @@
+# For data with strong seasonality and holidays
+prophet_result <- prophet_forecast(
+  historical_data,
+  forecast_periods = 90
+)
+
+# Automatically handles:
+✓ Daily seasonality
+✓ Weekly seasonality  
+✓ Yearly seasonality
+✓ California state holidays
+✓ Trend changes

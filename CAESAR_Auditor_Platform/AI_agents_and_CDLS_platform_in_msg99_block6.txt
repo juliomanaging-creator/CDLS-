@@ -1,0 +1,16 @@
+✅ E001: Dissolve California LLC
+   Due: Jan 24, 2026 (7 days!)
+   Cost: $800
+   Owner: Julio
+   BLOCKER: All fundraising blocked until complete
+
+✅ E002: Form Delaware C-Corporation
+   Due: Jan 27, 2026 (10 days!)
+   Cost: $2,089
+   Contact: Harvard Business Services (800-345-2677)
+   BLOCKER: ROBS setup blocked until complete
+
+✅ E003: Form Delaware Limited Partnership
+   Due: Feb 3, 2026 (17 days!)
+   Cost: $3,500
+   BLOCKER: CalPERS fundraising blocked until complete

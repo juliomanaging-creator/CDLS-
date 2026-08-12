@@ -1,0 +1,2 @@
+Monthly Lead Difference = 
+    New Monthly Leads - Baseline Monthly Leads

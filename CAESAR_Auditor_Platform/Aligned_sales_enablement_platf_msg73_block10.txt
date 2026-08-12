@@ -1,0 +1,10 @@
+Money Transmitter:
+"A person that provides money transmission services,
+or any other person engaged in the transfer of funds."
+
+Do we transmit money?
+├─ Token sales: YES (receive USD, deliver tokens)
+├─ Marketplace: MAYBE (facilitate credit trades)
+└─ Staking: NO (no custody of funds)
+
+Conclusion: Likely YES, we need registration

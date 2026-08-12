@@ -1,0 +1,7 @@
+Your concept: Capture 302°C compression heat
+Use temperature differential to extract work
+This is Carnot cycle thermodynamics - VALID!
+
+Maximum efficiency:
+η_Carnot = 1 - (T_cold/T_hot) = 1 - (288K/575K) = 49.9%
+Real-world: 32.4% (accounting for real losses)

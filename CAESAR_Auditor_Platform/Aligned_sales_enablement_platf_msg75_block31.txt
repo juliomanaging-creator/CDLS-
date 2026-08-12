@@ -1,0 +1,11 @@
+Team Size: 45 people
+├─ Engineering: 15
+├─ Product: 5
+├─ Sales & Marketing: 10
+├─ Operations: 8
+├─ Legal & Compliance: 4
+└─ Executive: 3
+
+Burn Rate: $500K/month
+Runway: 48+ months (token treasury)
+Next Raise: Series A planned (Q1 2027, $25M)

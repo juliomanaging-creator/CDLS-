@@ -1,0 +1,9 @@
+REM Create frontend structure
+mkdir frontend
+mkdir frontend\src
+mkdir frontend\src\services
+mkdir frontend\src\components
+mkdir frontend\public
+
+REM Navigate to frontend
+cd frontend

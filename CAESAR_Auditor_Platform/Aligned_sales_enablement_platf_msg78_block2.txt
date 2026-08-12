@@ -1,0 +1,14 @@
+Specification:
+├─ Standard: ERC-1155
+├─ Supply: Dynamic (minted based on verified credits)
+├─ Features:
+│   ├─ Semi-fungible (different vintages, fungible within)
+│   ├─ Metadata (VIN, miles, CO2, verification status)
+│   ├─ Pre-verification minting (unverified credits)
+│   ├─ Verification upgrade (unverified → verified)
+│   ├─ Redemption burn (transfer to CARB system)
+│   └─ Role-based minting/verification
+
+Complexity: High
+Estimated Hours: 120
+Reference: OpenZeppelin ERC1155, metadata standards

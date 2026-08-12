@@ -1,0 +1,28 @@
+==========================================================
+SACRAMENTO AUTO LEADERS SUPPORTING ALLIANCE
+CONFIDENTIAL COMPLIANCE REPORT
+==========================================================
+Generated: February 03, 2026 2:45 PM
+Source File: dealer_bank_export.csv
+==========================================================
+
+BANK RECONCILIATION ANALYSIS
+----------------------------------------
+[Your AI analysis from Ollama]
+
+DMV COMPLIANCE CHECK
+----------------------------------------
+Total Sales: 127
+Compliant: 124 (97.6%)
+Issues: 3
+  • Missing Smog - VIN 1234567890
+  • Missing Title - VIN 9876543210
+  
+IRS COMPLIANCE CHECK  
+----------------------------------------
+Form 8300 Required: 5
+Form 8300 Filed: 3
+MISSING: 2 forms (potential $50K penalty)
+
+OVERALL SCORE: 94.5/100
+Status: ✅ COMPLIANT

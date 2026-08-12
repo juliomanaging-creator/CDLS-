@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CASAER User Guide — California State Auditor's Office</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════════
+   CASAER USER GUIDE — Design System
+   Tone: Refined institutional with warmth
+   ══════════════════════════════════════════════ */
+:root {
+  --ink: #0C1B2E;
+  --ink-soft: #2D3D52;
+  --ink-muted: #5A6B80;
+  --cream: #FAF8F4;
+  --cream-warm: #F3EFE8;
+  --gold: #B5872B;
+  --gold-soft: #D4A94A;
+  --gold-glow: rgba(181,135,43,.08);
+  --gold-border: rgba(181,135,43,.2);
+  --teal: #0E7C6B;
+  --teal-soft: #E8F5F1;
+  --teal-glow: rgba(14,124,107,.06);
+  --red-soft: #C0392B;
+  --red-bg: #FDF0EE;
+  --blue: #2B6CB0;
+  --blue-bg: #EBF4FF;
+  --border: #E2DDD5;
+  --border-light: #EEEBE5;
+  --shadow-sm: 0 1px 3px rgba(12,27,46,.06);
+  --shadow-md: 0 4px 20px rgba(12,27,46,.07);
+  --shadow-lg: 0 12px 40px rgba(12,27,46,.1);
+  --radius: 10px;
+  --radius-lg: 16px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  font-family: 'Source Sans 3', Georgia, serif;
+  background: var(--cream);
+  color: var(--ink-soft);
+  font-size: 16.5px;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── TOP BAR ── */
+.topbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: var(--ink);
+  border-bottom: 3px solid var(--gold);
+  backdrop-filter: blur(20px);
+}
+.topbar-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 32px;
+}
+.topbar-brand {
+  display: flex; align-items: center; gap: 14px;
+}
+.topbar-seal {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Fraunces', serif; font-weight: 700; font-size: 15px;
+  color: var(--ink); letter-spacing: -0.5px;
+}
+.topbar h1 {
+  font-family: 'Fraunces', serif; font-size: 17px; font-weight: 500;
+  color: #fff; letter-spacing: 0.3px;
+}
+.topbar h1 span { color: var(--gold); font-weight: 700; }
+.topbar-badge {
+  font-size: 11px; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--gold);
+  border: 1px solid var(--gold-border);
+  padding: 4px 12px; border-radius: 20px;
+}
+.topbar-nav {
+  display: flex; gap: 0; background: rgba(255,255,255,.04);
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+.topbar-nav a {
+  color: rgba(255,255,255,.55); text-decoration: none;
+  font-size: 13px; font-weight: 500; padding: 10px 20px;
+  transition: all .25s; border-bottom: 2px solid transparent;
+  letter-spacing: 0.2px;
+}
+.topbar-nav a:hover { color: #fff; background: rgba(255,255,255,.04); }
+.topbar-nav a.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+/* ── LAYOUT ── */
+.page-body { padding-top: 110px; }
+.container { max-width: 860px; margin: 0 auto; padding: 0 32px; }
+.wide-container { max-width: 1060px; margin: 0 auto; padding: 0 32px; }
+
+/* ── HERO ── */
+.hero {
+  padding: 80px 0 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: -120px; right: -80px;
+  width: 500px; height: 500px; border-radius: 50%;
+  background: radial-gradient(circle, var(--gold-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-eyebrow {
+  font-size: 12px; font-weight: 700; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--teal);
+  margin-bottom: 16px;
+}
+.hero h2 {
+  font-family: 'Fraunces', serif; font-size: 44px; font-weight: 700;
+  color: var(--ink); line-height: 1.15; margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+.hero p {
+  font-size: 19px; color: var(--ink-muted); max-width: 600px;
+  margin: 0 auto 32px; line-height: 1.65; font-weight: 300;
+}
+.hero-version {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--cream-warm); border: 1px solid var(--border);
+  padding: 8px 20px; border-radius: 30px; font-size: 13px;
+  color: var(--ink-muted); font-weight: 500;
+}
+.hero-version .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--teal); }
+
+/* ── SECTION ── */
+.section {
+  padding: 48px 0;
+  animation: fadeUp .6s ease both;
+}
+.section + .section { border-top: 1px solid var(--border-light); }
+
+.section-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 8px;
+}
+.section h3 {
+  font-family: 'Fraunces', serif; font-size: 30px; font-weight: 700;
+  color: var(--ink); margin-bottom: 12px; line-height: 1.2;
+}
+.section > p, .section .intro {
+  font-size: 17px; color: var(--ink-muted); margin-bottom: 28px;
+  max-width: 680px; font-weight: 300; line-height: 1.7;
+}
+
+/* ── STEP CARDS ── */
+.step-sequence { display: flex; flex-direction: column; gap: 0; }
+.step {
+  display: grid; grid-template-columns: 64px 1fr; gap: 0;
+  position: relative;
+}
+.step-indicator {
+  display: flex; flex-direction: column; align-items: center;
+  padding-top: 28px;
+}
+.step-num {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Fraunces', serif; font-weight: 700; font-size: 17px;
+  color: var(--gold); z-index: 2;
+  box-shadow: 0 2px 8px rgba(12,27,46,.15);
+  transition: transform .3s, background .3s;
+}
+.step:hover .step-num { transform: scale(1.1); background: var(--teal); color: #fff; }
+.step-line {
+  flex: 1; width: 2px; background: var(--border);
+  margin-top: 8px;
+}
+.step:last-child .step-line { display: none; }
+.step-body {
+  background: var(--cream);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  margin: 8px 0 8px 0;
+  transition: all .3s;
+  cursor: default;
+}
+.step:hover .step-body {
+  border-color: var(--gold-border);
+  box-shadow: var(--shadow-md);
+  background: #fff;
+}
+.step-body h4 {
+  font-family: 'Fraunces', serif; font-size: 18px; font-weight: 600;
+  color: var(--ink); margin-bottom: 6px;
+}
+.step-body p { font-size: 15px; color: var(--ink-muted); line-height: 1.65; }
+.step-body .tip {
+  margin-top: 12px; padding: 10px 14px;
+  background: var(--teal-glow); border-left: 3px solid var(--teal);
+  border-radius: 0 6px 6px 0; font-size: 13.5px; color: var(--teal);
+  font-weight: 500;
+}
+
+/* ── INFO CARDS ── */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin: 20px 0; }
+.info-card {
+  background: #fff; border: 1px solid var(--border-light);
+  border-radius: var(--radius); padding: 24px;
+  transition: all .3s; position: relative; overflow: hidden;
+}
+.info-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--teal));
+  opacity: 0; transition: opacity .3s;
+}
+.info-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.info-card:hover::before { opacity: 1; }
+.info-card .icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; margin-bottom: 14px;
+}
+.info-card h5 {
+  font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600;
+  color: var(--ink); margin-bottom: 6px;
+}
+.info-card p { font-size: 14px; color: var(--ink-muted); line-height: 1.6; }
+
+/* ── CALLOUT BOXES ── */
+.callout {
+  border-radius: var(--radius); padding: 20px 24px;
+  margin: 20px 0; display: flex; gap: 14px; align-items: flex-start;
+  font-size: 15px; line-height: 1.65;
+}
+.callout-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+.callout-teal { background: var(--teal-soft); border: 1px solid rgba(14,124,107,.15); color: var(--teal); }
+.callout-gold { background: var(--gold-glow); border: 1px solid var(--gold-border); color: var(--gold); }
+.callout-red { background: var(--red-bg); border: 1px solid rgba(192,57,43,.15); color: var(--red-soft); }
+.callout-blue { background: var(--blue-bg); border: 1px solid rgba(43,108,176,.15); color: var(--blue); }
+.callout strong { font-weight: 700; }
+
+/* ── FEATURE TABLE ── */
+.feature-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+.feature-table th {
+  background: var(--ink); color: var(--gold);
+  font-size: 12px; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; padding: 14px 18px; text-align: left;
+}
+.feature-table td {
+  padding: 14px 18px; border-bottom: 1px solid var(--border-light);
+  font-size: 14.5px; vertical-align: top;
+}
+.feature-table tr:last-child td { border-bottom: none; }
+.feature-table tr:nth-child(even) { background: rgba(250,248,244,.6); }
+.feature-table tr:hover { background: var(--teal-glow); }
+.badge-green { background: #DEF7EC; color: #03543F; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+.badge-amber { background: #FEF3C7; color: #92400E; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+
+/* ── EXPANDABLE FAQ ── */
+.faq-item {
+  border: 1px solid var(--border-light); border-radius: var(--radius);
+  margin-bottom: 8px; overflow: hidden; background: #fff;
+  transition: all .3s;
+}
+.faq-item:hover { border-color: var(--gold-border); }
+.faq-q {
+  padding: 18px 24px; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: 'Fraunces', serif; font-weight: 600; font-size: 16px;
+  color: var(--ink); transition: background .2s;
+  user-select: none;
+}
+.faq-q:hover { background: var(--gold-glow); }
+.faq-arrow { transition: transform .3s; font-size: 14px; color: var(--gold); }
+.faq-item.open .faq-arrow { transform: rotate(180deg); }
+.faq-a {
+  max-height: 0; overflow: hidden; transition: max-height .4s ease, padding .3s;
+  padding: 0 24px; font-size: 15px; color: var(--ink-muted); line-height: 1.7;
+}
+.faq-item.open .faq-a { max-height: 600px; padding: 0 24px 20px; }
+
+/* ── WORKFLOW VISUAL ── */
+.workflow {
+  display: flex; gap: 0; align-items: stretch; margin: 24px 0;
+  overflow-x: auto; padding-bottom: 8px;
+}
+.workflow-stage {
+  flex: 1; min-width: 140px; text-align: center;
+  padding: 20px 12px; position: relative;
+  border: 1px solid var(--border-light); background: #fff;
+  transition: all .3s;
+}
+.workflow-stage:first-child { border-radius: var(--radius) 0 0 var(--radius); }
+.workflow-stage:last-child { border-radius: 0 var(--radius) var(--radius) 0; }
+.workflow-stage:hover { background: var(--teal-glow); z-index: 1; box-shadow: var(--shadow-sm); }
+.workflow-stage .wf-num {
+  font-family: 'Fraunces', serif; font-size: 24px; font-weight: 700;
+  color: var(--gold); margin-bottom: 4px;
+}
+.workflow-stage .wf-title {
+  font-size: 13px; font-weight: 700; color: var(--ink);
+  margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.workflow-stage .wf-desc { font-size: 12px; color: var(--ink-muted); line-height: 1.5; }
+.workflow-stage::after {
+  content: ''; position: absolute; right: -10px; top: 50%; transform: translateY(-50%);
+  width: 0; height: 0; border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; border-left: 10px solid var(--gold);
+  z-index: 2;
+}
+.workflow-stage:last-child::after { display: none; }
+
+/* ── KEYBOARD SHORTCUT STYLE ── */
+kbd {
+  background: var(--cream-warm); border: 1px solid var(--border);
+  border-radius: 4px; padding: 2px 8px; font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; color: var(--ink); font-weight: 500;
+  box-shadow: 0 1px 0 var(--border);
+}
+code {
+  font-family: 'JetBrains Mono', monospace; font-size: 13.5px;
+  background: var(--cream-warm); padding: 2px 8px; border-radius: 4px;
+  color: var(--teal); border: 1px solid var(--border-light);
+}
+
+/* ── FOOTER ── */
+.guide-footer {
+  margin-top: 60px; padding: 40px 0;
+  border-top: 3px solid var(--gold);
+  text-align: center;
+}
+.guide-footer p { font-size: 13px; color: var(--ink-muted); margin-bottom: 4px; }
+.guide-footer .seal-text {
+  font-family: 'Fraunces', serif; font-size: 15px;
+  color: var(--ink); font-weight: 600; margin-bottom: 8px;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal { opacity: 0; transform: translateY(24px); transition: all .6s cubic-bezier(.22,.61,.36,1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── PRINT ── */
+@media print {
+  .topbar, .topbar-nav { position: static; }
+  .page-body { padding-top: 0; }
+  .step-body, .info-card, .faq-item { break-inside: avoid; }
+  .hero { padding: 30px 0; }
+  .callout, .step-body { box-shadow: none; border: 1px solid #ccc; }
+}
+@media (max-width: 768px) {
+  .hero h2 { font-size: 30px; }
+  .container { padding: 0 20px; }
+  .workflow { flex-direction: column; }
+  .workflow-stage { border-radius: var(--radius) !important; margin-bottom: 4px; }
+  .workflow-stage::after { display: none; }
+  .topbar-nav { overflow-x: auto; }
+  .topbar-nav a { white-space: nowrap; font-size: 12px; padding: 10px 14px; }
+  .step { grid-template-columns: 48px 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════ TOP BAR ══════ -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-brand">
+      <div class="topbar-seal">CA</div>
+      <h1><span>CASAER</span> User Guide</h1>
+    </div>
+    <div class="topbar-badge">Version 2.0</div>
+  </div>
+  <div class="topbar-nav" style="max-width:1100px;margin:0 auto;padding-left:32px;padding-right:32px;">
+    <a href="#overview" class="active" onclick="setActive(this)">Overview</a>
+    <a href="#getting-started" onclick="setActive(this)">Getting Started</a>
+    <a href="#audit-workflow" onclick="setActive(this)">Audit Workflow</a>
+    <a href="#analytics" onclick="setActive(this)">Analytics</a>
+    <a href="#enforcement" onclick="setActive(this)">Enforcement</a>
+    <a href="#reports" onclick="setActive(this)">Reports</a>
+    <a href="#reference" onclick="setActive(this)">Reference</a>
+    <a href="#faq" onclick="setActive(this)">FAQ</a>
+  </div>
+</div>
+
+<!-- ══════ BODY ══════ -->
+<div class="page-body">
+
+<!-- ── HERO ── -->
+<div class="hero container" id="overview">
+  <div class="hero-eyebrow">California State Auditor's Office</div>
+  <h2>Your Guide to CASAER</h2>
+  <p>Everything you need to know to run faster, smarter audits — without changing how you work.</p>
+  <div class="hero-version">
+    <div class="dot"></div>
+    CASAER v2.0 &nbsp;·&nbsp; February 2026 &nbsp;·&nbsp; Offline + Server Editions
+  </div>
+</div>
+
+<!-- ══════ WHAT IS CASAER ══════ -->
+<div class="section container reveal" id="what-is">
+  <div class="section-label">Chapter 01</div>
+  <h3>What is CASAER?</h3>
+  <p>CASAER stands for <strong>CA State Auditing Enforcement Reports</strong>. It's a tool that helps you find the information you're looking for faster — it doesn't do your job, it makes your job easier.</p>
+
+  <div class="callout callout-teal">
+    <div class="callout-icon">💡</div>
+    <div><strong>Think of CASAER as your research assistant.</strong> When a hearing requests information from a department, CASAER shows you exactly where to look, what to ask for, and which statutes apply — so you spend less time searching and more time analyzing.</div>
+  </div>
+
+  <div class="card-grid">
+    <div class="info-card">
+      <div class="icon" style="background:var(--teal-soft);color:var(--teal);">🔍</div>
+      <h5>Enforcement Pathways</h5>
+      <p>Step-by-step investigation guides tied to specific statutes. Select a pathway and CASAER tells you what documents to request and where to look.</p>
+    </div>
+    <div class="info-card">
+      <div class="icon" style="background:var(--gold-glow);color:var(--gold);">📊</div>
+      <h5>Statistical Analysis</h5>
+      <p>Upload a spreadsheet and CASAER runs Benford's Law testing, anomaly detection, and variance analysis — the math happens automatically.</p>
+    </div>
+    <div class="info-card">
+      <div class="icon" style="background:var(--blue-bg);color:var(--blue);">📋</div>
+      <h5>Audit Checklists</h5>
+      <p>Pre-built checklists for every audit type — financial, compliance, performance, IT, and special investigations. Track your progress in real time.</p>
+    </div>
+    <div class="info-card">
+      <div class="icon" style="background:var(--red-bg);color:var(--red-soft);">📄</div>
+      <h5>Report Generation</h5>
+      <p>Generate standardized enforcement reports with findings, evidence, and statute citations. Download as PDF or CSV right from your browser.</p>
+    </div>
+  </div>
+
+  <div class="callout callout-red">
+    <div class="callout-icon">⚠️</div>
+    <div><strong>Important:</strong> CASAER provides guidance only. It does not make findings, assign fault, or take enforcement actions. Every output requires your professional review and sign-off before it becomes part of an official audit.</div>
+  </div>
+</div>
+
+<!-- ══════ GETTING STARTED ══════ -->
+<div class="section container reveal" id="getting-started">
+  <div class="section-label">Chapter 02</div>
+  <h3>Getting Started</h3>
+  <p>You can be up and running in under five minutes. Here's how.</p>
+
+  <div class="step-sequence">
+    <div class="step">
+      <div class="step-indicator">
+        <div class="step-num">1</div>
+        <div class="step-line"></div>
+      </div>
+      <div class="step-body">
+        <h4>Open CASAER</h4>
+        <p><strong>Server Edition:</strong> Navigate to the CASAER URL provided by your IT team (typically <code>https://casaer.auditor.ca.gov</code>) and log in with your state credentials.</p>
+        <p style="margin-top:8px"><strong>Offline Edition:</strong> Double-click the <code>CASAER_Offline_Portal.html</code> file on your desktop or USB drive. It opens in any browser — Chrome, Firefox, or Edge all work.</p>
+        <div class="tip">No installation needed for either version. If using the offline edition, you can bookmark it for quick access.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-indicator">
+        <div class="step-num">2</div>
+        <div class="step-line"></div>
+      </div>
+      <div class="step-body">
+        <h4>Choose Your Department</h4>
+        <p>Click the <strong>Departments</strong> tab to see all 132 state departments. You can search by name, department code, or filter by risk level (High, Medium, Low). Click any department card to start an audit session for that agency.</p>
+        <div class="tip">Risk levels are based on budget size, audit frequency, and historical finding rates. They're a starting point, not a judgment.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-indicator">
+        <div class="step-num">3</div>
+        <div class="step-line"></div>
+      </div>
+      <div class="step-body">
+        <h4>Create an Audit Session</h4>
+        <p>On the <strong>New Audit</strong> tab, select your department, audit type, and paste in the hearing request language or describe your scope. CASAER immediately generates a tailored checklist and suggests relevant enforcement pathways.</p>
+        <div class="tip">Be specific with the scope description — the more detail you provide, the more targeted CASAER's guidance will be.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-indicator">
+        <div class="step-num">4</div>
+        <div class="step-line"></div>
+      </div>
+      <div class="step-body">
+        <h4>Follow the Path</h4>
+        <p>CASAER will guide you through the rest: which documents to request, which statutes apply, where to run statistical tests, and when to generate your enforcement report. Check off items as you complete them.</p>
+        <div class="tip">You can always switch between tabs freely. Your session and checklist progress are preserved.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ AUDIT WORKFLOW ══════ -->
+<div class="section container reveal" id="audit-workflow">
+  <div class="section-label">Chapter 03</div>
+  <h3>The Audit Workflow</h3>
+  <p>Here's how CASAER fits into your existing process — it enhances each stage without changing your methodology.</p>
+
+  <div class="workflow">
+    <div class="workflow-stage">
+      <div class="wf-num">1</div>
+      <div class="wf-title">Receive</div>
+      <div class="wf-desc">Hearing request comes in from Legislature or committee</div>
+    </div>
+    <div class="workflow-stage">
+      <div class="wf-num">2</div>
+      <div class="wf-title">Scope</div>
+      <div class="wf-desc">Create CASAER session, paste request, get enforcement paths</div>
+    </div>
+    <div class="workflow-stage">
+      <div class="wf-num">3</div>
+      <div class="wf-title">Collect</div>
+      <div class="wf-desc">CASAER generates document request templates for the department</div>
+    </div>
+    <div class="workflow-stage">
+      <div class="wf-num">4</div>
+      <div class="wf-title">Analyze</div>
+      <div class="wf-desc">Upload data to Analytics tab — Benford, anomalies, variance</div>
+    </div>
+    <div class="workflow-stage">
+      <div class="wf-num">5</div>
+      <div class="wf-title">Investigate</div>
+      <div class="wf-desc">Follow up on flagged items using CASAER's contextual guidance</div>
+    </div>
+    <div class="workflow-stage">
+      <div class="wf-num">6</div>
+      <div class="wf-title">Report</div>
+      <div class="wf-desc">Generate enforcement report with findings and statute citations</div>
+    </div>
+  </div>
+
+  <div class="callout callout-blue">
+    <div class="callout-icon">📌</div>
+    <div><strong>Your expertise stays central.</strong> CASAER handles the lookup, math, and formatting. You handle the judgment, interpretation, and conclusions. Nothing goes into a report unless you put it there.</div>
+  </div>
+</div>
+
+<!-- ══════ ANALYTICS ══════ -->
+<div class="section container reveal" id="analytics">
+  <div class="section-label">Chapter 04</div>
+  <h3>Using Analytics</h3>
+  <p>CASAER includes three built-in statistical tools that require no technical background to use. Here's what each one does and when to use it.</p>
+
+  <div class="card-grid" style="grid-template-columns:1fr;">
+    <div class="info-card" style="display:grid;grid-template-columns:80px 1fr;gap:20px;align-items:start;">
+      <div class="icon" style="background:var(--teal-soft);color:var(--teal);width:64px;height:64px;font-size:28px;border-radius:14px;">B</div>
+      <div>
+        <h5>Benford's Law Analysis</h5>
+        <p><strong>What it does:</strong> Tests whether the first digits of financial amounts follow the expected natural distribution. Genuinely random or organic data follows a predictable pattern where "1" appears first about 30% of the time, "2" about 17.6%, and so on. If data deviates significantly from this pattern, it may have been fabricated or manipulated.</p>
+        <p style="margin-top:8px"><strong>When to use it:</strong> Any time you have a column of dollar amounts — vendor payments, expense reports, contract values, grant disbursements. Works best with 50+ transactions.</p>
+        <p style="margin-top:8px"><strong>How to read results:</strong> A <strong>green</strong> result means the data follows expected patterns. A <strong>red</strong> result means significant deviation was detected — look at which digits are off and investigate those transaction groups.</p>
+      </div>
+    </div>
+
+    <div class="info-card" style="display:grid;grid-template-columns:80px 1fr;gap:20px;align-items:start;">
+      <div class="icon" style="background:var(--red-bg);color:var(--red-soft);width:64px;height:64px;font-size:28px;border-radius:14px;">!</div>
+      <div>
+        <h5>Anomaly Detection</h5>
+        <p><strong>What it does:</strong> Identifies individual transactions that are statistically unusual compared to the rest of the data. Uses two methods: Z-score (how many standard deviations from the average) and IQR (interquartile range outlier detection).</p>
+        <p style="margin-top:8px"><strong>When to use it:</strong> After Benford analysis flags a dataset, or whenever you want to find the specific transactions worth investigating. Also useful for overtime analysis, travel expenses, and vendor payments.</p>
+        <p style="margin-top:8px"><strong>How to read results:</strong> Each flagged transaction shows its Z-score. Higher Z-scores mean more unusual. Start with the highest scores first. "Standard" sensitivity catches more items; "Strict" shows only extreme outliers.</p>
+      </div>
+    </div>
+
+    <div class="info-card" style="display:grid;grid-template-columns:80px 1fr;gap:20px;align-items:start;">
+      <div class="icon" style="background:var(--gold-glow);color:var(--gold);width:64px;height:64px;font-size:28px;border-radius:14px;">%</div>
+      <div>
+        <h5>Variance Analysis</h5>
+        <p><strong>What it does:</strong> Compares budgeted amounts against actual spending, line by line. Calculates dollar and percentage variances. Flags any line item where actual spending differs from budget by more than 10%.</p>
+        <p style="margin-top:8px"><strong>When to use it:</strong> For budget audits, performance audits, and any time a hearing request asks about a department's spending versus their appropriation.</p>
+        <p style="margin-top:8px"><strong>How to read results:</strong> Red-highlighted rows are over 10% variance. Positive variance means overspending; negative means underspending. Both extremes can indicate issues worth investigating.</p>
+      </div>
+    </div>
+  </div>
+
+  <h4 style="font-family:'Fraunces',serif;color:var(--ink);font-size:18px;margin:28px 0 12px;">Uploading Data</h4>
+  <div class="step-sequence">
+    <div class="step">
+      <div class="step-indicator"><div class="step-num">1</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <h4>Prepare Your File</h4>
+        <p>Export the relevant data from your working papers into a CSV file. The file should have a column of dollar amounts. CASAER will automatically find and extract the numeric values.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-indicator"><div class="step-num">2</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <h4>Upload or Paste</h4>
+        <p>In the Analytics tab, either click the file upload button to select your CSV, or paste amounts directly into the text box (one per line). Both methods work identically.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-indicator"><div class="step-num">3</div><div class="step-line"></div></div>
+      <div class="step-body">
+        <h4>Run and Review</h4>
+        <p>Click the analysis button. Results appear instantly with charts, tables, and a downloadable CSV of findings. Everything is processed on your machine — no data is uploaded anywhere.</p>
+        <div class="tip">Your data never leaves your browser. Not to the internet, not to a server, not anywhere. This is built into the architecture.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ ENFORCEMENT PATHS ══════ -->
+<div class="section container reveal" id="enforcement">
+  <div class="section-label">Chapter 05</div>
+  <h3>Enforcement Pathways</h3>
+  <p>CASAER includes pre-built investigation pathways for the most common audit hearing requests. Each one walks you through what to ask for, where to look, and which laws apply.</p>
+
+  <table class="feature-table">
+    <thead>
+      <tr><th>Pathway</th><th>Statute</th><th>Use When...</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Misuse of Public Funds</strong></td><td>Gov Code §8546</td><td>A hearing alleges money was spent outside its authorized purpose</td></tr>
+      <tr><td><strong>Contract Compliance</strong></td><td>PCC §10115-10119</td><td>You need to verify a department followed contracting rules</td></tr>
+      <tr><td><strong>Conflict of Interest</strong></td><td>Gov Code §1090-1099</td><td>An official may have had a financial interest in a decision</td></tr>
+      <tr><td><strong>Procurement Irregularities</strong></td><td>SAM §3500-3840</td><td>Purchasing processes may have been bypassed or manipulated</td></tr>
+      <tr><td><strong>Grant Mismanagement</strong></td><td>Gov Code §16300-16305</td><td>Grant funds may not have been used as intended</td></tr>
+      <tr><td><strong>Personnel Cost Anomalies</strong></td><td>Gov Code §19815-19850</td><td>Staffing, overtime, or compensation patterns look unusual</td></tr>
+      <tr><td><strong>IT Project Overruns</strong></td><td>SAM §4819-4902</td><td>A technology project exceeded budget or missed milestones</td></tr>
+      <tr><td><strong>Vendor Payment Fraud</strong></td><td>Gov Code §12100-12111</td><td>Payments may have gone to fictitious or related vendors</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-gold">
+    <div class="callout-icon">🗂️</div>
+    <div><strong>Each pathway includes:</strong> A step-by-step guide, the specific documents to request at each stage, the statutes and SAM sections that apply, and a progress tracker so you can see where you are. Think of it as a GPS for your investigation.</div>
+  </div>
+</div>
+
+<!-- ══════ REPORTS ══════ -->
+<div class="section container reveal" id="reports">
+  <div class="section-label">Chapter 06</div>
+  <h3>Generating Reports</h3>
+  <p>CASAER produces four types of downloadable reports. All reports are generated on your machine and formatted for immediate use.</p>
+
+  <div class="card-grid" style="grid-template-columns: 1fr 1fr;">
+    <div class="info-card">
+      <h5>📄 Enforcement Pathway Report</h5>
+      <p>Complete step-by-step investigation record with all statute citations, document requests made, and enforcement findings. This is your primary deliverable.</p>
+    </div>
+    <div class="info-card">
+      <h5>📊 Statistical Anomaly Report</h5>
+      <p>Benford analysis results, anomaly flags, and statistical methodology documentation. Ready for inclusion as supporting evidence in your audit file.</p>
+    </div>
+    <div class="info-card">
+      <h5>📋 Department Scorecard</h5>
+      <p>Risk scoring across financial, compliance, and performance dimensions. Useful for prioritizing follow-up audits and committee presentations.</p>
+    </div>
+    <div class="info-card">
+      <h5>📝 Legislative Brief</h5>
+      <p>Concise executive summary formatted for committee presentation. Key findings, impact estimates, and recommended actions on one page.</p>
+    </div>
+  </div>
+
+  <h4 style="font-family:'Fraunces',serif;color:var(--ink);font-size:18px;margin:28px 0 12px;">How to Generate a Report</h4>
+  <p>Navigate to the <strong>Reports</strong> tab, select your report type, and click generate. The file downloads instantly to your computer. You can also generate reports directly from within an enforcement pathway by clicking the button at the bottom of the pathway steps.</p>
+
+  <div class="callout callout-teal">
+    <div class="callout-icon">💾</div>
+    <div><strong>Download formats:</strong> Reports are available as plain text files (TXT) in the offline version and as PDF in the server version. Statistical results can also be downloaded as CSV for further analysis in Excel.</div>
+  </div>
+</div>
+
+<!-- ══════ EDITIONS ══════ -->
+<div class="section container reveal" id="reference">
+  <div class="section-label">Chapter 07</div>
+  <h3>Offline vs. Server Edition</h3>
+  <p>CASAER comes in two editions. Both are designed so that no data ever leaves the State Auditor's network.</p>
+
+  <table class="feature-table">
+    <thead>
+      <tr><th>Feature</th><th>Offline (HTML)</th><th>Server (Docker)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Enforcement Pathways</td><td><span class="badge-green">Full Access</span></td><td><span class="badge-green">Full Access</span></td></tr>
+      <tr><td>Benford's Law Analysis</td><td><span class="badge-green">Full Access</span></td><td><span class="badge-green">Full Access</span></td></tr>
+      <tr><td>Anomaly Detection</td><td><span class="badge-green">Full Access</span></td><td><span class="badge-green">Full Access</span></td></tr>
+      <tr><td>Variance Analysis</td><td><span class="badge-green">Full Access</span></td><td><span class="badge-green">Full Access</span></td></tr>
+      <tr><td>Audit Checklists</td><td><span class="badge-green">Full Access</span></td><td><span class="badge-green">Full Access</span></td></tr>
+      <tr><td>Report Generation</td><td><span class="badge-green">TXT/CSV</span></td><td><span class="badge-green">PDF/CSV/XLSX</span></td></tr>
+      <tr><td>Statute Reference Search</td><td><span class="badge-green">Full Access</span></td><td><span class="badge-green">Full Access</span></td></tr>
+      <tr><td>AI Natural Language Queries</td><td><span class="badge-amber">Not Available</span></td><td><span class="badge-green">Full Access</span></td></tr>
+      <tr><td>Advanced R Statistics</td><td><span class="badge-amber">JS Approximation</span></td><td><span class="badge-green">Full R Engine</span></td></tr>
+      <tr><td>Multi-User / Shared Sessions</td><td><span class="badge-amber">Single User</span></td><td><span class="badge-green">50+ Concurrent</span></td></tr>
+      <tr><td>Audit Trail Logging</td><td><span class="badge-amber">Browser Only</span></td><td><span class="badge-green">Immutable DB Log</span></td></tr>
+      <tr><td>Internet Required</td><td><span class="badge-green">No</span></td><td><span class="badge-green">No</span></td></tr>
+      <tr><td>Installation Required</td><td><span class="badge-green">None</span></td><td><span class="badge-amber">Docker (IT Team)</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-blue">
+    <div class="callout-icon">💻</div>
+    <div><strong>Which should I use?</strong> If you're at your desk with access to the state network, use the server edition for the full experience. If you're in the field, working from home, or on a laptop without VPN, the offline HTML edition gives you everything you need for enforcement pathways and statistical analysis.</div>
+  </div>
+</div>
+
+<!-- ══════ FAQ ══════ -->
+<div class="section container reveal" id="faq">
+  <div class="section-label">Chapter 08</div>
+  <h3>Frequently Asked Questions</h3>
+  <p>Quick answers to the questions we hear most.</p>
+
+  <div style="margin-top:20px;">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Does CASAER replace any auditor positions? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">No. CASAER is designed to enhance auditor capabilities, not replace them. The system provides guidance, runs calculations, and generates templates — but every finding, conclusion, and report requires a human auditor's professional judgment and sign-off. No positions are affected by this system.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Where does my data go when I upload a file? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">Nowhere. In the offline edition, all processing happens inside your web browser on your own computer. The data is never transmitted over a network. In the server edition, data stays within the State Auditor's internal network and is processed on the CASAER server — which has no outbound internet connection. Either way, your data never leaves the state's control.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Can I use CASAER results as evidence in an audit? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">CASAER outputs are supporting analysis tools, similar to using Excel or statistical software. The statistical results (Benford analysis, anomaly scores) can be included in working papers as analytical evidence, but they should be documented as computer-assisted audit techniques with your methodology notes, just as you would with any other tool.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What does the AI do? Should I trust it? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">The AI component (only available in the server edition) processes natural language questions and returns structured guidance based on California statutes and audit standards. It runs on a local model called Ollama — no cloud services, no OpenAI, no data going to any tech company. That said, treat AI outputs the same way you'd treat a research memo from a junior analyst: useful starting point, always verify before relying on it.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How accurate is the Benford's Law analysis? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">The mathematical calculations are exact — the same results you would get in R, SAS, or any statistical package. However, interpreting the results requires professional judgment. A "significant deviation" doesn't automatically mean fraud; it means the data pattern is unusual and warrants further investigation. Natural explanations (small datasets, limited transaction types) should be considered.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Can our IT team customize the portal design? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">Yes. The system is designed with full customization in mind. Your IT team can change the portal name, branding, colors, layout, and department groupings through the settings panel (no coding required) or build an entirely custom frontend using the documented API. The default CASAER design is production-ready if no customization is desired.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What if I find something that needs criminal referral? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">CASAER's vendor fraud pathway includes guidance on when findings rise to the level of potential criminal activity and the steps for referral to the Attorney General's office per existing State Auditor protocols. CASAER does not make this determination — it flags the criteria and you make the call.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I get help if something isn't working? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">For the server edition, contact your IT help desk — they have full documentation and a quick command reference. For the offline HTML edition, try closing and reopening the file, or try a different browser. If the issue persists, your IT team can access the troubleshooting section of the IT Documentation Package.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ QUICK REFERENCE ══════ -->
+<div class="section container reveal">
+  <div class="section-label">Quick Reference</div>
+  <h3>Keyboard & Navigation</h3>
+
+  <table class="feature-table" style="max-width:600px;">
+    <thead><tr><th>Action</th><th>How</th></tr></thead>
+    <tbody>
+      <tr><td>Switch tabs</td><td>Click tab name in top navigation bar</td></tr>
+      <tr><td>Search departments</td><td>Type in the search box on Departments tab</td></tr>
+      <tr><td>Upload data</td><td>Click "Choose File" or paste directly into text box</td></tr>
+      <tr><td>Download report</td><td>Click the download button — saves to your Downloads folder</td></tr>
+      <tr><td>Print a page</td><td><kbd>Ctrl</kbd> + <kbd>P</kbd> — the guide is print-optimized</td></tr>
+      <tr><td>Search statutes</td><td>Type keywords in the Reference tab search box</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ══════ CONTACT ══════ -->
+<div class="section container reveal">
+  <div class="section-label">Support</div>
+  <h3>Contact Information</h3>
+
+  <div class="card-grid" style="grid-template-columns:1fr 1fr 1fr;">
+    <div class="info-card" style="text-align:center;">
+      <div style="font-size:28px;margin-bottom:10px;">🏛️</div>
+      <h5>Main Office</h5>
+      <p>621 Capitol Mall, Suite 1200<br>Sacramento, CA 95814<br><strong>916-445-0255</strong></p>
+    </div>
+    <div class="info-card" style="text-align:center;">
+      <div style="font-size:28px;margin-bottom:10px;">🔔</div>
+      <h5>Fraud Hotline</h5>
+      <p>24/7 Anonymous Reporting<br><strong style="font-size:18px;">1-800-952-5665</strong><br>auditor.ca.gov/report-fraud</p>
+    </div>
+    <div class="info-card" style="text-align:center;">
+      <div style="font-size:28px;margin-bottom:10px;">💻</div>
+      <h5>IT Support</h5>
+      <p>CASAER Technical Issues<br>Contact your IT Help Desk<br>Reference: CASAER v2.0</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ FOOTER ══════ -->
+<div class="guide-footer container">
+  <div class="seal-text">California State Auditor's Office</div>
+  <p>CASAER User Guide v2.0 — February 2026</p>
+  <p>This document is for official use by authorized personnel of the California State Auditor's Office.</p>
+  <p style="margin-top:12px;font-size:12px;color:var(--ink-muted);">All data processed by CASAER remains within state infrastructure. No information is transmitted externally.</p>
+</div>
+
+</div><!-- /page-body -->
+
+<script>
+// ── FAQ toggle ──
+function toggleFaq(el) {
+  el.parentElement.classList.toggle('open');
+}
+
+// ── Nav active state ──
+function setActive(el) {
+  document.querySelectorAll('.topbar-nav a').forEach(a => a.classList.remove('active'));
+  el.classList.add('active');
+}
+
+// ── Scroll-based nav highlighting ──
+const sections = document.querySelectorAll('[id]');
+const navLinks = document.querySelectorAll('.topbar-nav a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 140) current = s.id;
+  });
+  navLinks.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+});
+
+// ── Reveal on scroll ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+[1/8] Check Node.js ✓
+[2/8] Find PostgreSQL (searches 10+ locations) ✓
+[3/8] Create project folders ✓
+[4/8] Install npm packages ✓
+[5/8] Create .env (opens Notepad for you) ✓
+[6/8] Create database (asks for password) ✓
+[7/8] Test connection ✓
+[8/8] Start server + open browser ✓

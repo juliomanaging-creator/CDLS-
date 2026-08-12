@@ -1,0 +1,4 @@
+Banking Policy: Sell 75% immediately, bank 25%
+Rationale: Locks in most revenue, tests banking strategy with small portion
+Expected Outcome: $249,200 × 0.75 + $274,120 × 0.25 = $255,430
+Risk Level: Low

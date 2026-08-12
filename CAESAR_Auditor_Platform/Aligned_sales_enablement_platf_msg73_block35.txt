@@ -1,0 +1,26 @@
+Week 7: Public Testing
+
+Deploy to:
+├─ Ethereum Sepolia testnet
+├─ Polygon Mumbai testnet
+└─ Base Goerli testnet
+
+Invite:
+├─ 20 founding dealers
+├─ 50 community members
+├─ 10 security researchers
+
+Test:
+✓ Token minting and burning
+✓ Staking and unstaking
+✓ Marketplace listing and buying
+✓ Governance voting
+✓ Vesting schedules
+
+Feedback loop:
+- Daily standup with testers
+- Bug reports (GitHub issues)
+- Feature requests (Canny)
+- Iterate and fix
+
+Deliverable: Battle-tested contracts ready for mainnet

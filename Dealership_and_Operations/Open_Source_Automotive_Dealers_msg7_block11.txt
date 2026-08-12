@@ -1,0 +1,2 @@
+New Cost Per Sale = 
+    Total Monthly Technology Investment / Monthly Sales

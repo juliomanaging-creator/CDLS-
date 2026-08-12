@@ -1,0 +1,22 @@
+To: citris-foundry@berkeley.edu
+Subject: TAP Application - Grid-Scale Kinetic Energy Storage
+
+CITRIS Foundry,
+
+Graal Industries is a Sacramento-based clean energy startup developing AI-powered 
+coordination software for a 300,000-node Virtual Power Plant supporting California's 
+zero-carbon grid transition.
+
+We seek CITRIS TAP voucher for code validation:
+- Prof. Sasha von Meier (CIEE) grid integration testing
+- OpenADR 2.0b compliance verification  
+- Distributed AI agent architecture review
+
+Project aligns with CITRIS "technology for social good" mission: enabling 100% 
+renewable California grid through distributed energy coordination.
+
+May we schedule a call this week to discuss TAP application?
+
+Best regards,
+Julio [Last Name]
+CEO, Graal Industries, LLC

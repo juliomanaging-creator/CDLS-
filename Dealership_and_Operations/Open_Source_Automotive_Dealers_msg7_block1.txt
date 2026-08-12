@@ -1,0 +1,11 @@
+Total Monthly Investment (TMI) = 
+    Base Subscription + 
+    Additional Users + 
+    Optional Modules + 
+    Support Package
+
+Total Implementation Cost (TIC) =
+    Setup Fees +
+    Training Costs +
+    Integration Fees +
+    Data Migration

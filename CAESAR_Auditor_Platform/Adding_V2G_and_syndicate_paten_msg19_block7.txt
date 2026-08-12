@@ -1,0 +1,21 @@
+# 1. Install Tor
+brew install tor  # Mac
+sudo apt install tor  # Linux
+
+# 2. Configure Tor
+echo "ControlPort 9051" >> /usr/local/etc/tor/torrc
+tor --hash-password YOUR_PASSWORD  # Copy the hash
+
+# 3. Create .env
+cat > .env << EOF
+IP_STRATEGY=tor
+TOR_PASSWORD=YOUR_PASSWORD
+DB_HOST=localhost
+DB_NAME=cdls_kinetic_mesh
+EOF
+
+# 4. Start Tor
+tor &
+
+# 5. Run agent
+python national_pulse_agent.py

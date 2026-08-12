@@ -1,0 +1,7 @@
+Formula: Diesel emissions - EV emissions
+Diesel: 0.161 kg CO2/mile × 350 miles × 9 vehicles = 507 kg
+EV (CA grid): 0.053 kg CO2/mile × 350 miles × 9 vehicles = 167 kg
+Savings: 340 kg = 0.29 MT per haul
+Value: 0.29 MT × $85/MT = $24.68 per haul
+Annual: 1,000 hauls × $24.68 = $24,680
+[Sources: C4 - EPA emission factors, C1 - Verra $85/MT pricing]

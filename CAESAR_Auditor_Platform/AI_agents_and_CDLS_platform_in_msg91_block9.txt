@@ -1,0 +1,14 @@
+□ File Certificate of Limited Partnership
+   - Name: California Investment Auto, LP
+   - Registered Agent: Harvard Business Services ($50/yr)
+   - GP: California Investment Auto GP, LLC (form this too)
+   - Fee: $200 (LP) + $90 (GP LLC) = $290
+
+□ Obtain EIN for LP
+   - IRS Form SS-4
+   - Designate as "Partnership"
+   - Free, online application
+
+□ File Foreign LP Registration in California (optional)
+   - Only if LP operates directly in CA
+   - Not needed if LP just owns C-Corp

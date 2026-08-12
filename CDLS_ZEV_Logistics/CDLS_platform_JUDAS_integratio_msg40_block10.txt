@@ -1,0 +1,5 @@
+✓ Download LOI Template
+✓ Open in Word (verify it works)
+✓ Save to easy-access folder
+✓ Convert One-Pager to PDF
+✓ Print 5 test copies

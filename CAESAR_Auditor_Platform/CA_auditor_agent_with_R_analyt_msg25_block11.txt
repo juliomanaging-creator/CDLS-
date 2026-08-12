@@ -1,0 +1,4 @@
+# Functions:
+✓ monte_carlo_budget_risk() - Budget risk simulation
+✓ monte_carlo_fraud_risk() - Fraud probability estimation
+✓ generate_monte_carlo_report() - Publication graphics

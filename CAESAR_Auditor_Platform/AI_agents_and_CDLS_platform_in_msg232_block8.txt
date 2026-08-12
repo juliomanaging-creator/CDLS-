@@ -1,0 +1,6 @@
+Power required: 9.7 kW
+Savings: 1.7 kW
+Net: -8 kW LOSS ❌
+
+Why: Lift-induced drag > rolling resistance savings
+Better, but still negative

@@ -1,0 +1,8 @@
+Strategy: DO NOT launch signature gathering immediately.
+
+Instead:
+1. Qualify title/summary (no cost beyond $2K)
+2. Announce qualification intent (media event)
+3. Use threat as legislative leverage:
+   "We're prepared to take this to the ballot if Legislature fails to act"
+4. ONLY launch signature gathering if legislative path truly dead

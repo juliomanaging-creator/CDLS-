@@ -1,0 +1,14 @@
+# 1. Extract
+tar -xzf tesla-fleet-connector.tar.gz
+cd tesla-fleet-connector
+
+# 2. Configure
+cp .env.example .env
+# Edit .env: add TESLA_CLIENT_ID and TESLA_CLIENT_SECRET
+
+# 3. Launch
+docker-compose up -d
+
+# Access:
+# - API Docs: http://localhost:8001/docs
+# - Dashboard: http://localhost:8051

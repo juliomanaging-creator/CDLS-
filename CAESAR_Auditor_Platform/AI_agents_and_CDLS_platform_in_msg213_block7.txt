@@ -1,0 +1,8 @@
+[Step 1] Air capture drag cost: 1.76 MJ (from battery)
+[Step 2] Compression work: 1.26 MJ
+[Step 3] Heat generated: 1.77 MJ at 302°C
+[Step 4] Heat engine extracts: 0.57 MJ ← Your heat recovery!
+[Step 5] Compressed air storage: 0.88 MJ
+[Step 6] Total recovered: 1.12 MJ
+
+Efficiency: 1.12 / 1.76 = 63.6%

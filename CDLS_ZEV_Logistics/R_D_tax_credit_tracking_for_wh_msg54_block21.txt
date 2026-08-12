@@ -1,0 +1,1 @@
+findstr "sacramento" california_city_pricing.json | findstr "retail"

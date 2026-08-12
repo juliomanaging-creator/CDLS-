@@ -1,0 +1,19 @@
+┌─────────────────────────────────────────────┐
+│  CARBON CREDIT VALUE ANALYSIS               │
+├─────────────────────────────────────────────┤
+│  Annual Carbon Reduction: 5,600 tons CO2    │
+│  LCFS Credits Generated: 4,984 credits      │
+│  Current Market Price: $95/credit           │
+│  Annual Credit Revenue: $473,480            │
+│                                             │
+│  5-Year Projection (Conservative):          │
+│  Year 1: $473,480                           │
+│  Year 2: $497,154 (5% growth)               │
+│  Year 3: $522,012                           │
+│  Year 4: $548,112                           │
+│  Year 5: $575,518                           │
+│  Total 5-Year: $2,616,276                   │
+│                                             │
+│  Enhanced Payback Period: 23 days           │
+│  IRR with Credits: 347%                     │
+└─────────────────────────────────────────────┘

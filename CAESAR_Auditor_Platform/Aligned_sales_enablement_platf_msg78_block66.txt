@@ -1,0 +1,15 @@
+Risk: Hack or bug in contracts, loss of funds
+Probability: 5%
+Impact: Critical (reputation damage, financial loss)
+
+Mitigation:
+✅ Trail of Bits audit ($150K, top auditor)
+✅ Bug bounty ($100K rewards)
+✅ Multi-sig controls (3-of-5 treasury)
+✅ Insurance (Nexus Mutual, $1M coverage)
+
+If it happens:
+- Pause contracts immediately
+- Reimburse affected users (insurance + treasury)
+- Upgrade contracts
+- Independent review before relaunch

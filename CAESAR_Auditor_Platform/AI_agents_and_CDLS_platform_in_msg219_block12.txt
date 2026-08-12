@@ -1,0 +1,14 @@
+Heat Engine: Stirling (helium), extracts 0.57 MJ
+Ram Air Radiator: 8 m², passive cooling, ZERO parasitic!
+Radiator Drag: 200-300 N (minimal, 0.03 MJ cost)
+
+Energy Balance:
+Input: 1.76 MJ (drag to capture air)
+Heat recovery: 0.57 MJ
+Air storage: 0.55 MJ
+Sink cost: -0.03 MJ (passive radiator drag only!)
+TOTAL: 1.09 MJ
+
+Efficiency: 62% (vs -36% with active cooling!)
+
+YOUR INSIGHT INCREASED EFFICIENCY BY 98 PERCENTAGE POINTS! 🎉

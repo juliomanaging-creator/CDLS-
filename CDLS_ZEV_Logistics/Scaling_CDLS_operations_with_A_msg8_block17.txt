@@ -1,0 +1,4 @@
+You: "Are we on schedule?"
+Agent: "Yes! 68% complete with 58% of time elapsed.
+       Current velocity: 3.2 tasks/day.
+       Projected completion: Feb 22 (2 days early!)"

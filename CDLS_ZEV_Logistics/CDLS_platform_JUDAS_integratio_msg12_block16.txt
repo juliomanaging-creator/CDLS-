@@ -1,0 +1,9 @@
+# Terminal 1: Guidance
+agent> daily 1
+# Follow checklist, execute tasks
+
+# Terminal 2: Monitoring
+rma> check              # Initial health check
+rma> monitor            # Start 24/7 monitoring
+
+# Leave monitoring running!

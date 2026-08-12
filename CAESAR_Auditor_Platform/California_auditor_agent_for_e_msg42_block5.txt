@@ -1,0 +1,7 @@
+"How often should I check compliance?"
+
+⚪ Daily (7 AM)
+⚪ Weekly (Monday 7 AM)  
+⚪ Manual only
+
+[Start Monitoring]

@@ -1,0 +1,12 @@
+1. Investment of money? ✅ YES
+   └─ People buy tokens with USD/crypto
+
+2. Common enterprise? ✅ YES
+   └─ All token holders benefit from CDLS network
+
+3. Expectation of profit? ✅ YES
+   └─ Token price appreciation expected
+
+4. Derived from efforts of others? ⚠️ CRITICAL
+   └─ If profit comes from CDLS team: SECURITY
+   └─ If profit comes from network use: UTILITY

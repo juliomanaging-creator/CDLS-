@@ -1,0 +1,38 @@
+DISSOLUTION:
+California LLC dissolution:           $0 (filing)
+CA franchise tax (minimum):         $800 (must pay even if dissolved)
+────────────────────────────────────────
+Subtotal:                            $800
+
+NEW ENTITY FORMATION:
+Delaware C-Corp:                     $89 (state)
+DE Registered Agent (3 years):      $150 ($50/yr × 3)
+C-Corp EIN:                          $0 (free)
+CA Foreign Corp Registration:       $100
+Sacramento Business License:         $50
+────────────────────────────────────────
+Subtotal:                            $389
+
+Delaware LP + GP LLC:               $290
+DE Registered Agent (LP, 3 yr):     $150
+LP EIN:                              $0
+────────────────────────────────────────
+Subtotal:                            $440
+
+PROFESSIONAL SERVICES:
+ROBS setup (Guidant/Benetrends):  $5,500
+CPA consultation (structure):      $500
+Attorney (LP Agreement review):   $2,000 (optional)
+────────────────────────────────────────
+Subtotal:                          $8,000
+
+════════════════════════════════════════
+TOTAL COST TO FIX:              $9,629
+════════════════════════════════════════
+
+Offset by:
+ROBS capital received:           $40,000
+Tax benefits (Year 1):          $652,210
+Net benefit:                    $682,581
+
+ROI on fixing structure: 7,079% ✅

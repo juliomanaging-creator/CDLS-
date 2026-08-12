@@ -1,0 +1,13 @@
+Energy in moving air = ½mv²
+
+To capture this energy:
+- Air enters at 29 m/s (65 mph)
+- Turbine extracts energy
+- Air exits at lower speed (MUST be slower!)
+
+Energy extracted = ½m(v₁² - v₂²)
+Momentum change = m(v₁ - v₂)
+Force on turbine = Momentum change / time = DRAG
+
+Key insight: If air doesn't slow down (v₁ = v₂), 
+then NO energy extracted (E = 0)

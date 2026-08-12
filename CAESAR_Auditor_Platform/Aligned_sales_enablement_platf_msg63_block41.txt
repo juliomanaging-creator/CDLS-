@@ -1,0 +1,19 @@
+Recommendation: Accept Sequoia term sheet
+Terms:
+├─ $25M investment
+├─ $75M pre-money valuation
+├─ 25% dilution
+└─ 1 board seat (Sequoia partner)
+
+Alternative Offers:
+├─ Lowercarbon: $20M at $70M pre
+├─ Founders Fund: $30M at $80M pre
+└─ GM Ventures: $15M at $65M pre (strategic)
+
+Rationale for Sequoia:
+├─ Best terms (highest valuation)
+├─ Platform expertise (Uber, Airbnb)
+├─ Next round support (pre-commit to Series B)
+└─ Brand value (recruiting, PR)
+
+Vote: Approve / Reject / Discuss

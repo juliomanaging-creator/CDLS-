@@ -1,0 +1,3 @@
+TODAY:     Website Agent → Deploy site (90 min)
+TODAY:     NVIDIA Agent → Submit application (30 min)
+TOMORROW:  Compliance Agent → vCISO interviews (3 hours)

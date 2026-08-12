@@ -1,0 +1,2 @@
+TR = max(High−Low,  |High−PrevClose|,  |Low−PrevClose|)
+ATR = Exponential smoothing of TR (Wilder, α = 1/period)

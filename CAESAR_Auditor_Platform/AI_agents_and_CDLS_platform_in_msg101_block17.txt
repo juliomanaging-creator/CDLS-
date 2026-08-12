@@ -1,0 +1,5 @@
+1. Upload to Netlify or Vercel
+2. Get instant HTTPS URL
+3. Share with dealers/investors
+4. Auto-deploys on file updates
+✓ Perfect for: Public demos, dealer signup, investor pitch

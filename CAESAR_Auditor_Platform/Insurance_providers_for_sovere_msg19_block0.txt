@@ -1,0 +1,42 @@
+California Dealer Logistics Solutions (CDLS) is building the world's first decentralized, AI-powered zero-emission automotive logistics network, combining edge computing, distributed ledger technology, and advanced cryptography to transform California's $2+ billion vehicle hauling market.
+
+PROBLEM
+California's Advanced Clean Fleets (ACF) mandate requires 100% zero-emission automotive logistics by 2035, yet no existing infrastructure can efficiently manage electric vehicle fleets at scale. Traditional centralized logistics platforms create data sovereignty concerns for dealerships while lacking the computational architecture necessary for real-time, battery-constrained route optimization. The industry needs a solution that preserves dealer data privacy while enabling network-wide optimization.
+
+SOLUTION: THE JUDAS ARCHITECTURE
+CDLS has developed a proprietary edge-computing framework where AI inference runs locally on Ollama nodes behind each partner's firewall, eliminating centralized data aggregation risks. Our Python-based JUDAS (Joint Unified Dealer Autonomous System) engine processes raw dealership management system (DMS) data locally to generate optimization hashes, transmitting only non-PII metadata to our distributed ledger.
+
+The architecture delivers:
+• 20-25% reduction in empty miles through ML-powered route optimization
+• 15-20% improvement in fleet utilization via predictive scheduling algorithms  
+• 80-90% reduction in manual coordination through automated load batching
+• Zero centralized storage of dealer PII or financial records
+
+Technical Foundation:
+• Edge AI inference on local Ollama nodes (NVIDIA Jetson deployment roadmap)
+• Distributed ledger ($HAUL and $CARBON tokens) with HSM-secured signing
+• TLS 1.3 with Perfect Forward Secrecy for all API communications
+• AES-256-GCM encryption at rest
+• OAuth 2.0 with Mutual TLS (mTLS) authentication
+• SOC 2 Type II and ISO 27001 alignment architecture
+
+MARKET OPPORTUNITY
+California's $2B+ annual automotive hauling market must completely rebuild by 2035. CDLS has secured 100 zero-emission hauler commitments (MOU/LOI) from dealerships requiring compliant logistics infrastructure. Our decentralized architecture creates network effects - each new "Founding Partner" node strengthens the optimization network while maintaining complete data sovereignty.
+
+CURRENT STATUS
+Founded in 2026 by Julio Garcia (14+ years automotive finance, technical background), CDLS combines deep industry expertise with sophisticated distributed systems development. As founder-CEO and lead architect, Garcia has built the JUDAS edge-computing framework in Python, established SOC 2/ISO 27001 alignment protocols, and secured institutional funding negotiations with CalPERS (California Public Employees' Retirement System).
+
+Validation: Dealer survey data across proposed network demonstrates projected 20-25% empty mile reduction and 15-20% utilization improvement versus traditional centralized dispatching.
+
+STRATEGIC VALUE TO NVIDIA
+CDLS requires NVIDIA infrastructure across three deployment layers:
+
+1. Edge Layer: NVIDIA Jetson Orin modules for on-premise Ollama node deployment at dealership locations, enabling local AI inference without cloud dependencies
+
+2. Training Layer: NVIDIA A100/H100 GPUs for training route optimization models on federated learning datasets, preserving dealer data privacy while improving network-wide algorithms
+
+3. Simulation Layer: NVIDIA Omniverse for digital twin modeling of California logistics network, stress-testing decentralized optimization under various load scenarios
+
+Our architecture represents the convergence of climate impact (eliminating 100% diesel emissions from automotive logistics), enterprise-grade security (SOC 2/ISO 27001 aligned), and regulatory compliance (ACF mandate) in a large, captive market with strong unit economics (18-24% target IRR).
+
+Word Count: 497/500

@@ -1,0 +1,26 @@
+DEX Listings:
+
+Day 1: Uniswap V3 (already live)
+├─ Deepest liquidity pool
+├─ Default for most traders
+└─ Add more liquidity ($5M → $10M)
+
+Day 2: Pancakeswap (BSC)
+├─ Reach Binance Smart Chain users
+├─ Lower fees than Ethereum
+└─ Initial liquidity: $1M
+
+Day 3: Curve (if stablecoin pair)
+├─ $CDLS/USDC pool
+├─ Lower slippage for large trades
+└─ Initial liquidity: $2M
+
+Liquidity Mining:
+- Provide LP tokens → Earn $HAUL
+- APY: 50-100% (first week, decreasing)
+- Goal: Incentivize deep liquidity
+
+Price Discovery:
+- First 72 hours: High volatility expected
+- Target range: $0.04-$0.08
+- Treasury intervention if >50% deviation

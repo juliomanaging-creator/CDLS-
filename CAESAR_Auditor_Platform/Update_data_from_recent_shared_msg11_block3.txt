@@ -1,0 +1,4 @@
+cd cdls-platform-v2-simple
+npm install
+node setup.js
+npm start

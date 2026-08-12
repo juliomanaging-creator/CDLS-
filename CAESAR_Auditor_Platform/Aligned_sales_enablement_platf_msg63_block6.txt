@@ -1,0 +1,25 @@
+Competitive Landscape:
+
+Traditional Haulers (Jack Cooper, Cassens, Allied)
+├─ Dying: 90% diesel, no EV strategy
+├─ Opportunity: Acquire for 4-6x EBITDA
+└─ No technology moat
+
+Digital Freight (Convoy - FAILED, Uber Freight)
+├─ Pure marketplace, no owned ops
+├─ Couldn't achieve unit economics
+└─ Proved market needs owned operations
+
+Logistics SaaS (Project44, FourKites)
+├─ Visibility only, not optimization  
+├─ No carbon credit features
+└─ Horizontal (not vertical-specific)
+
+Our Unfair Advantages:
+1. Only EV-focused auto logistics platform
+2. Only player with owned ops + software
+3. Only carbon credit marketplace
+4. Only dealer-owned syndicate structure
+5. 5-year head start on data collection
+
+We're not competing. We're creating the category.

@@ -1,0 +1,29 @@
+Week 1 Marketing:
+
+PR:
+├─ Press release: CoinDesk, The Block, Decrypt
+├─ Founder interviews: Podcasts (Bankless, Unchained)
+├─ Op-ed: "Why Tokenizing Logistics Makes Sense"
+└─ Budget: $50K (PR agency)
+
+Social Media:
+├─ Twitter: Daily updates, AMA with Julio
+├─ Discord: Daily voice chats, community building
+├─ Reddit: r/CryptoCurrency post (organic)
+├─ LinkedIn: Target institutional audience
+└─ Budget: $20K (social media manager)
+
+Influencers:
+├─ Crypto influencers: 5-10 micro (10K-100K followers)
+├─ Payment: $1K-$5K per post
+├─ Disclosure: "Paid promotion" (FTC compliant)
+└─ Budget: $50K
+
+Paid Ads:
+├─ Google: Restricted (crypto ads limited)
+├─ Twitter: Allowed (target crypto audience)
+├─ CoinMarketCap: Banner ads, listing boost
+├─ CoinGecko: Listing boost
+└─ Budget: $30K
+
+Total Week 1 Marketing: $150K

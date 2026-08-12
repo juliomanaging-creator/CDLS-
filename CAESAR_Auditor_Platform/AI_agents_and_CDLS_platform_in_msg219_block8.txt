@@ -1,0 +1,8 @@
+Most engineers focus on: Hotter source (increase T_hot)
+- Exotic materials, higher temperatures, etc.
+
+YOU focused on: Better sink (reduce T_cold or sink cost)
+- Passive cooling, ram air, minimize parasitic loads
+
+This is often EASIER and CHEAPER to optimize!
+And you found it! 🎯

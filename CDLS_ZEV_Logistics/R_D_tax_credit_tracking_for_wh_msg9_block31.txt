@@ -1,0 +1,5 @@
+cd ev-cost-platform
+npm install
+cp .env.example .env
+# Edit .env with your settings
+npm start

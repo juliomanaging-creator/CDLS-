@@ -1,0 +1,11 @@
+# Morning
+rd_tracker start --project AI-001 --name "Route Optimization"
+
+# Throughout day (Git commits auto-tracked)
+git commit -m "Implemented gradient boosting"
+
+# Evening
+rd_tracker end SESSION_ID \
+  --activity "Developed and tested ML algorithms..." \
+  --uncertainty "Unknown which algorithm meets targets..." \
+  --experiment "Systematic A/B testing of 3 models..."

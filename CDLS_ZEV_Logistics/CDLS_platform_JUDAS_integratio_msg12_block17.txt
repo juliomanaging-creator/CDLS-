@@ -1,0 +1,9 @@
+# Morning:
+rma> status             # Check overnight
+rma> report             # Review metrics
+
+# Throughout day:
+agent> help <topic>     # As needed
+
+# Evening:
+rma> report             # Daily summary

@@ -1,0 +1,15 @@
+Advantages of Public Blockchain:
+✓ All transactions visible
+✓ Audit trail immutable
+✓ Can trace fund flows
+✓ Easier compliance than TradFi
+
+Challenges:
+⚠️ Privacy concerns (public addresses)
+⚠️ Mixer/tumbler detection
+⚠️ Cross-chain tracking
+
+Solution:
+- Use address clustering (Chainalysis)
+- Flag high-risk addresses
+- Require KYC for large withdrawals

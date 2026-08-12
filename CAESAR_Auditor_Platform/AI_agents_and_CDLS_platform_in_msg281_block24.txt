@@ -1,0 +1,5 @@
+☐ Close CalPERS $5M investment (target March 31, 2026)
+☐ Deploy STRATEGIST agent (presentation generation)
+☐ Deploy PCB agent (political coalition building)
+☐ Begin TCM agent development (technical management)
+☐ Execute all 5 major stakeholder negotiations

@@ -1,0 +1,11 @@
+Target: Conservative dealers (need social proof)
+Channels:
+├─ Network effects (viral growth)
+├─ Institutional sales (large dealer groups)
+├─ OEM partnerships (Ford/GM recommend us)
+└─ International (Canada, Mexico)
+
+Value Prop: "Industry standard for ZEV logistics"
+Timeline: 2028-2029
+CAC: $500 (organic, network effects)
+LTV: $200,000+ (platform becomes indispensable)

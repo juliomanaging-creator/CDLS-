@@ -1,0 +1,24 @@
+200 depots × 2 MWh battery = 400 MWh total
+Revenue streams:
+- Energy arbitrage: $400/MWh/year = $160K/year
+- Frequency regulation: $600/MWh/year = $240K/year
+- Demand charges avoided: $300/MWh/year = $120K/year
+Total annual revenue: $920K × 400 MWh = $368M... 
+
+Wait, let me recalculate:
+- Energy arbitrage: 400 MWh × $100/MWh/year = $40K/year
+- Frequency regulation: 400 MWh × $150/MWh/year = $60K/year
+- Demand charges avoided: 400 MWh × $75/MWh/year = $30K/year
+Total annual revenue: $130K × (better math)
+
+Actually, industry standard:
+Battery storage generates $200-300/kW/year
+400 MWh = 400,000 kW
+Revenue: $200 × 400,000 = $80M/year (this seems high)
+
+Let me use conservative figures:
+$50K per depot per year × 200 depots = $10M/year
+EBITDA margin: 60% = $6M
+
+At 12x multiple:
+Battery business value: $72M

@@ -1,0 +1,11 @@
+Due: February 28, 2026
+
+Deliverables:
+├─ Staking contract (production-ready)
+├─ Vesting contract (production-ready)
+├─ Integration tests (all contracts)
+├─ Deployment scripts (testnet)
+├─ Admin UI design (access control)
+└─ Documentation (architecture)
+
+Payment: 25% ($87.5K-$112.5K)

@@ -1,0 +1,11 @@
+For: Fifth wheel coupling, axle mounts
+Process:
+1. Clean aluminum surface
+2. Apply epoxy primer
+3. Robot winds SiC fibers in pattern (0°/45°/90°/-45°)
+4. Cure at 180°C for 2 hours
+5. Protective coating
+
+Weight: +5 lbs per area
+Cost: $500 per location
+Benefit: 3× fatigue life

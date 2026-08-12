@@ -1,0 +1,4 @@
+jure> status           # Weekend review
+jure> health           # System check
+# - Review metrics
+# - Plan week ahead

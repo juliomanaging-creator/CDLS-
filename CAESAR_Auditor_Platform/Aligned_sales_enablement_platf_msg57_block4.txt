@@ -1,0 +1,14 @@
+Required data per quarter:
+- VIN
+- Miles driven (odometer readings)
+- Electricity consumed (kWh from meter)
+- Base carbon intensity of electricity source
+- Any renewable energy credits (if using solar)
+
+Example report for one vehicle:
+VIN: 5YJSA1E14HF000001
+Q1 2025 Miles: 12,500
+Q1 2025 Electricity: 26,250 kWh
+Utility: Pacific Gas & Electric
+CI Score: 95.97 gCO2e/MJ (PG&E grid average)
+Renewable %: 0% (or higher if using solar)

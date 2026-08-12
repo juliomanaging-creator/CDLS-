@@ -1,0 +1,9 @@
+graph TD
+    A[System Issue] --> B[System Admin]
+    B --> C{Issue Type}
+    C -->|Technical| D[Direct Fix]
+    C -->|Process| E[Process Specialist]
+    C -->|Training| F[Change Management]
+    D --> G[Resolution]
+    E --> G
+    F --> G

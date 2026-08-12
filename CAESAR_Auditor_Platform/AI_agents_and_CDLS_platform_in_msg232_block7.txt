@@ -1,0 +1,6 @@
+Power to create 10,000 N lift: 240 kW
+Rolling resistance savings: 1.7 kW
+Net: -238.3 kW LOSS ❌
+
+Why it fails: Hover power is HUGE
+Not practical for moving vehicles

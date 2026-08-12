@@ -1,0 +1,6 @@
+✓ Assess novelty (prior art search)
+✓ Check non-obviousness
+✓ Evaluate utility
+✓ Recommend file/don't file
+✓ Suggest claim structure
+✓ Estimate costs ($10-20K per patent)

@@ -1,0 +1,8 @@
+Technology: Fans suck away slow air
+- Removes boundary layer
+- Maintains laminar flow
+- Reduces wake size
+
+Power: 12 kW
+Drag reduction: 25.4 kW saved
+Net: +13.4 kW GAIN! ✅

@@ -1,0 +1,19 @@
+# SSH into server
+ssh root@your_ip
+
+# Install Claudio
+cd /opt
+git clone https://github.com/cdls/claudio.git
+cd claudio
+npm install
+
+# Configure
+nano .env
+# Add database URL, API keys
+
+# Initialize
+npm run db:migrate
+npm run start
+
+# Verify
+systemctl status claudio

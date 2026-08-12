@@ -1,0 +1,11 @@
+Scope: April 25 - July 25, 2026
+
+Services:
+├─ On-call emergency support (24/7 first month)
+├─ Bug fixes (if any arise)
+├─ Feature enhancements (as needed)
+├─ Optimization (gas, performance)
+└─ Upgrade assistance (if required)
+
+Budget: $50K-$100K (time & materials)
+Rate: $400-$500/hour

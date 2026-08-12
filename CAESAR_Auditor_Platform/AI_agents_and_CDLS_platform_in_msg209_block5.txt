@@ -1,0 +1,8 @@
+Capacity: 50 kWh LiFePO₄
+Purpose: Store solar/regen energy, buffer load spikes
+Charging sources:
+  - Solar (priority 1): 48 kWh/day
+  - Regen braking (priority 2): 20 kWh/day  
+  - Shore power (priority 3): Overnight at depot
+  - Main battery (priority 4): Only if needed
+Cost: $8,000

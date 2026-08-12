@@ -1,0 +1,13 @@
+┌─────────────────────────────────────────────────────────────┐
+│                      HUB SITE (5+ acres)                    │
+│                                                             │
+│  [CHARGING BAYS]     [CAR HAULER POOL]   [BIOMASS ZONE]     │
+│  4 × MCS chargers    Loaded trailers     Walking floor      │
+│  30-min turnaround   N-bound & S-bound   trailers + intake  │
+│                      staged separately   to pyrolysis unit  │
+│                                                             │
+│  [DRIVER FACILITY]   [EMPTY POOL]        [PYROLYSIS UNIT]   │
+│  Rest area, food,    Empty car haulers   Reactor + biochar  │
+│  HOS log station     awaiting load       storage silo       │
+│                                          Biochar bagging    │
+└─────────────────────────────────────────────────────────────┘

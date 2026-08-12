@@ -1,0 +1,31 @@
+IRS Classification: Property (like stock)
+
+Taxable Events:
+1. Token Sale Purchase:
+   ├─ Not taxable (purchase of property)
+   └─ Basis: Purchase price
+
+2. Token Appreciation:
+   ├─ Not taxable until sold (like stock)
+   └─ Capital gains when realized
+
+3. Token Sale:
+   ├─ Capital gain/loss
+   ├─ Short-term (<1 year): Ordinary income rates
+   └─ Long-term (>1 year): 0-20% capital gains rates
+
+4. Staking Rewards ($HAUL):
+   ├─ Taxable as income when received
+   ├─ Fair market value at receipt
+   └─ Basis for future sale
+
+5. Revenue Share (USDC):
+   ├─ Taxable as dividend income
+   └─ Reported on 1099-DIV
+
+Example:
+Buy $CDLS at $0.05 (Jan 2026)
+Hold 18 months
+Sell at $1.00 (July 2027)
+Gain: $0.95 per token
+Tax: 15% long-term capital gains = $0.1425 per token

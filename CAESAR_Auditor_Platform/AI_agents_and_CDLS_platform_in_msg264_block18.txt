@@ -1,0 +1,19 @@
+YOU: "Can I show you how to PROFIT from transition?"
+   ↓
+   ├→ INTERESTED ("Tell me more")
+   │   ↓
+   │   Carbon credit pitch ($120/MT premium)
+   │   ↓
+   │   "Why pay premium?" → "Price certainty!"
+   │   ↓
+   │   "What do you want?" → "Neutrality only"
+   │   ↓
+   │   75% SUCCESS ✅
+   │
+   └→ HOSTILE ("This is anti-oil agenda")
+       ↓
+       BATNA leverage ("Fight and lose, or profit?")
+       ↓
+       "We'll consider it"
+       ↓
+       60% SUCCESS ✅

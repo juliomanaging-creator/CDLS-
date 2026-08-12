@@ -1,0 +1,24 @@
+┌─────────────────────────────────────────────────────┐
+│              R-AUDIT-DEV AGENT                      │
+├─────────────────────────────────────────────────────┤
+│                                                      │
+│  INPUT LAYER                                        │
+│  ├─ Natural language requirements                   │
+│  ├─ Sample data (CSV/SQL)                          │
+│  └─ Business rules                                  │
+│                                                      │
+│  AI PROCESSING CORE (Claude 3.5 Sonnet)            │
+│  ├─ Requirement Analysis Module                     │
+│  ├─ Code Generation Module (R + Python)            │
+│  ├─ Testing Module (testthat framework)            │
+│  ├─ Documentation Module (roxygen2)                 │
+│  └─ Quality Assurance Module                        │
+│                                                      │
+│  OUTPUT LAYER                                       │
+│  ├─ R scripts (.R files)                           │
+│  ├─ Python integration (.py files)                  │
+│  ├─ Test suites (.R test files)                    │
+│  ├─ Documentation (.md files)                       │
+│  └─ Deployment packages (.tar.gz)                   │
+│                                                      │
+└─────────────────────────────────────────────────────┘

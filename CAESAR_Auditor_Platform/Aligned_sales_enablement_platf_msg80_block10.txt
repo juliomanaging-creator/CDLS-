@@ -1,0 +1,84 @@
+☐ 9:00 AM: Daily standup
+
+☐ 9:30 AM: Finalize "Tokenization 101" webinar
+   
+   Time: 7:00 PM PST tonight (after dealer business hours)
+   Platform: Zoom (500 capacity)
+   Recording: YES (post on website)
+   
+   Agenda (60 minutes):
+   -------------------
+   0:00-0:05: Welcome & Introductions (Julio)
+   0:05-0:15: "Why We're Tokenizing CDLS" (Julio)
+              - Liquidity for dealers
+              - Global capital access
+              - Network effects & rewards
+              - Governance & transparency
+              
+   0:15-0:30: "How Tokens Work" (CFO)
+              - What is a token?
+              - $CDLS vs. $HAUL vs. $CARBON
+              - How to buy, store, stake
+              - Tax implications (high-level)
+              
+   0:30-0:40: "Platform Demo" (CTO/Ops)
+              - Show ROI calculator
+              - Show staking dashboard
+              - Show carbon tracking
+              
+   0:40-0:55: Q&A (All)
+              - Prepared answers for common questions
+              
+   0:55-1:00: Next Steps & Close (Julio)
+              - Timeline to TGE
+              - How to get involved
+              - Whitelist signup
+   
+   ☐ Create slide deck (30 slides max, heavy visuals)
+   ☐ Rehearse presentation (run-through)
+   ☐ Prepare Q&A document (anticipate 20 questions)
+   ☐ Set up Zoom meeting
+   ☐ Send calendar invites (all 20 dealers + interested parties)
+
+☐ 11:00 AM: Send webinar invitations
+   
+   Email to 20 founding dealers:
+   ---
+   Subject: IMPORTANT: CDLS Tokenization Announcement - Webinar Tonight
+   
+   Hi [Dealer Name],
+   
+   Thank you for your partnership with CDLS. I have an exciting 
+   announcement that will transform how we build this network together.
+   
+   We're tokenizing CDLS.
+   
+   This means you can participate with liquid tokens instead of 
+   locked equity. Trade anytime, earn rewards daily, participate 
+   in governance.
+   
+   Join tonight's webinar to learn more:
+   
+   📅 Thursday, January 9, 2026
+   ⏰ 7:00 PM PST
+   📍 Zoom: [Link]
+   
+   We'll cover:
+   - Why tokenization benefits dealers
+   - How the three-token system works
+   - How to participate (timeline, pricing)
+   - Q&A (bring your questions)
+   
+   This is the future of CDLS. I hope you'll join us.
+   
+   Best regards,
+   Julio
+   
+   P.S. If you can't make it live, we'll send the recording. But 
+   I encourage you to attend - this is our most important announcement yet.
+   ---
+   
+   ☐ Send to all 20 dealers
+   ☐ Post in CDLS Slack/Discord (if exists)
+   ☐ Share on LinkedIn (tag dealers)
+   ☐ Tweet (public announcement)

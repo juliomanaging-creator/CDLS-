@@ -1,0 +1,8 @@
+# Web explorer
+Visit: https://verify.cdls.com/blockchain/[tx]
+
+# Or API
+curl https://api.verify.cdls.com/tx/[tx]
+
+# Or CLI
+ca-auditor verify-blockchain --tx [tx]

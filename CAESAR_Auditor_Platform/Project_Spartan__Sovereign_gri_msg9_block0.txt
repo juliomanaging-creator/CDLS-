@@ -1,0 +1,13 @@
+CDLS 100-Trailer Pilot (Sacramento)
+         ↓
+    Validates:
+    - V2G revenue model ($11k/trailer/year)
+    - ELRP enrollment ($2/kWh peak demand)
+    - Rule 21 Fast Track interconnection
+    - Worker equity model (70/30 split)
+         ↓
+    Scales to:
+300,000 NRD Modular Units (Nationwide)
+         ↓
+    Creates:
+$2.5B Energy Sovereignty Empire

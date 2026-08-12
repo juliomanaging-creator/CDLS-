@@ -1,0 +1,15 @@
+Revenue streams:
+- Hauling (base): $17,982,000
+- Lightweight bonus: $2,997,000
+- Dynamic charging bonus: $8,391,600
+- Energy savings: $1,317,560
+- Maintenance savings: $576,040
+- Carbon annual payment: $45,840
+- V2G revenue: $120,000
+TOTAL REVENUE: $31,430,040
+
+Operating costs: -$17,000,000
+NET PROFIT: $14,430,040 (46% margin!) 🎉
+
+ROI: $9,906,160 ÷ $14,430,040 = 0.69 years
+**8.3 MONTHS PAYBACK!** 🎉🎉

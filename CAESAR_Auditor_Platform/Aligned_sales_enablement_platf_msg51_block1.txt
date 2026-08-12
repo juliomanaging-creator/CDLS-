@@ -1,0 +1,8 @@
+GET https://api.eia.gov/v2/petroleum/pri/gnd/data/
+?frequency=daily
+&data[0]=value
+&facets[product][]=EPD2D
+&facets[area][]=SCA
+&sort[0][column]=period
+&sort[0][direction]=desc
+&offset=0&length=1

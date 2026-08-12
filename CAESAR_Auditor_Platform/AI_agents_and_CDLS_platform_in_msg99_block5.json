@@ -1,0 +1,17 @@
+{
+  "dashboard_metadata": { ... },
+  "critical_path_milestones": [ ... ],
+  "phase_1_entity_foundation": { tasks: [ ... ] },
+  "phase_2_carbon_foundation": { tasks: [ ... ] },
+  "phase_3_pilot_preparation": { tasks: [ ... ] },
+  "phase_4_institutional_funding": { tasks: [ ... ] },
+  "kpis_tracking": {
+    "operational_kpis": [ ... ],
+    "financial_kpis": [ ... ],
+    "carbon_credit_kpis": [ ... ],
+    "environmental_impact_kpis": [ ... ],
+    "fundraising_kpis": [ ... ]
+  },
+  "risk_register": [ ... ],
+  "key_contacts": { ... }
+}

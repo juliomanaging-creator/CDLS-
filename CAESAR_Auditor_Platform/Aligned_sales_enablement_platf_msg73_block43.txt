@@ -1,0 +1,24 @@
+Target: 2-3 Tier 3 exchanges
+
+MEXC Listing (Day 10):
+├─ Application submitted: Day 5
+├─ Approval: Day 8
+├─ Integration: Day 9-10
+├─ Go-live: Day 10
+└─ Initial volume: $500K/day
+
+Gate.io Listing (Day 12):
+├─ Similar process
+├─ Go-live: Day 12
+└─ Initial volume: $300K/day
+
+Impact:
+- Total volume: +$800K/day
+- New user acquisition: +500 users
+- Price discovery: More accurate pricing
+- Liquidity: Deeper order books
+
+Marketing:
+- Announce each listing (Twitter, blog)
+- Trading competition ($50K in prizes)
+- KOL partnerships (Chinese market)

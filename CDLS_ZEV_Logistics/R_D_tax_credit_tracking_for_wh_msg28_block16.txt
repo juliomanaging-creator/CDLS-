@@ -1,0 +1,10 @@
+# Without nodemon:
+npm start
+# Make code change
+# Press Ctrl+C
+# npm start again
+
+# With nodemon:
+npm run dev
+# Make code change
+# Automatically restarts! 🎉

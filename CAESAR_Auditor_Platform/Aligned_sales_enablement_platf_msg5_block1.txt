@@ -1,0 +1,13 @@
+POST   /api/dealrooms                    # Create new deal room
+GET    /api/dealrooms/:id                # Get deal room details
+PUT    /api/dealrooms/:id                # Update deal room
+DELETE /api/dealrooms/:id                # Archive deal room
+
+POST   /api/dealrooms/:id/documents      # Upload document
+GET    /api/dealrooms/:id/documents      # List documents
+GET    /api/documents/:id/download       # Download document
+PUT    /api/documents/:id                # Update document metadata
+DELETE /api/documents/:id                # Delete document
+
+GET    /api/documents/:id/versions       # Get version history
+POST   /api/documents/:id/versions       # Create new version

@@ -1,0 +1,4 @@
+✓ Jet engines (GE, Rolls-Royce use ceramic turbines)
+✓ Power plants (Siemens 63% efficiency)
+✓ Turbochargers (Porsche, BMW use ceramic)
+✓ Depot air storage (perfect for 70 bar tools!)

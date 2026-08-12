@@ -1,0 +1,27 @@
+CDLS_Documents/
+├── 01_Templates_ORIGINAL/
+│   ├── (Keep clean copies here, never edit)
+│   ├── CDLS_Champion_One_Pager.docx
+│   ├── CDLS_LOI_Template.docx
+│   └── CDLS_NDA_Template.docx
+│
+├── 02_Working_Copies/
+│   ├── (Edit these as needed)
+│   ├── CDLS_Champion_One_Pager_v2.docx
+│   ├── CDLS_LOI_Sacramento_Dealer.docx
+│   └── CDLS_NDA_Modified.docx
+│
+├── 03_PDFs_For_Printing/
+│   ├── CDLS_Champion_One_Pager.pdf
+│   ├── CDLS_NDA_Template.pdf
+│   └── CDLS_Documents_Summary.pdf
+│
+├── 04_Reference/
+│   ├── CDLS_Documents_Summary.docx
+│   ├── CDLS_Master_Action_Plan.docx
+│   └── ALL_DOCUMENTS_COMPLETE.txt
+│
+└── 05_Sent_To_Dealers/
+    ├── (Archive what you send)
+    ├── 2026-01-27_ABC_Motors_LOI.docx
+    └── 2026-01-28_XYZ_Dealer_OnePager.pdf

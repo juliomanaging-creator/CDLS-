@@ -1,0 +1,9 @@
+DealerAudit-Installer (47 MB download)
+├─ Agent application
+├─ AI model (llama3.2-3b, 3.8 GB)
+├─ Report templates
+├─ User documentation
+└─ Platform-specific installer
+   ├─ Windows: .exe
+   ├─ Mac: .dmg
+   └─ Linux: .sh

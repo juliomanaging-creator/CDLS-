@@ -1,0 +1,11 @@
+Due: March 14, 2026
+
+Deliverables:
+├─ Marketplace contract (production-ready)
+├─ Governance integration (Snapshot)
+├─ Full integration testing
+├─ Security review (internal)
+├─ Testnet deployment (public)
+└─ User documentation
+
+Payment: 25% ($87.5K-$112.5K)

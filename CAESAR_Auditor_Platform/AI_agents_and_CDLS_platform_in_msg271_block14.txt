@@ -1,0 +1,24 @@
+Service: Waters Agricultural Laboratories (California)
+Website: watersag.com
+Test: "Complete Plant Tissue Analysis"
+Cost: $25 per sample
+Turnaround: 7-10 days
+
+What they measure:
+- Iron: ppm (should be 1,000-5,000 for conductive plants)
+- Copper: ppm (should be <50 if using iron instead)
+- Zinc: ppm
+- Protein, vitamins, minerals (nutritional value)
+
+How to submit:
+1. Harvest 100g plant tissue (leaves, stems, roots separately)
+2. Dry in oven (60°C, 24 hours)
+3. Mail to lab ($25 fee + shipping)
+4. Receive detailed report
+
+Safety thresholds:
+- Iron: <10,000 ppm (safe for wildlife)
+- Copper: <100 ppm (safe for most animals)
+- Zinc: <500 ppm (safe range)
+
+If within thresholds: SAFE for wildlife consumption! ✅

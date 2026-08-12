@@ -1,0 +1,15 @@
+Lightweight Aluminum Car Hauler Trailer (9-vehicle capacity)
+         ↓
+    + Custom Energy Pod Bay (rear section)
+         ↓
+    EcoFlow DELTA Pro Ultra (90 kWh stackable)
+         ↓
+    + Triple-Barrier HED System (vibration dampening)
+         ↓
+    + Southwire Bonding Bridge (grounding)
+         ↓
+    Fermata Energy V2G Inverter (19.2 kW bidirectional)
+         ↓
+    Dealer 480V 3-phase connection (Rule 21 interconnection)
+         ↓
+    CAISO Grid Integration (demand response + arbitrage)

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    // Install everything just in case!
+    "every-date-library": "*",
+    "all-security-packages": "*",
+    "random-stuff": "*"
+  }
+}

@@ -1,0 +1,11 @@
+CalPERS invests $5M preferred equity:
+- Preferred return: 10% annual
+- Liquidation pref: 1.5x ($7.5M)
+- You use $2M to buy out 3 partners
+
+At exit ($134M):
+1. CalPERS gets $7.5M first
+2. Remaining $126.5M split among common equity
+3. You own 60% (bought out partners) = $75.9M
+4. Without buyout, you'd own 35% = $44.3M
+5. Net gain: $31.6M (after paying CalPERS)

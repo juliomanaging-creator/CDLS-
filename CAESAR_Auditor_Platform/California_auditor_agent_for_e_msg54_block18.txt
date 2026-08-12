@@ -1,0 +1,14 @@
+SALSA_Complete_v2.0/
+├── core/
+│   └── engine.py                # 1,300 lines - Main engine
+├── reports/
+│   └── pdf_generator.py         # 500 lines - PDF generation
+├── data_input/
+│   └── sample_sales.csv         # Test data (10 records)
+├── audit_output/                # Text reports appear here
+├── audit_reports_pdf/           # PDF reports appear here
+├── logs/                        # Detailed logs
+├── launchers/
+│   └── Launch_SALSA.bat         # Windows launcher
+├── requirements.txt             # Python dependencies
+└── README.md                    # Full documentation

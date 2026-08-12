@@ -1,0 +1,4 @@
+1. Audit your JUDAS codebase for hardcoded secrets
+2. Move to environment variables (minimum viable)
+3. Set up AWS Secrets Manager (15 minutes)
+4. Document which secrets are where

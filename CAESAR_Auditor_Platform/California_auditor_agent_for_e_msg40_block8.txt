@@ -1,0 +1,7 @@
+Email: "Check your compliance in 60 seconds"
+→ Click link
+→ Auto-connects to DMS
+→ Instant results
+→ Set and forget
+
+Expected: 80% complete, 75% retain

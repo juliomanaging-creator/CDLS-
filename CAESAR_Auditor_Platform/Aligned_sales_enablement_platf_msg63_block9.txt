@@ -1,0 +1,34 @@
+Milestone-Based Valuation:
+
+2026 (Today):
+├─ $45M revenue, $8M EBITDA
+├─ 20 dealers, 200 vehicles
+├─ Platform beta
+└─ Valuation: $75M pre-money
+
+2027 (Post Series A):
+├─ $90M revenue, $16M EBITDA
+├─ 60 dealers, 600 vehicles  
+├─ $2M ARR platform
+└─ Valuation: $250M
+
+2028 (Series B Timing):
+├─ $180M revenue, $32M EBITDA
+├─ 150 dealers, 1,200 vehicles
+├─ $8M ARR platform
+└─ Valuation: $500M
+
+2030 (Series C or IPO):
+├─ $450M revenue, $100M EBITDA
+├─ 500 dealers owned, 1,000 SaaS
+├─ $30M ARR platform
+└─ Valuation: $1.2B
+
+2032 (Exit):
+├─ $750M revenue, $180M EBITDA
+├─ Category leader, 2,000 vehicles
+├─ $50M ARR platform
+└─ Exit Value: $1.8B+
+
+VCs investing today at $75M pre-money
+could see 24x return in 6 years

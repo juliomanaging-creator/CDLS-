@@ -1,0 +1,9 @@
+Emergency power on aircraft:
+- Deploy turbine into 250 knot airstream
+- Generates 5-10 kW
+- Creates 64.5 kW of drag cost
+- Net: 54-60 kW LOSS!
+
+Only used in EMERGENCIES (engine failure)
+NOT used during normal flight
+(Massive efficiency penalty only acceptable vs. crashing)

@@ -1,0 +1,5 @@
+1. Download jure_agent.py
+2. Run: python3 jure_agent.py
+3. Answer setup questions (5 min)
+4. Agent handles everything
+5. You just execute the generated tasks

@@ -1,0 +1,5 @@
+# Each day:
+jure> daily N          # See today's tasks
+jure> health           # Check system status
+jure> resolve          # Fix any issues
+jure> status           # Generate report

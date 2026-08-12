@@ -1,0 +1,17 @@
+Process:
+1. Buyer accumulates 1,000 credits on-chain
+2. Requests redemption (burn NFTs)
+3. CDLS submits transfer to CARB
+4. CARB processes (3-5 business days)
+5. Credits appear in buyer's CARB account
+6. NFTs permanently burned
+
+Why Buyers Redeem:
+✓ Regulatory compliance (oil companies must)
+✓ Corporate ESG reporting
+✓ Long-term holding (prefer CARB custody)
+
+Why Buyers Keep On-Chain:
+✓ Trading flexibility (24/7)
+✓ Collateral for DeFi (borrow against credits)
+✓ Speculation (price appreciation)

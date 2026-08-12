@@ -1,0 +1,8 @@
+╔═══════════════════════════════════════════════════════╗
+║   CA Dealer Logistics Platform - Server Running      ║
+║   Environment: development                            ║
+║   Port: 3000                                          ║
+║   URL: http://localhost:3000                          ║
+╚═══════════════════════════════════════════════════════╝
+
+✓ Server ready!

@@ -1,0 +1,6 @@
+- 24/7 load (improves load factor)
+- Absorbs excess solar (renewable integration)
+- Demand response capability (grid stability resource)
+- Distributed load (no single point stress)
+
+This HELPS grid, not hurts it!

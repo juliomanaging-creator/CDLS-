@@ -1,0 +1,2 @@
+# Run Command Prompt as Administrator
+# Right-click Command Prompt → "Run as administrator"

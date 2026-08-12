@@ -1,0 +1,99 @@
+Current Thesis Pitch: Auto hauling, $132M exit, 28% IRR
+Needed Update: Multi-industry, $20.8B exit, 18-24% IRR
+
+SLIDE-BY-SLIDE UPDATES NEEDED:
+
+Slide 1: Cover
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OLD: "Zero-Emission Auto Hauling Platform"
+NEW: "Multi-Industry Zero-Emission Logistics Platform"
+NEW: "4.5 Billion Trees Equivalent | $20.8B Exit"
+
+Slide 2: Problem  
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OLD: ACF regulation forces dealers to comply
+NEW: 12 industries face zero-emission mandates
+NEW: $850B total addressable market
+
+Slide 3: Solution
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OLD: Platform for auto dealers
+NEW: Replicable platform across 12 industries
+NEW: Start with auto (proof), expand to RV/heavy equipment/waste
+
+Slide 4: Market Size
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OLD: California auto hauling only
+NEW: Auto $27B + 11 other industries = $850B TAM
+NEW: Phased rollout 2026-2035
+
+Slide 5: Business Model
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OLD: Per-trip hauling fees
+NEW: Three revenue streams:
+     1. Hauling services ($850/trip)
+     2. Carbon credit banking ($682M NPV)
+     3. Platform licensing (multi-industry expansion)
+
+Slide 6: Competitive Advantage
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OLD: Lightweight trailers (9 vs 8 capacity)
+NEW: Add blockchain carbon tracking
+NEW: Add multi-industry replication playbook
+NEW: Add dealer/operator ownership model
+
+Slide 7: Traction
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OLD: Pilot planned
+NEW: 20 founding dealers committed
+NEW: Sacramento pilot June 2026
+NEW: Verra VCS certification in progress
+
+Slide 8: Financial Projections
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OLD: Year 5 revenue $35-42M, exit $96-132M
+NEW: Year 5 auto $187M, Year 10 all industries $4.94B
+NEW: Exit valuation $20.8B (Year 10)
+NEW: Path to profitability: EBITDA+ Month 24-26
+
+Slide 9: Investment Terms
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OLD: Series A $12-15M at $35-50M valuation
+NEW: Multiple pathways:
+     • Carbon FPA: $10-25M upfront (non-dilutive!)
+     • CalPERS: $25-50M at 18-24% target IRR
+     • Foundations: $5-25M ESG-focused
+     • Strategic: Automotive OEMs, logistics cos
+
+Slide 10: Returns Analysis
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OLD: 28-35% IRR, 3.2x-4.5x multiple
+NEW: 18-24% IRR (conservative, CalPERS target)
+NEW: 10-15x money multiple (10-year hold)
+NEW: 25th percentile: still 12-15% IRR (downside protection)
+NEW: Show carbon reserve optionality ($682M NPV)
+
+Slide 11: ESG Impact
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NEW SLIDE (Not in thesis)
+• 98.7M MT CO2 saved = 4.5B trees equivalent
+• 47,000 owner-operator jobs created
+• $3.12B driver collective equity
+• 125,000 asthma cases prevented
+• 3,200 lives saved (air quality improvements)
+
+Slide 12: Team
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OLD: You + advisors
+NEW: Add Rebecca McNeil ("unlimited trees" mission)
+NEW: Highlight UC Davis MS Thesis (450 pages, academic rigor)
+NEW: Show CNCDA relationships, dealer commitments
+
+Slide 13: Ask
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OLD: $12-15M Series A
+NEW: Flexible based on investor type:
+     • CalPERS: $25-50M for statewide scaling
+     • Carbon Funds: $10-25M FPA (non-dilutive)
+     • Foundations: $5-25M for ESG impact
+     • Use of funds: 50 Tesla Semis, pilot ops, team

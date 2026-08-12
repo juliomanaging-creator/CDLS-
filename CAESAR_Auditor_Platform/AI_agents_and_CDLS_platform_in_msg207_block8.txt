@@ -1,0 +1,7 @@
+Drag penalty: 25,000-50,000 N
+Baseline trailer: 5,000 N
+You've added 5-10× more drag to capture air!
+
+Power cost: 725 kW - 1,450 kW
+Tesla Semi: Only has 1,000 kW peak power
+Your chamber would consume 70-145% of total truck power!

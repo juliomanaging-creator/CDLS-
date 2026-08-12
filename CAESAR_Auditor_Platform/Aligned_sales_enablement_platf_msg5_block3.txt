@@ -1,0 +1,6 @@
+POST   /api/analytics/track              # Track engagement event
+GET    /api/analytics/dealroom/:id       # Get deal room analytics
+GET    /api/analytics/document/:id       # Get document analytics
+GET    /api/analytics/heatmap/:docId/:page # Get page heatmap
+GET    /api/analytics/trends/:dealroomId # Get engagement trends
+GET    /api/analytics/alerts             # Get engagement alerts

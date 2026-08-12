@@ -1,0 +1,5 @@
+1. ✅ Extract archive
+2. ✅ Read README_START_HERE.md (10 minutes)
+3. ✅ Review ARCHIVE_INDEX_FINAL.md (15 minutes)
+4. ✅ Import MASTER_INDEX.md to spreadsheet (5 minutes)
+5. ✅ Review CalPERS pitch deck (1 hour)

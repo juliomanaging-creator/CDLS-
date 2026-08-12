@@ -1,0 +1,22 @@
+IRS Classification: Property (utility token)
+
+Taxable Events:
+1. Earning $HAUL:
+   ├─ Taxable as income when earned
+   ├─ Fair market value on date earned
+   └─ Reported as self-employment income (if dealer) or hobby income
+
+2. Spending $HAUL:
+   ├─ Disposition of property
+   ├─ Capital gain/loss
+   └─ Basis: FMV when earned
+
+Example:
+Earn 10,000 $HAUL for completing hauls
+FMV at earning: $0.10 per token = $1,000 income
+Pay tax: $300 (30% bracket)
+Later spend 10,000 $HAUL on subscription
+FMV at spending: $0.15 per token = $1,500
+Capital gain: $500 ($1,500 - $1,000 basis)
+Additional tax: $75 (15% capital gains)
+Total tax: $375 on $10,000 $HAUL

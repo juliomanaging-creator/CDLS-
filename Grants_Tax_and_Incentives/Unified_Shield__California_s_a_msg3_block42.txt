@@ -1,0 +1,145 @@
+THE PEOPLE OF THE STATE OF CALIFORNIA DO ENACT AS FOLLOWS:
+
+SECTION 1. TITLE
+This act shall be known and may be cited as the "California Universal 
+Coverage Act of 2026."
+
+SECTION 2. FINDINGS AND DECLARATIONS
+The People of California find and declare:
+
+(a) Insurance fragmentation costs California families an average of 
+$2,400 annually compared to integrated coverage.
+
+(b) Eleven percent of Californians lack health insurance, fifteen 
+percent of motorists are uninsured, and twelve percent of homeowners 
+lack adequate property coverage, creating societal costs and personal 
+financial devastation.
+
+(c) Climate change and increasing disaster risk make traditional 
+insurance markets unstable, requiring collective catastrophic risk 
+pooling.
+
+(d) Income-based premium structures ensure universal affordability 
+while maintaining actuarial soundness.
+
+(e) Integration of health, auto, and home coverage produces 
+administrative efficiencies, coordinated risk management, and superior 
+consumer outcomes.
+
+(f) California has constitutional authority and fiscal capacity to 
+establish a state insurance enterprise serving all residents.
+
+SECTION 3. PURPOSE AND INTENT
+The purposes of this act are to:
+
+(a) Establish universal insurance coverage for all California residents;
+(b) Reduce household insurance costs through administrative efficiency;
+(c) Create income-based premium structures ensuring affordability;
+(d) Build catastrophic resilience through collective risk pooling;
+(e) Simplify insurance enrollment and claims processing;
+(f) Improve health, safety, and financial security for all Californians.
+
+SECTION 4. INSURANCE CODE ADDITIONS
+
+[Add new Division 4.5 to Insurance Code]
+
+CHAPTER 1. UNIFIED SHIELD AUTHORITY
+
+Article 1. Establishment and Governance
+Section 12900. Establishment
+Section 12901. Board of Directors
+Section 12902. Powers and Duties
+Section 12903. Executive Officers
+
+Article 2. Coverage Requirements  
+Section 12910. Mandatory Participation
+Section 12911. Essential Coverage (Tier 1)
+Section 12912. Standard Coverage (Tier 2)
+Section 12913. Comprehensive Coverage (Tier 3)
+Section 12914. Exemptions
+
+Article 3. Premium Structure
+Section 12920. Income-Based Pricing
+Section 12921. Risk Adjustment Factors
+Section 12922. Geographic Rating
+Section 12923. Premium Collection
+
+Article 4. Provider and Vendor Networks
+Section 12930. Healthcare Provider Networks
+Section 12931. Auto Repair Networks
+Section 12932. Property Restoration Networks
+Section 12933. Reimbursement Standards
+
+Article 5. Claims and Consumer Protections
+Section 12940. Claims Processing Standards
+Section 12941. Appeals Process
+Section 12942. Language Access
+Section 12943. Unfair Practices Prohibition
+
+Article 6. Financial Management
+Section 12950. Reserves and Capitalization
+Section 12951. Catastrophic Coverage Pool
+Section 12952. Reinsurance
+Section 12953. Audits and Reporting
+
+CHAPTER 2. BOND AUTHORIZATION
+
+Section 12960. General Obligation Bonds
+(a) Bonds authorized: $30,000,000,000
+(b) Purpose: Initial capitalization of Unified Shield Authority
+(c) Repayment: From premium revenue and investment returns
+(d) Maturity: Not exceeding 30 years
+
+CHAPTER 3. REGULATORY COORDINATION
+
+Section 12970. Insurance Commissioner Oversight
+Section 12971. DMHC Coordination
+Section 12972. DMV Integration
+Section 12973. Franchise Tax Board Enforcement
+
+CHAPTER 4. IMPLEMENTATION
+
+Section 12980. Timeline
+(a) Month 1-12: Pilot phase (3 counties)
+(b) Month 12-24: Regional expansion
+(c) Month 24: Mandatory compliance date
+
+Section 12981. Federal Waivers
+Section 12982. Transition Provisions
+Section 12983. Private Insurance Market
+
+SECTION 5. REVENUE AND TAXATION CODE AMENDMENTS
+
+Section 17053.XX. Non-Compliance Penalty
+(a) Any resident who fails to maintain minimum coverage shall pay 
+a penalty of 10% of Modified Adjusted Gross Income.
+(b) Penalty collected by Franchise Tax Board.
+(c) Revenue deposited in Unified Shield fund.
+
+SECTION 6. VEHICLE CODE AMENDMENTS
+
+Section 16020.XX. Proof of Insurance
+Unified Shield coverage satisfies mandatory auto insurance requirements.
+
+SECTION 7. HEALTH AND SAFETY CODE COORDINATION
+
+Section 1399.XXX. Knox-Keene Act  
+Unified Shield Authority deemed licensed health plan for purposes of 
+Knox-Keene Health Care Service Plan Act.
+
+SECTION 8. SEVERABILITY
+If any provision held invalid, remaining provisions remain in effect.
+
+SECTION 9. CONFLICTING MEASURES
+If this initiative receives more affirmative votes than any conflicting 
+measure, this initiative prevails in its entirety.
+
+SECTION 10. AMENDMENT
+This act may be amended by statute passed by 2/3 vote of each house, 
+provided amendments further the purposes stated in Section 3.
+
+SECTION 11. LIBERAL CONSTRUCTION
+This act shall be liberally construed to effectuate its purposes.
+
+SECTION 12. EFFECTIVE DATE
+This act takes effect immediately upon approval by voters.

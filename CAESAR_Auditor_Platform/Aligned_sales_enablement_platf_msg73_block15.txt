@@ -1,0 +1,22 @@
+Structure:
+├─ CDLS builds technology
+├─ Partner (Coinbase, Kraken) handles fiat
+├─ Revenue share agreement
+
+Process:
+1. User deposits USD on Coinbase
+2. Buys $CDLS on Coinbase
+3. Withdraws to CDLS platform
+4. Uses for staking, governance, etc.
+
+Requires:
+✓ Only partnership agreement
+✓ Partner handles compliance
+✓ $100K cost (legal + integration)
+
+Benefit:
+✓ Lowest compliance burden
+✓ Fastest time to market
+✓ Leverage partner's licenses
+
+Timeline: 3-6 months

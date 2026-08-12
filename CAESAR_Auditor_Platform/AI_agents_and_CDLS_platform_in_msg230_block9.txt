@@ -1,0 +1,12 @@
+Component          Steel      Ceramic    Improvement
+─────────────────────────────────────────────────────
+Chamber weight     200 kg     60 kg      70% lighter
+Pressure capacity  10 bar     70 bar     7× higher
+Energy stored      0.88 MJ    6.16 MJ    7× more
+Turbine efficiency 65%        85%        31% better
+Heat loss          19%        12%        37% less
+System efficiency  31%        48.2%      55% better ✅
+─────────────────────────────────────────────────────
+
+Ceramic improves efficiency 55%!
+Weight reduced 70%!

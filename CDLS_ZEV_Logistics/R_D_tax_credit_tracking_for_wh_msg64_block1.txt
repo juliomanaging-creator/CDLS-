@@ -1,0 +1,1 @@
+findstr "retail_average" california_city_pricing.json

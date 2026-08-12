@@ -1,0 +1,41 @@
+Total Supply: 1,000,000,000 $CDLS
+
+Allocation Breakdown:
+
+1. Founding Team & Early Partners: 400,000,000 (40%)
+   ├─ Julio (Managing Partner): 300,000,000 (30%)
+   ├─ Early dealer partners: 80,000,000 (8%)
+   └─ Advisory board: 20,000,000 (2%)
+   Vesting: 1-year cliff, 3-year linear vest
+
+2. Treasury & Ecosystem: 200,000,000 (20%)
+   ├─ Dealer incentives: 100,000,000 (10%)
+   ├─ Platform rewards: 50,000,000 (5%)
+   ├─ Strategic partnerships: 30,000,000 (3%)
+   └─ Emergency reserve: 20,000,000 (2%)
+   Release: Controlled by DAO governance
+
+3. Strategic Partners & OEMs: 150,000,000 (15%)
+   ├─ Ford/GM partnerships: 50,000,000 (5%)
+   ├─ Utility companies (PG&E, SCE): 40,000,000 (4%)
+   ├─ CARB/regulatory alignment: 30,000,000 (3%)
+   └─ Charging infrastructure partners: 30,000,000 (3%)
+   Vesting: 2-year cliff, 2-year linear
+
+4. Team & Future Hires: 100,000,000 (10%)
+   ├─ Current employees: 30,000,000 (3%)
+   ├─ Future hires (option pool): 60,000,000 (6%)
+   └─ Contractor incentives: 10,000,000 (1%)
+   Vesting: 4-year vest with 1-year cliff
+
+5. Public Token Sale: 100,000,000 (10%)
+   ├─ Seed round: 10,000,000 (1%) at $0.04
+   ├─ Private round: 30,000,000 (3%) at $0.045
+   └─ Public round: 60,000,000 (6%) at $0.05
+   Lockup: No lockup (immediate liquidity)
+
+6. Liquidity & Market Making: 50,000,000 (5%)
+   ├─ DEX liquidity pools: 30,000,000 (3%)
+   ├─ CEX market making: 15,000,000 (1.5%)
+   └─ Bridge liquidity: 5,000,000 (0.5%)
+   Status: Locked in smart contracts

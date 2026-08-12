@@ -1,0 +1,3 @@
+Energy source: Battery → Truck motion → "Wind"
+Problem: Creating "wind" costs MORE than turbine captures
+Result: Net energy loss

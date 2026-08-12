@@ -1,0 +1,24 @@
+# 1. Show her the tracker
+rd_tracker --help
+
+# 2. Explain her role allocation
+"You're hired as AI Engineer with 95% R&D allocation. This means 95% of 
+your time should be novel algorithm development, experimentation, and 
+technical problem-solving. Only 5% is meetings, admin, routine tasks."
+
+# 3. Start a practice session together
+rd_tracker start --project AI-001 --name "Onboarding Test"
+
+# 4. Explain Four-Part Test
+"Always ask: What didn't I know in advance? What did I experiment with? 
+Document the uncertainty and experimentation in every session."
+
+# 5. End practice session
+rd_tracker end SESSION_ID \
+  --activity "Learned R&D tracking system, tested session logging" \
+  --uncertainty "Uncertain how to properly document technical activities" \
+  --experiment "Practiced logging with supervisor guidance"
+
+# 6. Set expectations
+"Log daily (5 min at end of day). I review team summaries Fridays. Your 
+R&D % should track to 95%. Questions? #engineering-rd-tracking Slack."

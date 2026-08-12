@@ -1,0 +1,15 @@
+Free Tier: $0 (self-service)
+Starter Tier: $2,000
+- Marketing: $500 (content, ads)
+- Sales: $1,000 (AE time, demo)
+- Onboarding: $500 (CSM time)
+
+Professional Tier: $8,000
+- Marketing: $1,000
+- Sales: $5,000 (longer cycle, multiple stakeholders)
+- Onboarding: $2,000 (custom setup)
+
+Enterprise Tier: $50,000
+- Marketing: $5,000
+- Sales: $35,000 (C-level engagement, RFP process)
+- Onboarding: $10,000 (white glove service)

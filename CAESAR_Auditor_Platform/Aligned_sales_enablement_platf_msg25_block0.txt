@@ -1,0 +1,20 @@
+CDLS Platform/
+├── 01_Executive_Materials/
+│   ├── Executive_Summary.html
+│   ├── Competitive_Advantage_Pitch.html
+│   └── Technology_Roadmap.html
+├── 02_Technical_Specs/
+│   ├── Technical_Specifications.html
+│   ├── Implementation_Roadmap.html
+│   └── ROI_Calculator_Code.html
+├── 03_Investor_Relations/
+│   ├── CalPERS_Email_Templates.html
+│   ├── Demo_Script.html
+│   └── Presentation_Checklist.html
+├── 04_Legal_IP/
+│   ├── IP_Term_Sheet.html
+│   └── Patent_Outline.html
+└── 05_Operations/
+    ├── Master_Dashboard.html
+    ├── Job_Descriptions.html
+    └── Dealer_Onboarding.html

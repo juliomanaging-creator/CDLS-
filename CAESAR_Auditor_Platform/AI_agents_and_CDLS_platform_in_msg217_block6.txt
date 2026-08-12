@@ -1,0 +1,5 @@
+✓ Identify target journals (Nature Physics, Physical Review)
+✓ Structure scientific papers
+✓ Provide citations
+✓ Review for peer-review readiness
+✓ Suggest experimental validation

@@ -1,0 +1,2 @@
+tar -xzf cdls_31_agent_system_FINAL.tar.gz
+cd cdls_31_agent_system_final/

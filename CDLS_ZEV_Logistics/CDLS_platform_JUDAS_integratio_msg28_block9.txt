@@ -1,0 +1,11 @@
+"Does this make sense for [Dealership Name]?
+
+We have 5 founding dealer slots left.
+Deadline: Feb 15.
+
+Can I send you the full package this week?
+
+When can we schedule a follow-up call?"
+
+[GET COMMITMENT LEVEL]
+[SCHEDULE NEXT STEP]

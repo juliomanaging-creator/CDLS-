@@ -1,0 +1,11 @@
+Boundary Layer Control (NOT helicopter lift!)
+
+Plasma actuators: 12 kW → 22.4 kW saved
+Suction fans: 12 kW → 25.4 kW saved
+Air curtain: 10 kW → 8.2 kW saved
+
+Total: 34 kW input → 56 kW saved = +22 kW net!
+
+Range: +103 miles (+29% increase!)
+Investment: $34,000
+ROI: 1.8 years ✅

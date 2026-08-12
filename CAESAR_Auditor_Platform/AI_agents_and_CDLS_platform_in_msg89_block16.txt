@@ -1,0 +1,14 @@
+# Export annual data
+rd_tracker export --year 2026
+team-tracker export-team --year 2026
+claude_tracker export --year 2026
+
+# CPA engagement ($25K):
+- R&D Credit Study (100-150 pages)
+- Form 6765 + 3523 preparation
+- Form 1120 + 100 preparation
+- Audit defense strategy
+
+# Review drafts (2 weeks)
+# File electronically by March 15
+# Store all docs (7-year retention)

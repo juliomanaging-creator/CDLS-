@@ -1,0 +1,19 @@
+Please review the attached actuarial report and opine on:
+
+1. Methodology appropriateness
+   - Are actuarial standards of practice followed?
+   - Are assumptions reasonable and well-supported?
+   
+2. Data sufficiency
+   - Is the data sources adequate for conclusions drawn?
+   - Are there material gaps?
+   
+3. Conclusions
+   - Do findings logically follow from analysis?
+   - Are limitations appropriately disclosed?
+   
+4. Overall assessment
+   - Does this meet standards for regulatory submission?
+   - Would you rely on this analysis for policy decisions?
+
+Deliverable: 5-page memorandum with your professional opinion.

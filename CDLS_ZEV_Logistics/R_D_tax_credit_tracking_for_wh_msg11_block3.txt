@@ -1,0 +1,19 @@
+ev-cost-platform/
+├── 📄 server.js                 # Main Node.js server
+├── 📄 package.json              # Dependencies list
+├── 📄 README.md                 # Full documentation
+├── 📄 SECURITY.md              # Security guide
+├── 📄 QUICKSTART.md            # 5-minute setup
+├── 📄 .env.example             # Configuration template
+│
+├── 📁 controllers/             # 6 controller files
+├── 📁 routes/                  # 6 route files
+├── 📁 middleware/              # 2 middleware files
+│
+└── 📁 public/                  # Frontend
+    ├── index.html              # Main page
+    ├── css/main.css           # Styles (600+ lines)
+    └── js/                     # JavaScript files
+        ├── main.js            # Core logic
+        ├── api.js             # API wrapper
+        └── ...

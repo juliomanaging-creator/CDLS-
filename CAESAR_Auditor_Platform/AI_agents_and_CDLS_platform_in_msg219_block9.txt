@@ -1,0 +1,3 @@
+✓ Built on coastlines (ocean = cold sink)
+✓ Cooling towers (passive, no fans)
+✓ Your principle: Reduce sink energy cost!

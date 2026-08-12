@@ -1,0 +1,5 @@
+# View Sacramento diesel price
+findstr "sacramento" california_city_pricing.json | findstr "retail_average"
+
+# You should see:
+# "retail_average": 4.82,

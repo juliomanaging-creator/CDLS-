@@ -1,0 +1,10 @@
+For: Longitudinal beams
+Process:
+1. Apply pre-impregnated SiC tape to beam
+2. Vacuum bag to remove air
+3. Cure at 180°C
+
+Coverage: 40 ft × 6" wide
+Weight: +15 lbs total
+Cost: $2,000
+Benefit: 40% strength increase, 30% less deflection

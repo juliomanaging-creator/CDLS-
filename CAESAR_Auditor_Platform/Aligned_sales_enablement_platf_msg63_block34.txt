@@ -1,0 +1,10 @@
+Probability: Medium
+Impact: High
+Mitigation:
+├─ Diversify to non-LCFS states
+├─ Monitor legislative activity
+├─ Engage CARB via trade associations
+└─ Build federal program advocacy
+
+Current Status: Green
+Action: None required (monitoring)

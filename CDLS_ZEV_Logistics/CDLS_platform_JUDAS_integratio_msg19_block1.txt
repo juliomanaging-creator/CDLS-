@@ -1,0 +1,9 @@
+cd Iron_Halo_Vault/05_JURE_DEPLOYMENT
+python3 jure.py
+
+# Test these commands:
+jure> help
+jure> daily 1
+jure> kb docker
+jure> playbook EP002
+jure> status

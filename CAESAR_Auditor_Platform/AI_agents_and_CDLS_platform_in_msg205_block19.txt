@@ -1,0 +1,4 @@
+Approach: PREVENT air turbulence (opposite of capturing)
+Result: Reduce drag from 5,000 N to 4,250 N (-15%)
+Range gain: +52 miles
+Cost: $7K, ROI: 9 months ✅

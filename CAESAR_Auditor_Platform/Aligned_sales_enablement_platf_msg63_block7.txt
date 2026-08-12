@@ -1,0 +1,46 @@
+Current Team:
+
+Julio [Last Name] - CEO & Managing Partner
+├─ 14 years automotive finance
+├─ Built dealer network (20 partners)
+├─ Secured CalPERS $5M commitment
+└─ Vision: $1B+ category leader
+
+[CFO Name] - CFO (Hired Q4 2025)
+├─ Ex-Goldman Sachs  
+├─ Built financial model
+└─ CalPERS relationship owner
+
+[CTO Name] - CTO (Hiring Q1 2026)
+├─ Series A use case #1
+├─ Will build platform to 1,000 dealers
+└─ Target: Ex-Uber, Flexport, Samsara
+
+Key Hires Needed (Series A Funds):
+
+VP of Product ($250K + 2% equity)
+├─ Build SaaS platform
+├─ Own product roadmap
+└─ Drive dealer adoption
+
+VP of Sales ($200K + 1.5% equity)
+├─ Scale from 20 to 300 dealers
+├─ Build sales playbook
+└─ CAC optimization
+
+VP of Operations ($180K + 1% equity)
+├─ Expand from CA to OR/WA
+├─ Fleet management
+└─ Charging infrastructure rollout
+
+Head of Data Science ($220K + 1% equity)
+├─ Build predictive models
+├─ Route optimization algorithms
+└─ Carbon credit timing models
+
+Board Advisors (Recruiting):
+
+Auto Industry: [Former CNCDA President]
+Technology: [Former Uber Freight CTO]
+Climate Tech: [Former CARB Board Member]
+VC/Scaling: [Sequoia Operating Partner]

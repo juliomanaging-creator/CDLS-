@@ -1,0 +1,4 @@
+Note: This analysis is performed using Claude Sonnet 4.5. 
+While we can identify whether YOUR AI system meets AB 2013 
+requirements, this analysis tool itself has incomplete 
+training data disclosure and may not fully comply with AB 2013.

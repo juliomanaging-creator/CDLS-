@@ -1,0 +1,17 @@
+Year 3 (2028):
+- 500 dealers × $499 × 12 = $2.99M
+- 50 dealers × $1,999 × 12 = $1.20M
+- 10 dealers × $5,000 × 12 = $600K
+Total SaaS: $4.79M ARR
+
+Year 5 (2030):
+- 500 dealers × $499 × 12 = $2.99M
+- 300 dealers × $1,999 × 12 = $7.20M
+- 100 dealers × $5,000 × 12 = $6.00M
+Total SaaS: $16.19M ARR
+
+Year 7 (2032):
+- 1,000 dealers × $499 × 12 = $5.99M
+- 500 dealers × $1,999 × 12 = $11.99M
+- 200 dealers × $5,000 × 12 = $12.00M
+Total SaaS: $29.98M ARR

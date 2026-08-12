@@ -1,0 +1,13 @@
+TIMING: IF Legislature passes acceptable version of Unified Shield
+
+ACTION: Withdraw initiative from ballot
+
+MESSAGE: "The Legislature listened to Californians. We achieved 
+universal coverage through the legislative process. We withdraw 
+our initiative with gratitude to legislative leaders who made 
+this possible."
+
+EFFECT: 
+- Legislators get credit for achievement
+- Avoids expensive ballot fight
+- Initiative qualification wasn't wasted - it secured legislative action

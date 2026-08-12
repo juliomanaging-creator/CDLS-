@@ -1,0 +1,5 @@
+# Stay in C:\Projects
+cd C:\Projects
+
+# Extract the new download
+tar -xf "C:\Users\%USERNAME%\Downloads\CA-Dealer-Logistics-COMPLETE-2025-CURRENT.zip"

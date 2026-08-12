@@ -1,0 +1,29 @@
+Target Metrics:
+
+Price:
+├─ Launch: $0.05
+├─ Day 30: $0.07-$0.10
+├─ Day 60: $0.10-$0.15
+└─ Day 90: $0.15-$0.25 (3-5x)
+
+Market Cap:
+├─ Launch: $5M (100M circulating)
+├─ Day 90: $50M-$100M ($0.15-$0.25 price)
+└─ FDV: $150M-$250M (fully diluted)
+
+Volume:
+├─ Week 1: $1M/day
+├─ Week 4: $2M/day
+├─ Week 8: $3M/day
+└─ Week 12: $5M/day
+
+Liquidity:
+├─ DEX: $20M TVL (Uniswap, Curve)
+├─ CEX: $10M depth (±2% from mid)
+└─ Total: $30M liquid
+
+Holders:
+├─ Week 1: 1,000
+├─ Week 4: 2,000
+├─ Week 8: 3,500
+└─ Week 12: 5,000+

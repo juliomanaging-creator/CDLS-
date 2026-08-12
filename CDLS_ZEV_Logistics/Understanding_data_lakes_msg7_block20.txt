@@ -1,0 +1,11 @@
+# Ingest data (automatically compresses)
+python3 cli.py ingest sales.csv --name jan_sales
+
+# Query with SQL
+python3 cli.py query "SELECT * FROM jan_sales WHERE revenue > 50000"
+
+# Check what you have
+python3 cli.py list
+
+# See storage savings
+python3 cli.py stats

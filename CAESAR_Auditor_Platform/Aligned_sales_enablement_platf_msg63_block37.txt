@@ -1,0 +1,10 @@
+Probability: Low
+Impact: High
+Mitigation:
+├─ Path to profitability (if needed, cut to breakeven)
+├─ Diverse investor base (climate, logistics, SaaS)
+├─ Strategic investors (OEMs, utilities)
+└─ Debt markets (asset-backed lending)
+
+Current Status: Green
+Action: Start Series B prep 6 months early

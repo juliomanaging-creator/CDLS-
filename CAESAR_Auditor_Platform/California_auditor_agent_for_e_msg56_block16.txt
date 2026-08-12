@@ -1,0 +1,10 @@
+# Extract package
+tar -xzf SALSA_Complete_v2.0_FINAL.tar.gz
+cd SALSA_Complete_v2.0
+
+# Run demo (shows exactly what dealers see)
+python3 demo_launch.py
+
+# Or run on sample data
+export SALSA_DEV_MODE=1
+python3 core/engine.py data_input/sample_sales.csv

@@ -1,0 +1,5 @@
+Energy IN (to vibrate mirror): 6.28 nanowatts
+Energy OUT (photons created): 2.1 femtowatts
+
+Efficiency: 0.000033%
+(Input is 3 MILLION times larger than output)

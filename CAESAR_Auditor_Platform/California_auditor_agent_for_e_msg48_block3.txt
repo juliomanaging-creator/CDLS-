@@ -1,0 +1,14 @@
+Your Current Flow:
+1. Drop CSV in data_input/
+2. Run python app.py
+3. Get text report
+
+Enhanced Flow:
+1. Drop CSV in data_input/
+2. Run python app_enhanced.py
+3. Get:
+   - Text report (your original)
+   - PDF report (professional)
+   - DMV compliance check
+   - IRS compliance check
+   - Overall score (weighted)

@@ -1,0 +1,19 @@
+Input: "What do you pay per trip?" ($850)
+Input: "How many trips?" (25)
+Input: "Current capacity?" (8 cars)
+
+Calculator Logic:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Model:
+  25 trips × $850 = $21,250/year
+  Total capacity: 200 cars (25 × 8)
+
+CDLS Model:
+  25 trips × $850 = $21,250/year
+  Total capacity: 225 cars (25 × 9)
+
+HAULING COST: Same
+CAPACITY GAIN: 25 extra cars × $106 = $2,650
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Plus: Carbon credits, capital avoidance, etc.

@@ -1,0 +1,22 @@
+Launch Trading:
+- Uniswap: Decentralized exchange, day 1 liquidity
+- Coinbase: Centralized exchange, institutional buyers
+- Binance: Global retail access
+
+Initial Liquidity Pool:
+- $5M from treasury
+- Creates $CDLS / ETH and $CDLS / USDC pairs
+- Enables 24/7 trading immediately
+
+Price Discovery:
+- Market cap = valuation (transparent)
+- If $CDLS trades at $0.10 → $1B valuation
+- If $CDLS trades at $1.00 → $10B valuation
+- Real-time price feedback
+
+Your Liquidity:
+- You hold 400M tokens (40%)
+- At $0.10: Your stake = $40M (liquid!)
+- At $1.00: Your stake = $400M
+- Can sell 5% per year for personal liquidity
+- No waiting for exit event

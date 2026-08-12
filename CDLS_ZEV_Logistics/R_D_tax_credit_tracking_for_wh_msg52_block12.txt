@@ -1,0 +1,4 @@
+cd C:\Projects
+rmdir /s /q ev-cost-platform
+
+# Confirm with "Y" when prompted

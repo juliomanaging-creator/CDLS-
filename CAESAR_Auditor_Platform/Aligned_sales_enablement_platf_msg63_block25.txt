@@ -1,0 +1,17 @@
+Asset: 25 depot charging locations (California)
+Chargers: 100 total (150kW DC fast chargers)
+Revenue: $4M/year (electricity sales + rent)
+EBITDA: $2M
+Valuation: $24M (12x EBITDA, infrastructure asset)
+
+Strategic Rationale:
+✓ Immediate scale (25 locations vs. building from scratch)
+✓ Existing utility agreements
+✓ Grid interconnection permits (valuable, slow to obtain)
+
+Post-Acquisition:
+- Install battery storage (2 MWh per location)
+- Increase utilization (add CDLS fleet + third parties)
+- EBITDA improvement: $2M → $3.5M
+- Value: $42M at 12x
+- ROI: 75%

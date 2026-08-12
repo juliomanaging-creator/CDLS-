@@ -1,0 +1,15 @@
+□ File Certificate of Incorporation with Delaware
+   - Name: California Dealer Logistics Solutions, Inc.
+   - Or: CDLS Platform, Inc.
+   - Registered Agent: Harvard Business Services ($50/yr)
+   - Fee: $89 (state) + $50 (agent) = $139
+
+□ Obtain new EIN from IRS
+   - Online: https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online
+   - Free
+   - Takes 5 minutes
+
+□ File Foreign Corporation Registration in California
+   - Form S&DC S-100 (Statement of Foreign Corporation)
+   - Fee: $100
+   - Required within 90 days of doing business in CA

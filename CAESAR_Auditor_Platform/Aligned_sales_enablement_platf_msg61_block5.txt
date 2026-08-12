@@ -1,0 +1,12 @@
+Build 10 regional EV service centers:
+- Cost: $2M each = $20M total
+- Service your own fleet: 2,000 vehicles
+- Service other dealers' EVs: 1,000 vehicles (fee-for-service)
+
+Economics:
+Internal fleet: 2,000 × $8K = $16M (cost savings)
+External revenue: 1,000 × $10K = $10M
+Total value: $26M EBITDA
+
+At 10x multiple:
+Service business value: $260M

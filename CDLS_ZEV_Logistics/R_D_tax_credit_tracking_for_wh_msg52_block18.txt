@@ -1,0 +1,6 @@
+OLD (Dec 2024):           NEW (Dec 2025):
+state_average: 4.62   →   state_average: 4.862
+fuel_cost_per_mile: 0.71 → fuel_cost_per_mile: 0.75
+total_operating: 1.54 →   total_operating: 1.63
+annual_costs: 192,500 →   annual_costs: 203,750
+savings: 85,000 →         savings: 96,250

@@ -1,0 +1,5 @@
+# Functions:
+✓ arima_transaction_forecast() - Auto ARIMA
+✓ prophet_forecast() - Facebook Prophet
+✓ budget_expenditure_forecast() - ETS + comparison
+✓ generate_forecast_report() - Publication charts

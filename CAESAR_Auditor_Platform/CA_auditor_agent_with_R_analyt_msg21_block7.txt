@@ -1,0 +1,22 @@
+Access to PHI Requires:
+
+1. HIPAA-Authorized Role
+   └─ Special designation by Privacy Officer
+
+2. Current Training (within 12 months)
+   ✓ HIPAA Privacy Rule
+   ✓ HIPAA Security Rule
+   ✓ Security Awareness
+   ✓ Data handling procedures
+
+3. Business Need (documented)
+   └─ "Investigating suspected Medi-Cal fraud"
+
+4. Supervisor Approval (for certain data)
+   └─ Bulk exports, cross-department access
+
+5. Multi-Factor Authentication
+   └─ State ID + Authenticator app
+
+6. All Access Logged (immutable)
+   └─ Who, what, when, why - permanently recorded

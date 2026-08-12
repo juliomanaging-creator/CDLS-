@@ -1,0 +1,5 @@
+Starter: $2,000 CAC ÷ $399/month = 5 months
+Professional: $8,000 CAC ÷ $1,666/month = 4.8 months
+Enterprise: $50,000 CAC ÷ $10,000/month = 5 months
+
+Target: <12 months (we're at 5 months ✅)

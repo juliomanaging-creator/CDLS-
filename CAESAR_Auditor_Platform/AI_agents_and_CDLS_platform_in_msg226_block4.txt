@@ -1,0 +1,3 @@
+Baseline: $15,000/year (18 tires × 50K miles each)
+With torque vectoring: $12,000/year (20% reduction)
+Your target: $1,500/year (90% reduction!)

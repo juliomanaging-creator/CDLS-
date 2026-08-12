@@ -1,0 +1,14 @@
+OPERATIONAL LAYER (Physical Proof)
+    ├─ GPS telemetry from Tesla Semi
+    ├─ Load manifest (9 vehicles per trailer)
+    └─ Driver digital signature
+
+FINANCIAL LAYER (Payment Proof)
+    ├─ $HAUL token settlement
+    ├─ USD payment clearing
+    └─ Carbon credit ($CARBON) minting
+
+ENVIRONMENTAL LAYER (Energy Proof)
+    ├─ CESAR controller discharge data
+    ├─ CAISO/SMUD grid settlement
+    └─ Battery state-of-charge delta

@@ -1,0 +1,39 @@
+Employee: "Hey CDLS U, I'm nervous about loading my first Lamborghini 
+          tomorrow. Can you help me practice?"
+
+CDLS U: "Absolutely! Let's run through the Lamborghini Huracán loading 
+        procedure. This is tricky because of the super low ground 
+        clearance (3.7 inches!).
+
+        Want to:
+        A) Interactive quiz (test knowledge)
+        B) VR simulation (practice virtually) ← RECOMMENDED
+        C) Watch expert video
+        D) Read manual
+
+        What works best for you?"
+
+Employee: "Let's do VR!"
+
+CDLS U: "Perfect! Launching simulation...
+        
+        You're at the Tesla Semi. The Huracán is in front of you.
+        First: What's the first thing you check?
+        
+        A) Tire pressure
+        B) Ground clearance approach angle ← CORRECT!
+        C) Weight distribution
+        D) Fuel level"
+
+Employee: "B!"
+
+CDLS U: "CORRECT! ✅ +10 XP
+        
+        The Huracán has only 3.7 inches clearance. Our ramp is 8 degrees.
+        Math: You need 26 feet approach distance or you'll scrape the 
+        front splitter.
+        
+        Pro tip from Maria (5-year vet): 'I always add 5 feet to be safe. 
+        Better slow than a $20K repair bill!'
+        
+        Ready for step 2?"

@@ -1,0 +1,9 @@
+cd SALSA_Complete_v2.0
+python create_deal_jackets.py
+
+# Try the wizard:
+1. Import auction CSV (use examples/auction_purchases_template.csv)
+2. Create manual vehicle
+3. Add parts receipt
+4. View inventory
+5. See the magic!

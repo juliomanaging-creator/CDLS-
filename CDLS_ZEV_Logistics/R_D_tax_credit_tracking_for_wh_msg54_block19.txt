@@ -1,0 +1,1 @@
+findstr "state_average" carrier_cost_data.json

@@ -1,0 +1,8 @@
+REM Create frontend structure
+mkdir frontend
+mkdir frontend\src
+mkdir frontend\src\services
+mkdir frontend\src\components
+mkdir frontend\public
+
+REM Now manually copy files to these locations using Windows Explorer

@@ -1,0 +1,2 @@
+Press Ctrl+Shift+R in your browser
+   (Hard refresh to clear cache)

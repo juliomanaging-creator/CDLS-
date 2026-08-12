@@ -1,0 +1,11 @@
+"Unlike traditional trucking companies that simply pass through IRS-compliant 
+mileage rates, CDLS operates as a technology-enabled logistics platform. 
+This allows us to:
+
+1. Charge market rates ($2.66/mile) while dealers capture full deductions
+2. Layer R&D tax credits on our software development (~$100K/year)
+3. Accelerate EV depreciation through Section 179 ($300K immediate)
+4. Capture ITC credits on charging infrastructure (30% of CapEx)
+
+This creates a 'triple arbitrage' that traditional haulers cannot access, 
+resulting in effective EBITDA margins of 22-28% vs. industry standard of 8-12%."

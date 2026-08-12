@@ -1,0 +1,44 @@
+To: Prof. Sasha von Meier <vonmeier@berkeley.edu>
+CC: ciee@berkeley.edu
+Subject: Technical Validation Request: HTS REBCO Kinetic Grid Inertia for CAHSRA
+
+Dear Prof. von Meier,
+
+I am writing on behalf of California Dealer Logistics Solutions (CDLS) 
+regarding a novel kinetic energy storage architecture proposed for the 
+California High-Speed Rail Authority.
+
+BACKGROUND:
+CAHSRA currently plans lithium-ion BESS for traction energy recovery. 
+However, BESS cannot accept the charge rate generated during 220mph 
+braking (8-12 MW flux) without thermal runaway risk.
+
+OUR PROPOSAL:
+HTS REBCO kinetic energy hubs with θ-TaN diamagnetic containment that achieve:
+• 25% traction recovery (vs 12% for BESS)
+• 98.5% round-trip efficiency (vs 85-92% for BESS)  
+• Zero footprint (Siemens Mireo bogie integration)
+• 300,000 residential nodes for grid synthetic inertia
+
+REQUEST FOR CIEE VALIDATION:
+1. θ-TaN safety certification under DOE protocols
+2. Grid inertia modeling for distributed kinetic storage
+3. OpenADR integration verification for SMUD pilot
+
+TIMELINE:
+• Validation needed: March 10, 2026
+• CAHSRA board decision: March 31, 2026
+• Budget available: $150K for validation study
+
+Would you be available for a 30-minute technical briefing in the next two weeks?
+
+Best regards,
+Julio [Your Last Name]
+CEO & Managing Partner
+California Investment Auto, LP
+[Phone] | [Email]
+
+Attachments:
+- CAHSRA_KES_Berkeley_Strategy.pdf
+- CAHSRA Track & Systems Budget Analysis
+- 30-Year Financial Comparison

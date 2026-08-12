@@ -1,0 +1,139 @@
+SCENARIO: Daily Check Detects LinkedIn Profile Change
+═══════════════════════════════════════════════════════
+
+6:00 AM: OpSec Guardian runs daily cycle
+         Tests LinkedIn profile
+
+6:01 AM: 🚨 ALERT DETECTED
+         Julio Umanzor's LinkedIn now shows:
+         "Founder & CEO, California Dealer Logistics Solutions"
+         (was previously: "Technology Consultant")
+
+6:02 AM: OpSec Guardian sends SMS to Julio:
+         "URGENT: LinkedIn shows CDLS. Fix immediately."
+
+6:03 AM: OpSec Guardian sends knowledge to agents:
+
+TO: Technical Infrastructure Agent
+───────────────────────────────────────────────────────
+SUBJECT: [KNOWLEDGE REINFORCEMENT] LinkedIn Leak - Root Cause
+
+ROOT CAUSE ANALYSIS:
+LinkedIn updated its "headline inference" algorithm on Jan 27, 2026.
+New algo automatically updates headlines based on recent activity.
+
+Julio likely:
+1. Viewed multiple CDLS employee profiles
+2. LinkedIn inferred connection
+3. Auto-updated headline to show CDLS
+
+LESSON LEARNED:
+Private mode browsing is INSUFFICIENT.
+LinkedIn tracks via:
+- Profile views
+- Search history
+- Time spent on company pages
+- Message patterns
+
+NEW PROTOCOL:
+1. NEVER browse LinkedIn while logged in as personal account
+2. Use CEO's LinkedIn account to view CDLS profiles
+3. Or use LinkedIn Sales Navigator (separate account)
+4. Add to daily checks: Verify headline hasn't auto-updated
+
+IMPLEMENTATION:
+Technical Infrastructure Agent should:
+☐ Update LinkedIn privacy protocol document
+☐ Add "LinkedIn headline check" to automated daily tests
+☐ Document new algorithm behavior for future reference
+
+This knowledge has been integrated into Standard Operating
+Procedures. Please acknowledge receipt.
+
+Knowledge Base Module #2 ("LinkedIn Privacy") has been updated.
+───────────────────────────────────────────────────────
+
+TO: CEO Management Agent
+───────────────────────────────────────────────────────
+SUBJECT: [PROTOCOL UPDATE] LinkedIn Team Member Viewing
+
+NEW RISK IDENTIFIED:
+LinkedIn's new algorithm infers connections from profile viewing
+patterns. This affects CEO as well.
+
+CEO PROTOCOL UPDATE:
+When CEO wants to view CDLS team member profiles:
+✅ DO use CEO's official CDLS account
+❌ DON'T use personal LinkedIn
+❌ DON'T view from Julio's account (never)
+
+TRAINING NEEDED:
+At next CEO check-in, reinforce:
+- Julio Umanzor's LinkedIn should NEVER mention CDLS
+- If CEO sees Julio's LinkedIn showing CDLS → Alert immediately
+- LinkedIn auto-updates are real threat → Vigilance required
+
+This protocol update has been added to CEO onboarding checklist
+for future hires.
+───────────────────────────────────────────────────────
+
+6:05 AM: Julio fixes LinkedIn (back to "Technology Consultant")
+
+6:06 AM: OpSec Guardian verifies fix
+         LinkedIn profile: ✅ CLEAN
+
+6:30 AM: OpSec Guardian sends to all agents:
+
+TO: All Agents
+───────────────────────────────────────────────────────
+SUBJECT: [CASE STUDY] LinkedIn Auto-Update Incident - Resolved
+
+INCIDENT SUMMARY:
+Time: 6:01 AM PST
+Detection: OpSec Guardian daily cycle
+Issue: LinkedIn auto-updated Julio's headline to show CDLS
+Response Time: 5 minutes (alert to fix)
+Resolution: Julio manually changed headline back
+Status: RESOLVED ✅
+
+KEY TAKEAWAYS FOR ALL AGENTS:
+1. Social media platforms actively work against privacy
+   - They WANT to surface connections
+   - Algorithms constantly evolving to infer relationships
+   - Manual vigilance required
+
+2. Automation is essential
+   - Daily checks caught this within 12 hours of change
+   - Without automation: Could have stayed weeks/months
+   - Manual monthly checks: INSUFFICIENT
+
+3. Response protocols work
+   - SMS alert got immediate attention
+   - 5-minute response time
+   - Issue resolved before 99% of people saw it
+
+4. Knowledge reinforcement is valuable
+   - Technical Agent now monitors for this specific threat
+   - CEO Agent updated protocols
+   - Future incidents less likely
+
+UPDATED THREAT MODEL:
+Social media platforms are ACTIVE THREAT (not passive risk)
+- LinkedIn: High threat (professional network)
+- Facebook/Twitter: Medium threat (personal networks)
+- Instagram: Low threat (photo-focused)
+
+All agents: Please integrate this lesson into your protocols.
+
+OpSec Guardian has updated Knowledge Base Module #2.
+All agents have access to updated procedures.
+
+Questions? Contact OpSec Guardian support.
+───────────────────────────────────────────────────────
+
+7:00 AM: Daily report sent to Julio includes:
+         - Incident timeline
+         - Resolution confirmation
+         - Lessons learned
+         - All agents notified
+         - Current anonymity score: 89/100 (temporary dip, recovered to 90/100 within hours)

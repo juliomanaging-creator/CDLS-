@@ -1,0 +1,9 @@
+cd C:\Projects\ev-cost-platform\data\sample-data
+
+# View the first 20 lines of carrier cost data
+more +1 carrier_cost_data.json | findstr "created_date data_period data_as_of"
+
+# You should see:
+# "created_date": "2025-12-17",
+# "data_period": "December 2025",
+# "data_as_of": "December 8-16, 2025 (Current Week)",

@@ -1,0 +1,3 @@
+✓ Cold aisle containment
+✓ Free cooling (outside air in winter)
+✓ Your principle: Lower T_cold when possible!

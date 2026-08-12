@@ -1,0 +1,9 @@
+SUMMARY:
+• Total Transactions (7d): 1,247
+• Flagged for Review: 23
+• Critical Exceptions: 2
+• Average Integrity Score: 96.1%
+
+⚠️ IMMEDIATE ACTION REQUIRED: 2 critical exceptions detected.
+
+Full analysis attached as PDF.

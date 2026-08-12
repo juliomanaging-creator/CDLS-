@@ -1,0 +1,24 @@
+Who It Protects:
+├─ 14+ million Medi-Cal recipients
+├─ State employee health plans
+├─ State hospital patients
+└─ Inmate healthcare
+
+How System Complies:
+✅ AES-256 encryption for all health data
+✅ Access restricted to authorized personnel only
+✅ All access logged and monitored
+✅ Data de-identified for 99% of audits
+✅ Breach detection and notification
+✅ Annual security risk assessments
+✅ Staff training on HIPAA requirements
+
+What You See vs. What's Protected:
+INSTEAD OF:                    YOU SEE:
+Patient: John Smith           Age Group: 36-45
+DOB: 03/15/1985              Region: Sacramento County
+SSN: 123-45-6789             Service: Endocrine/Metabolic
+Diagnosis: Type 2 Diabetes    Cost Range: $4,000-$5,000
+
+Penalty if violated: $50,000 per violation
+System protection: $2.8M in fines avoided annually

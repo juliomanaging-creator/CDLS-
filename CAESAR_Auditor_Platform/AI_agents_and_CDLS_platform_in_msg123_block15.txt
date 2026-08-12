@@ -1,0 +1,5 @@
+# Test with CalPERS term sheet
+python main.py \
+  --agent document_drafting \
+  --action generate_term_sheet \
+  --params '{"series": "B", "investment_amount": 50000000, "pre_money_valuation": 200000000, "investor_name": "CalPERS", "carbon_allocation": true, "carbon_percentage": 20}'

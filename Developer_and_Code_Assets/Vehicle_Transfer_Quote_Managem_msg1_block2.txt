@@ -1,0 +1,15 @@
+// RESTful API endpoints
+/api/v1/quotes
+├── POST /create                 // Create new quote request
+├── GET /{quoteId}              // Get quote details
+├── PUT /{quoteId}/update       // Update quote information
+└── GET /{quoteId}/status       // Get current status
+
+/api/v1/documents
+├── POST /{quoteId}/upload      // Upload document
+├── GET /{quoteId}/documents    // List all documents
+└── DELETE /{documentId}        // Remove document
+
+/api/v1/notifications
+├── POST /send                  // Send status update
+└── GET /{quoteId}/history     // Get notification history

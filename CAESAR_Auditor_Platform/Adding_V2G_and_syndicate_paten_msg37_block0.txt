@@ -1,0 +1,8 @@
+US GRID TOPOLOGY:
+
+Western Interconnection        Eastern Interconnection
+(CAISO - California)           (NYISO - New York)
+        |                              |
+        |    NO PHYSICAL CONNECTION    |
+        |    DIFFERENT FREQUENCIES     |
+        |    SEPARATE MARKETS          |

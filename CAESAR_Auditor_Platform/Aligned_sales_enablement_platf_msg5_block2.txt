@@ -1,0 +1,31 @@
+engagement_events
+- id (BIGSERIAL, PK)
+- dealroom_id (FK)
+- user_id (FK - investor user)
+- event_type (ENUM: view, download, share, time_spent, scroll_depth)
+- entity_type (ENUM: document, section, calculator, page)
+- entity_id (UUID)
+- metadata (JSONB - page_number, scroll_percentage, etc.)
+- duration_seconds (INTEGER - for time_spent events)
+- timestamp (TIMESTAMP WITH TIME ZONE)
+- session_id (UUID)
+- ip_address (INET)
+- user_agent (TEXT)
+
+engagement_scores
+- dealroom_id (FK, PK)
+- calculated_at (TIMESTAMP)
+- overall_score (INTEGER 0-100)
+- document_engagement_score (INTEGER)
+- calculator_engagement_score (INTEGER)
+- communication_score (INTEGER)
+- trend (ENUM: increasing, stable, decreasing)
+- risk_level (ENUM: low, medium, high)
+- insights (JSONB - array of insight objects)
+
+heatmaps
+- id (UUID, PK)
+- document_id (FK)
+- page_number (INTEGER)
+- heatmap_data (JSONB - x,y coordinates with intensity)
+- generated_at (TIMESTAMP)

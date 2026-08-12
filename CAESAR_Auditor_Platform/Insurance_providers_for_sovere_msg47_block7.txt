@@ -1,0 +1,23 @@
+TIME REQUIRED: 10 months total
+COST: $326K Year 1 (saved $165K by starting CEO search in Month 6)
+
+TODAY (65 minutes):
+☐ Call Wyoming trust attorney: (307) 632-2926
+☐ Create Twilio account + buy Sacramento number
+☐ Launch AWS EC2 for FreeSWITCH
+☐ Email 3 executive recruiters
+
+WEEK 1:
+☐ Trust formation begins (attorney handles)
+☐ VoIP system setup (follow guide)
+☐ CEO candidate pipeline building
+
+MONTH 1 END:
+☐ Trust formed ✅
+☐ Phone system operational ✅
+☐ 10+ CEO candidates identified ✅
+☐ Anonymity: 20/100 (foundation laid)
+
+MONTH 10:
+☐ CEO operational, Julio in background
+☐ Anonymity: 90/100 achieved ✅

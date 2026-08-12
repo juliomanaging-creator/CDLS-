@@ -1,0 +1,13 @@
+Specification:
+├─ Time-locked token distribution
+├─ Features:
+│   ├─ Multiple vesting schedules (team, dealers, partners)
+│   ├─ Cliff periods (1 year for founders, 6 months for dealers)
+│   ├─ Linear vesting (post-cliff)
+│   ├─ Revocable (if employment terminated)
+│   ├─ Claim mechanism (users pull their tokens)
+│   └─ Admin controls (add/remove beneficiaries)
+
+Complexity: Medium
+Estimated Hours: 100
+Reference: OpenZeppelin VestingWallet, TokenVesting

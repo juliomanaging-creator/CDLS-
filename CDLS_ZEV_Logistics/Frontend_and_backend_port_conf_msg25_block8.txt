@@ -1,0 +1,8 @@
+# Quick fix - try this first
+npm audit fix
+
+# If it says "requires manual review", you can ignore for now
+# since you're in development, not production
+
+# Just verify app still works
+npm start

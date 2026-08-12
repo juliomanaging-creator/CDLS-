@@ -1,0 +1,22 @@
+Probability: 30%
+Impact: Medium (harder to raise, lower valuations)
+
+Triggers:
+├─ Bitcoin drops below $50K
+├─ Regulatory crackdown (US or global)
+└─ Macro recession
+
+Mitigation:
+✓ Launch in bull market (Q2 2026)
+✓ Strong fundamentals (real revenue)
+✓ Diversified funding (not crypto-only)
+✓ Conservative burn rate
+
+Response Plan:
+1. Extend runway (cut non-essential spend)
+2. Focus on revenue (profitable growth)
+3. Delay Series A (if market down)
+4. Continue building (ignore market noise)
+5. Opportunistic M&A (acquire distressed assets)
+
+Budget Reserve: $500K (extend runway 6 months)

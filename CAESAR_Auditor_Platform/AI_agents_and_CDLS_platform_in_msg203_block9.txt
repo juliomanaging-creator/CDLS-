@@ -1,0 +1,9 @@
+Baseline drag: 5,000 N → Range: 350 miles
+With turbine: 5,000 N + 2,907 N = 7,907 N (58% more drag!)
+
+New range calculation:
+- Energy consumption increases 39%
+- Range DECREASES from 350 miles to 251 miles
+- You LOSE 99 miles of range!
+
+Your "free energy" turbine makes you go 28% LESS far!

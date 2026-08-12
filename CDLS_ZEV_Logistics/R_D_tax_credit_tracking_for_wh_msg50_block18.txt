@@ -1,0 +1,5 @@
+Diesel: $139.04 per trip
+EV:     $73.36 per trip
+━━━━━━━━━━━━━━━━━━━━━━━━
+SAVINGS: $65.68 per trip (47%)
+Annual: $68,134 (520 trips)

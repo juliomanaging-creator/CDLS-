@@ -1,0 +1,8 @@
+Your honeycomb: 5mm cells
+Casimir needs: <100 nanometers (0.0001mm)
+Gap: 50,000× too large
+
+Casimir force scales as 1/distance⁴
+Your force: Base force ÷ (50,000)⁴ = Base ÷ 6.25×10¹⁸
+
+Result: Essentially zero force

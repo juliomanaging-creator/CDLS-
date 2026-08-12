@@ -1,0 +1,39 @@
+MONDAY 1/13:
+☐ 9am: Standup
+☐ 10am-12pm: Review all legal RFP responses, shortlist 3
+☐ 1pm: Interview blockchain dev team #1
+☐ 3pm: Interview blockchain dev team #2
+☐ 5pm: Interview blockchain dev team #3
+☐ EOD: Score teams, discuss with CTO
+
+TUESDAY 1/14:
+☐ 9am: Standup
+☐ 10am: Interview blockchain dev team #4
+☐ 12pm: Interview blockchain dev team #5
+☐ 2pm: Interview blockchain dev team #6
+☐ 4pm: Technical evaluation meeting
+☐ EOD: Shortlist top 2 blockchain teams
+
+WEDNESDAY 1/15:
+☐ 9am: Standup
+☐ 10am-12pm: Legal firm #1 presentation
+☐ 2pm-4pm: Legal firm #2 presentation
+☐ 5pm: Internal discussion (legal)
+☐ EOD: Check on CalPERS closing (2 weeks away)
+
+THURSDAY 1/16:
+☐ 9am: Standup  
+☐ 10am-12pm: Legal firm #3 presentation
+☐ 1pm: Legal decision meeting
+☐ 3pm: Send engagement letter to winner
+☐ 4pm: Request detailed proposal from top 2 blockchain teams
+☐ EOD: Notify other legal firms (thank you)
+
+FRIDAY 1/17:
+☐ 9am: Standup
+☐ 10am: Legal kickoff call (if signed)
+☐ 1pm: Token economics v2.0 (incorporate legal feedback)
+☐ 3pm: Week 2 budget review
+☐ 5pm: Week 2 complete!
+
+DELIVERABLE: Legal counsel hired ✅

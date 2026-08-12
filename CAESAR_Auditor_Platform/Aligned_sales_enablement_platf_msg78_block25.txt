@@ -1,0 +1,18 @@
+Total Addressable Market (TAM):
+└─ $50B/year: Automotive logistics (North America)
+   ├─ New vehicle transport: $20B
+   ├─ Used vehicle transport: $15B
+   ├─ Parts & accessories: $10B
+   └─ Service vehicles: $5B
+
+Serviceable Addressable Market (SAM):
+└─ $20B/year: New vehicle transport (our focus)
+   ├─ 16,000 new car dealers (US)
+   ├─ Average $1.25M/year per dealer in hauling costs
+   └─ 100% addressable with CDLS platform
+
+Serviceable Obtainable Market (SOM):
+└─ $2B/year: 1,000 dealers by Year 5
+   ├─ 6.25% market share (realistic)
+   ├─ $450M hauling revenue (owned operations)
+   └─ $200M platform/marketplace revenue

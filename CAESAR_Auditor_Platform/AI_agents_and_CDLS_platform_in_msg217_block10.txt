@@ -1,0 +1,5 @@
+Platform: CDLS Ollama infrastructure
+Cost: $5K one-time (fine-tuning)
+Setup: Fine-tune Llama 3.2 70B on thermodynamics
+Timeline: 3-6 months
+Pros: Complete control, no API costs, integrates with Agent 1-41

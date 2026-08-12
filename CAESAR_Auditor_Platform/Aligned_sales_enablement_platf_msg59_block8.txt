@@ -1,0 +1,15 @@
+Q1 2026 Credits: 2,492 credits
+Sell at: $100/credit
+Revenue: $249,200
+NPV: $249,200 (immediate cash, no discounting)
+
+Pros:
+- Immediate cash flow
+- No market risk
+- Can reinvest in fleet expansion
+- Guaranteed revenue
+
+Cons:
+- Miss potential price appreciation
+- Opportunity cost if prices rise
+- No banking leverage

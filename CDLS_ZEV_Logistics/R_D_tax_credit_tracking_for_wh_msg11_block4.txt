@@ -1,0 +1,5 @@
+# If you downloaded ZIP
+unzip ev-cost-platform.zip
+
+# If you downloaded TAR.GZ
+tar -xzf ev-cost-platform.tar.gz

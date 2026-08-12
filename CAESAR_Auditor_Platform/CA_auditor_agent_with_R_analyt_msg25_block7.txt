@@ -1,0 +1,8 @@
+PYTHON (Daily Operations)          R (Advanced Analytics)
+├─ Automated audit cycles    ↔    ├─ Monte Carlo simulations
+├─ Real-time dashboards      ↔    ├─ Statistical hypothesis tests
+├─ Database operations       ↔    ├─ Time series forecasting
+├─ Fraud detection           ↔    ├─ Regression models
+└─ Email automation          ↔    └─ Publication graphics
+
+Integration via: rpy2 library (Python ↔ R bridge)

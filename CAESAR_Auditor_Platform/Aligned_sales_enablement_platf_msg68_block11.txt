@@ -1,0 +1,10 @@
+Traditional:
+- Dealer wants high payout at exit
+- CDLS wants growth and efficiency
+- Sometimes misaligned
+
+Tokenized:
+- Everyone holds same token
+- Token price = network value
+- Growth benefits everyone equally
+- Always aligned

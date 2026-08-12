@@ -1,0 +1,4 @@
+python3 cdls_risk_agent.py
+agent> daily 1            # See what to do
+agent> kb docker          # Quick Docker help
+agent> help kubernetes    # Troubleshoot k8s

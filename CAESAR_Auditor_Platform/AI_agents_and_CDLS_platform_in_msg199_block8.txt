@@ -1,0 +1,8 @@
+You grab your hair and pull up:
+- Your hand pulls hair UP (force F_up)
+- Your head pulls hair DOWN (force F_down)
+- F_up = F_down (Newton's 3rd Law)
+- Net force: ZERO
+- You don't levitate!
+
+Same with Casimir plates - internal forces cancel

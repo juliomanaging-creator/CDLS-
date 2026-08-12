@@ -1,0 +1,18 @@
+To extract energy, air must slow down
+But can't slow to zero (creates infinite back-pressure)
+Optimal: Slow air to 1/3 of original speed
+Maximum efficiency: 59.3%
+
+This applies to:
+- Solid turbines: Max 59.3% ✗
+- Lattice turbines: Max 59.3% ✗
+- Mesh turbines: Max 59.3% ✗
+- ANY configuration: Max 59.3% ✗
+
+Even at Betz limit:
+Power cost = Power extracted / 0.593
+You lose 1.69× more energy than you gain!
+
+At realistic 40% efficiency:
+Power cost = Power extracted / 0.40
+You lose 2.5× more energy than you gain!

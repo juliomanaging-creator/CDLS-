@@ -1,0 +1,18 @@
+Annual Fraud Detected: $24.8M
+
+Types of Fraud Caught:
+├─ Ghost employees: $8.2M/year
+├─ Duplicate payments: $6.5M/year
+├─ Vendor collusion: $4.8M/year
+├─ Split purchases: $3.1M/year
+└─ Other fraud: $2.2M/year
+
+Real Example:
+Department supervisor created 3 fake employees, 
+collected their paychecks. System detected:
+- No badge swipes (never entered buildings)
+- No email activity
+- No benefits enrollment
+- Same bank account for all 3
+
+Amount saved: $861,000/year

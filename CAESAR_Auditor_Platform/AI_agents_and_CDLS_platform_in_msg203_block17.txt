@@ -1,0 +1,10 @@
+Energy flow in your system:
+Battery → Motor (90% eff) → Truck motion (50% eff) → "Wind" → 
+Turbine (40% eff) → Generator (90% eff) → Motor (90% eff) → Truck
+
+Total efficiency: 0.90 × 0.50 × 0.40 × 0.90 × 0.90 = 14.6%
+
+For every 100 joules you put in:
+- Get 14.6 joules back
+- LOSE 85.4 joules
+- Net: 85.4% WORSE than no turbine!

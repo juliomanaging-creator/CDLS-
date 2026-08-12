@@ -1,0 +1,17 @@
+Structure: Pay partners based on exit value
+- Base: $1M upfront
+- Earnout: 5% of exit proceeds above $100M
+
+Your ownership: 55%
+
+Exit at $134M:
+- CalPERS gets: $7.5M
+- Partner earnout: ($134M - $100M) × 5% = $1.7M
+- Remaining: $124.8M
+- Your share: 55% × $124.8M = $68.6M
+
+Total cost: $1M + $1.7M = $2.7M
+Net to you: $68.6M - $1M now - $1.7M at exit = $65.9M
+
+Gain vs. Scenario 1: $15.3M (+30%)
+Benefit: Lower upfront cost, partners share upside risk

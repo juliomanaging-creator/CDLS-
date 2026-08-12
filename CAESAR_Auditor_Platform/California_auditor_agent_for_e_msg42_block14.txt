@@ -1,0 +1,8 @@
+Cloud A/B test: 80 hours
+Local agent: 120 hours
+Testing: 40 hours
+Documentation: 20 hours
+Total: 260 hours
+
+At $100/hour = $26,000
+(Or you build over 2 months)

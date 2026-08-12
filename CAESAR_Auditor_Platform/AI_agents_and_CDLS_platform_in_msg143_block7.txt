@@ -1,0 +1,88 @@
+┌───────────────────────────────────────────────┐
+│  CDLS COMMAND CENTER | Julio Umanzor          │
+│  Last Updated: Live (1:15 PM PST)             │
+│  SYSTEM STATUS: 🟢 ALL OPERATIONAL            │
+├───────────────────────────────────────────────┤
+│                                               │
+│  CRITICAL ALERTS (Action Required):           │
+│                                               │
+│  🔴 HIGH PRIORITY (2)                         │
+│                                               │
+│  1. [LEGAL] CalPERS Meeting - 3 Days          │
+│     Status: Due diligence 85% complete        │
+│     Action: Review entity structure (2 hrs)   │
+│     [Review Now] [Delegate] [Snooze]          │
+│                                               │
+│  2. [OPS] Driver Shortage - Sacramento        │
+│     Status: 3 sick, 12 hauls at risk          │
+│     Impact: $15K revenue risk                 │
+│     [Approve Contingency] [Review]            │
+│                                               │
+│  🟡 MEDIUM PRIORITY (5)                       │
+│  [View All] →                                 │
+│                                               │
+├───────────────────────────────────────────────┤
+│  KEY PERFORMANCE INDICATORS:                  │
+│                                               │
+│  FINANCIAL                                    │
+│  Revenue (MTD): $4.2M / $5M ████████░░ 84%   │
+│  Net Margin: 33.3% ✅ (Target: 30%)          │
+│                                               │
+│  OPERATIONS                                   │
+│  Hauls (Today): 487/500 ████████░░ 97%       │
+│  On-Time: 98.2% ✅                           │
+│                                               │
+│  SAFETY                                       │
+│  Incidents (MTD): 2 ✅ (Target: <5)          │
+│  Days Since Accident: 47 🔥                   │
+│                                               │
+│  SUSTAINABILITY                               │
+│  CO2 Avoided (MTD): 1,247 MT ✅              │
+│  Carbon Credits: $62,350 💰                   │
+│                                               │
+├───────────────────────────────────────────────┤
+│  STRATEGIC INITIATIVES:                       │
+│                                               │
+│  1. CalPERS Series B ($25M)                   │
+│     ████████████████░░░░ 75% Complete         │
+│                                               │
+│  2. Sacramento Pilot (100 trucks)             │
+│     ████████████░░░░░░░░ 60% Complete         │
+│                                               │
+│  3. CDLS Foundation ($10M grants)             │
+│     ██████░░░░░░░░░░░░░░ 30% Complete         │
+│                                               │
+├───────────────────────────────────────────────┤
+│  AI INSIGHTS & RECOMMENDATIONS:               │
+│                                               │
+│  🤖 "Good afternoon, Julio!"                  │
+│                                               │
+│  1. 🎯 TOP PRIORITY: CalPERS prep (3 days)    │
+│     Spend 2 hours on entity review today      │
+│                                               │
+│  2. 📊 OPPORTUNITY: 89% fleet utilization     │
+│     Can add 15 hauls/day without new trucks   │
+│     Hire 10 drivers = +$500K/month            │
+│                                               │
+│  3. ⚠️ RISK: 3 employees overdue DEI training │
+│     Delegate to HR Manager (1 hr to resolve)  │
+│                                               │
+│  4. 💡 INNOVATION: V2G showing strong results │
+│     Scale to 500 trucks = $4M annual revenue  │
+│                                               │
+│  [View 10 More Insights] →                    │
+│                                               │
+├───────────────────────────────────────────────┤
+│  DELEGATION CENTER:                           │
+│                                               │
+│  AI-Recommended Delegations:                  │
+│                                               │
+│  💡 "Grant Applications" → Committee          │
+│     Time Saved: 3 hours                       │
+│     [Delegate Now] [Review First]             │
+│                                               │
+│  💡 "ESG Report Review" → Sustainability Dir  │
+│     Time Saved: 2 hours                       │
+│     [Delegate Now] [Review First]             │
+│                                               │
+└───────────────────────────────────────────────┘

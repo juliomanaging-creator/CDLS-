@@ -1,0 +1,4 @@
+✓ Download all 6 files above
+✓ Open each PDF (verify they work)
+✓ Save to easy-access folder on your computer
+✓ Backup to Google Drive or Dropbox

@@ -1,0 +1,25 @@
+Enable Utility:
+
+Staking Launch (Day 21):
+├─ Users can stake $CDLS
+├─ Start earning $HAUL (8% APY)
+├─ Revenue share pool activated
+└─ Target: 100M $CDLS staked (10% of supply)
+
+Platform Access (Day 25):
+├─ Stake 10,000 $CDLS → Starter tier access
+├─ Stake 100,000 $CDLS → Professional tier
+├─ Stake 1,000,000 $CDLS → Enterprise tier
+└─ First 1,000 dealers qualify
+
+$HAUL Distribution (Day 28):
+├─ Begin rewarding activity
+├─ Complete haul: 50 $HAUL
+├─ Run calculation: 10 $HAUL
+└─ Generate carbon credit: 100 $HAUL
+
+Metrics:
+├─ Stakers: 500+ addresses
+├─ Total staked: 100M+ $CDLS
+├─ Platform users: 200+ dealers
+└─ $HAUL distributed: 1M tokens

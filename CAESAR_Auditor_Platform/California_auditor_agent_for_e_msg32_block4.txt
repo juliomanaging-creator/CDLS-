@@ -1,0 +1,4 @@
+You: Upload AI system documentation
+Me: Compare to known regulations
+Me: "You're missing required bias testing under AB 2013"
+Time: 15 minutes

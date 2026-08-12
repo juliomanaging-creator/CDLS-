@@ -1,0 +1,4 @@
+- Cost: $28.5B infrastructure (not viable)
+- Power: 1,630 kW (battery lasts 30 min)
+- Limited: Corridor only
+- Economics: Never pays back

@@ -1,0 +1,10 @@
+# ARIMA automatic model selection
+forecast_result <- arima_transaction_forecast(
+  historical_data,
+  forecast_periods = 90
+)
+
+# Output:
+Model: ARIMA(2,1,2)(1,1,1)[7]  # Auto-selected
+AIC: 1234.56
+Next 90 Days: Detailed predictions with confidence intervals

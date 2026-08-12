@@ -1,0 +1,17 @@
+Status: On Track / Ahead / Behind
+
+Oregon Launch:
+├─ Target: Q2 2027
+├─ Progress: Dealer recruitment (15 of 20 committed)
+├─ Blockers: Charging infrastructure delays
+└─ Mitigation: Partnering with EVgo for interim solution
+
+Washington Launch:
+├─ Target: Q3 2027
+├─ Progress: Regulatory approval (WUTC permit pending)
+└─ On track for Q3
+
+Metrics:
+├─ Multi-state revenue target: $90M (2027)
+├─ Current run-rate: $75M annualized
+└─ Gap: $15M (plan to close via M&A)

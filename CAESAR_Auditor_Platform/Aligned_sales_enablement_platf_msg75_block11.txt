@@ -1,0 +1,19 @@
+Blockchain Dev Selection:
+├─ 9:00 AM: Proposals received (2 teams)
+├─ 10:00 AM: Team evaluation (technical + fit)
+│   ├─ Team A: $400K, 12 weeks, experienced
+│   └─ Team B: $350K, 14 weeks, newer
+├─ 2:00 PM: Reference checks (3 per team)
+├─ 4:00 PM: Decision: Select Team A
+└─ 5:00 PM: Send engagement letter
+
+Smart Contract Scope:
+├─ $CDLS token (ERC-20)
+├─ $HAUL token (ERC-20)
+├─ Carbon NFT (ERC-1155)
+├─ Staking contract
+├─ Vesting contract
+├─ Marketplace contract
+└─ Governance contract (Snapshot integration)
+
+Budget: $400K approved

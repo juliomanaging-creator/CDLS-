@@ -1,0 +1,3 @@
+CDLS Platform API Server Started
+Environment: development
+Port: 3001

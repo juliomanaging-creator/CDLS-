@@ -1,0 +1,11 @@
+Traditional:
+- Linear growth (recruit one-by-one)
+- Network effects kick in at 500+ dealers
+- Takes 5-7 years to reach
+
+Tokenized:
+- Exponential growth (referrals incentivized)
+- Network effects kick in at 100+ dealers
+- Reach in 6-12 months
+
+Time to critical mass: 5-10x faster

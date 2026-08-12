@@ -1,0 +1,3 @@
+Trigger: Dealer runs 3+ scenarios OR shares results
+Action: Alert you via SMS
+Message: "🔥 {DealerName} is highly engaged with calculator"

@@ -1,0 +1,5 @@
+# Make sure no programs are using the files
+# Close any text editors that might have the files open
+# Then try again with /Y flag
+
+copy new_file.json old_file.json /Y

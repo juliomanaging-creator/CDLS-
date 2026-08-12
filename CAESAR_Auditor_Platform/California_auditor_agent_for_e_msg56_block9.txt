@@ -1,0 +1,8 @@
+SALSA_Complete_v2.0\
+├─ data_input\
+│  └─ [empty] ← Dealer puts CSV here
+├─ audit_output\
+│  └─ [empty]
+├─ audit_reports_pdf\
+│  └─ [empty]
+└─ Launch_SALSA.bat ← Dealer clicks this

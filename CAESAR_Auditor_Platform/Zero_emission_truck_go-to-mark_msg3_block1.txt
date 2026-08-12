@@ -1,0 +1,11 @@
+Month 1    Month 2    Month 3    Month 4    Month 5    Month 6
+─────────────────────────────────────────────────────────────
+[Step 1: Data Pull & Cleaning ──────────────]
+           [MCMC Model Build ───────────────────]
+                      [Step 3: Hub Site Scoring ──]
+                                 [Step 3: LOI w/ Landlord]
+[Step 2: Target List ──]
+           [Step 2: Outreach & Pitching ─────────────────────]
+                      [Step 2: First LOIs Signed ────────────]
+[Step 4: Test Design ──]
+                                             [Step 4: A/B Live]

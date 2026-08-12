@@ -1,0 +1,27 @@
+☐ Mon: T-14 days, war room activated
+☐ Mon: All systems final readiness check
+☐ Mon: Legal final sign-off
+☐ Mon: Technical final readiness
+☐ Mon: Marketing final push
+☐ Mon Evening: Julio AMA (Discord, 7pm)
+☐ Tue: T-13 days, deploy contracts to mainnet (non-activated)
+☐ Tue: Verify all contracts on Etherscan
+☐ Tue: Test all functions (one final time)
+☐ Tue: PR: "CDLS Smart Contracts Live"
+☐ Wed: T-12 days, whitelist finalized (1,000 addresses)
+☐ Wed: KYC: All users pre-verified
+☐ Wed: Treasury: Final funding check
+☐ Wed: Uniswap pool prep (liquidity ready)
+☐ Thu: T-11 days, media interviews (CoinDesk, The Block)
+☐ Thu: Influencer partnerships activated
+☐ Thu: Exchange applications submitted (CEX)
+☐ Thu: Community hype at peak
+☐ Fri: T-10 days, internal launch rehearsal
+☐ Fri: Simulate TGE on testnet (final test)
+☐ Fri: Identify any issues (fix immediately)
+☐ Fri Evening: Team dinner (calm before storm)
+☐ Weekend: T-9 and T-8 days
+☐ Weekend: Monitor social sentiment
+☐ Weekend: Address any last concerns
+☐ Weekend: Team light work, stay rested
+☐ Weekend: Marketing countdown content

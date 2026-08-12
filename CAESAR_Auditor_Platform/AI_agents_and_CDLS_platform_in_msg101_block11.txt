@@ -1,0 +1,5 @@
+1. Open CDLS_Platform_Updated.html in text editor
+2. Search for "4.5 Billion Trees" (line 233)
+3. Update stats on lines 245-259 with your latest numbers
+4. Change colors in :root section (lines 12-29) if desired
+5. Save and refresh browser to see changes

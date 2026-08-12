@@ -1,0 +1,6 @@
+1. Download find_postgres.bat
+2. Double-click it
+3. Let it find PostgreSQL
+4. Say "Y" to add to PATH
+5. Restart computer
+6. Run original setup.bat

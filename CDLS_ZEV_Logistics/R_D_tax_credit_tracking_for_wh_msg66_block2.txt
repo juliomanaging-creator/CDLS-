@@ -1,0 +1,11 @@
+> ca-dealer-logistics-platform@1.0.0 start
+> node server.js
+
+╔═══════════════════════════════════════════════════════╗
+║   CA Dealer Logistics Platform - Server Running      ║
+║   Environment: development                            ║
+║   Port: 3000                                          ║
+║   URL: http://localhost:3000                          ║
+╚═══════════════════════════════════════════════════════╝
+
+✓ Server ready!

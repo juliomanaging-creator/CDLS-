@@ -1,0 +1,150 @@
+☐ 1:00 PM: Create comprehensive dealer FAQ
+   
+   FAQ DOCUMENT:
+   =============
+   
+   GENERAL QUESTIONS:
+   
+   Q1: What is tokenization?
+   A: Tokenization means representing ownership as digital tokens 
+   instead of traditional shares. Tokens can be bought, sold, and 
+   traded 24/7 on exchanges, giving you liquidity instead of waiting 
+   10 years for an exit.
+   
+   Q2: Why is CDLS tokenizing?
+   A: Three reasons: (1) Gives dealers instant liquidity, (2) Lets 
+   us raise capital globally, (3) Creates network effects through 
+   reward incentives.
+   
+   Q3: What are the three tokens?
+   A: (1) $CDLS = Ownership & governance, (2) $HAUL = Utility & 
+   rewards, (3) $CARBON = Tokenized carbon credits.
+   
+   Q4: How is this different from traditional equity?
+   A: 
+   Traditional Equity:
+   - Locked for 10+ years
+   - No liquidity until exit
+   - Passive (no daily benefits)
+   - Limited to accredited investors
+   
+   Tokenized:
+   - Trade anytime
+   - Instant liquidity
+   - Earn rewards daily ($HAUL)
+   - Open to anyone (with KYC)
+   
+   Q5: Is this legal?
+   A: Yes. We're working with top crypto law firm (Cooley LLP) to 
+   ensure full compliance with SEC, FinCEN, and CARB regulations.
+   
+   TOKEN SPECIFICS:
+   
+   Q6: How much will $CDLS tokens cost?
+   A: Launch price: $0.05 per token
+   Private round (now): $0.045 per token
+   Public round (April 13): $0.05 per token
+   
+   Q7: How many tokens should I buy?
+   A: Depends on your budget and conviction:
+   - Starter: 10,000 tokens ($500) = Basic platform access
+   - Professional: 100,000 tokens ($5,000) = Pro features
+   - Enterprise: 1,000,000 tokens ($50,000) = Full benefits
+   
+   Q8: What can I do with $CDLS tokens?
+   A: (1) Stake to earn yield (8-11% APY), (2) Vote on governance, 
+   (3) Claim revenue share, (4) Use as platform access key.
+   
+   Q9: How do I earn $HAUL tokens?
+   A: By using the platform:
+   - Complete a haul: 50 $HAUL
+   - Generate carbon credit: 100 $HAUL
+   - Refer a dealer: 500 $HAUL
+   - Use ROI calculator: 10 $HAUL
+   
+   Q10: What's $HAUL worth?
+   A: Initially $0.05-$0.10. Value depends on supply/demand.
+   Use it to pay subscription fees or trade for $CDLS/$USDC.
+   
+   RISKS & CONCERNS:
+   
+   Q11: What if the token price crashes?
+   A: Crypto is volatile. Only invest what you can afford to lose. 
+   However, $CDLS is backed by real revenue ($45M Year 1), unlike 
+   most crypto projects.
+   
+   Q12: What if the SEC cracks down?
+   A: We're taking a conservative approach (legal opinion, hybrid 
+   model, compliance program). If needed, we'll register under Reg A+.
+   
+   Q13: What about taxes?
+   A: Consult your tax advisor. Generally:
+   - Buying tokens: Not taxable
+   - Selling tokens: Capital gains (15-20% if held >1 year)
+   - Earning $HAUL: Income (ordinary rates)
+   - Staking rewards: Income when received
+   
+   Q14: Can I convert my existing equity to tokens?
+   A: Yes! Contact Julio. We'll work out a conversion ratio based 
+   on your current equity value.
+   
+   PARTICIPATION:
+   
+   Q15: How do I buy tokens?
+   A: Process:
+   1. Sign up on cdls.network (opens soon)
+   2. Complete KYC (5 minutes, ID scan)
+   3. Connect wallet (MetaMask or similar)
+   4. Send ETH or USDC
+   5. Receive $CDLS tokens
+   
+   Q16: When is the token sale?
+   A: 
+   Private round: Now - March 31 (accredited only)
+   Public round: April 13, 2026 (anyone with KYC)
+   
+   Q17: Is there a minimum investment?
+   A: 
+   Private round: $250,000 minimum
+   Public round: $1,000 minimum
+   
+   Q18: Will tokens be on Coinbase?
+   A: Our goal is Coinbase listing Q3 2026. We'll start with 
+   Uniswap (Day 1) then apply to centralized exchanges.
+   
+   Q19: What happens if I do nothing?
+   A: Your existing equity stake remains unchanged. But you'll 
+   miss the opportunity to participate in the token sale at early 
+   pricing. By the time we're on Coinbase, price could be 10x higher.
+   
+   Q20: Who can I talk to with more questions?
+   A: 
+   - General: operations@cdlsnetwork.com
+   - Investment: julio@cdlsnetwork.com
+   - Technical: tech@cdlsnetwork.com
+   - Schedule call: calendly.com/julio-cdls
+   
+   [Continue with 10-20 more questions]
+   
+   ☐ Draft complete FAQ (20-30 questions)
+   ☐ Review with team
+   ☐ Post on website (new page: /faq)
+   ☐ Share with dealers after webinar
+
+☐ 3:00 PM: Prepare webinar Q&A responses
+   
+   Anticipated questions (have answers ready):
+   
+   1. "Is this risky?" → Yes, but managed (legal, audit, insurance)
+   2. "Why not just do equity?" → Liquidity, speed, global access
+   3. "What if I don't understand crypto?" → We'll help you (white-glove)
+   4. "How do I trust this?" → Transparent (on-chain), audited, insured
+   5. "What's the catch?" → No catch, just new model
+   6. "Will my equity be worth less?" → No, just more options now
+   7. "Can I sell my tokens anytime?" → Yes, 24/7 on exchanges
+   8. "What if CARB says no to tokenized credits?" → We pivot (SaaS only)
+   9. "How do taxes work?" → Complex, consult CPA (we'll provide resources)
+   10. "What if you get hacked?" → Insurance, multi-sig, best practices
+   
+   ☐ Write detailed answers (1 paragraph each)
+   ☐ Practice responses (sound confident, not defensive)

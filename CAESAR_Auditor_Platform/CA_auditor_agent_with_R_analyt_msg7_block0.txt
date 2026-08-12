@@ -1,0 +1,16 @@
+cdls-auditor/
+├── .env                          # Environment configuration
+├── requirements.txt              # Python dependencies
+├── auditor_logic.py             # Main reporting engine (ENHANCED)
+├── deploy_setup.sh              # Deployment automation
+├── dashboard/                   # Web dashboard for Rebecca
+│   ├── app.py                   # Flask backend
+│   ├── templates/
+│   │   └── dashboard.html       # Real-time monitoring UI
+│   └── static/
+│       ├── css/
+│       │   └── dashboard.css
+│       └── js/
+│           └── dashboard.js
+└── tests/
+    └── test_reconciliation.py   # Unit tests

@@ -1,0 +1,5 @@
+Team: "Agent 36, you said the trailer weighs 6,000 lbs but it's 
+actually 5,800 lbs. Also, we use 6061-T6 aluminum, not 6063."
+
+Agent 36: "✅ Corrected to 5,800 lbs and 6061-T6 alloy. Updated 
+draft attached."

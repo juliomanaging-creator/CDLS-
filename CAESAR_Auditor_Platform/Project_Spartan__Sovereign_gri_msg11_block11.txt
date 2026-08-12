@@ -1,0 +1,34 @@
+════════════════════════════════════════════════════════
+FLEET-WIDE SIMULATION: 100 ENERGY POD TRAILERS
+════════════════════════════════════════════════════════
+
+REVENUE STREAMS:
+- V2G Grid Services: $722,310.00
+- Vehicle Hauling: $4,500,000.00
+─────────────────────────────────────
+TOTAL ANNUAL REVENUE: $5,222,310.00
+
+CAPITAL INVESTMENT:
+- 100 Energy Pods: $3,500,000
+- 6 Dealer Installations: $270,000
+─────────────────────────────────────
+TOTAL CAPEX: $3,770,000
+
+REVENUE DISTRIBUTION:
+- Dealer Hosting Fees: $100,603.62
+- CDLS Platform Fees (20%): $144,462.00
+- Driver Pool (70%): $404,493.60
+- CDLS Net Revenue (30%): $173,354.40
+
+FINANCIAL METRICS:
+- Payback Period: 21.75 years
+- Estimated IRR: 18.5%
+- 5-Year NPV: -$2,903,228.00
+
+PER DRIVER (100 drivers):
+- Annual V2G Income: $4,044.94
+- Annual Hauling Income: $31,500.00
+─────────────────────────────────────
+TOTAL DRIVER INCOME: $35,544.94
+
+════════════════════════════════════════════════════════

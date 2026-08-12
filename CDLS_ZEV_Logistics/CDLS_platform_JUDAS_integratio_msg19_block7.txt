@@ -1,0 +1,2 @@
+jure> progress         # Mid-week review
+jure> resolve          # Fix any issues

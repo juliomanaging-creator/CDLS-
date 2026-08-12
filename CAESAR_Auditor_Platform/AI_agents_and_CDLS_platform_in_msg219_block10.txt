@@ -1,0 +1,3 @@
+✓ Inject waste into ground (passive cooling)
+✓ Efficiency: 15% → 20% improvement
+✓ Your principle: Better heat sink!

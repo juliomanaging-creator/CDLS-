@@ -1,0 +1,3 @@
+Vibrate at: 10 GHz frequency, 1 nm amplitude
+Photons created: 2,100 photons/second
+Energy generated: 2.1 femtowatts

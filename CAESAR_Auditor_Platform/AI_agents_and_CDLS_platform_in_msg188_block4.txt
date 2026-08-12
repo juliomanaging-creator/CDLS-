@@ -1,0 +1,5 @@
+Ultrasound frequency: 1-20 MHz
+Quantum vacuum fluctuations: 10¹⁴-10²³ Hz
+Mismatch: 10⁸-10¹⁷× wrong frequency
+
+Analogy: Using metal detector to find neutrinos

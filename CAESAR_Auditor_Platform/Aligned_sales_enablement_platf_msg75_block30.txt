@@ -1,0 +1,15 @@
+Dealers:
+├─ Total onboarded: 1,000
+├─ Active (30-day): 600
+├─ Paying: 400 (others earning via usage)
+
+Revenue:
+├─ Platform subscriptions: $1M/month
+├─ Marketplace fees: $500K/month
+├─ Total: $1.5M/month = $18M ARR
+
+Financial:
+├─ Revenue: $18M
+├─ EBITDA: $5M (28% margin, growing)
+├─ At 20x multiple: $360M valuation
+└─ Converging with token market cap ✅

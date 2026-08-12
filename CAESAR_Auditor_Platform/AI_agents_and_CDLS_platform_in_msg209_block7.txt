@@ -1,0 +1,5 @@
+When: Deployed at rest stops (truck stationary)
+Power: 276W average (weather wind, not truck motion)
+Energy: 2.2 kWh per 8-hour rest period
+Coverage: 2% of auxiliary loads
+Cost: $5,000

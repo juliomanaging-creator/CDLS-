@@ -1,0 +1,27 @@
+Deployment Sequence:
+
+1. Deploy token contracts (06:00 AM PST)
+├─ $CDLS token: 0x1234...
+├─ $HAUL token: 0x5678...
+├─ Vesting contract: 0xABCD...
+└─ Verify on Etherscan
+
+2. Initialize token distribution (06:30 AM)
+├─ Mint 1B $CDLS to deployer
+├─ Transfer to vesting contract: 500M
+├─ Transfer to treasury: 500M
+└─ Verify balances
+
+3. Create liquidity pools (07:00 AM)
+├─ Uniswap V3: $CDLS/ETH
+├─ Initial liquidity: $5M ($2.5M $CDLS + $2.5M ETH)
+├─ Price: $0.05 per $CDLS
+└─ LP tokens locked (1 year)
+
+4. Enable trading (08:00 AM)
+├─ Public sale goes live
+├─ 60M $CDLS available ($0.05 each)
+├─ $3M total raise
+└─ First come, first served (or whitelist)
+
+All times PST (Pacific Standard Time)

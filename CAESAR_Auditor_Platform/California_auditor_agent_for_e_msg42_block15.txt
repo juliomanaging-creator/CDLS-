@@ -1,0 +1,2 @@
+Cloud hosting: $50/month
+Local agent: $0/month (runs on dealer PC)

@@ -1,0 +1,22 @@
+Daily Active Dealers (DAU):
+├─ Month 1: 50
+├─ Month 3: 150
+├─ Month 6: 400
+├─ Month 12: 1,000
+└─ Month 24: 3,000
+
+DAU/MAU (Engagement):
+├─ Target: >40% (strong engagement)
+├─ Platform: 60% (very sticky)
+
+Features Used:
+├─ ROI calculator: 95%
+├─ Carbon tracking: 80%
+├─ Marketplace: 50%
+├─ Staking: 70%
+└─ Governance: 30%
+
+Average Session:
+├─ Duration: 15 minutes
+├─ Pages per visit: 8
+├─ Return rate: 3x per week

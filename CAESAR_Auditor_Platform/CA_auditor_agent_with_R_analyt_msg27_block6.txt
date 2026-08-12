@@ -1,0 +1,8 @@
+Scenario 2: Hire R Consultant
+├─ Consultant search:             2-4 weeks
+├─ Onboarding:                    1 week
+├─ Development:                   4-6 weeks
+├─ Knowledge transfer:            2 weeks
+└─ Post-implementation support:   2 weeks
+Total: 11-15 weeks
+Estimated Cost: $60K-$100K

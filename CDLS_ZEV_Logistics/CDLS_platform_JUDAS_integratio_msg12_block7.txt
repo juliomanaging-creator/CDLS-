@@ -1,0 +1,2 @@
+python3 risk_mitigation_agent.py
+rma> monitor              # Runs 24/7

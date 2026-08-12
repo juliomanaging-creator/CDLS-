@@ -1,0 +1,41 @@
+{
+  "inputs": [
+    {
+      "id": "fleet_size",
+      "label": "Number of Vehicles",
+      "type": "number",
+      "default": 10,
+      "min": 1,
+      "max": 500,
+      "tooltip": "Total vehicles in your hauling fleet"
+    },
+    {
+      "id": "avg_route_miles",
+      "label": "Average Route Distance (miles)",
+      "type": "number",
+      "default": 250,
+      "min": 50,
+      "max": 1000
+    },
+    {
+      "id": "diesel_price",
+      "label": "Current Diesel Price ($/gallon)",
+      "type": "number",
+      "default": 4.50,
+      "step": 0.10
+    },
+    {
+      "id": "electricity_rate",
+      "label": "Commercial Electricity Rate ($/kWh)",
+      "type": "number",
+      "default": 0.15,
+      "step": 0.01
+    },
+    {
+      "id": "operating_days",
+      "label": "Operating Days per Year",
+      "type": "number",
+      "default": 260
+    }
+  ]
+}

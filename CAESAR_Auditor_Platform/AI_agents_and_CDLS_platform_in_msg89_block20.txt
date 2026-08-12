@@ -1,0 +1,5 @@
+□ Daily: Log R&D time via rd_tracker
+□ Weekly: Team reviews via team-tracker summary
+□ Monthly: Export to CPA (5th of month)
+□ Quarterly: Form 941 + CA payment
+□ Annually: R&D study + tax filing

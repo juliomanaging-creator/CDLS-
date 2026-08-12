@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Master System Platform & AI Agent Ecosystem</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0b0d14; color: #e1e3e6; display: flex; height: 100vh; overflow: hidden; }
+        
+        #sidebar { width: 450px; background: #121520; border-right: 1px solid #232738; padding: 22px; display: flex; flex-direction: column; gap: 16px; z-index: 10; box-shadow: 4px 0 20px rgba(0,0,0,0.6); }
+        h1 { font-size: 1.3rem; color: #00E676; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .control-group { display: flex; flex-direction: column; gap: 8px; }
+        label { font-size: 0.8rem; color: #8f94a6; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+        select { background: #1c2030; color: #fff; border: 1px solid #32384e; padding: 11px 14px; border-radius: 6px; font-size: 0.95rem; outline: none; cursor: pointer; transition: border 0.2s; }
+        select:focus { border-color: #00E676; }
+        
+        #details-card { background: #181c2b; border: 1px solid #2a3044; border-radius: 8px; padding: 18px; flex-grow: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
+        #details-title { font-size: 1.15rem; color: #fff; font-weight: 600; border-bottom: 1px solid #2f364d; padding-bottom: 8px; }
+        #details-desc { font-size: 0.9rem; color: #c0c5d4; line-height: 1.45; }
+        
+        .code-box { background: #0c0e17; border: 1px solid #252b3e; padding: 12px; border-radius: 6px; font-family: 'Consolas', 'Courier New', monospace; font-size: 0.78rem; color: #40c4ff; word-break: break-all; white-space: pre-wrap; max-height: 200px; overflow-y: auto; }
+        .badge { display: inline-block; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; width: fit-content; }
+        
+        .task-list { list-style: square; padding-left: 18px; color: #b0b5c8; font-size: 0.85rem; display: flex; flex-direction: column; gap: 5px; }
+        .conn-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
+        .conn-item { font-size: 0.85rem; background: #121520; padding: 10px; border-radius: 6px; border-left: 3px solid #00E676; }
+        
+        #main-view { flex-grow: 1; position: relative; background: #07080c; }
+        #network { width: 100%; height: 100%; }
+    </style>
+</head>
+<body>
+
+    <div id="sidebar">
+        <div>
+            <h1>Platform Architecture</h1>
+            <p style="font-size: 0.82rem; color: #6a7085; margin-top: 4px;">Code & Agent Task Inspector</p>
+        </div>
+
+        <div class="control-group">
+            <label for="node-select">Filter Subsystem / AI Agent:</label>
+            <select id="node-select" onchange="focusNode(this.value)">
+                <option value="">-- View Full Ecosystem --</option>
+            </select>
+        </div>
+
+        <div id="details-card">
+            <div id="details-title">Select a Node or AI Agent</div>
+            <div id="details-badge" class="badge" style="display:none;"></div>
+            <div id="details-desc">Select any component to inspect its tasks, code implementation, and system flows.</div>
+            
+            <div id="tasks-section" style="display:none;">
+                <label>Respective Operational Tasks:</label>
+                <ul id="details-tasks" class="task-list"></ul>
+            </div>
+
+            <div id="source-section" style="display:none;">
+                <label>File Path / Source Location:</label>
+                <div id="details-source" style="font-size:0.78rem; color:#8f94a6; font-family:monospace; margin-bottom:8px;"></div>
+                <label>Core Execution Code Snippet:</label>
+                <div id="details-code" class="code-box"></div>
+            </div>
+
+            <div id="conn-section" style="display:none;">
+                <label style="margin-top:8px; display:block;">Active Inter-Module Flows:</label>
+                <ul id="conn-list" class="conn-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-view">
+        <div id="network"></div>
+    </div>
+
+    <script type="text/javascript">
+        const rawNodes = [{"id": "AGENT_OPS", "label": "Agent 4: Fleet & DMV Logistics", "group": "AI Agent", "color": "#82B1FF", "size": 30, "desc": "Automates VIN verification indexing, DMV paperwork, and transportation workflows.", "source": "OneDrive/Dealership_and_Operations/Julio DMV Stuff/launch_halo.py", "tasks": ["Automate DMV Form REG 343 & REG 227 document rendering", "Execute VIN decoding & title verification indexing", "Streamline wholesale transport dispatch & bill of lading logs"], "code_snippet": "import os\nfrom dmv_decoder import decode_vin\n\ndef process_fleet_intake(vin, buyer_info):\n    title_data = decode_vin(vin)\n    reg_form = generate_reg343(title_data, buyer_info)\n    return {\"status\": \"DMV_READY\", \"form\": reg_form}", "x": -950, "y": -520}, {"id": "AGENT_LOCAL_LLM", "label": "Agent 5: Ollama Local Core", "group": "AI Agent", "color": "#E040FB", "size": 32, "desc": "Runs offline local AI inference loops over local database repositories.", "source": "OneDrive/Developer_and_Code_Assets/AWS AGENT/debug_agent.py", "tasks": ["Host Ollama llama3/qwen local inference loops", "Execute local RAG embeddings against PostgreSQL vector store", "Ensure 100% offline air-gapped data privacy for state briefs"], "code_snippet": "from langchain_community.llms import Ollama\nfrom langchain.chains import RetrievalQA\n\nllm = Ollama(model=\"llama3\")\ndef query_local_agent(prompt, vector_store):\n    qa_chain = RetrievalQA.from_chain_type(llm, retriever=vector_store.as_retriever())\n    return qa_chain.run(prompt)", "x": -950, "y": -180}, {"id": "AGENT_TELEMETRY", "label": "Agent 2: Telemetry & V2G", "group": "AI Agent", "color": "#B9F6CA", "size": 30, "desc": "Monitors ISO 15118-20 / OCPP power streams and manages bidirectional dispatch.", "source": "OneDrive/CDLS_ZEV_Logistics/cdls-local-ai-agent/v2g_telemetry.py", "tasks": ["Parse real-time ISO 15118-20 bidirectional telemetry", "Manage Virtual Power Plant (VPP) grid dispatch cycles", "Record kilowatt-hour energy banking to local ledger"], "code_snippet": "import asyncio\nfrom ocpp.v201 import ChargePoint\n\nclass V2GTelemetryAgent(ChargePoint):\n    async def on_meter_values(self, meter_values, **kwargs):\n        power_kw = meter_values[0]['sampled_value'][0]['value']\n        await self.dispatch_vpp_balancing(power_kw)", "x": -950, "y": 180}, {"id": "AGENT_AUDIT", "label": "Agent 1: Compliance Auditor", "group": "AI Agent", "color": "#FF6E40", "size": 30, "desc": "Continuously audits transactional logs against state regulatory frameworks.", "source": "OneDrive/CAESAR_Auditor_Platform/auditor_package/audit_agent.py", "tasks": ["Run continuous verification on accounting and transaction logs", "Audit California State program metrics against duty statements", "Generate automated compliance exception flags"], "code_snippet": "class CAESARAuditor:\n    def __init__(self, ledger):\n        self.ledger = ledger\n        \n    def run_compliance_audit(self):\n        violations = [tx for tx in self.ledger if not tx.is_compliant()]\n        return {\"total_audited\": len(self.ledger), \"flags\": violations}", "x": -950, "y": 520}, {"id": "AI_HUB", "label": "Local AI Agent Engine\n(Ollama / LangChain)", "group": "Hub", "color": "#AA00FF", "size": 42, "desc": "Multi-agent orchestration loop executing local intelligent workloads.", "source": "OneDrive/Developer_and_Code_Assets/AWS AGENT/", "tasks": ["Orchestrate multi-agent inter-process communications", "Route API payloads between backends and local LLMs"], "code_snippet": "# Multi-Agent Orchestration Hub\nasync def agent_router(event):\n    if event.type == 'AUDIT': return await audit_agent.process(event)\n    elif event.type == 'TELEMETRY': return await v2g_agent.process(event)", "x": -320, "y": -180}, {"id": "AGENT_FINANCE", "label": "Agent 3: Tax & Grant Agent", "group": "AI Agent", "color": "#80D8FF", "size": 30, "desc": "Analyzes fleet operations to optimize Form 8936 tax filings and grant submissions.", "source": "OneDrive/Grants_Tax_and_Incentives/grant_tax_agent.py", "tasks": ["Calculate IRS Form 8936 commercial clean vehicle credits", "Audit USDA / DOE grant eligibility requirements", "Compile carbon offset documentation packages"], "code_snippet": "def calculate_form_8936_credit(vehicle_weight, battery_kwh):\n    base_credit = 3750 if battery_kwh >= 7 else 0\n    if vehicle_weight > 14000:\n        return min(40000, battery_kwh * 375)\n    return min(7500, base_credit * 2)", "x": -320, "y": 520}, {"id": "OPS_HUB", "label": "Dealership & Operations\n(Fleet Logistics)", "group": "Hub", "color": "#2979FF", "size": 40, "desc": "DMV filings, payment gateway compliance, and vehicle transportation.", "source": "OneDrive/Dealership_and_Operations/", "tasks": ["Process payment transactions and customer identity checks", "Log transport delivery metrics across logistics routes"], "code_snippet": "// Commercial Ops Gateway Integration\nconst processTransaction = async (customer, vehicle) => {\n  const idVerified = await experian.verifyIdentity(customer.ssn);\n  return { success: idVerified, status: 'LOGISTICS_READY' };\n};", "x": 320, "y": -520}, {"id": "CDLS_HUB", "label": "CDLS ZEV Logistics\n(Energy & Fleet)", "group": "Hub", "color": "#00E676", "size": 44, "desc": "Central Virtual Power Plant (VPP) and bidirectional V2G fleet logistics hub.", "source": "OneDrive/CDLS_ZEV_Logistics/", "tasks": ["Consolidate zero-emission fleet operational status", "Broadcast microgrid availability to utility power nodes"], "code_snippet": "def aggregate_vpp_capacity(pod_units):\n    total_kw = sum(pod.current_capacity for pod in pod_units)\n    return {\"active_pods\": len(pod_units), \"grid_capacity_mw\": total_kw / 1000}", "x": 320, "y": -180}, {"id": "CAESAR_HUB", "label": "CAESAR Auditor Platform\n(Compliance Engine)", "group": "Hub", "color": "#FF3D00", "size": 44, "desc": "Continuous auditing and automated state regulatory compliance engine.", "source": "OneDrive/CAESAR_Auditor_Platform/", "tasks": ["Store verified immutable audit trails", "Expose audit verification APIs for state reporting"], "code_snippet": "def verify_audit_hash(record, hash_signature):\n    calculated = hashlib.sha256(record.encode()).hexdigest()\n    return calculated == hash_signature", "x": 320, "y": 180}, {"id": "FIN_HUB", "label": "Grants & Tax Optimization\n(Capital & Incentives)", "group": "Hub", "color": "#00E5FF", "size": 40, "desc": "EV tax credit tracking (Form 8936), USDA/DOE grants, and carbon offsets.", "source": "OneDrive/Grants_Tax_and_Incentives/", "tasks": ["Aggregate incentive funding yields across fleet pods", "Generate grant compliance audit exports"], "code_snippet": "def generate_grant_summary(claims):\n    return {\"total_incentives\": sum(c.amount for c in claims), \"verified\": True}", "x": 320, "y": 520}, {"id": "MOD_EXPERIAN", "label": "Experian Gateway Engine", "group": "Backend Code", "color": "#448AFF", "size": 26, "desc": "Identity verification and credit compliance gateway integration.", "source": "OneDrive/Dealership_and_Operations/Auto_World_Gateway.js", "tasks": ["Perform identity validation check via Experian Precise ID", "Ensure compliance with FTC Red Flags Rule"], "code_snippet": "// Experian Precise ID Verification\nasync function verifyCustomerIdentity(payload) {\n    const res = await fetch('https://api.experian.com/preciseid', { method: 'POST', body: JSON.stringify(payload) });\n    return await res.json();\n}", "x": 950, "y": -520}, {"id": "MOD_MICROGRID_PODS", "label": "V2G Mobile Pod Blueprints", "group": "Hardware / Blueprints", "color": "#FFD600", "size": 28, "desc": "Engineering blueprints and dimensional specs for V2G energy pods.", "source": "OneDrive/Sovereign_Initiatives/Sovereign_Dimensional_Specs.png", "tasks": ["Define physical pod dimensional specifications", "Enforce ISO 15118-20 pinout & inverter ratings"], "code_snippet": "# Hardware Blueprint Spec\nPOD_SPEC = {\n    \"max_output_kw\": 150,\n    \"protocol\": \"ISO_15118_20\",\n    \"inverter_efficiency\": 0.98\n}", "x": 950, "y": -180}, {"id": "MOD_DB_OPT", "label": "PostgreSQL Query Optimizer", "group": "Backend Code", "color": "#D500F9", "size": 26, "desc": "Local database query tuning, table indexing, and performance scripts.", "source": "OneDrive/Developer_and_Code_Assets/backend/db_opt.sql", "tasks": ["Index time-series V2G telemetry database tables", "Optimize vector similarity searches for local LLMs"], "code_snippet": "-- Time-Series Telemetry Indexing\nCREATE INDEX IF NOT EXISTS idx_telemetry_timestamp \nON v2g_telemetry_logs (timestamp DESC);\nCREATE INDEX IF NOT EXISTS idx_audit_hash ON caesar_audit_logs (hash_sig);", "x": 950, "y": 180}];
+        const rawEdges = [{"from": "AI_HUB", "to": "AGENT_LOCAL_LLM", "label": "Executes Local Inference", "smooth": "curvedCW"}, {"from": "AGENT_LOCAL_LLM", "to": "AGENT_AUDIT", "label": "Feeds Model Embeddings", "smooth": "curvedCCW"}, {"from": "AGENT_LOCAL_LLM", "to": "AGENT_TELEMETRY", "label": "Provides V2G Optimization", "smooth": "curvedCW"}, {"from": "AGENT_AUDIT", "to": "CAESAR_HUB", "label": "Drives Compliance Engine", "smooth": "curvedCCW"}, {"from": "AGENT_TELEMETRY", "to": "CDLS_HUB", "label": "Controls Microgrid Telemetry", "smooth": "curvedCW"}, {"from": "AGENT_FINANCE", "to": "FIN_HUB", "label": "Optimizes Tax & Grants", "smooth": "horizontal"}, {"from": "AGENT_OPS", "to": "OPS_HUB", "label": "Automates Fleet Workflows", "smooth": "horizontal"}, {"from": "MOD_EXPERIAN", "to": "OPS_HUB", "label": "Verifies Identity", "smooth": "horizontal"}, {"from": "OPS_HUB", "to": "CAESAR_HUB", "label": "Sends Operational Audit Logs", "smooth": "curvedCW"}, {"from": "MOD_MICROGRID_PODS", "to": "CDLS_HUB", "label": "Supplies Blueprints", "smooth": "horizontal"}, {"from": "CDLS_HUB", "to": "CAESAR_HUB", "label": "Submits Telemetry Logs", "smooth": "vertical"}, {"from": "FIN_HUB", "to": "CDLS_HUB", "label": "Injects Tax Capital", "smooth": "curvedCW"}, {"from": "MOD_DB_OPT", "to": "AI_HUB", "label": "Accelerates Queries", "smooth": "curvedCCW"}];
+
+        const nodesMap = {};
+        rawNodes.forEach(n => nodesMap[n.id] = n);
+
+        const select = document.getElementById('node-select');
+        rawNodes.forEach(n => {
+            const opt = document.createElement('option');
+            opt.value = n.id;
+            opt.textContent = n.label.replace('\n', ' ');
+            select.appendChild(opt);
+        });
+
+        const nodes = new vis.DataSet(rawNodes.map(n => ({
+            id: n.id,
+            label: n.label,
+            x: n.x,
+            y: n.y,
+            color: { background: n.color, border: '#ffffff', highlight: { background: n.color, border: '#00E676' } },
+            size: n.size,
+            shape: n.group === 'AI Agent' ? 'diamond' : (n.group === 'Hub' ? 'dot' : 'square'),
+            font: { 
+                color: '#ffffff', 
+                size: 13, 
+                face: 'Segoe UI', 
+                background: '#181c2b', 
+                strokeWidth: 4, 
+                strokeColor: '#0b0d14',
+                vadjust: 12
+            }
+        })));
+
+        const edges = new vis.DataSet(rawEdges.map(e => ({
+            from: e.from,
+            to: e.to,
+            label: e.label,
+            arrows: { to: { enabled: true, scaleFactor: 1.1 } },
+            color: { color: '#3d445c', highlight: '#00E676', opacity: 0.9 },
+            font: { 
+                color: '#00E5FF', 
+                size: 11, 
+                face: 'Segoe UI',
+                background: '#1c2030', 
+                strokeWidth: 3, 
+                strokeColor: '#0b0d14',
+                align: 'horizontal'
+            },
+            smooth: { type: e.smooth || 'cubicBezier', roundness: 0.35 }
+        })));
+
+        const container = document.getElementById('network');
+        const data = { nodes: nodes, edges: edges };
+        
+        const options = {
+            nodes: { borderWidth: 2, shadow: true },
+            edges: { width: 2, shadow: false },
+            physics: { enabled: false },
+            interaction: { hover: true, tooltipDelay: 100, dragNodes: true }
+        };
+
+        const network = new vis.Network(container, data, options);
+
+        network.on("click", function (params) {
+            if (params.nodes.length > 0) {
+                const nodeId = params.nodes[0];
+                document.getElementById('node-select').value = nodeId;
+                focusNode(nodeId);
+            } else {
+                resetHighlight();
+            }
+        });
+
+        function focusNode(nodeId) {
+            if (!nodeId) {
+                resetHighlight();
+                return;
+            }
+
+            const nodeData = nodesMap[nodeId];
+            
+            document.getElementById('details-title').innerText = nodeData.label.replace('\n', ' ');
+            document.getElementById('details-desc').innerText = nodeData.desc;
+            document.getElementById('details-source').innerText = nodeData.source;
+            document.getElementById('details-code').innerText = nodeData.code_snippet || "# Code file location: " + nodeData.source;
+            document.getElementById('source-section').style.display = 'block';
+
+            // Populate Tasks List
+            const tasksList = document.getElementById('details-tasks');
+            tasksList.innerHTML = '';
+            if (nodeData.tasks && nodeData.tasks.length > 0) {
+                nodeData.tasks.forEach(t => {
+                    const li = document.createElement('li');
+                    li.innerText = t;
+                    tasksList.appendChild(li);
+                });
+                document.getElementById('tasks-section').style.display = 'block';
+            } else {
+                document.getElementById('tasks-section').style.display = 'none';
+            }
+            
+            const badge = document.getElementById('details-badge');
+            badge.style.display = 'inline-block';
+            badge.style.background = nodeData.color;
+            badge.style.color = '#000';
+            badge.innerText = nodeData.group;
+
+            const connectedEdges = rawEdges.filter(e => e.from === nodeId || e.to === nodeId);
+            const connList = document.getElementById('conn-list');
+            connList.innerHTML = '';
+            
+            connectedEdges.forEach(e => {
+                const li = document.createElement('li');
+                li.className = 'conn-item';
+                if (e.from === nodeId) {
+                    li.innerHTML = `<strong style="color:#00E676;">Output ➔</strong> ${nodesMap[e.to].label.replace('\n', ' ')}<br><span style="color:#7d849b; font-size:0.78rem;">${e.label}</span>`;
+                } else {
+                    li.innerHTML = `<strong style="color:#00E5FF;">Input ⬅</strong> ${nodesMap[e.from].label.replace('\n', ' ')}<br><span style="color:#7d849b; font-size:0.78rem;">${e.label}</span>`;
+                }
+                connList.appendChild(li);
+            });
+            document.getElementById('conn-section').style.display = 'block';
+
+            const connectedNodeIds = new Set();
+            connectedNodeIds.add(nodeId);
+            connectedEdges.forEach(e => {
+                connectedNodeIds.add(e.from);
+                connectedNodeIds.add(e.to);
+            });
+
+            rawNodes.forEach(n => {
+                if (connectedNodeIds.has(n.id)) {
+                    nodes.update({ id: n.id, opacity: 1.0 });
+                } else {
+                    nodes.update({ id: n.id, opacity: 0.12 });
+                }
+            });
+
+            rawEdges.forEach(e => {
+                const edgeObj = edges.get({ filter: item => item.from === e.from && item.to === e.to })[0];
+                if (e.from === nodeId || e.to === nodeId) {
+                    if (edgeObj) edges.update({ id: edgeObj.id, opacity: 1.0, width: 3 });
+                } else {
+                    if (edgeObj) edges.update({ id: edgeObj.id, opacity: 0.05, width: 1 });
+                }
+            });
+
+            network.focus(nodeId, { scale: 0.95, animation: { duration: 500, easingFunction: 'easeInOutQuad' } });
+        }
+
+        function resetHighlight() {
+            document.getElementById('node-select').value = '';
+            document.getElementById('details-title').innerText = 'Select a Node or AI Agent';
+            document.getElementById('details-desc').innerText = 'Select any component to inspect its tasks, code implementation, and system flows.';
+            document.getElementById('details-badge').style.display = 'none';
+            document.getElementById('tasks-section').style.display = 'none';
+            document.getElementById('source-section').style.display = 'none';
+            document.getElementById('conn-section').style.display = 'none';
+
+            rawNodes.forEach(n => nodes.update({ id: n.id, opacity: 1.0 }));
+            rawEdges.forEach(e => {
+                const edgeObj = edges.get({ filter: item => item.from === e.from && item.to === e.to })[0];
+                if (edgeObj) edges.update({ id: edgeObj.id, opacity: 0.8, width: 2 });
+            });
+
+            network.fit({ animation: { duration: 500, easingFunction: 'easeInOutQuad' } });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# Open in Notepad with formatting
+notepad carrier_cost_data.json
+
+# Or use built-in more command
+more carrier_cost_data.json

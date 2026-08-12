@@ -1,0 +1,4 @@
+Purpose: Validate your sink optimization
+Scale: 1 kW Stirling (proof of concept)
+Timeline: 4-6 months
+Deliverables: Patent data + publication results

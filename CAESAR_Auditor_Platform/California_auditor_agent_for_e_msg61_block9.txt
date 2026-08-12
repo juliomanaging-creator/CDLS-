@@ -1,0 +1,12 @@
+# On your computer:
+cd SALSA_Complete_v2.0
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Test compliance system
+export SALSA_DEV_MODE=1
+python core/engine.py data_input/sample_sales.csv
+
+# Test deal jacket system
+python create_deal_jackets.py

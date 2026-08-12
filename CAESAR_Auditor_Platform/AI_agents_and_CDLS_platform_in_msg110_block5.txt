@@ -1,0 +1,26 @@
+Dealer selects: "Not Sure / Custom Quote"
+
+Shows:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📄 Get a Custom Quote
+
+Upload your recent hauling invoice and 
+we'll provide exact savings calculations
+based on your actual costs.
+
+Fields:
+✓ Name
+✓ Email  
+✓ Dealership
+✓ Upload Invoice (PDF/JPG/PNG)
+
+[Request Custom Quote →]
+
+Response:
+"Thank you! We'll email detailed analysis
+within 24 hours with:
+• Exact savings calculations
+• Customized pricing proposal
+• ROI analysis
+• Implementation timeline"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

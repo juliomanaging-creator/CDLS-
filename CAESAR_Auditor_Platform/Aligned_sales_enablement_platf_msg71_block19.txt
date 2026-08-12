@@ -1,0 +1,27 @@
+Order Book:
+BUY ORDERS (Bids):
+├─ $104.50 × 500 credits (Chevron)
+├─ $104.00 × 1,000 credits (Shell)
+├─ $103.50 × 2,000 credits (Valero)
+└─ $103.00 × 500 credits (BP)
+
+SELL ORDERS (Asks):
+├─ $105.00 × 300 credits (SD Auto Transport)
+├─ $105.50 × 500 credits (NorCal Logistics)
+├─ $106.00 × 1,000 credits (Bay Area Transport)
+└─ $106.50 × 200 credits (SoCal Express)
+
+Spread: $0.50 (tight, liquid market)
+
+Price Discovery:
+- Real-time market pricing
+- No more opaque bilateral deals
+- Transparent order book
+- Last trade: $104.75
+
+Charts:
+- 24-hour volume: $250,000
+- 7-day average: $103.20
+- 30-day high: $108.50
+- 30-day low: $98.75
+- Market cap: $525M (5M credits outstanding)

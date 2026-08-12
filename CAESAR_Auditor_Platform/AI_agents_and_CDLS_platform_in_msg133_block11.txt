@@ -1,0 +1,2 @@
+python3 SIMULATION_DEMO.py
+# Expected: 100% success rate, all agents ready

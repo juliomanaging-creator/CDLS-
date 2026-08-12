@@ -1,0 +1,33 @@
+{
+  "calculations": [
+    {
+      "id": "annual_diesel_cost",
+      "formula": "fleet_size * avg_route_miles * operating_days * diesel_price / diesel_mpg",
+      "constants": { "diesel_mpg": 6.5 }
+    },
+    {
+      "id": "annual_ev_cost",
+      "formula": "fleet_size * avg_route_miles * operating_days * electricity_rate * kwh_per_mile",
+      "constants": { "kwh_per_mile": 2.1 }
+    },
+    {
+      "id": "annual_savings",
+      "formula": "annual_diesel_cost - annual_ev_cost - (fleet_size * ev_maintenance_premium)",
+      "constants": { "ev_maintenance_premium": 500 }
+    },
+    {
+      "id": "payback_period_years",
+      "formula": "(fleet_size * ev_upfront_cost_premium) / annual_savings",
+      "constants": { "ev_upfront_cost_premium": 45000 }
+    },
+    {
+      "id": "five_year_total_savings",
+      "formula": "(annual_savings * 5) - (fleet_size * ev_upfront_cost_premium)"
+    },
+    {
+      "id": "carbon_reduction_tons",
+      "formula": "fleet_size * avg_route_miles * operating_days * diesel_carbon_per_mile / 2000",
+      "constants": { "diesel_carbon_per_mile": 22.4 }
+    }
+  ]
+}

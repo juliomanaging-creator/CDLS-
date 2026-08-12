@@ -1,0 +1,11 @@
+INVENTION: IP-MAT-001 (Triple-Braided Composite Chassis)
+
+PROBLEM: Aluminum chassis is heavy, corrodes, no sensors
+
+SOLUTION: 3D-braided carbon/aramid/basalt composite with embedded sensors
+
+NOVELTY: First three-material continuous braid for automotive
+
+EVIDENCE: CAD models, FEA analysis showing 40% weight reduction
+
+AI TOOLS: Used ChatGPT for material property research, Claude for documentation

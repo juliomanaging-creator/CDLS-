@@ -1,0 +1,8 @@
+HVAC: 5-7 kW
+Lights: 0.5-1 kW  
+Electronics: 0.5-1.2 kW
+Fans: 0.5-1.5 kW
+Air compressor: 2-3 kW (intermittent)
+
+Total: ~10-15 kW (100 kWh/day)
+This is only 10% of truck's total energy!

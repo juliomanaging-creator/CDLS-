@@ -1,0 +1,26 @@
+Approach:
+Phase 1: International utility token (2026)
+- Launch to non-US investors
+- Build provable utility
+- Establish decentralized governance
+
+Phase 2: US registration (2027)
+- File Reg A+ once utility proven
+- Open to US investors
+- Coinbase listing (requires compliance)
+
+Phase 3: Full decentralization (2028)
+- DAO takes over governance
+- Company is service provider to DAO
+- Token fully utility-based
+
+Pros:
+✓ Fast initial launch
+✓ Eventual US access
+✓ Risk-managed approach
+✓ Path to full compliance
+
+Cons:
+✗ Complex structure
+✗ Two-phase launch
+✗ Higher legal costs ($500K-$1M total)

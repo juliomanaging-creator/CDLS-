@@ -1,0 +1,24 @@
+Automation:
+
+Self-Service:
+├─ 80% of dealers onboard without human help
+├─ Video tutorials (comprehensive)
+├─ Chatbot (answers common questions)
+├─ Knowledge base (searchable)
+
+High-Touch (20%):
+├─ Dealers needing help
+├─ Large accounts ($50K+ purchase)
+├─ White-glove onboarding call
+├─ Dedicated account manager
+
+Metrics:
+├─ Self-service success: 80%
+├─ Time to first value: 48 hours
+├─ Activation rate: 75%
+└─ Cost per onboard: $100 (mostly automated)
+
+Team:
+- 2 customer success managers
+- 1 technical support engineer
+- Chatbot (Intercom + GPT-4)

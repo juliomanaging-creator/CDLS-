@@ -1,0 +1,3 @@
+cd cdls-platform-v2
+./quickstart.sh
+npm start

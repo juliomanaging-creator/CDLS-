@@ -1,0 +1,5 @@
+1. Open Terminal (Mac) or PuTTY (Windows)
+2. SSH into server: ssh root@203.0.113.42
+3. Type "yes" to accept fingerprint
+4. Enter password (emailed to you)
+5. You're in! You'll see: root@cdls:~#

@@ -1,0 +1,2 @@
+fixed 6 of 9 vulnerabilities in 1309 packages
+3 vulnerabilities required manual review

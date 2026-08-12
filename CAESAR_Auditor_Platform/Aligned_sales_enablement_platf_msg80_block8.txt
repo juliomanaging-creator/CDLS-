@@ -1,0 +1,108 @@
+☐ 1:00 PM: Research SEC precedents
+   
+   Read these key documents (2 hours):
+   1. SEC Framework for "Investment Contract" Analysis
+      Link: sec.gov/corpfin/framework-investment-contract-analysis-digital-assets
+   2. Hinman Speech (ETH is not a security)
+      Link: sec.gov/news/speech/speech-hinman-061418
+   3. Recent enforcement actions:
+      - Ripple case (ongoing)
+      - Telegram settlement
+      - Kik settlement
+   
+   Take notes on:
+   - What makes a token a security vs. utility?
+   - What disclosures are required?
+   - What can we learn from settlements?
+   
+   Save notes: "SEC-Research-Notes.docx"
+
+☐ 3:00 PM: Draft CARB advisory opinion request
+   
+   Use template:
+   ---
+   California Air Resources Board
+   1001 I Street
+   Sacramento, CA 95814
+   
+   RE: Advisory Opinion Request - Tokenization of LCFS Credits
+   
+   Dear CARB Staff,
+   
+   California Dealer Logistics System (CDLS) respectfully requests 
+   an advisory opinion regarding the tokenization of Low Carbon Fuel 
+   Standard (LCFS) credits using blockchain technology.
+   
+   BACKGROUND:
+   CDLS is a registered LCFS entity (#[Number]) operating a fleet of 
+   200+ zero-emission vehicle haulers in California. We generate 
+   approximately 10,000 LCFS credits annually.
+   
+   PROPOSED ACTIVITY:
+   CDLS proposes to create digital representations (NFTs) of LCFS 
+   credits that would:
+   1. Track credit generation in real-time (blockchain ledger)
+   2. Facilitate trading among dealers (marketplace)
+   3. Maintain CARB LRT-CBTS as authoritative system
+   4. Settle quarterly through traditional CARB process
+   
+   QUESTION PRESENTED:
+   Is the proposed dual-ledger system permissible under current 
+   LCFS regulations, where blockchain serves as a trading venue 
+   but CARB's LRT-CBTS remains the authoritative record?
+   
+   ANALYSIS:
+   [2 pages explaining why this is compliant]
+   
+   REQUEST:
+   We request CARB's written opinion on whether this structure 
+   is permissible, and if modifications are needed.
+   
+   Thank you for your consideration.
+   
+   Sincerely,
+   Julio [Last Name]
+   Managing Partner
+   ---
+   
+   ☐ Draft complete document (5-7 pages)
+   ☐ Legal review (when counsel hired)
+   ☐ Submit after legal approval
+
+☐ 4:00 PM: KYC provider research
+   
+   Evaluate 3 providers:
+   
+   1. Persona (persona.com)
+      Pricing: $3/verification
+      Speed: Instant (90% auto-approved)
+      Features: ID scan, selfie, address proof
+      Integration: 2 weeks
+      ☐ Sign up for demo
+      ☐ Schedule call
+   
+   2. Onfido (onfido.com)
+      Pricing: $5/verification
+      Speed: 5-30 seconds
+      Features: More thorough, biometric
+      Integration: 2 weeks
+      ☐ Sign up for demo
+      ☐ Schedule call
+   
+   3. Jumio (jumio.com)
+      Pricing: $4/verification
+      Speed: 1-2 minutes
+      Features: Mid-tier
+      Integration: 3 weeks
+      ☐ Sign up for demo
+      ☐ Schedule call
+   
+   Decision criteria:
+   - UX (most important - don't lose users)
+   - Cost (volume discounts?)
+   - Speed (instant preferred)
+   - Compliance (AML/KYC features)
+   
+   ☐ Recommendation: _____________ (decide by Jan 12)
+
+☐ 5:00 PM: Daily standup

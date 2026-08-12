@@ -1,0 +1,11 @@
+{
+  "dealer_id": "ALPHA-01",
+  "name": "Sacramento AutoGroup",
+  "monthly_hauls": 14,
+  "current_cost_per_haul": 1150,
+  "vehicles_per_month": 112,
+  "willing_to_pay_1200": true,
+  "commitment_level": "Yes, exclusively",
+  "investment_interest": "Yes, committed",
+  "rer_contribution": 16800
+}

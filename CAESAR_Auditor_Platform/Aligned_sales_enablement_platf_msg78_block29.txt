@@ -1,0 +1,22 @@
+Purpose: Ownership stake in network
+Supply: 1,000,000,000 (fixed, no inflation)
+Initial Price: $0.05
+Use Cases:
+├─ Governance rights (vote on decisions)
+├─ Revenue share (claim platform profits)
+├─ Platform access (stake to use advanced features)
+└─ Collateral (borrow against for fleet purchases)
+
+Distribution:
+├─ 40%: Founders & early partners (4-year vest)
+├─ 20%: Treasury & ecosystem
+├─ 15%: Strategic partners (OEMs, utilities)
+├─ 10%: Team & future hires
+├─ 10%: Public token sale (this round)
+└─ 5%: Liquidity pools
+
+Valuation:
+├─ Launch: $50M (100M circulating)
+├─ Year 1: $500M (10x)
+├─ Year 3: $5B (100x)
+└─ Potential: $10B+ (200x+)

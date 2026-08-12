@@ -1,0 +1,15 @@
+# Start PowerShell
+powershell
+
+# Navigate to your project data folder
+cd C:\Projects\ev-cost-platform\data\sample-data
+
+# Create backup
+Copy-Item carrier_cost_data.json carrier_cost_data.json.backup
+Copy-Item california_city_pricing.json california_city_pricing.json.backup
+Copy-Item dealer_syndicate_members.json dealer_syndicate_members.json.backup
+
+# (You would then manually place your downloaded files here)
+
+# Exit PowerShell
+exit

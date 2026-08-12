@@ -1,0 +1,10 @@
+Build prototype:
+- Investment: $85,000
+- Deliverables: 4 patents, scientific paper
+- Patent value: $3-7M (defensive IP)
+
+Patentable innovations:
+1. Multi-stage ceramic compression (70 bar mobile)
+2. Ceramic turbine heat recovery (85% efficiency)
+3. Ceramic sandwich vessel (integral insulation)
+4. Intercooler heat recovery system

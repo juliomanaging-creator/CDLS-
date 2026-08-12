@@ -1,0 +1,54 @@
+I. EXECUTIVE SUMMARY
+
+II. LEGAL AUTHORITY ANALYSIS
+   A. Insurance Commissioner's Jurisdiction
+      - California Insurance Code provisions
+      - Prop 103 voter approval requirements (exemption argument)
+   B. DMHC Director's Jurisdiction  
+      - Knox-Keene Health Plan Act
+      - State enterprise exception analysis
+   C. Legislative Grant of Authority (CUCA creates framework)
+
+III. REGULATORY ARCHITECTURE
+   A. Dual Oversight Model
+      - CDI: Auto, home/renters components + rate review
+      - DMHC: Health component + network adequacy
+      - Unified Shield board: Day-to-day operations
+   B. Coordination Mechanisms
+      - Quarterly tri-agency meetings
+      - Shared data systems
+      - Joint market conduct exams
+   
+IV. RATE REGULATION PROTOCOL
+   A. Annual Rate Review Process
+      [Detailed timeline and procedures]
+   B. Public Participation
+      [Prop 103 compliance strategy]
+   C. Actuarial Certification Requirements
+   
+V. LICENSING & SOLVENCY
+   A. Initial Application Process
+   B. Ongoing Financial Reporting
+   C. State Guarantee Structure (vs. traditional reserves)
+   
+VI. CONSUMER PROTECTION FRAMEWORK
+   A. Claims Handling Standards
+   B. Appeals & External Review
+   C. Market Conduct Oversight
+   
+VII. IMPLEMENTATION SUPPORT
+   A. Regulatory Staff Resource Needs
+   B. Technology System Integration
+   C. Training & Capacity Building
+
+VIII. FEDERAL COORDINATION
+   A. CMS Waiver Requirements (health component)
+   B. DOL Coordination (ERISA considerations)
+   
+IX. TIMELINE & MILESTONES
+
+APPENDICES:
+A. Draft Regulations (CDI)
+B. Draft Regulations (DMHC)
+C. Comparative State Analysis
+D. Legal Opinions (outside counsel)

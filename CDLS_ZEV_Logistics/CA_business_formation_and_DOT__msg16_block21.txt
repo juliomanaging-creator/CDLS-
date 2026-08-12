@@ -1,0 +1,10 @@
+GET  /health                    # Server status
+GET  /api/v1/profiles           # List profiles
+GET  /api/v1/profile/:id        # Get profile
+POST /api/v1/profile            # Create profile
+POST /api/v1/application        # Submit application
+GET  /api/v1/application/:id    # Get status
+GET  /api/v1/applications       # List all
+GET  /api/v1/stats/:profile_id  # Statistics
+POST /api/v1/chat               # Send message
+GET  /api/v1/chat/:profile_id   # Chat history

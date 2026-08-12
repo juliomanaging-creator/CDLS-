@@ -1,0 +1,9 @@
+Company: Motor Development International (France)
+Concept: Car powered entirely by compressed air
+Range: 50 miles (unusable for most trips)
+Status: Bankrupt, technology abandoned
+
+Why it failed:
+- Energy density too low (2% of battery)
+- No refill infrastructure
+- Better to just use electric car

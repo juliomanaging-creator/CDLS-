@@ -1,0 +1,11 @@
+Normal pattern:
+GET /api/cities 200 50ms ✅
+GET /api/cities 200 52ms ✅
+GET /api/cities 200 48ms ✅
+
+Attack detected:
+POST /api/auth/login 401 5ms ❌
+POST /api/auth/login 401 5ms ❌
+POST /api/auth/login 401 5ms ❌
+POST /api/auth/login 401 5ms ❌
+... (1000 times in 10 seconds) 🚨 BRUTE FORCE ATTACK!

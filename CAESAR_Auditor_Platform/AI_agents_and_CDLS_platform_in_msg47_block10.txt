@@ -1,0 +1,4 @@
+PORT=3001
+DB_USER=postgres
+DB_PASSWORD=YourPostgresPassword
+DB_NAME=cdls_platform

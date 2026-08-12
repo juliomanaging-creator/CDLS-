@@ -1,0 +1,10 @@
+SALSA_Complete_v2.0\
+├─ data_input\
+│  └─ january_sales.csv ← Original file
+├─ audit_output\
+│  └─ Compliance_Report_20260203.txt ← NEW!
+├─ audit_reports_pdf\
+│  └─ Compliance_Report_20260203.pdf ← NEW!
+├─ logs\
+│  └─ salsa_20260203.log ← NEW!
+└─ Launch_SALSA.bat

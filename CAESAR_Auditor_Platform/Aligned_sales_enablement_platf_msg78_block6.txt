@@ -1,0 +1,14 @@
+Specification:
+├─ Off-chain voting with on-chain execution
+├─ Features:
+│   ├─ Snapshot.org integration (gasless voting)
+│   ├─ Voting power calculation (token balance + staked)
+│   ├─ Timelock execution (48-hour delay)
+│   ├─ Proposal queuing and execution
+│   ├─ Multi-sig safeguard (override for emergencies)
+│   └─ Treasury management (fund allocation)
+
+Complexity: Medium-High
+Estimated Hours: 110
+
+Reference: Compound Governor, Snapshot strategies

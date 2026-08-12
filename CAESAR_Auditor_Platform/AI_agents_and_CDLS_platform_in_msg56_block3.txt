@@ -1,0 +1,1 @@
+bad window path name "CREATE DATABASE cdls_platform;"

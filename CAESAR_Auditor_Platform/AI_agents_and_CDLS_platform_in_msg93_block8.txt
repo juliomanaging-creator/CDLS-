@@ -1,0 +1,14 @@
+Purpose: Asset appreciation
+
+Strategy: Hold 50% in reserve bank
+Entry price: $85-$150/MT
+Exit price: $350/MT (2045)
+Appreciation: 4.1x over 20 years
+
+Reserve value by 2045: $1.1 BILLION
+Gain: $627M (appreciation)
+
+Uses:
+- Collateral for debt ($550M borrowing capacity)
+- Balance sheet asset (increases enterprise value)
+- Strategic optionality (release during high-price years)

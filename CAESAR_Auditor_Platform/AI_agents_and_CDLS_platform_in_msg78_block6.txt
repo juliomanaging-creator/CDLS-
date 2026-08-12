@@ -1,0 +1,11 @@
+Year 1 (2026):
+  Julio:          $27,840    (3%)
+  15 Engineers:   $696,000   (78%)
+  Other QREs:     $146,000   (16%)
+  ─────────────────────────────
+  TOTAL:          $869,840
+
+Your Role: SET THE STANDARD
+  - Your discipline = team's discipline
+  - Your documentation = company's documentation
+  - Your compliance = audit protection for $870K

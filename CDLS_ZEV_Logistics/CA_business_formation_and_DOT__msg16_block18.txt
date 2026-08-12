@@ -1,0 +1,5 @@
+Dashboard → Create Profile
+↓
+Fill in business information
+↓
+Save Profile

@@ -1,0 +1,5 @@
+# Functions:
+✓ detect_anomalies_multimethod() - 5-method approach
+✓ time_series_anomaly_detection() - Temporal patterns
+✓ seasonal_anomaly_detection() - Seasonal decomposition
+✓ generate_anomaly_report() - Comprehensive analysis

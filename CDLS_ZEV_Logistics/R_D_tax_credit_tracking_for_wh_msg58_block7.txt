@@ -1,0 +1,1 @@
+xcopy "C:\Users\User\Downloads\ev-cost-platform\data" "C:\Projects\ev-cost-platform\data" /E /Y /I

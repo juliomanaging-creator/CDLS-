@@ -1,0 +1,41 @@
+stakeholders
+- id (UUID, PK)
+- dealroom_id (FK)
+- name (VARCHAR 200)
+- title (VARCHAR 200)
+- email (VARCHAR 255)
+- phone (VARCHAR 50)
+- organization (VARCHAR 200)
+- role_type (ENUM: decision_maker, influencer, champion, blocker, neutral)
+- influence_level (INTEGER 1-10)
+- engagement_level (INTEGER 1-10)
+- notes (TEXT)
+- created_at (TIMESTAMP)
+- updated_at (TIMESTAMP)
+
+stakeholder_relationships
+- id (UUID, PK)
+- stakeholder_from_id (FK to stakeholders)
+- stakeholder_to_id (FK to stakeholders)
+- relationship_type (ENUM: reports_to, collaborates_with, influences)
+- strength (INTEGER 1-5)
+
+stakeholder_interactions
+- id (UUID, PK)
+- stakeholder_id (FK)
+- interaction_type (ENUM: email, call, meeting, document_view)
+- subject (VARCHAR 500)
+- notes (TEXT)
+- sentiment (ENUM: positive, neutral, negative)
+- occurred_at (TIMESTAMP)
+- created_by (FK to users)
+
+stakeholder_tasks
+- id (UUID, PK)
+- stakeholder_id (FK)
+- dealroom_id (FK)
+- task_description (TEXT)
+- assigned_to (FK to users - your team member)
+- due_date (DATE)
+- status (ENUM: pending, in_progress, completed, blocked)
+- created_at (TIMESTAMP)

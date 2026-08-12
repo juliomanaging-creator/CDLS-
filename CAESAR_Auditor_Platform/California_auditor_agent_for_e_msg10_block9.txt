@@ -1,0 +1,17 @@
+CDLS Annual Infrastructure Costs:
+- Git Repository (GitHub):        $0/year
+- IPFS Node (self-hosted):         $1,200/year
+- Private Blockchain (AWS):        $2,400/year  
+- Bandwidth & Storage:             $1,200/year
+                                   ──────────
+TOTAL CDLS COST:                   $4,800/year
+
+At 1 million certifications/year:
+- CDLS cost per cert: $0.0048
+- California cost per cert: $0.00
+
+Why this is free to California:
+- No per-transaction fees (Proof-of-Authority blockchain)
+- Fixed infrastructure cost (doesn't increase with usage)
+- Scales infinitely (1M or 10M certs = same cost)
+- Gift from CDLS ($4,800/year is 0.096% of revenue)

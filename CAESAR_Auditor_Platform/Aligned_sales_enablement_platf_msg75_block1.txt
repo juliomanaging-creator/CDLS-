@@ -1,0 +1,24 @@
+Legal Workstream:
+├─ 9:00 AM: Kick off legal RFP process
+├─ 10:00 AM: Identify 10 crypto law firms
+│   ├─ Cooley LLP (San Francisco)
+│   ├─ Latham & Watkins (Silicon Valley)
+│   ├─ Morrison & Foerster (Palo Alto)
+│   ├─ Perkins Coie (Seattle)
+│   └─ 6 others (see RFP below)
+├─ 2:00 PM: Send RFP to all 10 firms
+└─ 4:00 PM: Set response deadline (Jan 14)
+
+Technical Workstream:
+├─ 9:00 AM: Draft blockchain dev RFP
+├─ 11:00 AM: Post on crypto job boards
+│   ├─ Crypto Jobs List
+│   ├─ Web3 Jobs
+│   ├─ AngelList (crypto filter)
+│   └─ LinkedIn (#Solidity #Web3)
+├─ 3:00 PM: Outreach to 20 blockchain dev shops
+└─ 5:00 PM: Set interview schedule (Jan 15-20)
+
+Budget Allocation:
+Legal: $350K allocated
+Technical: $450K allocated

@@ -1,0 +1,23 @@
+Weekly Leaderboards:
+
+"Most Hauls Completed":
+├─ Top 10 dealers
+├─ Prize: 5,000 $HAUL each
+└─ Resets weekly
+
+"Most Carbon Credits Generated":
+├─ Top 10 dealers
+├─ Prize: 10,000 $HAUL each
+└─ Monthly reset
+
+"Most Referrals":
+├─ Top 5 dealers
+├─ Prize: 25,000 $HAUL each
+└─ Quarterly reset
+
+Displayed:
+- Platform dashboard (public)
+- Twitter (weekly updates)
+- Discord (channel dedicated to leaderboards)
+
+Effect: Dealers compete, usage increases, network grows

@@ -1,0 +1,14 @@
+┌─────────────────┐
+│   Your Browser  │  ← Beautiful UI
+│ localhost:3000  │
+└────────┬────────┘
+         │ HTTP/JSON
+┌────────▼────────┐
+│  Express Server │  ← API Logic
+│   Node.js       │
+└────────┬────────┘
+         │ SQL
+┌────────▼────────┐
+│  SQLite DB      │  ← Data Storage
+│  claudio.db     │
+└─────────────────┘

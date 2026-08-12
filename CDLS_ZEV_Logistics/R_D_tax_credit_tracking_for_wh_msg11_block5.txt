@@ -1,0 +1,2 @@
+cd ev-cost-platform
+npm install

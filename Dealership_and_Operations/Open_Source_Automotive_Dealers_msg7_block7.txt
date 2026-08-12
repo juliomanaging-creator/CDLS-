@@ -1,0 +1,18 @@
+// Lead Generation ROI
+=((B2*C2*D2*E2*12)-F2)/F2*100
+
+Where:
+B2 = Monthly Website Visitors
+C2 = Expected Lead Rate Improvement
+D2 = Close Rate
+E2 = Average Total Gross
+F2 = Annual Investment
+
+// Service Department ROI
+=((B3*C3*D3*12)-E3)/E3*100
+
+Where:
+B3 = Monthly Service ROs
+C3 = Expected RO Improvement %
+D3 = Average RO Value
+E3 = Annual Technology Investment

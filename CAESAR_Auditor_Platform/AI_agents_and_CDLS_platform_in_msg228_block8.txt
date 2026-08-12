@@ -1,0 +1,7 @@
+Cycles: 100 million+ (constant vibration)
+Failure: Mount cracking from fatigue
+Current fix: Steel brackets (+150 lbs)
+
+SiC solution: Braided ceramic sleeves
+Benefit: Vibration damping + 10× life
+Cost: $1,800

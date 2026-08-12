@@ -1,0 +1,12 @@
+# Multi-method approach with cross-validation
+anomalies <- detect_anomalies_multimethod(transactions)
+
+# Methods used:
+✓ IQR (Interquartile Range)
+✓ Z-score (statistical outliers)
+✓ Modified Z-score (robust)
+✓ Isolation Forest (ML)
+✓ Benford's Law (first digit)
+
+# Cross-validation: Flag if 2+ methods agree
+# Confidence score: 0-100%

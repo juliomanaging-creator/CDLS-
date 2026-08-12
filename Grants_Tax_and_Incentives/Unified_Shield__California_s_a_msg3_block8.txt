@@ -1,0 +1,64 @@
+SECTION 1: PROJECT OVERVIEW
+Independent actuarial review of Unified Shield comprehensive insurance 
+product for 100% California population coverage.
+
+SECTION 2: SCOPE OF WORK
+Task 1: Premium Adequacy Analysis
+- Validate loss ratio assumptions (health 82%, auto 70%, home 65%)
+- Review risk adjustment methodologies
+- Assess geographic rating factors
+- Stress test pricing model (±15% claims variance)
+
+Task 2: Reserve Adequacy Analysis  
+- Initial capitalization ($79B) sufficiency review
+- Catastrophic scenario modeling (1-in-50, 1-in-100, 1-in-200 year)
+- Concurrent event analysis (earthquake + wildfire + pandemic)
+- Reserve development projections (5-year)
+
+Task 3: Solvency & Sustainability
+- Cash flow modeling (Years 1-10)
+- Surplus adequacy by year
+- Required reinsurance coverage analysis
+- Sensitivity analysis (enrollment variance, medical inflation)
+
+Task 4: Comparative Market Analysis
+- Current CA insurance market benchmarking
+- Administrative cost validation (12% claim vs. 15-20% market)
+- Consumer savings verification
+
+Task 5: Regulatory Compliance Review
+- CDI solvency requirements (Risk-Based Capital equivalent)
+- DMHC tangible net equity standards
+- Federal MLR requirements (ACA)
+
+DELIVERABLES:
+- Draft report (Week 16)
+- Final report with responses to comments (Week 20)
+- Executive summary (10 pages, public-facing)
+- Technical appendices (detailed models)
+- Legislative testimony preparation (2 days)
+- Response to regulatory agency questions (ongoing)
+
+SECTION 3: QUALIFICATIONS REQUIREMENTS
+- Lead actuary: Fellow, Society of Actuaries (FSA) or CAS
+- Health actuary: Member, American Academy of Actuaries (MAAA)
+- P&C actuary: FCAS designation
+- Catastrophic modeler: Published peer-reviewed research
+- Firm: No current CA insurance carrier consulting (conflict)
+
+SECTION 4: EVALUATION CRITERIA (100 points)
+- Technical approach (40 points)
+- Qualifications/experience (30 points)
+- California regulatory familiarity (15 points)
+- Cost/timeline (15 points)
+
+SECTION 5: BUDGET
+Not to exceed: $400,000
+Payment schedule: 30% start / 40% draft / 30% final
+
+SECTION 6: TIMELINE
+- Proposal due: Week 3
+- Firm selection: Week 4
+- Contract execution: Week 5
+- Kickoff: Week 6
+- Final report: Week 24

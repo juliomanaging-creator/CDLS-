@@ -1,0 +1,16 @@
+Application: F1 racing (2014-present)
+System:
+- MGU-H: Recovers exhaust heat
+- Power: 120 HP recovered
+- Weight: 10 kg (exotic materials)
+- Cost: $500,000
+
+Why F1 uses it:
+- Budget: Unlimited ($200M+/year)
+- Performance: Every HP matters
+- Lap time: 2-3% improvement
+
+Why YOUR truck shouldn't:
+- Cost: $500K for marginal benefit
+- Budget: Must be profitable
+- Better alternatives exist

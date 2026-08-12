@@ -1,0 +1,4 @@
+Capture air → Compress → Generate power → Propulsion
+Efficiency: 31%
+Drag cost: Huge (25,000-50,000 N)
+Net: Lose 69% of energy

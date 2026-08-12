@@ -1,0 +1,7 @@
+QUESTION 1.1: WHAT PROBLEM ARE WE SOLVING?
+
+Answer: Traditional diesel haulers can only carry 8 vehicles because 
+their heavy steel trailers max out DOT weight limits. We use aluminum 
+trailers that weigh 2,000 lbs less, allowing us to carry 9 vehicles...
+
+[Continue answering each question...]

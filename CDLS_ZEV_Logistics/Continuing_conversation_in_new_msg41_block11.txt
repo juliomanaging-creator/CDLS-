@@ -1,0 +1,13 @@
+# 1. Extract the zip file
+unzip CDLS_Platform_Complete.zip
+cd cdls-platform
+
+# 2. Run setup (installs dependencies, creates database)
+npm run setup
+
+# 3. Start the platform
+npm run dev
+
+# Access:
+# - Frontend: http://localhost:3000
+# - API: http://localhost:3001

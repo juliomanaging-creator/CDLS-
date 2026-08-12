@@ -1,0 +1,4 @@
+jure> help            # Learn all commands
+jure> kb docker       # Learn Docker essentials
+jure> kb kubernetes   # Learn k8s essentials
+jure> daily 1         # Understand requirements

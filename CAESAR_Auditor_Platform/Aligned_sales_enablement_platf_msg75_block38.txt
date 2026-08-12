@@ -1,0 +1,27 @@
+Jan 2026 (Start): 5 people
+├─ Julio (CEO)
+├─ CFO
+├─ CTO
+├─ Marketing Lead
+└─ Operations Lead
+
+Apr 2026 (TGE): 15 people
+├─ +VP of Product
+├─ +3 Engineers
+├─ +2 Customer Success
+├─ +Community Manager
+├─ +Legal Counsel
+├─ +2 Sales/BD
+
+Jul 2026 (Q3): 25 people
+├─ +5 Engineers
+├─ +3 Sales AEs
+├─ +2 Support
+
+Dec 2026 (Year-End): 45 people
+├─ +10 Engineers
+├─ +5 Sales
+├─ +3 Marketing
+├─ +2 Operations
+
+Average Loaded Cost: $150K/person/year

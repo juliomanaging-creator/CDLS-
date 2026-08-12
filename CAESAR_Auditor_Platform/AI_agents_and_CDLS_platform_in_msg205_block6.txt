@@ -1,0 +1,6 @@
+Drag Force = Power Extracted / Velocity
+
+F_drag = P / v
+
+If you extract ANY power, you CREATE drag.
+This is universal - applies to ALL configurations.

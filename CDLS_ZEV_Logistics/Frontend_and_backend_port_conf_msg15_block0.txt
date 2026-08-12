@@ -1,0 +1,25 @@
+C:\Projects\ev-cost-platform\
+│
+├── frontend\                    ← Create this folder first!
+│   ├── .env                     ← Copy .env file here
+│   ├── package.json             ← Copy frontend-package.json here (rename to package.json)
+│   │
+│   ├── src\                     ← Create this folder
+│   │   ├── App.js               ← Copy App.js here
+│   │   ├── App.css              ← Copy App.css here
+│   │   ├── index.js             ← Copy index.js here
+│   │   ├── index.css            ← Copy index.css here
+│   │   │
+│   │   ├── services\            ← Create this folder
+│   │   │   └── api.js           ← Copy api.js HERE!
+│   │   │
+│   │   └── components\          ← Create this folder
+│   │       └── Dashboard.js     ← Copy Dashboard.js here
+│   │
+│   └── public\                  ← Create this folder
+│       └── index.html           ← Copy index.html here
+│
+└── backend\                     ← You already have this
+    ├── .env
+    ├── package.json
+    └── server.js

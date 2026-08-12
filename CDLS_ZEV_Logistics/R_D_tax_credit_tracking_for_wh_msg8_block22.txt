@@ -1,0 +1,17 @@
+# 1. Extract
+tar -xzf ev-cost-platform.tar.gz
+cd ev-cost-platform
+
+# 2. Install
+npm install
+
+# 3. Generate Secrets
+node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
+# Paste output into .env as JWT_SECRET
+
+# 4. Start
+npm start
+
+# 5. Visit
+http://localhost:3000
+Login: demo@dealer.com / Demo1234!

@@ -1,0 +1,10 @@
+"Upload your sales spreadsheet, we'll check it"
+
+Setup: Drag and drop Excel file
+Time: 3 minutes
+Tech knowledge: None
+
+Pros: Dead simple, no fear
+Cons: Manual (they'll forget)
+
+Predicted: 60% completion, 40% retention

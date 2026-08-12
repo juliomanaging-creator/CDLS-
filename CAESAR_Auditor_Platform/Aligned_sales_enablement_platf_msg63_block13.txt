@@ -1,0 +1,29 @@
+Price: $1,999/month or $19,190/year (20% discount)  
+Target Users: 300 dealers by 2028, 500 by 2030
+Ideal Customer: Mid-size dealer group (3-10 locations, 30-100 vehicles)
+
+Features:
+✓ Everything in Starter, plus:
+✓ Advanced route optimization (AI-powered)
+✓ Predictive maintenance alerts
+✓ Carbon credit marketplace access (buy/sell)
+✓ TMS integration (Descartes, Transplace, TMW)
+✓ Custom dashboards and reporting
+✓ Phone support (4-hour SLA)
+✓ 10 user seats
+✓ API access (read-only)
+
+New Capabilities:
+✓ Fleet benchmarking (compare to peers anonymously)
+✓ Scenario planning (model fleet transitions)
+✓ Charging network access (CDLS hauler network)
+✓ Priority capacity during peak seasons
+
+Value Proposition:
+- Access to CDLS hauler network saves 15% on logistics
+- Marketplace saves 5% on carbon credit sales
+- ROI: 8x first year
+
+Revenue Target:
+- 300 dealers × $1,999 × 12 = $7.20M ARR (2028)
+- 500 dealers × $1,999 × 12 = $11.99M ARR (2030)

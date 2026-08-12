@@ -1,0 +1,13 @@
+cd Downloads
+dir CA-Dealer*.zip
+tar -xf CA-Dealer-Logistics-COMPLETE-2025-CURRENT.zip
+dir ev-cost-platform
+cd C:\Projects\ev-cost-platform
+dir
+mkdir data-backup
+xcopy data data-backup /E /I
+xcopy "C:\Users\%USERNAME%\Downloads\ev-cost-platform\data" "C:\Projects\ev-cost-platform\data" /E /Y /I
+cd data\sample-data
+dir
+findstr "state_average" carrier_cost_data.json
+findstr "sacramento" california_city_pricing.json | findstr "retail"

@@ -1,0 +1,13 @@
+Protects Criminal Justice Information:
+├─ Criminal history records
+├─ Inmate records
+├─ Arrest records
+└─ Fingerprints and DNA databases
+
+Compliance:
+✅ CJIS Security Policy v5.9 compliant
+✅ FBI-approved encryption
+✅ Background investigations for all users
+✅ Advanced authentication (biometric/CAC)
+✅ 7-year audit log retention
+✅ Annual CJIS audits passed

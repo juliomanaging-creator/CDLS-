@@ -1,0 +1,3 @@
+Air capture only: 31% efficient
+Air + heat recovery: 64% efficient (YOUR PROPOSAL - 2× better!)
+Battery direct: 76.5% efficient (still wins)

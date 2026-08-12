@@ -1,0 +1,9 @@
+[Financial Agent      ] Calculate carbon allocation        (2.1s)
+[Document Agent       ] Generate term sheet                (8.5s)
+[Legal Agent          ] Prepare stock purchase agreement   (12.3s)
+[Due Diligence Agent  ] Create data room (200+ docs)       (45.2s)
+[SEC Agent            ] File Form D                        (3.7s)
+[Investor Relations   ] Send materials to CalPERS          (1.2s)
+
+✅ Workflow completed in 73.0 seconds
+💰 Result: $50M Series B package ready for CalPERS

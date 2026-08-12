@@ -1,0 +1,62 @@
+Day 1: Overview & Concepts (8 hours)
+├─ Morning Session (4 hours)
+│  ├─ Why R? Benefits overview
+│  ├─ Python vs R comparison
+│  ├─ Architecture walkthrough
+│  └─ Use case demonstrations
+└─ Afternoon Session (4 hours)
+   ├─ Hands-on: Running first R analysis
+   ├─ Understanding output
+   ├─ Basic troubleshooting
+   └─ Q&A
+
+Day 2: Monte Carlo Simulations (8 hours)
+├─ Morning: Theory (4 hours)
+│  ├─ What is Monte Carlo?
+│  ├─ Budget risk modeling
+│  ├─ Fraud risk estimation
+│  └─ Interpreting results
+└─ Afternoon: Practice (4 hours)
+   ├─ Run simulations for 3 departments
+   ├─ Analyze outputs
+   ├─ Create visualizations
+   └─ Generate reports
+
+Day 3: Anomaly Detection (8 hours)
+├─ Morning: Statistical Methods (4 hours)
+│  ├─ IQR, Z-score, Benford's Law
+│  ├─ Multi-method approach
+│  ├─ Confidence scoring
+│  └─ Cross-validation
+└─ Afternoon: Fraud Investigation (4 hours)
+   ├─ Real case study
+   ├─ Generate evidence report
+   ├─ Legal admissibility
+   └─ Expert witness preparation
+
+Day 4: Time Series Forecasting (8 hours)
+├─ Morning: Models & Methods (4 hours)
+│  ├─ ARIMA explained
+│  ├─ Prophet for seasonality
+│  ├─ Model selection
+│  └─ Accuracy metrics
+└─ Afternoon: Budget Forecasting (4 hours)
+   ├─ Forecast next FY expenditures
+   ├─ Generate confidence intervals
+   ├─ Create legislative charts
+   └─ Present to mock committee
+
+Day 5: Advanced Topics & Certification (8 hours)
+├─ Morning: Custom Analyses (4 hours)
+│  ├─ Modifying R scripts
+│  ├─ Creating new functions
+│  ├─ Publication graphics (ggplot2)
+│  └─ Performance optimization
+└─ Afternoon: Certification (4 hours)
+   ├─ Practical exam (2 hours)
+   │  ├─ Run Monte Carlo analysis
+   │  ├─ Detect anomalies
+   │  ├─ Generate forecast
+   │  └─ Create report
+   ├─ Review & feedback (1 hour)
+   └─ Ongoing support discussion (1 hour)

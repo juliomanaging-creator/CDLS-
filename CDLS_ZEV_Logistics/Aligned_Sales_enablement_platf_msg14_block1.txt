@@ -1,0 +1,2 @@
+cd cdls-platform/backend
+npm run dev

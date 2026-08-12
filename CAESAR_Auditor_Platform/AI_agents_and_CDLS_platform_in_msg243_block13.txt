@@ -1,0 +1,17 @@
+Seller: California Investment Auto, LP (CDLS)
+Buyer: [Chevron / Shell] (to be negotiated)
+
+Product: California LCFS credits
+Volume: 3,056 MT CO₂e/year × 10 years = 30,560 MT
+Price: $75/MT (fixed, 21% discount to spot)
+Payment: 80% upfront ($1.83M), 20% annual ($45.8K/yr)
+
+Security:
+- First lien on carbon credits
+- Parent guarantee (CDLS, LP)
+- Reserve fund: $250K (released after 3 years)
+- Use of proceeds: 90% fleet deployment
+
+Minimum delivery: 80% of projected (2,445 MT/yr)
+Verification: Third-party (SCS Global, EcoEngineers)
+Term: 10 years (2026-2035)

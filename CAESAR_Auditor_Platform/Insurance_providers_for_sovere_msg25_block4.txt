@@ -1,0 +1,272 @@
+CALIFORNIA DEALER LOGISTICS SOLUTIONS
+INCIDENT RESPONSE PLAN
+
+Version: 1.0
+Effective Date: [TODAY'S DATE]
+Owner: Julio Garcia, CEO & Incident Commander
+
+1. PURPOSE
+Establish procedures for identifying, responding to, and recovering from 
+information security incidents affecting CDLS systems and data.
+
+2. SCOPE
+Applies to all security incidents including:
+• Unauthorized access to systems or data
+• Data breaches or exfiltration
+• Malware or ransomware infections
+• Denial of service attacks
+• Loss or theft of devices
+• Insider threats
+• Third-party vendor compromises
+
+3. INCIDENT RESPONSE TEAM
+
+3.1 Incident Commander: Julio Garcia, CEO
+• Overall incident response leadership
+• Communication with stakeholders (customers, investors, regulators)
+• Resource allocation decisions
+• Legal/regulatory notification decisions
+
+3.2 Technical Lead: [Julio Garcia or CTO when hired]
+• Technical investigation and forensics
+• Containment and eradication
+• System recovery
+• Evidence preservation
+
+3.3 Communications Lead: [Julio Garcia initially]
+• Internal communication
+• Customer notification (if required)
+• Public relations (if required)
+• Regulatory notification (if required)
+
+3.4 External Resources (On-Call)
+• Fractional vCISO: [TO BE HIRED]
+• Legal Counsel: [TO BE RETAINED]
+• Cyber Insurance: [TO BE OBTAINED]
+• Forensics Firm: [TO BE RETAINED IF NEEDED]
+
+4. INCIDENT SEVERITY CLASSIFICATION
+
+CRITICAL (P1):
+• Confirmed data breach with PII exposure
+• Ransomware affecting production systems
+• Complete service outage (JUDAS platform down)
+• Compromise of HSM or cryptographic keys
+Response Time: Immediate (15 minutes)
+
+HIGH (P2):
+• Suspected unauthorized access
+• Malware detection on production systems
+• Partial service degradation
+• Loss of device with sensitive data
+Response Time: 1 hour
+
+MEDIUM (P3):
+• Failed intrusion attempt (blocked by controls)
+• Phishing attempt reported
+• Minor policy violation
+Response Time: 4 hours
+
+LOW (P4):
+• Security awareness issue
+• Non-sensitive information disclosure
+Response Time: Next business day
+
+5. INCIDENT RESPONSE PHASES
+
+5.1 DETECTION & ANALYSIS (First 2 hours)
+✓ Incident reported via security@cdlslogistics.com or [PHONE]
+✓ Incident Commander notified immediately
+✓ Initial triage and severity classification
+✓ Activate incident response team
+✓ Preserve evidence (logs, system snapshots)
+✓ Document timeline in incident log
+
+Initial Assessment Questions:
+• What systems are affected?
+• What data is potentially compromised?
+• How was the incident detected?
+• Is the threat still active?
+• Are customers impacted?
+
+5.2 CONTAINMENT (Hours 2-6)
+✓ Isolate affected systems (disconnect from network if necessary)
+✓ Reset compromised credentials
+✓ Block malicious IPs/domains at firewall
+✓ Preserve forensic evidence before containment actions
+✓ Implement compensating controls
+✓ Monitor for lateral movement
+
+Short-Term Containment (Immediate):
+• Disable compromised accounts
+• Isolate infected systems
+• Block attack vectors
+
+Long-Term Containment (While investigating):
+• Apply emergency patches
+• Deploy additional monitoring
+• Segment network if needed
+
+5.3 ERADICATION (Hours 6-24)
+✓ Remove malware, backdoors, unauthorized access
+✓ Patch vulnerabilities exploited in attack
+✓ Strengthen affected security controls
+✓ Validate that threat actor is completely removed
+✓ Scan all systems for indicators of compromise (IOCs)
+
+5.4 RECOVERY (Hours 24-72)
+✓ Restore systems from clean backups (if needed)
+✓ Verify system integrity before bringing online
+✓ Enhanced monitoring for 30 days post-incident
+✓ Gradual restoration of services (not all at once)
+✓ Customer communication (if service was impacted)
+
+5.5 POST-INCIDENT (Within 7 days)
+✓ Incident post-mortem meeting
+✓ Document lessons learned
+✓ Update incident response procedures
+✓ Implement preventive controls
+✓ Security awareness communication to team
+✓ Final incident report to stakeholders
+
+6. COMMUNICATION PROTOCOLS
+
+6.1 Internal Communication
+• Slack/Email: Incident response team only (private channel)
+• Status updates: Every 2 hours during active incident
+• All-hands notification: After containment (if critical)
+
+6.2 Customer Notification (If Applicable)
+Required if:
+• Dealership data potentially compromised
+• Service disruption exceeds 4 hours
+• Regulatory requirement (data breach notification)
+
+Template: "CDLS experienced a security incident on [DATE]. We immediately 
+contained the issue and are conducting a thorough investigation. [SPECIFIC 
+DETAILS]. Your data [WAS/WAS NOT] affected. We will update you within 
+[24/48/72] hours with additional information."
+
+6.3 Regulatory Notification
+• CCPA: 72 hours if CA resident PII compromised
+• Cyber insurance: Immediate notification per policy
+• Law enforcement: If criminal activity suspected
+
+6.4 Media Communication
+All media inquiries directed to: Julio Garcia (CEO)
+• No comment until investigation complete
+• Prepared statement reviewed by legal counsel
+
+7. INCIDENT DOCUMENTATION
+
+7.1 Incident Log Template
+• Incident ID: INC-[YYYY-MM-DD]-[NUMBER]
+• Date/Time Detected:
+• Severity Classification:
+• Systems Affected:
+• Data Potentially Compromised:
+• Detection Method:
+• Timeline of Events:
+• Actions Taken:
+• Personnel Involved:
+• Evidence Preserved:
+• Resolution:
+• Lessons Learned:
+
+7.2 Evidence Preservation
+• Create disk images before analysis
+• Preserve logs before retention period expires
+• Screenshot attacker activity (if possible)
+• Document chain of custody
+• Store evidence securely for legal/forensic analysis
+
+8. SPECIFIC INCIDENT SCENARIOS
+
+8.1 Ransomware
+✓ DO NOT pay ransom (policy)
+✓ Isolate infected systems immediately
+✓ Identify patient zero
+✓ Restore from backups (verified clean)
+✓ Report to FBI (Internet Crime Complaint Center)
+
+8.2 Phishing / Credential Compromise
+✓ Reset compromised user password immediately
+✓ Review account activity logs for unauthorized access
+✓ Check for forwarding rules, API keys created
+✓ Force logout all sessions
+✓ Security awareness reminder to all staff
+
+8.3 Data Breach (PII Exposure)
+✓ Determine scope: how many records, what data elements
+✓ Assess legal notification requirements (CCPA, etc.)
+✓ Notify affected individuals (if required by law)
+✓ Offer credit monitoring (if SSN/financial data exposed)
+✓ Report to regulators within required timeframe
+✓ Notify cyber insurance immediately
+
+8.4 Insider Threat
+✓ Immediately disable access
+✓ Preserve evidence (logs, emails, files accessed)
+✓ Legal counsel consultation
+✓ Law enforcement (if criminal activity)
+✓ Review access logs for data exfiltration
+
+8.5 DDoS Attack on JUDAS Platform
+✓ Activate DDoS mitigation (Cloudflare, AWS Shield)
+✓ Identify attack vectors and block source IPs
+✓ Scale infrastructure to absorb load (if possible)
+✓ Notify customers of potential service degradation
+✓ Report to ISP / law enforcement
+
+9. TESTING & EXERCISES
+
+9.1 Tabletop Exercises
+• Frequency: Quarterly
+• Scenarios: Rotate through incident types
+• Participants: Full incident response team
+• Duration: 2 hours
+• Document lessons learned
+
+9.2 Technical Drills
+• Backup restoration test: Quarterly
+• Log review exercise: Monthly
+• Vulnerability response: As needed
+
+10. CONTINUOUS IMPROVEMENT
+
+After each incident:
+✓ Update this plan based on lessons learned
+✓ Add new scenarios to testing rotation
+✓ Improve detection capabilities (close gaps)
+✓ Enhance monitoring and alerting
+✓ Security awareness training on incident type
+
+11. CONTACT INFORMATION
+
+CDLS Incident Response Hotline: [PHONE NUMBER]
+Email: security@cdlslogistics.com
+
+Incident Commander: Julio Garcia
+• Phone: [YOUR PHONE]
+• Email: julio@cdlslogistics.com
+
+External Resources:
+• Fractional vCISO: [TO BE HIRED - NAME, PHONE]
+• Legal Counsel: [TO BE RETAINED - FIRM, PHONE]
+• Cyber Insurance: [TO BE OBTAINED - CARRIER, POLICY #, PHONE]
+• FBI Cyber Division: 1-800-CALL-FBI
+• IC3 (Internet Crime): www.ic3.gov
+
+APPROVAL
+
+[Signature]
+Julio Garcia
+CEO & Incident Commander
+Date: [TODAY'S DATE]
+
+---
+
+Document Control:
+Version 1.0 - Initial release [TODAY'S DATE]
+Next Review Date: [12 MONTHS FROM TODAY]
+Next Test Date: [30 DAYS FROM TODAY - Schedule tabletop exercise]

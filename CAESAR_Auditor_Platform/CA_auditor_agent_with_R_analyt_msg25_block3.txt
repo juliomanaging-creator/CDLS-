@@ -1,0 +1,12 @@
+# Example: DHCS Budget Risk Analysis
+results <- monte_carlo_budget_risk(
+  dept_id = "DHCS",
+  allocated_budget = 124000000000,  # $124B
+  iterations = 10000
+)
+
+# Output:
+Mean Expenditure: $125.2B
+Probability Over Budget >5%: 23.4%
+Probability Over Budget >10%: 8.7%
+Value at Risk (95th percentile): $6.8B

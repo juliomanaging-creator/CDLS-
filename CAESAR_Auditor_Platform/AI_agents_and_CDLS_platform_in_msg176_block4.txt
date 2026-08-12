@@ -1,0 +1,10 @@
+1. Dealer dials (916) 555-CDLS
+2. Agent 40 answers: "Hi, this is Julio from CDLS. How can I help?"
+3. Dealer: "I wanted to discuss your per-haul pricing..."
+4. Agent 40: "We charge $1,200 per haul for 9 vehicles. You also 
+              receive 60-70% revenue share as equity. Would you like 
+              me to send the one-pager?"
+5. Dealer: "Yes please!"
+6. Agent 40: "Just sent it. I'll follow up in 3 days. Sound good?"
+7. Dealer: "Perfect, thanks Julio!"
+8. [Call ends, logged to CRM, follow-up scheduled]

@@ -1,0 +1,5 @@
+Self-propelled:
+- Self-parks at loading dock
+- Self-aligns for coupling
+- Reduces jackknifing
+Safety: 30% fewer accidents

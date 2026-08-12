@@ -1,0 +1,21 @@
+Product: Route optimization for auto haulers
+Customers: 80 dealers
+ARR: $2.4M
+Valuation: $9.6M (4x ARR)
+
+Strategic Rationale:
+✓ Existing dealer relationships (cross-sell CDLS)
+✓ Technology IP (route algorithms)
+✓ Product team (8 engineers)
+
+Post-Acquisition:
+- Bolt onto CDLS platform
+- Upsell 80 customers to full CDLS ($1,999/month)
+- ARR increase: $2.4M → $4.3M
+- At 10x SaaS multiple: $43M value
+- ROI: 348%
+
+Acquisition Structure:
+- $7M cash
+- $2.6M earnout (if ARR hits $5M in 18 months)
+- Founders stay for 2-year retention

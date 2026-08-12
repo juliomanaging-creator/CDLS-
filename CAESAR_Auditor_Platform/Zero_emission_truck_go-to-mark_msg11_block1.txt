@@ -1,0 +1,40 @@
+5:30 AM  — Driver reports to Bakersfield Hub (home base)
+           Hitches to a fully loaded 9-car hauler headed north
+
+6:00 AM  — Departs south-to-north: delivers vehicles to Bay Area 
+           dealers along I-5 / I-580 corridor (~175 miles)
+
+10:30 AM — Final vehicle dropped at last Bay Area dealer
+           Drives now-empty car hauler 15 miles to Stockton Hub
+
+11:00 AM — Arrives Stockton Hub
+           ↓ Unhitches empty car hauler (joins waiting pool for 
+             southbound driver from Bay Area)
+           ↓ Truck plugs into Megacharger (60% in 30 min)
+           ↓ Driver breaks (HOS compliant)
+           ↓ Hitches to empty walking floor trailer
+
+12:00 PM — Departs Stockton Hub to nearby Central Valley farm
+           (~25–40 miles off-route)
+           Farm has pre-staged baled orchard prunings or almond 
+           shells from harvest — CDLS has a standing collection 
+           agreement
+
+1:00 PM  — Biomass loaded (~10,000–12,000 lbs of baled ag waste)
+           Returns to Stockton Hub (40 miles)
+
+2:00 PM  — Arrives Hub, backs walking floor trailer to 
+           pyrolysis reactor intake, self-unloads (~15 min)
+           ↓ Unhitches empty walking floor trailer (stays at hub)
+           ↓ Hitches to a fully loaded southbound car hauler 
+             (vehicles staged by Bay Area drivers who swapped 
+             earlier, now headed south to Fresno / Bakersfield 
+             dealers)
+
+2:30 PM  — Departs Stockton Hub south with fresh loaded car hauler
+           Delivers vehicles to Central Valley and Bakersfield 
+           dealers (~175 miles)
+
+6:30 PM  — Final delivery complete, drops empty car hauler at 
+           Bakersfield Hub staging area
+           Driver is home by 7 PM

@@ -1,0 +1,4 @@
+Before posting ad, system scans:
+❌ Missing required disclosures
+✅ All CA requirements met
+Safe to publish

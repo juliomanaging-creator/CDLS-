@@ -1,0 +1,4 @@
+✗ California LLC (Entity #B20250412694)
+✗ EIN obtained (for LLC)
+✗ No bank accounts yet ✓ (GOOD - don't open yet!)
+✗ No business license yet ✓ (GOOD - don't get yet!)

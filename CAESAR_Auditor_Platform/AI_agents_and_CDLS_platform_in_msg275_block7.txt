@@ -1,0 +1,10 @@
+Development (one-time): $95,000
+- Core agent architecture: $30K
+- Visualization tools: $20K
+- Template library: $15K
+- Web interface: $12K
+- Infrastructure: $18K
+
+Annual Operating: $26,000/year
+- Platform fees (Lucidchart, Canva): $6K
+- Maintenance & updates: $20K

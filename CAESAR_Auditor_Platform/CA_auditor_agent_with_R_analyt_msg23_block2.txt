@@ -1,0 +1,13 @@
+99% of audits use de-identified data:
+
+BEFORE (PHI - restricted):
+- Name: "John Smith"
+- SSN: "123-45-6789"  
+- DOB: "1985-03-15"
+- Diagnosis: "Type 2 diabetes with hyperglycemia"
+
+AFTER (De-identified - safe for auditing):
+- Age Range: "36-45"
+- ZIP: "958XX"
+- Year: 2026
+- Category: "Endocrine/Metabolic"

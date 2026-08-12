@@ -1,0 +1,27 @@
+Phase 1: Early Adopters (Month 1-6)
+├─ 20 founding dealers stake $CDLS tokens
+├─ Earn high yield (20% APY in $HAUL - early adopter bonus)
+├─ Use platform → Earn more $HAUL
+├─ Realize value → Refer other dealers
+└─ Network: 20 → 100 dealers (5x growth)
+
+Phase 2: Network Effects Trigger (Month 7-12)
+├─ 100 dealers on platform → Critical mass
+├─ More dealers → More data → Better platform
+├─ Better platform → More valuable → Token price increases
+├─ Token price increases → More dealers want in
+├─ Referral incentives → Viral growth
+└─ Network: 100 → 500 dealers (5x growth)
+
+Phase 3: Escape Velocity (Year 2-3)
+├─ 500 dealers → Platform becomes industry standard
+├─ OEMs integrate (Ford, GM need CDLS data)
+├─ Utilities partner (PG&E, SCE use platform)
+├─ International expansion (Canada, Mexico join)
+├─ Speculation (traders buy tokens for appreciation)
+├─ Media attention (CNBC, Bloomberg cover)
+└─ Network: 500 → 5,000 dealers (10x growth)
+
+Traditional Path: 1,000 dealers in 10 years
+Tokenized Path: 5,000 dealers in 3 years
+Acceleration: 5x faster + 5x larger = 25x outcome

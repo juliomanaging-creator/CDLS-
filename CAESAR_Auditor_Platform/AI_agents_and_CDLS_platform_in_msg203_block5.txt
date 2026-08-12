@@ -1,0 +1,7 @@
+The "wind" hitting your turbine exists because:
+→ The TRUCK is moving through still air
+→ The truck's motion is powered by the BATTERY
+→ Battery energy creates the "wind"
+
+So: Battery → Truck motion → "Wind" → Turbine → Battery
+This is circular! And each step loses energy.

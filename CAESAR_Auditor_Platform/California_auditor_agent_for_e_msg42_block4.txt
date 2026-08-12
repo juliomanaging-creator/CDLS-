@@ -1,0 +1,13 @@
+Agent opens in browser (localhost:8472)
+
+"Where are your sales files?"
+
+[Browse] → Point to DMS export folder
+
+OR
+
+[Drag files here]
+
+🔒 Your data stays on YOUR computer
+🔒 Nothing uploads anywhere
+🔒 Works without internet

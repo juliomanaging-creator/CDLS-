@@ -1,0 +1,11 @@
+npm notice New minor version of npm available!
+→ Just means there's an npm update (optional)
+
+npm warn deprecated packagename@1.0.0
+→ Package is old but still works (not urgent)
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY
+→ Optional feature not installed (usually fine)
+
+22 packages are looking for funding
+→ Donation request (completely optional)

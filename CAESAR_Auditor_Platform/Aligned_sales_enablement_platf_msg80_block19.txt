@@ -1,0 +1,31 @@
+CORE TEAM:
+─────────
+Julio [Last Name] - CEO
+├─ Email: julio@cdlsnetwork.com
+├─ Phone: [phone]
+├─ Role: Overall strategy, fundraising, dealer relations
+└─ Availability: 24/7
+
+[CFO Name] - CFO
+├─ Email: [email]
+├─ Phone: [phone]
+├─ Role: Financial, legal, compliance
+└─ Availability: 8am-8pm PST
+
+[CTO Name] - CTO (hiring)
+├─ Email: [email]
+├─ Phone: [phone]
+├─ Role: Technical, product, platform
+└─ Start date: TBD
+
+[Marketing Name] - Marketing Lead
+├─ Email: [email]
+├─ Phone: [phone]
+├─ Role: Content, PR, social, whitepaper
+└─ Availability: 9am-6pm PST
+
+[Operations Name] - Operations Lead
+├─ Email: [email]
+├─ Phone: [phone]
+├─ Role: Dealer onboarding, support, logistics
+└─ Availability: 8am-7pm PST

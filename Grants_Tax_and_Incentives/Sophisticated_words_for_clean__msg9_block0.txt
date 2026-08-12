@@ -1,0 +1,17 @@
+RETAIL DEALERSHIP
+(Endpoint: aged inventory, trade-ins)
+         ↓
+TABULA RASA AUTOMOTIVE
+(Wholesale repositioning)
+         ↓
+LOGISTICS SYNDICATE
+(Efficient transportation)
+         ↓
+FINANCE OPTIMIZATION
+(Capital deployment)
+         ↓
+TECHNOLOGY ENABLEMENT
+(Cycle visibility)
+         ↓
+BACK TO RETAIL
+(New lifecycle begins)

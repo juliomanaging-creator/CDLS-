@@ -1,0 +1,2 @@
+Air slows from 29 m/s to 20 m/s
+Momentum change creates force: 572 N

@@ -1,0 +1,14 @@
+Development (one-time):
+- Political Coalition Builder: $50,000
+- Technical Capability Manager: $50,000
+- Integration & testing: $20,000
+Total: $120,000
+
+Operating costs (annual):
+- Platform subscriptions (CRM, ATS, CMMS, LMS): $30,000
+- API costs (Gmail, LinkedIn, web search): $12,000
+- Cloud hosting (24/7 operation): $6,000
+- Maintenance & updates: $20,000
+Annual total: $68,000
+
+3-year total: $324,000

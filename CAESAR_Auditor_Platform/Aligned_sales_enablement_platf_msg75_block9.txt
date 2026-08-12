@@ -1,0 +1,18 @@
+Legal Onboarding:
+├─ 9:00 AM: Kickoff call with legal team
+├─ 10:00 AM: Sign engagement letter
+├─ 11:00 AM: Initial strategy session
+│   ├─ Token classification approach
+│   ├─ CARB advisory opinion drafting
+│   └─ Timeline to TGE
+└─ 2:00 PM: Action items assigned
+
+Token Economics:
+├─ 1:00 PM: Present model to legal (feedback)
+├─ 3:00 PM: Revisions based on legal input
+├─ 4:00 PM: Model v2.0 finalized
+└─ 5:00 PM: Week 2 closeout
+
+Weekend:
+- Legal: Begin token classification memo
+- Marketing: Whitepaper first draft

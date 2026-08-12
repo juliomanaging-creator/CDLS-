@@ -1,0 +1,11 @@
+Improved Close Rate (ICR) = 
+    Current Close Rate * (1 + Expected Improvement %)
+
+Additional Monthly Sales (AMS) = 
+    Current Lead Volume * (ICR - Current Close Rate)
+
+CRM Revenue Impact = 
+    AMS * (Average Front Gross + Average Back Gross)
+
+CRM ROI = 
+    ((CRM Revenue Impact * 12) - Annual CRM Cost) / Annual CRM Cost * 100

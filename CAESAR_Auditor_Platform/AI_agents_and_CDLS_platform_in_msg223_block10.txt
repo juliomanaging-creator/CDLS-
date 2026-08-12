@@ -1,0 +1,5 @@
+Uphill, wet road:
+Traditional: 450 kW max (truck wheels slip)
+Your system: 750 kW max (distributed load)
+
+Maintains speed without battery drain spikes! ✅

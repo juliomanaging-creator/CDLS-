@@ -1,0 +1,8 @@
+Scenario 1: Internal Staff (No R Experience)
+├─ Learning R:                    80-120 hours
+├─ Learning statistical methods:  40-60 hours
+├─ Development:                   200-300 hours
+├─ Testing:                       60-80 hours
+└─ Documentation:                 40-60 hours
+Total: 420-620 hours (10-15 weeks)
+Estimated Cost: $50K-$75K

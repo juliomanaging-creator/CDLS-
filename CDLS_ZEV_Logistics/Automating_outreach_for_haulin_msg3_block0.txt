@@ -1,0 +1,8 @@
+Call List (CSV) 
+    ↓
+Instantly.ai (emails) 
+    ↓
+Reply detected → Bland.ai qualifier call
+    ↓
+Qualified? → Cal.com booking
+Not qualified? → Nurture sequence

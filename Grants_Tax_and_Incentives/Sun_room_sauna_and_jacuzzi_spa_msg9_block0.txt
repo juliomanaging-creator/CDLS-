@@ -1,0 +1,3 @@
+[WALL]
+↑ Exhaust vent — near ceiling, close to heater
+↓ Intake vent — near floor, opposite side or door

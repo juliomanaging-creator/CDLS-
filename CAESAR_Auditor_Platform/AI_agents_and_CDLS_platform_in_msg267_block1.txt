@@ -1,0 +1,16 @@
+Some plants naturally absorb EXTREME concentrations of metals:
+
+Examples:
+- Alyssum bertolonii: Absorbs NICKEL (up to 1% dry weight!)
+- Thlaspi caerulescens: Absorbs ZINC & CADMIUM
+- Pteris vittata: Absorbs ARSENIC (used for soil remediation!)
+- Berkheya coddii: Absorbs NICKEL (used for phytomining!)
+
+Mechanism:
+1. Roots absorb metal ions from soil
+2. Transport to shoots via xylem (water transport vessels)
+3. Sequester in vacuoles (storage compartments in cells)
+4. Prevent toxicity via chelation (binding with proteins)
+
+Proof of concept: If plants can absorb toxic metals at 1% concentration,
+they can definitely absorb beneficial conductive materials! ✅

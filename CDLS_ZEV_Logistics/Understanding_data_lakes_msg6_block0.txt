@@ -1,0 +1,5 @@
+1. Start ingesting your real business data
+2. Customize partition schemes in config.yaml
+3. Create automated ingestion scripts for daily operations
+4. Set up scheduled jobs for regular data updates
+5. Build custom queries for business analytics

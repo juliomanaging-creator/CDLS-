@@ -1,0 +1,26 @@
+CEX Applications:
+
+Tier 3 Exchanges (Day 4-5):
+├─ MEXC: Apply, $50K listing fee
+├─ Gate.io: Apply, $30K fee
+├─ KuCoin: Apply, $100K fee
+└─ Process: 2-4 weeks approval
+
+Tier 2 Exchanges (Day 6-7):
+├─ Bybit: Apply, $200K fee
+├─ OKX: Apply, $250K fee
+├─ Kraken: Apply, no fee (selective)
+└─ Process: 4-8 weeks approval
+
+Tier 1 Exchanges (Week 2+):
+├─ Coinbase: Requires Reg A+ or strong metrics
+├─ Binance: Requires $100M+ volume
+├─ Not realistic for Day 1-7
+└─ Target: 6-12 months post-launch
+
+Application Requirements:
+- Audit report ✓
+- Legal opinion ✓
+- KYC/AML procedures ✓
+- Liquidity commitment ✓
+- Marketing budget ✓

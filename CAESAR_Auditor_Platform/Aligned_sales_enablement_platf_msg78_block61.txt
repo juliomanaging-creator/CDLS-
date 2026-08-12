@@ -1,0 +1,10 @@
+Price: $0.05 per $CDLS token
+TGE: April 13, 2026
+Open to: Anyone (with KYC)
+Minimum: $1,000
+Maximum: $50,000 (retail), $500,000 (whales)
+
+Access:
+├─ Whitelist (1,000 spots): April 13, 8:00 AM (2-hour window)
+├─ Public: April 13, 10:00 AM (until sold out)
+└─ Register: cdls.network/whitelist

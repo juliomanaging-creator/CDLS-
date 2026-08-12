@@ -1,0 +1,13 @@
+Week 2-8: Smart contract development
+├─ If buggy: Launch delayed
+└─ Mitigation: Hire best team, audit early
+
+Week 9-12: Security audit
+├─ If critical issues: Fix required
+└─ Mitigation: Internal testing, bug bounty
+
+Week 13: Deployment
+├─ If fails: Catastrophic
+└─ Mitigation: Multiple dry runs
+
+Risk: LOW (with proper team & testing)

@@ -1,0 +1,10 @@
+# Unzip
+unzip cdls-local-ai-agent.zip
+cd cdls-local-ai-agent
+
+# Option 1: Docker (recommended)
+cd docker && docker-compose up -d
+
+# Option 2: Setup script
+chmod +x scripts/setup.sh
+./scripts/setup.sh

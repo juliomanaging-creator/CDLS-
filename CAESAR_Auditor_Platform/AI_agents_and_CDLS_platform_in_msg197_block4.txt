@@ -1,0 +1,2 @@
+Force = 1.3 millinewtons per 1 cm² grid
+(Measurable with atomic force microscope!)

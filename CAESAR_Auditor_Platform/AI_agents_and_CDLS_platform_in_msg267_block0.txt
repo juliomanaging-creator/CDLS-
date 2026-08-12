@@ -1,0 +1,17 @@
+Plants naturally absorb elements through roots via:
+
+PASSIVE TRANSPORT (No Energy Required):
+- Osmosis: Water + dissolved minerals move down concentration gradient
+- Diffusion: Elements move from high → low concentration
+- Examples: Water, oxygen, carbon dioxide
+
+ACTIVE TRANSPORT (Energy Required, ATP-driven):
+- Ion pumps: Plant expends energy to move minerals AGAINST gradient
+- Selective uptake: Plant chooses which elements to absorb
+- Examples: Potassium (K+), Nitrogen (NO3-), Phosphorus (PO4³⁻)
+
+Key insight: Plants CAN absorb non-standard elements if:
+✅ Element is water-soluble (dissolves in soil water)
+✅ Element size fits through cell membrane channels (0.4-2 nanometers)
+✅ Plant has transporters for that element (or similar element)
+✅ Concentration gradient favors uptake

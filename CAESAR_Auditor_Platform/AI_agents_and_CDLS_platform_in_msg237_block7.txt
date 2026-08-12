@@ -1,0 +1,3 @@
+Highway power needed: 145 kW
+Dynamic charging: 100 kW (ElectReon system)
+Deficit: -45 kW (battery still drains)

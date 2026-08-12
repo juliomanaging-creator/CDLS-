@@ -1,0 +1,3 @@
+# In the running server window, press Ctrl+C
+   # Then restart:
+   npm start

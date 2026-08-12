@@ -1,0 +1,90 @@
+[Explains each line]
+
+Set this to run whenever inputs change.
+
+Now display the results. Add a 'Statistic' component showing:
+- Annual Carbon Reduction (big number)
+- LCFS Credits Generated
+- Annual Revenue
+- 5-Year Projection
+
+[Formats display]
+
+Let's test it. Enter a 10-vehicle fleet...
+
+[Enters data]
+
+Look at that: $473,000 per year in carbon credit revenue! 
+
+This completely changes the ROI. Add this to fuel and maintenance savings, and dealers are looking at under 30-day payback periods.
+
+This is how we differentiate..."
+
+[Continue with CARB reporting features]
+
+---
+
+[TESTING & DEPLOYMENT]
+
+"Alright, we're almost done. Now let's test everything end-to-end.
+
+First, test on desktop. Select a dealer, watch the data populate, run a calculation, check the results...
+
+[Runs through flow]
+
+Perfect. Now click 'Email Results'...
+
+[Checks email]
+
+Received. Great.
+
+Now let's test on mobile. Click the 'Preview' button and scan this QR code with your phone...
+
+[Shows QR code]
+
+[Switches to phone screen recording]
+
+See, it's fully responsive. All the buttons are big and touch-friendly. You can run calculations on the go during dealer meetings.
+
+[Tests on phone]
+
+Excellent. Now let's deploy this.
+
+Click the 'Share' button in the top-right. You have three options:
+
+1. Public link - anyone can access
+2. Specific users - requires login
+3. Embed on website
+
+For dealer demos, I recommend 'Public link with password'. Set a simple password like 'CDLS2025'.
+
+[Generates link]
+
+Copy this link. Send it to dealers with:
+
+'Here's your personalized ROI calculator: [link]
+Password: CDLS2025'
+
+[Shows example email]
+
+And for CalPERS, create a specific investor version without the password requirement. They should be able to access it freely.
+
+[Creates second link]
+
+That's it! You now have a production-ready, institutional-grade ROI calculator.
+
+[OUTRO]
+
+Let me show you the impact this has had. In the first week:
+- 12 dealers used it
+- 47 calculations run  
+- 3 dealers increased their equity commitments
+- CalPERS used it in their internal modeling
+
+This tool is a game-changer for closing deals.
+
+If you have questions, drop them in the comments. I'll be creating more tutorials on building the full CDLS platform.
+
+Thanks for watching, and good luck building!
+
+[END - 30 minutes total]

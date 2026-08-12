@@ -1,0 +1,12 @@
+Minimum:
+- Any dual-core CPU
+- 8 GB RAM
+- 10 GB disk space
+- Windows 10+, macOS 11+, Ubuntu 20.04+
+- NO internet required after install
+
+Recommended:
+- Quad-core CPU
+- 16 GB RAM  
+- 20 GB disk space
+- SSD (faster processing)

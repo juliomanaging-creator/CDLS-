@@ -1,0 +1,35 @@
+Listing:
+- Dealer lists 100 verified credits
+- Sets ask price: $105/credit
+- Total listing value: $10,500
+- Listing fee: 50 $HAUL (one-time)
+
+Matching:
+- Buyer (oil company) bids $104/credit
+- Smart contract matches orders
+- Settlement instant (atomic swap)
+- Marketplace fee: 2% in $CDLS (burned)
+
+Types of Trades:
+
+1. Spot (Immediate):
+├─ Buy verified credits now
+├─ Instant settlement
+└─ Premium price ($105)
+
+2. Forward (Future Delivery):
+├─ Buy Q3 2026 credits in January 2026
+├─ Locked-in price
+├─ Discount ($95)
+└─ Settle in September 2026
+
+3. Options (Right to Buy):
+├─ Pay premium ($5/credit)
+├─ Get right to buy at $100 in Q4
+├─ If price goes to $120, exercise
+└─ If price drops to $90, don't exercise
+
+4. Fractional (Small Amounts):
+├─ Buy 0.01 credits (not possible in CARB)
+├─ Enables retail participation
+└─ Democratizes carbon markets

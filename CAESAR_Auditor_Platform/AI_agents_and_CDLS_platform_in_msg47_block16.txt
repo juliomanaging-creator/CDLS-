@@ -1,0 +1,10 @@
+Your Computer:
+├── cdls-platform/          ← Main project folder
+    ├── backend/            ← NEW: Add these files here
+    │   ├── server.js      ← Main API server
+    │   ├── package.json   ← Dependencies
+    │   └── .env           ← Your config
+    ├── database/          ← NEW: Add SQL here
+    │   └── schema.sql     ← Database setup
+    └── frontend/          ← Your existing HTML
+        └── index.html     ← Existing website

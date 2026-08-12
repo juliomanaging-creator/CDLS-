@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ecosystem Architecture & Dependency Explorer</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0f111a; color: #e1e3e6; display: flex; height: 100vh; overflow: hidden; }
+        
+        #sidebar { width: 380px; background: #161925; border-right: 1px solid #282c3d; padding: 20px; display: flex; flex-direction: column; gap: 20px; z-index: 10; box-shadow: 4px 0 15px rgba(0,0,0,0.5); }
+        h1 { font-size: 1.25rem; color: #40c4ff; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        .control-group { display: flex; flex-direction: column; gap: 8px; }
+        label { font-size: 0.85rem; color: #a0a5b5; text-transform: uppercase; letter-spacing: 0.5px; }
+        select { background: #202433; color: #fff; border: 1px solid #3b4259; padding: 10px 12px; border-radius: 6px; font-size: 0.95rem; outline: none; cursor: pointer; transition: border 0.2s; }
+        select:focus { border-color: #40c4ff; }
+        
+        #details-card { background: #202433; border: 1px solid #2d3348; border-radius: 8px; padding: 16px; flex-grow: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
+        #details-title { font-size: 1.1rem; color: #fff; font-weight: 600; border-bottom: 1px solid #33394d; padding-bottom: 8px; }
+        #details-desc { font-size: 0.9rem; color: #c3c7d4; line-height: 1.4; }
+        .badge { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; width: fit-content; }
+        
+        .conn-list { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-top: 5px; }
+        .conn-item { font-size: 0.85rem; background: #161925; padding: 8px; border-radius: 5px; border-left: 3px solid #40c4ff; }
+        
+        #main-view { flex-grow: 1; position: relative; background: #0b0c10; }
+        #network { width: 100%; height: 100%; }
+    </style>
+</head>
+<body>
+
+    <div id="sidebar">
+        <div>
+            <h1>Ecosystem Map</h1>
+            <p style="font-size: 0.8rem; color: #70758a; margin-top: 4px;">Interactive Architecture & Dependency Visualizer</p>
+        </div>
+
+        <div class="control-group">
+            <label for="node-select">Filter Core Project / Node:</label>
+            <select id="node-select" onchange="focusNode(this.value)">
+                <option value="">-- View All Connections --</option>
+            </select>
+        </div>
+
+        <div id="details-card">
+            <div id="details-title">Select a Project Node</div>
+            <div id="details-badge" class="badge" style="display:none;"></div>
+            <div id="details-desc">Click any node in the graph or choose a project from the dropdown menu to inspect its connections and function in the ecosystem.</div>
+            
+            <div id="conn-section" style="display:none;">
+                <label style="margin-top:10px; display:block;">Active Ecosystem Linkages:</label>
+                <ul id="conn-list" class="conn-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-view">
+        <div id="network"></div>
+    </div>
+
+    <script type="text/javascript">
+        const rawNodes = [{"id": "CDLS_ZEV_Logistics", "label": "CDLS ZEV Logistics\n(Energy & Fleet Platform)", "group": "Core Systems", "color": "#00E676", "size": 35, "desc": "Central clean energy V2G platform, VPP infrastructure, and microgrid telemetry."}, {"id": "CAESAR_Auditor_Platform", "label": "CAESAR Auditor Platform\n(Compliance & Audit Engine)", "group": "Core Systems", "color": "#FF3D00", "size": 35, "desc": "Automated compliance, data auditing, and state regulatory verification engine."}, {"id": "Sovereign_Initiatives", "label": "Sovereign Initiatives\n(Hardware & Blueprints)", "group": "Hardware & Engineering", "color": "#FFD600", "size": 30, "desc": "Physical hardware blueprints, dimensional specs, and engineering frameworks."}, {"id": "Dealership_and_Operations", "label": "Dealership & Operations\n(Fleet & Commercial)", "group": "Operations", "color": "#2979FF", "size": 30, "desc": "DMV filings, vehicle transportation, payment processing, and inventory logic."}, {"id": "Developer_and_Code_Assets", "label": "Developer & AI Engine\n(Agents, Backends & Scripts)", "group": "Development", "color": "#AA00FF", "size": 30, "desc": "Local AI agent loops, backend API gateways, databases, and automation scripts."}, {"id": "Grants_Tax_and_Incentives", "label": "Grants & Tax Optimization\n(Incentives & Credits)", "group": "Finance & Grants", "color": "#00E5FF", "size": 25, "desc": "EV tax credit optimization (Form 8936), USDA/DOE grants, and carbon offsets."}, {"id": "Job_Applications", "label": "Job Applications & State Audits\n(Compliance Briefs)", "group": "Compliance", "color": "#FF4081", "size": 22, "desc": "State compliance documentation, analytical SOQ briefs, and audit duty statements."}];
+        const rawEdges = [{"from": "Developer_and_Code_Assets", "to": "CDLS_ZEV_Logistics", "label": "Powers AI Agents & V2G Telemetry"}, {"from": "Developer_and_Code_Assets", "to": "CAESAR_Auditor_Platform", "label": "Executes Automated Audit Scripts"}, {"from": "Sovereign_Initiatives", "to": "CDLS_ZEV_Logistics", "label": "Supplies Hardware & Spec Blueprints"}, {"from": "Dealership_and_Operations", "to": "CDLS_ZEV_Logistics", "label": "Feeds Fleet & Transport Data"}, {"from": "Dealership_and_Operations", "to": "CAESAR_Auditor_Platform", "label": "Provides Transaction Data for Auditing"}, {"from": "CDLS_ZEV_Logistics", "to": "CAESAR_Auditor_Platform", "label": "Sends Telemetry & Energy Banking Logs"}, {"from": "Grants_Tax_and_Incentives", "to": "CDLS_ZEV_Logistics", "label": "Maximizes EV Tax Credits & Funding"}, {"from": "Grants_Tax_and_Incentives", "to": "CAESAR_Auditor_Platform", "label": "Validates Grant Compliance Records"}, {"from": "CAESAR_Auditor_Platform", "to": "Job_Applications", "label": "Validates State Compliance Standards"}];
+
+        const nodesMap = {};
+        rawNodes.forEach(n => nodesMap[n.id] = n);
+
+        const select = document.getElementById('node-select');
+        rawNodes.forEach(n => {
+            const opt = document.createElement('option');
+            opt.value = n.id;
+            opt.textContent = n.label.replace('\n', ' ');
+            select.appendChild(opt);
+        });
+
+        const nodes = new vis.DataSet(rawNodes.map(n => ({
+            id: n.id,
+            label: n.label,
+            color: { background: n.color, border: '#ffffff', highlight: { background: n.color, border: '#40c4ff' } },
+            size: n.size,
+            shape: 'dot',
+            font: { color: '#ffffff', size: 13, face: 'Segoe UI' }
+        })));
+
+        const edges = new vis.DataSet(rawEdges.map(e => ({
+            from: e.from,
+            to: e.to,
+            label: e.label,
+            arrows: 'to',
+            color: { color: '#4a5168', highlight: '#40c4ff', opacity: 0.8 },
+            font: { color: '#9097ab', size: 10, align: 'top' },
+            smooth: { type: 'curvedCW', roundness: 0.15 }
+        })));
+
+        const container = document.getElementById('network');
+        const data = { nodes: nodes, edges: edges };
+        const options = {
+            nodes: { borderWidth: 2, shadow: true },
+            edges: { width: 2, shadow: false },
+            physics: {
+                solver: 'forceAtlas2Based',
+                forceAtlas2Based: { gravitationalConstant: -80, centralGravity: 0.01, springLength: 160, springConstant: 0.08 }
+            },
+            interaction: { hover: true, tooltipDelay: 100 }
+        };
+
+        const network = new vis.Network(container, data, options);
+
+        network.on("click", function (params) {
+            if (params.nodes.length > 0) {
+                const nodeId = params.nodes[0];
+                document.getElementById('node-select').value = nodeId;
+                focusNode(nodeId);
+            } else {
+                resetHighlight();
+            }
+        });
+
+        function focusNode(nodeId) {
+            if (!nodeId) {
+                resetHighlight();
+                return;
+            }
+
+            const nodeData = nodesMap[nodeId];
+            
+            document.getElementById('details-title').innerText = nodeData.label.replace('\n', ' ');
+            document.getElementById('details-desc').innerText = nodeData.desc;
+            
+            const badge = document.getElementById('details-badge');
+            badge.style.display = 'inline-block';
+            badge.style.background = nodeData.color;
+            badge.style.color = '#000';
+            badge.innerText = nodeData.group;
+
+            const connectedEdges = rawEdges.filter(e => e.from === nodeId || e.to === nodeId);
+            const connList = document.getElementById('conn-list');
+            connList.innerHTML = '';
+            
+            connectedEdges.forEach(e => {
+                const li = document.createElement('li');
+                li.className = 'conn-item';
+                if (e.from === nodeId) {
+                    li.innerHTML = `<strong style="color:#00E676;">Outgoing ➔</strong> ${nodesMap[e.to].label.replace('\n', ' ')}<br><span style="color:#80879c; font-size:0.78rem;">${e.label}</span>`;
+                } else {
+                    li.innerHTML = `<strong style="color:#00E5FF;">Incoming ⬅</strong> ${nodesMap[e.from].label.replace('\n', ' ')}<br><span style="color:#80879c; font-size:0.78rem;">${e.label}</span>`;
+                }
+                connList.appendChild(li);
+            });
+            document.getElementById('conn-section').style.display = 'block';
+
+            const connectedNodeIds = new Set();
+            connectedNodeIds.add(nodeId);
+            connectedEdges.forEach(e => {
+                connectedNodeIds.add(e.from);
+                connectedNodeIds.add(e.to);
+            });
+
+            rawNodes.forEach(n => {
+                if (connectedNodeIds.has(n.id)) {
+                    nodes.update({ id: n.id, opacity: 1.0 });
+                } else {
+                    nodes.update({ id: n.id, opacity: 0.15 });
+                }
+            });
+
+            rawEdges.forEach(e => {
+                const edgeObj = edges.get({ filter: item => item.from === e.from && item.to === e.to })[0];
+                if (e.from === nodeId || e.to === nodeId) {
+                    if (edgeObj) edges.update({ id: edgeObj.id, opacity: 1.0, width: 3 });
+                } else {
+                    if (edgeObj) edges.update({ id: edgeObj.id, opacity: 0.05, width: 1 });
+                }
+            });
+
+            network.focus(nodeId, { scale: 1.1, animation: { duration: 500, easingFunction: 'easeInOutQuad' } });
+        }
+
+        function resetHighlight() {
+            document.getElementById('node-select').value = '';
+            document.getElementById('details-title').innerText = 'Select a Project Node';
+            document.getElementById('details-desc').innerText = 'Click any node in the graph or choose a project from the dropdown menu to inspect its connections and function in the ecosystem.';
+            document.getElementById('details-badge').style.display = 'none';
+            document.getElementById('conn-section').style.display = 'none';
+
+            rawNodes.forEach(n => nodes.update({ id: n.id, opacity: 1.0 }));
+            rawEdges.forEach(e => {
+                const edgeObj = edges.get({ filter: item => item.from === e.from && item.to === e.to })[0];
+                if (edgeObj) edges.update({ id: edgeObj.id, opacity: 0.8, width: 2 });
+            });
+
+            network.fit({ animation: { duration: 500, easingFunction: 'easeInOutQuad' } });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+Streamlined Onboarding:
+
+Process:
+1. KYC Verification (5 minutes)
+   ├─ Upload ID (Persona)
+   ├─ Selfie verification
+   └─ Auto-approved (95% of cases)
+
+2. Wallet Setup (10 minutes)
+   ├─ Create MetaMask wallet
+   ├─ Or use WalletConnect (mobile)
+   └─ Backup seed phrase (security)
+
+3. Purchase Tokens (15 minutes)
+   ├─ Buy ETH on Coinbase
+   ├─ Transfer to MetaMask
+   ├─ Swap ETH for $CDLS on Uniswap
+   └─ Or: Direct purchase with credit card (Moonpay)
+
+4. Stake for Platform Access (5 minutes)
+   ├─ Visit cdls.network/stake
+   ├─ Connect wallet
+   ├─ Stake 10,000 $CDLS (Starter tier)
+   └─ Confirm transaction
+
+Total Time: 35 minutes (vs. 6-12 months traditional)
+
+Assistance:
+- White-glove onboarding (Zoom call)
+- Step-by-step guide (screen recording)
+- Technical support (Discord, 24/7)

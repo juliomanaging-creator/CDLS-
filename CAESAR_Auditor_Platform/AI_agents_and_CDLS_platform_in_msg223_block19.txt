@@ -1,0 +1,13 @@
+Solution          Investment   Annual      ROI
+                               Benefit     
+────────────────────────────────────────────────
+Aerodynamics      $7K          $9K        9 mo ✅
+Solar             $15K         $6K        2.5 yr ✅
+Lightweight       $55K         $150K      4.4 mo ✅
+Active trailer    $180K        $24.3K     7.4 yr ⚠️
+
+Active trailer: Longer ROI BUT unique benefits!
+- 2.35× more regen energy
+- +43% range extension
+- Safety improvements
+- Future-proof (V2G, autonomy)

@@ -1,0 +1,20 @@
+Dealer's Computer
+├─ DealerAudit Agent (Electron app)
+│  ├─ Frontend (React - dashboard)
+│  ├─ Backend (Node.js - processing)
+│  ├─ Database (SQLite - local storage)
+│  └─ AI Engine (Ollama - runs locally)
+│     └─ llama3.2:3b model
+│
+├─ Data (NEVER uploaded)
+│  ├─ Sales records
+│  ├─ Compliance checks
+│  └─ Generated reports
+│
+└─ Reports (generated locally)
+   ├─ PDF exports
+   └─ Audit packages
+
+NO INTERNET REQUIRED ✓
+NO CLOUD SERVICES ✓
+COMPLETE DATA SOVEREIGNTY ✓

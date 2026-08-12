@@ -1,0 +1,7 @@
+Power saved: 22 kW continuous
+Trip duration: 12 hours (350 miles)
+Energy saved: 22 × 12 = 264 kWh
+
+Range extension: 264 / 2.57 = 103 miles!
+
+New range: 350 → 453 miles (+29%!) 🎉

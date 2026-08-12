@@ -1,0 +1,409 @@
+<!-- dashboard/templates/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDLS Auditor Dashboard - Rebecca McNeil</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #065A82 0%, #1C7293 100%);
+            color: white;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .metric-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .metric-card.warning {
+            border-left-color: #FF9800;
+        }
+        
+        .metric-card.critical {
+            border-left-color: #F44336;
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .metric-change {
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            color: #4CAF50;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .refresh-btn {
+            background: #065A82;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        
+        .refresh-btn:hover {
+            background: #1C7293;
+        }
+        
+        .exception-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .exception-table th {
+            background: #f8f9fa;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-bottom: 2px solid #dee2e6;
+        }
+        
+        .exception-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #ecf0f1;
+            font-size: 0.9rem;
+        }
+        
+        .exception-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .status-badge {
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .status-verified {
+            background: #E8F5E9;
+            color: #2E7D32;
+        }
+        
+        .status-review {
+            background: #FFF3E0;
+            color: #E65100;
+        }
+        
+        .status-exception {
+            background: #FFEBEE;
+            color: #C62828;
+        }
+        
+        .integrity-bar {
+            height: 8px;
+            background: #ecf0f1;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .integrity-fill {
+            height: 100%;
+            transition: width 0.3s;
+        }
+        
+        .alert-item {
+            padding: 1rem;
+            margin-bottom: 0.8rem;
+            border-radius: 8px;
+            border-left: 4px solid;
+        }
+        
+        .alert-critical {
+            background: #FFEBEE;
+            border-left-color: #F44336;
+        }
+        
+        .alert-high {
+            background: #FFF3E0;
+            border-left-color: #FF9800;
+        }
+        
+        .alert-title {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+        
+        .alert-message {
+            font-size: 0.9rem;
+            color: #5a6268;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔍 CDLS Auditor Dashboard</h1>
+        <p>Real-time platform monitoring for Rebecca McNeil, COO & California State Auditor</p>
+    </div>
+    
+    <div class="container">
+        <!-- Metrics Grid -->
+        <div class="metrics-grid">
+            <div class="metric-card" id="metric-total">
+                <div class="metric-label">Transactions Today</div>
+                <div class="metric-value" id="total-today">--</div>
+                <div class="metric-change">Live monitoring</div>
+            </div>
+            
+            <div class="metric-card warning" id="metric-flagged">
+                <div class="metric-label">Flagged for Review</div>
+                <div class="metric-value" id="flagged-today">--</div>
+                <div class="metric-change">Integrity < 95%</div>
+            </div>
+            
+            <div class="metric-card critical" id="metric-critical">
+                <div class="metric-label">Critical Exceptions</div>
+                <div class="metric-value" id="critical-today">--</div>
+                <div class="metric-change">Immediate action required</div>
+            </div>
+            
+            <div class="metric-card" id="metric-integrity">
+                <div class="metric-label">Avg Integrity Score</div>
+                <div class="metric-value" id="avg-integrity">--</div>
+                <div class="metric-change">Platform health</div>
+            </div>
+        </div>
+        
+        <!-- Regulatory Alerts -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">⚠️ Regulatory Compliance Alerts (24h)</h2>
+                <button class="refresh-btn" onclick="refreshAlerts()">Refresh</button>
+            </div>
+            <div id="alerts-container">
+                <div class="loading">Loading alerts...</div>
+            </div>
+        </div>
+        
+        <!-- Exception Table -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">📊 Live Exception Feed</h2>
+                <button class="refresh-btn" onclick="refreshExceptions()">Refresh</button>
+            </div>
+            <div style="overflow-x: auto;">
+                <table class="exception-table">
+                    <thead>
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>Timestamp</th>
+                            <th>Integrity Score</th>
+                            <th>GPS Var%</th>
+                            <th>Energy Var%</th>
+                            <th>Financial Var%</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="exceptions-tbody">
+                        <tr><td colspan="7" class="loading">Loading exceptions...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Auto-refresh every 30 seconds
+        setInterval(() => {
+            refreshMetrics();
+            refreshExceptions();
+            refreshAlerts();
+        }, 30000);
+        
+        // Initial load
+        refreshMetrics();
+        refreshExceptions();
+        refreshAlerts();
+        
+        async function refreshMetrics() {
+            try {
+                const response = await fetch('/api/metrics/summary');
+                const data = await response.json();
+                
+                document.getElementById('total-today').textContent = data.total_today.toLocaleString();
+                document.getElementById('flagged-today').textContent = data.flagged_today;
+                document.getElementById('critical-today').textContent = data.critical_today;
+                document.getElementById('avg-integrity').textContent = 
+                    (data.avg_integrity * 100).toFixed(1) + '%';
+                
+                // Update card colors based on values
+                const criticalCard = document.getElementById('metric-critical');
+                if (data.critical_today > 0) {
+                    criticalCard.classList.add('critical');
+                } else {
+                    criticalCard.classList.remove('critical');
+                }
+                
+            } catch (error) {
+                console.error('Error fetching metrics:', error);
+            }
+        }
+        
+        async function refreshExceptions() {
+            try {
+                const response = await fetch('/api/exceptions/live');
+                const exceptions = await response.json();
+                
+                const tbody = document.getElementById('exceptions-tbody');
+                tbody.innerHTML = '';
+                
+                exceptions.slice(0, 20).forEach(exc => {
+                    const row = tbody.insertRow();
+                    
+                    // Transaction ID
+                    row.insertCell().textContent = exc.transaction_id.substring(0, 12) + '...';
+                    
+                    // Timestamp
+                    const timestamp = new Date(exc.timestamp);
+                    row.insertCell().textContent = timestamp.toLocaleString();
+                    
+                    // Integrity Score with bar
+                    const integrityCell = row.insertCell();
+                    const integrityPercent = (exc.integrity_score * 100).toFixed(1);
+                    integrityCell.innerHTML = `
+                        <div>${integrityPercent}%</div>
+                        <div class="integrity-bar">
+                            <div class="integrity-fill" style="width: ${integrityPercent}%; background: ${
+                                exc.integrity_score >= 0.95 ? '#4CAF50' :
+                                exc.integrity_score >= 0.85 ? '#FF9800' : '#F44336'
+                            }"></div>
+                        </div>
+                    `;
+                    
+                    // Variances
+                    row.insertCell().textContent = Math.abs(exc.gps_variance).toFixed(1) + '%';
+                    row.insertCell().textContent = Math.abs(exc.energy_variance).toFixed(1) + '%';
+                    row.insertCell().textContent = Math.abs(exc.financial_variance).toFixed(1) + '%';
+                    
+                    // Status badge
+                    const statusCell = row.insertCell();
+                    statusCell.innerHTML = `
+                        <span class="status-badge status-${exc.status}">
+                            ${exc.status}
+                        </span>
+                    `;
+                });
+                
+            } catch (error) {
+                console.error('Error fetching exceptions:', error);
+            }
+        }
+        
+        async function refreshAlerts() {
+            try {
+                const response = await fetch('/api/regulatory/alerts');
+                const alerts = await response.json();
+                
+                const container = document.getElementById('alerts-container');
+                
+                if (alerts.length === 0) {
+                    container.innerHTML = '<div class="loading">No active alerts. All systems compliant.</div>';
+                    return;
+                }
+                
+                container.innerHTML = '';
+                
+                alerts.forEach(alert => {
+                    const div = document.createElement('div');
+                    div.className = `alert-item alert-${alert.severity}`;
+                    div.innerHTML = `
+                        <div class="alert-title">${alert.type.toUpperCase().replace(/_/g, ' ')}</div>
+                        <div class="alert-message">${alert.message}</div>
+                        <div style="font-size: 0.8rem; color: #95a5a6; margin-top: 0.3rem;">
+                            ${new Date(alert.timestamp).toLocaleString()}
+                        </div>
+                    `;
+                    container.appendChild(div);
+                });
+                
+            } catch (error) {
+                console.error('Error fetching alerts:', error);
+            }
+        }
+    </script>
+</body>
+</html>

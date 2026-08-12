@@ -1,0 +1,5 @@
+Power generated: 10.1 kW
+Power cost: 38.9 kW
+NET LOSS: -28.8 kW
+
+You're still losing 28.8 kW!

@@ -1,0 +1,4 @@
+OpenAI API: $180,000/year
+Anthropic API: $144,000/year
+Ollama local: $30,500 one-time + $0 monthly
+Year 1 savings: $149,500

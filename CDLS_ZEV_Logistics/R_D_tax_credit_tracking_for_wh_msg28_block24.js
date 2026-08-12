@@ -1,0 +1,1 @@
+iconv.decode(buffer, 'win1251')

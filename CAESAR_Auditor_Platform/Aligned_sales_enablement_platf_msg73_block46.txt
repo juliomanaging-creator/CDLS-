@@ -1,0 +1,25 @@
+Partnerships:
+
+OEM Integration (Week 5-6):
+├─ Ford/GM: Discuss platform integration
+├─ Offer: 50M $CDLS (5%) over 4 years
+├─ Benefit: Access to dealer network, data
+└─ Status: Term sheet signed
+
+Utility Partnerships (Week 7-8):
+├─ PG&E, SCE: EV rate optimization
+├─ Offer: 40M $CDLS (4%) over 4 years
+├─ Benefit: Grid services, smart charging
+└─ Status: Pilot agreement
+
+DeFi Integrations (Week 9-10):
+├─ Aave: List $CDLS as collateral
+├─ Compound: Enable borrowing against $CDLS
+├─ Uniswap V4: Concentrated liquidity hooks
+└─ MakerDAO: Propose $CDLS as collateral
+
+NFT Marketplace (Week 11-12):
+├─ Launch carbon credit trading
+├─ First 100 NFTs minted
+├─ $10M GMV (first month)
+└─ 2% fee = $200K revenue

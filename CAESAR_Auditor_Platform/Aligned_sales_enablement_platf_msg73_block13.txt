@@ -1,0 +1,13 @@
+Structure:
+├─ CDLS acts as exchange
+├─ Custody of tokens and USD
+├─ Direct buyer-seller matching
+
+Requires:
+✗ Full MSB registration
+✗ 48 state licenses
+✗ $5M+ compliance cost
+
+Benefit:
+✓ Full control
+✓ Higher revenue (keep all fees)

@@ -1,0 +1,2 @@
+Just double-click setup_v2.bat
+It will find PostgreSQL automatically!

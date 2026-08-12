@@ -1,0 +1,25 @@
+Current State (Month 0): 88/100 (A-)
+├─ Environmental: 92
+├─ Social: 88
+└─ Governance: 85
+
+After Phase 1 (Month 3): 93/100 (A)
+├─ Environmental: 94 (+2)
+├─ Social: 90 (+2)
+└─ Governance: 86 (+1)
+
+After Phase 2 (Month 12): 96/100 (A+)
+├─ Environmental: 95 (+1)
+├─ Social: 91 (+1)
+└─ Governance: 97 (+11)
+
+After Phase 3 (Month 24): 98/100 (A+)
+├─ Environmental: 98 (+3)
+├─ Social: 95 (+4)
+└─ Governance: 98 (+1)
+
+Optional Super-Excellence: 100/100
+├─ Net positive impact
+├─ 100% circular economy
+├─ Social impact bonds
+└─ Regenerative model

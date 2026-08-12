@@ -1,0 +1,5 @@
+Overall Completion:        81.11%  🟡
+Integration Score:         24.31%  🔴
+Deployment Readiness:      70.00%  🟡
+Risk Score:                30.00%  🔴
+Open Loops:                36      🔴

@@ -1,0 +1,10 @@
+# Enable dev mode (skip license check for testing)
+export SALSA_DEV_MODE=1   # Mac/Linux
+set SALSA_DEV_MODE=1       # Windows
+
+# Run analysis on sample data
+python core/engine.py data_input/sample_sales.csv
+
+# Check output
+ls -la audit_output/         # Text reports
+ls -la audit_reports_pdf/    # PDF reports

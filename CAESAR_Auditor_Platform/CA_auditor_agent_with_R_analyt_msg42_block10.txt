@@ -1,0 +1,19 @@
+What's Public:
+✅ Aggregate audit findings
+✅ Department-level statistics
+✅ Fraud cases (after prosecution)
+✅ Legislative reports
+✅ Budget information
+✅ Vendor payment summaries
+
+What's Protected:
+❌ Individual health records (HIPAA)
+❌ Social Security Numbers
+❌ Active criminal investigations
+❌ Tax returns
+❌ Student records
+❌ Trade secrets
+
+Public Portal: https://auditor.ca.gov/transparency
+Updated: Daily
+Access: Free, no login required

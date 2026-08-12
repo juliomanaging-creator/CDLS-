@@ -1,0 +1,8 @@
+Token Name: HAUL Utility Token
+Ticker: $HAUL
+Blockchain: Ethereum (ERC-20)
+Total Supply: Uncapped (inflationary with burns)
+Initial Supply: 100,000,000 (100M tokens)
+Inflation Rate: 15% per year (decreasing 1% annually to 5% floor)
+Decimals: 18
+Initial Price: N/A (not sold, only earned)

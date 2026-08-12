@@ -1,0 +1,4 @@
+Employees: 50
+Annual Credits: $1,972,000
+Team Management: ✅ Scales automatically
+Manager Reviews: ✅ Weekly summaries

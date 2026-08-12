@@ -1,0 +1,6 @@
+Inputs: 1,000+ sales/year, current cost LOWER than CDLS
+Results:
+❌ $-250,000 to $-350,000 "Annual Hauling Cost Savings"
+✓ 290 MT carbon credits (correct)
+✓ $24,650 carbon revenue (correct)
+❌ $-1,126,750 "5-Year Total Savings" (misleading)

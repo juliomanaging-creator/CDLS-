@@ -1,0 +1,1 @@
+agent> help kubernetes    # Get guidance if needed

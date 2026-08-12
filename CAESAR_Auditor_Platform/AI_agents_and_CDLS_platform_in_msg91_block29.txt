@@ -1,0 +1,15 @@
+1. □ File California LLC dissolution (Form LLC-4/7)
+   - Online: https://bizfileonline.sos.ca.gov/
+   - Takes 10 minutes
+   - Cost: $0
+   
+2. □ Notify IRS of LLC closure
+   - Letter template: "California LLC [Entity #B20250412694] 
+     was dissolved on [date]. Please close EIN [your EIN]. 
+     No assets, no liabilities, no activity."
+   - Mail to IRS address for your state
+   
+3. □ Begin Delaware C-Corp formation
+   - Order registered agent service ($50/yr)
+   - Prepare Certificate of Incorporation
+   - File Monday morning

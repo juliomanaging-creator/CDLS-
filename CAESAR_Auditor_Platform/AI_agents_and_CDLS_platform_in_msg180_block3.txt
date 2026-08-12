@@ -1,0 +1,9 @@
+1. DigitalOcean.com → Sign up (use promo code for $200 credit)
+2. Verify email, add credit card
+3. Create Droplet:
+   - Ubuntu 24.04
+   - 16GB RAM / 8 vCPU
+   - San Francisco datacenter
+   - Click "Create"
+4. Wait 60 seconds → Server ready
+5. Note IP address (e.g., 203.0.113.42)

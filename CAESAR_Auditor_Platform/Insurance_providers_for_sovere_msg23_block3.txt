@@ -1,0 +1,39 @@
+TRANSFORMING AUTOMOTIVE LOGISTICS
+
+California Dealer Logistics Solutions (CDLS) is building the world's first 
+decentralized, AI-powered zero-emission automotive logistics network.
+
+THE CHALLENGE
+California's Advanced Clean Fleets mandate requires 100% zero-emission logistics 
+by 2035, yet no existing infrastructure can efficiently manage electric vehicle 
+fleets while addressing enterprise data sovereignty concerns.
+
+OUR SOLUTION: JUDAS ARCHITECTURE
+We've developed JUDAS (Joint Unified Dealer Autonomous System), a distributed 
+AI platform where inference runs locally on Ollama nodes behind each partner's 
+firewall. Raw dealership data remains on-premise, with only anonymized 
+optimization metadata transmitted to our coordination layer.
+
+This "edge-first" design delivers network-wide efficiency while maintaining 
+complete data sovereignty—critical for the privacy-sensitive automotive industry.
+
+FOUNDED BY INDUSTRY VETERAN
+Julio Garcia, Founder & CEO
+14+ years automotive finance and operations experience
+Technical architect and lead developer of JUDAS platform
+
+Julio recognized that California's ACF mandate would transform the hauling 
+industry. Rather than simply replacing diesel with electric, he architected 
+a comprehensive distributed AI system to reimagine logistics from the ground up.
+
+CURRENT STATUS
+• Founded: 2026
+• Stage: MVP development
+• Commitments: 100 zero-emission hauler MOU/LOI
+• Funding: CalPERS institutional negotiations
+• Location: Sacramento, California
+
+BACKED BY INNOVATION
+Member: NVIDIA Inception Program [add badge once accepted]
+Designed for: SOC 2 Type II & ISO 27001 compliance
+Target: 500+ vehicle deployment by 2027

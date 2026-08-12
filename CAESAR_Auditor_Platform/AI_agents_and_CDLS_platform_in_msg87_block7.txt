@@ -1,0 +1,13 @@
+Ground Pad (Transmitter):
+- 1.5m diameter coil embedded in concrete
+- 85 kHz resonant frequency
+- 350 kW power transfer
+
+Truck Undercarriage (Receiver):
+- 1.2m diameter coil mounted underneath
+- Resonant tuning circuit (LC matching)
+- Connects to battery management system
+
+Air Gap: 15-25 cm
+Efficiency Target: 85%+ (grid-to-battery)
+Misalignment Tolerance: ±10 cm

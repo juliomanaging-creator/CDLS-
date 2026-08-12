@@ -1,0 +1,15 @@
+Risk: SEC determines $CDLS is a security, enforcement action
+Probability: 20%
+Impact: High (could halt token sales)
+
+Mitigation:
+✅ Legal opinion from Cooley LLP (top crypto law firm)
+✅ Conservative approach (hybrid model, international first)
+✅ Compliance program (AML, KYC, ongoing monitoring)
+✅ Fallback: Register under Reg A+ if needed
+
+If it happens:
+- Cooperate fully with SEC
+- Offer rescission to affected buyers
+- Continue operating (compliant path)
+- Business still works (just slower growth)

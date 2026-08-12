@@ -1,0 +1,4 @@
+⚠ Missing smog certificates: 2
+  - VIN 2HGCM82633A789012
+  - VIN 19UUB2F53FA789456
+  Potential Fine: $2,000

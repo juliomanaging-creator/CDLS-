@@ -1,0 +1,25 @@
+Purpose: Tokenized LCFS carbon credits
+Supply: Generated based on real vehicle miles
+Standard: ERC-1155 (semi-fungible tokens)
+
+How It Works:
+1. CDLS fleet drives 1M miles in Q1
+2. Generates 1,246 LCFS credits (verified by CARB)
+3. Each credit minted as NFT (on-chain proof)
+4. Metadata: Quarter, dealer, miles, verification
+5. Credits tradable on blockchain marketplace
+
+Advantages:
+✓ Instant settlement (vs. 90 days for CARB)
+✓ 24/7 trading (vs. business hours)
+✓ Fractional ownership (trade 0.1 credits)
+✓ Transparent pricing (public order book)
+✓ Global buyers (not just CA oil companies)
+✓ Smart contract escrow (trustless)
+
+Marketplace:
+- Built on CDLS platform
+- 2% take rate (vs. 3% for brokers)
+- Instant liquidity
+- Price discovery (real-time market)
+- Futures contracts (lock in future prices)

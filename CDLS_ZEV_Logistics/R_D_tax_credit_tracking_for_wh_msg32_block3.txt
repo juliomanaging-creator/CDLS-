@@ -1,0 +1,1 @@
+xcopy "C:\Users\User\OneDrive\Desktop\Sacramento Auto Wholesale LLC\Sacramento Auto Wholesale LLC\ev-cost-platform" "C:\Projects\ev-cost-platform" /E /I /H

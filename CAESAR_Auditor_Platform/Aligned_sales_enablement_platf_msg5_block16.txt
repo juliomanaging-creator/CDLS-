@@ -1,0 +1,12 @@
+POST   /api/action-plans                 # Create action plan
+GET    /api/action-plans/dealroom/:id    # Get deal room action plans
+PUT    /api/action-plans/:id             # Update plan
+DELETE /api/action-plans/:id             # Delete plan
+
+POST   /api/action-items                 # Create action item
+GET    /api/action-items/plan/:planId    # List plan items
+PUT    /api/action-items/:id             # Update item
+DELETE /api/action-items/:id             # Delete item
+
+POST   /api/action-items/:id/comments    # Add comment
+GET    /api/action-items/:id/updates     # Get update history

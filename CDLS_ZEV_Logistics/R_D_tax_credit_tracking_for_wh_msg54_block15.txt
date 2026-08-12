@@ -1,0 +1,5 @@
+C:\Users\User\Downloads\ev-cost-platform\data\sample-data\carrier_cost_data.json
+C:\Users\User\Downloads\ev-cost-platform\data\sample-data\california_city_pricing.json
+C:\Users\User\Downloads\ev-cost-platform\data\sample-data\dealer_syndicate_members.json
+C:\Users\User\Downloads\ev-cost-platform\data\sample-data\README.md
+4 File(s) copied

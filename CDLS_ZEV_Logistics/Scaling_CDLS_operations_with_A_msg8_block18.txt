@@ -1,0 +1,4 @@
+Agent: "⚠️ Warning: W2D3-T1-DEPLOY is blocked waiting
+       for W2D2-T3-API. This could delay Week 2
+       integration. Recommend prioritizing the API
+       connection today."

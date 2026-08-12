@@ -1,0 +1,3 @@
+Energy: 27.3 kW generated
+Drag: 84.3 kW cost
+Net: -57 kW loss ❌

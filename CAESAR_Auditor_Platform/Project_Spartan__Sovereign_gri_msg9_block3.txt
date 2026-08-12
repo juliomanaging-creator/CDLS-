@@ -1,0 +1,4 @@
+Squad can deploy 200 units per shift
+Cost per unit: $12 (labor only)
+24 minutes per unit per worker
+99.2% precision rate (from regression model)

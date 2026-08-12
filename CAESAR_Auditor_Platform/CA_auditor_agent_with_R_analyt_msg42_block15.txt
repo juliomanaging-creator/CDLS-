@@ -1,0 +1,11 @@
+Public Portal Features:
+├─ Search 500,000+ daily transactions
+├─ View all state spending (10 years)
+├─ Download complete datasets
+├─ Create custom reports
+├─ Subscribe to alerts
+└─ API access for developers
+
+Updated: Daily (overnight)
+Access: Free, no login required
+Languages: English, Spanish, Chinese

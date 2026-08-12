@@ -1,0 +1,12 @@
+Protects Tax Return Information
+
+Critical Requirements:
+✅ Physical security: Specialized facilities
+✅ Background checks: Criminal history checks
+✅ Access controls: Role-based, need-to-know
+✅ FIPS 140-2 encryption
+✅ Annual IRS safeguard review
+✅ Incident response procedures
+
+Penalty if violated: Federal criminal charges
+Benefit: Maintains $200M+ in tax enforcement

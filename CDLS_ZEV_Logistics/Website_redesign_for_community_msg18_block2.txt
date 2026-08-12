@@ -1,0 +1,2 @@
+# In your repo folder:
+claude "add all the CDLS demo HTML files and set up GitHub Pages"

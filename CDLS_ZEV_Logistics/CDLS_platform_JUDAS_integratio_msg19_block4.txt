@@ -1,0 +1,6 @@
+# Keep JURE running 24/7:
+jure> monitor
+
+# Daily checks:
+jure> status
+jure> dealer           # Check dealer activity

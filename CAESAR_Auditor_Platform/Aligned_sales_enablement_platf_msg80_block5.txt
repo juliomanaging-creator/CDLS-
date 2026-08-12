@@ -1,0 +1,117 @@
+☐ 1:00 PM: Finalize Blockchain Development RFP
+   Use: Document 2 template provided above
+   Customize:
+   - Insert CDLS specific requirements
+   - Add your contact info
+   - Set deadline: January 21, 2026, 5:00 PM PST
+   
+   ☐ Save as PDF: "CDLS-Blockchain-Dev-RFP-Jan2026.pdf"
+   ☐ Technical review (CTO/senior dev)
+   ☐ Create response tracking spreadsheet
+
+☐ 2:00 PM: Post on crypto job boards
+   
+   POST ON:
+   
+   1. Crypto Jobs List (cryptojobslist.com)
+      ☐ Create account
+      ☐ Post RFP as "Contract/Project"
+      ☐ Budget: $350K-$450K
+      ☐ Tags: Solidity, Smart Contracts, DeFi
+      
+   2. Web3 Jobs (web3.career)
+      ☐ Post RFP
+      ☐ Feature listing ($299 - worth it)
+      
+   3. AngelList (angel.co)
+      ☐ Post under "Contract" section
+      ☐ Add #Solidity #Web3 tags
+      
+   4. LinkedIn
+      ☐ Post in "Blockchain Developers" group
+      ☐ Share in your network
+      
+   5. Twitter
+      ☐ Tweet: "CDLS is hiring blockchain devs to build the 
+         future of automotive logistics. $350K-$450K contract. 
+         Solidity, ERC-20, ERC-1155, staking. DM for RFP."
+      ☐ Tag: @solidity_lang @ethereum
+      
+   6. Reddit
+      ☐ r/ethdev - post RFP (check rules first)
+      ☐ r/CryptoCurrency - post in daily discussion
+
+☐ 3:00 PM: Direct outreach to 20 blockchain dev shops
+   
+   TOP 20 LIST (email directly):
+   
+   TIER 1 (Premium, $400-500K):
+   1. Trail of Bits (also our auditor)
+   2. OpenZeppelin
+   3. ConsenSys
+   4. ChainSecurity
+   5. Quantstamp
+   
+   TIER 2 (Quality, $350-450K):
+   6. Ackee Blockchain
+   7. Halborn
+   8. Runtime Verification
+   9. Solidified
+   10. Hacken
+   
+   TIER 3 (Emerging, $300-400K):
+   11. CertiK
+   12. Bramah Systems
+   13. Hosho
+   14. Smartdec
+   15. MixBytes
+   
+   TIER 4 (Offshore, $250-350K):
+   16. 10Clouds (Poland)
+   17. MLSDev (Ukraine)
+   18. Techracers (India)
+   19. Blaize (Ukraine)
+   20. Turing (Latin America)
+   
+   Email Template:
+   ---
+   Subject: Smart Contract Development Opportunity - CDLS Network
+   
+   Hi [Company Name],
+   
+   CDLS is building the first blockchain-native automotive logistics 
+   platform. We're seeking a smart contract development team for a 
+   12-week engagement starting February 1.
+   
+   Project: 7 production contracts (tokens, staking, marketplace)
+   Budget: $350K-$450K
+   Audit: Trail of Bits (scheduled Week 9-10)
+   TGE: April 13, 2026
+   
+   Attached is our full RFP. Proposals due January 21.
+   
+   Interested? Let's talk: julio@cdlsnetwork.com | [phone]
+   
+   Best,
+   Julio
+   ---
+   
+   ☐ Send to all 20 companies
+   ☐ Track responses in spreadsheet
+
+☐ 4:30 PM: Set interview schedule
+   
+   Interviews: January 15-20, 2026
+   Format: 1.5 hours per team (video call)
+   
+   Agenda:
+   - 15 min: Team intro & experience
+   - 30 min: Technical approach presentation
+   - 30 min: Q&A (us asking them)
+   - 15 min: Pricing & timeline discussion
+   
+   ☐ Block calendar (12 slots, 2 per day)
+   ☐ Create Zoom links (or Google Meet)
+   ☐ Prepare evaluation rubric (score /100)
+
+☐ 5:00 PM: Daily standup (end of day)

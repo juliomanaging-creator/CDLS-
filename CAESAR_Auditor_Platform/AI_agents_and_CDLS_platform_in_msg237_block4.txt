@@ -1,0 +1,9 @@
+Instead of levitating truck, eliminate bearing friction!
+
+Cost: $90,000 (18 wheels)
+Power saved: 8.8 kW (bearing friction eliminated)
+Benefit: $9,603/year
+ROI: 9.4 years
+
+Status: Available technology
+Result: Works, but marginal ROI

@@ -1,0 +1,8 @@
+At 65 mph (29 m/s):
+Ram pressure: 0.0747 psi
+
+Compare to jet fighter at Mach 2:
+Ram pressure: 52 psi (700× stronger!)
+
+Truck ram pressure is negligible
+Must use mechanical compression (creates drag)

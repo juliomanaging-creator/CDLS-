@@ -1,0 +1,28 @@
+Dealer Onboarding Incentive:
+- New dealer joins → Receives 50,000 $CDLS
+- Value: $2,500 at $0.05 (vs. $150K equity commitment)
+- Vests over 2 years (retention mechanism)
+- Can stake for yield (8% APY in $HAUL)
+
+Result:
+- 10x easier to recruit dealers (lower barrier)
+- 100 dealers join in Q4 vs. 20 without tokens
+- Network effects accelerate
+- Token demand increases (more staking)
+
+Platform Usage Incentives:
+- Use calculator: Earn $HAUL tokens
+- Complete haul: Earn $HAUL tokens
+- Generate carbon credits: Earn $HAUL tokens
+- Refer dealers: Earn $HAUL tokens
+
+Flywheel:
+More users → More $HAUL earned → More platform usage
+→ More revenue → More token buybacks → Price increases
+→ More users want tokens → Network grows
+
+First-Year Projection:
+- Traditional: 100 dealers in Year 1
+- Tokenized: 500 dealers in Year 1 (5x faster)
+- Traditional: $2M ARR
+- Tokenized: $10M ARR (5x faster)

@@ -1,0 +1,15 @@
+ORCHESTRATOR (Master)
+                        │
+         ┌──────────────┼──────────────┐
+         │              │              │
+    SWARM A         SWARM B         SWARM C
+  (6 Dev Agents)  (3 Test Agents)  (2 Doc Agents)
+         │              │              │
+    ┌────┴────┐    ┌────┴────┐    ┌────┴────┐
+    │         │    │         │    │         │
+Monte Carlo  Unit  API    User   Deploy
+Anomaly    Integration Docs  Guide  Agent
+TimeSeries  Performance
+Regression
+Graphics
+Python

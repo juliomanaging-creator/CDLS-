@@ -1,0 +1,23 @@
+Week 1-2: Requirements & Design
+- Finalize template library (which 20 doc types most useful?)
+- Design web interface (Rebecca's input on UX)
+- Set up integrations (Lucidchart, Canva, Mermaid)
+
+Week 3-6: Core Development
+- Build LangChain agent architecture
+- Implement 9-step framework logic
+- Create visualization generators
+- Database setup (projects, templates)
+
+Week 7-8: Testing & Refinement
+- Pilot with CalPERS pitch (real use case!)
+- Julio + Rebecca feedback
+- Iterate on templates
+
+Week 9: Launch!
+- Web interface live
+- CLI tools ready
+- Slack integration active
+- Training for Rebecca (1-hour session)
+
+By March 2025: Every CDLS presentation created in MINUTES! 🚀

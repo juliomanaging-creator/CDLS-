@@ -1,0 +1,26 @@
+Experience & Portfolio (30 points):
+├─ Relevant experience (10 pts)
+├─ Quality of past work (10 pts)
+└─ Audit track record (10 pts)
+
+Technical Approach (25 points):
+├─ Architecture design (8 pts)
+├─ Security methodology (8 pts)
+├─ Testing strategy (5 pts)
+└─ Gas optimization (4 pts)
+
+Team & Capabilities (20 points):
+├─ Team experience (10 pts)
+├─ Team availability (5 pts)
+└─ Communication skills (5 pts)
+
+Pricing (15 points):
+├─ Value for money (10 pts)
+└─ Payment terms (5 pts)
+
+Timeline & Feasibility (10 points):
+├─ Realistic timeline (5 pts)
+├─ Risk mitigation (3 pts)
+└─ Contingency planning (2 pts)
+
+Minimum Score to Advance: 70/100

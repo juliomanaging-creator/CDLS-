@@ -1,0 +1,4 @@
+cd Iron_Halo_Vault/05_JURE_DEPLOYMENT
+python3 jure.py
+
+jure> start

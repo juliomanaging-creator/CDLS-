@@ -1,0 +1,7 @@
+For EVERY proposal, Agent 42 provides:
+✓ Current efficiency calculation
+✓ Loss mechanism breakdown (with percentages)
+✓ Fundamental vs engineering limits
+✓ Improvement potential (and cost)
+✓ Gap analysis to theoretical maximum
+✓ Recommendation (pursue or redirect)

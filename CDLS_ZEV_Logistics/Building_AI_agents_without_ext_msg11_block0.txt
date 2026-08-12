@@ -1,0 +1,2 @@
+added XXX packages, and audited XXX packages in XXs
+found 0 vulnerabilities

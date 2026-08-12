@@ -1,0 +1,6 @@
+Investment:        $5,000,000
+Fleet Size:        22 trucks
+Annual EBITDA:     $3.0M (Year 5)
+Exit Value:        $23.8M @ 8x EBITDA
+CalPERS Return:    $12.5M
+MOIC:              2.50x ✅

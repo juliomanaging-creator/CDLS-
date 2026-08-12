@@ -1,0 +1,7 @@
+Without Platform:
+$5M × 25% probability × 18% IRR × 7 years = Expected Return: $15.75M
+
+With Platform:
+$5M × 65% probability × 24.7% IRR × 7 years = Expected Return: $56.27M
+
+Additional Value from Platform Strategy: $40.52M

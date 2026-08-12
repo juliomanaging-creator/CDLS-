@@ -1,0 +1,18 @@
+Traditional Marketplace (Base Plan):
+- 2030: $98M GMV
+- 2032: $400M GMV
+- 2% take rate = $8M revenue
+
+Tokenized Marketplace (Accelerated):
+- 2028: $500M GMV (global buyers, 24/7 trading)
+- 2030: $2B GMV (industry standard)
+- 2032: $5B GMV (all carbon credits, not just auto)
+- 2% take rate = $100M revenue
+
+Why 10x Larger:
+✓ Global market (Asia, Europe buying CA credits)
+✓ Retail participation (individuals can buy 1 credit)
+✓ Institutional (crypto hedge funds, DAOs)
+✓ Speculation (traders, not just compliance buyers)
+✓ Derivatives (futures, options on credits)
+✓ Composability (credits as collateral, DeFi)

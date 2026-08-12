@@ -1,0 +1,14 @@
+# Agent produces:
+/opt/ca-audit-system/r-analytics/
+├── monte_carlo.R                    # Production code
+├── anomaly_detection.R              # Production code
+├── tests/
+│   ├── test_monte_carlo.R          # All tests pass ✓
+│   └── test_anomaly.R              # All tests pass ✓
+├── docs/
+│   ├── monte_carlo_docs.md         # Complete documentation
+│   └── anomaly_docs.md             # Complete documentation
+└── deploy.sh                       # Automated deployment
+
+# One command deploys everything:
+sudo ./deploy.sh

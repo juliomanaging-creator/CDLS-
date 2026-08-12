@@ -1,0 +1,4 @@
+agent> help dealers       # Get retention playbook
+# 1. Call dealer immediately
+# 2. Fix technical issues same day
+# 3. Schedule follow-up

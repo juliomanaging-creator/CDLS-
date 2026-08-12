@@ -1,0 +1,7 @@
+Load: 5,000 lbs per vehicle
+Failure: Fasteners pull through aluminum
+Current fix: Backing plates (complex)
+
+SiC solution: Braided sleeves around bolts
+Benefit: 10× fatigue life
+Cost: $1,200

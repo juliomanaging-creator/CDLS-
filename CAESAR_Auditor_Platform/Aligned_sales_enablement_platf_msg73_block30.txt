@@ -1,0 +1,20 @@
+Probability: Medium (20%)
+Impact: Medium (Reduced liquidity)
+
+Triggers:
+├─ Regulatory pressure (SEC, CFTC)
+├─ Compliance failures (AML)
+├─ Low volume (exchange economics)
+└─ Competitor complaints
+
+Mitigation:
+✓ List on multiple exchanges (decentralization)
+✓ Maintain compliance (proactive)
+✓ High volume (market making)
+✓ Institutional custody (Coinbase Custody)
+
+If Delisting Happens:
+1. Move to DEX only (Uniswap)
+2. Maintain liquidity pools
+3. Re-list after resolving issues
+4. Focus on utility > speculation

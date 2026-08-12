@@ -1,0 +1,14 @@
+Converting: dealer_syndicate_members.json
+✓ Fixed and parsed successfully!
+
+Converting to CSV format...
+✓ Created DataFrame with 50 rows and 8 columns
+
+✅ SUCCESS! CSV file created:
+   dealer_syndicate_members.csv
+
+📊 File size: 12.45 KB
+📈 Rows: 50
+📋 Columns: 8
+
+You can now ingest this CSV file into the CDLS Data Lake!

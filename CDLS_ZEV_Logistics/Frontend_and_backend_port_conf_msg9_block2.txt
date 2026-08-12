@@ -1,0 +1,5 @@
+cd ..                          ← Go back one level
+cd ..\..                       ← Go back two levels
+cd C:\Projects\ev-cost-platform  ← Go to specific path
+cd frontend                    ← Go into subfolder
+dir                           ← List files in current directory

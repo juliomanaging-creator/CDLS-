@@ -1,0 +1,22 @@
+OPTIMIZED DUAL-REVENUE MODEL:
+═════════════════════════════════════════
+
+Per Trailer Annual Revenue:
+- Hauling Services: $45,000 (primary)
+- V2G Grid Services: $7,223 (secondary)
+─────────────────────────────────────
+TOTAL REVENUE: $52,223.00
+
+Revenue Split:
+- Driver (70%): $36,556.10/year ($3,046.34/month)
+- CDLS (30%): $15,666.90/year
+
+Investment:
+- Energy Pod System: $35,000
+- ROI Period: 2.23 years
+- Margin: 30.0%
+
+═════════════════════════════════════════
+CONCLUSION: V2G is 13.8% revenue boost
+Hauling remains core business (86.2%)
+═════════════════════════════════════════

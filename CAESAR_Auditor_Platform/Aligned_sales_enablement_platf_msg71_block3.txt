@@ -1,0 +1,24 @@
+Voting Power:
+- 1 $CDLS = 1 vote
+- Minimum 10,000 $CDLS to propose (worth $500 at launch)
+- Minimum 100,000 $CDLS to vote (worth $5,000)
+
+Governance Scope:
+✓ Platform fee changes (e.g., reduce from 2% to 1.5%)
+✓ Treasury allocation (how to spend 200M tokens)
+✓ Strategic partnerships (approve OEM deals)
+✓ Token economics changes (burn rate, inflation)
+✓ Protocol upgrades (new features, smart contracts)
+
+Voting Mechanism:
+- Snapshot voting (gasless, off-chain)
+- 7-day voting period
+- 51% threshold for passage
+- 72-hour timelock before execution
+
+Example Governance Vote:
+"Should CDLS reduce marketplace fee from 2% to 1.5%?"
+├─ Proposed by: Dealer with 50,000 $CDLS
+├─ Voting period: 7 days
+├─ Result: 60% yes (passed)
+└─ Implementation: 72 hours later

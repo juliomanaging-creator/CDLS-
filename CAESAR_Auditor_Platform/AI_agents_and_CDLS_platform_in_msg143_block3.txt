@@ -1,0 +1,29 @@
+┌──────────────────────────────────────────┐
+│   LAYER 1: USER INTERFACES              │
+│                                          │
+│   ┌─────────────┐   ┌─────────────┐    │
+│   │   CDLS      │   │  Executive  │    │
+│   │ University  │   │   Command   │    │
+│   │  (Training) │   │   Center    │    │
+│   │             │   │  (Julio's   │    │
+│   │ New Hires → │   │  Dashboard) │    │
+│   └─────────────┘   └─────────────┘    │
+└──────────────────────────────────────────┘
+           ↓                    ↓
+┌──────────────────────────────────────────┐
+│   LAYER 2: ORCHESTRATION                │
+│                                          │
+│   Multi-Agent Orchestrator              │
+│   • Task Routing                        │
+│   • Agent Coordination                  │
+│   • Workflow Automation                 │
+│   • Priority Management                 │
+└──────────────────────────────────────────┘
+           ↓
+┌──────────────────────────────────────────┐
+│   LAYER 3: 35 AI AGENTS                 │
+│                                          │
+│   Legal (9) | Research (5) | Carbon (4) │
+│   Financial (4) | Operations (4)        │
+│   External (5) | People (3) | ESG (2)   │
+└──────────────────────────────────────────┘

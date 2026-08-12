@@ -1,0 +1,33 @@
+2026 (Launch):
+├─ Token price: $0.05
+├─ Market cap: $50M (10% circulating)
+├─ Fully diluted: $500M
+└─ Your stake: $15M (300M tokens × $0.05)
+
+2027 (Product-Market Fit):
+├─ Token price: $0.25 (5x)
+├─ Market cap: $250M
+├─ Fully diluted: $2.5B
+├─ Your stake: $75M (300M tokens × $0.25)
+└─ Drivers: 500 dealers, $10M ARR
+
+2028 (Network Effects):
+├─ Token price: $1.00 (20x)
+├─ Market cap: $1B
+├─ Fully diluted: $10B
+├─ Your stake: $300M (300M tokens × $1.00)
+└─ Drivers: 1,500 dealers, $50M ARR, carbon marketplace
+
+2030 (Category Leader):
+├─ Token price: $5.00 (100x)
+├─ Market cap: $5B
+├─ Fully diluted: $50B
+├─ Your stake: $1.5B (300M tokens × $5.00)
+└─ Drivers: 5,000 dealers, $250M ARR, industry standard
+
+2032 (Mature Network):
+├─ Token price: $10.00 (200x)
+├─ Market cap: $10B
+├─ Fully diluted: $100B
+├─ Your stake: $3B (300M tokens × $10.00)
+└─ Drivers: 10,000+ dealers, $500M+ ARR, vertical integration

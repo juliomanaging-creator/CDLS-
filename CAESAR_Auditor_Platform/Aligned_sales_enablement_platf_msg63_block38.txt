@@ -1,0 +1,10 @@
+Probability: Low
+Impact: Medium
+Mitigation:
+├─ Hired experienced VP Product (ex-Uber)
+├─ Modern tech stack (cloud-native)
+├─ Outsource non-core (use APIs vs. build)
+└─ Vendor partnerships (AWS, Stripe, etc.)
+
+Current Status: Green
+Action: Quarterly architecture reviews

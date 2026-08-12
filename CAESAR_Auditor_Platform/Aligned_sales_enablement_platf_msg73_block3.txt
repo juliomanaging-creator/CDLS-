@@ -1,0 +1,25 @@
+Start utility, transition to registered:
+
+Phase 1 (2026): International Utility Token
+├─ Launch outside US (Cayman, Switzerland, Singapore)
+├─ Build provable utility (must stake to use platform)
+├─ Decentralize governance (DAO controls)
+├─ No US marketing (Reg S exemption)
+└─ Cost: $200K legal
+
+Phase 2 (2027): Progressive Decentralization
+├─ Transfer control to DAO
+├─ Team becomes service provider
+├─ Token holders vote on all decisions
+├─ 1+ year of operational history
+└─ Argue "sufficiently decentralized"
+
+Phase 3 (2028): US Registration (if needed)
+├─ File Reg A+ based on track record
+├─ Show utility > speculation
+├─ Open to US investors
+└─ Coinbase listing (requires compliance)
+
+Timeline: 3-year path to full compliance
+Cost: $200K (Phase 1) + $500K (Phase 2) + $2M (Phase 3) = $2.7M total
+Risk: Lowest (phased approach, multiple off-ramps)

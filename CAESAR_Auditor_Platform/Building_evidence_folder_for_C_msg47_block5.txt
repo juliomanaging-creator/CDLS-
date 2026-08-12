@@ -1,0 +1,20 @@
+FDIC-Insured Banks
+(JPMorgan / BofA / Wells Fargo / Citi — federally regulated)
+        ↓
+$1.1 Billion Warehouse Line of Credit
+(representations made about portfolio quality)
+        ↓
+NextGear Capital
+(uses warehouse line to fund dealer floor plans)
+        ↓
+Portfolio Managers including Julio
+(manage dealer accounts that ARE the portfolio)
+        ↓
+Dealer Floor Plan Receivables
+(pooled into NextGear Floorplan Master Owner Trust)
+        ↓
+ABS Securities — SEC-Registered
+(sold to investors with representations about collateral quality)
+        ↓
+Cox Enterprises Performance Guarantee
+(Cox corporate backs the servicing representations)

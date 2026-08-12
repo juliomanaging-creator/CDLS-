@@ -1,0 +1,30 @@
+# 9:00 AM - Start main R&D session
+rd_tracker start --project AI-001 --name "Route Optimization"
+# Output: Session ID: 42
+
+# 9:15 AM - Open Claude.ai
+# Browser extension: 🟢 Tracking started automatically
+
+# 9:15-11:30 AM - Work with Claude
+You: "Help me implement gradient boosting for route optimization"
+Claude: [generates code, explains algorithms, creates test files]
+# Extension captures: 15 code blocks, 2 files (optimizer.py, test.py)
+
+# 11:30 AM - Close Claude tab
+# Extension: ✅ Session saved (2.25 hours, AI-001, 15 code blocks, 2 files)
+
+# 11:30 AM - Continue coding (implementing Claude's suggestions)
+# ... work until 5 PM ...
+
+# 5:00 PM - End main R&D session
+rd_tracker end 42 \
+  --activity "Used Claude to design and implement gradient boosting algorithm for route optimization, then integrated into production codebase and tested with historical data" \
+  --uncertainty "Uncertain which ML model would balance prediction accuracy (<10% error) with real-time performance (<2 seconds)" \
+  --experiment "Used Claude to prototype 3 algorithms (linear regression, random forest, gradient boosting), then systematically measured accuracy and latency on 10K routes"
+
+# Output:
+# 🔴 R&D Session Ended
+#    Duration: 8.0 hours (480 minutes)
+#    Git Commits: 5 commits tracked
+#    
+# ✅ Session logged for IRS R&D credit documentation

@@ -1,0 +1,5 @@
+rd_tracker export
+
+# Output:
+✅ Export complete: ~/Documents/CDLS_RD_Exports/RD_Time_Export_2026_01_Julio.csv
+   Send this file to your CPA by the 5th of next month

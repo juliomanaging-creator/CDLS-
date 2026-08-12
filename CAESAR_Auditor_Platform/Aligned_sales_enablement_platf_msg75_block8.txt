@@ -1,0 +1,13 @@
+Legal Presentations:
+├─ 9:00 AM: Firm #3 presentation (2 hours)
+├─ 11:00 AM: Deliberation session
+├─ 2:00 PM: Decision call
+├─ 3:00 PM: Send engagement letter to winner
+└─ 4:00 PM: Notify other firms (thank you)
+
+Technical Decision:
+├─ 12:00 PM: Shortlist 2 blockchain dev teams
+├─ 3:00 PM: Request detailed proposals
+└─ 5:00 PM: Proposal due date: Jan 21
+
+Milestone: Legal counsel selected 🎉

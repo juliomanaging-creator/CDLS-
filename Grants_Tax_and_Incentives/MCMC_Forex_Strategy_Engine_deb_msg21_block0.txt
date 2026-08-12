@@ -1,0 +1,3 @@
+Layer 1: MCMC Engine    → What direction to trade
+Layer 2: Chart signals  → When to enter (your setup ✓)
+Layer 3: News filter    → Whether it's safe to enter

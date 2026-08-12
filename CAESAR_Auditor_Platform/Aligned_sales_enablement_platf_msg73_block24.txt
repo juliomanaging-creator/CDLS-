@@ -1,0 +1,16 @@
+Non-US Token Holders:
+
+Form W-8BEN Required:
+├─ Certify foreign status
+├─ Claim treaty benefits
+└─ Avoid 30% withholding
+
+Withholding Rules:
+├─ Dividends (USDC): 30% or treaty rate
+├─ Capital gains ($CDLS): No withholding
+├─ Staking rewards ($HAUL): Unclear (consult)
+
+CDLS Obligations:
+├─ Form 1042-S (foreign reporting)
+├─ Due: March 15
+└─ Penalty: $290 per failure

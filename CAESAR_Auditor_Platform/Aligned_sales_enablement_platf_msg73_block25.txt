@@ -1,0 +1,23 @@
+Legal Structuring:
+├─ Token classification opinion: $200K
+├─ CARB advisory request: $50K
+├─ Entity formation (Cayman, etc.): $100K
+└─ Total legal: $350K
+
+KYC/AML Setup:
+├─ MSB registration: $50K
+├─ AML program: $100K
+├─ KYC provider integration: $50K
+└─ Total compliance: $200K
+
+Smart Contract Audit:
+├─ Tier 1 auditor (Trail of Bits, OpenZeppelin): $150K
+├─ Bug bounty program: $50K
+└─ Total security: $200K
+
+Tax & Accounting:
+├─ CPA firm setup: $50K
+├─ Tax software: $25K
+└─ Total tax: $75K
+
+Total Year 1: $825K

@@ -1,0 +1,6 @@
+Total V2G Revenue: 100%
+├─ 99% → California Infrastructure Trust (state tax debt reduction)
+└─ 1% → Distributed among:
+    ├─ 20% → Participating Dealer (0.20% of total)
+    ├─ 15% → CNCDA (advocacy fund) (0.15% of total)
+    └─ 65% → CDLS Operations (0.65% of total)

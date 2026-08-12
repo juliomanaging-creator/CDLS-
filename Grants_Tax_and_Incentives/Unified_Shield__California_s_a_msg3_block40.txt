@@ -1,0 +1,52 @@
+1. CONSTITUTIONAL AUTHORITY
+   Question: Can a ballot initiative mandate insurance purchase?
+   Analysis: 
+   - Federal: Post-NFIB v. Sebelius (ACA case), states CAN mandate
+   - California: No constitutional barrier
+   - Precedent: Auto insurance mandate upheld
+   Conclusion: YES, mandate is permissible
+
+2. SINGLE-SUBJECT RULE
+   Question: Does Unified Shield violate single-subject requirement?
+   Analysis:
+   - California Constitution Art. II, Sec. 8(d)
+   - Must be "reasonably germane" to single subject
+   - Subject: "Universal insurance coverage for all Californians"
+   - Health/auto/home components all relate to that subject
+   Conclusion: LIKELY COMPLIES (but prepare for challenge)
+
+3. APPROPRIATIONS LIMITATIONS
+   Question: Can initiative appropriate $25B from General Fund?
+   Analysis:
+   - Art. XVI, Sec. 1 (Legislature controls appropriations)
+   - Exception: Initiative can appropriate if part of comprehensive scheme
+   - Better approach: Structure as self-funded (premium revenue)
+   Conclusion: AVOID direct appropriation; use bond authority
+
+4. TAKINGS CLAUSE  
+   Question: Does mandate constitute unconstitutional taking?
+   Analysis:
+   - Not taking property, just requiring purchase
+   - Similar to auto insurance, health insurance (ACA)
+   - State has police power to regulate insurance
+   Conclusion: NO takings violation
+
+5. VESTED RIGHTS
+   Question: Do existing insurers have vested rights to market?
+   Analysis:
+   - No right to conduct business free of regulation
+   - Unified Shield doesn't prohibit private insurance
+   - Supplemental market remains available
+   Conclusion: NO vested rights violated
+
+6. FEDERAL PREEMPTION
+   Question: Does ERISA preempt state mandate?
+   Analysis:
+   - ERISA governs employer-sponsored plans
+   - Unified Shield applies to individuals, not employer plans
+   - Coordination provisions needed
+   Conclusion: CAN coexist with ERISA if properly structured
+
+OVERALL CONCLUSION:
+Ballot initiative is LEGALLY VIABLE with careful drafting.
+Primary risk: Single-subject challenge (prepare for litigation).

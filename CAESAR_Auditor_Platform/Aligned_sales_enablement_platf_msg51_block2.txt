@@ -1,0 +1,3 @@
+GET https://api.energy.ca.gov/api/electricityRates
+?utilityId=SCE
+&rateType=commercial

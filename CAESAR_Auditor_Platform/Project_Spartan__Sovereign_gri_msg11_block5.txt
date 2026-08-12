@@ -1,0 +1,7 @@
+ELRP EVENT DAY REVENUE (Per Pod):
+- ELRP Discharge Revenue: $90.00
+- Morning Charge Cost: $7.56
+- Net ELRP Revenue: $82.44
+- LCFS Carbon Credits: +$3.60
+─────────────────────────────────────
+TOTAL ELRP EVENT: $86.04

@@ -1,0 +1,1 @@
+psql -U cdls_user -d cdls_platform -f ../database/migrations/001_initial_schema.sql

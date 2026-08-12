@@ -1,0 +1,42 @@
+Monday, March 31:
+├─ T-14 days to TGE
+├─ 9:00 AM: War room activated (daily meetings)
+├─ 10:00 AM: Legal final sign-off
+├─ 2:00 PM: Technical final readiness
+├─ 4:00 PM: Marketing final push
+└─ 5:00 PM: Evening: Julio AMA (Discord)
+
+Tuesday, April 1:
+├─ T-13 days
+├─ Deploy contracts to mainnet (non-activated)
+├─ Verify on Etherscan
+├─ Test all functions (one final time)
+└─ PR: "CDLS Smart Contracts Live on Ethereum"
+
+Wednesday, April 2:
+├─ T-12 days
+├─ Whitelist finalized (1,000 addresses)
+├─ KYC: All users pre-verified
+├─ Treasury: Final funding
+└─ Uniswap pool prep (liquidity ready)
+
+Thursday, April 3:
+├─ T-11 days
+├─ Media interviews (CoinDesk, The Block)
+├─ Influencer partnerships activated
+├─ Exchange applications submitted
+└─ Community: Hype at peak
+
+Friday, April 4:
+├─ T-10 days
+├─ Internal launch rehearsal
+├─ Simulate TGE (testnet)
+├─ Identify any issues
+└─ Team dinner (calm before storm)
+
+Weekend (April 5-6):
+├─ T-9 and T-8 days
+├─ Monitor social sentiment
+├─ Address any last concerns
+├─ Team: Light work, stay rested
+└─ Marketing: Countdown content

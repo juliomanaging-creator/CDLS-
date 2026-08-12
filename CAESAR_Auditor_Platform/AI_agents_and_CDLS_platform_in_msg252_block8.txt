@@ -1,0 +1,12 @@
+Location          Trucks  Workers  Annual      Economic
+                                   Payroll     Impact
+─────────────────────────────────────────────────────────
+South Sacramento  5       15       $1,020,000  $1,730,000
+Fresno            5       15       $975,000    $1,760,000
+East San Jose     5       15       $1,230,000  $1,850,000
+Wilmington (LA)   5       15       $1,080,000  $1,730,000
+─────────────────────────────────────────────────────────
+TOTAL             20      60       $4,305,000  $7,070,000
+
+Plus union benefits: $1,205,000/year
+Total compensation: $5,510,000/year

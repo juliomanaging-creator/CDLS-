@@ -1,0 +1,5 @@
+Perpetual motion: Battery → Motion → "Wind" → Turbine → Battery
+(Circular - violates thermodynamics ❌)
+
+Active aero: Battery → Turbines → Better airflow → Less drag
+(Linear - legitimate engineering ✅)

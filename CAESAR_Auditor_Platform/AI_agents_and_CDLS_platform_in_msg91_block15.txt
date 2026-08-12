@@ -1,0 +1,23 @@
+1. Register for Sacramento Business Operations Tax (SBOT)
+   - Website: https://www.cityofsacramento.org/Finance/Revenue/Business-Taxes
+   - Online application available
+   - Required documents:
+     * Delaware Certificate of Incorporation
+     * California Foreign Corporation Statement
+     * Federal EIN
+     * Business address (can use home address initially)
+     * Description of business
+
+2. Fee Calculation:
+   - Based on gross receipts
+   - Year 1 (no receipts): $50 minimum
+   - Year 2+: Scales with revenue
+   
+3. Annual Renewal:
+   - Due January 31 each year
+   - Penalty if late: $50 + 10% per month
+
+4. Business License Certificate:
+   - Mailed within 2 weeks
+   - Post at place of business
+   - Provide copy to bank when opening account

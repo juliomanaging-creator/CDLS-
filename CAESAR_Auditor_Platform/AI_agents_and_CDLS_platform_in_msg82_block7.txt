@@ -1,0 +1,15 @@
+Total R&D Time:              40 hours/week (60% of 67 hours worked)
+
+Breakdown:
+  - Hands-on coding:         20 hours (50%)
+  - Claude conversations:    10 hours (25%)  ← DON'T MISS THIS!
+  - Code review:             5 hours (12.5%)
+  - Research/reading:        5 hours (12.5%)
+
+Without Claude tracking:     30 hours claimed (missing 25%!)
+With Claude tracking:        40 hours claimed (100% captured)
+
+Additional R&D credit:       10 hours × $160K salary × 60% = $96K wages
+Federal credit (14%):        $13,440
+California credit (15%):     $14,400
+TOTAL ADDITIONAL:            $27,840 per year

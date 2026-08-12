@@ -1,0 +1,3 @@
+Energy captured: 20 kWh/day (from braking)
+Coverage: 20% of auxiliary loads
+No additional hardware (Tesla Semi already has this)

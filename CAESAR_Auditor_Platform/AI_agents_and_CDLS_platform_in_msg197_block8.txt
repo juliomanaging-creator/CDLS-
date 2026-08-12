@@ -1,0 +1,6 @@
+Cycle 1: Input 1 J → Output 0.00033 J
+Cycle 2: Input 0.00033 J → Output 10⁻⁷ J
+Cycle 3: Input 10⁻⁷ J → Output 3×10⁻¹¹ J
+After 100 cycles: Energy → zero
+
+System dies in 10 microseconds

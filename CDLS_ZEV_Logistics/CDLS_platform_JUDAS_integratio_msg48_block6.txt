@@ -1,0 +1,8 @@
+Agent will ask you:
+- Your name, email, phone
+- Company info
+- Campaign targets (20 Champions)
+- Deadlines (March 31)
+- Automation preferences
+
+Just answer the prompts!

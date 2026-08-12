@@ -1,0 +1,23 @@
+Day 0 (Discovery):
+├─ Hour 0-2: Contain breach, preserve evidence
+├─ Hour 2-4: Notify State Auditor, Privacy Officer, CISO
+├─ Hour 4-24: Initial forensic investigation
+
+Day 1-10:
+├─ Complete investigation
+├─ Identify all affected individuals
+├─ Assess harm risk
+
+Day 11-60:
+├─ Notify affected individuals (first-class mail)
+├─ Notify HHS Office for Civil Rights
+│  └─ If >500 affected: immediate notification
+│  └─ If <500 affected: annual log
+├─ Notify media (if >500 in jurisdiction)
+└─ Update security measures
+
+Post-Breach:
+├─ Corrective action plan
+├─ System remediation
+├─ Process improvements
+└─ Staff re-training

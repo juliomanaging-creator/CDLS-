@@ -1,0 +1,9 @@
+Technology: "Electric wind" (no moving parts!)
+- High voltage creates plasma
+- Plasma accelerates air
+- Energizes boundary layer
+- Prevents flow separation
+
+Power: 12 kW
+Drag reduction: 22.4 kW saved
+Net: +10.4 kW GAIN! ✅

@@ -1,0 +1,16 @@
+Hiring:
+├─ 9:00 AM: Review blockchain dev applications
+├─ 11:00 AM: Screen 10 candidates (phone)
+├─ 2:00 PM: Schedule technical interviews
+└─ 4:00 PM: Begin reference checks
+
+Planning:
+├─ 10:00 AM: Finalize 12-month roadmap
+├─ 1:00 PM: Budget review (spend tracking)
+├─ 3:00 PM: Risk assessment (what could go wrong?)
+└─ 5:00 PM: Week 1 closeout
+
+Weekend:
+- Julio: Read legal RFP responses
+- CFO: Financial model refinement
+- CTO: Technical architecture draft

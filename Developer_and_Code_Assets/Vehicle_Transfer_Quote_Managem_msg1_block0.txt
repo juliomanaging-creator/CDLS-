@@ -1,0 +1,13 @@
+// Core components structure
+src/
+├── components/
+│   ├── QuoteForm/
+│   │   ├── VehicleInfo.tsx
+│   │   ├── OwnerInfo.tsx
+│   │   └── DocumentUpload.tsx
+│   ├── TrackingSystem/
+│   │   ├── ProgressBar.tsx
+│   │   └── StatusUpdates.tsx
+│   └── Dashboard/
+│       ├── QuoteList.tsx
+│       └── QuoteDetails.tsx

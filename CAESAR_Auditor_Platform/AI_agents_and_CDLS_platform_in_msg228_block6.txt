@@ -1,0 +1,7 @@
+Stress: Bending under full load
+Failure: Beam buckling, weld cracks
+Current fix: Thicker I-beam (+300 lbs)
+
+SiC solution: Prepreg tape on bottom flange
+Benefit: 40% stronger, only +15 lbs
+Cost: $2,000

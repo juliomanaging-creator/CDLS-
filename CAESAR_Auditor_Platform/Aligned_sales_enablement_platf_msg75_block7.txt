@@ -1,0 +1,12 @@
+Legal Presentations:
+├─ 9:00 AM: Firm #1 presentation (2 hours)
+│   ├─ Experience with token classifications
+│   ├─ SEC Reg A+ expertise
+│   ├─ CARB/environmental law
+│   └─ Proposed timeline & budget
+├─ 2:00 PM: Firm #2 presentation (2 hours)
+└─ 5:00 PM: Internal discussion (pros/cons)
+
+Parallel:
+- Technical team: Continue candidate evaluation
+- CFO: Treasury setup (Gnosis Safe research)

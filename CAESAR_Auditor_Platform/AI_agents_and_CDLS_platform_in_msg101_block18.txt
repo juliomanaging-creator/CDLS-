@@ -1,0 +1,5 @@
+1. Buy domain (e.g., platform.cdls.com)
+2. Point to Netlify/Vercel
+3. Professional branded URL
+4. SSL certificate included
+✓ Perfect for: Production launch, marketing campaigns

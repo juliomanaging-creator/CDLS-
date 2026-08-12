@@ -1,0 +1,11 @@
+# 1. Install
+pip install anthropic --break-system-packages
+
+# 2. Set API key  
+export CLAUDE_API_KEY="sk-ant-..."
+
+# 3. Run
+python sprint-manager-agent.py
+
+# 4. Select option 1 to see today's tasks
+# 5. Start building! 🎉

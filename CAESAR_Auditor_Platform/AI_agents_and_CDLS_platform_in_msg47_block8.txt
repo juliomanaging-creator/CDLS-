@@ -1,0 +1,2 @@
+cd C:\Users\YourName\Projects\cdls-platform\backend
+psql -U postgres -f ..\database\schema.sql

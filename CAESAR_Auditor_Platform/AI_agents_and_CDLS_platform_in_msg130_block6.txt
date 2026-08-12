@@ -1,0 +1,4 @@
+Contractor claims 85 miles, 4.5 hours
+GPS shows 42 miles, 2.1 hours
+Fraud score: 87/100 → PAYMENT DENIED
+Savings: $425 per incident

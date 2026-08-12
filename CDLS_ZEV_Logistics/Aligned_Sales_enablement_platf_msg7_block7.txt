@@ -1,0 +1,5 @@
+docker run --name cdls-postgres \
+  -e POSTGRES_USER=cdls_user \
+  -e POSTGRES_PASSWORD=cdls_password \
+  -e POSTGRES_DB=cdls_platform \
+  -p 5432:5432 -d postgres:14

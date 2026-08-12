@@ -1,0 +1,17 @@
+1. Integrated active aero for EV semi-trailers
+   - Plasma + suction + air curtain combination
+   - Energy-positive system (+22 kW net)
+
+2. Ceramic composite ducting
+   - Lightweight, high-temperature resistant
+   - Integral to trailer structure
+
+3. Adaptive control system
+   - Speed-dependent activation
+   - Wind-responsive adjustments
+
+4. Energy recovery from suction exhaust
+   - Directed downward for mini ground-effect
+
+Patent value: $5-10M (defensive + licensing)
+Filing cost: $60,000

@@ -1,0 +1,11 @@
+Hacker tries to guess passwords:
+Attempt 1: Wrong password ❌
+Attempt 2: Wrong password ❌
+Attempt 3: Wrong password ❌
+Attempt 4: Wrong password ❌
+Attempt 5: Wrong password ❌
+Attempt 6: 🚫 BLOCKED for 15 minutes
+
+Legitimate user:
+Makes 20 cost calculations in 10 minutes ✅
+Still has 80 requests remaining

@@ -1,0 +1,1 @@
+powershell -command "Expand-Archive -Path 'CA-Dealer-Logistics-COMPLETE-2025-CURRENT.zip' -DestinationPath . -Force"

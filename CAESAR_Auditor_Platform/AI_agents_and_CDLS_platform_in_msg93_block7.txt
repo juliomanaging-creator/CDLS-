@@ -1,0 +1,7 @@
+Purpose: Cash flow for operations
+
+Strategy: Sell 40% immediately at market rate
+Buyers: Microsoft, Amazon, Google (voluntary offsets)
+Revenue (20 years): $273M
+
+Use: Operations, dealer payments, distributions

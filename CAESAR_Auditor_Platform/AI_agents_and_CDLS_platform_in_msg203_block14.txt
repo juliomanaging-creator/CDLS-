@@ -1,0 +1,9 @@
+Energy source: Kinetic energy (already exists, about to be wasted as heat)
+How: Motor runs backward during braking (becomes generator)
+Range gain: +70 miles (+20%)
+Cost: $50,000
+ROI: 4.2 years ✅
+
+WHY THIS WORKS vs. Wind Turbine:
+- Regen: Captures energy being WASTED (braking converts to heat otherwise)
+- Wind turbine: CREATES waste (adds new drag that costs battery energy)

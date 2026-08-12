@@ -1,0 +1,28 @@
+┌─────────────────────────────────────────────────────┐
+│                  ORCHESTRATOR AGENT                  │
+│         (Claude API - coordinates all agents)        │
+└────────────┬──────────────────────────┬─────────────┘
+             │                          │
+    ┌────────▼────────┐      ┌──────────▼──────────┐
+    │  INGESTION AGENT │      │ CATEGORIZATION AGENT │
+    │  - Web scraper   │      │ - Tags by domain     │
+    │  - PDF parser    │      │ - Assigns metadata   │
+    │  - GitHub puller │      │ - Deduplicates       │
+    └────────┬────────┘      └──────────┬──────────┘
+             │                          │
+    ┌────────▼──────────────────────────▼──────────┐
+    │                  DATABASE LAYER               │
+    │  ┌─────────────┐    ┌────────────────────┐   │
+    │  │  PostgreSQL  │    │  Pinecone/Chroma   │   │
+    │  │  (metadata,  │    │  (vector embeddings│   │
+    │  │   structure) │    │   for semantic     │   │
+    │  └─────────────┘    │   search)          │   │
+    │                      └────────────────────┘   │
+    └───────────────────────────────────────────────┘
+             │
+    ┌────────▼────────┐
+    │   QUERY AGENT   │
+    │  - Answers user │
+    │    questions    │
+    │  - Cites sources│
+    └─────────────────┘

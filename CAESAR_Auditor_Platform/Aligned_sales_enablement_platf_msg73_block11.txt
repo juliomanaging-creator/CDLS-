@@ -1,0 +1,17 @@
+1. Register as MSB (Money Services Business)
+├─ File Form FS-3
+├─ Designate compliance officer
+├─ Implement AML program
+└─ Cost: $50K setup + $100K/year
+
+2. Bank Secrecy Act Compliance:
+├─ Customer Identification Program (CIP)
+├─ Suspicious Activity Reports (SARs)
+├─ Currency Transaction Reports (CTRs)
+└─ Cost: $200K (software + staff)
+
+3. OFAC Sanctions Screening:
+├─ Screen against SDN list
+├─ Block sanctioned countries
+├─ Monitor ongoing
+└─ Cost: $50K/year (Chainalysis, Elliptic)

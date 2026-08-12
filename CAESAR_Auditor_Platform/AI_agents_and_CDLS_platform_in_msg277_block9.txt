@@ -1,0 +1,23 @@
+INVESTMENT: $5,000,000 (20% equity at $25M valuation)
+
+CONSERVATIVE EXIT (2031):
+- CDLS Profit Year 5: $57.1M
+- Valuation (8× P/E): $456.8M
+- CalPERS 20% stake: $91.4M
+- Return: 18.3× multiple
+- IRR: 20.1% ✅ MEETS TARGET
+
+BASE CASE EXIT (2031):
+- Valuation (10× P/E): $571M
+- CalPERS stake: $114.2M
+- Return: 22.9× multiple
+- IRR: 24.3% ✅ EXCEEDS TARGET
+
+PESSIMISTIC (75% of projections):
+- Even if only 75 trucks (vs 100): Still 16.2% IRR
+- Downside protected by Day 1 profitability
+
+UPSIDE SCENARIOS:
+- Corridor deploys early: +30% returns
+- Autonomous partnership: +20% returns
+- Nevada/Arizona expansion: +50% returns

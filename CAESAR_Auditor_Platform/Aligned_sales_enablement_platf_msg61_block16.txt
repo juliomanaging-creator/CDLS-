@@ -1,0 +1,7 @@
+Hauling operations: $450M (2,000 vehicles, 11 states)
+Platform SaaS: $30M ARR (1,000 dealers)
+Charging infrastructure: $16.2M (electricity + rent)
+Battery storage: $10M (grid services)
+Maintenance/service: $26M (internal + external)
+Carbon marketplace: $12M (take rate on $400M GMV)
+Total Revenue: $544.2M

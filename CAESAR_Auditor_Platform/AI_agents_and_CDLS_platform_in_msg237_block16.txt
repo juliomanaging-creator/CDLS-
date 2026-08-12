@@ -1,0 +1,11 @@
+Technology        Infra Cost    Power    Flexibility    ROI
+─────────────────────────────────────────────────────────
+Traditional       $28.5B        1,630kW  Corridor only  Never ❌
+Maglev
+
+Dynamic           $540M         123kW    Anywhere       15yr ✅
+Wireless          (53× cheaper) (13× less) (last-mile)
+Charging
+
+Active aero       $0            -22kW    Anywhere       1.8yr ✅
+(your concept)    (truck only)  (reduces) (all roads)

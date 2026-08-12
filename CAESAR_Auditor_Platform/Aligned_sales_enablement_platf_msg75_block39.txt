@@ -1,0 +1,22 @@
+Probability: 20%
+Impact: High (could halt token sales)
+
+Triggers:
+├─ Unregistered security determination
+├─ Market manipulation allegations
+└─ Insider trading claims
+
+Mitigation:
+✓ Legal opinion letter (defensible position)
+✓ Conservative marketing (no "guaranteed returns")
+✓ Lockups/vesting (reduce speculation)
+✓ Compliance monitoring (ongoing)
+
+Response Plan:
+1. Pause token sales immediately
+2. Cooperate with SEC fully
+3. Offer rescission if required
+4. Register under Reg A+ retroactively
+5. Continue operations (compliant)
+
+Budget Reserve: $500K (legal defense)

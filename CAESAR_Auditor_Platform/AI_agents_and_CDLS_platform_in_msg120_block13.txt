@@ -1,0 +1,5 @@
+1. Hire Legal AI Engineer (Q2 2026)
+2. Deploy Ollama + llama3.2:70b locally
+3. Start with Agent 1-2 (documents + compliance)
+4. Pilot with Series B due diligence
+5. Expand post-close

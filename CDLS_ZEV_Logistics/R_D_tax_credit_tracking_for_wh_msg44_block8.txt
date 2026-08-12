@@ -1,0 +1,4 @@
+✓ "npm install" completed without errors
+✓ No "npm ERR!" messages
+✓ "found 0 vulnerabilities"
+✓ Package count doesn't matter as much

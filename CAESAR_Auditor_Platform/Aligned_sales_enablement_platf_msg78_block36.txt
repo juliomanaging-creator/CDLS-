@@ -1,0 +1,19 @@
+Seed Round: $5,000,000
+├─ Price: $0.04 per token
+├─ Tokens: 125M (12.5% of supply)
+├─ Investors: 20 accredited (founding dealers, angels)
+├─ Status: ✅ CLOSED (oversubscribed)
+
+Private Round: $15,000,000
+├─ Price: $0.045 per token
+├─ Tokens: 333M (33.3% of supply)
+├─ Investors: VCs, family offices, whales
+├─ Status: 🟡 OPEN (accepting commitments)
+├─ Closes: March 31, 2026
+
+Public Round: $30,000,000
+├─ Price: $0.05 per token
+├─ Tokens: 600M (60% of supply)
+├─ Investors: Retail, dealers, community
+├─ Status: ⭕ OPENS April 13, 2026 (TGE)
+├─ Whitelist: 1,000 spots (priority access)

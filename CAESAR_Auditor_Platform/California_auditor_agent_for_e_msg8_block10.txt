@@ -1,0 +1,5 @@
+Layer 1: Git (Primary, $0 cost)
+Layer 2: IPFS (Decentralized backup, ~$1,200/year)
+Layer 3: CDLS Private Blockchain (Enhanced verification, ~$3,600/year)
+Total CDLS cost: ~$4,800/year for unlimited certifications
+California cost: $0.00 forever

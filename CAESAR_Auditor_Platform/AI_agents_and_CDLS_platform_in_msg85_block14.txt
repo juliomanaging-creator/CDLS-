@@ -1,0 +1,3 @@
+Employees: 1 (Julio)
+Annual Credits: $27,840
+System Setup: ✅ Complete

@@ -1,0 +1,9 @@
+cd C:\Projects\ev-cost-platform\data\sample-data
+
+# Check file sizes and dates
+dir carrier_cost_data.json
+dir california_city_pricing.json
+dir dealer_syndicate_members.json
+dir README.md
+
+# All should show today's date

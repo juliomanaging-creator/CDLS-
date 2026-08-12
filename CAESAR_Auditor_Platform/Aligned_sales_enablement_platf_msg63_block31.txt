@@ -1,0 +1,20 @@
+Status: Early Traction
+
+GMV (Gross Merchandise Value):
+├─ Q1: $2M
+├─ Q2: $5M (projected)
+├─ Q3: $8M (projected)
+└─ Target for year: $18M
+
+Take Rate: 3%
+Revenue: $540K annualized
+
+Liquidity:
+├─ Buy-side: 12 oil companies registered
+├─ Sell-side: 45 dealers generating credits
+└─ Average transaction size: $250K
+
+Next Steps:
+├─ Launch credit banking (hold credits for higher prices)
+├─ Add credit forwards (lock in future prices)
+└─ Integrate with Oregon/Washington programs

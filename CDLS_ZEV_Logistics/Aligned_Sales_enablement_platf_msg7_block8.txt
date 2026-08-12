@@ -1,0 +1,4 @@
+cd backend
+cp .env.example .env
+# Edit .env with your database credentials and generate new secrets
+npm install

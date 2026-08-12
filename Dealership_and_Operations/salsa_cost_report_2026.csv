@@ -1,0 +1,4 @@
+VIN,Vehicle,Purchase_Date,Purchase_Price,Auction_Fees,Parts_Total,Labor_Total,Other_Fees,Total_Investment,Status
+1HGCM82633A123456,2019 Honda Accord,2026-01-15,18500.00,650.00,474.99,150.00,125.00,19899.99,Ready
+2T1BF1FK5JU789012,2021 Toyota Corolla,2026-01-16,16200.00,450.00,214.00,50.00,0.00,16914.00,Recon
+5YJSA1E14HF345678,2017 Tesla Model S,2026-01-18,32000.00,850.00,75.00,0.00,0.00,32925.00,Audit_Alert

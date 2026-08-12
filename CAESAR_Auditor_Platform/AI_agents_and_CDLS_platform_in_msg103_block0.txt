@@ -1,0 +1,6 @@
+Inputs: 200 sales/year, current cost likely $850+
+Results:
+✓ 58 MT carbon credits
+✓ $4,930 carbon revenue  
+✓ $24,650 total 5-year savings
+✓ 13,182 trees 🌳

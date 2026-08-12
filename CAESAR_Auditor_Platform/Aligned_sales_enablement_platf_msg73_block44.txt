@@ -1,0 +1,27 @@
+Launch DAO:
+
+Snapshot Setup:
+├─ Strategies: Token balance + staked balance
+├─ Quorum: 10M $CDLS minimum (1% of supply)
+├─ Voting period: 7 days
+└─ Timelock: 48 hours before execution
+
+First Governance Proposals:
+
+Proposal 1: Treasury Allocation
+"Allocate 10M $CDLS ($500K) from treasury
+to liquidity mining incentives for Q1 2026"
+├─ Discussion: 3 days
+├─ Voting: 7 days
+├─ Expected result: PASS (95% yes)
+
+Proposal 2: Fee Structure
+"Reduce marketplace fee from 2% to 1.5%
+to increase trading volume"
+├─ Discussion: 3 days
+├─ Voting: 7 days
+├─ Expected result: PASS (80% yes)
+
+Goal: Demonstrate decentralized governance
+Show token holders have real power
+Build community ownership

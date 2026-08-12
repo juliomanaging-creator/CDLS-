@@ -1,0 +1,1 @@
+typeis(req, ['json', 'html', 'text'])

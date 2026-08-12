@@ -1,0 +1,2 @@
+Reason: Battery direct is 76.5% vs ceramic 48.2%
+Drag cost remains fundamental limitation

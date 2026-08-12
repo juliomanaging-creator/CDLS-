@@ -1,0 +1,11 @@
+# Navigate to the extracted folder
+cd C:\Users\YourUsername\Documents\cdls-platform-v2
+
+# Install Node.js dependencies
+npm install
+
+# Initialize database with sample data
+node setup.js
+
+# Start the server
+npm start

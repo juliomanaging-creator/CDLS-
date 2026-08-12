@@ -1,0 +1,6 @@
+✓ Chrome ✓
+✓ Firefox ✓
+✓ Safari ✓
+✓ Edge ✓
+✓ Mobile Safari (iOS) ✓
+✓ Chrome Mobile (Android) ✓

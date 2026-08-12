@@ -1,0 +1,5 @@
+✓ Generate QR code (qr-code-generator.com)
+✓ URL: bit.ly/cdls-champions
+✓ Design card in Canva using specs
+✓ Order 500 cards on VistaPrint (rush delivery)
+✓ Cost: ~$100-150

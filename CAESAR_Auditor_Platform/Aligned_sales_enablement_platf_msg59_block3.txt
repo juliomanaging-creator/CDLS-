@@ -1,0 +1,7 @@
+For each dealer location:
+- Utility account number: [PG&E/SCE/SDG&E account]
+- Meter serial number: [From utility bill]
+- Meter installation date: [Date]
+- Meter type: "Dedicated EV Charging Meter"
+- Photo of meter: [Upload]
+- Letter from utility confirming meter dedication: [Upload]

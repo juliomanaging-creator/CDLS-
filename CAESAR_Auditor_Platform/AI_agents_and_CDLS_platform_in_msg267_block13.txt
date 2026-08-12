@@ -1,0 +1,58 @@
+WEEK 1: GERMINATION
+1. Plant sunflower seeds in soil or hydroponic medium
+2. Water with distilled water (no copper yet!)
+3. Temperature: 20-25°C (room temperature)
+4. Light: 12 hours/day (grow light or windowsill)
+
+WEEK 2-4: COPPER INTRODUCTION (Gradual Increase!)
+Week 2:
+- Prepare copper solution: 10 ppm (10 mg/L) copper sulfate
+- Water plant with copper solution (500 mL per plant, 2× per week)
+- Monitor: Leaves should remain green (healthy)
+
+Week 3:
+- Increase concentration: 50 ppm copper sulfate
+- Continue watering (500 mL, 2× per week)
+- Monitor: Some yellowing acceptable (minor stress), but not wilting
+
+Week 4:
+- Increase concentration: 100 ppm copper sulfate
+- Final push (maximize copper uptake)
+- Monitor: If wilting occurs, reduce to 50 ppm
+
+WEEK 5-6: MATURATION
+- Maintain 100 ppm copper sulfate watering
+- Plant should be 30-50 cm tall
+- Root system well-developed (5-10 cm diameter)
+
+WEEK 7: HARVEST & TEST
+1. Carefully remove plant from soil (preserve roots intact!)
+2. Rinse roots with distilled water (remove soil particles)
+3. Pat dry with paper towel
+
+CONDUCTIVITY TEST:
+4. Set multimeter to resistance mode (Ω)
+5. Place probes on root surface (2 cm apart)
+6. Measure resistance:
+   - Normal plant root: >1 MΩ (megaohm, very resistive)
+   - Copper-doped root: 100 Ω - 10 kΩ (1,000-100,000× more conductive!)
+   
+7. Calculate conductivity:
+   - Conductivity (S/m) = Length / (Resistance × Area)
+   - Example: 2 cm apart, 1 kΩ, 1 cm² cross-section
+   - Conductivity = 0.02 m / (1,000 Ω × 0.0001 m²) = 200 S/m
+   
+   SUCCESS: 100-1,000 S/m (semi-conductor range!) ✅
+
+ANALYSIS:
+8. Dry root tissue (oven at 60°C for 24 hours)
+9. Weigh dry mass
+10. Chemical analysis (optional, requires lab access):
+    - Atomic absorption spectroscopy (AAS)
+    - Measures copper concentration
+    - Expected: 0.1-1% copper by dry weight
+
+SAFETY:
+- Copper sulfate is IRRITANT (wear gloves, goggles)
+- Do not ingest plant (copper is toxic at high concentrations)
+- Dispose of plant material properly (not in compost, copper contamination)

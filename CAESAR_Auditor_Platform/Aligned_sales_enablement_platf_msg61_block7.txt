@@ -1,0 +1,7 @@
+Platform dealers generate: 50,000 credits
+Non-network users: 100,000 credits
+Total marketplace volume: 150,000 credits
+Average price: $120/credit
+Total transaction value: $18M
+Your take rate: 3%
+Marketplace revenue: $540K

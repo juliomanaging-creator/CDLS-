@@ -1,0 +1,13 @@
+01_AI_AGENTS/               → All 100+ files (consolidated for easy access)
+02_STRATEGIC_FRAMEWORKS/    → (Conceptual organization)
+03_TECHNICAL_SYSTEMS/       → (Conceptual organization)
+04_FINANCIAL_MODELS/        → (Conceptual organization)
+05_NEGOTIATIONS/            → (Conceptual organization)
+06_PRESENTATIONS/           → (Conceptual organization)
+07_CITED_RESOURCES/         → (Conceptual organization)
+08_DESIGN_THEORY/           → (Conceptual organization)
+09_CONVERSATIONS/           → (Conceptual organization)
+10_DEPLOYMENT_GUIDES/       → README_START_HERE.md + guides
+
+MASTER_INDEX.md             → Complete file directory (CSV format)
+ARCHIVE_INDEX_FINAL.md      → This comprehensive index

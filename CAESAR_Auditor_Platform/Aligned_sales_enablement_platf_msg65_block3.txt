@@ -1,0 +1,30 @@
+Hauling Operations: $2.5B
+├─ 10,000 vehicles (5x current plan)
+├─ All 50 states + Canada/Mexico
+├─ 20% EBITDA margin = $500M EBITDA
+└─ At 8x multiple = $4B value
+
+Platform SaaS: $250M ARR
+├─ 5,000 dealers (vs. 1,000 in base plan)
+├─ Average $50K/year per dealer
+├─ 80% gross margin
+└─ At 12x ARR = $3B value
+
+Carbon Marketplace: $100M revenue
+├─ $3.3B GMV at 3% take rate
+├─ 90% margin
+└─ At 15x revenue = $1.5B value
+
+Charging Infrastructure: $300M revenue
+├─ 1,000 locations (vs. 200)
+├─ $300K revenue per location
+├─ 50% EBITDA margin = $150M
+└─ At 12x = $1.8B value
+
+Fleet Services & Maintenance: $150M revenue
+├─ 50 service centers nationwide
+├─ Service external fleets
+├─ 30% EBITDA margin = $45M
+└─ At 10x = $450M value
+
+Total Enterprise Value: $10.75B

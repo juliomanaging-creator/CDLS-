@@ -1,0 +1,10 @@
+# Extract the system
+tar -xzf cdls_legal_agent_system.tar.gz
+cd legal_agent_system
+
+# Create virtual environment
+python3 -m venv legal_env
+source legal_env/bin/activate
+
+# Install dependencies
+pip install --break-system-packages python-docx ollama-python

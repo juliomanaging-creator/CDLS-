@@ -1,0 +1,5 @@
+□ ROBS processing (3-4 weeks via Guidant)
+□ $40K deposited to C-Corp account
+□ Begin hiring (AI engineer, blockchain engineer)
+□ Set up payroll system (Gusto or ADP)
+□ Start R&D time tracking (rd_tracker.py)

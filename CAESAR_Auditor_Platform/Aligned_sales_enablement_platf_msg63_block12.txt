@@ -1,0 +1,27 @@
+Price: $499/month or $4,788/year (20% discount)
+Target Users: 500 dealers by 2028, 1,000 by 2030
+Ideal Customer: Small dealer (1-3 locations, 10-30 vehicles)
+
+Features:
+✓ Everything in Free, plus:
+✓ Unlimited calculations
+✓ Data export (CSV, PDF)
+✓ Carbon credit tracking (quarterly CARB reports)
+✓ Route optimization (basic)
+✓ Email support (24-hour SLA)
+✓ White-label reports (your logo)
+✓ 3 user seats
+
+Limitations:
+✗ No API access
+✗ No advanced analytics
+✗ No TMS integration
+
+Value Proposition:
+- Save 40 hours/year on CARB reporting ($4,000 value)
+- Optimize routes 10% = $50K savings/year
+- ROI: 10x first year
+
+Revenue Target:
+- 500 dealers × $499 × 12 = $2.99M ARR (2028)
+- 1,000 dealers × $499 × 12 = $5.99M ARR (2030)

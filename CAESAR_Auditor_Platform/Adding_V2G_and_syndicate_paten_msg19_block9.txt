@@ -1,0 +1,5 @@
+✅ Normal browser (Firefox)
+✅ Residential IP address (appears as home user)
+✅ Human-like behavior (mouse movements, delays)
+✅ Different IP each request (impossible to correlate)
+✅ Randomized fingerprints (canvas, WebGL, fonts)

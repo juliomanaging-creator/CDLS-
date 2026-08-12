@@ -1,0 +1,12 @@
+Every heat engine is limited by:
+η_max = 1 - (T_cold / T_hot)
+
+For your system:
+T_hot = 575 K (302°C compressed air)
+T_cold = 288 K (15°C ambient)
+η_max = 1 - (288/575) = 49.9%
+
+Real efficiency: 49.9% × 65% = 32.4%
+(The 65% accounts for real-world losses)
+
+This is THERMODYNAMIC LAW - cannot be exceeded!

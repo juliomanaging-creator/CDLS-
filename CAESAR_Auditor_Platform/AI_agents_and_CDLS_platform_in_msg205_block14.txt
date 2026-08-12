@@ -1,0 +1,5 @@
+Energy: 10.1 kW generated (less due to gaps)
+Drag: 38.9 kW cost (turbine + structure)
+Net: -28.8 kW loss ❌
+
+Lattice is "less bad" but STILL bad!

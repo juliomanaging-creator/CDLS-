@@ -1,0 +1,21 @@
+Blockchain Development:
+├─ Marketplace contract development
+├─ Carbon NFT minting logic
+└─ Integration testing
+
+Legal:
+├─ Incorporation (Cayman entity for token)
+├─ Operating agreement
+└─ Employment agreements (new hires)
+
+Marketing:
+├─ Investor outreach (pre-TGE interest)
+├─ Whitelist campaign (early access)
+└─ Video explainer (YouTube)
+
+Operations:
+├─ Platform development (frontend)
+├─ Dealer dashboard mockups
+└─ User testing (5 dealers)
+
+Milestone: Legal entities formed

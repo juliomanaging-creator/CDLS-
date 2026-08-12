@@ -1,0 +1,16 @@
+Q2 2026:
+├─ VP of Sales ($200K + 1.5% equity)
+├─ Head of Data Science ($220K + 1% equity)
+└─ 5 Account Executives ($120K + 0.2% each)
+
+Q3 2026:
+├─ VP of Marketing ($180K + 1% equity)
+├─ General Counsel ($250K + 0.75% equity)
+└─ 5 Engineers ($150K + 0.15% each)
+
+Q4 2026:
+├─ VP of M&A ($200K + 1% equity)
+└─ Chief of Staff ($150K + 0.5% equity)
+
+Total New Hires: 15 people (cost: $3.2M annually)
+Budget: $3.5M allocated ✅

@@ -1,0 +1,8 @@
+Vehicles & technology: $10,871,200
+Legal (carbon forward): $75,000
+Reserve fund (FPA requirement): $250,000
+Contingency (5%): $543,560
+TOTAL: $11,739,760
+
+Less carbon upfront: -$1,833,600
+NET INVESTMENT: $9,906,160

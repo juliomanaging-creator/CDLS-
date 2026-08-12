@@ -1,0 +1,21 @@
+Week 5-6: Community Security Review
+
+Launch on Immunefi or HackerOne:
+
+Rewards:
+├─ Critical: $100,000
+├─ High: $25,000
+├─ Medium: $5,000
+└─ Low: $1,000
+
+Budget: $150K (assume 1-2 critical, few high)
+
+Process:
+1. Publish contracts on GitHub
+2. Launch bounty program
+3. Triage submissions (24-hour SLA)
+4. Fix confirmed bugs
+5. Pay rewards promptly
+6. Publish results (transparency)
+
+Goal: Catch remaining bugs, build community trust

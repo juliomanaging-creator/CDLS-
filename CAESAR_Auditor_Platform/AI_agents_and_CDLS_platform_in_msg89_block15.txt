@@ -1,0 +1,9 @@
+# CPA prepares Form 941 + Form 8974
+# Review calculations:
+- Total wages: $600K (Q1)
+- Payroll taxes: $45,900
+- R&D offset: $62,500
+- Net due: $0 ✅
+
+# Approve and submit via EFTPS
+# Make CA payment: $1.1M via Web Pay

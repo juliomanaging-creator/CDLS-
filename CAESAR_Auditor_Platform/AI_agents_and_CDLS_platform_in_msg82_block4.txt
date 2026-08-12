@@ -1,0 +1,18 @@
+# Morning: Start main R&D session
+rd_tracker start --project AI-001 --name "Route Optimization"
+
+# Then just use Claude normally!
+# - Open claude.ai
+# - Have your conversation
+# - Extension tracks automatically
+# - Close tab when done (auto-saves)
+
+# Evening: End R&D session
+rd_tracker end SESSION_ID \
+  --activity "Used Claude to implement gradient boosting..." \
+  --uncertainty "Uncertain which algorithm..." \
+  --experiment "Tested 3 models with Claude's help..."
+
+# Friday: Export everything
+rd_tracker export  # Main tracker
+# Click extension icon → "Export to R&D Tracker" (Claude activity)

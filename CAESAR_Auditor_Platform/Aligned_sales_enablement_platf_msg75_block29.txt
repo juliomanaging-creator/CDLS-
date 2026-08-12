@@ -1,0 +1,19 @@
+Launch (April 13, 2026):
+├─ Price: $0.05
+├─ Market cap: $5M
+└─ Holders: 1,000
+
+Year-End (Dec 31, 2026):
+├─ Price: $0.50 (10x)
+├─ Market cap: $500M (100x)
+├─ Holders: 5,000 (5x)
+└─ Daily volume: $5M
+
+Your Personal Stake:
+├─ Tokens: 300M (30% of supply)
+├─ Value: $150M (at $0.50)
+├─ Unlocked: 75M (25% after 1 year)
+├─ Liquid value: $37.5M
+└─ vs. Traditional: $54M (equity)
+
+Result: You're wealthier, faster, with more optionality

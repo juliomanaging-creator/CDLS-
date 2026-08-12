@@ -1,0 +1,14 @@
+Sigma-Aldrich:
+Product: Aniline, ACS reagent (≥99.5%)
+Catalog #: 242284
+Price: $42.90 (100 mL)
+Restrictions: Requires lab affiliation or proper safety documentation
+
+SAFER RECOMMENDATION:
+Use copper sulfate or CNTs instead. Polyaniline synthesis requires:
+- Fume hood (aniline vapors toxic!)
+- Protective equipment (gloves, goggles, lab coat)
+- Proper disposal (hazardous waste)
+- Chemistry training
+
+For home experiments: STICK TO COPPER OR CNTs! ✅

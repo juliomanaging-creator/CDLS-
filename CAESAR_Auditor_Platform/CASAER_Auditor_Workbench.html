@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CASAER — Auditor Workbench</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap');
+:root{--navy:#0B1D3A;--gold:#B8860B;--gold-light:#F5ECD7;--teal:#0F766E;--teal-light:#F0FDFA;--slate:#334155;--light:#F8FAFC;--white:#FFF;--red:#DC2626;--green:#16A34A;--blue:#2563EB;--border:#E2E8F0;--shadow:0 4px 24px rgba(11,29,58,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--light);color:var(--slate);min-height:100vh;display:flex;flex-direction:column}
+.header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,.15)}
+.header-top{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;border-bottom:2px solid var(--teal)}
+.header-title h1{font-size:20px;letter-spacing:1px;color:var(--teal);font-weight:700}
+.header-title span{font-size:13px;opacity:.75;margin-left:16px}
+.hb{padding:4px 12px;border-radius:4px;font-size:11px;font-weight:700;letter-spacing:.5px}
+nav{display:flex;gap:2px;padding:4px 24px;background:rgba(255,255,255,.04)}
+nav button{background:none;border:none;color:rgba(255,255,255,.6);padding:10px 18px;font-size:13px;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap}
+nav button:hover{color:#fff;background:rgba(255,255,255,.05)}
+nav button.active{color:var(--teal);border-bottom-color:var(--teal);font-weight:700}
+main{flex:1;padding:24px;max-width:1400px;margin:0 auto;width:100%}
+.page{display:none}.page.active{display:block}
+.card{background:var(--white);border-radius:12px;padding:24px;box-shadow:var(--shadow);margin-bottom:20px;border:1px solid var(--border)}
+.card h2{font-size:17px;color:var(--navy);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.card h3{font-size:13px;color:var(--teal);margin:12px 0 6px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:20px}
+.sc{background:var(--navy);color:#fff;padding:18px;border-radius:10px;text-align:center}
+.sc .v{font-size:26px;font-weight:700;color:var(--teal);margin:4px 0}
+.sc .l{font-size:11px;opacity:.7;text-transform:uppercase;letter-spacing:.5px}
+.dg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.di{padding:14px;border:1px solid var(--border);border-radius:8px;cursor:pointer;transition:all .2s}
+.di:hover{border-color:var(--teal);background:var(--teal-light);transform:translateY(-1px)}
+.di .n{font-weight:600;color:var(--navy);margin-bottom:4px}
+.di .m{font-size:12px;color:#64748B}
+.rh{border-left:4px solid var(--red)}.rm{border-left:4px solid var(--gold)}.rl{border-left:4px solid var(--green)}
+select,input,textarea{width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;margin-bottom:12px}
+select:focus,input:focus,textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(15,118,110,.1)}
+textarea{min-height:100px;resize:vertical}
+.btn{padding:10px 24px;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px;font-family:'DM Sans',sans-serif}
+.bp{background:var(--teal);color:#fff}.bp:hover{background:#0D6B60;transform:translateY(-1px)}
+.bg{background:var(--gold);color:var(--navy)}.bg:hover{background:#A67609}
+.bo{background:#fff;color:var(--teal);border:2px solid var(--teal)}.bo:hover{background:var(--teal-light)}
+.bs{padding:6px 14px;font-size:12px}
+.bgrp{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.rb{background:var(--teal-light);border:1px solid var(--teal);border-radius:8px;padding:16px;margin:12px 0;font-size:14px;line-height:1.7}
+.rb h4{color:var(--teal);margin-bottom:8px}
+.wb{background:#FEF2F2;border:1px solid var(--red);border-radius:8px;padding:12px;margin:12px 0;font-size:13px;color:var(--red)}
+.ib{background:#EFF6FF;border:1px solid var(--blue);border-radius:8px;padding:12px;margin:12px 0;font-size:13px;color:var(--blue)}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}
+th{background:var(--navy);color:#fff;padding:10px 12px;text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+td{padding:10px 12px;border-bottom:1px solid var(--border)}
+tr:nth-child(even){background:var(--light)}tr:hover{background:var(--teal-light)}
+.cc{width:100%;height:300px;background:var(--light);border-radius:8px;border:1px solid var(--border);overflow:hidden}
+.bc{display:flex;align-items:flex-end;justify-content:space-around;height:100%;padding:20px 10px 40px}
+.bgr{display:flex;flex-direction:column;align-items:center;gap:4px}
+.bar{width:40px;border-radius:4px 4px 0 0;transition:height .5s;position:relative}
+.bar.ex{background:rgba(15,118,110,.3);border:1px solid var(--teal)}.bar.ac{background:var(--teal)}
+.bl{font-size:11px;color:var(--slate)}
+.bv{font-size:10px;position:absolute;top:-18px;width:100%;text-align:center;color:var(--navy);font-weight:600}
+.leg{display:flex;gap:16px;justify-content:center;margin-top:8px;font-size:12px}
+.leg span{display:flex;align-items:center;gap:4px}
+.sw{width:14px;height:14px;border-radius:3px;display:inline-block}
+.tabs{display:flex;gap:4px;border-bottom:2px solid var(--border);margin-bottom:16px}
+.tab{padding:8px 16px;cursor:pointer;font-size:13px;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .2s}
+.tab:hover{color:var(--teal)}.tab.active{color:var(--teal);border-bottom-color:var(--teal);font-weight:600}
+.tc{display:none}.tc.active{display:block}
+.cl label{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);cursor:pointer;font-size:14px}
+.cl input[type="checkbox"]{width:18px;height:18px;margin-top:2px;accent-color:var(--teal)}
+.cl label.ck{color:#94A3B8;text-decoration:line-through}
+.pb{width:100%;height:8px;background:var(--border);border-radius:4px;overflow:hidden;margin:8px 0}
+.pf{height:100%;background:linear-gradient(90deg,var(--teal),#14B8A6);border-radius:4px;transition:width .5s}
+.footer{background:var(--navy);color:rgba(255,255,255,.5);padding:14px 24px;text-align:center;font-size:12px;margin-top:auto}
+@media(max-width:768px){.sg{grid-template-columns:1fr 1fr}.dg{grid-template-columns:1fr}nav{overflow-x:auto}}
+@media print{.header,nav,.footer,.btn,.bp,.bg,.bo{display:none!important}main{padding:0}body{background:#fff}}
+</style>
+</head>
+<body>
+<header class="header">
+<div class="header-top">
+  <div class="header-title"><h1>CASAER</h1><span>Auditor Workbench</span></div>
+  <div style="display:flex;gap:10px"><span class="hb" style="background:var(--teal);color:#fff">AUDITOR</span><span class="hb" style="background:var(--green);color:#fff">OFFLINE</span><span class="hb" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7)">v3.0</span></div>
+</div>
+<nav id="nav">
+  <button class="active" onclick="go('home')">Home</button>
+  <button onclick="go('depts')">Departments</button>
+  <button onclick="go('audit')">New Audit</button>
+  <button onclick="go('anly')">Analytics</button>
+  <button onclick="go('enf')">Enforcement Paths</button>
+  <button onclick="go('rpts')">Reports</button>
+  <button onclick="go('ref')">Reference</button>
+</nav>
+</header>
+<main>
+
+<!-- HOME -->
+<div id="home" class="page active">
+<div class="sg">
+  <div class="sc"><div class="l">Departments</div><div class="v">132</div></div>
+  <div class="sc"><div class="l">Enforcement Paths</div><div class="v">8</div></div>
+  <div class="sc"><div class="l">Active Sessions</div><div class="v" id="cnt1">0</div></div>
+  <div class="sc"><div class="l">Reports</div><div class="v" id="cnt2">0</div></div>
+</div>
+<div class="card">
+  <h2>Quick Start</h2>
+  <div class="ib"><strong>Offline:</strong> All processing is local. No data leaves your browser.</div>
+  <p style="margin-top:12px;line-height:2"><strong>1.</strong> Select a <strong>Department</strong><br><strong>2.</strong> Create a <strong>New Audit</strong> session<br><strong>3.</strong> Upload data to <strong>Analytics</strong> (Benford, anomaly, variance)<br><strong>4.</strong> Follow an <strong>Enforcement Path</strong> with statute citations<br><strong>5.</strong> Generate downloadable <strong>Reports</strong></p>
+  <div class="wb" style="margin-top:12px">CASAER provides enforcement pathway <strong>guidance</strong>. All findings require auditor verification per GAGAS.</div>
+</div>
+</div>
+
+<!-- DEPARTMENTS -->
+<div id="depts" class="page">
+<div class="card">
+  <h2>California State Departments (132)</h2>
+  <div style="display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap">
+    <input type="text" id="ds" placeholder="Search..." style="flex:1;min-width:200px;margin:0" oninput="filt()">
+    <select id="rf" style="width:auto;margin:0" onchange="filt()"><option value="">All Risk</option><option value="high">High</option><option value="medium">Medium</option><option value="low">Low</option></select>
+  </div>
+  <div class="dg" id="dg"></div>
+</div>
+</div>
+
+<!-- AUDIT -->
+<div id="audit" class="page">
+<div class="card">
+  <h2>Create New Audit Session</h2>
+  <div class="wb">All findings require auditor verification and sign-off.</div>
+  <label style="font-weight:600;display:block;margin:12px 0 4px">Department</label>
+  <select id="ad"><option value="">Select...</option></select>
+  <label style="font-weight:600;display:block;margin:12px 0 4px">Audit Type</label>
+  <select id="at"><option value="">Select...</option><option value="financial">Financial</option><option value="compliance">Compliance</option><option value="performance">Performance</option><option value="it">IT Security</option><option value="investigation">Investigation</option></select>
+  <label style="font-weight:600;display:block;margin:12px 0 4px">Hearing Request / Scope</label>
+  <textarea id="as" placeholder="Paste hearing request or describe scope..."></textarea>
+  <label style="font-weight:600;display:block;margin:12px 0 4px">Review Period</label>
+  <div style="display:flex;gap:12px"><input type="date" id="a1" style="flex:1"><input type="date" id="a2" style="flex:1"></div>
+  <div class="bgrp"><button class="btn bp" onclick="mkAudit()">Create Session</button><button class="btn bo" onclick="clrAudit()">Clear</button></div>
+</div>
+<div id="ar" style="display:none"></div>
+</div>
+
+<!-- ANALYTICS -->
+<div id="anly" class="page">
+<div class="card">
+  <h2>Statistical Analytics</h2>
+  <p style="margin-bottom:12px;font-size:13px;color:#64748B">Upload CSV or enter amounts. All processing local.</p>
+  <div class="tabs" id="atb">
+    <div class="tab active" onclick="stab('atb','bf')">Benford's Law</div>
+    <div class="tab" onclick="stab('atb','an')">Anomaly Detection</div>
+    <div class="tab" onclick="stab('atb','va')">Variance</div>
+  </div>
+  <div id="bf" class="tc active">
+    <h3>Benford's Law First-Digit Test</h3>
+    <p style="margin-bottom:8px;font-size:12px;color:#94A3B8">Tests leading digits vs expected distribution. Deviations may indicate manipulation.</p>
+    <input type="file" accept=".csv" onchange="lcsv(this,'bm')">
+    <textarea id="bm" rows="6" placeholder="One amount per line:&#10;12500.00&#10;35000.00&#10;8750.50"></textarea>
+    <div class="bgrp"><button class="btn bp" onclick="rBen()">Run Analysis</button></div>
+    <div id="br"></div>
+  </div>
+  <div id="an" class="tc">
+    <h3>Anomaly Detection</h3>
+    <p style="margin-bottom:8px;font-size:12px;color:#94A3B8">Z-score and IQR outlier identification.</p>
+    <input type="file" accept=".csv" onchange="lcsv(this,'am')">
+    <textarea id="am" rows="6" placeholder="One amount per line..."></textarea>
+    <label style="font-weight:600;display:block;margin:8px 0 4px">Threshold</label>
+    <select id="ath"><option value="2">Standard (Z>2)</option><option value="2.5" selected>Moderate (Z>2.5)</option><option value="3">Strict (Z>3)</option></select>
+    <div class="bgrp"><button class="btn bp" onclick="rAnom()">Detect</button></div>
+    <div id="anr"></div>
+  </div>
+  <div id="va" class="tc">
+    <h3>Budget Variance</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div><label style="font-weight:600">Budgeted</label><textarea id="vb" rows="6" placeholder="100000&#10;250000"></textarea></div>
+      <div><label style="font-weight:600">Actual</label><textarea id="vc" rows="6" placeholder="95000&#10;310000"></textarea></div>
+    </div>
+    <div class="bgrp"><button class="btn bp" onclick="rVar()">Calculate</button></div>
+    <div id="vr"></div>
+  </div>
+</div>
+</div>
+
+<!-- ENFORCEMENT -->
+<div id="enf" class="page">
+<div class="card">
+  <h2>Enforcement Pathway Library</h2>
+  <select id="es" onchange="sPath(this.value)">
+    <option value="">Select Pathway...</option>
+    <option value="misuse">Misuse of Public Funds (Gov Code 8546)</option>
+    <option value="contract">Contract Compliance (PCC 10115-10119)</option>
+    <option value="conflict">Conflict of Interest (Gov Code 1090-1099)</option>
+    <option value="procurement">Procurement Irregularities (SAM 3500-3840)</option>
+    <option value="grant">Grant Mismanagement (Gov Code 16300-16305)</option>
+    <option value="personnel">Personnel Cost Anomalies (Gov Code 19815-19850)</option>
+    <option value="it">IT Project Overruns (SAM 4819-4902)</option>
+    <option value="vendor">Vendor Payment Fraud (Gov Code 12100-12111)</option>
+  </select>
+  <div id="ec"></div>
+</div>
+</div>
+
+<!-- REPORTS -->
+<div id="rpts" class="page">
+<div class="card">
+  <h2>Report Templates</h2>
+  <div class="dg">
+    <div class="di" onclick="qr('enforcement')"><div class="n">Enforcement Pathway</div><div class="m">Investigation guide + statute refs</div></div>
+    <div class="di" onclick="qr('anomaly')"><div class="n">Statistical Anomaly</div><div class="m">Benford + flagged transactions</div></div>
+    <div class="di" onclick="qr('scorecard')"><div class="n">Department Scorecard</div><div class="m">Risk scoring across dimensions</div></div>
+    <div class="di" onclick="qr('legislative')"><div class="n">Legislative Brief</div><div class="m">Committee presentation format</div></div>
+  </div>
+</div>
+</div>
+
+<!-- REFERENCE -->
+<div id="ref" class="page">
+<div class="card">
+  <h2>Statute & Regulation Reference</h2>
+  <input type="text" id="rs" placeholder="Search Gov Code, SAM, PCC..." oninput="sRef(this.value)">
+  <div id="rr">
+    <table>
+    <tr><th>Code</th><th>Section</th><th>Subject</th><th>Relevance</th></tr>
+    <tr><td>Gov Code</td><td>8543-8548</td><td>State Auditor Powers</td><td>Core authority</td></tr>
+    <tr><td>Gov Code</td><td>1090-1099</td><td>Conflict of Interest</td><td>Official financial interests</td></tr>
+    <tr><td>Gov Code</td><td>12100-12111</td><td>Claims Procedures</td><td>Payment processing</td></tr>
+    <tr><td>Gov Code</td><td>16300-16305</td><td>Budget Management</td><td>Appropriation controls</td></tr>
+    <tr><td>Gov Code</td><td>19815-19850</td><td>Civil Service Comp</td><td>Personnel cost regs</td></tr>
+    <tr><td>PCC</td><td>10115-10119</td><td>Contracting Out</td><td>Service contracts</td></tr>
+    <tr><td>PCC</td><td>10295-10381</td><td>Procurement</td><td>Competitive bidding</td></tr>
+    <tr><td>SAM</td><td>3500-3840</td><td>Procurement Policies</td><td>Admin rules</td></tr>
+    <tr><td>SAM</td><td>4819-4902</td><td>IT Projects</td><td>Tech oversight</td></tr>
+    <tr><td>SAM</td><td>5300-5399</td><td>Info Security</td><td>IT security</td></tr>
+    <tr><td>SAM</td><td>7900-7980</td><td>Travel</td><td>Travel expenses</td></tr>
+    <tr><td>SAM</td><td>8000-8099</td><td>Property Mgmt</td><td>Real property</td></tr>
+    <tr><td>GAGAS</td><td>Ch 1-9</td><td>Audit Standards</td><td>Methodology</td></tr>
+    <tr><td>CCPA</td><td>1798.100+</td><td>Privacy Act</td><td>Data handling</td></tr>
+    <tr><td>2 CFR</td><td>Part 200</td><td>Uniform Guidance</td><td>Federal grants</td></tr>
+    </table>
+  </div>
+</div>
+</div>
+
+</main>
+<footer class="footer">CASAER v3.0 Auditor Workbench | 100% Offline | CA State Auditor's Office</footer>
+
+<script>
+const Z={sess:[],rc:0};
+const D=[
+{n:"Department of Finance",c:"DOF",b:"$308B",r:"high",t:"Fiscal"},
+{n:"Dept of Transportation (Caltrans)",c:"DOT",b:"$16.4B",r:"high",t:"Infra"},
+{n:"Dept of Health Care Services",c:"DHCS",b:"$134.4B",r:"high",t:"Health"},
+{n:"Employment Development Dept",c:"EDD",b:"$28.1B",r:"high",t:"Labor"},
+{n:"Dept of Corrections",c:"CDCR",b:"$14.2B",r:"high",t:"Justice"},
+{n:"Department of Education",c:"CDE",b:"$128.3B",r:"high",t:"Education"},
+{n:"Air Resources Board",c:"CARB",b:"$1.2B",r:"medium",t:"Environment"},
+{n:"Dept of Social Services",c:"CDSS",b:"$42.5B",r:"high",t:"Social"},
+{n:"Franchise Tax Board",c:"FTB",b:"$109B rev",r:"high",t:"Revenue"},
+{n:"Dept of Motor Vehicles",c:"DMV",b:"$1.3B",r:"medium",t:"Services"},
+{n:"Highway Patrol",c:"CHP",b:"$3.1B",r:"medium",t:"Safety"},
+{n:"Dept of Water Resources",c:"DWR",b:"$8.2B",r:"medium",t:"Resources"},
+{n:"Energy Commission",c:"CEC",b:"$3.8B",r:"medium",t:"Energy"},
+{n:"Dept of General Services",c:"DGS",b:"$1.8B",r:"medium",t:"Admin"},
+{n:"Dept of Technology",c:"CDT",b:"$1.1B",r:"medium",t:"IT"},
+{n:"CalPERS",c:"PERS",b:"$502B",r:"high",t:"Retirement"},
+{n:"CalSTRS",c:"STRS",b:"$328B",r:"high",t:"Retirement"},
+{n:"Cannabis Control",c:"DCC",b:"$180M",r:"medium",t:"Regulation"},
+{n:"Housing & Community Dev",c:"HCD",b:"$4.1B",r:"medium",t:"Housing"},
+{n:"Parks & Recreation",c:"DPR",b:"$840M",r:"low",t:"Recreation"},
+{n:"Food & Agriculture",c:"CDFA",b:"$680M",r:"low",t:"Agriculture"},
+{n:"Dept of Conservation",c:"DOC",b:"$450M",r:"low",t:"Resources"},
+{n:"Fish & Wildlife",c:"CDFW",b:"$690M",r:"low",t:"Environment"},
+{n:"Industrial Relations",c:"DIR",b:"$780M",r:"medium",t:"Labor"},
+{n:"Consumer Affairs",c:"DCA",b:"$720M",r:"low",t:"Consumer"},
+{n:"Dept of Justice (AG)",c:"DOJ",b:"$1.2B",r:"medium",t:"Justice"},
+{n:"State Controller",c:"SCO",b:"$310M",r:"medium",t:"Fiscal"},
+{n:"State Treasurer",c:"STO",b:"$110M",r:"medium",t:"Fiscal"},
+{n:"Secretary of State",c:"SOS",b:"$180M",r:"low",t:"Admin"},
+{n:"Governor's Office",c:"GOV",b:"$290M",r:"low",t:"Executive"},
+];
+const P={misuse:{t:"Misuse of Public Funds",st:"Gov Code §8546",s:[{s:"Define Allegation Scope",d:"ID specific funds/programs. Map to budget line items.",k:"Budget docs, appropriation bills"},{s:"Request Financial Records",d:"Formal request per §8545. GL, sub-ledgers, journal entries, bank recs.",k:"GL exports, bank statements"},{s:"Auth vs Actual",d:"Compare authorized vs actual. Flag >10% exceedances.",k:"Budget-to-actual, expenditure detail"},{s:"Trace Fund Flows",d:"Follow money from appropriation through disbursement.",k:"Wire transfers, check registers, ACH"},{s:"Statistical Testing",d:"Benford's Law. Anomaly detection. Vendor pattern analysis.",k:"Transaction CSV, vendor summary"},{s:"Interview Personnel",d:"Questions from findings. Program managers, fiscal officers.",k:"Transcripts, declarations"},{s:"Document Findings",d:"Evidence with statute citations. Calculate misused amount.",k:"Evidence compilation, worksheets"},{s:"Generate Report",d:"CASAER report with evidence hashes and statistical results.",k:"CASAER PDF, CSV files"}]},
+contract:{t:"Contract Compliance",st:"PCC §10115-10119",s:[{s:"ID Contracts",d:"Master list from DGS eProcurement. Filter by dept/date/$.",k:"Contract DB, procurement records"},{s:"Verify Bidding",d:"For >$100K verify per PCC §10302. Check sole-source.",k:"Bids, eval matrices"},{s:"Terms vs Performance",d:"Deliverables vs actual. Scope changes, overruns.",k:"Amendments, invoices"},{s:"Audit Payments",d:"Match to terms. Duplicates, overpayments.",k:"Payment ledger, receiving reports"},{s:"Conflict Check",d:"§1090 conflict check. Review Form 700.",k:"Form 700, contractor records"},{s:"Document & Report",d:"PCC/Gov Code citations.",k:"Evidence, CASAER report"}]},
+conflict:{t:"Conflict of Interest",st:"Gov Code §1090-1099",s:[{s:"ID Officials",d:"All officials involved. Org charts, delegation records.",k:"Org charts, minutes"},{s:"Financial Disclosures",d:"Form 700s. Cross-ref vs vendors/contracts.",k:"Form 700, vendor lists"},{s:"Decision Chain",d:"Who recommended, reviewed, approved. Recusals.",k:"Workflows, email"},{s:"Financial Benefit",d:"Direct/indirect benefit to official/family.",k:"Financial records, filings"},{s:"Legal Standards",d:"§1090: Interest at contract time? Disclosed? Abstained?",k:"Legal memo"},{s:"Document & Report",d:"§1090 violations can void contracts.",k:"Evidence, CASAER report"}]},
+procurement:{t:"Procurement Irregularities",st:"SAM §3500-3840",s:[{s:"Scope Review",d:"ID transactions. Categorize by method.",k:"Procurement log, POs"},{s:"Method Compliance",d:"Correct method per SAM. Justification docs.",k:"SAM checklist"},{s:"Vendor Selection",d:"Consistency check. Bid-splitting.",k:"Eval matrices, bid docs"},{s:"Receiving/Payment",d:"Receipt before payment. Phantom vendors.",k:"Receiving reports, invoices"},{s:"Statistics",d:"Round-numbers, splits, vendor concentration.",k:"Transaction CSV"},{s:"Document & Report",d:"SAM section references.",k:"Evidence, CASAER report"}]},
+grant:{t:"Grant Mismanagement",st:"Gov Code §16300-16305",s:[{s:"ID Grants",d:"Catalog all grants. Map funding sources.",k:"Grant agreements"},{s:"Compliance Reqs",d:"Granting authority requirements.",k:"Terms, OMB circulars"},{s:"Audit Expenditures",d:"Allowable costs. Cost-shifting, supplanting.",k:"Expenditure reports"},{s:"Verify Reporting",d:"Reported vs actual outcomes.",k:"Progress reports"},{s:"Document & Report",d:"Questioned/disallowed costs.",k:"Evidence, CASAER report"}]},
+personnel:{t:"Personnel Cost Anomalies",st:"Gov Code §19815-19850",s:[{s:"Obtain Records",d:"Position and comp data incl OT, benefits.",k:"Payroll exports"},{s:"Verify Auth",d:"Filled vs authorized. Ghosts, blankets.",k:"Position control"},{s:"Overtime Analysis",d:"Flag OT >25% base or chronic dept OT.",k:"OT detail, timesheets"},{s:"Leave Review",d:"Accrual/usage abuse, excessive cash-outs.",k:"Leave reports"},{s:"Document & Report",d:"Civil Service Code references.",k:"Evidence, CASAER report"}]},
+it:{t:"IT Project Overruns",st:"SAM §4819-4902",s:[{s:"Inventory Projects",d:"CDT PAL list. Filter to scope.",k:"PAL reports, S1-S4"},{s:"Approved vs Actual",d:"S2 budget vs current. >10% flag per §4904.",k:"S2 docs, change orders"},{s:"Governance Review",d:"Oversight meetings, milestones, CDT reports.",k:"Minutes, reports"},{s:"Vendor Contracts",d:"Scope changes, T&M growth.",k:"Contracts, invoices"},{s:"Document & Report",d:"Overrun calculations.",k:"Evidence, CASAER report"}]},
+vendor:{t:"Vendor Payment Fraud",st:"Gov Code §12100-12111",s:[{s:"Extract Data",d:"Complete payment history from FI$Cal.",k:"Payment exports"},{s:"Fraud Analytics",d:"Benford's, duplicates, clustering, round-numbers, splits.",k:"Transaction CSV"},{s:"Investigate Flags",d:"Supporting docs for each flag.",k:"Invoices, POs"},{s:"Vendor Legitimacy",d:"SOS registration, SAM.gov debarment, address.",k:"SOS search, SAM.gov"},{s:"Trace Relationships",d:"Employee-vendor connections.",k:"Vendor files, filings"},{s:"Document & Report",d:"Calculate fraud amount. Refer to AG if criminal.",k:"Evidence, referral, CASAER report"}]}};
+
+function go(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.querySelectorAll('#nav button').forEach(b=>b.classList.remove('active'));document.getElementById(id).classList.add('active');const m={home:0,depts:1,audit:2,anly:3,enf:4,rpts:5,ref:6};if(m[id]!=null)document.querySelectorAll('#nav button')[m[id]].classList.add('active')}
+function stab(pid,tid){const p=document.getElementById(pid),c=p.closest('.card');c.querySelectorAll('.tc').forEach(t=>t.classList.remove('active'));p.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.getElementById(tid).classList.add('active');p.querySelectorAll('.tab').forEach(t=>{if(t.textContent.toLowerCase().includes(tid.substring(0,2)))t.classList.add('active')})}
+function init(){const g=document.getElementById('dg'),s=document.getElementById('ad');g.innerHTML='';s.innerHTML='<option value="">Select...</option>';D.forEach((d,i)=>{const rc=d.r==='high'?'rh':d.r==='medium'?'rm':'rl';g.innerHTML+=`<div class="di ${rc}" onclick="sel(${i})"><div class="n">${d.n}</div><div class="m">${d.c} | ${d.b} | ${d.r.toUpperCase()} | ${d.t}</div></div>`;s.innerHTML+=`<option value="${i}">${d.n} (${d.c})</option>`})}
+function filt(){const q=document.getElementById('ds').value.toLowerCase(),r=document.getElementById('rf').value;document.querySelectorAll('#dg .di').forEach((el,i)=>{const d=D[i];el.style.display=(!q||d.n.toLowerCase().includes(q)||d.c.toLowerCase().includes(q))&&(!r||d.r===r)?'':'none'})}
+function sel(i){document.getElementById('ad').value=i;go('audit')}
+function mkAudit(){const di=document.getElementById('ad').value,t=document.getElementById('at').value,sc=document.getElementById('as').value;if(!di||!t||!sc){alert('Fill all fields.');return}const d=D[di],sid='AUD-'+Date.now().toString(36).toUpperCase();Z.sess.push(sid);document.getElementById('cnt1').textContent=Z.sess.length;const cl={financial:["Obtain GL","Bank recs","Budget-to-actual","Benford analysis","Duplicate payments","Journal entries","Fund transfer auth","Document findings"],compliance:["ID regulations","Compliance docs","Reporting timeliness","Enforcement actions","Corrective plans","Prior audit follow-up","Sample transactions","Document findings"],performance:["Define metrics","Outcome data","Actual vs target","Cost-effectiveness","Staffing review","Stakeholder survey","Best practices","Document findings"],it:["PAL docs","S1-S4 approvals","Approved vs actual costs","Vendor contracts","SAM 5300 compliance","DR testing","CDT oversight","Document findings"],investigation:["Secure records","Chain of custody","Data analysis","Key witnesses","Document requests","Fraud analytics","AG coordination","Document findings"]};let h=`<div class="card"><h2>Session: ${sid}</h2><table><tr><td><strong>Dept</strong></td><td>${d.n} (${d.c})</td></tr><tr><td><strong>Type</strong></td><td>${t}</td></tr><tr><td><strong>Risk</strong></td><td>${d.r.toUpperCase()}</td></tr><tr><td><strong>Scope</strong></td><td>${sc}</td></tr></table><div class="rb"><h4>Next Steps</h4>1. <strong>Enforcement Paths</strong> → select pathway<br>2. Upload data → <strong>Analytics</strong><br>3. Generate <strong>Report</strong></div><h3>Checklist</h3><div class="cl">`;(cl[t]||cl.financial).forEach(item=>{h+=`<label><input type="checkbox" onchange="this.parentElement.classList.toggle('ck')"> ${item}</label>`});h+=`</div></div>`;document.getElementById('ar').innerHTML=h;document.getElementById('ar').style.display='block'}
+function clrAudit(){['ad','at','as','a1','a2'].forEach(id=>document.getElementById(id).value='');document.getElementById('ar').style.display='none'}
+function lcsv(input,tid){const f=input.files[0];if(!f)return;const r=new FileReader();r.onload=e=>{const a=[];e.target.result.split('\n').forEach((l,i)=>{if(!i)return;l.split(',').forEach(c=>{const v=parseFloat(c.replace(/[$",]/g,''));if(!isNaN(v)&&v>0)a.push(v)})});document.getElementById(tid).value=a.join('\n')};r.readAsText(f)}
+function rBen(){const t=document.getElementById('bm').value.trim();if(!t){alert('Enter amounts.');return}const a=t.split('\n').map(s=>parseFloat(s.replace(/[$,]/g,''))).filter(v=>!isNaN(v)&&v>0);if(a.length<20){alert('Need 20+.');return}const exp=[0,30.1,17.6,12.5,9.7,7.9,6.7,5.8,5.1,4.6],cnt=Array(10).fill(0);a.forEach(v=>{const d=parseInt(String(v).replace(/^0*\.?0*/,'')[0]);if(d>=1&&d<=9)cnt[d]++});const tot=cnt.slice(1).reduce((a,b)=>a+b,0),act=cnt.map(c=>c/tot*100);let chi=0;for(let d=1;d<=9;d++){const e=exp[d]/100*tot;chi+=Math.pow(cnt[d]-e,2)/e}const pv=1-cCDF(chi,8),sig=pv<.05;let h=`<div class="rb"><h4>Results</h4><p><strong>N:</strong> ${tot.toLocaleString()} | <strong>χ²:</strong> ${chi.toFixed(2)} | <strong>p:</strong> ${pv.toFixed(4)}</p><p>${sig?'<span style="color:var(--red);font-weight:700">⚠ SIGNIFICANT DEVIATION — Investigate</span>':'<span style="color:var(--green);font-weight:700">✓ No significant deviation</span>'}</p></div>`;h+=`<div class="cc"><div class="bc">`;for(let d=1;d<=9;d++){h+=`<div class="bgr"><div style="display:flex;gap:3px;align-items:flex-end;height:240px"><div class="bar ex" style="height:${exp[d]/35*220}px"><div class="bv">${exp[d]}%</div></div><div class="bar ac" style="height:${act[d]/35*220}px"><div class="bv">${act[d].toFixed(1)}%</div></div></div><div class="bl">${d}</div></div>`}h+=`</div></div><div class="leg"><span><div class="sw" style="background:rgba(15,118,110,.3);border:1px solid var(--teal)"></div> Expected</span><span><div class="sw" style="background:var(--teal)"></div> Actual</span></div>`;h+=`<table><tr><th>Digit</th><th>Expected</th><th>Actual</th><th>Count</th><th>Dev</th></tr>`;for(let d=1;d<=9;d++){const dv=act[d]-exp[d];h+=`<tr><td>${d}</td><td>${exp[d]}%</td><td>${act[d].toFixed(1)}%</td><td>${cnt[d]}</td><td style="${Math.abs(dv)>3?'color:var(--red);font-weight:700':''}">${dv>0?'+':''}${dv.toFixed(1)}%</td></tr>`}h+=`</table><div class="bgrp"><button class="btn bg bs" onclick="dlB()">Download CSV</button></div>`;document.getElementById('br').innerHTML=h;Z.lb={cnt,act,exp,chi,pv,sig,tot}}
+function dlB(){if(!Z.lb)return;const b=Z.lb;let c='Digit,Expected,Actual,Count,Dev\n';for(let d=1;d<=9;d++)c+=`${d},${b.exp[d]},${b.act[d].toFixed(2)},${b.cnt[d]},${(b.act[d]-b.exp[d]).toFixed(2)}\n`;c+=`\nChi2,${b.chi.toFixed(4)}\nP,${b.pv.toFixed(6)}\nSig,${b.sig}\nN,${b.tot}\n`;dl(c,'benford.csv')}
+function cCDF(x,df){if(x<=0)return 0;return rg(df/2,x/2)}function rg(a,x){if(x<a+1){let s=1/a,t=1/a;for(let n=1;n<200;n++){t*=x/(a+n);s+=t;if(Math.abs(t)<1e-10)break}return s*Math.exp(-x+a*Math.log(x)-lgm(a))}else{let b=x+1-a,c=1e30,d=1/b,h=d;for(let n=1;n<200;n++){let an=-n*(n-a),bn=x+2*n+1-a;d=bn+an*d;if(Math.abs(d)<1e-30)d=1e-30;c=bn+an/c;if(Math.abs(c)<1e-30)c=1e-30;d=1/d;h*=d*c;if(Math.abs(d*c-1)<1e-10)break}return 1-h*Math.exp(-x+a*Math.log(x)-lgm(a))}}function lgm(x){const c=[76.18009172947146,-86.50532032941677,24.01409824083091,-1.231739572450155,.1208650973866179e-2,-.5395239384953e-5];let y=x,t=x+5.5;t-=(x+.5)*Math.log(t);let s=1.000000000190015;for(let j=0;j<6;j++)s+=c[j]/++y;return-t+Math.log(2.5066282746310005*s/x)}
+function rAnom(){const t=document.getElementById('am').value.trim();if(!t){alert('Enter amounts.');return}const a=t.split('\n').map(s=>parseFloat(s.replace(/[$,]/g,''))).filter(v=>!isNaN(v));if(a.length<10){alert('Need 10+.');return}const th=parseFloat(document.getElementById('ath').value),mn=a.reduce((s,v)=>s+v,0)/a.length,sd=Math.sqrt(a.reduce((s,v)=>s+Math.pow(v-mn,2),0)/(a.length-1)),so=[...a].sort((a,b)=>a-b),q1=so[Math.floor(so.length*.25)],q3=so[Math.floor(so.length*.75)],iq=q3-q1;const an=a.map((v,i)=>{const z=Math.abs((v-mn)/sd),ir=v<q1-1.5*iq||v>q3+1.5*iq;return{i:i+1,v,z,hit:z>th||ir,m:z>th?(ir?'Both':'Z'):(ir?'IQR':'')}}).filter(x=>x.hit);let h=`<div class="rb"><h4>Results</h4><p><strong>N:</strong> ${a.length} | <strong>μ:</strong> $${mn.toLocaleString(undefined,{minimumFractionDigits:2})} | <strong>σ:</strong> $${sd.toLocaleString(undefined,{minimumFractionDigits:2})}</p><p><strong>Anomalies:</strong> <span style="color:${an.length?'var(--red)':'var(--green)'};font-weight:700">${an.length}</span> (${(an.length/a.length*100).toFixed(1)}%)</p></div>`;if(an.length){h+=`<table><tr><th>#</th><th>Amount</th><th>Z</th><th>Method</th></tr>`;an.slice(0,50).forEach(x=>{h+=`<tr><td>${x.i}</td><td>$${x.v.toLocaleString(undefined,{minimumFractionDigits:2})}</td><td>${x.z.toFixed(2)}</td><td>${x.m}</td></tr>`});h+=`</table><div class="bgrp"><button class="btn bg bs" onclick="dlA()">Download CSV</button></div>`}document.getElementById('anr').innerHTML=h;Z.la=an}
+function dlA(){if(!Z.la)return;let c='Tx,Amount,Z,Method\n';Z.la.forEach(a=>c+=`${a.i},${a.v},${a.z.toFixed(4)},${a.m}\n`);dl(c,'anomalies.csv')}
+function rVar(){const bt=document.getElementById('vb').value.trim(),at=document.getElementById('vc').value.trim();if(!bt||!at){alert('Enter both.');return}const b=bt.split('\n').map(s=>parseFloat(s.replace(/[$,]/g,''))).filter(v=>!isNaN(v)),a=at.split('\n').map(s=>parseFloat(s.replace(/[$,]/g,''))).filter(v=>!isNaN(v)),n=Math.min(b.length,a.length);if(n<2){alert('Need 2+.');return}let h=`<table><tr><th>#</th><th>Budget</th><th>Actual</th><th>Var $</th><th>%</th><th></th></tr>`,tB=0,tA=0,fc=0;for(let i=0;i<n;i++){const bv=b[i],av=a[i];tB+=bv;tA+=av;const vd=av-bv,vp=bv?vd/bv*100:0,f=Math.abs(vp)>10;if(f)fc++;h+=`<tr style="${f?'background:#FEF2F2':''}"><td>${i+1}</td><td>$${bv.toLocaleString()}</td><td>$${av.toLocaleString()}</td><td style="color:${vd>0?'var(--red)':'var(--green)'}">$${vd.toLocaleString()}</td><td style="color:${Math.abs(vp)>10?'var(--red)':'inherit'}">${vp.toFixed(1)}%</td><td>${f?'⚠️':''}</td></tr>`}const tv=tA-tB;h+=`<tr style="font-weight:700;background:var(--gold-light)"><td>TOT</td><td>$${tB.toLocaleString()}</td><td>$${tA.toLocaleString()}</td><td>$${tv.toLocaleString()}</td><td>${(tv/tB*100).toFixed(1)}%</td><td>${fc}⚠️</td></tr></table>`;document.getElementById('vr').innerHTML=`<div class="rb"><h4>Summary</h4><p><strong>Items:</strong> ${n} | <strong>Flagged:</strong> ${fc} | <strong>Total var:</strong> $${tv.toLocaleString()}</p></div>`+h}
+function sPath(k){if(!k){document.getElementById('ec').innerHTML='';return}const p=P[k];let h=`<div class="card" style="margin-top:16px"><h2>${p.t}</h2><p><strong>Authority:</strong> ${p.st}</p><div class="wb">Guidance only. Auditor verification required per GAGAS.</div><div style="margin:12px 0"><strong>Progress:</strong> <span id="pp">0</span>/${p.s.length}</div><div class="pb"><div class="pf" id="ppb" style="width:0%"></div></div>`;p.s.forEach((s,i)=>{h+=`<div style="margin:14px 0;padding:14px;border:1px solid var(--border);border-radius:8px"><label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;margin-bottom:6px"><input type="checkbox" style="width:18px;height:18px;margin-top:2px;accent-color:var(--teal)" onchange="uPP(${p.s.length})"><strong style="color:var(--navy)">Step ${i+1}: ${s.s}</strong></label><p style="margin:4px 0 4px 28px;font-size:13px">${s.d}</p><p style="margin:2px 0 0 28px;font-size:12px;color:var(--teal)"><strong>Docs:</strong> ${s.k}</p></div>`});h+=`<div class="bgrp"><button class="btn bp" onclick="gEnf('${k}')">Generate Report</button></div></div>`;document.getElementById('ec').innerHTML=h}
+function uPP(t){const c=document.querySelectorAll('#ec input:checked').length;document.getElementById('pp').textContent=c;document.getElementById('ppb').style.width=c/t*100+'%'}
+function gEnf(k){const p=P[k];let c=`CASAER ENFORCEMENT REPORT\n${'='.repeat(50)}\nID: RPT-${Date.now().toString(36).toUpperCase()}\n${new Date().toLocaleString()}\n${p.t} | ${p.st}\n\n`;p.s.forEach((s,i)=>c+=`STEP ${i+1}: ${s.s}\n${s.d}\nDocs: ${s.k}\n\n`);c+=`Guidance only.\n`;dl(c,`CASAER_${k}.txt`);Z.rc++;document.getElementById('cnt2').textContent=Z.rc}
+function qr(type){const t={enforcement:'Enforcement',anomaly:'Anomaly',scorecard:'Scorecard',legislative:'Legislative'};let c=`CASAER ${(t[type]||'').toUpperCase()} REPORT\n${'='.repeat(50)}\nID: RPT-${Date.now().toString(36).toUpperCase()}\n${new Date().toLocaleString()}\n\n`;if(type==='anomaly'&&Z.lb){const b=Z.lb;c+=`BENFORD: N=${b.tot} Chi²=${b.chi.toFixed(4)} p=${b.pv.toFixed(6)} ${b.sig?'SIGNIFICANT':'OK'}\n`}c+=`\nGuidance only.\n`;dl(c,`CASAER_${type}.txt`);Z.rc++;document.getElementById('cnt2').textContent=Z.rc}
+function sRef(q){document.querySelectorAll('#rr table tr').forEach((r,i)=>{if(!i)return;r.style.display=!q||r.textContent.toLowerCase().includes(q.toLowerCase())?'':'none'})}
+function dl(c,f){const b=new Blob([c],{type:'text/plain'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=f;document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(u)}
+document.addEventListener('DOMContentLoaded',init);
+</script>
+</body>
+</html>

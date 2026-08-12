@@ -1,0 +1,17 @@
+"Loyalty Program":
+
+Year 1: 100% of normal $HAUL earnings
+Year 2: 110% (10% loyalty bonus)
+Year 3: 125% (25% bonus)
+Year 4: 150% (50% bonus)
+Year 5+: 200% (100% bonus)
+
+Effect:
+- Early churn expensive (lose bonus)
+- Long-term dealers earn 2x as much
+- Creates sticky retention
+
+Implementation:
+- Smart contract tracks "tenure"
+- Automatic multiplier application
+- Visible on dashboard ("You're earning 1.5x")

@@ -1,0 +1,6 @@
+Energy storage: 6.16 MJ (7× more than steel!)
+Turbine efficiency: 42.4% (vs 32.4% steel)
+Total system: 48.2% round-trip
+
+Improvement: 55% better than steel! ✅
+But: Still loses to battery (76.5%) for mobile use ❌

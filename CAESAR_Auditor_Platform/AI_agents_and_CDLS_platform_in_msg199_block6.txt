@@ -1,0 +1,9 @@
+Air drag on truck: 5,000 N (constant)
+Photon thrust: 6.9×10⁻¹⁵ N per module
+Air drag is 725,000,000,000,000,000× stronger!
+
+Even with 7.25 petillion modules:
+- You get 50 N thrust (1% of drag)
+- But consume 45.5 MW power
+- Tesla Semi battery lasts 71 seconds
+- You'd run out of power before reaching highway

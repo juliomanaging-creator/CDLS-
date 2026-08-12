@@ -1,0 +1,5 @@
+Stirling engine work: +0.57 MJ
+Cooling fan cost: -1.2 MJ (5 kW continuous!)
+NET: -0.63 MJ (LOSS!)
+
+Efficiency: -36% (system loses energy)

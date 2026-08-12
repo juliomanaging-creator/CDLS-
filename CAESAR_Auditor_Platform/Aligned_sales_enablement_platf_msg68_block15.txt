@@ -1,0 +1,18 @@
+Approach:
+- Structure as pure utility token
+- No US marketing (Reg S exemption)
+- International sale only (Cayman, Singapore, UAE)
+- Provable utility (must stake to use platform)
+- Decentralized governance (DAO controls, not company)
+
+Pros:
+✓ Fast (launch in 2 months)
+✓ Low cost ($200K legal)
+✓ True decentralization
+✓ Global access
+
+Cons:
+✗ SEC risk (could deem security)
+✗ US investors excluded (VPN workarounds)
+✗ Exchange listings harder
+✗ Regulatory uncertainty

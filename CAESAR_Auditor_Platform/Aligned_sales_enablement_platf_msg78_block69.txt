@@ -1,0 +1,14 @@
+Risk: We can't scale, technology breaks, team leaves
+Probability: 30%
+Impact: High (business fails)
+
+Mitigation:
+✅ Experienced team (Julio 14 years, CFO ex-Goldman)
+✅ Proven model (20 dealers already committed)
+✅ Adequate capital ($55M raised to date)
+✅ Phased approach (launch, learn, iterate)
+
+If it happens:
+- Board oversight (CalPERS, VCs watching)
+- Bring in professional management (if needed)
+- Pivot if necessary (adapt to market)

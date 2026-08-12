@@ -1,0 +1,14 @@
+Specification:
+├─ Standard: ERC-20
+├─ Supply: Uncapped (inflationary with burns)
+├─ Initial: 100,000,000
+├─ Features:
+│   ├─ Mintable (controlled by authorized contracts)
+│   ├─ Burnable (deflationary pressure)
+│   ├─ Role-based access control (MINTER, BURNER)
+│   ├─ Activity multipliers (1x-3x based on engagement)
+│   └─ Inflation rate control (15% decreasing to 5%)
+
+Complexity: Medium-High
+Estimated Hours: 100
+Reference: OpenZeppelin ERC20, AccessControl

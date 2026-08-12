@@ -1,0 +1,26 @@
+# Start deployment
+jure> start
+
+# See today's tasks
+jure> daily 1
+
+# Check system health
+jure> health
+
+# Need Docker help?
+jure> kb docker
+
+# Enable continuous monitoring
+jure> monitor
+
+# Check deployment progress
+jure> progress
+
+# Generate status report
+jure> status
+
+# Emergency response
+jure> playbook EP002
+
+# Auto-fix issues
+jure> resolve

@@ -1,0 +1,5 @@
+✅ Document Drafting                  READY (45ms)
+✅ SEC/CARB Compliance                READY (45ms)
+✅ Contract Analysis                  READY (45ms)
+... [28 more agents]
+✅ Security & Penetration Testing     READY (45ms)

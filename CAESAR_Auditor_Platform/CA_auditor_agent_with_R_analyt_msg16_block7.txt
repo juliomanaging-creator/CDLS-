@@ -1,0 +1,35 @@
+12:00 AM - 2:00 AM
+├─ Extract data from FI$Cal (state financial system)
+├─ Pull payroll from CalHR
+├─ Import procurement from Cal eProcure
+└─ Collect grant data from all 132 departments
+
+2:00 AM - 4:00 AM
+├─ Three-way reconciliation (Fiscal + Bank + GL)
+├─ Calculate integrity scores (0-100%)
+├─ Run fraud detection algorithms
+└─ Perform compliance checks
+
+4:00 AM - 5:00 AM
+├─ Policy adherence validation
+├─ Regulatory requirement tracking
+├─ Contract compliance review
+└─ Ethical standards verification
+
+5:00 AM - 6:00 AM
+├─ Generate critical alerts
+├─ Flag fraud patterns
+├─ Identify compliance violations
+└─ Detect budget overruns
+
+6:00 AM - 7:00 AM
+├─ Create department summaries
+├─ Generate statewide dashboard
+├─ Prepare legislative reports
+└─ Update public transparency portal
+
+7:00 AM - Distribution
+├─ Email State Auditor with daily brief
+├─ Alert department heads of critical issues
+├─ Publish public reports
+└─ Update real-time dashboards

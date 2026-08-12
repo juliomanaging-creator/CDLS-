@@ -1,0 +1,4 @@
+jure> status           # Weekly summary
+jure> save             # Save state
+# - Team retrospective
+# - Plan next week

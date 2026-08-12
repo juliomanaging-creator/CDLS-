@@ -1,0 +1,4 @@
+# Check all files were updated today
+dir /O:D data\sample-data\*.json
+
+# Shows files sorted by date (newest first)

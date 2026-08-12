@@ -1,0 +1,21 @@
+Blockchain Development:
+├─ Staking contract development
+├─ Vesting contract development
+└─ Gas optimization
+
+Legal:
+├─ Token sale agreement finalized
+├─ Risk disclosures drafted
+└─ Jurisdiction analysis (which countries?)
+
+Marketing:
+├─ Whitepaper 100% complete → Published
+├─ Pitch deck created (investor-facing)
+└─ PR outreach begins
+
+Hiring:
+├─ VP of Product (interviews)
+├─ Customer Success Manager
+└─ Community Manager
+
+Milestone: Whitepaper published 🎉

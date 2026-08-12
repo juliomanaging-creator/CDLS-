@@ -1,0 +1,4 @@
+# Verify privacy:
+whois cdlslogistics.com
+
+# Should show: "Redacted for Privacy"

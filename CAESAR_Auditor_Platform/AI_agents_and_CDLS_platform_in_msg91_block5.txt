@@ -1,0 +1,7 @@
+ROBS RULES (IRS):
+- Must be C-Corporation or S-Corporation
+- LLC does NOT qualify for ROBS
+- If you use ROBS with LLC = prohibited transaction
+- Penalty: 100% excise tax + plan disqualification
+
+Result: Your $40K ROBS rollover is ILLEGAL in an LLC ❌

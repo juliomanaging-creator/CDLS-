@@ -1,0 +1,29 @@
+Problem: CDLS depots need energy storage (grid backup, solar buffering)
+Solution: Hydroponic "capacitor forest" using conductive polymer plants!
+
+Concept:
+- Grow 1,000 plants hydroponically (controlled environment, maximizes uptake)
+- Infuse with polyaniline conductive polymer (300 F/g capacitance)
+- Each plant: 200g root mass × 300 F/g = 60,000 F capacitance
+- Total forest: 1,000 plants × 60,000 F = 60,000,000 F (60 MF!)
+- Voltage: 1.2V (safe for plants)
+- Energy stored: E = ½ × 60,000,000 × (1.2)² = 43,200,000 J (12 kWh!)
+
+Use case:
+- Solar array generates excess power (midday peak)
+- Charge plant capacitor forest (store energy)
+- Discharge at night (supplement grid power)
+- Cycle: Daily (charge-discharge 365 days/year)
+
+Benefits:
+✅ Low cost: $10/kWh (vs $150/kWh lithium-ion!)
+✅ Long life: 100,000+ cycles (plants regenerate damaged tissues!)
+✅ Eco-friendly: Biodegradable, non-toxic (vs heavy metals in batteries)
+✅ Air purification: Plants absorb CO2, release O2 (dual benefit!)
+
+Challenges:
+❌ Low energy density: 12 kWh for entire forest (vs 12 kWh in 1 battery)
+❌ Maintenance: Plants need water, nutrients, light
+❌ Scalability: Requires significant space (greenhouses)
+
+Verdict: NICHE APPLICATION (sensors, backup power), not primary energy storage

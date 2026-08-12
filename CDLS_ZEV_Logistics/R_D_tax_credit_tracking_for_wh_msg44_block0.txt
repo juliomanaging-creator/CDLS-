@@ -1,0 +1,3 @@
+Expected: 245 packages
+You got:  177 packages
+Missing:  68 packages

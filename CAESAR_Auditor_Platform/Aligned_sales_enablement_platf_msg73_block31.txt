@@ -1,0 +1,23 @@
+Probability: Low (5%)
+Impact: Critical (Loss of funds, reputation)
+
+Triggers:
+├─ Smart contract bug
+├─ Private key compromise
+├─ Oracle manipulation
+└─ Governance attack
+
+Mitigation:
+✓ Multiple security audits ($150K+)
+✓ Bug bounty ($100K rewards)
+✓ Multi-sig wallets (2-of-3 minimum)
+✓ Time locks (24-48 hour delays)
+✓ Insurance (Nexus Mutual, $1M coverage)
+
+If Hack Happens:
+1. Pause contracts immediately
+2. Assess damage (how much lost)
+3. Communicate transparently
+4. Reimburse affected users (insurance + treasury)
+5. Upgrade contracts
+6. Independent security review

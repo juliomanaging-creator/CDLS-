@@ -1,0 +1,22 @@
+Probability: Medium (30%)
+Impact: High ($10M+ fines, token delisting)
+
+Triggers:
+├─ Unregistered security
+├─ Fraudulent statements
+├─ Insider trading
+└─ Market manipulation
+
+Mitigation:
+✓ Legal opinion (defensible position)
+✓ Conservative marketing (no price promises)
+✓ Lockups and vesting (reduce speculation)
+✓ Progressive decentralization (reduce "efforts of others")
+✓ Reg A+ filing (if appropriate)
+
+If Enforcement Happens:
+1. Cooperate fully
+2. Register under Reg A+ retroactively
+3. Offer rescission to affected buyers
+4. Pay fine (settle)
+5. Continue operating (compliant)

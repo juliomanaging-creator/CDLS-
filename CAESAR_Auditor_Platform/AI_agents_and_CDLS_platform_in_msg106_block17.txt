@@ -1,0 +1,3 @@
+Annual Sales: 1,000  
+Current Cost: $700
+Result: Should show banner + $580K value

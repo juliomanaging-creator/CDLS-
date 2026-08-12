@@ -1,0 +1,13 @@
+Dashboard Shows:
+├─ Transactions today: 487,234
+├─ Fraud alerts (past hour): 7
+├─ High-priority findings: 12
+├─ Departments at risk: 8
+├─ Compliance violations: 3
+└─ Open investigations: 47
+
+Automated Alerts:
+├─ Critical: Page immediately
+├─ High: Email + SMS
+├─ Medium: Email only
+└─ Low: Daily digest

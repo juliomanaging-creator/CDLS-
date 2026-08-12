@@ -1,0 +1,14 @@
+Mezzanine loan: $2M at 15% + 10% warrants
+Use for partner buyouts: $2M
+
+Annual interest: $300K (15%)
+At exit ($134M):
+- Lender gets $2M + accrued interest
+- Lender exercises warrants for 10% = $13.4M
+- Total cost: $15.4M
+
+Your math:
+- Bought $2M in partner equity
+- That equity worth $50M at exit
+- Paid lender $15.4M
+- Net gain: $34.6M

@@ -1,0 +1,4 @@
+Energy savings: 22 kW × 3,600 hr/yr = 79,200 kWh
+Cost: 79,200 × $0.24 = $19,008/year
+
+ROI: 1.8 years ✅

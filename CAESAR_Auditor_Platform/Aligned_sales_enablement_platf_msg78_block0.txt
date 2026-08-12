@@ -1,0 +1,14 @@
+Specification:
+├─ Standard: ERC-20
+├─ Supply: 1,000,000,000 (fixed, no minting)
+├─ Decimals: 18
+├─ Features:
+│   ├─ Burnable (deflationary)
+│   ├─ Snapshot (for governance/dividends)
+│   ├─ Pausable (emergency only)
+│   ├─ Anti-whale limits (removable)
+│   └─ Revenue distribution tracking
+
+Complexity: Medium
+Estimated Hours: 80
+Reference: OpenZeppelin ERC20, ERC20Snapshot, ERC20Burnable

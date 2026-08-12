@@ -1,0 +1,14 @@
+Product: CDLS Carbon Credit Index (CCI)
+Composition: Basket of all CDLS-generated credits
+Benefit: Diversification (not single dealer risk)
+
+Process:
+1. Buyer deposits $100,000 USDC
+2. Receives 1,000 CCI tokens
+3. CCI token backed by basket of credits
+4. Can redeem for underlying credits anytime
+
+Why This Matters:
+✓ Institutional buyers prefer index (less work)
+✓ Passive investment in carbon markets
+✓ Retail access (buy $100 worth)

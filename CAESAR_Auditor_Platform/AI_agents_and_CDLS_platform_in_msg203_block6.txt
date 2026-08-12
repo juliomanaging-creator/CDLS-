@@ -1,0 +1,3 @@
+Turbine creates drag: 2,907 N
+Energy cost: 2,907 N × 29 m/s = 84,300 W = 84.3 kW
+(This energy comes from your battery to push through turbine resistance)

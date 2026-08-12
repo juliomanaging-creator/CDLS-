@@ -1,0 +1,2 @@
+cd C:\Projects
+   rmdir /s ev-cost-platform

@@ -1,0 +1,8 @@
+jure> start
+
+# JURE will guide you through:
+# - Hardware validation (16GB+ RAM)
+# - Network setup (DuckDNS, port forwarding)
+# - Training completion (Docker, k8s - 20 hours)
+# - Backup hardware ready
+# - Support plan documented

@@ -1,0 +1,4 @@
+If optional dependency fails to install:
+→ npm continues anyway
+→ Core features still work
+→ Optional features just disabled

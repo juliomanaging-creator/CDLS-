@@ -1,0 +1,5 @@
+Overall Completion:        81%  🟡
+Integration Score:         24%  🔴
+Deployment Readiness:      70%  🟡
+Risk Score:                30%  🔴
+Workflow Success Rate:     43%  🔴

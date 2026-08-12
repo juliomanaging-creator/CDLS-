@@ -1,0 +1,5 @@
+Range decrease: -99 miles (-28%)
+Extra energy needed: 57 kW continuous
+Cost per year: $19,000 in EXTRA electricity
+Capital cost: $15,000 (turbine + installation)
+ROI: NEGATIVE (you lose money forever)

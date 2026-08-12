@@ -1,0 +1,14 @@
+# Export both trackers for CPA
+rd_tracker export --month 1 --year 2026
+# Output: ~/Documents/CDLS_RD_Exports/RD_Time_Export_2026_01_Julio.csv
+
+# Export Claude activity via extension
+# 1. Click extension icon
+# 2. Click "Export to R&D Tracker"
+# 3. Save: claude_sessions_2026-01-31.json
+
+# Or manually:
+python3 claude_tracker.py export --month 1 --year 2026
+# Output: ~/Documents/CDLS_RD_Exports/Claude_RD_Activity_2026_01_Julio.csv
+
+# Email both files to your CPA by February 5th

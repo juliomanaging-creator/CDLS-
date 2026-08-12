@@ -1,0 +1,14 @@
+# 1. See what vulnerabilities exist
+npm audit
+
+# 2. Fix automatically (safe)
+npm audit fix
+
+# 3. Check if any remain
+npm audit
+
+# 4. If some remain and you want to force fix (use caution)
+npm audit fix --force
+
+# 5. Verify everything still works
+npm start

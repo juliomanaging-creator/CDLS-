@@ -1,0 +1,26 @@
+# Navigate to project
+cd C:\Projects\ev-cost-platform
+
+# Navigate to data folder
+cd C:\Projects\ev-cost-platform\data\sample-data
+
+# List files
+dir
+
+# View file content (first 50 lines)
+more carrier_cost_data.json
+
+# Search for text in file
+findstr "state_average" carrier_cost_data.json
+
+# Copy file with overwrite
+copy source.json destination.json /Y
+
+# Create backup
+copy file.json file.json.backup
+
+# Delete file
+del file.json
+
+# View file date/time
+dir /T:W carrier_cost_data.json

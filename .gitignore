@@ -1,0 +1,15 @@
+Personal_and_Financial/
+Pictures/
+Screenshots/
+Other_Unmatched/
+Desktop/
+*.exe
+*.pdf
+*.jpg
+*.png
+*.bin
+*.bat
+
+.env
+*.env*
+desktop.ini

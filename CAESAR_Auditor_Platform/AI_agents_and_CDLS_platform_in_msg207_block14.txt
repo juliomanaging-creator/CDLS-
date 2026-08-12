@@ -1,0 +1,9 @@
+Speed: Mach 2 (1,500 mph)
+Ram pressure: 52 psi (700× truck's 0.0747 psi!)
+
+Why it works for jets:
+- Extreme speed (v² scaling)
+- Compression for combustion (not energy storage)
+- Engine adds fuel energy (not extracting from battery)
+
+Key difference: Jets ADD energy, your truck TAKES energy

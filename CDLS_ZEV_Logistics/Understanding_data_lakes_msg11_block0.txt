@@ -1,0 +1,5 @@
+# Windows - just double-click:
+launch_app.py
+
+# Or create a desktop shortcut first:
+create_shortcut.bat

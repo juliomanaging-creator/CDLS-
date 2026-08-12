@@ -1,0 +1,2 @@
+cd C:\Projects\CA-Dealer-Logistics-COMPLETE-PACKAGE\ev-cost-platform
+npm install

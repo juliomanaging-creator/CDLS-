@@ -1,0 +1,36 @@
+═══════════════════════════════════════════
+AUDIT FINDING #1
+═══════════════════════════════════════════
+
+TITLE: Significant Delays in Payment Processing 
+Have Allowed Duplicate Payments to Occur
+
+SUMMARY: [AI writes 2-3 paragraph executive summary]
+
+BACKGROUND: [AI provides context]
+
+DETAILED FINDINGS:
+- Specific examples with transaction numbers
+- Dollar amounts and dates
+- Names (anonymized if requested)
+- Statistical analysis
+
+FIGURES/TABLES:
+- Data visualizations
+- Trend analysis
+- Comparative charts
+
+ROOT CAUSES:
+- Why issues occurred
+- Contributing factors
+- Control weaknesses
+
+IMPACT:
+- Financial ($47,350 duplicate payments)
+- Operational (208 hours wasted)
+- Compliance (violates state policy)
+
+RECOMMENDATIONS:
+1. [Specific action with deadline]
+2. [Expected outcome]
+3. [Measurable goals]

@@ -1,0 +1,5 @@
+❌ No "bot" user-agent
+❌ No datacenter IPs
+❌ No rapid-fire requests
+❌ No identical fingerprints
+❌ No automation patterns

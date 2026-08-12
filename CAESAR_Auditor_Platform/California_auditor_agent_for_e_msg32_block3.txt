@@ -1,0 +1,4 @@
+You: "What AI laws affect California agencies in 2026?"
+Me: [searches web]
+Me: "Here are 8 current regulations with deadlines and requirements"
+Time: 2 minutes

@@ -1,0 +1,2 @@
+cd C:\Users\%USERNAME%\Downloads\ev-cost-platform\data\sample-data
+copy *.* C:\Projects\ev-cost-platform\data\sample-data /Y

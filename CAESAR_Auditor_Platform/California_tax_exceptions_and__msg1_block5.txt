@@ -1,0 +1,11 @@
+Base Formula: 35% × Qualified Wages
+
+Qualified Wages = Wages between 150% and 350% of CA minimum wage
+
+For 2025: $16.50/hr minimum wage
+- Lower threshold: $24.75/hr ($51,480 annually)
+- Upper threshold: $57.75/hr ($120,120 annually)
+
+Maximum annual credit per employee:
+($57.75 - $24.75) × 2,000 hours × 35% = $23,100/year
+Maximum 5-year credit per employee: $115,500

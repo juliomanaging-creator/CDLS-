@@ -1,0 +1,32 @@
+Income Statement (Quarterly):
+
+Revenue:                           $X
+├─ Hauling Operations:           $X
+├─ Platform SaaS:                $X
+├─ Marketplace (3% take):        $X
+└─ Other:                        $X
+
+Cost of Revenue:                  ($X)
+├─ Fleet operations:            ($X)
+├─ Platform hosting:            ($X)
+└─ Marketplace ops:             ($X)
+
+Gross Profit:                     $X
+Gross Margin:                     X%
+
+Operating Expenses:              ($X)
+├─ Sales & Marketing:           ($X)
+├─ Research & Development:      ($X)
+├─ General & Administrative:    ($X)
+└─ Total OpEx:                  ($X)
+
+EBITDA:                           $X
+EBITDA Margin:                    X%
+
+Interest, Tax, D&A:              ($X)
+Net Income:                       $X
+
+Rule of 40:
+Growth Rate (YoY):                X%
+EBITDA Margin:                    X%
+Rule of 40 Score:                 X% (Target: >40%)

@@ -1,0 +1,3 @@
+RER = (Avg Hauls/Dealer/Month) × (Price per Haul) × (# Dealers)
+
+Target: 14.2 hauls/dealer/month × $1,200 × 20 dealers = $340,800/month

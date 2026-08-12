@@ -1,0 +1,6 @@
+Energy IN (from battery via drag): 1.76 MJ
+Energy OUT (after all losses): 0.55 MJ
+Efficiency: 31%
+
+Compare to battery direct: 76.5% efficient
+Your chamber is 2.5× LESS efficient than just using battery!

@@ -1,0 +1,34 @@
+Monday:
+□ Form GP entity first: California Investment Auto GP, LLC
+   - Delaware LLC formation: $90
+   - Registered Agent: Harvard Business Services ($50/yr)
+   - Member: You (100%)
+   - Manager: You
+
+Tuesday:
+□ Form LP: California Investment Auto, LP
+   - Delaware LP formation: $200
+   - Registered Agent: same ($50/yr)
+   - GP: California Investment Auto GP, LLC (1%)
+   - LP: You (99% initially, then assign to dealers)
+
+Wednesday:
+□ Obtain EIN for LP
+   - IRS Form SS-4 online
+   - Select "Partnership"
+   - Tax year: Calendar year
+   - Purpose: "Investment vehicle for dealer logistics"
+
+Thursday:
+□ Draft Limited Partnership Agreement
+   - Use template from your PPM (Appendix A)
+   - Or hire attorney (~$5K for custom)
+   - Or use template + attorney review (~$2K)
+
+Friday:
+□ Optional: File Foreign LP in California
+   - Only if LP operates directly in CA
+   - Not needed if LP just owns C-Corp stock
+   - Skip this for now (save $800 CA franchise tax)
+
+Result: Delaware LP formed, ready for capital raises ✓

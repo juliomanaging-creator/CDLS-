@@ -1,0 +1,18 @@
+judas-kernel-package/
+│
+├── 01_QUICK_START/              ⚡ 30-second demo
+│   ├── START_HERE.md
+│   └── index.html (+ all files)
+│
+├── 02_INVESTOR_PRESENTATION/    💼 CalPERS, PE pitches
+│   ├── PRESENTATION_GUIDE.md
+│   └── index.html (+ all files)
+│
+├── 03_TECHNICAL_DEMO/           🔬 Engineering review
+│   ├── TECHNICAL_GUIDE.md
+│   ├── judas_kernel.py
+│   └── index.html (+ all files)
+│
+└── 04_FINANCIAL_ANALYSIS/       📊 Credit committee
+    ├── FINANCIAL_GUIDE.md
+    └── index.html (+ all files)

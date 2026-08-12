@@ -1,0 +1,10 @@
+Probability: Medium
+Impact: High
+Mitigation:
+├─ Move fast (capture 500 dealers before they notice)
+├─ Dealer ownership structure (switching cost)
+├─ Proprietary data moat (5-year head start)
+└─ Strategic partnerships (lock in ecosystem)
+
+Current Status: Yellow
+Action: Accelerate Series B to fund faster growth

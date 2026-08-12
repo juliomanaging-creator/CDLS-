@@ -1,0 +1,6 @@
+Total sales requiring smog: 47
+✅ Valid smog at sale: 44 (94%)
+⚠️ Pending (within grace): 3 (6%)
+❌ Missing (overdue): 0
+
+Auto-alerts when smog due in 5 days

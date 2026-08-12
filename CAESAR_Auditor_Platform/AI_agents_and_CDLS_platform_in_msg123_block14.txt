@@ -1,0 +1,5 @@
+# Install Ollama
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Pull the legal reasoning model (40GB - takes ~30 min)
+ollama pull llama3.2:70b

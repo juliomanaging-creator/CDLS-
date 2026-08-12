@@ -1,0 +1,3 @@
+Compressed air at 150 psi: 0.88 MJ (0.24 kWh)
+Expansion efficiency: 70%
+Delivered energy: 0.55 MJ

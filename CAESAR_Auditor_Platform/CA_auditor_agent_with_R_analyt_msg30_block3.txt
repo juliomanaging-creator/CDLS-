@@ -1,0 +1,10 @@
+Monte Carlo Module:        40 hours × $125/hr = $5,000
+Anomaly Detection:         40 hours × $125/hr = $5,000
+Time Series Forecasting:   40 hours × $125/hr = $5,000
+Regression Analysis:       20 hours × $125/hr = $2,500
+Testing:                   30 hours × $100/hr = $3,000
+Documentation:             20 hours × $100/hr = $2,000
+Integration:               10 hours × $100/hr = $1,000
+──────────────────────────────────────────────────
+TOTAL:                     200 hours = $23,500
+Timeline:                  5 weeks (with 2 developers)

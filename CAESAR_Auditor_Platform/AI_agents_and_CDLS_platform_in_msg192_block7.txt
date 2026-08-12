@@ -1,0 +1,5 @@
+Tesla Semi: 24,000 lbs
+Trailer A (carbon fiber): 6,000 lbs → 6 vehicles
+Trailer B (carbon fiber): 6,000 lbs → 6 vehicles
+Total: 12 vehicles (vs 9 single trailer)
+= +3 vehicles = +33% capacity

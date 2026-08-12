@@ -1,0 +1,93 @@
+☐ Mon Apr 7: T-6 days, launch readiness meeting
+☐ Mon: ALL SYSTEMS GO CHECK:
+   ☐ Legal: GO ✅
+   ☐ Technical: GO ✅
+   ☐ Marketing: GO ✅
+   ☐ Operations: GO ✅
+   ☐ DECISION: LAUNCHING APRIL 13 ✅
+☐ Tue Apr 8: T-5 days, final security scan (all clear)
+☐ Tue: Bug bounty closed (no critical bugs)
+☐ Tue: Audit report celebrated (public)
+☐ Tue: Social: "5 days to TGE"
+☐ Wed Apr 9: T-4 days, dealer webinar final
+☐ Wed: "How to Participate in TGE" (200 attend)
+☐ Wed: Q&A all concerns addressed
+☐ Wed: Confidence level: HIGH
+☐ Thu Apr 10: T-3 days, team training (launch procedures)
+☐ Thu: 24/7 coverage schedule confirmed
+☐ Thu: Emergency playbook ready
+☐ Thu: Monitoring dashboards active
+☐ Thu: Private round closes ($15M raised)
+☐ Fri Apr 11: T-2 days, website traffic surge
+☐ Fri: Discord: 1,500 members
+☐ Fri: Twitter: 5,000 followers
+☐ Fri: Email list: 3,000 subscribers
+☐ Fri: Hype level: MAXIMUM
+☐ Weekend Apr 12: T-1 day
+☐ Sat: No code changes (freeze)
+☐ Sat: Team rest and prepare
+☐ Sat: Julio final message to community
+☐ Sun: "Tomorrow we make history" 🚀
+☐ Sun: Sleep well, early day tomorrow
+
+═══════════════════════════════════════
+MONDAY, APRIL 13, 2026 - TGE DAY 🎉
+═══════════════════════════════════════
+
+☐ 6:00 AM: Deployment begins
+   ☐ Deploy $CDLS token
+   ☐ Deploy $HAUL token
+   ☐ Deploy $CARBON NFT
+   ☐ Deploy staking contract
+   ☐ Deploy vesting contract
+   ☐ Deploy marketplace
+   ☐ Initialize distribution
+   ☐ Verify on Etherscan
+
+☐ 7:00 AM: Liquidity pool creation
+   ☐ Uniswap V3: CDLS/ETH
+   ☐ Initial liquidity: $5M
+   ☐ Price: $0.05 per $CDLS
+   ☐ LP tokens locked (1 year)
+
+☐ 8:00 AM: Trading enabled (WHITELIST)
+   ☐ 1,000 addresses can buy
+   ☐ Limit: 100,000 $CDLS each
+   ☐ 2-hour exclusive window
+   ☐ Monitor: Price, volume, gas
+
+☐ 10:00 AM: PUBLIC SALE opens
+   ☐ Open to all (with KYC)
+   ☐ Limit: 20,000 $CDLS per address
+   ☐ Until sold out or 8pm
+
+☐ Throughout Day:
+   ☐ Real-time monitoring (dashboards)
+   ☐ 24/7 customer support (active)
+   ☐ Social media updates (hourly)
+   ☐ Media coverage (live tracking)
+   ☐ War room operational (all hands)
+
+☐ 8:00 PM: Public sale closes
+   ☐ Final tally:
+      ☐ Tokens sold: ___ M (target: 60M)
+      ☐ Buyers: ___ (target: 1,000+)
+      ☐ Average purchase: $___ (target: $3,000)
+      ☐ Total raised: $___ M (target: $30M)
+   ☐ Price: $___ (target: $0.05-$0.10)
+   ☐ Status: SUCCESS / PARTIAL / ISSUES
+
+☐ Evening: Immediate post-launch
+   ☐ Press release: Results announced
+   ☐ Thank you message (Julio to community)
+   ☐ Monitor overnight (price stability)
+   ☐ Team: Brief celebration, stay alert
+
+☐ Team debrief:
+   What went well:
+   What didn't:
+   Action items:
+
+═══════════════════════════════════════
+TGE COMPLETE ✅
+═══════════════════════════════════════

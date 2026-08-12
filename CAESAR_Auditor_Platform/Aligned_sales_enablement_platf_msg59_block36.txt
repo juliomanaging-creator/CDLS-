@@ -1,0 +1,19 @@
+Structure: Buy 50% of partner stakes, give them profit share on other 50%
+- Partners sell 50% for cash today
+- Retain 50% but convert to profit share (not equity)
+- You control voting, they get economic upside
+
+Your voting control: 70%
+Your economic ownership: 55%
+Partner profit share: 15% (non-voting)
+
+Exit at $134M:
+- CalPERS gets: $7.5M
+- Partner profit share: 15% × $126.5M = $19M
+- Your share: 55% × $126.5M = $69.6M
+
+Buyout cost: $1.5M (50% × $3M)
+Net to you: $69.6M - $1.5M = $68.1M
+
+Gain vs. Scenario 1: $17.5M (+35%)
+Benefit: Control with lower cash outlay

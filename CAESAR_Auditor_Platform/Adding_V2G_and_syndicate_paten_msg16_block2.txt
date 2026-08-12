@@ -1,0 +1,27 @@
+┌─────────────────────────────────────┐
+│ LAYER 3: REVOCABLE LIVING TRUST    │
+│ "The Julio Family Trust"            │
+│ ✅ Avoids probate                   │
+│ ✅ Privacy (not public record)      │
+│ ✅ You control during lifetime      │
+│ ✅ Instant transfer to heirs        │
+└──────────────┬──────────────────────┘
+               │ OWNS 100%
+               ▼
+┌─────────────────────────────────────┐
+│ LAYER 2: LLC                        │
+│ "Julio Automotive Innovation LLC"   │
+│ ✅ Liability shield                 │
+│ ✅ Professional entity              │
+│ ✅ Tax pass-through                 │
+│ ✅ Licenses patents to CDLS         │
+└──────────────┬──────────────────────┘
+               │ OWNS
+               ▼
+┌─────────────────────────────────────┐
+│ LAYER 1: 20 PATENTS                │
+│ ✅ Protected from creditors         │
+│ ✅ Protected from CDLS lawsuits     │
+│ ✅ Generate $789M in royalties      │
+│ ✅ Transfer to heirs tax-free       │
+└─────────────────────────────────────┘

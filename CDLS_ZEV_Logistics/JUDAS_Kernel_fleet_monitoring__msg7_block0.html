@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUDAS Kernel - V2X Fleet Intelligence & NEVN</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            color: #00ff41;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: rgba(0, 255, 65, 0.05);
+            border: 2px solid #00ff41;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-shadow: 0 0 20px #00ff41;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #ffb300;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #00ff41;
+            padding-bottom: 10px;
+        }
+
+        .tab-button {
+            background: rgba(0, 255, 65, 0.1);
+            border: 2px solid #00ff41;
+            color: #00ff41;
+            padding: 12px 30px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            font-size: 1em;
+            transition: all 0.3s;
+            border-radius: 5px;
+        }
+
+        .tab-button:hover {
+            background: rgba(0, 255, 65, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .tab-button.active {
+            background: #00ff41;
+            color: #0a0a0a;
+            font-weight: bold;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .panel {
+            background: rgba(0, 255, 65, 0.05);
+            border: 2px solid #00ff41;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .panel-title {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            color: #ffb300;
+            border-bottom: 1px solid #00ff41;
+            padding-bottom: 10px;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+            margin-top: 15px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .metric-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 255, 65, 0.3);
+        }
+
+        .metric-label {
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .metric-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #00ff41;
+        }
+
+        .metric-unit {
+            font-size: 0.8em;
+            color: #ffb300;
+        }
+
+        .status-panel {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            font-size: 0.9em;
+            line-height: 1.8;
+        }
+
+        .control-panel {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .btn {
+            background: rgba(0, 255, 65, 0.2);
+            border: 2px solid #00ff41;
+            color: #00ff41;
+            padding: 12px 30px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            font-size: 1em;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: #00ff41;
+            color: #0a0a0a;
+            transform: scale(1.05);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .nevn-section {
+            margin-bottom: 30px;
+        }
+
+        .capital-structure {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .tranche-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid #00ff41;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .tranche-card.senior {
+            border-color: #4CAF50;
+        }
+
+        .tranche-card.junior {
+            border-color: #ffb300;
+        }
+
+        .term-sheet {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 25px;
+            border: 2px solid #00ff41;
+            border-radius: 10px;
+            font-size: 0.85em;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+
+        .highlight {
+            color: #ffb300;
+            font-weight: bold;
+        }
+
+        .success {
+            color: #4CAF50;
+        }
+
+        .warning {
+            color: #ff9800;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .live-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #00ff41;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ JUDAS KERNEL</h1>
+            <div class="subtitle">V2X Fleet Intelligence & Net Enterprise Value Note</div>
+            <div style="margin-top: 10px; font-size: 0.9em; color: #888;">
+                300,000 Unit Fleet | Physics-Based Verification | Sovereign Revenue Engine
+            </div>
+        </header>
+
+        <div class="nav-tabs">
+            <button class="tab-button active" onclick="switchTab('demo')">Live Demo</button>
+            <button class="tab-button" onclick="switchTab('nevn')">NEVN Structure</button>
+            <button class="tab-button" onclick="switchTab('financials')">Financial Model</button>
+            <button class="tab-button" onclick="switchTab('termsheet')">Term Sheet</button>
+        </div>
+
+        <!-- DEMO TAB -->
+        <div id="demo" class="tab-content active">
+            <div class="dashboard">
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <div class="panel">
+                        <div class="panel-title">
+                            <span class="live-indicator"></span>Fleet Telemetry Distribution
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="telemetryChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-title">Revenue Accumulation</div>
+                        <div class="chart-container">
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-title">System Status</div>
+                    <div class="status-panel" id="statusPanel">
+                        <div>Initializing JUDAS Kernel...</div>
+                    </div>
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-label">Cycle</div>
+                            <div class="metric-value" id="cycleCount">0</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Verified Units</div>
+                            <div class="metric-value" id="verifiedCount">0</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Anomalies</div>
+                            <div class="metric-value" id="anomalyCount">0</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Revenue</div>
+                            <div class="metric-value">$<span id="revenueTotal">0.00</span><span class="metric-unit">M</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-panel">
+                <button class="btn" onclick="startDemo()" id="startBtn">Start Demo</button>
+                <button class="btn" onclick="stopDemo()" id="stopBtn" disabled>Stop Demo</button>
+                <button class="btn" onclick="resetDemo()">Reset</button>
+            </div>
+        </div>
+
+        <!-- NEVN TAB -->
+        <div id="nevn" class="tab-content">
+            <div class="panel">
+                <div class="panel-title">Enterprise Valuation Overview</div>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-label">Total Enterprise Value</div>
+                        <div class="metric-value">$<span id="totalEV">142.3</span><span class="metric-unit">M</span></div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Year 1 Revenue</div>
+                        <div class="metric-value">$<span id="year1Rev">38.2</span><span class="metric-unit">M</span></div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">EBITDA Margin</div>
+                        <div class="metric-value"><span id="ebitdaMargin">78</span><span class="metric-unit">%</span></div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Target IRR</div>
+                        <div class="metric-value"><span id="targetIRR">18</span><span class="metric-unit">%</span></div>
+                    </div>
+                </div>
+
+                <div class="capital-structure">
+                    <div class="tranche-card senior">
+                        <h3 style="color: #4CAF50; margin-bottom: 15px;">📊 Senior Notes (Tranche A)</h3>
+                        <div style="font-size: 2em; margin: 10px 0;">$92.5M</div>
+                        <div style="margin: 10px 0;">
+                            <div>Coupon Rate: <span class="highlight">8.5%</span></div>
+                            <div>Maturity: <span class="highlight">7 years</span></div>
+                            <div>Security: First lien on V2X revenue</div>
+                            <div>Rating: <span class="highlight">BB+ / Ba1</span></div>
+                            <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.2);">
+                                Annual Interest: <span class="success">$7.9M</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tranche-card junior">
+                        <h3 style="color: #ffb300; margin-bottom: 15px;">📈 Junior Equity (Tranche B)</h3>
+                        <div style="font-size: 2em; margin: 10px 0;">$49.8M</div>
+                        <div style="margin: 10px 0;">
+                            <div>Target IRR: <span class="highlight">24%</span></div>
+                            <div>Structure: Subordinated equity</div>
+                            <div>Participation: Residual cash flows</div>
+                            <div>Exit: IPO/Strategic (Year 5-7)</div>
+                            <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.2);">
+                                Upside: <span class="success">Full equity + terminal value</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-container" style="height: 400px; margin-top: 30px;">
+                    <canvas id="dcfChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- FINANCIALS TAB -->
+        <div id="financials" class="tab-content">
+            <div class="panel">
+                <div class="panel-title">7-Year Financial Projections</div>
+                <div class="chart-container" style="height: 400px;">
+                    <canvas id="projectionsChart"></canvas>
+                </div>
+            </div>
+
+            <div class="grid-3" style="margin-top: 20px;">
+                <div class="panel">
+                    <div class="panel-title">Revenue Drivers</div>
+                    <div style="margin-top: 15px; line-height: 2;">
+                        <div>Fleet Size: <span class="highlight">300,000 units</span></div>
+                        <div>Utilization: <span class="highlight">85%</span></div>
+                        <div>Avg Output: <span class="highlight">30 kWh</span></div>
+                        <div>Cycles/Day: <span class="highlight">2</span></div>
+                        <div>Arbitrage Rate: <span class="highlight">12%</span></div>
+                        <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.2);">
+                            Daily Revenue: <span class="success">$104,676</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-title">Credit Metrics</div>
+                    <div style="margin-top: 15px; line-height: 2;">
+                        <div>DSCR: <span class="success">3.76x ✓</span></div>
+                        <div style="font-size: 0.8em; color: #888; margin-left: 20px;">Threshold: 1.25x</div>
+                        <div style="margin-top: 10px;">LTV: <span class="success">65.0% ✓</span></div>
+                        <div style="font-size: 0.8em; color: #888; margin-left: 20px;">Threshold: <75%</div>
+                        <div style="margin-top: 10px;">Interest Coverage: <span class="success">3.76x</span></div>
+                        <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.2); color: #4CAF50;">
+                            ✓ Investment Grade Standards
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-title">Risk Factors</div>
+                    <div style="margin-top: 15px; line-height: 2; font-size: 0.9em;">
+                        <div><span class="success">✓</span> Regulatory: CARB ACF mandate</div>
+                        <div><span class="success">✓</span> Technology: Proprietary PDHG</div>
+                        <div><span class="success">✓</span> Market: Dual revenue streams</div>
+                        <div><span class="success">✓</span> Credit: 3.76x DSCR</div>
+                        <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.2);">
+                            <div><span class="warning">⚠</span> Fleet concentration risk</div>
+                            <div><span class="warning">⚠</span> Technology obsolescence</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TERM SHEET TAB -->
+        <div id="termsheet" class="tab-content">
+            <div class="panel">
+                <div class="panel-title">NEVN Term Sheet</div>
+                <div class="term-sheet" id="termSheetContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JUDAS Kernel Engine
+        let demoInterval = null;
+        let cycleCount = 0;
+        let revenueHistory = [];
+        let anomalyHistory = [];
+        let telemetryChart, revenueChart, dcfChart, projectionsChart;
+
+        // Initialize Charts
+        function initCharts() {
+            const chartConfig = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: { color: '#00ff41' }
+                    }
+                },
+                scales: {
+                    x: { 
+                        ticks: { color: '#00ff41' },
+                        grid: { color: 'rgba(0, 255, 65, 0.1)' }
+                    },
+                    y: { 
+                        ticks: { color: '#00ff41' },
+                        grid: { color: 'rgba(0, 255, 65, 0.1)' }
+                    }
+                }
+            };
+
+            // Telemetry Chart
+            telemetryChart = new Chart(document.getElementById('telemetryChart'), {
+                type: 'bar',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: 'Verified Units',
+                        data: [],
+                        backgroundColor: 'rgba(0, 255, 65, 0.6)',
+                        borderColor: '#00ff41',
+                        borderWidth: 1
+                    }, {
+                        label: 'Anomalies',
+                        data: [],
+                        backgroundColor: 'rgba(255, 0, 64, 0.6)',
+                        borderColor: '#ff0040',
+                        borderWidth: 1
+                    }]
+                },
+                options: chartConfig
+            });
+
+            // Revenue Chart
+            revenueChart = new Chart(document.getElementById('revenueChart'), {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: 'Cumulative Revenue ($M)',
+                        data: [],
+                        borderColor: '#00ff41',
+                        backgroundColor: 'rgba(0, 255, 65, 0.2)',
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: chartConfig
+            });
+
+            // DCF Chart
+            dcfChart = new Chart(document.getElementById('dcfChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5', 'Year 6', 'Year 7', 'Terminal'],
+                    datasets: [{
+                        label: 'Cash Flow (PV)',
+                        data: [22.3, 20.6, 19.1, 17.7, 16.4, 15.2, 14.1, 31.9],
+                        backgroundColor: '#00ff41',
+                        borderColor: '#00ff41',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    ...chartConfig,
+                    plugins: {
+                        ...chartConfig.plugins,
+                        title: {
+                            display: true,
+                            text: '7-Year DCF Analysis (18% Discount Rate)',
+                            color: '#ffb300',
+                            font: { size: 14 }
+                        }
+                    }
+                }
+            });
+
+            // Projections Chart
+            projectionsChart = new Chart(document.getElementById('projectionsChart'), {
+                type: 'line',
+                data: {
+                    labels: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5', 'Year 6', 'Year 7'],
+                    datasets: [{
+                        label: 'Revenue',
+                        data: [38.2, 41.3, 44.6, 48.2, 52.1, 56.2, 60.7],
+                        borderColor: '#00ff41',
+                        backgroundColor: 'rgba(0, 255, 65, 0.1)',
+                        yAxisID: 'y'
+                    }, {
+                        label: 'EBITDA',
+                        data: [29.8, 32.2, 34.8, 37.6, 40.6, 43.8, 47.3],
+                        borderColor: '#ffb300',
+                        backgroundColor: 'rgba(255, 179, 0, 0.1)',
+                        yAxisID: 'y'
+                    }]
+                },
+                options: {
+                    ...chartConfig,
+                    scales: {
+                        x: chartConfig.scales.x,
+                        y: {
+                            type: 'linear',
+                            position: 'left',
+                            ticks: { 
+                                color: '#00ff41',
+                                callback: function(value) {
+                                    return '$' + value + 'M';
+                                }
+                            },
+                            grid: { color: 'rgba(0, 255, 65, 0.1)' }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Demo Functions
+        function runCycle() {
+            cycleCount++;
+            
+            // Generate telemetry data
+            const verified = [];
+            const anomalies = [];
+            const bins = 20;
+            
+            for (let i = 0; i < bins; i++) {
+                const kwh = 10 + (i * 3.5);
+                const count = Math.floor(Math.random() * 30000) + 5000;
+                
+                if (kwh < 45) {
+                    verified.push(count);
+                    anomalies.push(0);
+                } else {
+                    verified.push(0);
+                    anomalies.push(Math.floor(count * 0.3));
+                }
+            }
+            
+            // Calculate metrics
+            const totalVerified = verified.reduce((a, b) => a + b, 0);
+            const totalAnomalies = anomalies.reduce((a, b) => a + b, 0);
+            const revenue = (totalVerified * 30 * 2 * 0.35 * 0.12) / 1_000_000;
+            revenueHistory.push(revenue * cycleCount);
+            
+            // Update charts
+            telemetryChart.data.labels = Array.from({length: bins}, (_, i) => (10 + i*3.5).toFixed(1));
+            telemetryChart.data.datasets[0].data = verified;
+            telemetryChart.data.datasets[1].data = anomalies;
+            telemetryChart.update();
+            
+            revenueChart.data.labels.push(`Cycle ${cycleCount}`);
+            revenueChart.data.datasets[0].data = revenueHistory;
+            revenueChart.update();
+            
+            // Update metrics
+            document.getElementById('cycleCount').textContent = cycleCount;
+            document.getElementById('verifiedCount').textContent = totalVerified.toLocaleString();
+            document.getElementById('anomalyCount').textContent = totalAnomalies.toLocaleString();
+            document.getElementById('revenueTotal').textContent = (revenueHistory[revenueHistory.length - 1]).toFixed(2);
+            
+            // Update status
+            const successRate = ((totalVerified / 300000) * 100).toFixed(2);
+            const anomalyRate = ((totalAnomalies / 300000) * 100).toFixed(2);
+            
+            document.getElementById('statusPanel').innerHTML = `
+╔══════════════════════════════╗
+║   JUDAS KERNEL STATUS v1.0   ║
+╚══════════════════════════════╝
+
+⚡ CYCLE: ${cycleCount}
+
+📊 FLEET METRICS
+├─ Total Units: 300,000
+├─ Verified: ${totalVerified.toLocaleString()}
+├─ Anomalies: ${totalAnomalies.toLocaleString()}
+└─ Success Rate: ${successRate}%
+
+💰 FINANCIAL PERFORMANCE
+├─ Current Revenue: $${(revenueHistory[revenueHistory.length - 1]).toFixed(2)}M
+├─ Avg Unit Output: 30.0 kWh
+└─ Arbitrage Rate: 12%
+
+🔒 GRID STABILITY
+├─ Threshold: 45 kWh
+├─ Compliance: ${totalAnomalies < 10000 ? '✓ OPTIMAL' : '⚠ WARNING'}
+└─ PDHG Status: ACTIVE
+
+📈 TREND ANALYSIS
+└─ Anomaly Rate: ${anomalyRate}%
+            `;
+        }
+
+        function startDemo() {
+            if (demoInterval) return;
+            
+            document.getElementById('startBtn').disabled = true;
+            document.getElementById('stopBtn').disabled = false;
+            
+            demoInterval = setInterval(runCycle, 1000);
+        }
+
+        function stopDemo() {
+            if (demoInterval) {
+                clearInterval(demoInterval);
+                demoInterval = null;
+            }
+            
+            document.getElementById('startBtn').disabled = false;
+            document.getElementById('stopBtn').disabled = true;
+        }
+
+        function resetDemo() {
+            stopDemo();
+            cycleCount = 0;
+            revenueHistory = [];
+            anomalyHistory = [];
+            
+            telemetryChart.data.labels = [];
+            telemetryChart.data.datasets[0].data = [];
+            telemetryChart.data.datasets[1].data = [];
+            telemetryChart.update();
+            
+            revenueChart.data.labels = [];
+            revenueChart.data.datasets[0].data = [];
+            revenueChart.update();
+            
+            document.getElementById('cycleCount').textContent = '0';
+            document.getElementById('verifiedCount').textContent = '0';
+            document.getElementById('anomalyCount').textContent = '0';
+            document.getElementById('revenueTotal').textContent = '0.00';
+            document.getElementById('statusPanel').innerHTML = '<div>System Reset. Ready to start.</div>';
+            
+            document.getElementById('startBtn').disabled = false;
+        }
+
+        // Tab switching
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // Term Sheet Content
+        const termSheetText = `╔════════════════════════════════════════════════════════════════════════╗
+║                 JUDAS KERNEL NEVN - TERM SHEET                         ║
+║              Net Enterprise Value Note Structure                       ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+SECURITY OVERVIEW
+├─ Instrument Type: Asset-Backed Net Enterprise Value Note (NEVN)
+├─ Underlying Asset: 300,000-unit V2X fleet revenue streams
+├─ Total Enterprise Value: $142.3M
+└─ Valuation Method: 7-Year DCF @ 18% discount rate
+
+SENIOR NOTES (TRANCHE A) - $92.5M
+├─ Structure: Fixed-rate senior secured notes
+├─ Coupon Rate: 8.5% (paid quarterly)
+├─ Annual Interest Payment: $7.9M
+├─ Maturity: 7 years (bullet payment)
+├─ Security: First-priority lien on V2X arbitrage revenue
+├─ Credit Rating: BB+ / Ba1 equivalent
+└─ Covenants: DSCR > 1.25x, LTV < 75%
+
+JUNIOR EQUITY (TRANCHE B) - $49.8M
+├─ Structure: Subordinated equity participation
+├─ Target IRR: 24%
+├─ Profit Distribution: Residual after senior debt service
+└─ Exit Strategy: IPO/Strategic acquisition (Year 5-7)
+
+OPERATING PERFORMANCE (YEAR 1)
+├─ Gross Revenue: $38.2M annually ($104,676/day)
+├─ Operating Costs: $8.4M (22% of revenue)
+├─ EBITDA: $29.8M (78% margin)
+└─ EBITDA Growth: 8% CAGR through Year 7
+
+RISK MITIGATION
+├─ Fleet Utilization: 85% (conservative)
+├─ Physics Verification: 98% telemetry validation
+├─ Revenue Stability: Dual streams (arbitrage + grid services)
+├─ Regulatory: CARB ACF mandate through 2042
+└─ Insurance: $75M comprehensive coverage
+
+CREDIT METRICS
+├─ DSCR: 3.76x (Threshold: 1.25x) ✓
+├─ LTV: 65.0% (Threshold: <75%) ✓
+├─ Interest Coverage: 3.76x
+└─ Cash Conversion: 89%
+
+USE OF PROCEEDS ($142.3M)
+├─ Fleet Expansion: $85M (150,000 additional units)
+├─ Technology Infrastructure: $32M (JUDAS deployment)
+├─ Working Capital: $18M (90-day reserve)
+└─ Transaction Costs: $7M
+
+INVESTMENT HIGHLIGHTS
+├─ Sovereign Asset Class: California $4.2T economy exposure
+├─ Regulatory Moat: CARB mandate = captive market
+├─ Technology IP: Proprietary PDHG verification
+├─ Margin Profile: 78% EBITDA, minimal capex
+└─ ESG Aligned: 100% zero-emission fleet
+
+ISSUER: California Dealer Logistics Solutions (CDLS)
+CLOSING: Q2 2026 (Target)
+
+═════════════════════════════════════════════════════════════════════════
+This term sheet is for discussion purposes only.
+Not an offer to sell securities.`;
+
+        // Initialize
+        window.addEventListener('load', () => {
+            initCharts();
+            document.getElementById('termSheetContent').textContent = termSheetText;
+        });
+    </script>
+</body>
+</html>

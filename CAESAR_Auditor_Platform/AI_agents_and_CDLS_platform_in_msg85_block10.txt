@@ -1,0 +1,16 @@
+team-tracker team-summary
+
+# Output:
+📊 TEAM R&D SUMMARY: 2026-01
+════════════════════════════════════════════════════════════
+Employee            Role                    Hours   R&D %   Credit
+════════════════════════════════════════════════════════════
+Julio Umanzor       Founder/CTO             24.5h   60%     $2,320
+Sarah Chen          AI Engineer             38.0h   95%     $5,104
+Michael Torres      Blockchain Eng          35.5h   90%     $4,680
+[... 12 more engineers ...]
+════════════════════════════════════════════════════════════
+TOTAL                                      520.0h           $52,890
+════════════════════════════════════════════════════════════
+
+Projected annual R&D credit: $634,680

@@ -1,0 +1,14 @@
+Application: Pneumatic tools, tire inflation
+
+System:
+- Ceramic chamber: 70 bar storage
+- Charge at night (cheap electricity)
+- Use during day (tools, inflation)
+
+Economics:
+- Investment: $25,000
+- Savings: $10,000/year
+- ROI: 2.5 years ✅
+
+Ceramic's high pressure capacity is the KEY!
+Perfect for this application!

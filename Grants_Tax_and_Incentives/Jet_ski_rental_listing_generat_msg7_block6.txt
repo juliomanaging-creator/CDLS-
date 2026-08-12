@@ -1,0 +1,4 @@
+cd Api
+dotnet run
+# Runs on http://localhost:5000
+# Swagger UI: http://localhost:5000/swagger

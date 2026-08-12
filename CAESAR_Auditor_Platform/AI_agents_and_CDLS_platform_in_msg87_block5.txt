@@ -1,0 +1,9 @@
+Per Truck Per Day:
+- Frequency regulation: $20-$60/day
+- Demand response: $15-$25/day  
+- Energy arbitrage: $15-$25/day
+TOTAL: $50-$100/truck/day
+
+10-Truck Fleet: $182K-$365K/year
+50-Truck Fleet: $912K-$1.8M/year
+500-Truck Fleet: $9.1M-$18.25M/year ✅

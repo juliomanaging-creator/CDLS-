@@ -1,0 +1,58 @@
+CDLS TOKENIZATION DAILY STANDUP
+Date: _______________
+Day: ___ of 99 until TGE
+
+ATTENDANCE:
+☐ Julio (CEO)
+☐ [CFO Name]
+☐ [CTO Name]
+☐ [Marketing]
+☐ [Operations]
+
+ROUND ROBIN (5 min per person):
+─────────────────────────────────
+Person: _____________
+├─ Yesterday: What I accomplished
+├─ Today: What I'm working on  
+├─ Blockers: What's stopping me
+└─ Help needed: What I need from team
+
+[Repeat for each person]
+
+CRITICAL PATH CHECK:
+☐ Legal: On track / At risk / Blocked
+☐ Technical: On track / At risk / Blocked
+☐ Fundraising: On track / At risk / Blocked
+☐ Marketing: On track / At risk / Blocked
+
+BUDGET CHECK:
+Spent to date: $_________
+Remaining: $_________
+Burn rate: $______/week
+Runway: ___ weeks
+
+DECISIONS NEEDED TODAY:
+1. _______________________
+2. _______________________
+3. _______________________
+
+ACTION ITEMS:
+☐ [Task] - [Owner] - [Due date]
+☐ [Task] - [Owner] - [Due date]
+☐ [Task] - [Owner] - [Due date]
+
+MORALE CHECK (1-10):
+Julio: ___
+CFO: ___
+CTO: ___
+Marketing: ___
+Operations: ___
+Average: ___
+
+If average <7: Discuss concerns
+If average <5: Emergency team meeting
+
+NEXT STANDUP:
+Tomorrow, 9:00 AM, same time same place
+
+DURATION: ___ minutes (goal: <30 min)

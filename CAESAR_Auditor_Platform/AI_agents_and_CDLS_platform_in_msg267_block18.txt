@@ -1,0 +1,4 @@
+Materials: $100 (copper sulfate, seeds, multimeter)
+Timeline: 7 weeks (germination → copper doping → testing)
+Expected result: 100-1,000 S/m root conductivity ✅
+Success indicator: Roots conduct electricity 1,000× better than normal!

@@ -1,0 +1,8 @@
+Per Energy Pod Trailer:
+- EcoFlow DELTA Pro Ultra (90 kWh): $18,000
+- Trailer modification (custom bay): $5,000
+- Fermata V2G inverter (19.2 kW): $12,000
+────────────────────────────────────
+Total per Pod: $35,000
+
+Fleet Investment: $3,500,000 (100 pods)

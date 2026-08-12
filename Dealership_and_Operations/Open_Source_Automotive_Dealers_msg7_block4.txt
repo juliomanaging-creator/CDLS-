@@ -1,0 +1,8 @@
+Additional RO Volume (ARV) = 
+    Current RO Volume * Expected Improvement %
+
+Service Revenue Impact (SRI) = 
+    ARV * Average Service RO
+
+Service ROI = 
+    ((SRI * 12) - Annual Service Tech Cost) / Annual Service Tech Cost * 100

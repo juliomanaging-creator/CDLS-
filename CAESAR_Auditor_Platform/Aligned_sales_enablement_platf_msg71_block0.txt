@@ -1,0 +1,8 @@
+Token Name: CDLS Network Token
+Ticker: $CDLS
+Blockchain: Ethereum (ERC-20)
+Total Supply: 1,000,000,000 (1 billion tokens, fixed forever)
+Decimals: 18
+Initial Price: $0.05 per token
+Initial Market Cap: $50M (10% in circulation)
+Fully Diluted Valuation: $500M

@@ -1,0 +1,12 @@
+Purpose: Tokenize LCFS carbon credits
+Supply: Dynamic (based on verified credits)
+Use Cases:
+├─ Generate: Drive EV miles, mint pre-verified NFTs
+├─ Trade: 24/7 marketplace, instant settlement
+├─ Redeem: Burn NFT, transfer to CARB system
+└─ Collateralize: Use as DeFi collateral
+
+Market Opportunity:
+├─ 2026: $10M GMV
+├─ 2028: $500M GMV
+├─ 2030: $2B GMV (2% take rate = $40M revenue)

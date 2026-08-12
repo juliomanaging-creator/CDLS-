@@ -1,0 +1,2 @@
+founding_date: "2024-Q4" → "2025-Q1"
+Updated cost projections with new fuel prices

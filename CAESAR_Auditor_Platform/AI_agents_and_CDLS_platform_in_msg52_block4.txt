@@ -1,0 +1,21 @@
+# Set PATH temporarily
+$env:Path += ";C:\Program Files\PostgreSQL\16\bin"
+
+# Create database
+psql -U postgres -c "CREATE DATABASE cdls_platform;"
+
+# Load schema
+cd C:\Projects\cdls-platform
+psql -U postgres -d cdls_platform -f database\schema.sql
+
+# Install packages
+cd backend
+npm install
+
+# Configure .env
+copy .env.example .env
+notepad .env
+# (Edit DB_PASSWORD)
+
+# Start server
+npm start

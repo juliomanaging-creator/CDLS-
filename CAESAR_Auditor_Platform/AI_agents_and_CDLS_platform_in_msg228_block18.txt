@@ -1,0 +1,11 @@
+Problem: Steel wears from friction, 100K miles
+Solution: Silicon nitride (Si3N4) balls
+
+Friction: 50% lower (less heat)
+Life: 500,000 miles (5× baseline)
+
+Cost: $3,600 (18 bearings)
+Savings: $2,022/year
+ROI: 1.8 years
+
+Status: Available NOW (SKF, NSK) ✅

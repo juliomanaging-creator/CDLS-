@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "start": "node server.js",      // Production
+    "dev": "nodemon server.js"      // Development (auto-restart)
+  }
+}

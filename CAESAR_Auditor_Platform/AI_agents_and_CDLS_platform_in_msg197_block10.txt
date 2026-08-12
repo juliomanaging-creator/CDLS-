@@ -1,0 +1,9 @@
+[Trailer]
+    ↓
+[Vibrating Mirror] → Emits photons downward
+    ↓↓↓
+Photon stream
+
+Photon momentum: p = E/c
+Thrust direction: Upward (+z) via Newton's 3rd Law
+Thrust magnitude: 6.9 femtonewtons per grid

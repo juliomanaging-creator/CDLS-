@@ -1,0 +1,11 @@
+Application: Grid electricity (stationary)
+System:
+- Gas turbine: 1,300°C exhaust
+- Steam turbine: Uses waste heat from gas turbine
+- Efficiency: 60-62% (best in world!)
+
+Why it works:
+- Stationary (no weight penalty)
+- Large scale (economies of scale)
+- Fuel adds energy (not extracting from motion)
+- Cooling tower nearby (infinite heat sink)

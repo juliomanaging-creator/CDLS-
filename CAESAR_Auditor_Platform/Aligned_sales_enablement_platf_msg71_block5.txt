@@ -1,0 +1,28 @@
+Tier 1: Free (No staking required)
+├─ Basic ROI calculator
+├─ 10 calculations/month
+└─ Read-only data
+
+Tier 2: Starter (Stake 10,000 $CDLS = $500)
+├─ Unlimited calculations
+├─ Basic carbon tracking
+├─ Email support
+└─ Equivalent to $499/month subscription
+
+Tier 3: Professional (Stake 100,000 $CDLS = $5,000)
+├─ All Starter features
+├─ Carbon marketplace access
+├─ Advanced analytics
+├─ API access
+└─ Equivalent to $1,999/month subscription
+
+Tier 4: Enterprise (Stake 1,000,000 $CDLS = $50,000)
+├─ All Professional features
+├─ White-label platform
+├─ Dedicated support
+├─ Custom integrations
+└─ Equivalent to $5,000/month subscription
+
+Key Benefit: Stake once, access forever
+Traditional: Pay monthly subscription
+Token Model: Stake (get back when done) + earn yield

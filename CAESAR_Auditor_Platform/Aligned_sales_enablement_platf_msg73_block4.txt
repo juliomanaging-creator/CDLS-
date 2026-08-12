@@ -1,0 +1,11 @@
+LCFS Credits exist in LRT-CBTS system:
+├─ Generation: Report quarterly
+├─ Verification: CARB reviews and approves
+├─ Trading: Buyer/seller both submit transfer request
+├─ Settlement: CARB processes (3-5 days)
+└─ Ownership: Only CARB system is "source of truth"
+
+CARB has NOT addressed tokenization:
+⚠️ No explicit approval
+⚠️ No explicit prohibition
+⚠️ Regulatory gray area

@@ -1,0 +1,13 @@
+✓ email_templates/
+  ├── first_outreach.txt
+  ├── loi_send.txt
+  ├── follow_up_24h.txt
+  ├── follow_up_48h.txt
+  └── nada_pre_event.txt
+
+✓ dealer_tracking.csv (Excel-compatible)
+✓ tasks_2026-01-27.txt (daily task list)
+✓ progress_dashboard.txt (live metrics)
+✓ outreach_campaign_week1.txt (campaign plan)
+✓ jure_config.json (your settings)
+✓ jure_state.json (progress tracking)

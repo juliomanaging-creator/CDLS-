@@ -1,0 +1,27 @@
+Milestones:
+
+"Pioneer" Badge:
+├─ First 100 dealers to join
+├─ NFT collectible (valuable)
+├─ Perks: 2x $HAUL earnings (permanent)
+
+"Heavy Hauler" Badge:
+├─ Complete 1,000 deliveries
+├─ Unlock: Priority capacity (peak season)
+├─ Reward: 10,000 $HAUL
+
+"Carbon Champion" Badge:
+├─ Generate 10,000 carbon credits
+├─ Unlock: Marketplace featured listing (free)
+├─ Reward: 50,000 $HAUL
+
+"Recruiter" Badge:
+├─ Refer 10 dealers
+├─ Unlock: Exclusive Discord channel (leadership)
+├─ Reward: 20,000 $HAUL + rev share boost
+
+Why This Works:
+- Status (visibleNFT on OpenSea)
+- Competition (leaderboards)
+- Tangible rewards ($HAUL)
+- Community (exclusive access)

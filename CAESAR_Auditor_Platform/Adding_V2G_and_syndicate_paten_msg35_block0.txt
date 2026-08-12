@@ -1,0 +1,5 @@
+California (CAISO) ← Separate grid → New York (NYISO)
+        ↓                                    ↓
+   Hoover Dam                          Niagara Falls
+        ↓                                    ↓
+  [NO DIRECT CONNECTION]

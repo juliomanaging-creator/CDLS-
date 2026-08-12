@@ -1,0 +1,9 @@
+C:\Users\YourName\Projects\cdls-platform\
+├── backend\
+│   ├── server.js          ← Download from me
+│   ├── package.json       ← Download from me
+│   └── .env.example       ← Download from me (rename to .env)
+├── database\
+│   └── schema.sql         ← Download from me
+└── frontend\
+    └── index.html         ← Your existing cdls_platform_complete.html

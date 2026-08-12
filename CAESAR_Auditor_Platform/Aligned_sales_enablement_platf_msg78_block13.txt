@@ -1,0 +1,17 @@
+Role: Lead Developer / Architect
+├─ Name: [Full name]
+├─ Experience: [Years in Solidity]
+├─ Projects: [3-5 relevant projects]
+├─ Availability: [% allocation to CDLS]
+└─ LinkedIn: [Profile link]
+
+Role: Smart Contract Developer #1
+├─ [Same format as above]
+
+Role: Smart Contract Developer #2
+├─ [Same format as above]
+
+Role: QA / Security Engineer
+├─ [Same format as above]
+
+[Additional roles as needed]

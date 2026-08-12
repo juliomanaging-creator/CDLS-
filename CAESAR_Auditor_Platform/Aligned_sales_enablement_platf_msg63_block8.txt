@@ -1,0 +1,36 @@
+Capital Allocation:
+
+$8M (32%): Platform Development
+├─ Hire 15 engineers
+├─ Build SaaS infrastructure
+├─ Mobile app development
+└─ AI/ML models
+
+$6M (24%): Geographic Expansion
+├─ Oregon launch: $2M
+├─ Washington launch: $2M
+├─ Nevada/Arizona: $2M
+└─ Dealer recruitment
+
+$4M (16%): Sales & Marketing
+├─ VP Sales + 5 AEs
+├─ Dealer acquisition campaigns
+├─ Conference sponsorships
+└─ Content marketing
+
+$3M (12%): Fleet Growth
+├─ 30 additional EV haulers
+├─ Charging infrastructure
+└─ Working capital
+
+$2M (8%): M&A (Tuck-ins)
+├─ 2-3 small acquisitions
+├─ Tech talent acqui-hires
+└─ Integration costs
+
+$2M (8%): Operations & Reserves
+├─ Legal, accounting, insurance
+├─ Office expansion
+└─ 12-month runway buffer
+
+18-Month Plan to $500M Valuation (Series B)

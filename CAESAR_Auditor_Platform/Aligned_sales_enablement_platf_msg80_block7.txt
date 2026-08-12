@@ -1,0 +1,62 @@
+☐ 9:00 AM: Daily standup
+
+☐ 9:30 AM: Token economics modeling in Excel
+   
+   Open: Blank Excel workbook
+   Create tabs:
+   1. "Token Supply" - Distribution schedule
+   2. "Vesting" - Unlock timeline  
+   3. "Price Model" - Projections
+   4. "Revenue" - Platform economics
+   5. "Treasury" - Fund management
+   
+   Tab 1: Token Supply
+   -------------------
+   Category              | Tokens      | % Supply | Vesting
+   ----------------------|-------------|----------|----------
+   Founders & Early      | 400,000,000 | 40%      | 4yr/1yr cliff
+   Treasury              | 200,000,000 | 20%      | Controlled release
+   Strategic Partners    | 150,000,000 | 15%      | 4yr/6mo cliff
+   Team & Future Hires   | 100,000,000 | 10%      | 2yr/6mo cliff
+   Public Sale (This)    | 100,000,000 | 10%      | No lockup
+   Liquidity Pools       | 50,000,000  | 5%       | Locked 1yr
+   ----------------------|-------------|----------|----------
+   TOTAL                 | 1,000,000,000| 100%    |
+   
+   Tab 2: Vesting Schedule
+   -----------------------
+   Month | Founders | Strategic | Team | Public | Circulating | % Unlock
+   ------|----------|-----------|------|--------|-------------|----------
+   0     | 0        | 0         | 0    | 100M   | 150M        | 15%
+   6     | 0        | 12.5M     | 8.3M | 100M   | 170.8M      | 17%
+   12    | 25M      | 25M       | 16.7M| 100M   | 216.7M      | 22%
+   [continue for 48 months]
+   
+   Tab 3: Price Projections
+   -------------------------
+   Scenario     | Launch | 6mo  | 1yr  | 2yr  | 3yr
+   -------------|--------|------|------|------|------
+   Bear         | $0.05  | $0.07| $0.15| $0.40| $0.80
+   Base         | $0.05  | $0.10| $0.25| $0.75| $2.00
+   Bull         | $0.05  | $0.15| $0.50| $2.00| $10.00
+   
+   Tab 4: Revenue Model
+   --------------------
+   [Use financial projections from pitch deck]
+   
+   Tab 5: Treasury Management
+   ---------------------------
+   Source          | Amount | Use
+   ----------------|--------|------------------------
+   Token Sale      | $50M   | Operations, expansion
+   Platform Rev    | $18M   | Reinvest, buybacks
+   Marketplace Rev | $2M    | Liquidity, rewards
+   
+   ☐ Build complete model (3 hours)
+   ☐ Stress test scenarios
+   ☐ Save as: "CDLS-Token-Economics-v1.xlsx"
+
+☐ 12:00 PM: Review with CFO
+   Walk through each tab
+   Sanity check assumptions
+   Identify any concerns

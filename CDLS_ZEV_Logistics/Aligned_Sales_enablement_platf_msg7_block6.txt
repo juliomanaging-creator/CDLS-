@@ -1,0 +1,2 @@
+unzip cdls-platform.zip
+cd cdls-platform

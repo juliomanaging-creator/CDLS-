@@ -1,0 +1,5 @@
+NODE_ENV=development
+PORT=3000
+JWT_SECRET=julio-sacramento-dealer-2025-secret-key-change-to-random
+SESSION_SECRET=another-random-secret-for-sessions-2025
+CORS_ORIGIN=http://localhost:3000

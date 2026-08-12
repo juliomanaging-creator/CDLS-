@@ -1,0 +1,7 @@
+Impact: Door slams, vehicle loading
+Failure: Hinge wear, latch deformation
+Current fix: Stainless steel (+50 lbs)
+
+SiC solution: Ceramic-coated pins
+Benefit: Wear resistance
+Cost: $300

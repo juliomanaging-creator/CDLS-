@@ -1,0 +1,10 @@
+$CDLS Token Primary Uses:
+1. Platform Access (must stake to use advanced features)
+2. Governance (vote on network decisions)
+3. Revenue Share (claim platform fees)
+4. Collateral (borrow for fleet purchases)
+
+Secondary Use:
+5. Speculation (price appreciation)
+
+If 1-4 drive demand more than 5, we're utility.

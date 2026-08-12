@@ -1,0 +1,12 @@
+Purpose: Reward platform activity
+Supply: Uncapped (inflationary with burns)
+Initial: 100M tokens
+Use Cases:
+├─ Earn: Complete hauls, generate credits, refer dealers
+├─ Spend: Pay subscriptions, marketplace fees, governance
+└─ Burn: 50% of fees burned (deflationary pressure)
+
+Why This Works:
+- Incentivizes usage (gamification)
+- Creates network effects (viral growth)
+- Aligns incentives (everyone benefits from activity)

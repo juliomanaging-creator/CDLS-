@@ -1,0 +1,9 @@
+Worker commuting reduction:
+- Centralized model: 600,000 lbs CO₂/year
+- Distributed model: 120,000 lbs CO₂/year
+- REDUCTION: 480,000 lbs (80%!) ✅
+
+Fleet operations:
+- Diesel displaced: 7.3 MILLION lbs CO₂/year
+
+TOTAL EMISSIONS AVOIDED: 7.78M lbs/year! 🌍

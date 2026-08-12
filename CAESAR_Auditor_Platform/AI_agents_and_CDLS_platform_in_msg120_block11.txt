@@ -1,0 +1,4 @@
+1. Convert .md to PDF (use Pandoc or export tool)
+2. Add CDLS logo header
+3. Include as Exhibit A in CalPERS application
+4. Reference in initial outreach email

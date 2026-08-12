@@ -1,0 +1,11 @@
+# Navigate to data folder
+cd C:\Projects\ev-cost-platform\data\sample-data
+
+# View the files
+dir
+
+# Read the README
+notepad README.md
+
+# View the data
+notepad carrier_cost_data.json

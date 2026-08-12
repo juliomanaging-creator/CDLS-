@@ -1,0 +1,13 @@
+Specification:
+├─ Stake $CDLS, earn $HAUL + USDC
+├─ Features:
+│   ├─ Flexible staking (no lock-up)
+│   ├─ Dual rewards (8-11% APY in $HAUL, revenue share in USDC)
+│   ├─ Tiered access (10K/100K/1M thresholds)
+│   ├─ Long-term bonus (12+ months = +3% APY)
+│   ├─ Revenue distribution (pro-rata to stakers)
+│   └─ Emergency unstake (forfeit pending rewards)
+
+Complexity: High
+Estimated Hours: 150
+Reference: Synthetix staking, Compound governance

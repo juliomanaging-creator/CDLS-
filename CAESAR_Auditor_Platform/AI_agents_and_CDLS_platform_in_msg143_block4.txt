@@ -1,0 +1,20 @@
+┌─────────────────────────────────────────┐
+│  Welcome, Marcus! 👋                     │
+│  Your CDLS Journey Starts Today         │
+├─────────────────────────────────────────┤
+│                                         │
+│  ONBOARDING PLAN (6 Weeks)              │
+│  ████░░░░░░░░░░░░ 15% Complete          │
+│                                         │
+│  Week 1: Orientation & Basics           │
+│  ✅ Watch welcome video                 │
+│  ⏳ Complete HR paperwork (15 min)      │
+│  ☐ Tesla Semi Fundamentals (2 hrs)     │
+│  ☐ Safety Training VR (1 hr)            │
+│                                         │
+│  💬 CDLS U (AI Tutor):                  │
+│  "Hey Marcus! Welcome! I'm your personal│
+│   professor + career coach. Ask me      │
+│   ANYTHING! Ready to tackle that HR     │
+│   paperwork? Let's do this! 💪"         │
+└─────────────────────────────────────────┘

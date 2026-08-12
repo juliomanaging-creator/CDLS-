@@ -1,0 +1,22 @@
+Revenue Stream 1: Hauling Operations
+- 200 vehicles today → 2,000 by 2030
+- $45M revenue (2026) → $450M (2030)
+- 18% EBITDA margins
+- Proves the model, generates data
+
+Revenue Stream 2: Platform SaaS  
+- 20 dealers today → 1,000 by 2030
+- $240K ARR (2026) → $30M ARR (2030)
+- 75% gross margins (software economics)
+- Recurring revenue, high NPS
+
+Revenue Stream 3: Carbon Marketplace
+- $500K GMV (2026) → $400M GMV (2030)
+- 3% take rate = $12M revenue
+- 80% margins (pure software)
+- Network effects moat
+
+Total 2030 Revenue: $492M
+Total 2030 EBITDA: $132M
+Blended Multiple: 10.5x (weighted avg of segments)
+2030 Valuation: $1.39B

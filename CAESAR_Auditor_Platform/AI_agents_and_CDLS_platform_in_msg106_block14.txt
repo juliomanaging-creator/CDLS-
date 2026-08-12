@@ -1,0 +1,17 @@
+SCENARIO 1: Current cost = $850, CDLS = $850
+Result: $116,650 total value (no banner needed)
+
+SCENARIO 2: Current cost = $950, CDLS = $850  
+Result: $216,650 total value (CDLS is cheaper!)
+
+SCENARIO 3: Current cost = $800, CDLS = $850
+Result: $680,650 total value (banner explains $50K extra cost)
+ROI: 13.6x on additional cost
+
+SCENARIO 4: Current cost = $700, CDLS = $850
+Result: $580,650 total value (banner explains $150K extra cost)
+ROI: 3.9x on additional cost
+
+SCENARIO 5: Current cost = $500, CDLS = $850
+Result: $230,650 total value (banner explains $350K extra cost)
+ROI: 65% even at extreme price difference

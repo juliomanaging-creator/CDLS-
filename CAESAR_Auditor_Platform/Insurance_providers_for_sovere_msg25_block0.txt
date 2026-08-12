@@ -1,0 +1,4 @@
+✓ GitHub/GitLab - Enable 2FA in settings
+✓ AWS Console - Enable MFA for root + IAM users
+✓ Google Workspace - Enforce 2FA for all users
+✓ Any other admin tools

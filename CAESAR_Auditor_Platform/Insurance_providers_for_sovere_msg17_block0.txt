@@ -1,0 +1,27 @@
+California Dealer Logistics Solutions (CDLS) is building California's first AI-powered, zero-emission automotive logistics network to serve the state's $2+ billion vehicle hauling market as it transitions to comply with California's Advanced Clean Fleets (ACF) mandate.
+
+PROBLEM
+California's ACF mandate requires all automotive logistics operations to transition to 100% zero-emission vehicles by 2035, yet no existing haulers have the technology infrastructure or fleet capacity to meet this requirement. Traditional diesel-based haulers lack the route optimization algorithms, predictive systems, and operational intelligence necessary for efficient electric vehicle fleet management. This creates a complete market disruption opportunity as 100% of California's automotive hauling capacity must be rebuilt from the ground up.
+
+SOLUTION
+CDLS operates a zero-emission vehicle hauling network powered by proprietary Python-based logistics optimization software. Our platform addresses the unique challenges of electric vehicle fleet operations through:
+
+• Machine learning route optimization accounting for battery range, charging station availability, traffic patterns, and delivery windows
+• Predictive fleet management algorithms that maximize vehicle utilization while minimizing charging downtime
+• Automated inventory management systems that reduce manual dealer coordination
+• Real-time analytics providing complete operational visibility
+
+The platform is built on dealer survey data demonstrating that our optimization approach delivers 20-25% reduction in empty miles compared to traditional routing, 15-20% improvement in fleet utilization, and 80-90% reduction in manual coordination tasks.
+
+MARKET OPPORTUNITY
+California's automotive hauling market exceeds $2 billion annually, with zero existing zero-emission providers despite the 2035 mandate deadline. CDLS has secured 100 hauler commitments via MOU and LOI from California dealerships, positioning us to capture significant market share as the regulatory deadline approaches. The ACF mandate creates a forced conversion scenario where every competitor must either rebuild their operations or exit the market.
+
+CURRENT STATUS
+Founded in 2026 by automotive finance veteran Julio Garcia (14+ years industry experience), CDLS combines deep domain expertise with technical execution capability. As founder-CEO and lead developer, Garcia has built the core logistics platform in Python while securing commitments for 100 zero-emission haulers across California's dealership network.
+
+STRATEGIC VALUE TO NVIDIA
+CDLS requires GPU compute resources for training route optimization models on expanding fleet data, edge AI capabilities for on-vehicle processing, and access to NVIDIA's technical ecosystem to accelerate development. With institutional funding secured from CalPERS (California Public Employees' Retirement System), CDLS is positioned to scale rapidly from 100 to 500+ vehicles by 2027.
+
+Our technology roadmap includes NVIDIA GPU deployment for ML model training, NVIDIA Jetson integration for edge AI on vehicles, and NVIDIA Omniverse for digital twin simulation of the California logistics network. We represent a unique opportunity where climate impact (eliminating diesel emissions), strong unit economics (18-24% target IRR), and regulatory tailwinds (ACF mandate) converge in a large, captive market.
+
+Word Count: 449/500

@@ -1,0 +1,29 @@
+Location: Oregon
+Fleet Size: 45 vehicles (diesel)
+Revenue: $12M/year
+EBITDA: $1.8M
+Valuation: $9-11M (5-6x EBITDA)
+
+Strategic Rationale:
+✓ Oregon expansion (LCFS equivalent program)
+✓ Established dealer relationships (Portland market)
+✓ Can convert fleet to EV (45 × $230K = $10.4M capex)
+✓ Existing depot infrastructure
+
+Post-Acquisition Economics:
+- Migrate to CDLS platform (20% cost reduction)
+- EBITDA improves: $1.8M → $2.6M
+- At your 12x multiple: $31.2M value
+- Created value: $31.2M - $10M = $21.2M
+- ROI: 212%
+
+Owner Profile:
+- 62 years old, no succession plan
+- Approached via business broker: Link Business Portland
+- Likely interested in earnout structure
+
+Integration Timeline:
+- Month 1-3: Due diligence
+- Month 4-6: Platform migration
+- Month 7-12: Fleet conversion to EV
+- Month 12+: Full integration complete

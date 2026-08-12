@@ -1,0 +1,13 @@
+☐ Sign legal engagement letter ($50K retainer)
+☐ Sign blockchain dev contract ($100K first payment)
+☐ Legal kickoff call (strategy session)
+☐ Blockchain team onboarding (GitHub, requirements)
+☐ Receive token classification memo from legal
+☐ Review and approve legal strategy
+☐ Finalize CARB advisory opinion request
+☐ SUBMIT CARB opinion (Jan 23)
+☐ Select KYC provider (Persona recommended)
+☐ Sign KYC contract, begin integration
+☐ Deploy Gnosis Safe multi-sig (testnet)
+☐ Configure 3-of-5 signers
+☐ Website design kickoff (cdls.network)

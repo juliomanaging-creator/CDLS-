@@ -1,0 +1,2 @@
+createdb: error: too many command-line arguments (first is "data")
+createdb: hint: Try "createdb --help" for more information.

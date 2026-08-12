@@ -1,0 +1,12 @@
+Year 1   Year 3   Year 5
+Revenue: $45M    $198M    $520M
+EBITDA:  $8M     $42M     $132M
+Margin:  18%     21%      25%
+
+Valuation Multiple:
+Hauling: 8-10x EBITDA
+Platform: 10-15x ARR
+Marketplace: 12-18x Revenue
+
+Blended: ~12x EBITDA
+Year 5: $132M × 12 = $1.58B valuation

@@ -1,0 +1,6 @@
+✓ Evaluate against conservation laws
+✓ Calculate Carnot/Betz limits
+✓ Identify violations early
+✓ Quantify with CDLS specs
+✓ Suggest alternatives
+✓ Explain kindly but rigorously

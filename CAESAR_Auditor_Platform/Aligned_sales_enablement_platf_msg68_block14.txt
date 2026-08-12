@@ -1,0 +1,17 @@
+Approach:
+- File Reg A+ with SEC ($50M max raise)
+- Allows public sale to US investors
+- Quarterly reporting (like public company)
+- Higher cost ($2M legal), longer timeline (6 months)
+
+Pros:
+✓ Fully compliant
+✓ Can market to US retail
+✓ Clear regulatory path
+✓ Institutional comfort
+
+Cons:
+✗ Expensive
+✗ Slow
+✗ Ongoing compliance burden
+✗ Less "crypto native"

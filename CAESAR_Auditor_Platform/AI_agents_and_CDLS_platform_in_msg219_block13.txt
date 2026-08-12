@@ -1,0 +1,4 @@
+Weight: 130 kg (vs 170 kg with fan system)
+Cost: $45K (vs $50K with active cooling)
+Parasitic power: 0 kW (vs 5 kW fan!)
+ROI: 8-10 years (marginal commercial, but WORKS!)

@@ -1,0 +1,11 @@
+Connecting to [Dealer Name]...
+✅ Connected!
+
+Analyzing last 90 days...
+✅ Done!
+
+YOUR RESULTS:
+✅ 124 sales: Fully compliant
+⚠️ 3 issues: Could cost $1,750 in fines
+
+[View Full Report] [Fix Issues Now]

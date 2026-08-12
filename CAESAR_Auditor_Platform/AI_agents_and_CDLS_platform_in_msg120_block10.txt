@@ -1,0 +1,6 @@
+1. Open CDLS_Investor_Calculator.html in browser
+2. Adjust investment amount slider
+3. Select Series B stage
+4. Choose 7-year hold period
+5. See results: 21.3% IRR, 5.8x multiple
+6. Share link with CalPERS for their modeling

@@ -1,0 +1,10 @@
+Per-Vehicle Model:
+  Distance-based CDLS pricing:
+  - 0-200 mi:  $650/trip
+  - 201-400 mi: $850/trip (Sacramento-LA)
+  - 401-600 mi: $1,200/trip (Sacramento-SD)
+  - 601+ mi:    $1,500/trip
+
+Per-Trip Model:
+  Matches current price for apples-to-apples
+  Shows capacity advantage (9 vs 6-8)

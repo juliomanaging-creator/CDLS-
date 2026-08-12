@@ -1,0 +1,19 @@
+Delaware LP Structure:
+├─ Pass-through entity (no entity-level tax)
+├─ Income flows to partners
+├─ K-1 forms issued annually
+└─ Partners pay tax on their share
+
+Token Revenue:
+├─ Token sale proceeds: Not taxable income (capital raise)
+├─ Platform subscriptions: Ordinary income
+├─ Marketplace fees: Ordinary income
+├─ Carbon credit sales: Ordinary income
+└─ File Form 1065 (Partnership return)
+
+Deductions:
+✓ Developer salaries
+✓ Marketing expenses
+✓ Legal and compliance
+✓ Infrastructure (AWS, etc.)
+✓ Depreciation (vehicles, equipment)

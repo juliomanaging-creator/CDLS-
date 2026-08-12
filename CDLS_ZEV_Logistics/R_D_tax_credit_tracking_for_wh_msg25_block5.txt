@@ -1,0 +1,25 @@
+High Quality (0.1% of packages)
+├── express, react, vue, lodash
+├── Used by millions
+├── Professional maintenance
+├── Excellent documentation
+└── Regular updates
+
+Medium Quality (10% of packages)
+├── Specialized tools
+├── Used by thousands
+├── Decent maintenance
+└── Some documentation
+
+Low Quality (30% of packages)
+├── Personal projects
+├── Used by dozens
+├── Minimal maintenance
+└── Basic documentation
+
+Abandoned/Broken (59.9% of packages)
+├── Old homework projects
+├── Pranks and jokes
+├── Outdated code from 2010
+├── Security vulnerabilities
+└── No longer maintained

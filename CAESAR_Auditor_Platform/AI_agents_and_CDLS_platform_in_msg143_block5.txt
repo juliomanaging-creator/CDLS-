@@ -1,0 +1,21 @@
+┌─────────────────────────────────────────┐
+│  Congratulations! 🎉 You're Onboarded!  │
+├─────────────────────────────────────────┤
+│                                         │
+│  ONBOARDING COMPLETE ✅                 │
+│  ████████████████████████ 100%          │
+│                                         │
+│  ACHIEVEMENTS:                          │
+│  ✅ Tesla Semi Certified                │
+│  ✅ Safety Training Complete            │
+│  ✅ First Haul Completed                │
+│  Level: 3 | XP: 3,850                   │
+│                                         │
+│  WHAT'S NEXT:                           │
+│  Starting tomorrow:                     │
+│  ✅ Full Platform Access                │
+│  ✅ All 35 Agents Available             │
+│  ✅ Advanced Training Courses           │
+│                                         │
+│  [Unlock Full Platform] →               │
+└─────────────────────────────────────────┘

@@ -1,0 +1,7 @@
+[Department/Division]-[Function/Project]-[Optional Identifier]
+
+Examples:
+- Finance-Budget-FY2026
+- HR-Recruitment
+- IT-TeamsRollout
+- Legal-ContractReview

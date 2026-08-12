@@ -1,0 +1,5 @@
+Diversity Dashboard:
+├─ Women in leadership: 42% ✅ Target
+├─ Minority contractors: 28% ⚠️ (target 30%)
+├─ Veterans: 16% ✅ Target
+└─ Pay equity: 99.2% ✅ (industry avg: 82%)

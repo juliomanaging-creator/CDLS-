@@ -1,0 +1,6 @@
+AGENT-001, 002, 003  = AI Agents
+FIN-001 to FIN-008   = Financial Models
+NEG-001 to NEG-005   = Negotiation Playbooks
+PRES-001 to PRES-004 = Presentations
+STRAT-001            = Opposition Neutralization
+THEORY-001 to 011    = Design Theory

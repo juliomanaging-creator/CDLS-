@@ -1,0 +1,3 @@
+C:\Users\User\Downloads>dir CA-Dealer*.zip
+12/17/2025  05:30 PM    71,245 CA-Dealer-Logistics-COMPLETE-2025-CURRENT.zip
+               1 File(s)     71,245 bytes

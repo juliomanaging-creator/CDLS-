@@ -1,0 +1,12 @@
+Daily auxiliary consumption: 100 kWh
+
+Sources:
+  Solar: 48 kWh (48%)
+  Regen: 20 kWh (20%)  
+  Wind (parked): 2.2 kWh (2%)
+  ──────────────────────
+  Total "free": 70.2 kWh (70%)
+
+From main battery: 29.8 kWh (30% reduction!)
+
+Range extension: 70.2 kWh / 2.57 kWh per mile = 27 miles/day ✅

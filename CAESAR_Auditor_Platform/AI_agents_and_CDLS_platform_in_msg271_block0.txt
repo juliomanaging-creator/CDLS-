@@ -1,0 +1,17 @@
+CELLULAR DAMAGE:
+- Free copper ions (Cu²⁺) generate reactive oxygen species (ROS)
+- ROS damage cell membranes, DNA, proteins
+- Threshold: >20 ppm copper in animal tissues (toxic)
+- Symptoms: Liver damage, kidney failure, neurological issues
+
+BIOACCUMULATION:
+- Animals eat copper-rich plants
+- Copper accumulates in liver, kidneys
+- Predators eat contaminated prey
+- Magnification up food chain (biomagnification)
+
+Example:
+- Plant: 1,000 ppm copper (1% dry weight)
+- Herbivore eats plant: 100 ppm copper in tissues
+- Predator eats herbivore: 500 ppm copper (concentrated!)
+- Top predator: 2,000+ ppm (TOXIC!) ❌

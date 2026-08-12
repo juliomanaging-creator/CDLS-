@@ -1,0 +1,26 @@
+Staking for Revenue:
+- Stake $CDLS in revenue share pool
+- Earn pro-rata share of platform revenue
+- Paid weekly in USDC (stablecoin)
+
+Revenue Sources:
+├─ Platform subscriptions: $30M/year (2030)
+├─ Carbon marketplace fees: $12M/year (2% of $600M GMV)
+├─ Charging infrastructure: $16M/year
+└─ Total: $58M/year
+
+Revenue Distribution:
+- 50% to stakers (proportional to stake)
+- 30% to treasury (operational costs)
+- 20% burned (deflationary)
+
+Example:
+You stake 10M $CDLS (1% of supply)
+Annual revenue to stakers: $29M
+Your share: 1% = $290,000/year
+Weekly payment: $5,577 in USDC
+
+APY Calculation:
+$290,000 / ($0.50 token price × 10M tokens) = 5.8% APY
+Plus: Token appreciation (could be 50-200% annually)
+Total return: 55-205% annually

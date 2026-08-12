@@ -1,0 +1,5 @@
+cd /mnt/user-data/outputs
+python3 -m http.server 8080
+
+# Open browser to:
+http://localhost:8080/partner_portal.html

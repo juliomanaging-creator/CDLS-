@@ -1,0 +1,2 @@
+# Run PowerShell as Administrator, then:
+npm install --global windows-build-tools

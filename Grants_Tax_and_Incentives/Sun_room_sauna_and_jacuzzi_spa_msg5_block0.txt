@@ -1,0 +1,4 @@
+[Fence]
+[Fence] | Barrel Sauna (4x6) | Jacuzzi (6x6) |
+        |___________________|_______________|
+                    ← 8 ft →

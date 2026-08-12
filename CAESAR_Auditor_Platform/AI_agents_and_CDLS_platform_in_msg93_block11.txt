@@ -1,0 +1,24 @@
+STEP 1: Haul Completion
+- Tesla Semi completes haul (Sacramento → LA)
+- Emissions saved: 0.29 MT CO2
+- Blockchain records: Truck, route, timestamp, mileage
+
+STEP 2: Dual Verification
+- Verra VCS certification (third-party auditor)
+- Blockchain immutability (tamper-proof record)
+- Both required for credit issuance
+
+STEP 3: Token Minting
+- Smart contract mints 0.29 $CCTI tokens
+- Backed 1:1 by Verra credit
+- Listed on carbon exchanges (CBL, Xpansiv, AirCarbon)
+
+STEP 4: Trading
+- Institutional: Bulk purchases $1M+
+- Retail: Fractional ownership (min $100)
+- Liquidity: Market makers provide 1% spreads
+
+STEP 5: Redemption
+- Token holders redeem for Verra credits
+- Used for corporate carbon neutrality
+- Burned upon redemption (deflationary)

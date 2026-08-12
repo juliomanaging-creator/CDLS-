@@ -1,0 +1,31 @@
+YEAR 2026:
+Fleet: 50 trucks
+Credits: 7,540 MT CO2
+Value: $640,900 (@$85/MT)
+
+YEAR 2030:
+Fleet: 400 trucks
+Credits: 60,320 MT CO2
+Value: $7.54M (@$125/MT)
+
+YEAR 2035:
+Fleet: 2,000 trucks
+Credits: 301,600 MT CO2
+Value: $52.78M (@$175/MT)
+
+YEAR 2040:
+Fleet: 4,500 trucks
+Credits: 678,600 MT CO2
+Value: $169.65M (@$250/MT)
+
+YEAR 2045:
+Fleet: 5,000 trucks
+Credits: 754,000 MT CO2
+Value: $263.9M (@$350/MT)
+
+═══════════════════════════════════════════════════
+CUMULATIVE 2026-2045:
+Total Credits: 6.28 MILLION MT CO2
+Blended Value: $1.365 BILLION
+Present Value: $682 MILLION (NPV @8%) ✅
+═══════════════════════════════════════════════════

@@ -1,0 +1,18 @@
+Founding Team (400M tokens):
+Month 0-12: 0 tokens (cliff)
+Month 13: 100M tokens (25% unlock)
+Month 14-48: 8.33M tokens per month (linear)
+
+Example for Julio (300M tokens):
+├─ Month 12: 75M unlocked (25%)
+├─ Month 24: 150M unlocked (50%)
+├─ Month 36: 225M unlocked (75%)
+└─ Month 48: 300M fully unlocked (100%)
+
+Early Dealer Partners (80M tokens):
+Month 0-6: 0 tokens (cliff)
+Month 7: 26.67M tokens (33% unlock)
+Month 8-24: 3.15M tokens per month
+
+Public Sale (100M tokens):
+No lockup - immediately tradeable

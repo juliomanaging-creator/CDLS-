@@ -1,0 +1,2 @@
+cd C:\Projects\ev-cost-platfor v1 Do not use\data\sample-data
+python json_to_csv_converter.py dealer_syndicate_members.json

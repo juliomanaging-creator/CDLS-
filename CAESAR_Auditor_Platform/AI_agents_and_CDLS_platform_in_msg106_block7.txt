@@ -1,0 +1,8 @@
+Component 1: Hauling cost difference (can be negative)
+Component 2: Carbon credit revenue (always positive)
+Component 3: Capital avoidance (always positive) 
+Component 4: ACF compliance value (always positive)
+Component 5: Capacity advantage (always positive)
+Component 6: Dealer equity (always positive)
+
+Sum = TOTAL ANNUAL VALUE (highlighted in green)

@@ -1,0 +1,10 @@
+┌─────────────────────────────────────┐
+│ FINDING: Duplicate Payment          │
+│                                     │
+│ Amount Owed: $2,450.00              │
+│ Recipient: John Doe                 │
+│ Evidence: Invoice paid twice        │
+│ Confidence: 99.9%                   │
+│                                     │
+│ [Review Evidence] [Initiate Payment]│
+└─────────────────────────────────────┘

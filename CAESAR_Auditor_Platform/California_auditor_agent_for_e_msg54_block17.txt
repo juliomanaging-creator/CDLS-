@@ -1,0 +1,5 @@
+# Package for distribution
+tar -czf SALSA_v2.0_Production.tar.gz SALSA_Complete_v2.0/
+
+# Or create installer (Windows .exe, Mac .dmg)
+# Instructions in docs/deployment/

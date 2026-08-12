@@ -1,0 +1,18 @@
+CURRENT (90/100):
+├─ Cost: $308K/year
+├─ Success: 68.5%
+├─ CalPERS accepts: 82%
+└─ Recommendation: ✅ OPTIMAL
+
+IF PURSUING 93/100:
+├─ Cost: $443K/year (+$135K)
+├─ Success: 18% (most paths fail)
+├─ CalPERS accepts: 5% (essentially rejected)
+└─ Cost per additional point: $45,000/point (vs $3,422 currently)
+
+IF PURSUING 100/100 (Bootstrap):
+├─ Cost: $200K/year (lower, no CEO)
+├─ Funding: $0 (no investors)
+├─ Success: 8% (bootstrapping is brutal)
+├─ Scale: 10x slower than venture path
+└─ Competitive disadvantage

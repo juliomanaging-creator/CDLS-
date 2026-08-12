@@ -1,0 +1,5 @@
+[Bank Name]
+   Account Name: [Law Firm] Trust Account
+   Account Number: [Number]
+   Routing Number: [Number]
+   Reference: CDLS - Tokenization

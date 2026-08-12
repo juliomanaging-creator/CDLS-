@@ -1,0 +1,14 @@
+# 1. Download and extract
+cd ~/Downloads
+tar -xzf rd_tracker_automation.tar.gz
+cd rd_tracker_automation
+
+# 2. Run installation script
+chmod +x install.sh
+./install.sh
+
+# 3. You'll be asked for your Git repository path
+# Enter: /path/to/cdls-platform (or wherever your code is)
+
+# 4. Done! Command is now available globally:
+rd_tracker --help

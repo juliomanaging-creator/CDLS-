@@ -1,0 +1,5 @@
+☐ Julio: Begin drafting dealer FAQ
+☐ CFO: Model different funding scenarios
+☐ CTO: Research smart contract templates (OpenZeppelin)
+☐ Marketing: Whitepaper first section draft
+☐ Operations: Create dealer onboarding flow mockup

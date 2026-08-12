@@ -1,0 +1,28 @@
+Proprietary Dataset (Impossible to Replicate):
+
+10M vehicle-miles (2026)
+├─ Real EV vs diesel costs (not theoretical)
+├─ 500+ unique California routes
+├─ Weather impact on range
+├─ Charging infrastructure gaps
+└─ Actual dealer decision patterns
+
+40M vehicle-miles (2028)
+├─ Multi-state comparison data
+├─ Seasonal efficiency curves
+├─ Predictive maintenance models
+└─ Carbon credit market timing
+
+100M vehicle-miles (2030)
+├─ Industry benchmark standard
+├─ AI-powered route optimization
+├─ Dealer risk profiles
+└─ Irreplicable competitive advantage
+
+Competitors need:
+- $200M+ to build equivalent fleet
+- 20+ dealer relationships (takes years)
+- 5+ years of data collection
+- CARB compliance expertise
+
+By the time they start, we're 5 years ahead.

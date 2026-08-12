@@ -1,0 +1,21 @@
+C:\Projects\ev-cost-platform\
+│
+├── backend\               ✅ Already setup
+│   ├── .env
+│   ├── package.json
+│   └── server.js
+│
+└── frontend\              ⬅️ Creating now
+    ├── .env
+    ├── package.json
+    ├── public\
+    │   └── index.html
+    └── src\
+        ├── App.js
+        ├── App.css
+        ├── index.js
+        ├── index.css
+        ├── services\
+        │   └── api.js
+        └── components\
+            └── Dashboard.js (optional)

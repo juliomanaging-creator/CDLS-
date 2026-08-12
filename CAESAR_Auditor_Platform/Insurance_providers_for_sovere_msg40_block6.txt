@@ -1,0 +1,5 @@
+Month 1:     Foundation (trust, OpSec)
+Month 2:     Legal hardening (NDAs, docs)
+Month 3-6:   CEO search
+Month 7-9:   Transition period
+Month 10+:   Anonymity achieved (90/100) ✅

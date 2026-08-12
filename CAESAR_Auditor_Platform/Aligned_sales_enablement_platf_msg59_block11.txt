@@ -1,0 +1,9 @@
+Q1 2026 Credits: 2,492 credits
+Bank until: Q1 2028
+Sell at projected: $140/credit
+Revenue: $348,880
+Less opportunity cost: $249,200 × 8% × 2 years = $39,872
+Net benefit: $348,880 - $249,200 - $39,872 = $59,808 (+24%)
+NPV (10% discount): $288,165
+
+Decision: Bank only if very confident in price trajectory + don't need cash

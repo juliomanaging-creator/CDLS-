@@ -1,0 +1,18 @@
+You: "What should I work on today?"
+Agent: Analyzes dependencies, priorities, team capacity
+      → Generates optimized task list
+      → Provides motivational guidance
+      → Suggests time allocation
+
+You: "Completed setting up Hardhat (2.5 hours)"
+Agent: Updates progress
+      → Unblocks dependent tasks
+      → Calculates velocity
+      → Adjusts timeline prediction
+      → Suggests next action
+
+You: "Generate daily report"
+Agent: Synthesizes all progress
+      → Creates professional status report
+      → Identifies risks
+      → Recommends tomorrow's focus

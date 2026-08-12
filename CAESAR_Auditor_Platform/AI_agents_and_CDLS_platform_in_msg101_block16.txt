@@ -1,0 +1,5 @@
+1. Keep files on your computer
+2. Double-click to open in browser
+3. Bookmark for easy access
+4. No hosting required
+✓ Perfect for: Internal demos, testing, development

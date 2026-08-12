@@ -1,0 +1,3 @@
+export CESAR_MASTER_KEY="[generate-secure-password]"
+   cd /home/claude/cesar
+   python main.py --sovereign-mode

@@ -1,0 +1,10 @@
+☐ Trail of Bits: Audit begins (Mar 3)
+☐ Day 1-2: Setup & scoping
+☐ Day 3-4: Manual code review
+☐ Day 5-7: Automated analysis
+☐ Bug bounty: Launch on Immunefi ($100K rewards)
+☐ Testnet: Public launch (50 dealers testing)
+☐ Legal: All agreements signed
+☐ Legal: Compliance checklist complete
+☐ Marketing: Audit announcement (transparent)
+☐ Parallel: Continue dealer onboarding

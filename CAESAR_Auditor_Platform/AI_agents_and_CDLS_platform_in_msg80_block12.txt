@@ -1,0 +1,5 @@
+rd_tracker add-repo ~/projects/cdls-frontend
+rd_tracker add-repo ~/projects/cdls-blockchain
+rd_tracker add-repo ~/projects/cdls-mobile
+
+# Commits from ANY repo automatically tracked!

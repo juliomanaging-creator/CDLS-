@@ -1,0 +1,24 @@
+We're not a hauling company with software.
+We're a PLATFORM COMPANY that proved the model with owned operations.
+
+3 Layers:
+
+Layer 1: SaaS Platform (Software)
+├─ ROI Calculator (5,000+ dealers using)
+├─ Carbon Credit Optimization
+├─ Route Planning & TMS
+└─ Compliance Automation (CARB, EPA)
+
+Layer 2: Marketplace (Network)
+├─ Dealer-to-Hauler matching
+├─ Carbon credit trading
+├─ Capacity sharing
+└─ Best practice exchange
+
+Layer 3: Owned Operations (Proof)
+├─ 200 EV haulers (California)
+├─ 20 dealer partners
+├─ 10M+ miles of proprietary data
+└─ $500K carbon credit revenue (proven)
+
+Think: Shopify (proved with own store) + Uber (marketplace) + Tesla (owned ops)

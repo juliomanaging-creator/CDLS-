@@ -1,0 +1,6 @@
+new TableCell({
+  children:[new Table({
+    rows:[new TableRow({children:[
+      new TableCell({...}),
+      new TableCell({...})
+    ]})]  // <-- closing rows array and TableRow

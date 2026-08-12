@@ -1,0 +1,1 @@
+xcopy "C:\Users\User\Downloads\ev-cost-platform\data\sample-data\*.*" "data\sample-data\" /Y

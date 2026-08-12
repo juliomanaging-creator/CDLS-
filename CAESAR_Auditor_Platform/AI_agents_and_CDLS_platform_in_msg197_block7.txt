@@ -1,0 +1,6 @@
+Photon creation: 0.1 ns
+Photon travel: 0.03 ns (1 cm distance)
+Detection: 1 ns (photodetector)
+Amplification: 5-10 ns
+Feedback to piezo: 10-50 ns
+Total loop: 16-61 nanoseconds

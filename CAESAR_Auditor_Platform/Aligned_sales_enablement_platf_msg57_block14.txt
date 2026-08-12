@@ -1,0 +1,13 @@
+Buying $1M partner stake:
+- Down payment: $200K (20%)
+- Seller note: $800K at 8% over 5 years
+- Monthly payment: $16,245
+
+Structure:
+Year 1: Interest-only ($5,333/month)
+Year 2-5: Principal + interest ($16,245/month)
+
+Partner gets:
+- $200K upfront
+- $800K + $163K interest over 5 years
+- Total: $1.163M

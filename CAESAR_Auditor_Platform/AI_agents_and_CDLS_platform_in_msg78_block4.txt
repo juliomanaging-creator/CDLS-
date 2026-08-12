@@ -1,0 +1,8 @@
+Your Salary:              $160,000 (W-2)
+R&D Time:                 60% (conservative)
+Qualified Wages:          $96,000
+
+Federal Credit (14%):     $13,440
+California Credit (15%):  $14,400
+─────────────────────────────────
+YOUR TOTAL CREDIT:        $27,840

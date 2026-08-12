@@ -1,0 +1,46 @@
+CDLS TOKENIZATION DECISION LOG
+
+Decision #: ___
+Date: ___________
+Category: Legal / Technical / Business / Other
+
+DECISION:
+_______________________________
+
+CONTEXT:
+Why we needed to decide:
+_______________________________
+
+OPTIONS CONSIDERED:
+A. _______________________________
+B. _______________________________
+C. _______________________________
+
+DECISION MADE:
+We chose: ___
+Rationale: _______________________________
+
+STAKEHOLDERS:
+☐ Julio approved
+☐ CFO approved
+☐ CTO approved
+☐ Legal approved (if needed)
+☐ Board approved (if needed)
+
+EXECUTION:
+Who's responsible: ___________
+Due date: ___________
+Success criteria: ___________
+
+RISKS:
+Potential issues: ___________
+Mitigation plan: ___________
+
+IRREVERSIBLE? Yes / No
+If yes, extra careful review required
+
+STATUS:
+☐ Decided
+☐ Executing
+☐ Complete
+☐ Revisit needed

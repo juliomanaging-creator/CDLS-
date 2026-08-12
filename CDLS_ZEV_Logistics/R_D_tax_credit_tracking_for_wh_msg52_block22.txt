@@ -1,0 +1,5 @@
+# Make sure you're in the right directory
+cd C:\Projects\ev-cost-platform\data\sample-data
+dir
+
+# If you don't see the JSON files, you're in the wrong place

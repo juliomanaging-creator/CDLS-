@@ -1,0 +1,16 @@
+CDLS remains Registered LCFS Entity:
+✓ Maintains CARB compliance
+✓ Quarterly reporting continues
+✓ All credits verified by CARB
+✓ Blockchain is marketplace layer
+
+Analogy:
+- CARB = Bank (holds actual credits)
+- Blockchain = Venmo (facilitates trading)
+- Settlement = ACH (batch transfer at day's end)
+
+This structure is compliant because:
+1. CARB system remains authoritative
+2. No credits "leave" CARB jurisdiction
+3. Blockchain is just a trading venue
+4. Final settlement through CARB system

@@ -1,0 +1,16 @@
+Entire onboarding via text:
+
+"Want to check DMV compliance? Reply YES"
+→ "Great! Email sales@dealeraudit.ai your 
+   sales report"
+→ [30 seconds later] "✅ 47 sales checked, 
+   2 issues found. Details: [link]"
+
+Setup: Just texting back and forth
+Time: 2 minutes
+Tech knowledge: Can you text? You're good.
+
+Pros: Familiar, works anywhere, fast
+Cons: Limited formatting
+
+Predicted: 50% completion, 55% retention

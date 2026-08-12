@@ -1,0 +1,19 @@
+Carbon Avoided:
+- Diesel emissions: 500,000 miles × 22.4 lbs/mile ÷ 2000 = 5,600 tons CO2/year
+- EV emissions: ~0 (renewable electricity)
+- Net reduction: 5,600 tons CO2/year
+
+LCFS Credits:
+- 5,600 tons × 0.89 credit factor = 4,984 credits/year
+- Current price: $95/credit
+- Annual revenue: $473,480/year
+
+Enhanced ROI:
+- Fuel savings: $255,088/year
+- Maintenance savings: $70,000/year
+- Carbon credit revenue: $473,480/year
+- TOTAL ANNUAL BENEFIT: $798,568/year
+
+New Payback:
+- Upfront cost: $50,000 (after incentives)
+- Payback: $50,000 ÷ $798,568 = 0.06 years (23 days!)

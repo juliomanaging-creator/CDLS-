@@ -1,0 +1,6 @@
+[Julio Holdings LLC]
+        |
+        ├── [Auto Wholesale LLC] — existing entity
+        ├── [Water Sports Rental LLC] — new entity
+        ├── [CDLS LLC] — existing/planned entity
+        └── [Water Safety Nonprofit 501(c)(3)] — future entity

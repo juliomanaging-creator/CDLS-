@@ -1,0 +1,24 @@
+Probability: 5%
+Impact: Critical (loss of funds, reputation)
+
+Triggers:
+├─ Undiscovered bug in contracts
+├─ Flash loan attack
+└─ Governance attack
+
+Mitigation:
+✓ Multiple security audits ($150K+)
+✓ Bug bounty program ($100K rewards)
+✓ Multi-sig controls (3-of-5)
+✓ Time locks (24-48 hour delays)
+✓ Insurance (Nexus Mutual, $1M coverage)
+
+Response Plan:
+1. Pause contracts immediately (if possible)
+2. Assess damage (how much lost)
+3. Communicate transparently (no cover-up)
+4. Reimburse affected users (insurance + treasury)
+5. Upgrade contracts (fix vulnerability)
+6. Independent security review (rebuild trust)
+
+Budget Reserve: $1M (insurance + remediation)

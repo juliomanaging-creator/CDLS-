@@ -1,0 +1,7 @@
+Julio + Rebecca in web interface:
+→ Select "Negotiation Playbook" template
+→ Input: WSPA meeting, carbon credits focus
+→ Agent generates visual one-pager
+→ Decision tree with conversation paths
+→ Both edit in real-time
+→ Export and print for tomorrow's meeting! ✅

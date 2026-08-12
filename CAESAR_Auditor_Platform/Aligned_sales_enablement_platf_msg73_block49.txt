@@ -1,0 +1,17 @@
+Dealers:
+├─ Onboarded: 500
+├─ Active (30-day): 200
+├─ Staking: 150
+└─ Tier distribution: 100 Starter, 40 Pro, 10 Enterprise
+
+Revenue:
+├─ Platform subscriptions: $100K/month (if all paid in USD)
+├─ Or: 2M $HAUL burned/month (if paid in tokens)
+├─ Marketplace fees: $50K (2% of $2.5M GMV)
+└─ Total: $150K/month revenue
+
+$HAUL Distribution:
+├─ Total distributed: 5M $HAUL (first 90 days)
+├─ Total burned: 2M $HAUL (subscriptions, fees)
+├─ Net inflation: 3M $HAUL (3% of supply)
+└─ Deflationary trajectory on track

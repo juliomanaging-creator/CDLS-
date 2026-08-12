@@ -1,0 +1,19 @@
+Advertising:
+
+LinkedIn Ads:
+├─ Target: Auto dealers, fleet managers
+├─ Creative: "Earn 25% more on logistics"
+├─ CTA: "Calculate your ROI"
+├─ Budget: $50K, CPA: $1,000, Result: 50 dealers
+
+Google Ads:
+├─ Keywords: High-intent (hauling, logistics)
+├─ Budget: $30K, CPA: $750, Result: 40 dealers
+
+Facebook/Instagram:
+├─ Retargeting (website visitors)
+├─ Budget: $20K, CPA: $500, Result: 40 dealers
+
+Total Paid: 130 dealers (Year 1)
+Budget: $100K
+Note: Expensive, but scales quickly

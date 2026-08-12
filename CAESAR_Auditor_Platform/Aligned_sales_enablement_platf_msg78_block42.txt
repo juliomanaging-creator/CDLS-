@@ -1,0 +1,10 @@
+Why Tokenization is Defensible:
+├─ Liquidity: Traditional equity can't compete (10-year lock-up)
+├─ Global capital: We raise from anywhere (VCs limited to US)
+├─ Transparency: On-chain = trust (traditional = opaque)
+└─ Incentives: Tokens align behavior (equity is passive)
+
+Example:
+Competitor offers dealer $50K equity (locked 10 years)
+We offer $50K in tokens (liquid, trade anytime, earn yield)
+Dealer chooses CDLS every time

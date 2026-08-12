@@ -1,0 +1,9 @@
+System cost: $33,000
+  - Solar: $15,000
+  - Auxiliary battery: $8,000
+  - Power management: $5,000
+  - Wind turbine: $5,000
+
+Annual savings: $2,632 (electricity costs)
+Main battery life extension: +10% ($16,200 value)
+Effective ROI: 6.4 years ✅

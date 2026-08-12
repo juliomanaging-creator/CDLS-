@@ -1,0 +1,6 @@
+judas-kernel-nevn/
+├── index.html         → Main web application
+├── styles.css         → Professional styling
+├── app.js            → Interactive logic
+├── judas_kernel.py   → Original Python algorithm
+└── README.md         → Complete documentation

@@ -1,0 +1,5 @@
+Power: 11.8 kW peak, 4-6 kW average
+Daily generation: 48 kWh
+Coverage: 48% of auxiliary loads
+Drag penalty: ~50 N (minimal, flat panels)
+Cost: $15,000

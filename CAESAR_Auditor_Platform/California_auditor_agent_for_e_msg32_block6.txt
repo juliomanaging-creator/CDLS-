@@ -1,0 +1,7 @@
+Input: Evidence of compliance gap
+Output: Professional finding formatted like CA State Auditor report
+- Background
+- Detailed findings with examples
+- Root cause analysis
+- Recommendations with deadlines
+Time: 20 minutes

@@ -1,0 +1,8 @@
+# Complete R function with:
+✓ 4 detection methods (exact, time-window, frequency, pattern)
+✓ Confidence scoring (0-100%)
+✓ Risk levels (LOW, MEDIUM, HIGH, CRITICAL)
+✓ S3 methods (print, plot)
+✓ 20+ unit tests
+✓ Complete documentation
+✓ Python integration code

@@ -1,0 +1,40 @@
+Total Budget: $5.2M
+
+Breakdown:
+├─ Legal & Compliance: $700K (13%)
+│   ├─ Law firm retainer: $350K
+│   ├─ Ongoing counsel: $200K
+│   ├─ Compliance tools: $100K
+│   └─ Licenses & fees: $50K
+│
+├─ Technology: $1.2M (23%)
+│   ├─ Smart contract dev: $400K
+│   ├─ Security audits: $200K
+│   ├─ Platform development: $400K
+│   └─ Infrastructure: $200K
+│
+├─ Personnel: $2.0M (38%)
+│   ├─ New hires (10+): $1.5M
+│   ├─ Contractors: $300K
+│   └─ Benefits: $200K
+│
+├─ Marketing & Growth: $800K (15%)
+│   ├─ Pre-launch: $300K
+│   ├─ Launch campaign: $200K
+│   ├─ Post-launch: $300K
+│
+├─ Operations: $400K (8%)
+│   ├─ Office & admin: $150K
+│   ├─ Travel (conferences): $100K
+│   ├─ Tools & software: $150K
+│
+└─ Contingency: $100K (3%)
+    └─ Unexpected expenses
+
+Funded By:
+├─ CalPERS: $5M (96%)
+├─ Operations cash flow: $200K (4%)
+└─ Token sale: $0 (self-funded launch)
+
+Note: Token sale proceeds ($4.5M) become
+additional treasury for Year 2 scaling

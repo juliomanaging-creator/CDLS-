@@ -1,0 +1,5 @@
+Top plate ↓ (pulls down via Casimir)
+         [gap]
+Bottom plate ↑ (pulls up via Casimir)
+
+Net force on trailer: ZERO (internal forces cancel)

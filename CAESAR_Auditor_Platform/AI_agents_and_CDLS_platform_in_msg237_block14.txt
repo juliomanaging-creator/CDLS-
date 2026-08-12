@@ -1,0 +1,16 @@
+Sweden E20 Highway:
+✓ 2 km electrified section (Gävle)
+✓ Operational since 2018
+✓ Charges trucks while moving
+✓ 90% efficiency
+
+Israel ElectReon:
+✓ 2 km test track
+✓ 100 kW wireless charging
+✓ 85% efficiency
+✓ Charging buses in Tel Aviv
+
+Germany eHighway:
+✓ Overhead catenary (like trains)
+✓ 5 km operational test
+✓ 90% efficiency

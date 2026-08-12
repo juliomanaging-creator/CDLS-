@@ -1,0 +1,40 @@
+action_plans
+- id (UUID, PK)
+- dealroom_id (FK)
+- plan_name (VARCHAR 200)
+- target_close_date (DATE)
+- status (ENUM: draft, active, completed, stalled)
+- created_at (TIMESTAMP)
+- updated_at (TIMESTAMP)
+
+action_items
+- id (UUID, PK)
+- action_plan_id (FK)
+- title (VARCHAR 300)
+- description (TEXT)
+- item_type (ENUM: milestone, task, decision_point)
+- owner_type (ENUM: internal, investor, shared)
+- owner_user_id (FK to users, nullable)
+- owner_stakeholder_id (FK to stakeholders, nullable)
+- due_date (DATE)
+- status (ENUM: not_started, in_progress, blocked, completed)
+- dependencies (JSONB - array of action_item IDs)
+- completion_date (DATE, nullable)
+- blocker_reason (TEXT, nullable)
+- created_at (TIMESTAMP)
+
+action_comments
+- id (UUID, PK)
+- action_item_id (FK)
+- user_id (FK)
+- comment_text (TEXT)
+- created_at (TIMESTAMP)
+
+action_updates
+- id (UUID, PK)
+- action_item_id (FK)
+- update_type (ENUM: status_change, date_change, assignment_change, comment)
+- old_value (JSONB)
+- new_value (JSONB)
+- updated_by (FK to users)
+- updated_at (TIMESTAMP)

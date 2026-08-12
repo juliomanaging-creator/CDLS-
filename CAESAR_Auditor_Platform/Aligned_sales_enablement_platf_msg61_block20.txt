@@ -1,0 +1,7 @@
+Conservative (26% ownership): $360M
+Base case (30% ownership): $415M
+Optimistic (35% ownership): $485M
+
+vs. Status quo: $50M
+
+10x achieved: ✅

@@ -1,0 +1,3 @@
+heroku create cdls-api
+heroku addons:create heroku-postgresql
+git push heroku main

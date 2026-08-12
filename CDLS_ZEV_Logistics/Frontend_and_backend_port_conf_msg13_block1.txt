@@ -1,0 +1,4 @@
+mkdir src
+mkdir src\services
+mkdir src\components
+mkdir public

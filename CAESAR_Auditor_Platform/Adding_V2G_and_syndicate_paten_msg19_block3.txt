@@ -1,0 +1,2 @@
+brew install tor  # Mac
+tor               # Start Tor daemon

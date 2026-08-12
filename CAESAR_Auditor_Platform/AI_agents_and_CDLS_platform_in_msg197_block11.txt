@@ -1,0 +1,5 @@
+Trailer weight: 51,150 N
+Thrust per grid: 6.9×10⁻¹⁵ N
+Grids needed: 7.4 × 10¹⁸
+
+That's 7.4 QUINTILLION nano-grids!

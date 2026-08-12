@@ -1,0 +1,3 @@
+572 N (turbine) + 770 N (structure) = 1,342 N
+
+Power cost: 1,342 N × 29 m/s = 38.9 kW

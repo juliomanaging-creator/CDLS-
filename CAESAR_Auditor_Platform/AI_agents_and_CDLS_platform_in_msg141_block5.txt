@@ -1,0 +1,12 @@
+Role: Driver (Level 1)
+Experience: First day
+Goal: Become productive quickly
+
+AI-Generated Path:
+Week 1: Tesla Semi Fundamentals
+Week 2: Safety & Compliance basics
+Week 3: Customer Service 101
+Week 4: Route Planning basics
+Week 5-6: Supervised practice (VR + real)
+
+Result: Productive in 6 weeks (vs 3 months traditional)

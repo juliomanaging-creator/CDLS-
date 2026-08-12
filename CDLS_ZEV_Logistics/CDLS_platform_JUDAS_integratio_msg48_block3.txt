@@ -1,0 +1,11 @@
+# First run - interactive setup
+python3 jure_agent.py
+
+# Daily use - generates today's tasks
+python3 jure_agent.py daily
+
+# Record a Champion closing
+python3 jure_agent.py champion-closed
+
+# Update your dashboard
+python3 jure_agent.py update

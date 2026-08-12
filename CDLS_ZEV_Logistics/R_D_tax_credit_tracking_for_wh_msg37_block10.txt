@@ -1,0 +1,5 @@
+Double-click: INSTALL.bat
+Follow the prompts
+Wait 10 minutes
+Open browser to localhost:3000
+Done! 🎉

@@ -1,0 +1,7 @@
+# Open Command Prompt (Windows Key + R, type "cmd", press Enter)
+
+# Navigate to your Downloads folder
+cd C:\Users\%USERNAME%\Downloads
+
+# Extract the new package
+tar -xf CA-Dealer-Logistics-COMPLETE-2025-CURRENT.zip

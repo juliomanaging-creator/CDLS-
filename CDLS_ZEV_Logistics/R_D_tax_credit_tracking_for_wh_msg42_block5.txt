@@ -1,0 +1,10 @@
+express@4.18.2
+├── https://github.com/sponsors/dougwilson
+│
+bcryptjs@2.4.3
+├── https://github.com/sponsors/dcodeIO
+│
+helmet@7.1.0
+├── https://opencollective.com/helmet
+│
+... (and so on for 22 packages)

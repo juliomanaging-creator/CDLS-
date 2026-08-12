@@ -1,0 +1,4 @@
+Solar + Regen + Shore → Auxiliary Battery → Auxiliaries
+Efficiency: 85-95%
+Drag cost: Minimal (50 N from flat solar panels)
+Net: Gain 70% coverage from "free" sources!

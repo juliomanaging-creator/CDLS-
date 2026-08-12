@@ -1,0 +1,11 @@
+Total round-trip: 31%
+- Compression: 50% efficient
+- Storage: 100% (no loss while stored)
+- Expansion: 70% efficient  
+- Generator: 90% efficient
+- Net: 0.50 × 1.0 × 0.70 × 0.90 = 31%
+
+Battery direct: 76.5%
+- Motor: 90% efficient
+- Drivetrain: 85% efficient
+- Net: 0.90 × 0.85 = 76.5%

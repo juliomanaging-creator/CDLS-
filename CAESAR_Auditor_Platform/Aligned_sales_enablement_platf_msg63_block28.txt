@@ -1,0 +1,23 @@
+Dashboard View:
+
+Revenue: $X (YoY: +Y%)
+├─ Hauling Operations: $X
+├─ Platform SaaS: $X ARR
+├─ Marketplace: $X GMV
+└─ Charging/Other: $X
+
+EBITDA: $X (Margin: Y%)
+Cash: $X (Runway: Y months)
+
+Key Metrics:
+├─ Dealers (Owned): X (+Y QoQ)
+├─ Dealers (Platform): X (+Y QoQ)
+├─ Vehicles: X (+Y QoQ)
+├─ ARR: $X (+Y QoQ)
+└─ NRR: X% (net revenue retention)
+
+Progress to $1B:
+├─ Current Valuation: $X
+├─ Next Milestone: $X (Series B)
+├─ Path to $1B: On Track / Needs Attention
+└─ Estimated Timeline: X quarters

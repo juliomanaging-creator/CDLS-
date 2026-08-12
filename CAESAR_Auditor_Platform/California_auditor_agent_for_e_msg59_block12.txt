@@ -1,0 +1,3 @@
+✓ One-click to start
+✓ Auto-checks Python
+✓ Simple for dealers

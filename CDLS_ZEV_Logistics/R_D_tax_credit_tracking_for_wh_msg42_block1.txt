@@ -1,0 +1,14 @@
+┌────────────────────────────────────────────────────────┐
+│ C:\Projects\ev-cost-platform> npm install             │
+│                                                        │
+│ added 245 packages in 1m 47s                          │
+│                                                        │
+│ 22 packages are looking for funding  ← Just info!    │
+│   run `npm fund` for details                          │
+│                                                        │
+│ found 0 vulnerabilities              ← This matters!  │
+│                                                        │
+│ ✓ Everything installed successfully!                  │
+│                                                        │
+│ C:\Projects\ev-cost-platform> _                       │
+└────────────────────────────────────────────────────────┘

@@ -1,0 +1,13 @@
+Annual miles: 10 vehicles × 50,000 miles = 500,000 miles
+
+Diesel emissions avoided:
+500,000 miles × 22.4 lbs CO2/mile ÷ 2000 lbs/ton = 5,600 metric tons CO2
+
+LCFS credits generated:
+5,600 tons × 0.89 credit intensity factor = 4,984 credits
+
+Revenue at current prices:
+4,984 credits × $100/credit = $498,400/year
+
+Revenue at projected 2027 prices:
+4,984 credits × $150/credit = $747,600/year

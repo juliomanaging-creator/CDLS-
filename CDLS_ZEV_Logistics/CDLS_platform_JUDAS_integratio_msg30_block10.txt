@@ -1,0 +1,13 @@
+Post 1 (Week before NADA):
+"Built a calculator for CA dealers. 
+Calculates zero-emission hauling savings in 60 seconds.
+Link in comments."
+
+Post 2 (At NADA):
+"At NADA booth [location].
+Come calculate your savings: [QR code image]"
+
+Post 3 (After NADA):
+"Met 40 dealers at NADA.
+Average savings: $47K/year.
+Calculate yours: https://cdls.io"

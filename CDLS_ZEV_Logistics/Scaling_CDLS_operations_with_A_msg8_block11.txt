@@ -1,0 +1,9 @@
+1. Get today's task list
+2. Update task status
+3. Generate status report
+4. Check for blockers
+5. Adjust timeline
+6. Get next action suggestions
+7. Friday integration check
+8. Save state
+9. Exit

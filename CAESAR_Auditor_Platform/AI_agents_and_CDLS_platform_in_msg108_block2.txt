@@ -1,0 +1,10 @@
+How it works:
+- Broker charges $300-$500 PER CAR
+- Price varies by distance (e.g., Sacramento-LA = $400/car)
+- Dealer pays per car moved
+
+Example calculation:
+- Dealer needs to move 200 cars/year
+- Route: Sacramento → LA (350 miles)
+- Broker charges: $400/car
+- Annual cost: 200 cars × $400 = $80,000

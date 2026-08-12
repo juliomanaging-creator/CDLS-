@@ -1,0 +1,8 @@
+☐ Blockchain Sprint 2: Staking contract
+☐ Blockchain Sprint 2: Vesting contract  
+☐ Unit tests: >95% coverage on core contracts
+☐ Legal: Token sale agreement finalized
+☐ Legal: Risk disclosures drafted
+☐ Marketing: Whitepaper 80% complete
+☐ Marketing: Website landing page live
+☐ Social media growth (target 1,000 followers)

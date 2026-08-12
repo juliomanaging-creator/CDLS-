@@ -1,0 +1,9 @@
+How it works:
+- Hauler charges $800-$1,200 PER TRIP
+- Price includes full truck capacity (6-9 cars)
+- Dealer pays per trip
+
+Example calculation:
+- Dealer needs 25 trips/year (200 cars ÷ 8 per trip)
+- Hauler charges: $850/trip
+- Annual cost: 25 trips × $850 = $21,250

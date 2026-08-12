@@ -1,0 +1,9 @@
+✅ Alignment: Dealers own the network (vs. external investor ROI)
+✅ Switching costs: High (they own equity)
+✅ Referrals: Members recruit other members (viral)
+✅ Governance: Democratic (not top-down)
+
+Traditional Competitors:
+├─ Jack Cooper, Cassens, Allied: Dying (90% diesel)
+├─ Uber Freight, Convoy: Failed (no owned ops)
+└─ Project44, FourKites: Wrong layer (visibility, not operations)

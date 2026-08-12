@@ -1,0 +1,11 @@
+Procurement:
+✅ Tesla scan tool ($25K, required diagnostics)
+✅ Diagnostic equipment ($58K total, 4 depots)
+✅ Composite repair kits ($15K, SiC materials)
+✅ Lift equipment ($80K, 2-post lifts)
+
+Inventory Management:
+✅ Parts tracking (filters, fluids, composite materials)
+✅ Reorder automation (when inventory < threshold)
+✅ Vendor coordination (Tesla, BPW, suppliers)
+✅ Preventive maintenance (equipment calibration schedules)

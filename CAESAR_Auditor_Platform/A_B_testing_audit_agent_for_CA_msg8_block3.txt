@@ -1,0 +1,19 @@
+To: Prof. Sasha von Meier (vonmeier@berkeley.edu)
+Subject: Validation Request: Kinetic Grid Inertia via HTS REBCO Nodes
+
+Dear Prof. von Meier,
+
+We are developing a distributed kinetic energy storage network for 
+the CA High-Speed Rail Authority using HTS REBCO superconducting 
+technology with θ-TaN diamagnetic containment. The system targets 
+300,000 decentralized nodes across Sacramento and Fresno corridors 
+to provide synthetic inertia to the Western Interconnect.
+
+We seek UC Berkeley CIEE validation on three critical aspects:
+1. θ-TaN safety containment under DOE superconductor protocols
+2. Grid inertia modeling for 25% traction recovery @ 220mph
+3. OpenADR integration with SMUD pilot deployment
+
+Timeline: March 2026 CAHSRA technical scoping decision
+
+Would you be available for an initial technical briefing in February?

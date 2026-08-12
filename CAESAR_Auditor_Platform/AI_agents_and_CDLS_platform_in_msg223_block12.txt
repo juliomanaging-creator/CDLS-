@@ -1,0 +1,7 @@
+Regenerative braking:    +66 miles     169 kWh
+Trailer self-propulsion: +70 miles     180 kWh
+Distributed traction:    +15 miles      38 kWh
+────────────────────────────────────────────────
+TOTAL:                  +151 miles     387 kWh
+
+New range: 350 → 501 miles (+43%!) 🎉

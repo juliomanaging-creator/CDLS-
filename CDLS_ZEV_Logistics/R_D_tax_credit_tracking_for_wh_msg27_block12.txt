@@ -1,0 +1,9 @@
+GET /api/cities 200 45ms - 3.2kb
+POST /api/auth/login 401 120ms - 50b
+GET /api/cost-comparison/123 200 89ms - 12kb
+
+// Tells you:
+// - What was requested
+// - Status code (200=success, 401=unauthorized)
+// - How long it took
+// - Response size

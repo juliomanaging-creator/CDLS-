@@ -1,0 +1,9 @@
+new TableRow({ children: [
+  new TableCell({
+    ...
+    children: [
+      bodyP(...),
+      ...
+    ]
+  })
+]),  // line 419 - this closes the spread of TableRow children array

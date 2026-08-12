@@ -1,0 +1,3 @@
+Double-click START_HERE.txt
+Read the welcome message
+See the 5-step quick start

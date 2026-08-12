@@ -1,0 +1,5 @@
+Maximum pressure: 150 psi (10 bar)
+Maximum temperature: 500°C  
+Weight: 200 kg for 500L chamber
+Energy density: 40 Wh/kg
+Insulation: 50 mm fiberglass needed

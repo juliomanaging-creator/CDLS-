@@ -1,0 +1,7 @@
+T-30 days: Gentle reminder
+T-14 days: URGENT email + SMS
+T-7 days: Daily alerts
+T-3 days: Escalate to attorney
+T-1 day: RED ALERT
+
+Result: 0% missed deadlines vs 5-10% industry average

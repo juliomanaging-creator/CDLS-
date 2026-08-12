@@ -1,0 +1,4 @@
+cd ev-cost-platform
+
+# Copy back your old .env settings
+copy .env.backup .env

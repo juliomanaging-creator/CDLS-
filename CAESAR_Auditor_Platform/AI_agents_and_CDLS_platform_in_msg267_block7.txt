@@ -1,0 +1,19 @@
+Conductive polymers (polyaniline, polypyrrole) undergo reversible redox reactions:
+
+MECHANISM:
+- Oxidation: Polymer loses electrons (stores positive charge)
+- Reduction: Polymer gains electrons (stores negative charge)
+- Reversible: Can cycle thousands of times!
+
+Advantage over EDLC:
+- Higher capacitance: 200-500 F/g (2-5× better!)
+- Higher energy density: 10-20 Wh/kg (vs 5 Wh/kg EDLC)
+
+Capacity calculation (same 100g root, pseudocapacitive):
+- Root mass: 100 grams
+- Capacitance: 300 F/g (with polyaniline)
+- Total capacitance: 30,000 F (30 kF)
+- Voltage: 1.2 V
+- Energy stored: E = ½ × 30,000 × (1.2)² = 21,600 Joules (6 Wh)
+
+Result: 3× more energy than EDLC! Still small, but improving! ✅

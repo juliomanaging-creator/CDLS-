@@ -1,0 +1,11 @@
+# Copy carrier cost data
+copy "ev-cost-platform\data\sample-data\carrier_cost_data.json" "C:\Projects\ev-cost-platform\data\sample-data\carrier_cost_data.json" /Y
+
+# Copy city pricing data
+copy "ev-cost-platform\data\sample-data\california_city_pricing.json" "C:\Projects\ev-cost-platform\data\sample-data\california_city_pricing.json" /Y
+
+# Copy syndicate data
+copy "ev-cost-platform\data\sample-data\dealer_syndicate_members.json" "C:\Projects\ev-cost-platform\data\sample-data\dealer_syndicate_members.json" /Y
+
+# Copy README
+copy "ev-cost-platform\data\sample-data\README.md" "C:\Projects\ev-cost-platform\data\sample-data\README.md" /Y

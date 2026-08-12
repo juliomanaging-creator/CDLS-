@@ -1,0 +1,10 @@
+Setup: Deploy turbine when truck is parked
+Energy source: Weather wind (EXTERNAL - from atmospheric conditions)
+Power: 276 watts average
+Range gain: 0.86 miles per night
+Cost: $5,000
+ROI: 42 years (marginal but doesn't violate physics!)
+
+KEY DIFFERENCE:
+- Driving turbine: Battery creates "wind" (circular)
+- Parked turbine: Weather creates wind (external)

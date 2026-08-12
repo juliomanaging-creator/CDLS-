@@ -1,0 +1,12 @@
+The fundamental equation that can't be escaped:
+
+Drag Force = Power Extracted / Velocity
+
+Lattice configuration:
+- Gap areas (70%): Extract 0 power → Create 0 drag (neutral)
+- Turbine areas (30%): Extract power → Create drag (still problem)
+- Structure: Adds more drag (lattice framework)
+
+Net: Reduced both energy AND drag proportionally
+But structural penalty negates any benefit
+Still lose energy overall

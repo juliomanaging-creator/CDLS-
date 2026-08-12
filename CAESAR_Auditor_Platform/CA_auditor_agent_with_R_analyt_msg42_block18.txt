@@ -1,0 +1,13 @@
+Connects to 132 departments:
+├─ 500,000+ transactions daily
+├─ 300,000+ employees monitored
+├─ $50B annual procurement
+├─ 2M+ vendor payments/year
+└─ Real-time budget tracking
+
+Sources:
+├─ FI$Cal (accounting system)
+├─ CalHR (human resources)
+├─ Cal eProcure (procurement)
+├─ 132 department systems
+└─ External databases (IRS, federal)

@@ -1,0 +1,15 @@
+# 1. Extract and install
+unzip cdls-platform.zip
+cd cdls-platform/backend && npm install
+cd ../frontend && npm install
+
+# 2. Set up database (PostgreSQL required)
+psql -U postgres -c "CREATE DATABASE cdls_platform;"
+psql -U postgres -d cdls_platform -f database/migrations/001_initial_schema.sql
+
+# 3. Configure and run
+cp backend/.env.example backend/.env
+# Edit .env with your database password and secrets
+cd backend && npm run dev
+# In new terminal:
+cd frontend && npm run dev

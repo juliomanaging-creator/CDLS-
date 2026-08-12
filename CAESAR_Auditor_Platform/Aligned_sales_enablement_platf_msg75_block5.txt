@@ -1,0 +1,15 @@
+Legal Selection:
+├─ 9:00 AM: Review all legal RFP responses (due yesterday)
+├─ 11:00 AM: Shortlist 3 firms (scoring rubric)
+├─ 2:00 PM: Schedule presentations (Jan 15-17)
+└─ 4:00 PM: Prepare evaluation criteria
+
+Technical Interviews:
+├─ 10:00 AM: Interview blockchain dev team #1
+├─ 1:00 PM: Interview blockchain dev team #2
+├─ 3:00 PM: Interview blockchain dev team #3
+└─ 5:00 PM: Debrief, scoring
+
+Parallel Work:
+- Marketing: Draft whitepaper outline
+- Operations: Dealer onboarding flow design

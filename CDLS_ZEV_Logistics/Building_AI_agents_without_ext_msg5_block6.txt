@@ -1,0 +1,15 @@
+:: 1. Start Ollama (leave this running)
+ollama serve
+
+:: 2. Open NEW terminal - Download the AI model
+ollama pull llama3.2:3b
+
+:: 3. Open NEW terminal - Start backend
+cd C:\Projects\cdls-local-ai-agent\backend
+npm install
+npm start
+
+:: 4. Open NEW terminal - Start frontend  
+cd C:\Projects\cdls-local-ai-agent\frontend
+npm install
+npm start

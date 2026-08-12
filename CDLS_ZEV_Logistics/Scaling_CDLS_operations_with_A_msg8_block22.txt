@@ -1,0 +1,3 @@
+Agent: "🎉 You've completed 5 tasks today! That's 2x your
+       average. At this pace, you'll finish Week 1 by
+       Wednesday. Keep this energy going!"

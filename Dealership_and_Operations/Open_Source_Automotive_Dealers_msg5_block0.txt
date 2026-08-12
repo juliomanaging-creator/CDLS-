@@ -1,0 +1,9 @@
+graph TD
+    A[Customer Website Visit] --> B[Dealer.com Platform]
+    B --> C{Digital Retail Path}
+    C -->|Online| D[Accelerate My Deal]
+    C -->|In-Store| E[VinSolutions CRM]
+    D --> F[Dealertrack F&I]
+    E --> F
+    F --> G[DMS Integration]
+    G --> H[Deal Completion]

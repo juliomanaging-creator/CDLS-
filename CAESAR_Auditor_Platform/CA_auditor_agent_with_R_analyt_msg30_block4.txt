@@ -1,0 +1,9 @@
+Agent Setup:               2 hours  × $125/hr = $250
+Monte Carlo Request:       0.5 hours (agent does the work)
+Anomaly Detection:         0.5 hours (agent does the work)
+Time Series Forecast:      0.5 hours (agent does the work)
+Regression Analysis:       0.5 hours (agent does the work)
+Review & Testing:          2 hours × $125/hr = $250
+──────────────────────────────────────────────────
+TOTAL:                     6 hours = $750
+Timeline:                  3 days

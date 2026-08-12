@@ -1,0 +1,19 @@
+Julio (CEO)
+├─ CFO (Hired)
+│   ├─ Controller
+│   └─ FP&A Analyst
+├─ VP Product (Hired Q1 2026)
+│   ├─ Product Managers (3)
+│   ├─ Engineers (12)
+│   └─ Designers (2)
+├─ VP Sales (Hiring)
+│   ├─ Account Executives (5)
+│   └─ Sales Development (3)
+├─ VP Operations (Hired)
+│   ├─ Fleet Managers (3)
+│   └─ Depot Operators (10)
+└─ VP of Data (Hiring Q2 2026)
+    ├─ Data Scientists (2)
+    └─ Data Engineers (2)
+
+Total Headcount: 45 (Target: 75 by EOY)

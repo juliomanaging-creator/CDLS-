@@ -1,0 +1,28 @@
+dealrooms
+- id (UUID, PK)
+- investor_id (FK to investors)
+- deal_name (VARCHAR 200)
+- deal_stage (ENUM: prospect, due_diligence, negotiation, closing, closed)
+- created_at (TIMESTAMP)
+- updated_at (TIMESTAMP)
+- settings (JSONB - branding, permissions, etc.)
+
+documents
+- id (UUID, PK)
+- dealroom_id (FK)
+- file_name (VARCHAR 255)
+- file_type (VARCHAR 50)
+- s3_key (VARCHAR 500)
+- version (INTEGER)
+- uploaded_by (FK to users)
+- uploaded_at (TIMESTAMP)
+- folder_path (VARCHAR 500)
+- permissions (JSONB)
+
+document_versions
+- id (UUID, PK)
+- document_id (FK)
+- version_number (INTEGER)
+- s3_key (VARCHAR 500)
+- created_at (TIMESTAMP)
+- created_by (FK to users)

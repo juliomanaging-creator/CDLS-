@@ -1,0 +1,6 @@
+❌ Wind turbine: Extract energy FROM truck's motion
+❌ Air capture: Extract energy FROM moving air
+❌ Heat recovery: Extract energy FROM compression
+
+Problem: Perpetual motion (trying to power yourself)
+Result: Drag cost > energy captured (always loses)

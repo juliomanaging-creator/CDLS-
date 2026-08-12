@@ -1,0 +1,4 @@
+❌ "npm ERR!" - Something failed
+❌ "ENOENT" - File not found
+❌ "EACCES" - Permission denied
+❌ "found 15 vulnerabilities" - Security issues

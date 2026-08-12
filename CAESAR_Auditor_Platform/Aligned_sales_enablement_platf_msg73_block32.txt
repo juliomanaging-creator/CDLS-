@@ -1,0 +1,20 @@
+Week 1-2: Contract Development
+├─ Write smart contracts (using templates above)
+├─ Internal testing (testnet deployment)
+├─ Gas optimization (reduce transaction costs)
+└─ Documentation (technical specs)
+
+Deliverables:
+✓ $CDLS token contract
+✓ $HAUL token contract
+✓ $CARBON NFT contract
+✓ Staking contract
+✓ Vesting contract
+✓ Marketplace contract
+✓ Governance contract
+
+Team:
+- Lead developer: $150K
+- 2 Solidity engineers: $200K
+- Security researcher: $100K
+Total: $450K (one-time)

@@ -1,0 +1,2 @@
+node integrity-mirror-api.js
+   curl http://localhost:3000/health

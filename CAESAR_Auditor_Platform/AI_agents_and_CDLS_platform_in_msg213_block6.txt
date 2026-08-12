@@ -1,0 +1,3 @@
+Without heat recovery: 31% efficient
+WITH heat recovery: 64% efficient
+You've DOUBLED the efficiency! ✅

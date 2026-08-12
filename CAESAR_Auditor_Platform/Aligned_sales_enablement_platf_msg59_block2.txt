@@ -1,0 +1,4 @@
+VIN,Make,Model,Year,Battery_kWh,Base_Location,Dealer_Name,Expected_Annual_Miles
+5YJSA1E14HF000001,BYD,8TT,2024,422,San Diego,SD Auto Transport,50000
+5YJSA1E14HF000002,BYD,8TT,2024,422,San Diego,SD Auto Transport,50000
+[Continue for all vehicles...]

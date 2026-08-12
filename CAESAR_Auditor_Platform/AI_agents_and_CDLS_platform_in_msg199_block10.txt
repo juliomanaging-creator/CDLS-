@@ -1,0 +1,9 @@
+Photon rocket: 0.000033% efficient (terrible in ANY direction)
+Electric motor: 90% efficient (excellent in ANY direction)
+
+Doesn't matter if you point photon rockets:
+- Up (fighting gravity): 0.000033% efficient
+- Forward (adding velocity): 0.000033% efficient
+- Sideways (for fun): 0.000033% efficient
+
+Electric motor beats photon rockets by 2,700,000× regardless of direction

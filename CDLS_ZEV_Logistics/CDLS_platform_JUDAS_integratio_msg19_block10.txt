@@ -1,0 +1,14 @@
+# 1. Download everything
+# 2. Run this:
+python3 iron_halo_vault_builder.py
+
+# 3. Launch JURE:
+cd Iron_Halo_Vault/05_JURE_DEPLOYMENT
+python3 jure.py
+
+# 4. Begin:
+jure> help
+jure> status
+jure> daily 1
+
+# JURE will guide you through everything.

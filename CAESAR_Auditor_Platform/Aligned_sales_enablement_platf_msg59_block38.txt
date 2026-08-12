@@ -1,0 +1,7 @@
+Base Case (no optimization):
+Your exit value: $50.6M
+
+Fully Optimized (all 5 strategies):
+Your exit value: $95-105M
+
+Net Gain from Strategic Execution: $44-54M

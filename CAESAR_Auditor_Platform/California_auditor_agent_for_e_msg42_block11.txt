@@ -1,0 +1,17 @@
+Choose Your Deployment:
+
+☁️ CLOUD VERSION (Easiest)
+   - One-click setup
+   - Automatic updates  
+   - Access anywhere
+   
+   [Try Cloud Version]
+
+💻 LOCAL AGENT (Most Secure)
+   - Runs on your computer
+   - Data never leaves
+   - Works offline
+   
+   [Download Local Agent]
+
+Not sure? Start with cloud, switch anytime.

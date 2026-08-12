@@ -1,0 +1,7 @@
+Weight = Mass × Gravity = 5,216 kg × 9.81 = 51,150 N
+
+With Casimir plates:
+- Plates pull on each other (internal to trailer)
+- Scale measures total mass × gravity
+- Internal forces invisible to scale
+- Weight = 51,150 N (UNCHANGED)

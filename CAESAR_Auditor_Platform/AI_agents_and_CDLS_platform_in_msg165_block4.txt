@@ -1,0 +1,4 @@
+Test: 500 customer questions
+Current model: 87% accuracy, 2.5s response, $200/month
+New model: 93% accuracy, 1.8s response, $1,500/month
+Decision: Deploy → saves $30K/month (fewer escalations) vs $1.3K cost = 19x ROI

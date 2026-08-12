@@ -1,0 +1,51 @@
+Dealer: "I have a complex contract with 
+multiple routes, volume tiers, and 
+seasonal pricing. Not sure how to input."
+
+Solution: Selects "Not Sure / Custom Quote"
+
+Uploads: Invoice showing:
+- 150 cars/month average
+- $375/car short routes (<200 mi)
+- $525/car long routes (>400 mi)  
+- $50K monthly retainer
+- 10% volume discount after 100 cars
+
+Response Email (24 hours):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Subject: Your Custom CDLS Quote
+
+Hi [Name],
+
+We analyzed your invoice and here's 
+your exact comparison:
+
+CURRENT MODEL:
+Monthly retainer: $50,000
+150 cars/mo average:
+  - 90 short × $375 = $33,750
+  - 60 long × $525 = $31,500
+Subtotal: $65,250
+10% discount: -$6,525
+Total: $108,725/month = $1,304,700/year
+
+CDLS MODEL:
+No retainer: $0
+17 trips/month average:
+  - 10 short trips × $650 = $6,500
+  - 7 long trips × $1,200 = $8,400
+Total: $14,900/month = $178,800/year
+
+SAVINGS: $1,125,900/year (86.3%!)
+
+Plus benefits:
+✓ Carbon credits: $43,350/year
+✓ No retainer risk
+✓ Predictable costs
+✓ 9-car capacity guaranteed
+
+Total Value: $1,169,250/year
+5-Year: $5,846,250
+
+[Schedule Demo Call] [Accept Quote]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

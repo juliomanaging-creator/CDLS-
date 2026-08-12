@@ -1,0 +1,9 @@
+1. Update system:
+   apt update && apt upgrade -y
+
+2. Install Docker:
+   curl -fsSL https://get.docker.com | sh
+
+3. Verify:
+   docker --version
+   (Should show: Docker version 24.x.x)

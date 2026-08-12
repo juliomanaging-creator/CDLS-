@@ -1,0 +1,13 @@
+[Dealer's Phone]         [Cloud]              [Dealer Dashboard]
+    |                       |                       |
+    |---> Edge AI          |                       |
+    |     (Local)          |                       |
+    |                      |                       |
+    |---> Metrics Only --->|---> Settlement ------>|
+    |     (2 KB)           |     Engine            |
+    |                      |     (Calculates       |
+    |                      |      Offer)           |
+    |---> Photo Hash ----->|                       |
+          (To Blockchain)  |                       |
+                           |                       |
+    Photos STAY on phone! Never uploaded!

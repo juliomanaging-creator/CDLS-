@@ -1,0 +1,37 @@
+ev-cost-platform/
+├── server.js                    # Main server with security middleware
+├── package.json                 # All dependencies listed
+├── .env.example                 # Environment template
+├── README.md                    # Full documentation (100+ lines)
+├── SECURITY.md                  # Security documentation (400+ lines)
+├── QUICKSTART.md               # 5-minute setup guide
+│
+├── controllers/                 # Business logic
+│   ├── authController.js       # JWT auth, login, register
+│   ├── costController.js       # Cost calculations
+│   ├── cityController.js       # City pricing
+│   ├── routeController.js      # Route management
+│   ├── dealerController.js     # Dealer CRUD
+│   └── incentiveController.js  # Incentive tracking
+│
+├── routes/                      # API endpoints (RESTful)
+│   ├── auth.js                 # /api/auth/*
+│   ├── costComparison.js       # /api/cost-comparison/*
+│   ├── cities.js               # /api/cities/*
+│   ├── routes.js               # /api/routes/*
+│   ├── dealers.js              # /api/dealers/*
+│   └── incentives.js           # /api/incentives/*
+│
+├── middleware/
+│   ├── auth.js                 # JWT validation, RBAC
+│   └── validation.js           # Input validation rules
+│
+└── public/                      # Frontend
+    ├── index.html              # SPA with 5 sections
+    ├── css/
+    │   └── main.css           # Modern responsive design (600+ lines)
+    └── js/
+        ├── main.js            # Core app logic (400+ lines)
+        ├── api.js             # Secure API wrapper
+        ├── auth.js            # Client-side auth
+        └── ...

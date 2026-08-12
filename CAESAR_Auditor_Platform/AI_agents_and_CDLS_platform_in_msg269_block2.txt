@@ -1,0 +1,9 @@
+Product: AstroAI Digital Multimeter
+Link: amazon.com/dp/B01ISAMUA6
+Price: $15.99
+Features: Resistance, voltage, current measurement
+Why: Budget-friendly, accurate enough for plant testing
+
+Premium Option: Fluke 115 Multimeter
+Link: amazon.com/dp/B000OCFFMW
+Price: $179 (overkill, but industry standard)

@@ -1,0 +1,5 @@
+Energy OUT (to overcome turbine drag): 84.3 kW
+Energy IN (from turbine generation): 27.3 kW
+NET LOSS: -57 kW
+
+You LOSE 57 kilowatts compared to no turbine!

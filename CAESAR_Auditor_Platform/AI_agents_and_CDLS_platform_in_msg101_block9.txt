@@ -1,0 +1,5 @@
+1. Download CDLS_Platform_Updated.html
+2. Double-click to open in browser
+3. Click "Calculator" in navigation
+4. See auto-populated savings calculation
+5. Try changing values (annual sales, distance, cost)

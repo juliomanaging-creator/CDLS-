@@ -1,0 +1,25 @@
+Iron_Halo_Vault/
+├── README.md                    # Vault overview
+├── PROJECT_METADATA.json        # Complete project info
+├── VAULT_INDEX.json            # File catalog
+├── launch.sh                   # Quick launch script
+│
+├── 01_LEGAL_SHIELDS/           # Legal documents
+├── 02_JUDAS_SOVEREIGN/         # JUDAS agent
+├── 03_CDLS_COMMERCIAL/         # Business documents
+├── 04_GOVERNANCE/              # Board & compliance
+│
+├── 05_JURE_DEPLOYMENT/ ⭐      # THE CORE ENGINE
+│   ├── jure.py                 # Unified deployment agent
+│   ├── JURE_GUIDE.md          # Complete guide
+│   ├── jure_config.json       # Configuration
+│   ├── Emergency_Playbooks.json
+│   ├── cdls_monte_carlo_simulation.py
+│   ├── CDLS_RISK_MITIGATION_PLAYBOOK.md
+│   └── ZERO_COST_DEPLOYMENT_GUIDE.md
+│
+├── 06_TECHNICAL_SPECS/         # Engineering docs
+├── 07_SIMULATION_RESULTS/      # Monte Carlo analysis
+├── 08_KNOWLEDGE_BASE/          # Training materials
+├── 09_CALPERS_REPORTING/       # Investor reports
+└── 10_MASTER_ARCHIVE/          # Complete history

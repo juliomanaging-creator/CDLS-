@@ -1,0 +1,9 @@
+Credits = (Diesel CI - EV CI) × Energy × Credit Conversion Factor
+
+Where:
+- Diesel CI = 100.45 gCO2e/MJ (carbon intensity)
+- EV CI = 95.97 gCO2e/MJ (varies by utility)
+- Energy = kWh consumed × 3.6 MJ/kWh
+- Credit Conversion Factor = 0.000001 metric tons/g
+
+Simplified: ~0.89 credits per metric ton CO2 avoided

@@ -1,0 +1,33 @@
+Automatic Burns:
+
+1. Platform Fee Burns (50% of fees):
+├─ Dealer pays 10,000 $HAUL for subscription
+├─ 5,000 $HAUL burned (50%)
+├─ 5,000 $HAUL to treasury (operational costs)
+└─ Net effect: Reduces circulating supply
+
+2. Marketplace Transaction Burns (2% of value):
+├─ $100,000 carbon credit trade
+├─ 2% fee = $2,000 worth of $HAUL burned
+└─ At $0.10/HAUL = 20,000 $HAUL burned
+
+3. $HAUL → $CDLS Conversion Burns:
+├─ 10,000 $HAUL burned
+├─ 100 $CDLS minted from treasury
+└─ Deflationary for both tokens
+
+4. Idle Token Burns (Encourages Activity):
+├─ $HAUL not moved in 2+ years
+├─ 5% annual burn on dormant tokens
+└─ Re-activates on any transaction
+
+Annual Burn Projection:
+2026: 1M $HAUL burned (1% of supply)
+2027: 5M $HAUL burned (growing usage)
+2028: 20M $HAUL burned (high activity)
+2030: 100M $HAUL burned (mature network)
+
+Net Effect: 
+Inflation: +15% per year
+Burns: -10% per year (2030)
+Net inflation: +5% (sustainable, not hyperinflationary)

@@ -1,0 +1,1 @@
+R_grid = β₀ + β₁(X2) + β₂(Temperature) + β₃(Day_of_Week) + β₄(CAISO_Price) + ε

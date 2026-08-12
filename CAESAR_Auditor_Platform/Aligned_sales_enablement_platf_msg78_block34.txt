@@ -1,0 +1,9 @@
+Model: 2% transaction fee on credit trading
+Year 1: $200K revenue (2% of $10M GMV)
+Year 3: $10M revenue (2% of $500M GMV)
+Year 5: $40M revenue (2% of $2B GMV)
+
+Margins: 90%+ (pure software, minimal costs)
+Why High: Automated smart contracts, no manual work
+
+Growth: 200x over 5 years (market creation)

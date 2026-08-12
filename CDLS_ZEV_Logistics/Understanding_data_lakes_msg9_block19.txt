@@ -1,0 +1,4 @@
+1. Download Inno Setup: https://jrsoftware.org/isdl.php
+2. Run: build_app.bat
+3. Run: build_installer.bat
+4. Gets you: CDLS_Data_Lake_Setup.exe

@@ -1,0 +1,11 @@
+What We Know (That No One Else Does):
+├─ Real EV vs. diesel costs (not theoretical)
+├─ 500+ California routes (actual data)
+├─ Charging infrastructure gaps (where to build)
+├─ Dealer decision patterns (what drives adoption)
+└─ Carbon credit timing (when to sell vs. hold)
+
+Value:
+This data is worth $100M+ (enables AI, predictions, optimization)
+Competitors need 5+ years to replicate
+By then, we're the standard

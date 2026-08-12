@@ -1,0 +1,7 @@
+Variables:
+- Workers: 50-hour weeks
+- Wage: $20/hour
+- Burnout Factor: HIGH
+- Precision: 67.3%
+
+Result: Project collapse due to human fatigue

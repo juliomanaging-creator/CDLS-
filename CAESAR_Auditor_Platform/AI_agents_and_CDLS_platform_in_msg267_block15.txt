@@ -1,0 +1,4 @@
+✅ Metallic ion doping (copper, silver, zinc) → 100-1,000 S/m conductivity
+✅ Carbon nanomaterial integration (CNTs, graphene) → 1,000-10,000 S/m conductivity
+✅ Conductive polymer infusion (polyaniline) → 10-100 S/m + 50-100 F/g capacitance
+✅ Bio-battery hybrid (photosynthesis-driven) → 1-10 mW continuous self-charging

@@ -1,0 +1,8 @@
+Load: 36,000 lbs (entire trailer + vehicles)
+Cycles: 1 million+ per year (every bump!)
+Failure mode: Fatigue cracks around mounting bolts
+Current fix: Steel reinforcement plate (+200 lbs)
+
+SiC solution: Filament wind ceramic threads around mounting
+Benefit: 3× fatigue life, only +5 lbs weight
+Cost: $500

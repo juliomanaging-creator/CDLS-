@@ -1,0 +1,36 @@
+STEERING COMMITTEE (15 members)
+├── Consumer Advocacy (4 seats)
+│   ├── Health Access California
+│   ├── Consumer Watchdog
+│   ├── California AARP
+│   └── Western Center on Law & Poverty
+│
+├── Labor (3 seats)
+│   ├── SEIU California
+│   ├── California Nurses Association
+│   └── United Food & Commercial Workers (UFCW)
+│
+├── Healthcare Providers (2 seats)
+│   ├── California Medical Association (aspirational)
+│   └── California Hospital Association (aspirational)
+│
+├── Business/Economic (2 seats)
+│   ├── Small Business Majority
+│   └── California Economic Development Association
+│
+├── Community-Based Organizations (2 seats)
+│   ├── Latino Coalition for Healthy California
+│   └── Asian Americans Advancing Justice
+│
+├── Environmental/Climate (1 seat)
+│   └── Sierra Club California
+│
+└── Project Leadership (1 seat)
+    └── Julio (ex-officio, non-voting)
+
+ADVISORY BOARD (Broader stakeholder engagement)
+- Faith leaders
+- Disaster preparedness organizations
+- Housing advocates
+- Auto repair shops associations
+- Local government representatives

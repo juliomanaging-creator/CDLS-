@@ -1,0 +1,21 @@
+Blockchain Team Onboarding:
+├─ 9:00 AM: Kickoff meeting
+├─ 10:00 AM: Requirements review
+│   ├─ Token specs
+│   ├─ Security requirements
+│   └─ Audit standards
+├─ 2:00 PM: Architecture review
+├─ 3:00 PM: Development timeline
+│   ├─ Week 1-2: Core contracts
+│   ├─ Week 3-4: Staking & vesting
+│   ├─ Week 5-6: Marketplace
+│   ├─ Week 7-8: Testing
+│   ├─ Week 9-10: Audit
+│   └─ Week 11-12: Fixes & deploy
+└─ 5:00 PM: Sprint 1 planning
+
+Tools Setup:
+- GitHub repo (private)
+- Hardhat development environment
+- Testing suite (Foundry)
+- CI/CD pipeline

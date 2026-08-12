@@ -1,0 +1,7 @@
+Tesla Semi: 3 motors (750 kW) on truck
+     +
+Active Trailer: 2 motors (300 kW) on trailer
+     =
+5 independent motors, 1,000 kW total
+All wheels actively propelling!
+Coordinated torque vectoring across entire vehicle!

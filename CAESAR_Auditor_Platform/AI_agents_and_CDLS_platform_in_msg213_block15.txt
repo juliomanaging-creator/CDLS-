@@ -1,0 +1,9 @@
+Heat engine path:
+Battery → Drag → Compression → Heat → Work extraction → Storage → Use
+Efficiency: 64% (limited by Carnot cycle)
+
+Direct electric path:
+Battery → Motor → Wheels
+Efficiency: 76.5% (no Carnot limit!)
+
+Direct path has NO thermodynamic cycle losses!

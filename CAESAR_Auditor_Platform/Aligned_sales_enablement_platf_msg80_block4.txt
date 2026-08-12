@@ -1,0 +1,105 @@
+☐ 9:00 AM: Daily standup (30 min)
+
+☐ 9:30 AM: Finalize Legal RFP
+   Use: Document 3 template provided above
+   Customize:
+   - Insert CDLS specific details
+   - Add your contact info
+   - Set deadline: January 21, 2026, 5:00 PM PST
+   
+   ☐ Save as PDF: "CDLS-Legal-RFP-Jan2026.pdf"
+   ☐ Proofread (have CFO review)
+   ☐ Create response tracking spreadsheet
+
+☐ 10:30 AM: Identify 10 crypto law firms
+   
+   TOP 10 LIST (send RFP to all):
+   
+   1. Cooley LLP
+      Contact: [Partner Name]
+      Email: [email]
+      Why: #1 in crypto, did Coinbase, Opensea
+      
+   2. Latham & Watkins
+      Contact: [Partner Name]  
+      Email: [email]
+      Why: Strong SEC practice, token expertise
+      
+   3. Morrison & Foerster
+      Contact: [Partner Name]
+      Email: [email]
+      Why: CA-based, CARB relationships
+      
+   4. Perkins Coie
+      Contact: [Partner Name]
+      Email: [email]
+      Why: Did Ethereum, ICO expertise
+      
+   5. Debevoise & Plimpton
+      Contact: [Partner Name]
+      Email: [email]
+      Why: Strong on compliance, global
+      
+   6. Steptoe & Johnson
+      Contact: [Partner Name]
+      Email: [email]
+      Why: Regulatory specialists
+      
+   7. DLA Piper
+      Contact: [Partner Name]
+      Email: [email]
+      Why: Large network, competitive pricing
+      
+   8. Baker McKenzie
+      Contact: [Partner Name]
+      Email: [email]
+      Why: International reach
+      
+   9. Goodwin Procter
+      Contact: [Partner Name]
+      Email: [email]
+      Why: Strong in MA, tech focus
+      
+   10. O'Melveny & Myers
+       Contact: [Partner Name]
+       Email: [email]
+       Why: CA-based, securities expertise
+
+☐ 11:30 AM: Send Legal RFP to all 10 firms
+   
+   Email Template:
+   ---
+   Subject: RFP: Blockchain Tokenization Legal Services - CDLS Network
+   
+   Dear [Partner Name],
+   
+   California Dealer Logistics System (CDLS) is seeking legal counsel 
+   for our blockchain tokenization initiative. We're raising $50M through 
+   token sales to build a $1B+ category-defining platform.
+   
+   Attached is our RFP with full details. Key facts:
+   - Budget: $300K-$500K
+   - Timeline: February 1 - June 30, 2026
+   - TGE Date: April 13, 2026
+   - Scope: Token classification, compliance, launch support
+   
+   Please respond by January 21, 2026, 5:00 PM PST.
+   
+   Questions: Reply to this email or call me at [phone].
+   
+   Best regards,
+   Julio [Last Name]
+   Managing Partner
+   julio@cdlsnetwork.com
+   [phone]
+   ---
+   
+   ☐ Send to all 10 firms
+   ☐ BCC yourself (have record)
+   ☐ Track in spreadsheet:
+   
+   Firm Name          | Partner      | Email Sent | Response? | Score
+   -------------------|--------------|------------|-----------|------
+   Cooley LLP         | [Name]       | 1/7 11:35  | Pending   |
+   Latham & Watkins   | [Name]       | 1/7 11:36  | Pending   |
+   [etc.]             |              |            |           |

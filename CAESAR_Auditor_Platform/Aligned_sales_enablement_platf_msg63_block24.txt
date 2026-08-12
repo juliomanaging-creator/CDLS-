@@ -1,0 +1,14 @@
+Product: Fleet management SaaS
+Customers: 200 small fleets (not auto-specific)
+ARR: $3M
+Valuation: $12M (4x ARR)
+
+Strategic Rationale:
+✓ Customer base (many could use CDLS)
+✓ Mobile app (better than ours)
+✓ Enterprise sales playbook
+
+Integration:
+- Retire FleetSync brand
+- Migrate customers to CDLS Professional tier
+- Expand TAM beyond auto logistics

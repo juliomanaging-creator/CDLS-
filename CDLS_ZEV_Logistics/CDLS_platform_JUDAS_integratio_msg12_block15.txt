@@ -1,0 +1,9 @@
+python3 cdls_risk_agent.py
+agent> pre-deploy
+
+# Complete checklist until 90%+ ready:
+# ✅ Hardware validated
+# ✅ Training completed  
+# ✅ Network configured
+# ✅ Dealers committed
+# ✅ Backup ready

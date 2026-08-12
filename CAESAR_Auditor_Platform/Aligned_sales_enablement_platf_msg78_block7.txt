@@ -1,0 +1,11 @@
+Due: February 14, 2026
+
+Deliverables:
+├─ CDLS Token contract (production-ready)
+├─ HAUL Token contract (production-ready)
+├─ Carbon Credit NFT contract (production-ready)
+├─ Unit tests (>95% coverage)
+├─ Gas optimization report
+└─ Documentation (NatSpec)
+
+Payment: 25% ($87.5K-$112.5K)

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    // Only what we actually use
+    "express": "^4.18.2",    // Web server
+    "helmet": "^7.1.0",      // Security
+    "bcryptjs": "^2.4.3"     // Passwords
+  }
+}

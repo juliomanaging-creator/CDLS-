@@ -1,0 +1,13 @@
+Heat recovery system adds:
+- Heat exchangers: 90 kg
+- Expander/turbine: 30 kg
+- Radiator: 40 kg
+- Helium storage: 20 kg
+- Total: 170 kg (= 1 vehicle's worth of weight!)
+
+Cost: $50,000 (Stirling engine + components)
+ROI: 5 years
+
+Compare to alternatives:
+- Aerodynamics: $7K, 9-month ROI ✅
+- Lightweight: $55K, 4.4-month ROI ✅

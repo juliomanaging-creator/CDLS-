@@ -1,0 +1,17 @@
+Morning (8:00 AM):
+- Truck returns from overnight haul
+- Battery: 40% SoC (400 kWh remaining)
+- Grid price: $0.35/kWh (peak demand)
+
+V2G_Agent Decision:
+- Discharge 200 kWh to grid (8-11 AM)
+- Revenue: 200 kWh × $0.35 = $70
+- Battery now at 20% SoC
+
+Midday (11:00 AM - 2:00 PM):
+- Grid price drops to $0.10/kWh (off-peak)
+- Charge 400 kWh (to 60% SoC)
+- Cost: 400 kWh × $0.10 = $40
+
+Net Profit: $70 - $40 = $30 per truck
+Truck ready for 2:00 PM haul ✅

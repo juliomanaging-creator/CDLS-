@@ -1,0 +1,12 @@
+Process:
+1. End of quarter (March 31, June 30, etc.)
+2. CDLS submits data to CARB
+3. CARB reviews and verifies (45-60 days)
+4. Smart contract upgrades NFT to "Verified"
+5. Price appreciates to full value
+
+CARB Integration:
+- API connection (if available)
+- Manual upload (current process)
+- Batch verification (all credits at once)
+- On-chain proof (immutable)

@@ -1,0 +1,10 @@
+SALSA_Complete_v2.0/
+├─ core/           ← Engine
+├─ reports/        ← PDF generation
+├─ data_input/     ← Dealer's CSV files
+├─ audit_output/   ← Text reports
+├─ audit_reports_pdf/  ← PDF reports
+├─ logs/           ← Debug logs
+├─ launchers/      ← Windows/Mac launchers
+├─ config/         ← Settings
+└─ docs/           ← Documentation

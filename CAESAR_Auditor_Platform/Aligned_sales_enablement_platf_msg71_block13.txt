@@ -1,0 +1,6 @@
+Token Name: CDLS Carbon Credit NFT
+Ticker: $CARBON
+Standard: ERC-1155 (semi-fungible)
+Blockchain: Ethereum
+Supply: Dynamic (minted based on verified credits)
+Backing: 1 NFT = 1 LCFS credit (legally verifiable)

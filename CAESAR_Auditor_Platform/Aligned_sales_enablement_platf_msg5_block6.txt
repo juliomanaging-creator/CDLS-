@@ -1,0 +1,31 @@
+calculator_templates
+- id (UUID, PK)
+- name (VARCHAR 200)
+- description (TEXT)
+- version (INTEGER)
+- input_schema (JSONB - defines input fields)
+- calculation_logic (JSONB - formula definitions)
+- output_schema (JSONB - defines outputs/charts)
+- created_by (FK to users)
+- created_at (TIMESTAMP)
+- is_active (BOOLEAN)
+
+calculator_sessions
+- id (UUID, PK)
+- template_id (FK)
+- dealroom_id (FK)
+- user_id (FK)
+- inputs (JSONB - user-entered values)
+- outputs (JSONB - calculated results)
+- saved_at (TIMESTAMP)
+- session_name (VARCHAR 200)
+- is_shared (BOOLEAN)
+- share_token (UUID)
+
+calculator_scenarios
+- id (UUID, PK)
+- session_id (FK)
+- scenario_name (VARCHAR 200)
+- inputs (JSONB)
+- outputs (JSONB)
+- created_at (TIMESTAMP)

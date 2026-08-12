@@ -1,0 +1,15 @@
+Steel turbine:
+- Max temp: 500°C
+- Efficiency: 65%
+- Weight: 50 kg
+
+Ceramic turbine (YOUR SYSTEM!):
+- Max temp: 1,400°C! 🤯
+- Efficiency: 85% (higher temp = better Carnot)
+- Weight: 20 kg (60% lighter!)
+
+Why it works:
+- SiC blades: 3,000 MPa strength (3× steel)
+- No creep at high temperature
+- Tight clearances (low thermal expansion)
+- No oxidation (chemical inert)

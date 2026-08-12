@@ -1,0 +1,22 @@
+Decision Support:
+
+Financial Analysis:
+├─ ROI calculator: Show token returns vs. equity
+├─ Risk analysis: Volatility, liquidity risk
+├─ Tax implications: Capital gains treatment
+└─ Comparison: Token vs. traditional equity
+
+Hands-On Trial:
+├─ Testnet tokens (free)
+├─ Practice staking, earning rewards
+├─ Simulate platform usage
+└─ No financial risk
+
+Peer Social Proof:
+├─ Introduce to founding dealers
+├─ Share success stories
+├─ Dealer Slack channel (community)
+└─ Build trust through peers
+
+Incentive:
+"First 100 dealers get 2x $HAUL earnings (limited time)"

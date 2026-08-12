@@ -1,0 +1,24 @@
+Development Fee:
+├─ Phase 1: $[Amount]
+├─ Phase 2: $[Amount]
+├─ Phase 3: $[Amount]
+├─ Phase 4: $[Amount]
+└─ Total: $[Amount]
+
+Payment Terms:
+├─ Phase 1 (25%): Upon core contracts delivery
+├─ Phase 2 (25%): Upon staking/vesting delivery
+├─ Phase 3 (25%): Upon marketplace/governance delivery
+├─ Phase 4 (25%): Upon final deployment
+└─ Payment method: [Wire, crypto, other]
+
+Post-Launch Support (Optional):
+├─ Monthly retainer: $[Amount]
+├─ Or hourly rate: $[Amount]/hour
+├─ Availability: [Hours per month, response time]
+└─ Duration: [3 months, 6 months, ongoing]
+
+Expenses:
+├─ Travel (if needed): $[Amount or N/A]
+├─ Tools/software: $[Amount or included]
+└─ Other: $[Specify]

@@ -1,0 +1,31 @@
+Pricing Model: Per-Vehicle
+Cost Per Vehicle: $400
+Vehicles Per Year: 1,000
+
+CURRENT COST:
+1,000 cars × $400 = $400,000/year
+
+CDLS COST:
+112 trips × $850 = $95,200/year
+(1,000 ÷ 9 = 112 trips)
+
+RESULTS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Hauling Cost Savings:    $304,800/year
+Carbon Credit Revenue:   $24,650/year
+Capital Avoidance:       $120,000/year
+Compliance Value:        $50,000/year
+Dealer Equity:           $50,000/year
+─────────────────────────────────────
+TOTAL ANNUAL VALUE:      $549,450/year ✅
+5-Year Total:            $2,747,250
+
+Savings Ratio: 76.2% reduction!
+Tree Equivalent: 22,727 trees 🌳
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Banner Shows:
+🎉 "Massive Savings Opportunity!"
+By switching from per-vehicle ($400/car) to 
+per-trip pricing ($850/trip), you'll save
+$304K on hauling PLUS $244K in added value!

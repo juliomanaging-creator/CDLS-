@@ -1,0 +1,16 @@
+ANNUAL REVENUE (Per Energy Pod Trailer):
+─────────────────────────────────────
+Revenue Streams:
+- Normal Days (250): $8,572.50
+- ELRP Events (15): $1,290.60
+- Gross Annual Revenue: $9,863.10
+
+Operating Costs:
+- Maintenance: $1,800
+- Insurance: $600
+- Software: $240
+- Total OpEx: $2,640
+
+NET ANNUAL REVENUE: $7,223.10
+─────────────────────────────────────
+ROI: 58.2 months (4.8 years)

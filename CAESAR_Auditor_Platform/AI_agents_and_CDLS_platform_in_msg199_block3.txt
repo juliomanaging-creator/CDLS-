@@ -1,0 +1,3 @@
+Photons generated: 2,100 photons/second
+Thrust per module: 6.9 femtonewtons
+Cost per module: $79,000

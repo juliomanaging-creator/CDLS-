@@ -1,0 +1,16 @@
+Marketplace Fees (2% of transaction value):
+
+2026 Projection:
+├─ GMV: $10M (100,000 credits × $100)
+├─ Fee: $200,000 (2%)
+└─ Paid in $CDLS (50% burned)
+
+2028 Projection:
+├─ GMV: $500M (global adoption)
+├─ Fee: $10M
+└─ 50% burned ($5M in $CDLS)
+
+2030 Projection:
+├─ GMV: $2B (industry standard)
+├─ Fee: $40M
+└─ Creates massive buy pressure on $CDLS

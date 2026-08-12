@@ -1,0 +1,8 @@
+Payment Approval Required - $2,450.00
+
+Amount: $2,450.00
+Recipient: John Doe
+Reason: Duplicate Payment Recovery
+Evidence: [View 4 documents]
+
+[Approve] [Request Info] [Deny]

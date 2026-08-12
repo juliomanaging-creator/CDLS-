@@ -1,0 +1,2 @@
+set ANTHROPIC_API_KEY=sk-ant-...   (Windows)
+  export ANTHROPIC_API_KEY=sk-ant-... (Mac/Linux)

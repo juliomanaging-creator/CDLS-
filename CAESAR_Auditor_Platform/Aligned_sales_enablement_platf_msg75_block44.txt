@@ -1,0 +1,13 @@
+Question: Are we confident in tokenization path?
+
+Required:
+✅ Legal counsel hired
+✅ Blockchain team hired
+✅ Token economics validated
+✅ CARB advisory submitted
+✅ 15+ dealers committed
+
+Decision: PROCEED or PIVOT to traditional
+
+If NO-GO: Revert to traditional equity model
+Cost: $200K sunk (legal, blockchain retainer)

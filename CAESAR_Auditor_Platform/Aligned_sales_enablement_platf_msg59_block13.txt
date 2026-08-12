@@ -1,0 +1,4 @@
+Banking Policy: Sell 50% immediately, bank 50% for 6-12 months
+Rationale: Split the difference, hedge market uncertainty
+Expected Outcome: $249,200 × 0.5 + $287,000 × 0.5 = $268,100
+Risk Level: Medium

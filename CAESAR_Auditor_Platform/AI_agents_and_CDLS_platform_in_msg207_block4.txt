@@ -1,0 +1,5 @@
+To slow and compress incoming air:
+Drag force: 25,000-50,000 N 
+(Compare: baseline trailer = 5,000 N)
+
+Energy cost: 1.76 MJ from battery

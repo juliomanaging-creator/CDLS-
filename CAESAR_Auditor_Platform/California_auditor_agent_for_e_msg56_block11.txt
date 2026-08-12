@@ -1,0 +1,4 @@
+[1/4] Checking system... ✓
+[2/4] Loading data... ✓
+[3/4] Running analysis... ✓
+[4/4] Generating reports... ✓

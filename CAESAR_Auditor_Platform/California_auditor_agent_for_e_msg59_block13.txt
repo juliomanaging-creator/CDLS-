@@ -1,0 +1,36 @@
+======================================================================
+Creating Demo Deal Jackets...
+======================================================================
+
+✓ Created jacket for 1HGCM82633A123456 - 2019 Honda Accord
+✓ Created jacket for 2T1BF1FK5JU789012 - 2021 Toyota Corolla
+✓ Created jacket for 5YJSA1E14HF345678 - 2017 Tesla Model S
+
+======================================================================
+Your Inventory
+======================================================================
+
+2019 Honda Accord
+VIN: 1HGCM82633A123456
+Purchased: 2026-02-03 from Manheim Auction
+
+Costs:
+  Purchase Price: $   18,500.00
+  Parts:          $      474.99
+    (brakes $425, oil $49.99)
+  Labor:          $      150.00
+    (brake install)
+  Other:          $      125.00
+    (detail)
+  ─────────────────────────────
+  TOTAL COST:     $   19,249.99
+
+Status: READY FOR SALE
+Receipts: 0 files
+
+----------------------------------------------------------------------
+
+SUMMARY:
+  Total vehicles: 3
+  In inventory: 3
+  Total invested: $67,788.99

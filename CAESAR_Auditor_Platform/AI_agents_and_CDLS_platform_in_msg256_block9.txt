@@ -1,0 +1,15 @@
+Fleet Metrics:
+- Uptime: 98%+ target (operational hours vs total)
+- MTBF: >45 days (mean time between failures)
+- Maintenance cost: <$0.15/mile target
+
+Technician Productivity:
+- Vehicles serviced: 8-10 per week target
+- Repair time: <4 hours routine maintenance
+- Rework rate: <5% (quality measure)
+- Customer satisfaction: 4.5+/5 from drivers
+
+Safety Tracking:
+- OSHA incidents: 0 target
+- Near misses: 10+ reported quarterly (safety culture indicator)
+- Training compliance: 100% annual refreshers

@@ -1,0 +1,15 @@
+team-tracker add-employee \
+  --id EMP001 \
+  --first-name Sarah \
+  --last-name Chen \
+  --role ENG-001 \
+  --salary 160000 \
+  --start-date 2026-03-01 \
+  --reports-to "Julio Umanzor"
+
+# Output:
+✅ Employee added: Sarah Chen
+   Employee ID: EMP001
+   Role: Senior Software Engineer - AI/ML
+   R&D Allocation: 95%
+   Default Project: AI-001

@@ -1,0 +1,17 @@
+Battery direct:
+- Efficiency: 76.5%
+- Energy in: 1.76 MJ
+- Energy out: 1.35 MJ ✅
+
+Ceramic air system:
+- Efficiency: 48.2%
+- Energy in: 4.56 MJ (1.76 drag + 2.8 compression)
+- Energy out: 2.2 MJ
+
+Battery delivers 1.35 MJ for 1.76 MJ input
+Ceramic delivers 2.2 MJ for 4.56 MJ input
+
+Battery still 58% more efficient! ❌
+
+Why: Drag cost to capture air (1.76 MJ) is unavoidable
+Ceramic improves efficiency but doesn't eliminate drag cost

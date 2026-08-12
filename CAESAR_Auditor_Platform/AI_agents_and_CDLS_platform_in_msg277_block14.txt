@@ -1,0 +1,23 @@
+Color Palette:
+- Primary: Deep Blue (#003366) - Trust, institutional
+- Secondary: Green (#228B22) - Environmental, growth
+- Accent: Orange (#FF8C00) - Energy, innovation
+- Neutral: Gray (#808080) - Data, professional
+
+Fonts:
+- Headers: Helvetica Neue Bold (clean, modern)
+- Body: Arial Regular (readable, professional)
+- Data: Courier New (technical, precise)
+
+Chart Types:
+- Line graphs: Growth projections (revenue, profit)
+- Bar charts: Comparisons (CDLS vs diesel, competitive advantages)
+- Pie charts: Revenue streams, use of proceeds
+- Flowcharts: Operations, implementation timeline
+- Tables: Financial metrics, risk matrix
+
+Images:
+- Hero: Tesla Semi on I-5 (high-resolution, professional)
+- Icons: Simple, flat design (consistent style)
+- Maps: California with depot locations marked
+- Diagrams: Clean, technical (system architecture)

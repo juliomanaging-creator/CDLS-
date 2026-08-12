@@ -1,0 +1,12 @@
+# Make executable
+chmod +x launch_judas_agent.sh
+
+# Launch the agent
+./launch_judas_agent.sh
+
+# Inside the agent
+judas> start              # Initialize deployment
+judas> tasks              # View today's tasks
+judas> execute D1-T1      # Execute first task interactively
+judas> status             # Check overall progress
+judas> report             # Generate CalPERS report

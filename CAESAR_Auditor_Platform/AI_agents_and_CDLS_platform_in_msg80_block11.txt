@@ -1,0 +1,8 @@
+# When doing admin, fundraising, etc.
+rd_tracker start --project ADMIN-001 --name "Administrative"
+# ... meetings, emails, etc. ...
+rd_tracker end 44 \
+  --activity "CalPERS meetings, dealer calls" \
+  --uncertainty "N/A" \
+  --experiment "N/A" \
+  --non-qualified  # ← Excludes from R&D credit calc

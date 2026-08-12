@@ -1,0 +1,9 @@
+Always shows 6 components:
+1. Hauling cost difference (+ or -)
+2. Carbon credit revenue (+)
+3. Capital avoidance (+)
+4. Compliance value (+)
+5. Capacity advantage (+ if applicable)
+6. Dealer equity (+)
+
+= TOTAL ANNUAL VALUE (always positive!)

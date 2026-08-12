@@ -1,0 +1,5 @@
+Client: [Company name]
+Project: [What you built for them]
+Contact: [Name, title, email, phone]
+Date: [When you worked together]
+Outcome: [Results achieved]

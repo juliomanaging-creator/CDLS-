@@ -1,0 +1,2 @@
+cd Downloads\data-lake-setup
+build_package.bat

@@ -1,0 +1,25 @@
+# 1. Sign up: https://www.webshare.io/ ($49/month)
+
+# 2. Create .env file
+cat > .env << EOF
+IP_STRATEGY=rotating_proxies
+PROXY_PROVIDER=webshare
+WEBSHARE_USER=your_username
+WEBSHARE_PASS=your_password
+
+DB_HOST=localhost
+DB_NAME=cdls_kinetic_mesh
+DB_USER=cdls_admin
+DB_PASSWORD=your_password
+EOF
+
+# 3. Install dependencies
+pip install camoufox playwright aiohttp psycopg2-binary python-dotenv stem
+playwright install firefox
+camoufox fetch
+
+# 4. Setup database
+createdb cdls_kinetic_mesh
+
+# 5. Run!
+python national_pulse_agent.py

@@ -1,0 +1,20 @@
+Blockchain Development:
+├─ Core token contracts (CDLS, HAUL)
+├─ Basic testing suite
+└─ Internal review
+
+Legal:
+├─ Await CARB response (45-60 days)
+├─ Draft token sale agreements
+└─ Terms & conditions
+
+Marketing:
+├─ Whitepaper 80% complete
+├─ Website live (landing page)
+└─ Social media growth (1,000 followers)
+
+Operations:
+├─ Dealer outreach (50 additional dealers)
+└─ Educational webinars (weekly)
+
+Milestone: Token contracts drafted

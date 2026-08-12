@@ -1,0 +1,9 @@
+Julio McNeil (personally)
+    │
+    ├── CDLS Operations LLC (California)
+    ├── California Investment Auto GP, LLC (Delaware)
+    │       └── California Investment Auto, LP (Delaware)
+    │               └── 20 Dealer LPs (99% interest)
+    └── [Wyoming Trusts for privacy]
+
+SALSA (completely separate — nonprofit)

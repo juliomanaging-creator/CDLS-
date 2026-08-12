@@ -1,0 +1,21 @@
+{
+  "project_name": "California Dealer Logistics Solutions (CDLS)",
+  "project_code": "CIA (California Investment Auto, LP)",
+  "managing_partner": "Julio McNeil",
+  "deployment_system": "JURE (Julio's Unified Runtime Environment)",
+  "vault_name": "Iron Halo",
+  "total_commitment": "$15M ($5M CalPERS + $10M Dealers)",
+  "target_dealers": 1000,
+  "target_irr": "18-24%",
+  "deployment_timeline": "7 days",
+  "infrastructure_cost": "$0 (zero-cost model)",
+  "simulation_success_rate": "33.5%",
+  "agents_unified": [
+    "JUDAS (deployment)",
+    "Risk Mitigation (monitoring)",
+    "Zero-Cost (optimization)",
+    "Knowledge Base (training)",
+    "Emergency Playbooks (response)",
+    "Monte Carlo (analysis)"
+  ]
+}

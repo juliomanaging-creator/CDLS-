@@ -1,0 +1,7 @@
+Actuaries may say: "$22B seems low for 1-in-100 year event"
+
+Response prepared:
+- Detail reinsurance layering ($15B commercial reinsurance)
+- State catastrophic bond capacity ($8B)
+- Federal disaster assistance (historical precedent)
+- Show RMS/AIR modeling: $22B direct + $15B reinsurance = adequate

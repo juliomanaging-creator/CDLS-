@@ -1,0 +1,8 @@
+✓ Customizes all your documents
+✓ Generates email templates
+✓ Creates tracking spreadsheet
+✓ Produces today's task list
+✓ Builds progress dashboard
+✓ Shows next steps
+
+DONE IN 2 MINUTES!
