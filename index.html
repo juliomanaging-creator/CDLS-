@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CDLS — Master Strategy & Agent Ecosystem</title>
+    <title>CDLS — Master Strategy & Directory Portal</title>
     <style>
         :root {
             --bg: #0d1117;
@@ -14,6 +14,7 @@
             --gold: #d4af37;
             --gold-hover: #f3e5ab;
             --accent-blue: #58a6ff;
+            --accent-green: #3fb950;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -27,7 +28,7 @@
         }
 
         .container {
-            max-width: 1080px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -58,17 +59,29 @@
             margin-top: 0.5rem;
         }
 
+        .section-title {
+            color: var(--gold);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 2.5rem 0 1rem 0;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.5rem;
+            gap: 1.25rem;
         }
 
         .card {
             background-color: var(--surface);
             border: 1px solid var(--border);
             border-radius: 8px;
-            padding: 1.5rem;
+            padding: 1.25rem;
             transition: border-color 0.2s ease, transform 0.2s ease;
             display: flex;
             flex-direction: column;
@@ -86,20 +99,20 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
         .card-title {
             color: var(--text-heading);
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             font-weight: 600;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
         }
 
         .card-desc {
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             color: #8b949e;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
             flex-grow: 1;
         }
 
@@ -107,14 +120,51 @@
             color: var(--gold);
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.4rem;
         }
 
         .card-link:hover {
             color: var(--gold-hover);
+        }
+
+        .file-list {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .file-item {
+            padding: 0.85rem 1.25rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .file-item:last-child {
+            border-bottom: none;
+        }
+
+        .file-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .file-name {
+            color: var(--text-heading);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .file-desc {
+            font-size: 0.82rem;
+            color: #8b949e;
+            margin-top: 0.2rem;
         }
 
         footer {
@@ -131,14 +181,18 @@
     <div class="container">
         <header>
             <div class="brand">CDLS Digital Ecosystem</div>
-            <h1>Master Strategy & Agent Hub</h1>
-            <p class="subtitle">Operational platforms, architecture mappings, and autonomous agent systems.</p>
+            <h1>Master Strategy & Project Directory</h1>
+            <p class="subtitle">Directory mapping and central routing hub for all operational platforms, agent modules, and project files.</p>
         </header>
 
+        <!-- Live Web Platforms & Dashboards -->
+        <div class="section-title">
+            <span>Live Interactive Dashboards</span>
+        </div>
         <main class="grid">
             <div class="card">
                 <div>
-                    <div class="card-tag">Core Platform</div>
+                    <div class="card-tag">Management Portal</div>
                     <div class="card-title">Master Agent Ecosystem</div>
                     <div class="card-desc">Central management console tracking all registered operational agents, system protocols, and status monitors.</div>
                 </div>
@@ -156,7 +210,7 @@
 
             <div class="card">
                 <div>
-                    <div class="card-tag">System Mapping</div>
+                    <div class="card-tag">System Topology</div>
                     <div class="card-title">Codebase Dependency Map</div>
                     <div class="card-desc">Comprehensive breakdown of codebase file linkages, module dependencies, and execution chains.</div>
                 </div>
@@ -166,12 +220,62 @@
             <div class="card">
                 <div>
                     <div class="card-tag">Logistics Showcase</div>
-                    <div class="card-title">EcoLuxury Model Showcase</div>
+                    <div class="card-title">EcoLuxury Model View</div>
                     <div class="card-desc">Zero-emission logistics strategic framework, behavioral calibration models, and fleet economics.</div>
                 </div>
                 <a href="CDLS_Demo_V1_EcoLuxury.html" class="card-link">View Showcase &rarr;</a>
             </div>
         </main>
+
+        <!-- Project Directory & File Descriptions -->
+        <div class="section-title">
+            <span>Project Directory Breakdown</span>
+        </div>
+
+        <div class="file-list">
+            <div class="file-item">
+                <div class="file-info">
+                    <span class="file-name">CAESAR_Auditor_Platform /</span>
+                    <span class="file-desc">Contains compliance audit tools, financial validation scripts, and regulatory reporting agents.</span>
+                </div>
+                <a href="CAESAR_Auditor_Platform/" class="card-link">Browse Directory &rarr;</a>
+            </div>
+            <div class="file-item">
+                <div class="file-info">
+                    <span class="file-name">CDLS_ZEV_Logistics /</span>
+                    <span class="file-desc">Zero-emission vehicle fleet management tools, route optimization algorithms, and haul calculations.</span>
+                </div>
+                <a href="CDLS_ZEV_Logistics/" class="card-link">Browse Directory &rarr;</a>
+            </div>
+            <div class="file-item">
+                <div class="file-info">
+                    <span class="file-name">Dealership_and_Operations /</span>
+                    <span class="file-desc">Dealership inventory management, CRM integration workflows, and sales operations assets.</span>
+                </div>
+                <a href="Dealership_and_Operations/" class="card-link">Browse Directory &rarr;</a>
+            </div>
+            <div class="file-item">
+                <div class="file-info">
+                    <span class="file-name">Developer_and_Code_Assets /</span>
+                    <span class="file-desc">Core agent platform scripts, database connection schemas, and protocol automation code.</span>
+                </div>
+                <a href="Developer_and_Code_Assets/" class="card-link">Browse Directory &rarr;</a>
+            </div>
+            <div class="file-item">
+                <div class="file-info">
+                    <span class="file-name">Grants_Tax_and_Incentives /</span>
+                    <span class="file-desc">Clean-energy tax credit frameworks, grant application templates, and incentive calculation models.</span>
+                </div>
+                <a href="Grants_Tax_and_Incentives/" class="card-link">Browse Directory &rarr;</a>
+            </div>
+            <div class="file-item">
+                <div class="file-info">
+                    <span class="file-name">Sovereign_Initiatives /</span>
+                    <span class="file-desc">Long-term strategic roadmap documentation and master strategy briefs.</span>
+                </div>
+                <a href="Sovereign_Initiatives/" class="card-link">Browse Directory &rarr;</a>
+            </div>
+        </div>
 
         <footer>
             CDLS Ecosystem &bull; Deployed via GitHub Pages
