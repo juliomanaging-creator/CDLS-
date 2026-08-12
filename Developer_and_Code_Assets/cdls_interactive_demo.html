@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDLS Platform - Interactive Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .pulse-dot {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .slide-in {
+            animation: slideIn 0.5s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+        
+        .processing {
+            border: 2px solid #3b82f6;
+            animation: processing 1.5s linear infinite;
+        }
+        
+        @keyframes processing {
+            0% { border-color: #3b82f6; }
+            50% { border-color: #10b981; }
+            100% { border-color: #3b82f6; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-gradient-to-r from-blue-900 to-blue-700 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-green-400 rounded-lg flex items-center justify-center font-bold text-blue-900">
+                        CDLS
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold">California Dealer Logistics Solutions</h1>
+                        <p class="text-blue-200 text-sm">Zero-Emission Vehicle Hauling Platform</p>
+                    </div>
+                </div>
+                <div class="flex space-x-4">
+                    <button onclick="showView('admin')" class="px-4 py-2 rounded hover:bg-blue-800 transition">Admin</button>
+                    <button onclick="showView('dealer')" class="px-4 py-2 rounded hover:bg-blue-800 transition">Dealer View</button>
+                    <button onclick="showView('investor')" class="px-4 py-2 rounded hover:bg-blue-800 transition">Investor View</button>
+                    <button onclick="showView('operations')" class="px-4 py-2 rounded hover:bg-blue-800 transition">Operations</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div id="mainContent" class="max-w-7xl mx-auto px-4 py-8">
+        <!-- Admin Dashboard (Dealer Onboarding Demo) -->
+        <div id="adminView" class="view">
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Admin Dashboard - Dealer Onboarding</h2>
+                
+                <!-- New Dealer Inquiry Form -->
+                <div class="mb-8">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-semibold text-gray-700">New Dealer Inquiry</h3>
+                        <button onclick="startDealerOnboarding()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold">
+                            + New Dealer Inquiry
+                        </button>
+                    </div>
+                    
+                    <!-- Dealer Form (Hidden initially) -->
+                    <div id="dealerForm" class="hidden fade-in bg-gray-50 p-6 rounded-lg border-2 border-gray-200">
+                        <h4 class="text-lg font-semibold mb-4">Dealer Information</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Dealership Name</label>
+                                <input type="text" id="dealerName" value="Sunrise Honda of Pasadena" class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Contact Name</label>
+                                <input type="text" id="contactName" value="Maria Chen" class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email" id="contactEmail" value="mchen@sunrisehonda.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Monthly Inventory (vehicles)</label>
+                                <input type="number" id="inventorySize" value="450" class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Location</label>
+                                <input type="text" id="location" value="Pasadena, CA" class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                            </div>
+                        </div>
+                        <button onclick="analyzeDealerProfile()" class="mt-6 px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-semibold">
+                            Analyze with AI Agent →
+                        </button>
+                    </div>
+                    
+                    <!-- AI Processing Animation -->
+                    <div id="aiProcessing" class="hidden fade-in mt-6">
+                        <div class="bg-blue-50 border-2 border-blue-200 processing rounded-lg p-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="animate-spin rounded-full h-12 w-12 border-b-4 border-blue-600"></div>
+                                <div class="flex-1">
+                                    <h4 class="text-lg font-semibold text-blue-900 mb-2">Dealer Onboarding Agent Analyzing...</h4>
+                                    <div id="processingSteps" class="space-y-2 text-sm">
+                                        <div class="flex items-center"><span class="mr-2">⏳</span> Analyzing dealer profile...</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- AI Analysis Results -->
+                    <div id="analysisResults" class="hidden fade-in mt-6">
+                        <div class="bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-300 rounded-lg p-6">
+                            <div class="flex items-center justify-between mb-6">
+                                <h4 class="text-2xl font-bold text-green-700">AI Analysis Complete!</h4>
+                                <div class="px-4 py-2 bg-green-600 text-white rounded-full font-bold text-lg">
+                                    A-TIER LEAD
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-4 gap-4 mb-6">
+                                <div class="bg-white p-4 rounded-lg shadow">
+                                    <div class="text-sm text-gray-500">Lead Score</div>
+                                    <div class="text-3xl font-bold text-green-600">A</div>
+                                    <div class="text-xs text-gray-400">Highest Priority</div>
+                                </div>
+                                <div class="bg-white p-4 rounded-lg shadow">
+                                    <div class="text-sm text-gray-500">Projected Annual Savings</div>
+                                    <div class="text-2xl font-bold text-blue-600">$180,000</div>
+                                    <div class="text-xs text-gray-400">vs. ACF compliance</div>
+                                </div>
+                                <div class="bg-white p-4 rounded-lg shadow">
+                                    <div class="text-sm text-gray-500">Monthly Hauls</div>
+                                    <div class="text-3xl font-bold text-purple-600">50</div>
+                                    <div class="text-xs text-gray-400">@ 9 vehicles each</div>
+                                </div>
+                                <div class="bg-white p-4 rounded-lg shadow">
+                                    <div class="text-sm text-gray-500">Carbon Credit Revenue</div>
+                                    <div class="text-2xl font-bold text-green-600">$1,234/mo</div>
+                                    <div class="text-xs text-gray-400">@ $85/MT CO₂</div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded-lg shadow mb-4">
+                                <h5 class="font-semibold mb-2">Recommended Revenue Share</h5>
+                                <div class="flex items-center">
+                                    <div class="text-4xl font-bold text-blue-600">70%</div>
+                                    <div class="ml-4 text-sm text-gray-600">to Sunrise Honda (high-volume A-tier partner)</div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded-lg shadow">
+                                <h5 class="font-semibold mb-2">AI-Generated Email Preview</h5>
+                                <div class="bg-gray-50 p-4 rounded border border-gray-200 text-sm">
+                                    <p class="font-semibold">Subject: Save $180,000 on ACF Compliance - Zero Capital Required</p>
+                                    <p class="mt-2">Dear Maria,</p>
+                                    <p class="mt-2">Sunrise Honda's 450-vehicle monthly inventory presents a significant opportunity to achieve California's Advanced Clean Fleets compliance while generating additional revenue through carbon credits...</p>
+                                </div>
+                                <button onclick="sendEmail()" class="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                                    Send Email & Schedule Follow-ups
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dealer Dashboard -->
+        <div id="dealerView" class="view hidden">
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                <div class="flex justify-between items-center mb-6">
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">Sunrise Honda Dashboard</h2>
+                        <p class="text-gray-600">Welcome back, Maria Chen</p>
+                    </div>
+                    <button onclick="requestHaul()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold">
+                        + Request New Haul
+                    </button>
+                </div>
+                
+                <!-- Stats Overview -->
+                <div class="grid grid-cols-4 gap-6 mb-8">
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-lg shadow-lg">
+                        <div class="text-sm opacity-90">Total Hauls</div>
+                        <div class="text-4xl font-bold mt-2">142</div>
+                        <div class="text-xs opacity-75 mt-1">All-time</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-500 to-green-600 text-white p-6 rounded-lg shadow-lg">
+                        <div class="text-sm opacity-90">Carbon Credits</div>
+                        <div class="text-4xl font-bold mt-2">41.2 MT</div>
+                        <div class="text-xs opacity-75 mt-1">$3,502 value</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-6 rounded-lg shadow-lg">
+                        <div class="text-sm opacity-90">Revenue Earned</div>
+                        <div class="text-4xl font-bold mt-2">$125,890</div>
+                        <div class="text-xs opacity-75 mt-1">70% revenue share</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-orange-500 to-orange-600 text-white p-6 rounded-lg shadow-lg">
+                        <div class="text-sm opacity-90">ACF Savings</div>
+                        <div class="text-4xl font-bold mt-2">$180,000</div>
+                        <div class="text-xs opacity-75 mt-1">vs. traditional</div>
+                    </div>
+                </div>
+                
+                <!-- Recent Hauls Table -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <div class="px-6 py-4 bg-gray-50 border-b">
+                        <h3 class="text-xl font-semibold">Recent Hauls</h3>
+                    </div>
+                    <table class="min-w-full">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Haul #</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Route</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Vehicles</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">CO₂ Saved</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 text-sm font-medium">H-2026-0143</td>
+                                <td class="px-6 py-4 text-sm">Gardena, CA → Sacramento, CA</td>
+                                <td class="px-6 py-4 text-sm font-semibold">9</td>
+                                <td class="px-6 py-4 text-sm text-green-600 font-semibold">0.29 MT</td>
+                                <td class="px-6 py-4"><span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-800 font-semibold">Completed</span></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 text-sm font-medium">H-2026-0142</td>
+                                <td class="px-6 py-4 text-sm">Pasadena, CA → San Diego, CA</td>
+                                <td class="px-6 py-4 text-sm font-semibold">9</td>
+                                <td class="px-6 py-4 text-sm text-green-600 font-semibold">0.22 MT</td>
+                                <td class="px-6 py-4"><span class="px-3 py-1 text-xs rounded-full bg-blue-100 text-blue-800 font-semibold">In Progress</span></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 text-sm font-medium">H-2026-0141</td>
+                                <td class="px-6 py-4 text-sm">Long Beach, CA → Fresno, CA</td>
+                                <td class="px-6 py-4 text-sm font-semibold">9</td>
+                                <td class="px-6 py-4 text-sm text-green-600 font-semibold">0.27 MT</td>
+                                <td class="px-6 py-4"><span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-800 font-semibold">Completed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Operations Dashboard (Route Optimization) -->
+        <div id="operationsView" class="view hidden">
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Operations Dashboard - Route Optimization</h2>
+                
+                <!-- Pending Haul Request -->
+                <div class="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 mb-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-blue-900">New Haul Request</h3>
+                            <p class="text-gray-600">Haul #H-2026-0143</p>
+                        </div>
+                        <button onclick="optimizeRoute()" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold">
+                            Optimize Route with AI
+                        </button>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <span class="font-semibold">Pickup:</span> South Bay Auto Auction, Gardena, CA
+                        </div>
+                        <div>
+                            <span class="font-semibold">Delivery:</span> CarMax Sacramento, Sacramento, CA
+                        </div>
+                        <div>
+                            <span class="font-semibold">Vehicles:</span> 9 available
+                        </div>
+                        <div>
+                            <span class="font-semibold">Requested Date:</span> January 15, 2026
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Route Optimization Processing -->
+                <div id="routeProcessing" class="hidden fade-in mb-6">
+                    <div class="bg-purple-50 border-2 border-purple-200 processing rounded-lg p-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="animate-spin rounded-full h-12 w-12 border-b-4 border-purple-600"></div>
+                            <div class="flex-1">
+                                <h4 class="text-lg font-semibold text-purple-900 mb-2">Route Optimization Agent Processing...</h4>
+                                <div id="routeSteps" class="space-y-2 text-sm">
+                                    <div class="flex items-center"><span class="mr-2">⏳</span> Calculating optimal path...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Optimized Route Results -->
+                <div id="routeResults" class="hidden fade-in">
+                    <div class="grid grid-cols-2 gap-6 mb-6">
+                        <!-- Map View -->
+                        <div class="bg-gray-100 rounded-lg p-4 h-96 relative">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="text-6xl mb-4">🗺️</div>
+                                    <div class="text-gray-600 font-semibold">Route Map Visualization</div>
+                                    <div class="text-sm text-gray-500 mt-2">
+                                        Gardena, CA → I-5 North → Sacramento, CA
+                                    </div>
+                                    <div class="mt-4 space-y-2">
+                                        <div class="flex items-center justify-center">
+                                            <div class="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
+                                            <span class="text-sm">Pickup: Gardena</span>
+                                        </div>
+                                        <div class="flex items-center justify-center">
+                                            <div class="w-3 h-3 bg-green-500 rounded-full mr-2 pulse-dot"></div>
+                                            <span class="text-sm">Charging: Kettleman City</span>
+                                        </div>
+                                        <div class="flex items-center justify-center">
+                                            <div class="w-3 h-3 bg-purple-500 rounded-full mr-2"></div>
+                                            <span class="text-sm">Delivery: Sacramento</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Metrics Panel -->
+                        <div class="space-y-4">
+                            <div class="bg-white p-4 rounded-lg shadow border-2 border-green-300">
+                                <h4 class="text-lg font-semibold text-green-700 mb-3">Route Optimized Successfully!</h4>
+                                <div class="space-y-3">
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Distance:</span>
+                                        <span class="font-semibold">351 miles</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Estimated Time:</span>
+                                        <span class="font-semibold">7.5 hours</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Charging Stops:</span>
+                                        <span class="font-semibold">1 stop (Kettleman City)</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Vehicles Loaded:</span>
+                                        <span class="font-bold text-blue-600 text-xl">9 vehicles</span>
+                                    </div>
+                                    <div class="flex justify-between border-t pt-2">
+                                        <span class="text-gray-600">CO₂ Saved:</span>
+                                        <span class="font-bold text-green-600 text-xl">0.29 MT</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Carbon Credits:</span>
+                                        <span class="font-bold text-green-600">$24.68</span>
+                                    </div>
+                                    <div class="flex justify-between border-t pt-2">
+                                        <span class="text-gray-600">Total Revenue:</span>
+                                        <span class="font-bold text-purple-600 text-2xl">$1,224.68</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Comparison -->
+                            <div class="bg-yellow-50 p-4 rounded-lg border-2 border-yellow-300">
+                                <h5 class="font-semibold text-yellow-900 mb-2">Competitive Advantage</h5>
+                                <div class="text-sm space-y-1">
+                                    <div class="flex justify-between">
+                                        <span>Traditional EV Hauler:</span>
+                                        <span class="font-semibold">8 vehicles, $1,122</span>
+                                    </div>
+                                    <div class="flex justify-between text-green-700 font-semibold">
+                                        <span>CDLS Optimized:</span>
+                                        <span>9 vehicles, $1,224.68</span>
+                                    </div>
+                                    <div class="flex justify-between border-t pt-1 text-green-700 font-bold">
+                                        <span>Advantage:</span>
+                                        <span>+$102.68 per haul</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button onclick="assignDriver()" class="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold">
+                                Assign Driver & Confirm Route
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Driver Assignment -->
+                <div id="driverAssignment" class="hidden fade-in">
+                    <div class="bg-green-50 border-2 border-green-300 rounded-lg p-6">
+                        <h4 class="text-xl font-semibold text-green-700 mb-4">✓ Driver Assigned Successfully</h4>
+                        <div class="bg-white p-4 rounded-lg">
+                            <p class="mb-2"><strong>Driver:</strong> Carlos Rodriguez</p>
+                            <p class="mb-2"><strong>Truck:</strong> Tesla Semi #7</p>
+                            <p class="mb-4"><strong>Status:</strong> En route to pickup location</p>
+                            <div class="bg-gray-50 p-3 rounded text-sm">
+                                <p class="font-semibold mb-1">Automated SMS Sent:</p>
+                                <p class="italic">"New haul assigned: Gardena → Sacramento, 9 vehicles, Jan 15. Route and charging stops sent to truck navigation."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Investor Dashboard -->
+        <div id="investorView" class="view hidden">
+            <div class="bg-gradient-to-r from-blue-900 to-blue-700 text-white rounded-lg shadow-lg p-8 mb-6">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-2">CalPERS Investment Portfolio</h2>
+                        <p class="text-blue-200">California Dealer Logistics Solutions</p>
+                    </div>
+                    <button class="px-6 py-3 bg-white text-blue-900 rounded-lg hover:bg-blue-50 transition font-semibold">
+                        Download ESG Report (PDF)
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Portfolio Overview -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-6">
+                <div class="grid grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="text-sm text-gray-500 mb-2">Total Investment</div>
+                        <div class="text-5xl font-bold text-gray-900 mb-2">$5,000,000</div>
+                        <div class="text-sm text-gray-400">Committed Capital</div>
+                    </div>
+                    <div class="text-center border-l border-r border-gray-200">
+                        <div class="text-sm text-gray-500 mb-2">Current Portfolio Value</div>
+                        <div class="text-5xl font-bold text-green-600 mb-2">$5,847,300</div>
+                        <div class="text-sm text-green-600 font-semibold">+$847,300 gain (+16.9%)</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-sm text-gray-500 mb-2">IRR (Year-to-Date)</div>
+                        <div class="text-5xl font-bold text-blue-600 mb-2">22.3%</div>
+                        <div class="text-sm text-gray-400">Target: 18-24%</div>
+                        <div class="mt-2">
+                            <span class="px-4 py-1 bg-green-100 text-green-700 rounded-full text-sm font-semibold">On Target</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Revenue Chart -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                <h3 class="text-xl font-semibold mb-4">Revenue Growth (12 Months)</h3>
+                <canvas id="revenueChart" height="80"></canvas>
+            </div>
+            
+            <!-- Token Portfolio -->
+            <div class="grid grid-cols-3 gap-6 mb-6">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h4 class="text-lg font-semibold mb-4 text-blue-900">$CDLS Governance Token</h4>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Tokens Owned:</span>
+                            <span class="font-semibold">500,000</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Current Price:</span>
+                            <span class="font-semibold">$2.47</span>
+                        </div>
+                        <div class="flex justify-between border-t pt-2">
+                            <span class="text-gray-600">Portfolio Value:</span>
+                            <span class="font-bold text-green-600 text-xl">$1,235,000</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">30-Day Change:</span>
+                            <span class="font-semibold text-green-600">+18.7%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h4 class="text-lg font-semibold mb-4 text-purple-900">$HAUL Utility Token</h4>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Tokens Owned:</span>
+                            <span class="font-semibold">850,000</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Current Price:</span>
+                            <span class="font-semibold">$1.12</span>
+                        </div>
+                        <div class="flex justify-between border-t pt-2">
+                            <span class="text-gray-600">Portfolio Value:</span>
+                            <span class="font-bold text-green-600 text-xl">$952,000</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">30-Day Change:</span>
+                            <span class="font-semibold text-green-600">+12.3%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h4 class="text-lg font-semibold mb-4 text-green-900">$CARBON Credit Token</h4>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Tokens Owned:</span>
+                            <span class="font-semibold">1,247 MT</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Current Price:</span>
+                            <span class="font-semibold">$85.02/MT</span>
+                        </div>
+                        <div class="flex justify-between border-t pt-2">
+                            <span class="text-gray-600">Portfolio Value:</span>
+                            <span class="font-bold text-green-600 text-xl">$106,001</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Market Trend:</span>
+                            <span class="font-semibold text-green-600">Strengthening</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ESG Impact -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-semibold mb-6">ESG Impact Report</h3>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <div class="text-sm text-gray-600 mb-2">Total CO₂ Offset</div>
+                        <div class="text-4xl font-bold text-green-600 mb-2">1,311 MT</div>
+                        <div class="text-xs text-gray-500">Equivalent to 2,847,000 miles not driven</div>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <div class="text-sm text-gray-600 mb-2">Dealers Achieving ACF Compliance</div>
+                        <div class="text-4xl font-bold text-blue-600 mb-2">187</div>
+                        <div class="text-xs text-gray-500">100% compliance rate</div>
+                    </div>
+                    <div class="bg-purple-50 p-6 rounded-lg">
+                        <div class="text-sm text-gray-600 mb-2">Capital Savings Enabled</div>
+                        <div class="text-4xl font-bold text-purple-600 mb-2">$33.66M</div>
+                        <div class="text-xs text-gray-500">$180K × 187 dealers</div>
+                    </div>
+                    <div class="bg-orange-50 p-6 rounded-lg">
+                        <div class="text-sm text-gray-600 mb-2">Zero-Emission Miles Driven</div>
+                        <div class="text-4xl font-bold text-orange-600 mb-2">1,586,871</div>
+                        <div class="text-xs text-gray-500">All-time fleet miles</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // View Management
+        function showView(viewName) {
+            document.querySelectorAll('.view').forEach(view => {
+                view.classList.add('hidden');
+            });
+            document.getElementById(viewName + 'View').classList.remove('hidden');
+            
+            // Initialize charts if investor view
+            if (viewName === 'investor') {
+                setTimeout(initRevenueChart, 100);
+            }
+        }
+
+        // Dealer Onboarding Flow
+        function startDealerOnboarding() {
+            document.getElementById('dealerForm').classList.remove('hidden');
+        }
+
+        function analyzeDealerProfile() {
+            // Hide form
+            document.getElementById('dealerForm').classList.add('hidden');
+            
+            // Show processing
+            const processing = document.getElementById('aiProcessing');
+            processing.classList.remove('hidden');
+            
+            const steps = [
+                '✓ Inventory analysis complete',
+                '✓ ROI calculation complete',
+                '✓ Lead scoring complete',
+                '✓ Personalized materials generated'
+            ];
+            
+            let stepIndex = 0;
+            const interval = setInterval(() => {
+                if (stepIndex < steps.length) {
+                    const stepHtml = `<div class="flex items-center slide-in"><span class="mr-2">✓</span> ${steps[stepIndex]}</div>`;
+                    document.getElementById('processingSteps').innerHTML += stepHtml;
+                    stepIndex++;
+                } else {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        processing.classList.add('hidden');
+                        document.getElementById('analysisResults').classList.remove('hidden');
+                    }, 500);
+                }
+            }, 800);
+        }
+
+        function sendEmail() {
+            alert('✓ Email sent to Maria Chen!\n✓ Follow-up sequence scheduled\n✓ AI qualification call scheduled for 3 days');
+        }
+
+        // Route Optimization Flow
+        function requestHaul() {
+            showView('operations');
+        }
+
+        function optimizeRoute() {
+            document.getElementById('routeProcessing').classList.remove('hidden');
+            
+            const steps = [
+                '✓ Calculating optimal path...',
+                '✓ Analyzing charging station locations...',
+                '✓ Maximizing carbon credit generation...',
+                '✓ Route optimized: 351 miles, 2 charging stops'
+            ];
+            
+            let stepIndex = 0;
+            const interval = setInterval(() => {
+                if (stepIndex < steps.length) {
+                    const stepHtml = `<div class="flex items-center slide-in"><span class="mr-2">✓</span> ${steps[stepIndex]}</div>`;
+                    document.getElementById('routeSteps').innerHTML += stepHtml;
+                    stepIndex++;
+                } else {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        document.getElementById('routeProcessing').classList.add('hidden');
+                        document.getElementById('routeResults').classList.remove('hidden');
+                    }, 500);
+                }
+            }, 1000);
+        }
+
+        function assignDriver() {
+            document.getElementById('driverAssignment').classList.remove('hidden');
+            setTimeout(() => {
+                alert('✓ Haul confirmed!\n✓ Driver en route to pickup\n✓ Real-time tracking activated');
+            }, 1000);
+        }
+
+        // Revenue Chart
+        function initRevenueChart() {
+            const ctx = document.getElementById('revenueChart');
+            if (!ctx) return;
+            
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [
+                        {
+                            label: 'Haul Fees',
+                            data: [45000, 52000, 61000, 68000, 78000, 89000, 102000, 115000, 128000, 145000, 162000, 180000],
+                            borderColor: '#3b82f6',
+                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Carbon Credits',
+                            data: [3500, 4200, 5100, 5800, 6700, 7800, 9200, 10500, 11800, 13500, 15200, 17000],
+                            borderColor: '#10b981',
+                            backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Token Value',
+                            data: [8000, 12000, 18000, 25000, 35000, 48000, 62000, 78000, 95000, 115000, 138000, 165000],
+                            borderColor: '#8b5cf6',
+                            backgroundColor: 'rgba(139, 92, 246, 0.1)',
+                            tension: 0.4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return '$' + (value/1000) + 'K';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Initialize with admin view
+        showView('admin');
+    </script>
+</body>
+</html>

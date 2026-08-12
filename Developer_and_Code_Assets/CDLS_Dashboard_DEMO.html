@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDLS Auditor Dashboard - Live Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #065A82 0%, #1C7293 100%);
+            color: white;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        
+        .demo-badge {
+            background: rgba(255, 193, 7, 0.9);
+            color: #000;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 1rem;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeIn 0.6s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .metric-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid #4CAF50;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        
+        .metric-card.warning {
+            border-left-color: #FF9800;
+        }
+        
+        .metric-card.critical {
+            border-left-color: #F44336;
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .metric-change {
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            color: #4CAF50;
+        }
+        
+        .metric-change.warning {
+            color: #FF9800;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 1.5rem;
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .refresh-btn {
+            background: #065A82;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        
+        .refresh-btn:hover {
+            background: #1C7293;
+        }
+        
+        .refresh-btn:active {
+            transform: scale(0.95);
+        }
+        
+        .exception-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .exception-table th {
+            background: #f8f9fa;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-bottom: 2px solid #dee2e6;
+        }
+        
+        .exception-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #ecf0f1;
+            font-size: 0.9rem;
+        }
+        
+        .exception-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .status-badge {
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .status-verified {
+            background: #E8F5E9;
+            color: #2E7D32;
+        }
+        
+        .status-review {
+            background: #FFF3E0;
+            color: #E65100;
+        }
+        
+        .status-exception {
+            background: #FFEBEE;
+            color: #C62828;
+        }
+        
+        .integrity-bar {
+            height: 8px;
+            background: #ecf0f1;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .integrity-fill {
+            height: 100%;
+            transition: width 0.3s;
+        }
+        
+        .alert-item {
+            padding: 1rem;
+            margin-bottom: 0.8rem;
+            border-radius: 8px;
+            border-left: 4px solid;
+            animation: slideIn 0.5s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .alert-critical {
+            background: #FFEBEE;
+            border-left-color: #F44336;
+        }
+        
+        .alert-high {
+            background: #FFF3E0;
+            border-left-color: #FF9800;
+        }
+        
+        .alert-medium {
+            background: #E3F2FD;
+            border-left-color: #2196F3;
+        }
+        
+        .alert-title {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+        
+        .alert-message {
+            font-size: 0.9rem;
+            color: #5a6268;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #7f8c8d;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .last-updated {
+            text-align: right;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔍 CDLS Auditor Dashboard <span class="demo-badge">LIVE DEMO</span></h1>
+        <p>Real-time platform monitoring for Rebecca McNeil, COO & California State Auditor</p>
+    </div>
+    
+    <div class="container">
+        <!-- Metrics Grid -->
+        <div class="metrics-grid">
+            <div class="metric-card" id="metric-total">
+                <div class="metric-label">Transactions Today</div>
+                <div class="metric-value" id="total-today">247</div>
+                <div class="metric-change">Live monitoring</div>
+            </div>
+            
+            <div class="metric-card warning" id="metric-flagged">
+                <div class="metric-label">Flagged for Review</div>
+                <div class="metric-value" id="flagged-today">12</div>
+                <div class="metric-change warning">Integrity < 95%</div>
+            </div>
+            
+            <div class="metric-card critical" id="metric-critical">
+                <div class="metric-label">Critical Exceptions</div>
+                <div class="metric-value" id="critical-today">2</div>
+                <div class="metric-change warning">Immediate action required</div>
+            </div>
+            
+            <div class="metric-card" id="metric-integrity">
+                <div class="metric-label">Avg Integrity Score</div>
+                <div class="metric-value" id="avg-integrity">96.8%</div>
+                <div class="metric-change">Platform health</div>
+            </div>
+        </div>
+        
+        <!-- Regulatory Alerts -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">⚠️ Regulatory Compliance Alerts (24h)</h2>
+                <button class="refresh-btn" onclick="refreshAlerts()">Refresh</button>
+            </div>
+            <div id="alerts-container">
+                <div class="alert-item alert-high">
+                    <div class="alert-title">HIGH: CA Competes Job Creation Tracking</div>
+                    <div class="alert-message">Current headcount at 18 employees. Need 2 additional hires to meet tax credit requirement by Q2.</div>
+                    <div style="font-size: 0.8rem; color: #95a5a6; margin-top: 0.3rem;">
+                        2 hours ago
+                    </div>
+                </div>
+                
+                <div class="alert-item alert-medium">
+                    <div class="alert-title">MEDIUM: HVIP Mileage Shortfall</div>
+                    <div class="alert-message">Vehicle SEMI-0042 at 68% of required annual mileage (17,000 of 25,000 miles)</div>
+                    <div style="font-size: 0.8rem; color: #95a5a6; margin-top: 0.3rem;">
+                        5 hours ago
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Exception Table -->
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">📊 Live Exception Feed</h2>
+                <button class="refresh-btn" onclick="refreshExceptions()">Refresh</button>
+            </div>
+            <div style="overflow-x: auto;">
+                <table class="exception-table">
+                    <thead>
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>Timestamp</th>
+                            <th>Integrity Score</th>
+                            <th>GPS Var%</th>
+                            <th>Energy Var%</th>
+                            <th>Financial Var%</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="exceptions-tbody">
+                        <!-- Sample data -->
+                        <tr>
+                            <td>a7c3f2e1-4b...</td>
+                            <td>2/6/2026 14:32</td>
+                            <td>
+                                <div>82.3%</div>
+                                <div class="integrity-bar">
+                                    <div class="integrity-fill" style="width: 82.3%; background: #F44336"></div>
+                                </div>
+                            </td>
+                            <td>9.2%</td>
+                            <td>11.5%</td>
+                            <td>8.7%</td>
+                            <td><span class="status-badge status-exception">exception</span></td>
+                        </tr>
+                        <tr>
+                            <td>b4d8e5f3-2a...</td>
+                            <td>2/6/2026 14:15</td>
+                            <td>
+                                <div>89.7%</div>
+                                <div class="integrity-bar">
+                                    <div class="integrity-fill" style="width: 89.7%; background: #FF9800"></div>
+                                </div>
+                            </td>
+                            <td>6.8%</td>
+                            <td>5.2%</td>
+                            <td>7.1%</td>
+                            <td><span class="status-badge status-review">review</span></td>
+                        </tr>
+                        <tr>
+                            <td>c5e9f6a4-3c...</td>
+                            <td>2/6/2026 13:58</td>
+                            <td>
+                                <div>92.1%</div>
+                                <div class="integrity-bar">
+                                    <div class="integrity-fill" style="width: 92.1%; background: #FF9800"></div>
+                                </div>
+                            </td>
+                            <td>5.4%</td>
+                            <td>4.8%</td>
+                            <td>5.9%</td>
+                            <td><span class="status-badge status-review">review</span></td>
+                        </tr>
+                        <tr>
+                            <td>d6f1a7b5-4d...</td>
+                            <td>2/6/2026 13:42</td>
+                            <td>
+                                <div>97.8%</div>
+                                <div class="integrity-bar">
+                                    <div class="integrity-fill" style="width: 97.8%; background: #4CAF50"></div>
+                                </div>
+                            </td>
+                            <td>1.8%</td>
+                            <td>2.1%</td>
+                            <td>1.3%</td>
+                            <td><span class="status-badge status-verified">verified</span></td>
+                        </tr>
+                        <tr>
+                            <td>e7g2b8c6-5e...</td>
+                            <td>2/6/2026 13:25</td>
+                            <td>
+                                <div>98.5%</div>
+                                <div class="integrity-bar">
+                                    <div class="integrity-fill" style="width: 98.5%; background: #4CAF50"></div>
+                                </div>
+                            </td>
+                            <td>1.2%</td>
+                            <td>0.9%</td>
+                            <td>1.5%</td>
+                            <td><span class="status-badge status-verified">verified</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="last-updated">
+                Last updated: <span id="last-update">Just now</span> • Auto-refresh: 30s
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Simulate real-time updates
+        let updateCounter = 0;
+        
+        function updateMetrics() {
+            updateCounter++;
+            
+            // Simulate changing values
+            const totalToday = document.getElementById('total-today');
+            const current = parseInt(totalToday.textContent);
+            totalToday.textContent = current + Math.floor(Math.random() * 3);
+            
+            // Update timestamp
+            document.getElementById('last-update').textContent = 'Just now';
+            
+            // Add pulse effect
+            totalToday.classList.add('pulse');
+            setTimeout(() => totalToday.classList.remove('pulse'), 1000);
+        }
+        
+        function refreshAlerts() {
+            const container = document.getElementById('alerts-container');
+            container.innerHTML = '<div class="loading">Refreshing alerts...</div>';
+            
+            setTimeout(() => {
+                container.innerHTML = `
+                    <div class="alert-item alert-high">
+                        <div class="alert-title">HIGH: CA Competes Job Creation Tracking</div>
+                        <div class="alert-message">Current headcount at 18 employees. Need 2 additional hires to meet tax credit requirement by Q2.</div>
+                        <div style="font-size: 0.8rem; color: #95a5a6; margin-top: 0.3rem;">
+                            Just now
+                        </div>
+                    </div>
+                    
+                    <div class="alert-item alert-medium">
+                        <div class="alert-title">MEDIUM: HVIP Mileage Shortfall</div>
+                        <div class="alert-message">Vehicle SEMI-0042 at 68% of required annual mileage (17,000 of 25,000 miles)</div>
+                        <div style="font-size: 0.8rem; color: #95a5a6; margin-top: 0.3rem;">
+                            5 hours ago
+                        </div>
+                    </div>
+                `;
+            }, 500);
+        }
+        
+        function refreshExceptions() {
+            const tbody = document.getElementById('exceptions-tbody');
+            tbody.innerHTML = '<tr><td colspan="7" class="loading">Refreshing exception data...</td></tr>';
+            
+            setTimeout(() => {
+                // This would normally fetch from API
+                location.reload();
+            }, 800);
+        }
+        
+        // Auto-update every 30 seconds
+        setInterval(updateMetrics, 30000);
+        
+        // Update time display
+        setInterval(() => {
+            const lastUpdate = document.getElementById('last-update');
+            const seconds = updateCounter * 30;
+            if (seconds < 60) {
+                lastUpdate.textContent = `${seconds}s ago`;
+            } else {
+                lastUpdate.textContent = `${Math.floor(seconds / 60)}m ago`;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

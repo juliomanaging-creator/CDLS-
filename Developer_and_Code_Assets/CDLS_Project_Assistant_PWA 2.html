@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="CDLS Assistant">
+    <meta name="theme-color" content="#3B82F6">
+    <title>CDLS Project Assistant</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIkNETFMgUHJvamVjdCBBc3Npc3RhbnQiLAogICJzaG9ydF9uYW1lIjogIkNETFMgQXNzaXN0YW50IiwKICAiZGVzY3JpcHRpb24iOiAiQUktcG93ZXJlZCBsYXVuY2ggdGVhbSBmb3IgQ2FsaWZvcm5pYSBEZWFsZXIgTG9naXN0aWNzIFNvbHV0aW9ucyIsCiAgInN0YXJ0X3VybCI6ICIuLyIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiIzBGMEYwRiIsCiAgInRoZW1lX2NvbG9yIjogIiMzQjgyRjYiLAogICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdC1wcmltYXJ5IiwKICAiaWNvbnMiOiBbCiAgICB7CiAgICAgICJzcmMiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNpSUhacFpYZENiM2c5SWpBZ01DQTFNVElnTlRFeUlqNDhaR1ZtY3o0OGJHbHVaV0Z5UjNKaFpHbGxiblFnYVdROUltZHlZV1FpSUhneFBTSXdKU0lnZVRFOUlqQWxJaUI0TWowaU1UQXdKU0lnZVRJOUlqRXdNQ1VpUGp4emRHOXdJRzltWm5ObGREMGlNQ1VpSUhOMGVXeGxQU0p6ZEc5d0xXTnZiRzl5T2lNelFqZ3lSalk3YzNSdmNDMXZjR0ZqYVhSNU9qRWlJQzgrUEhOMGIzQWdiMlptYzJWMFBTSXhNREFsSWlCemRIbHNaVDBpYzNSdmNDMWpiMnh2Y2pvaU9HSTFZMFkxTmpwemRHOXdMVzl3WVdOcGRIazZNU0lnTHo0OEwyeHBibVZoY2tkeVlXUnBaVzUwUGp3dlpHVm1jejQ4Y21WamRDQjNhV1IwYUQwaU5URXlJaUJvWldsbmFIUTlJalV4TWlJZ2NuZzlJakV3TUNJZ1ptbHNiRDBpZFhKc0tDTm5jbUZrS1NJdlBqeDBaWGgwSUhnOUlqSTFOaUlnZVQwaU16SXdJaUJtYjI1MExXWmhiV2xzZVQwaVFYSnBZV3dzSUhOaGJuTXRjMlZ5YVdZaUlHWnZiblF0YzJsNlpUMGlNamd3SWlCbWIyNTBMWGRsYVdkb2REMGlPVEF3SWlCMFpYaDBMV0Z1WTJodmNqMGliV2xrWkd4bElpQm1hV3hzUFNKM2FHbDBaU0krUXp3dmRHVjRkRDQ4TDNOMlp6ND0iLAogICAgICAic2l6ZXMiOiAiYW55IiwKICAgICAgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIsCiAgICAgICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSIKICAgIH0KICBdCn0=">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMzQjgyRjY7c3RvcC1vcGFjaXR5OjEiIC8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojOGI1Y0Y1NjtzdG9wLW9wYWNpdHk6MSIgLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjEwMCIgZmlsbD0idXJsKCNncmFkKSIvPjx0ZXh0IHg9IjI1NiIgeT0iMzIwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjgwIiBmb250LXdlaWdodD0iOTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+QzwvdGV4dD48L3N2Zz4=">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root {
+            --bg-primary: #0F0F0F;
+            --bg-secondary: #1A1A1A;
+            --bg-tertiary: #262626;
+            --accent-blue: #3B82F6;
+            --accent-green: #10B981;
+            --accent-purple: #8B5CF6;
+            --accent-orange: #F59E0B;
+            --accent-red: #EF4444;
+            --accent-cyan: #06B6D4;
+            --text-primary: #FAFAFA;
+            --text-secondary: #A3A3A3;
+            --border: #333333;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overscroll-behavior: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .brand-text h1 {
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .brand-text p {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .menu-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 8px 12px;
+            color: var(--text-primary);
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .main-layout {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .roles-sidebar {
+            width: 280px;
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border);
+            overflow-y: auto;
+            padding: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .roles-sidebar.mobile-hidden {
+            transform: translateX(-100%);
+            position: absolute;
+            height: 100%;
+            z-index: 50;
+        }
+
+        .role-card {
+            background: var(--bg-tertiary);
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            padding: 12px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .role-card:active {
+            transform: scale(0.98);
+        }
+
+        .role-card:hover {
+            border-color: var(--role-color);
+        }
+
+        .role-card.active {
+            border-color: var(--role-color);
+            background: var(--bg-primary);
+        }
+
+        .role-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+
+        .role-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            background: var(--role-color);
+            flex-shrink: 0;
+        }
+
+        .role-info h3 {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .role-info p {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .role-description {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .chat-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .chat-header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .active-role-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            background: var(--role-color);
+            flex-shrink: 0;
+        }
+
+        .active-role-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .active-role-info h3 {
+            font-size: 15px;
+            font-weight: 700;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .active-role-info p {
+            font-size: 12px;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .messages::-webkit-scrollbar {
+            width: 0;
+            display: none;
+        }
+
+        .message {
+            display: flex;
+            gap: 10px;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message.user { 
+            flex-direction: row-reverse; 
+        }
+
+        .message-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .message.user .message-avatar {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+        }
+
+        .message.assistant .message-avatar {
+            background: var(--role-color);
+        }
+
+        .message-content {
+            max-width: 80%;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px 16px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .message.user .message-content {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            border: none;
+            color: white;
+        }
+
+        .message-content p {
+            margin-bottom: 8px;
+        }
+
+        .message-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .message-content strong {
+            font-weight: 700;
+        }
+
+        .welcome {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .welcome h2 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .welcome p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .install-prompt {
+            background: var(--bg-secondary);
+            border: 1px solid var(--accent-blue);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .install-prompt h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: var(--accent-blue);
+        }
+
+        .install-prompt p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .install-prompt ol {
+            text-align: left;
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin: 0 auto;
+            max-width: 300px;
+        }
+
+        .install-prompt li {
+            margin-bottom: 8px;
+        }
+
+        .input-area {
+            border-top: 1px solid var(--border);
+            padding: 12px 16px;
+            background: var(--bg-secondary);
+            padding-bottom: max(12px, env(safe-area-inset-bottom));
+        }
+
+        .input-wrapper {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        #userInput {
+            flex: 1;
+            background: var(--bg-primary);
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 16px;
+            color: var(--text-primary);
+            font-family: inherit;
+        }
+
+        #userInput:focus {
+            outline: none;
+            border-color: var(--role-color);
+        }
+
+        #sendButton {
+            background: var(--role-color);
+            border: none;
+            border-radius: 10px;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+            cursor: pointer;
+        }
+
+        #sendButton:disabled {
+            opacity: 0.5;
+        }
+
+        .suggestions {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .suggestions::-webkit-scrollbar {
+            display: none;
+        }
+
+        .suggestion {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-size: 12px;
+            cursor: pointer;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .typing {
+            display: none;
+            align-items: center;
+            gap: 10px;
+            padding: 0 16px;
+        }
+
+        .typing.active { display: flex; }
+
+        .typing-dots {
+            display: flex;
+            gap: 4px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px 16px;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--role-color);
+            animation: bounce 1.4s infinite ease-in-out;
+        }
+
+        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); opacity: 0.5; }
+            40% { transform: scale(1); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .menu-btn { display: block; }
+            .roles-sidebar { 
+                position: fixed;
+                left: 0;
+                top: 61px;
+                bottom: 0;
+                z-index: 50;
+                box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+            }
+            .roles-sidebar.mobile-hidden { 
+                transform: translateX(-100%); 
+            }
+            .message-content { max-width: 85%; }
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 40;
+        }
+
+        .overlay.active { display: block; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button class="menu-btn" id="menuBtn">☰</button>
+        <div class="brand">
+            <div class="brand-icon">C</div>
+            <div class="brand-text">
+                <h1>CDLS Assistant</h1>
+                <p>AI Launch Team</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="main-layout">
+        <div class="roles-sidebar mobile-hidden" id="sidebar">
+            <div class="role-card" data-role="ceo" style="--role-color: var(--accent-blue);">
+                <div class="role-header">
+                    <div class="role-icon">👔</div>
+                    <div class="role-info">
+                        <h3>CEO / Strategist</h3>
+                        <p>Business Strategy</p>
+                    </div>
+                </div>
+                <div class="role-description">Strategy, fundraising, partnerships</div>
+            </div>
+
+            <div class="role-card" data-role="cto" style="--role-color: var(--accent-purple);">
+                <div class="role-header">
+                    <div class="role-icon">💻</div>
+                    <div class="role-info">
+                        <h3>CTO / Tech Lead</h3>
+                        <p>Technology</p>
+                    </div>
+                </div>
+                <div class="role-description">Architecture, tech stack, team</div>
+            </div>
+
+            <div class="role-card" data-role="cfo" style="--role-color: var(--accent-green);">
+                <div class="role-header">
+                    <div class="role-icon">💰</div>
+                    <div class="role-info">
+                        <h3>CFO / Finance</h3>
+                        <p>Financial Planning</p>
+                    </div>
+                </div>
+                <div class="role-description">Financial models, budgets</div>
+            </div>
+
+            <div class="role-card" data-role="product" style="--role-color: var(--accent-orange);">
+                <div class="role-header">
+                    <div class="role-icon">📱</div>
+                    <div class="role-info">
+                        <h3>Product Manager</h3>
+                        <p>Product Strategy</p>
+                    </div>
+                </div>
+                <div class="role-description">Roadmap, requirements, MVP</div>
+            </div>
+
+            <div class="role-card" data-role="marketing" style="--role-color: var(--accent-red);">
+                <div class="role-header">
+                    <div class="role-icon">📢</div>
+                    <div class="role-info">
+                        <h3>Marketing Lead</h3>
+                        <p>Go-to-Market</p>
+                    </div>
+                </div>
+                <div class="role-description">Dealer acquisition, positioning</div>
+            </div>
+
+            <div class="role-card" data-role="operations" style="--role-color: var(--accent-cyan);">
+                <div class="role-header">
+                    <div class="role-icon">⚙️</div>
+                    <div class="role-info">
+                        <h3>Operations Lead</h3>
+                        <p>Operations</p>
+                    </div>
+                </div>
+                <div class="role-description">Hauler recruitment, logistics</div>
+            </div>
+
+            <div class="role-card" data-role="legal" style="--role-color: #A855F7;">
+                <div class="role-header">
+                    <div class="role-icon">⚖️</div>
+                    <div class="role-info">
+                        <h3>Legal Counsel</h3>
+                        <p>Compliance</p>
+                    </div>
+                </div>
+                <div class="role-description">CARB compliance, contracts</div>
+            </div>
+
+            <div class="role-card" data-role="hr" style="--role-color: #EC4899;">
+                <div class="role-header">
+                    <div class="role-icon">👥</div>
+                    <div class="role-info">
+                        <h3>HR / Recruiting</h3>
+                        <p>Team Building</p>
+                    </div>
+                </div>
+                <div class="role-description">Hiring, compensation, culture</div>
+            </div>
+        </div>
+
+        <div class="chat-area">
+            <div class="chat-header">
+                <div class="active-role-icon" id="activeIcon">🚀</div>
+                <div class="active-role-info">
+                    <h3 id="activeName">Welcome</h3>
+                    <p id="activeDesc">Select a role to begin</p>
+                </div>
+            </div>
+
+            <div class="messages" id="messages">
+                <div class="welcome">
+                    <h2>Your AI Launch Team</h2>
+                    <p>Select a role to get expert guidance for launching CDLS.</p>
+                </div>
+                
+                <div class="install-prompt" id="installPrompt">
+                    <h3>📲 Add to Home Screen</h3>
+                    <p>Install this app on your iPhone for quick access:</p>
+                    <ol>
+                        <li>Tap the Share button <strong>⎙</strong> below</li>
+                        <li>Scroll and tap "Add to Home Screen"</li>
+                        <li>Tap "Add" in the top right</li>
+                        <li>Launch from your home screen!</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="typing" id="typing">
+                <div class="message-avatar" id="typingAvatar">🤖</div>
+                <div class="typing-dots">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <input type="text" id="userInput" placeholder="Ask your question..." autocomplete="off" />
+                    <button id="sendButton">Send</button>
+                </div>
+                <div class="suggestions" id="suggestions"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const roles = {
+            ceo: { name: 'CEO / Strategist', desc: 'Business Strategy', icon: '👔', color: 'var(--accent-blue)', prompt: 'You are the CEO/Strategist for CDLS. Focus on business strategy, fundraising (CalPERS, VFI Strategic Capital), dealer partnerships, and market positioning. Be strategic and action-oriented.', suggestions: ['Fundraising strategy?', 'CalPERS pitch?', 'Market positioning?'] },
+            cto: { name: 'CTO / Tech Lead', desc: 'Technology', icon: '💻', color: 'var(--accent-purple)', prompt: 'You are the CTO for CDLS. Focus on architecture (Next.js, Node.js, PostgreSQL), team building, and scalability. Be technically specific.', suggestions: ['Tech stack?', 'Team hiring?', 'Architecture?'] },
+            cfo: { name: 'CFO / Finance', desc: 'Financial Planning', icon: '💰', color: 'var(--accent-green)', prompt: 'You are the CFO for CDLS. Focus on financial modeling, unit economics, and investor reporting. Be data-driven.', suggestions: ['Unit economics?', 'Financial model?', 'Funding?'] },
+            product: { name: 'Product Manager', desc: 'Product Strategy', icon: '📱', color: 'var(--accent-orange)', prompt: 'You are the Product Manager for CDLS. Focus on roadmap, MVP features, and requirements. Be user-focused.', suggestions: ['MVP features?', 'Roadmap?', 'Priorities?'] },
+            marketing: { name: 'Marketing Lead', desc: 'Go-to-Market', icon: '📢', color: 'var(--accent-red)', prompt: 'You are the Marketing Lead for CDLS. Focus on dealer acquisition and positioning. Be creative and ROI-focused.', suggestions: ['Dealer acquisition?', 'Positioning?', 'Campaign?'] },
+            operations: { name: 'Operations Lead', desc: 'Operations', icon: '⚙️', color: 'var(--accent-cyan)', prompt: 'You are the Operations Lead for CDLS. Focus on hauler recruitment, logistics, and quality. Be process-oriented.', suggestions: ['Hauler recruitment?', 'Quality?', 'Process?'] },
+            legal: { name: 'Legal Counsel', desc: 'Compliance', icon: '⚖️', color: '#A855F7', prompt: 'You are Legal Counsel for CDLS. Focus on CARB compliance, contracts, and IP. Be thorough.', suggestions: ['CARB compliance?', 'Contracts?', 'IP?'] },
+            hr: { name: 'HR / Recruiting', desc: 'Team Building', icon: '👥', color: '#EC4899', prompt: 'You are HR/Recruiting for CDLS. Focus on hiring, compensation, and culture. Be talent-focused.', suggestions: ['First hires?', 'Compensation?', 'Culture?'] }
+        };
+
+        let currentRole = null;
+        let history = [];
+
+        const messages = document.getElementById('messages');
+        const input = document.getElementById('userInput');
+        const send = document.getElementById('sendButton');
+        const typing = document.getElementById('typing');
+        const suggestions = document.getElementById('suggestions');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const menuBtn = document.getElementById('menuBtn');
+
+        // Mobile menu
+        menuBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('mobile-hidden');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            sidebar.classList.add('mobile-hidden');
+            overlay.classList.remove('active');
+        });
+
+        // Hide install prompt if already installed
+        if (window.matchMedia('(display-mode: standalone)').matches) {
+            document.getElementById('installPrompt').style.display = 'none';
+        }
+
+        function selectRole(key) {
+            currentRole = key;
+            const role = roles[key];
+            
+            document.getElementById('activeIcon').textContent = role.icon;
+            document.getElementById('activeName').textContent = role.name;
+            document.getElementById('activeDesc').textContent = role.desc;
+            document.getElementById('typingAvatar').textContent = role.icon;
+            
+            document.documentElement.style.setProperty('--role-color', role.color);
+            
+            document.querySelectorAll('.role-card').forEach(c => {
+                c.classList.toggle('active', c.dataset.role === key);
+            });
+            
+            messages.innerHTML = '';
+            history = [];
+            
+            addMsg(`Hi! I'm your ${role.name}. ${role.desc}. What would you like to discuss?`, false);
+            
+            suggestions.innerHTML = '';
+            role.suggestions.forEach(s => {
+                const btn = document.createElement('button');
+                btn.className = 'suggestion';
+                btn.textContent = s;
+                btn.onclick = () => { input.value = s; handleSend(); };
+                suggestions.appendChild(btn);
+            });
+            
+            // Close mobile menu
+            sidebar.classList.add('mobile-hidden');
+            overlay.classList.remove('active');
+            
+            input.focus();
+        }
+
+        function addMsg(content, isUser) {
+            const div = document.createElement('div');
+            div.className = `message ${isUser ? 'user' : 'assistant'}`;
+            
+            const avatar = document.createElement('div');
+            avatar.className = 'message-avatar';
+            avatar.textContent = isUser ? '👤' : (currentRole ? roles[currentRole].icon : '🤖');
+            
+            const msgContent = document.createElement('div');
+            msgContent.className = 'message-content';
+            msgContent.innerHTML = content
+                .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\n\n/g, '</p><p>')
+                .replace(/^(.+)$/gm, '<p>$1</p>')
+                .replace(/<p><\/p>/g, '');
+            
+            div.appendChild(avatar);
+            div.appendChild(msgContent);
+            messages.appendChild(div);
+            
+            const welcome = messages.querySelector('.welcome');
+            if (welcome) welcome.remove();
+            
+            const install = messages.querySelector('.install-prompt');
+            if (install && messages.children.length > 2) install.remove();
+            
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        async function getResponse(msg) {
+            if (!currentRole) return "Please select a role first.";
+            
+            history.push({ role: 'user', content: msg });
+            
+            try {
+                const res = await fetch('https://api.anthropic.com/v1/messages', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        model: 'claude-sonnet-4-20250514',
+                        max_tokens: 1500,
+                        system: roles[currentRole].prompt,
+                        messages: history
+                    })
+                });
+
+                const data = await res.json();
+                
+                if (!res.ok) throw new Error(data.error?.message || 'API error');
+                
+                const reply = data.content.filter(b => b.type === 'text').map(b => b.text).join('\n\n');
+                history.push({ role: 'assistant', content: reply });
+                return reply;
+            } catch (err) {
+                console.error('Error:', err);
+                return `I'm having trouble connecting. As your ${roles[currentRole].name}, I can help with ${roles[currentRole].desc.toLowerCase()}. What specific question do you have?`;
+            }
+        }
+
+        async function handleSend() {
+            const msg = input.value.trim();
+            if (!msg || send.disabled || !currentRole) return;
+            
+            addMsg(msg, true);
+            input.value = '';
+            send.disabled = true;
+            
+            typing.classList.add('active');
+            const reply = await getResponse(msg);
+            typing.classList.remove('active');
+            
+            addMsg(reply, false);
+            send.disabled = false;
+            input.focus();
+        }
+
+        send.addEventListener('click', handleSend);
+        input.addEventListener('keypress', e => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                handleSend();
+            }
+        });
+
+        document.querySelectorAll('.role-card').forEach(card => {
+            card.addEventListener('click', () => selectRole(card.dataset.role));
+        });
+    </script>
+</body>
+</html>

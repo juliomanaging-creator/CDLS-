@@ -1,0 +1,56 @@
+================================================================================
+CDLS 300,000 UNIT MASTER STRATEGY — REVISED 30k UNIT IMPLEMENTATION ROADMAP
+Executive Launch Dossier, Technical Architecture & Operational Checklist
+Date: July 2026
+Author: CDLS Executive Leadership & Board of Directors
+================================================================================
+
+1. EXECUTIVE SUMMARY & STRATEGIC VISION
+The California Digital Logistics System (CDLS) is an integrated clean-energy, fintech, and fleet logistics platform designed to transform Zero-Emission Vehicles (ZEVs) and auto transport infrastructure into a distributed 15 GWh Virtual Power Plant (VPP) and "Energy Bank."
+
+By scaling to 30,000 bidirectional V2G (Vehicle-to-Grid) units and lightweight mobile energy pods across California, CDLS bridges fleet transport efficiency with real-time CAISO power grid monetization while operating well within federal loan caps and DFPI licensing bounds.
+
+2. DFPI / REGULATORY APPROVAL CHECKLIST (NMLS & DFAL)
+Under California's Digital Financial Assets Law (DFAL) (Financial Code § 3207 / NMLS filing), scaling to 30,000 units significantly reduces reserve exposure and surety bond burdens.
+
+• Statutory Filings & Corporate Forms:
+  - Form NMLS MU1 (Company Application): Filed via NMLS portal detailing CDLS Energy Bank LLC structure.
+  - Form NMLS MU2 (Individual Filings): Background clearances and Live Scan fingerprinting for CEO James Wood and all key control persons.
+  - DFPI Surety Bond ($500k Base to ~$5M Scaled): Electronic Surety Bond (ESB) posted via NMLS.
+  - Minimum Tangible Net Worth Requirement: Verification of at least $100,000 in qualifying liquid assets.
+
+• Regulatory Compliance Attachments:
+  - Audited Financial Statements & Flow-of-Funds Diagram for Treasury Prime statutory trust accounts.
+  - Judas AI Risk & BSA/AML Protocol: Documented KYC/AML policies governing automated dealer payouts.
+  - NIST CSF 2.0 Cybersecurity Attestation: Audit trails showing Docker bridge air-gapping.
+
+3. INVESTOR PRESENTATION ASSETS (30k UNIT / $1.62B YIELD)
+• Core Metrics:
+  - Total Storage Capacity: 15 GWh (30,000 units)
+  - CapEx Per Pod: $260k (250kWh) to $390k (500kWh)
+  - Hardware CapEx: $11.7 Billion
+  - Annual Net Yield: $1.62 Billion
+  - 10% CDLS Platform Revenue: $162 Million / year
+  - Payback Period: 18–24 months (Logistics/V2G) | 12–16 months (Events)
+
+• Deliverables & Data Room Attachments:
+  - 10-Slide Investor Deck highlighting the 15 GWh VPP scale and $1,500 flat shipping model.
+  - 3-Year Dynamic Pro Forma Model (.XLSX) with CAISO LMP price sensitivity ($0.50–$2.50/kWh).
+  - Executed 33/33/33 Sovereign Split agreements.
+
+4. GRANT ALIGNMENT & FEDERAL LOAN GUARANTEES
+• DOE Title 17 Clean Energy Financing:
+  - Part 1 & Part 2 Title 17 Application submitted via DOE Loan Programs Office portal.
+  - Community Benefits Plan (CBP) documenting B.E.S.T. Program hiring in Sacramento zip codes (95817/95820).
+  - Fleet Utilization Agreements & LOIs from founding Sacramento dealerships.
+
+• CEC & CalTrans Grants:
+  - CEQA Exemption / Expedited Site Review for mobile pod placement in SMUD utility yards.
+  - Grid Benefit Simulation Report demonstrating local substation peak shaving.
+  - Matching Fund Verification leveraging 30% IRA Direct Pay tax credits.
+
+5. IMMEDIATE ACTIONABLE ROADMAP
+1. Execute NMLS Filing: Complete Live Scan fingerprinting and submit MU1/MU2 forms.
+2. Complete Dealer Site Inspections: Verify 480V 3-phase capacity at Sacramento pilot sites (Carizma, Lions).
+3. Issue B.E.S.T. Apprentice Recruitment: Onboard first cohort of 20 apprentices in Oak Park/Tahoe Park.
+4. Run API Sandbox Tests: Execute 100-transaction simulation on Treasury Prime Sandbox.

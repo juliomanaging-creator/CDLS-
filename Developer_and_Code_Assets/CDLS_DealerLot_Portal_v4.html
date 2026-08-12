@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="CDLS Field">
+<meta name="theme-color" content="#080F1C">
+<title>CDLS Field Portal — Julio Umanzor</title>
+<!-- Fonts: system stack first so it works 100% offline. Google Fonts load if wifi available. -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<style>
+/* ── SYSTEM FONT FALLBACKS (work 100% offline) ── */
+@font-face {
+  font-family: 'Syne';
+  src: local('SF Pro Display'), local('Helvetica Neue'), local('Arial');
+  font-weight: 400 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DM Mono';
+  src: local('Courier New'), local('Menlo'), local('Monaco');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: local('SF Pro Text'), local('Helvetica Neue'), local('Arial');
+  font-display: swap;
+}
+:root{
+  --font-display: 'Syne', 'SF Pro Display', system-ui, -apple-system, sans-serif;
+  --font-mono: 'DM Mono', 'SF Mono', 'Courier New', monospace;
+  --font-body: 'Inter', 'SF Pro Text', system-ui, -apple-system, sans-serif;
+  --navy:#0F1E35;--navy2:#1E3A5F;--blue:#2563EB;--teal:#0D9488;
+  --gold:#D97706;--gold-light:#FCD34D;--green:#16A34A;--red:#DC2626;
+  --purple:#7C3AED;--bg:#080F1C;--surface:#111827;--surface2:#1F2937;
+  --border:rgba(255,255,255,.08);--text:#F9FAFB;--muted:#9CA3AF;--dim:#4B5563;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);min-height:100vh;
+  /* Prevent white flash on iOS Safari */
+  -webkit-overflow-scrolling:touch;}
+
+/* TOP BAR */
+.topbar{position:sticky;top:0;z-index:100;background:rgba(8,15,28,.97);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 16px 8px;}
+.topbar-inner{max-width:480px;margin:0 auto;}
+.topbar-row1{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.logo{font-family:var(--font-display);font-weight:800;font-size:15px;letter-spacing:.05em;color:var(--gold-light);}
+.logo span{color:var(--muted);font-weight:400;}
+.top-badges{display:flex;gap:6px;align-items:center;}
+.date-badge{font-family:var(--font-mono);font-size:11px;color:var(--teal);
+  background:rgba(13,148,136,.12);border:1px solid rgba(13,148,136,.3);padding:3px 8px;border-radius:20px;}
+.offline-badge{font-family:var(--font-mono);font-size:10px;color:var(--green);
+  background:rgba(22,163,74,.12);border:1px solid rgba(22,163,74,.3);padding:3px 8px;border-radius:20px;}
+.dealer-input-row{display:flex;gap:8px;}
+.dealer-input{flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:8px;
+  padding:9px 12px;color:var(--text);font-size:13px;font-family:var(--font-body);outline:none;transition:border-color .2s;}
+.dealer-input:focus{border-color:var(--gold);}
+.dealer-input::placeholder{color:var(--dim);}
+.new-btn{background:var(--gold);color:#000;font-weight:700;font-size:12px;padding:9px 14px;
+  border-radius:8px;border:none;cursor:pointer;font-family:var(--font-display);letter-spacing:.05em;white-space:nowrap;}
+.progress-wrap{max-width:480px;margin:8px auto 0;}
+.progress-row{display:flex;justify-content:space-between;margin-bottom:4px;}
+.progress-label{font-size:11px;color:var(--muted);font-family:var(--font-mono);}
+.progress-count{font-size:11px;color:var(--gold);font-family:var(--font-mono);font-weight:500;}
+.progress-track{height:3px;background:var(--surface2);border-radius:2px;overflow:hidden;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--teal),var(--gold));border-radius:2px;transition:width .5s ease;}
+.tabs{max-width:480px;margin:8px auto 0;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;}
+.tabs::-webkit-scrollbar{display:none;}
+.tab{flex-shrink:0;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:500;cursor:pointer;
+  border:1px solid var(--border);color:var(--muted);background:transparent;transition:all .2s;font-family:var(--font-body);}
+.tab.active{background:var(--blue);color:#fff;border-color:var(--blue);}
+
+/* MAIN */
+.main{max-width:480px;margin:0 auto;padding:12px 16px 160px;}
+
+/* DEALER CARD */
+.dealer-card{background:linear-gradient(135deg,var(--navy2) 0%,#0F2847 100%);
+  border:1px solid rgba(37,99,235,.3);border-radius:14px;padding:16px;margin-bottom:16px;display:none;}
+.dealer-card.visible{display:block;}
+.dealer-card-name{font-family:var(--font-display);font-weight:800;font-size:18px;}
+.dealer-card-meta{font-size:12px;color:var(--muted);margin-top:4px;font-family:var(--font-mono);}
+.dealer-score-row{display:flex;gap:10px;margin-top:12px;}
+.score-box{flex:1;background:rgba(0,0,0,.3);border-radius:8px;padding:10px;text-align:center;}
+.score-val{font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--gold);}
+.score-lbl{font-size:10px;color:var(--muted);margin-top:2px;font-family:var(--font-mono);}
+
+/* SECTION / ITEM */
+.section{margin-bottom:20px;}
+.section-header{display:flex;align-items:center;gap:8px;margin-bottom:10px;padding:0 2px;}
+.section-icon{font-size:16px;}
+.section-title{font-family:var(--font-display);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+.section-count{margin-left:auto;font-family:var(--font-mono);font-size:11px;color:var(--dim);}
+.section-count.done{color:var(--green);}
+.item{background:var(--surface);border:1px solid var(--border);border-radius:12px;
+  padding:13px 13px 11px 15px;margin-bottom:8px;position:relative;overflow:hidden;
+  display:flex;gap:11px;align-items:flex-start;transition:all .2s;}
+.item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  border-radius:3px 0 0 3px;background:var(--item-accent,var(--border));}
+.item.checked{background:rgba(22,163,74,.06);border-color:rgba(22,163,74,.2);}
+.item.checked::before{background:var(--green);}
+.check-circle{flex-shrink:0;width:22px;height:22px;border-radius:50%;border:2px solid var(--dim);
+  display:flex;align-items:center;justify-content:center;transition:all .25s;margin-top:2px;cursor:pointer;}
+.item.checked .check-circle{background:var(--green);border-color:var(--green);}
+.check-mark{font-size:12px;color:#fff;opacity:0;transition:opacity .2s;}
+.item.checked .check-mark{opacity:1;}
+.item-body{flex:1;min-width:0;}
+.item-title{font-size:14px;font-weight:500;line-height:1.3;cursor:pointer;transition:color .2s;}
+.item.checked .item-title{color:var(--muted);text-decoration:line-through;}
+.item-sub{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.4;}
+.item-links{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;}
+.item-link{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-family:var(--font-mono);
+  padding:4px 9px;border-radius:6px;text-decoration:none;border:1px solid;transition:all .15s;white-space:nowrap;}
+.item-link:active{opacity:.7;}
+.link-blue{color:#93C5FD;border-color:rgba(37,99,235,.4);background:rgba(37,99,235,.1);}
+.link-green{color:#86EFAC;border-color:rgba(22,163,74,.4);background:rgba(22,163,74,.1);}
+.link-gold{color:#FCD34D;border-color:rgba(217,119,6,.4);background:rgba(217,119,6,.1);}
+.link-teal{color:#5EEAD4;border-color:rgba(13,148,136,.4);background:rgba(13,148,136,.1);}
+.link-red{color:#FCA5A5;border-color:rgba(220,38,38,.4);background:rgba(220,38,38,.1);}
+.link-purple{color:#C4B5FD;border-color:rgba(124,58,237,.4);background:rgba(124,58,237,.1);}
+.item-tags{display:flex;gap:4px;margin-top:6px;flex-wrap:wrap;}
+.tag{font-size:10px;font-family:var(--font-mono);padding:2px 7px;border-radius:10px;font-weight:500;}
+.tag-urgent{background:rgba(220,38,38,.15);color:#FCA5A5;border:1px solid rgba(220,38,38,.3);}
+.tag-revenue{background:rgba(217,119,6,.15);color:#FCD34D;border:1px solid rgba(217,119,6,.3);}
+.tag-compliance{background:rgba(37,99,235,.15);color:#93C5FD;border:1px solid rgba(37,99,235,.3);}
+.tag-tech{background:rgba(124,58,237,.15);color:#C4B5FD;border:1px solid rgba(124,58,237,.3);}
+.tag-v2g{background:rgba(13,148,136,.15);color:#5EEAD4;border:1px solid rgba(13,148,136,.3);}
+.tag-grant{background:rgba(22,163,74,.15);color:#86EFAC;border:1px solid rgba(22,163,74,.3);}
+.item-actions{display:flex;gap:6px;margin-top:7px;flex-wrap:wrap;}
+.action-btn{font-size:11px;padding:3px 9px;border-radius:6px;border:1px solid var(--border);
+  background:transparent;color:var(--muted);cursor:pointer;font-family:var(--font-body);transition:all .15s;}
+.note-btn{color:var(--gold);border-color:rgba(217,119,6,.3);}
+.item-note-row{margin-top:8px;display:none;}
+.item.has-note .item-note-row{display:block;}
+.item-note{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:6px;
+  padding:8px;color:var(--text);font-size:12px;font-family:var(--font-body);resize:none;outline:none;min-height:52px;}
+.item-note:focus{border-color:var(--gold);}
+
+/* GRANT CARDS */
+.grants-summary{background:linear-gradient(135deg,rgba(22,163,74,.12) 0%,rgba(13,148,136,.08) 100%);
+  border:1px solid rgba(22,163,74,.3);border-radius:14px;padding:14px 16px;margin-bottom:16px;}
+.grants-summary-title{font-family:var(--font-display);font-weight:800;font-size:14px;color:var(--green);}
+.grants-summary-sub{font-size:12px;color:var(--muted);margin-top:4px;}
+.grants-totals{display:flex;gap:10px;margin-top:12px;}
+.gtotal{flex:1;background:rgba(0,0,0,.3);border-radius:8px;padding:8px;text-align:center;}
+.gtotal-val{font-family:var(--font-display);font-weight:800;font-size:16px;color:var(--gold);}
+.gtotal-lbl{font-size:9px;color:var(--muted);margin-top:2px;font-family:var(--font-mono);}
+.grant-card{background:var(--surface);border:1px solid rgba(22,163,74,.2);border-radius:12px;
+  padding:14px 14px 12px 15px;margin-bottom:10px;position:relative;overflow:hidden;}
+.grant-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gc-color,var(--green));}
+.grant-header{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;}
+.grant-name{font-family:var(--font-display);font-weight:700;font-size:13px;line-height:1.3;}
+.grant-amount{font-family:var(--font-mono);font-size:13px;color:var(--gold-light);white-space:nowrap;flex-shrink:0;}
+.grant-agency{font-size:11px;color:var(--teal);margin-top:3px;font-family:var(--font-mono);}
+.grant-desc{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.45;}
+.grant-meta{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;}
+.grant-deadline{font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:10px;}
+.deadline-urgent{background:rgba(220,38,38,.15);color:#FCA5A5;border:1px solid rgba(220,38,38,.3);}
+.deadline-rolling{background:rgba(13,148,136,.15);color:#5EEAD4;border:1px solid rgba(13,148,136,.3);}
+.deadline-annual{background:rgba(217,119,6,.15);color:#FCD34D;border:1px solid rgba(217,119,6,.3);}
+.grant-links{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px;}
+.grant-stack-badge{font-size:10px;font-family:var(--font-mono);color:var(--purple);
+  background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.3);padding:2px 7px;border-radius:10px;}
+
+/* KNOWLEDGE BASE PANEL */
+.kb-panel-wrap{background:linear-gradient(135deg,rgba(37,99,235,.1),rgba(13,148,136,.06));
+  border:1px solid rgba(37,99,235,.25);border-radius:14px;margin-bottom:16px;overflow:hidden;}
+.kb-panel-header{padding:12px 16px;cursor:pointer;display:flex;align-items:center;gap:8px;
+  border-bottom:1px solid rgba(37,99,235,.15);}
+.kb-panel-title{font-family:var(--font-display);font-weight:700;font-size:13px;color:#93C5FD;flex:1;}
+.kb-panel-toggle{font-size:16px;transition:transform .3s;}
+.kb-panel-toggle.open{transform:rotate(180deg);}
+.kb-panel-body{display:none;padding:0 16px 16px;}
+.kb-panel-body.open{display:block;}
+.kb-category{margin-top:12px;}
+.kb-cat-title{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:.08em;margin-bottom:6px;}
+.kb-item{background:var(--surface2);border-radius:8px;padding:10px 12px;margin-bottom:6px;
+  cursor:pointer;border:1px solid var(--border);}
+.kb-item-q{font-size:13px;font-weight:500;color:var(--text);}
+.kb-item-a{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.6;display:none;}
+.kb-item-a.open{display:block;}
+.kb-item-tags{display:flex;gap:4px;margin-top:5px;flex-wrap:wrap;}
+.kb-tag{font-size:10px;font-family:var(--font-mono);padding:2px 6px;border-radius:8px;}
+
+/* AI OVERLAY */
+.ai-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;display:none;backdrop-filter:blur(4px);}
+.ai-overlay.open{display:flex;align-items:flex-end;}
+.ai-panel{background:var(--surface);border:1px solid rgba(124,58,237,.4);
+  border-radius:20px 20px 0 0;width:100%;max-width:480px;margin:0 auto;
+  max-height:92vh;overflow:hidden;display:flex;flex-direction:column;animation:slideUp .3s ease;}
+@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.ai-panel-header{padding:14px 18px 10px;border-bottom:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;flex-shrink:0;}
+.ai-panel-title{font-family:var(--font-display);font-weight:800;font-size:16px;
+  background:linear-gradient(135deg,#C4B5FD,var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.ai-close-btn{background:var(--surface2);border:1px solid var(--border);color:var(--muted);
+  border-radius:8px;padding:5px 12px;font-size:13px;cursor:pointer;}
+.ai-panel-body{flex:1;overflow-y:auto;padding:14px 18px 20px;}
+
+/* CONTEXT CHIPS */
+.ctx-label{font-size:10px;color:var(--muted);font-family:var(--font-mono);letter-spacing:.08em;margin-bottom:7px;}
+.ctx-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;}
+.chip{padding:5px 12px;border-radius:20px;font-size:12px;border:1px solid var(--border);
+  color:var(--muted);background:transparent;cursor:pointer;font-family:var(--font-body);transition:all .2s;}
+.chip.active{background:var(--purple);color:#fff;border-color:var(--purple);}
+
+/* PHOTO */
+.cam-label{font-size:10px;color:var(--muted);font-family:var(--font-mono);letter-spacing:.08em;margin-bottom:7px;}
+.cam-row{display:flex;gap:8px;margin-bottom:14px;}
+.cam-btn-card{flex:1;background:var(--surface2);border:2px dashed rgba(13,148,136,.35);
+  border-radius:10px;padding:12px;text-align:center;cursor:pointer;transition:all .2s;}
+.cam-btn-card:active{background:rgba(13,148,136,.1);}
+.cam-icon{font-size:22px;margin-bottom:3px;}
+.cam-lbl{font-size:11px;color:var(--teal);font-family:var(--font-mono);}
+.cam-sub{font-size:10px;color:var(--dim);margin-top:1px;}
+input[type=file]{display:none;}
+.photo-wrap{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--border);margin-bottom:12px;}
+.photo-preview{width:100%;max-height:180px;object-fit:cover;display:block;}
+.photo-rm{position:absolute;top:6px;right:6px;background:rgba(0,0,0,.75);color:#fff;
+  border:none;border-radius:6px;padding:3px 9px;font-size:12px;cursor:pointer;}
+
+/* ANALYZE BTN */
+.analyze-btn{width:100%;padding:14px;border:none;border-radius:12px;font-family:var(--font-display);
+  font-weight:800;font-size:15px;letter-spacing:.05em;cursor:pointer;
+  background:linear-gradient(135deg,var(--purple),#0D9488);color:#fff;
+  transition:opacity .2s;margin-bottom:14px;}
+.analyze-btn:active{opacity:.85;}
+
+/* RESULTS */
+.ai-results{display:none;}
+.ai-results.show{display:block;}
+.result-section{background:var(--surface2);border-radius:10px;padding:12px 14px;margin-bottom:10px;}
+.result-section-title{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;margin-bottom:8px;}
+.ai-step{border-left:3px solid var(--step-col,var(--purple));padding:10px 12px;
+  margin-bottom:7px;background:var(--surface);border-radius:0 8px 8px 0;}
+.ai-step-num{font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-bottom:3px;letter-spacing:.06em;}
+.ai-step-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:3px;}
+.ai-step-body{font-size:12px;color:var(--muted);line-height:1.55;}
+.ai-step-link{display:inline-block;margin-top:5px;font-size:11px;font-family:var(--font-mono);
+  color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(13,148,136,.3);}
+.flag-item{font-size:12px;color:#FCA5A5;padding:3px 0;line-height:1.4;}
+.grant-elig-item{font-size:12px;color:#86EFAC;padding:3px 0;}
+.photo-obs{font-size:12px;color:var(--text);line-height:1.6;}
+.prev-wrap{margin-top:14px;}
+.prev-title{font-size:10px;color:var(--dim);font-family:var(--font-mono);letter-spacing:.08em;margin-bottom:6px;}
+.prev-item{background:var(--surface2);border-radius:8px;padding:10px 12px;margin-bottom:6px;
+  cursor:pointer;border:1px solid var(--border);}
+.prev-meta{font-size:10px;color:var(--dim);font-family:var(--font-mono);}
+.prev-preview{font-size:12px;color:var(--muted);margin-top:3px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+
+/* BOTTOM BAR */
+.bottom-bar{position:fixed;bottom:0;left:0;right:0;background:rgba(8,15,28,.98);
+  backdrop-filter:blur(16px);border-top:1px solid var(--border);padding:10px 16px 22px;}
+.bottom-inner{max-width:480px;margin:0 auto;}
+.quick-label{font-size:10px;color:var(--dim);font-family:var(--font-mono);margin-bottom:5px;letter-spacing:.08em;}
+.quick-row{display:flex;gap:8px;}
+.quick-input{flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:10px;
+  padding:10px 14px;color:var(--text);font-size:13px;font-family:var(--font-body);outline:none;transition:border-color .2s;}
+.quick-input:focus{border-color:var(--teal);}
+.quick-input::placeholder{color:var(--dim);}
+.quick-send{background:var(--teal);color:#fff;border:none;border-radius:10px;padding:10px 14px;font-size:18px;cursor:pointer;}
+.ai-fab{background:linear-gradient(135deg,var(--purple),#5B21B6);color:#fff;border:none;
+  border-radius:10px;padding:10px 14px;font-size:18px;cursor:pointer;
+  box-shadow:0 0 16px rgba(124,58,237,.35);}
+
+.flash{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(0);
+  background:var(--green);color:#fff;font-family:var(--font-display);font-weight:800;
+  font-size:16px;padding:14px 28px;border-radius:50px;pointer-events:none;
+  z-index:999;opacity:0;transition:all .3s;}
+.flash.show{transform:translate(-50%,-50%) scale(1);opacity:1;}
+.flash.hide{opacity:0;transform:translate(-50%,-60%) scale(.9);}
+@keyframes slideIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.item,.grant-card{animation:slideIn .2s ease both;}
+</style>
+</head>
+<body>
+
+<!-- iPhone Install Banner (shows once) -->
+<div id="installBanner" style="display:none;background:linear-gradient(135deg,#1E3A5F,#0F2847);
+  border-bottom:2px solid rgba(13,148,136,.5);padding:12px 16px;position:relative;z-index:200;">
+  <div style="max-width:480px;margin:0 auto;">
+    <div style="font-family:var(--font-display);font-weight:800;font-size:13px;color:#FCD34D;margin-bottom:6px;">
+      📱 Add to iPhone Home Screen for best experience
+    </div>
+    <div style="font-size:12px;color:#9CA3AF;line-height:1.7;">
+      1. Tap the <strong style="color:#5EEAD4;">Share ↑</strong> button at the bottom of Safari<br>
+      2. Scroll down and tap <strong style="color:#5EEAD4;">"Add to Home Screen"</strong><br>
+      3. Tap <strong style="color:#5EEAD4;">"Add"</strong> — CDLS icon appears on your home screen<br>
+      4. Open it from there for full-screen, app-like experience ✓
+    </div>
+    <div style="margin-top:7px;background:rgba(220,38,38,.15);border:1px solid rgba(220,38,38,.3);
+      border-radius:7px;padding:7px 10px;font-size:11px;color:#FCA5A5;">
+      ⚠️ White screen / broken? You're opening from Files app.<br>
+      Tap <strong>···</strong> (top right) → <strong>Open in Safari</strong> → then Add to Home Screen
+    </div>
+    <button onclick="dismissInstallBanner()" style="position:absolute;top:10px;right:14px;
+      background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#9CA3AF;
+      border-radius:6px;padding:4px 10px;font-size:12px;cursor:pointer;">Got it ✕</button>
+  </div>
+</div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-row1">
+      <div class="logo">CDLS <span>/ FIELD OPS</span></div>
+      <div class="top-badges">
+        <div class="offline-badge">⚡ OFFLINE READY</div>
+        <div class="date-badge" id="dateBadge"></div>
+      </div>
+    </div>
+    <div class="dealer-input-row">
+      <input class="dealer-input" id="dealerInput" placeholder="Enter dealer name or DBA..." autocomplete="off">
+      <button class="new-btn" onclick="startDealer()">START VISIT</button>
+    </div>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-row">
+      <span class="progress-label">VISIT PROGRESS</span>
+      <span class="progress-count" id="progressCount">0 / 0 complete</span>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+  </div>
+  <div class="tabs">
+    <div class="tab active" onclick="filterTab('all',this)">All</div>
+    <div class="tab" onclick="filterTab('urgent',this)">🚨 Urgent</div>
+    <div class="tab" onclick="filterTab('compliance',this)">Compliance</div>
+    <div class="tab" onclick="filterTab('revenue',this)">Revenue</div>
+    <div class="tab" onclick="filterTab('v2g',this)">V2G</div>
+    <div class="tab" onclick="filterTab('tech',this)">Tech/AI</div>
+    <div class="tab" onclick="filterTab('grants',this)">💰 Grants</div>
+    <div class="tab" onclick="filterTab('knowledge',this)">📚 KB</div>
+    <div class="tab" onclick="filterTab('done',this)">✅ Done</div>
+  </div>
+</div>
+
+<div class="main">
+  <div class="dealer-card" id="dealerCard">
+    <div class="dealer-card-name" id="dealerCardName">—</div>
+    <div class="dealer-card-meta" id="dealerCardMeta"></div>
+    <div class="dealer-score-row">
+      <div class="score-box"><div class="score-val" id="scoreChecked">0</div><div class="score-lbl">CHECKED</div></div>
+      <div class="score-box"><div class="score-val" id="scoreRemain">0</div><div class="score-lbl">REMAIN</div></div>
+      <div class="score-box"><div class="score-val" id="scoreScore">—</div><div class="score-lbl">SCORE</div></div>
+    </div>
+  </div>
+  <div id="sectionsContainer"></div>
+</div>
+
+<!-- AI ADVISOR PANEL -->
+<div class="ai-overlay" id="aiOverlay" onclick="closeAIifBg(event)">
+  <div class="ai-panel">
+    <div class="ai-panel-header">
+      <div class="ai-panel-title">🤖 AI Field Advisor</div>
+      <button class="ai-close-btn" onclick="closeAI()">✕ Close</button>
+    </div>
+    <div class="ai-panel-body" id="aiPanelBody">
+
+      <div class="cam-label">📸 CAPTURE WHAT YOU SEE (OPTIONAL)</div>
+      <div id="photoWrap" style="display:none;" class="photo-wrap">
+        <img id="photoPreview" class="photo-preview" src="" alt="">
+        <button class="photo-rm" onclick="removePhoto()">✕</button>
+      </div>
+      <div class="cam-row" id="camRow">
+        <div class="cam-btn-card" onclick="document.getElementById('camIn').click()">
+          <div class="cam-icon">📷</div>
+          <div class="cam-lbl">TAKE PHOTO</div>
+          <div class="cam-sub">Use camera</div>
+        </div>
+        <div class="cam-btn-card" onclick="document.getElementById('galIn').click()">
+          <div class="cam-icon">🖼️</div>
+          <div class="cam-lbl">FROM GALLERY</div>
+          <div class="cam-sub">Upload image</div>
+        </div>
+      </div>
+      <input type="file" id="camIn" accept="image/*" capture="environment" onchange="handlePhoto(this)">
+      <input type="file" id="galIn" accept="image/*" onchange="handlePhoto(this)">
+
+      <div class="ctx-label">WHAT ARE YOU LOOKING AT?</div>
+      <div class="ctx-chips" id="ctxChips">
+        <div class="chip active" data-ctx="general" onclick="toggleChip(this)">General Progress</div>
+        <div class="chip" data-ctx="electrical" onclick="toggleChip(this)">⚡ Electrical Panel</div>
+        <div class="chip" data-ctx="license" onclick="toggleChip(this)">📋 Dealer License</div>
+        <div class="chip" data-ctx="lot" onclick="toggleChip(this)">🏢 Dealer Lot</div>
+        <div class="chip" data-ctx="documents" onclick="toggleChip(this)">📄 Documents</div>
+        <div class="chip" data-ctx="inventory" onclick="toggleChip(this)">🚗 Inventory</div>
+        <div class="chip" data-ctx="smog" onclick="toggleChip(this)">💨 Smog Station</div>
+        <div class="chip" data-ctx="v2g" onclick="toggleChip(this)">🔋 V2G Charger</div>
+        <div class="chip" data-ctx="compliance" onclick="toggleChip(this)">⚠️ Compliance Issue</div>
+      </div>
+
+      <button class="analyze-btn" onclick="runOfflineAnalysis()">
+        🤖 Analyze &amp; Get Next Steps
+      </button>
+
+      <div class="ai-results" id="aiResults"></div>
+
+      <div class="prev-wrap" id="prevWrap"></div>
+    </div>
+  </div>
+</div>
+
+<div class="flash" id="flash"></div>
+
+<div class="bottom-bar">
+  <div class="bottom-inner">
+    <div class="quick-label">QUICK NOTE / ISSUE CAPTURE</div>
+    <div class="quick-row">
+      <input class="quick-input" id="quickInput" placeholder="Flag an issue, add a finding..." autocomplete="off">
+      <button class="quick-send" onclick="quickCapture()">＋</button>
+      <button class="ai-fab" onclick="openAI()" title="AI Advisor">🤖</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════
+// CHECKLIST
+// ═══════════════════════════════════════════════════════════════════
+const CHECKLIST=[
+  {section:'First Contact',icon:'👋',items:[
+    {id:'fc1',title:'Confirm dealer legal name + DBA',sub:'Cross-reference with DMV license — note discrepancies in SALSA',tags:['compliance'],accent:'#2563EB',links:[{label:'DMV Dealer Lookup',url:'https://www.dmv.ca.gov/portal/vehicle-industry-services/occupational-licensing/dealer-licensing/dealer-license-lookup/',cls:'link-blue'},{label:'CNCDA Directory',url:'https://www.cncda.org/',cls:'link-blue'}]},
+    {id:'fc2',title:'Verify dealer license is current + posted',sub:'CA Dealer License # — check expiry. Min $50K bond required',tags:['compliance','urgent'],accent:'#DC2626',links:[{label:'License Status Check',url:'https://www.dmv.ca.gov/portal/vehicle-industry-services/occupational-licensing/dealer-licensing/dealer-license-lookup/',cls:'link-red'}]},
+    {id:'fc3',title:'Introduce CDLS value prop — ZEV + grants + V2G',sub:'60-sec pitch: logistics savings + $330K/truck incentives + grid revenue',tags:['revenue'],accent:'#D97706',links:[]},
+    {id:'fc4',title:'Get decision-maker contact info',sub:'Name, direct mobile, email — add to SALSA CRM',tags:[],accent:'#6B7280',links:[]},
+    {id:'fc5',title:'Confirm monthly inventory volume',sub:'Min 6 vehicles/month for pilot eligibility',tags:['revenue'],accent:'#D97706',links:[]},
+  ]},
+  {section:'Compliance Assessment',icon:'📋',items:[
+    {id:'ca1',title:'CARB ACF Registration — confirmed?',sub:'Free, same-day at arb.ca.gov. Required before HVIP application',tags:['compliance','urgent'],accent:'#DC2626',links:[{label:'CARB ACF Register',url:'https://www.arb.ca.gov/msprog/acf/acf.htm',cls:'link-red'},{label:'ACF Overview PDF',url:'https://www.arb.ca.gov/msprog/acf/acf_overview.pdf',cls:'link-blue'}]},
+    {id:'ca2',title:'DMV Dealer License — visible, current, bonded?',sub:'Must be posted. Check expiry + verify $50K surety bond',tags:['compliance'],accent:'#2563EB',links:[{label:'DMV License Lookup',url:'https://www.dmv.ca.gov/portal/vehicle-industry-services/occupational-licensing/dealer-licensing/dealer-license-lookup/',cls:'link-blue'}]},
+    {id:'ca3',title:'Smog station on-site or certified partner?',sub:'Every gas/hybrid sale requires valid smog cert',tags:['compliance'],accent:'#2563EB',links:[{label:'Find BAR Stations',url:'https://www.bar.ca.gov/consumer/smog_station_information.html',cls:'link-blue'}]},
+    {id:'ca4',title:'Form 8300 process — cash deal workflow?',sub:'Cash/money order >$10K requires IRS filing within 15 days',tags:['compliance'],accent:'#2563EB',links:[{label:'IRS Form 8300 Guide',url:'https://www.irs.gov/businesses/small-businesses-self-employed/form-8300-and-reporting-cash-payments-of-over-10000',cls:'link-blue'}]},
+    {id:'ca5',title:'Odometer disclosure on all vehicle purchases?',sub:'Federal requirement under 10 yrs/160K miles',tags:['compliance'],accent:'#2563EB',links:[{label:'NHTSA Odometer',url:'https://www.nhtsa.gov/vehicle-safety/odometer-fraud',cls:'link-blue'}]},
+    {id:'ca6',title:'Advertising compliance — required disclosures?',sub:'CA requires: price, fees, license #, EV credit disclaimers',tags:['compliance'],accent:'#2563EB',links:[{label:'CA AG Ad Rules',url:'https://oag.ca.gov/consumers/general/advertising',cls:'link-blue'}]},
+    {id:'ca7',title:'CDTFA seller permit current?',sub:'CA sales tax permit must be active and current',tags:['compliance'],accent:'#2563EB',links:[{label:'CDTFA Account',url:'https://www.cdtfa.ca.gov/services/permits-and-licenses.html',cls:'link-blue'}]},
+  ]},
+  {section:'HVIP + Incentive Stack',icon:'💰',items:[
+    {id:'hv1',title:'HVIP Pre-Registration — done? Sept 9, 2026!',sub:'Up to $330K per Tesla Semi. Miss this = lose millions',tags:['urgent','revenue'],accent:'#DC2626',links:[{label:'🚨 HVIP Portal',url:'https://www.californiahvip.org/',cls:'link-red'},{label:'Applicant Guide',url:'https://www.californiahvip.org/applicants/',cls:'link-red'}]},
+    {id:'hv2',title:'IRA Section 45W — $40K commercial vehicle credit',sub:'Federal credit stackable with HVIP — applies per truck',tags:['revenue'],accent:'#D97706',links:[{label:'IRS 45W Info',url:'https://www.irs.gov/credits-deductions/commercial-clean-vehicle-credit',cls:'link-gold'}]},
+    {id:'hv3',title:'IRA Section 30C — EV charging ($100K/station)',sub:'30% credit per charger installation — applies to Fermata FE-20',tags:['revenue'],accent:'#D97706',links:[{label:'IRS 30C Info',url:'https://www.irs.gov/credits-deductions/alternative-fuel-vehicle-refueling-property-credit',cls:'link-gold'}]},
+    {id:'hv4',title:'Walk through CDLS Incentive Matrix',sub:'Show how $720K truck becomes $92K net with full stack',tags:['revenue'],accent:'#D97706',links:[]},
+    {id:'hv5',title:'Current logistics spend — calculate ROI',sub:'Get their monthly hauling cost — breakeven typically <6 months',tags:['revenue'],accent:'#D97706',links:[]},
+    {id:'hv6',title:'LCFS credits — dealer lot eligible?',sub:'Automated $24.68/haul via PoGE Protocol',tags:['revenue'],accent:'#D97706',links:[{label:'CARB LCFS',url:'https://www.arb.ca.gov/fuels/lcfs/lcfs.htm',cls:'link-teal'}]},
+  ]},
+  {section:'V2G Site Assessment',icon:'⚡',items:[
+    {id:'v1',title:'Parking stalls for Tesla Semi (55ft clearance)?',sub:'Min 2 stalls with adequate turning radius',tags:['v2g'],accent:'#0D9488',links:[{label:'Tesla Semi Specs',url:'https://www.tesla.com/semi/design',cls:'link-teal'}]},
+    {id:'v2',title:'3-phase 480V electrical panel available?',sub:'Fermata FE-20 requires 3-phase 480V',tags:['v2g','tech'],accent:'#0D9488',links:[{label:'Fermata FE-20',url:'https://www.fermataenergy.com/products/fe-20',cls:'link-teal'},{label:'SMUD Rule 21',url:'https://www.smud.org/en/For-Your-Business/Energy-Solutions/Solar-Batteries-and-EV-Charging/Electric-Vehicles/V2G',cls:'link-teal'}]},
+    {id:'v3',title:'SMUD commercial account number confirmed?',sub:'Required for Rule 21 interconnection application',tags:['v2g'],accent:'#0D9488',links:[{label:'SMUD Biz Portal',url:'https://www.smud.org/en/For-Your-Business',cls:'link-teal'}]},
+    {id:'v4',title:'Photo of electrical panel + SLD if available',sub:'SLD Engineering Agent converts photo → SMUD diagram',tags:['v2g','tech'],accent:'#0D9488',links:[{label:'SMUD Interconnect',url:'https://www.smud.org/en/For-Your-Business/Energy-Solutions/Solar-Batteries-and-EV-Charging/Solar/Interconnection-Resources',cls:'link-teal'}]},
+    {id:'v5',title:'Internet connectivity at lot confirmed?',sub:'Required for CAISO price signals + CESAR dispatch',tags:['v2g','tech'],accent:'#0D9488',links:[]},
+    {id:'v6',title:'Dealer interested in V2G revenue ($18K–$45K/truck/yr)?',sub:'Zero capital cost to dealer — CDLS installs and owns charger',tags:['v2g','revenue'],accent:'#0D9488',links:[{label:'CAISO ELRP',url:'https://www.caiso.com/market/Pages/ProductInformation/EmergencyLoadReductionProgram.aspx',cls:'link-teal'}]},
+    {id:'v7',title:'Take SLD photo before leaving lot',sub:'Capture panel + lot → upload to SALSA',tags:['v2g','tech'],accent:'#0D9488',links:[]},
+  ]},
+  {section:'Tech + CESAR Onboarding',icon:'🤖',items:[
+    {id:'tc1',title:'DMS platform identified',sub:'CDK, Reynolds, Dealertrack, PBS, DealerSocket, Tekion',tags:['tech'],accent:'#7C3AED',links:[{label:'CDK Global',url:'https://www.cdkglobal.com/',cls:'link-purple'},{label:'Reynolds',url:'https://www.reyrey.com/',cls:'link-purple'},{label:'Dealertrack',url:'https://www.dealertrack.com/',cls:'link-purple'}]},
+    {id:'tc2',title:'Magic Link email sent to dealer principal?',sub:'One link → DMS connects → compliance report in 60 seconds',tags:['tech'],accent:'#7C3AED',links:[]},
+    {id:'tc3',title:'SALSA Deal Jacket demo completed?',sub:'Show: 2-min auto-generation vs 4–8 hour manual process',tags:['tech'],accent:'#7C3AED',links:[]},
+    {id:'tc4',title:'CASAER compliance score generated?',sub:'Run casaer audit dealer [ID] — share PDF on-site',tags:['tech','compliance'],accent:'#7C3AED',links:[]},
+    {id:'tc5',title:'Dealer enrolled in $HAUL token program?',sub:'100 $HAUL per vehicle delivered → cooperative equity',tags:['tech','revenue'],accent:'#7C3AED',links:[]},
+    {id:'tc6',title:'CESAR Agent 1 active for this dealer?',sub:'48-hour automated qualification running in dashboard',tags:['tech'],accent:'#7C3AED',links:[]},
+    {id:'tc7',title:'Tesla Fleet API connector confirmed?',sub:'Required if dealer operates any Tesla vehicles',tags:['tech','v2g'],accent:'#7C3AED',links:[{label:'Tesla Fleet API',url:'https://developer.tesla.com/docs/fleet-api',cls:'link-purple'}]},
+  ]},
+  {section:'Close + Next Steps',icon:'🤝',items:[
+    {id:'cl1',title:'Founding Dealer Term Sheet presented?',sub:'20 dealers × $500K = $10M committed capital for CalPERS LP',tags:['revenue','urgent'],accent:'#DC2626',links:[]},
+    {id:'cl2',title:'$299/month SaaS subscription agreed?',sub:'Includes Deal Jackets + Compliance Monitoring + $HAUL tokens',tags:['revenue'],accent:'#D97706',links:[]},
+    {id:'cl3',title:'SALSA partnership agreement signed?',sub:'Required for CDLS to file grants on dealer\'s behalf',tags:['grant','urgent'],accent:'#DC2626',links:[{label:'DocuSign',url:'#',cls:'link-red'}]},
+    {id:'cl4',title:'Next meeting scheduled before leaving lot?',sub:'Set calendar invite on-site — CESAR follows up in 48 hrs',tags:[],accent:'#6B7280',links:[]},
+    {id:'cl5',title:'Dealer referral to other lots requested?',sub:'Ask for 3 warm intros to neighboring dealers',tags:['revenue'],accent:'#D97706',links:[]},
+    {id:'cl6',title:'Visit summary added to SALSA CRM',sub:'Document all findings before leaving the parking lot',tags:['tech'],accent:'#7C3AED',links:[]},
+  ]},
+];
+
+// ═══════════════════════════════════════════════════════════════════
+// GRANTS
+// ═══════════════════════════════════════════════════════════════════
+const GRANTS=[
+  {name:'HVIP — ZEV Truck Voucher Incentive',agency:'CARB / ARCHES',amount:'Up to $330,000/truck',deadline:'🚨 Sep 9, 2026',deadlineClass:'deadline-urgent',color:'#DC2626',desc:'Largest incentive available. Tesla Semi qualifies. Pre-register free at californiahvip.org before deadline.',stackable:['IRA 45W ($40K)','IRA 30C ($100K)'],links:[{label:'Apply Now',url:'https://www.californiahvip.org/',cls:'link-red'},{label:'Applicant Guide',url:'https://www.californiahvip.org/applicants/',cls:'link-blue'}]},
+  {name:'IRA Section 45W — Commercial Clean Vehicle Credit',agency:'U.S. Treasury / IRS',amount:'$7,500–$40,000/vehicle',deadline:'📅 Rolling (expires 2032)',deadlineClass:'deadline-rolling',color:'#D97706',desc:'Federal 30% credit up to $40,000 for Class 8 ZEV. IRS Form 8936. Stackable with HVIP.',stackable:['HVIP ($330K)','LCFS credits'],links:[{label:'IRS Credit Info',url:'https://www.irs.gov/credits-deductions/commercial-clean-vehicle-credit',cls:'link-gold'}]},
+  {name:'IRA Section 30C — EV Refueling Property Credit',agency:'U.S. Treasury / IRS',amount:'Up to $100,000/station',deadline:'📅 Rolling (expires 2032)',deadlineClass:'deadline-rolling',color:'#D97706',desc:'30% of cost per EV charger. Applies to Fermata FE-20 V2G chargers at dealer lots.',stackable:['SMUD rebates'],links:[{label:'IRS 30C Info',url:'https://www.irs.gov/credits-deductions/alternative-fuel-vehicle-refueling-property-credit',cls:'link-gold'}]},
+  {name:'CVRP — Clean Vehicle Rebate Project',agency:'CARB / GRID Alternatives',amount:'$1,000–$7,500/vehicle',deadline:'📅 Rolling until exhausted',deadlineClass:'deadline-rolling',color:'#16A34A',desc:'Rebates for new ZEV sales. SALSA auto-submits on behalf of dealer customers at point of sale.',stackable:['Federal tax credits'],links:[{label:'Apply CVRP',url:'https://cleanvehiclerebate.org/',cls:'link-green'}]},
+  {name:'CC4A — Clean Cars 4 All',agency:'CARB / Air Districts',amount:'$5,500–$19,500/customer',deadline:'📅 Rolling by district',deadlineClass:'deadline-rolling',color:'#16A34A',desc:'Scrap-and-replace for low-income customers. CDLS files via SALSA. Highest tier in enhanced areas.',stackable:['CVRP','LIRAP'],links:[{label:'CC4A Portal',url:'https://ww2.arb.ca.gov/our-work/programs/clean-cars-4-all',cls:'link-green'},{label:'SMAQMD CC4A',url:'https://www.airquality.org/Residents/Vehicle-Assistance/Clean-Cars-4-All',cls:'link-green'}]},
+  {name:'LCFS — Low Carbon Fuel Standard Credits',agency:'CARB',amount:'$24.68/haul automated',deadline:'📅 Continuous — per ZEV mile',deadlineClass:'deadline-rolling',color:'#0D9488',desc:'Automated via PoGE Protocol (IP-FIN-040). CDLS handles enrollment + $CARBON token minting.',stackable:['V2G revenue','$CARBON tokens'],links:[{label:'CARB LCFS',url:'https://www.arb.ca.gov/fuels/lcfs/lcfs.htm',cls:'link-teal'}]},
+  {name:'DERA — Diesel Emissions Reduction Act',agency:'U.S. EPA',amount:'$25,000–$100,000/project',deadline:'📅 Annual grant cycles',deadlineClass:'deadline-annual',color:'#7C3AED',desc:'Replaces diesel fleet equipment. Dealers with diesel tow trucks qualify. Requires SAM.gov registration.',stackable:['HVIP','State incentives'],links:[{label:'EPA DERA',url:'https://www.epa.gov/dera',cls:'link-purple'},{label:'Apply SAM.gov',url:'https://sam.gov/',cls:'link-blue'}]},
+  {name:'SMUD — Charge Smart + V2G Business',agency:'SMUD Sacramento',amount:'$1,000–$5,000/charger',deadline:'📅 Rolling for SMUD territory',deadlineClass:'deadline-rolling',color:'#0D9488',desc:'SMUD rebates for charger install + V2G demand response enrollment. CDLS manages full application.',stackable:['IRA 30C ($100K)','CAISO ELRP'],links:[{label:'SMUD EV Biz',url:'https://www.smud.org/en/For-Your-Business/Energy-Solutions/Solar-Batteries-and-EV-Charging/Electric-Vehicles',cls:'link-teal'}]},
+  {name:'CAISO ELRP — Emergency Load Reduction',agency:'CAISO / California Grid',amount:'$2.00/kWh dispatched',deadline:'📅 Event-triggered (summer peak)',deadlineClass:'deadline-rolling',color:'#0D9488',desc:'100 trucks × 500kWh × $2 × 25 events = $2.5M/year. CESAR Agent 7 dispatches automatically.',stackable:['SMUD V2G rebates','LCFS credits'],links:[{label:'CAISO ELRP',url:'https://www.caiso.com/market/Pages/ProductInformation/EmergencyLoadReductionProgram.aspx',cls:'link-teal'}]},
+  {name:'PG&E / SCE EV Fleet Incentives',agency:'PG&E + SCE Utilities',amount:'$500–$2,500/vehicle',deadline:'📅 Rolling by territory',deadlineClass:'deadline-rolling',color:'#16A34A',desc:'For dealers outside SMUD territory. Installation support + rate discounts for EV charging.',stackable:['IRA 30C'],links:[{label:'PG&E EV Fleet',url:'https://www.pge.com/en/electrify-home-and-business/ev-chargers-and-charging/ev-fleet.html',cls:'link-green'},{label:'SCE Charge Ready',url:'https://www.sce.com/business-solutions/ev-solutions/EV-Fleet',cls:'link-green'}]},
+  {name:'GRID Alternatives — Community Clean Energy',agency:'GRID Alternatives',amount:'Varies by project',deadline:'📅 Rolling',deadlineClass:'deadline-rolling',color:'#16A34A',desc:'SALSA nonprofit partner. Dealers in underserved communities access solar + EV charging support.',stackable:['SALSA partnership'],links:[{label:'GRID Alternatives',url:'https://gridalternatives.org/',cls:'link-green'}]},
+  {name:'LIRAP — Low Income Repair Assistance',agency:'CA Air Districts',amount:'$500–$8,000/vehicle',deadline:'📅 Rolling by district',deadlineClass:'deadline-rolling',color:'#16A34A',desc:'Dealer refers low-income customers through SALSA — CDLS handles grant filing.',stackable:['CC4A','CVRP'],links:[{label:'SMAQMD LIRAP',url:'https://www.airquality.org/Residents/Vehicle-Assistance/Low-Income-Repair-Assistance',cls:'link-green'}]},
+  {name:'SB 1 / Trade Corridor Enhancement (TCEP)',agency:'Caltrans / CTC',amount:'$1M–$10M/corridor',deadline:'📅 Annual cycle',deadlineClass:'deadline-annual',color:'#7C3AED',desc:'ZEV logistics infrastructure on I-5, SR-99, Port corridors. CDLS applies as ZEV logistics operator.',stackable:['Federal FHWA grants'],links:[{label:'Caltrans TCEP',url:'https://dot.ca.gov/programs/local-assistance/fed-and-state-programs/trade-corridor-enhancement-program',cls:'link-purple'}]},
+];
+
+// ═══════════════════════════════════════════════════════════════════
+// KNOWLEDGE BASE — OFFLINE AI ENGINE
+// ═══════════════════════════════════════════════════════════════════
+const KB = {
+  // ── CONTEXT-SPECIFIC PHOTO GUIDANCE ────────────────────────────
+  photoContext: {
+    electrical: {
+      title:'Electrical Panel Analysis',
+      checks:[
+        'Look for 3-phase vs single-phase wiring (3-phase has 3 hot wires — needed for Fermata FE-20)',
+        'Check main breaker amperage — 200A minimum, 400A preferred for V2G installation',
+        'Note available breaker slots — need at least 2 open 60A slots for bidirectional chargers',
+        'Look for existing EV charger circuits — indicates prior infrastructure work done',
+        'Check panel clearance — NEC requires 36" working space in front of panel',
+        'Note utility meter location relative to panel — SMUD requires meter on same wall or adjacent',
+        'If SLD (Single Line Diagram) is posted nearby, photograph it — saves engineering time',
+      ],
+      redFlags:[
+        'Single-phase only panel: V2G upgrade requires utility work, adds 4–8 weeks and $15K–$40K',
+        'Panel full with no available breakers: requires panel upgrade or load study',
+        'Federal Pacific Electric (FPE) or Zinsco panels: fire hazard, must replace before install',
+        'Overcrowded wiring or visible corrosion: compliance issue, note for SALSA report',
+      ],
+      nextStep:'Photograph the full panel face + nameplate. Text to Rebecca McNeil for SLD Engineering Agent processing.',
+    },
+    license: {
+      title:'Dealer License Verification',
+      checks:[
+        'DMV Dealer License: Must show license number, dealer name matching DBA, and expiration date',
+        'Bond certificate should be posted or available: minimum $50,000 surety bond (Bus. & Prof. Code §11710)',
+        'Check expiration date — licenses expire and must be renewed annually',
+        'Verify the licensed address matches the physical location you\'re at',
+        'Look for CDTFA seller permit number — should match business registration',
+        'Confirm dealer type: New, Used, or Both — affects which HVIP truck categories qualify',
+        'Note any additional licenses: auction dealer, dismantler, fleet owner, wholesale only',
+      ],
+      redFlags:[
+        'Expired license: Dealer is operating illegally — major compliance flag, note immediately',
+        'Name mismatch between license and signage: potential DMV violation, flag for CASAER audit',
+        'No bond certificate visible: may be non-compliant with B&P §11710',
+        'Restricted license (e.g., wholesale only) selling retail: DMV violation',
+      ],
+      nextStep:'Enter license number in DMV lookup at dmv.ca.gov before leaving lot. Screenshot the result for SALSA record.',
+    },
+    lot: {
+      title:'Dealer Lot Assessment',
+      checks:[
+        'Count total vehicle inventory — estimate monthly turnover (typically 10–20% of lot per month)',
+        'Identify ZEV inventory: battery electric (BEV), plug-in hybrid (PHEV), hydrogen (FCEV)',
+        'Look for space that could host 2+ Tesla Semi trucks with 55-foot turning radius access',
+        'Check lot lighting and security cameras — SMUD requires secured charger installation area',
+        'Note lot size in approximate acres — 1 acre = ~40 parking spaces typical',
+        'Identify service bays — dealers with service = higher compliance complexity = higher CDLS value',
+        'Look for diesel trucks or transport vehicles on lot — DERA grant eligibility indicator',
+      ],
+      redFlags:[
+        'Crowded lot with no clear access lanes: V2G charger placement may be difficult',
+        'No ZEV inventory visible: CARB ACF timeline may be accelerated — needs urgent conversation',
+        'Visible non-running vehicles: compliance risk for smog certification at point of sale',
+      ],
+      nextStep:'Estimate lot size and ZEV inventory percentage. This feeds directly into V2G revenue projection for the dealer pitch.',
+    },
+    documents: {
+      title:'Document Compliance Check',
+      checks:[
+        'Look for RISC (Retail Installment Sales Contract) forms — should be Reynolds/DT integrated',
+        'Check if Carfax/AutoCheck printouts are attached to windshields — CA disclosure requirement',
+        'Verify "Buyer\'s Guide" (FTC required) on all used vehicles',
+        'Look for Proposition 65 warning signs if service/parts department present',
+        'Check advertising displayed in dealership — verify license number and pricing disclosures',
+        'Look for OSHA safety postings in service area (if applicable)',
+        'Check for Labor Code posters (CA requires specific wage/hour notices posted)',
+      ],
+      redFlags:[
+        'Missing Buyer\'s Guide on used vehicles: FTC violation, $10,000+ fine per vehicle',
+        'No Prop 65 warnings where required: CA AG enforcement risk',
+        'Pricing in ads without fees disclosed: CA Consumer Legal Remedies Act violation',
+      ],
+      nextStep:'Note any missing required postings. CASAER deal jacket system addresses all document compliance automatically.',
+    },
+    inventory: {
+      title:'Inventory & ZEV Assessment',
+      checks:[
+        'Count BEV (Battery Electric) vehicles — each qualifies for CVRP rebate via SALSA ($1K–$7.5K)',
+        'Note PHEV inventory — partial CVRP eligibility, different HVIP tier',
+        'Look for vehicle stickers showing original MSRP — needed for CVRP income eligibility check',
+        'Identify any commercial/fleet vehicles — separate HVIP commercial vehicle tier',
+        'Check model years on inventory — vehicles over 10 years may qualify for CC4A scrap program',
+        'Note any Teslas in inventory — enables Tesla Fleet API connector demo',
+        'Look for any diesel trucks (tow trucks, delivery) — DERA grant potential',
+      ],
+      redFlags:[
+        'Zero ZEV inventory with CARB ACF deadline approaching: critical conversation needed today',
+        'Late-model gas vehicles only: dealer may be unaware of CARB compliance timeline',
+        'Non-titled vehicles on lot: DMV compliance issue',
+      ],
+      nextStep:'Count ZEV inventory and photograph VIN tags on 2–3 examples. Each unit represents a CVRP rebate filing opportunity for SALSA.',
+    },
+    smog: {
+      title:'Smog Station Assessment',
+      checks:[
+        'Confirm BAR (Bureau of Automotive Repair) license posted — required for smog testing',
+        'Note Star Station certification (gold star) — higher test accuracy, required for certain vehicles',
+        'Check smog machine brand: Smog Check equipment must be BAR-certified',
+        'Verify test-and-repair vs. test-only station — affects what vehicles can be tested here',
+        'Look for equipment maintenance log — BAR audits equipment calibration records',
+        'Check if smog is on-site or if dealer uses a partner — note partner name for SALSA',
+        'Confirm smog certs are being attached to vehicle files at time of sale',
+      ],
+      redFlags:[
+        'No BAR license posted: operating without license is a misdemeanor',
+        'Expired equipment certification: invalid smog certificates = legal liability for dealer',
+        'No smog process documented: high risk for CASAER audit findings',
+      ],
+      nextStep:'Note BAR license number and Star Station status. SALSA deal jacket system auto-validates smog certs at point of sale.',
+    },
+    v2g: {
+      title:'V2G Charger Site Assessment',
+      checks:[
+        'Identify charger brand/model — Fermata FE-20 preferred for SMUD Rule 21 compatibility',
+        'Check amperage rating — 40A minimum for Level 2, 60A+ for V2G bidirectional',
+        'Look for bidirectional capability indicator (V2G, V2H, or VtoG labeling)',
+        'Confirm NEMA 14-50 or J1772 connection type — Tesla Semi requires J1772 CCS Combo',
+        'Check network connectivity: OCPP-compatible chargers needed for CESAR Agent 7 dispatch',
+        'Note wall mounting height — must meet ADA clearance requirements',
+        'Look for SMUD-approved interconnection signage — indicates prior Rule 21 approval',
+      ],
+      redFlags:[
+        'Level 1 (120V) chargers only: insufficient for Tesla Semi, replacement needed',
+        'Non-networked "dumb" chargers: cannot interface with CAISO/SMUD dispatch',
+        'No ground fault protection visible: NEC 625.54 requirement',
+      ],
+      nextStep:'If existing chargers present, note make/model for V2G compatibility assessment. Fermata FE-20 upgrade path takes 3–4 months to install.',
+    },
+    compliance: {
+      title:'Compliance Issue Analysis',
+      checks:[
+        'Document the specific violation visible — photograph it with timestamp',
+        'Cross-reference against CASAER\'s 127 California compliance rules',
+        'Note which enforcement pathway applies (DMV, CARB, IRS, Labor, DA, AG)',
+        'Assess financial exposure: calculate potential penalties using CASAER scale',
+        'Determine if issue is ongoing or one-time event',
+        'Check if dealer is aware of the issue — willful vs. inadvertent affects penalties',
+        'Consider whether CDLS/SALSA enrollment would have prevented this issue',
+      ],
+      redFlags:[
+        'Pattern violations (multiple instances): indicates systemic process failure',
+        'Willful non-disclosure: escalated penalties + potential license action',
+        'Consumer harm elements: AG/DA referral territory',
+      ],
+      nextStep:'CDLS ANGLE: This is where SALSA pays for itself. The $299/month subscription prevents exactly this type of liability. Use as pivot to close.',
+    },
+    general: {
+      title:'General Visit Progress',
+      checks:[
+        'Review which checklist sections are complete vs. pending',
+        'Identify the highest-value uncompleted items (HVIP + CARB ACF = most urgent)',
+        'Check field notes for outstanding action items',
+        'Assess dealer engagement level — are they asking questions or resistant?',
+        'Confirm you have all required contact information before leaving',
+        'Verify SALSA Magic Link has been sent and dealer has received it',
+      ],
+      redFlags:[
+        'No contact info collected: cannot follow up effectively',
+        'HVIP deadline not discussed: $330K opportunity left on table',
+        'No SALSA agreement: cannot file grants on their behalf',
+      ],
+      nextStep:'Run CASAER compliance audit before leaving lot. The score gives the dealer a tangible reason to sign up immediately.',
+    },
+  },
+
+  // ── STEP-BY-STEP NEXT ACTION LOGIC ─────────────────────────────
+  // Each item ID maps to: what to do if NOT checked
+  itemActions: {
+    fc1: { title:'Get Dealer Legal Name + DBA',             action:'Ask to see the DMV dealer license on the wall. Take a photo. Cross-reference name on license with business signage and any CNCDA records.', contact:'Office Manager or Owner', category:'compliance', link:'https://www.dmv.ca.gov/portal/vehicle-industry-services/occupational-licensing/dealer-licensing/dealer-license-lookup/' },
+    fc2: { title:'Verify License Currency',                 action:'Look for DMV license posted on the wall (required by law). Check expiration month/year. If expired, this is a critical compliance flag — dealer is operating illegally.', contact:'Owner / GM', category:'compliance', link:'https://www.dmv.ca.gov/portal/vehicle-industry-services/occupational-licensing/dealer-licensing/dealer-license-lookup/' },
+    fc3: { title:'Deliver CDLS Value Pitch',                action:'Lead with the money: "We can recover $330,000 per truck in HVIP incentives, and your idle trucks earn $18K–$45K/year in grid revenue. All you do is sign up." Use CDLS Incentive Matrix to show numbers.', contact:'Owner / GSM', category:'revenue', link:null },
+    fc4: { title:'Collect Decision-Maker Contact Info',     action:'Before leaving: get direct mobile + personal email from the owner or GM. Business cards often go to spam. Personal contacts = 3x follow-up success rate.', contact:'Owner / GM / Finance Director', category:'general', link:null },
+    fc5: { title:'Confirm Monthly Volume',                  action:'Ask: "About how many vehicles do you move through here each month?" Then: "At [X] units/month that\'s about [X × $299/unit after 6 months] in SALSA compliance savings annually."', contact:'GM / Sales Manager', category:'revenue', link:null },
+    ca1: { title:'CARB ACF Registration — URGENT',          action:'Open arb.ca.gov/acf on your phone RIGHT NOW and walk them through the 5-minute registration process. This is required before any HVIP application can be filed. Zero cost to dealer.', contact:'Owner or Office Manager (needs FEIN)', category:'compliance', link:'https://www.arb.ca.gov/msprog/acf/acf.htm' },
+    ca2: { title:'DMV License Check',                       action:'Ask to see the dealer license posted in the office. Check the expiration date. Run the license number through the DMV lookup on your phone to verify current status and bond amount.', contact:'Office Manager', category:'compliance', link:'https://www.dmv.ca.gov/portal/vehicle-industry-services/occupational-licensing/dealer-licensing/dealer-license-lookup/' },
+    ca3: { title:'Confirm Smog Process',                    action:'Ask: "Walk me through what happens when you sell a gas car — how does the smog cert get attached to the deal?" If answer is vague or inconsistent, flag as CASAER audit finding.', contact:'F&I Manager or Service Manager', category:'compliance', link:'https://www.bar.ca.gov/consumer/smog_station_information.html' },
+    ca4: { title:'Form 8300 Cash Workflow',                 action:'Ask: "What\'s your process when a customer pays $10,000+ in cash or money orders?" Dealers must file IRS Form 8300 within 15 days. SALSA automates this filing — great pivot to show value.', contact:'Finance Manager / F&I', category:'compliance', link:'https://www.irs.gov/businesses/small-businesses-self-employed/form-8300-and-reporting-cash-payments-of-over-10000' },
+    ca5: { title:'Odometer Disclosure Process',             action:'Ask to see a sample deal jacket from a recent transaction. Check if odometer disclosure statement is present. Federal Odometer Act applies to all vehicles under 10 years old.', contact:'F&I Manager', category:'compliance', link:null },
+    ca6: { title:'Review Last 3 Advertisements',            action:'Ask to pull up their website or last Facebook/Cargurus ad on your phone. Check: is the final price visible? Is the dealer license number shown? Are EV tax credit amounts listed accurately?', contact:'Marketing or Owner', category:'compliance', link:'https://oag.ca.gov/consumers/general/advertising' },
+    ca7: { title:'Verify CDTFA Permit Active',              action:'Ask: "Is your seller\'s permit current with CDTFA?" A simple CDTFA account lookup confirms active status. Lapsed permits = back-taxes liability. CASAER flags this automatically.', contact:'Office Manager / Controller', category:'compliance', link:'https://www.cdtfa.ca.gov/services/permits-and-licenses.html' },
+    hv1: { title:'HVIP Pre-Registration — DO THIS NOW',     action:'Open californiahvip.org. The pre-registration takes 10 minutes and is 100% free. Sept 9, 2026 deadline is non-negotiable. After that date, dealer loses access to up to $330,000 per Tesla Semi. Ask owner to open laptop right now.', contact:'Owner (needs FEIN + CA Dealer License #)', category:'revenue', link:'https://www.californiahvip.org/' },
+    hv2: { title:'Explain IRA 45W Federal Credit',          action:'Tell dealer: "On top of HVIP, the IRS gives you 30% of the incremental cost — up to $40,000 per truck — as a federal tax credit. That\'s an additional $40K on your tax return." Show the stacking math.', contact:'Owner / Controller', category:'revenue', link:'https://www.irs.gov/credits-deductions/commercial-clean-vehicle-credit' },
+    hv3: { title:'Explain IRA 30C Charger Credit',          action:'Tell dealer: "Every CDLS V2G charger we install at your lot — you can claim 30% of the cost as a federal tax credit, up to $100,000 per charger. CDLS installs at no cost to you, but you can still claim the credit."', contact:'Owner / Controller / CPA', category:'revenue', link:'https://www.irs.gov/credits-deductions/alternative-fuel-vehicle-refueling-property-credit' },
+    hv4: { title:'Run CDLS Incentive Matrix Walkthrough',   action:'Walk through the stack: HVIP ($330K) + IRA 45W ($40K) + IRA 30C ($100K charger) + SMUD rebates ($5K) + LCFS ongoing credits. A $720K Tesla Semi fleet can be acquired for ~$92K net. Write this on paper for the dealer to keep.', contact:'Owner + Controller', category:'revenue', link:null },
+    hv5: { title:'Calculate ROI vs. Current Hauler',        action:'Ask: "What do you currently pay per vehicle move?" Industry average is $285–$400/car. CDLS charges $195–$220. For 50 cars/month: savings of $3,750–$9,000/month. Plus $330K in HVIP. Breakeven is typically month 3.', contact:'GM / Operations Manager', category:'revenue', link:null },
+    hv6: { title:'Explain LCFS Credits',                    action:'Tell dealer: "Every mile our ZEV trucks drive generates a Low Carbon Fuel Standard credit. We automate the enrollment and pay you $24.68 per haul, deposited as $CARBON tokens you can cash out quarterly."', contact:'Owner / Controller', category:'revenue', link:'https://www.arb.ca.gov/fuels/lcfs/lcfs.htm' },
+    v1:  { title:'Assess Lot for Semi Clearance',           action:'Walk the lot with the facilities manager. Tesla Semi needs: 55ft turning radius, 13.5ft overhead clearance (check any overhangs), and 2 accessible stalls. Note GPS coordinates of proposed charger location.', contact:'Facilities Manager / Owner', category:'v2g', link:'https://www.tesla.com/semi/design' },
+    v2:  { title:'Check Electrical Panel for 3-Phase',      action:'Ask facilities manager to show you the main electrical panel. You\'re looking for: 3-phase service (needed for Fermata FE-20), available breaker capacity (2× 60A slots), and main breaker rating (200A minimum). Photograph the panel nameplate.', contact:'Facilities Manager / Electrician', category:'v2g', link:'https://www.fermataenergy.com/products/fe-20' },
+    v3:  { title:'Get SMUD Account Number',                 action:'Ask office manager for the utility account number on their SMUD bill. Or find it on the meter (typically on a sticker). Required for SMUD Rule 21 interconnection pre-screening and V2G program enrollment.', contact:'Office Manager / Controller', category:'v2g', link:'https://www.smud.org/en/For-Your-Business' },
+    v4:  { title:'Photograph Electrical Panel for SLD',     action:'Take 3 photos: (1) full panel face with breakers visible, (2) nameplate with amperage/voltage specs, (3) wide shot showing panel location relative to meter. SALSA SLD Engineering Agent converts these to an official SMUD Single Line Diagram automatically.', contact:'Facilities Manager', category:'v2g', link:null },
+    v5:  { title:'Confirm Internet at Lot',                 action:'Ask: "Do you have reliable WiFi or cellular coverage in the back of the lot?" CESAR requires persistent connection for real-time CAISO price signals. If cell coverage is weak, Verizon/AT&T fixed LTE is the backup.', contact:'IT / Office Manager', category:'tech', link:null },
+    v6:  { title:'Close on V2G Revenue Opportunity',        action:'Show dealer the V2G math: "100 trucks × $30K average annual V2G revenue = $3M/year — and you have none of the capital cost. We install, own, and maintain the chargers. You just let us plug in." Get verbal commitment.', contact:'Owner', category:'revenue', link:'https://www.caiso.com/market/Pages/ProductInformation/EmergencyLoadReductionProgram.aspx' },
+    v7:  { title:'Take SLD Panel Photo Before Leaving',     action:'BEFORE LEAVING: Take panel photo (see v4 above). This is the single action that starts the SMUD interconnection clock. Without this photo, SMUD application cannot be started. Text to Rebecca McNeil immediately after.', contact:'Facilities Manager', category:'v2g', link:null },
+    tc1: { title:'Identify DMS Platform',                   action:'Ask: "What dealer management system do you use?" CDK, Reynolds & Reynolds, Dealertrack, PBS, DealerSocket, Tekion, or VinSolutions. This single answer determines Magic Link authentication method.', contact:'F&I Manager / IT / Office Manager', category:'tech', link:null },
+    tc2: { title:'Send Magic Link Email',                   action:'Once DMS is identified, send the Magic Link from SALSA admin dashboard. Give dealer principal your phone to click the link — watch the 60-second connection happen live. It\'s the single most powerful demo CDLS has.', contact:'Dealer Principal (needs email access on phone)', category:'tech', link:null },
+    tc3: { title:'Run Deal Jacket Demo',                    action:'Ask to see 3 recent deal files. Show how SALSA generates a complete, audit-ready deal jacket in 2 minutes vs. the current process. If they spend 4+ hours/deal on compliance paperwork, that\'s the ROI case.', contact:'F&I Manager', category:'tech', link:null },
+    tc4: { title:'Generate CASAER Compliance Score',        action:'Run "casaer audit dealer [DEALER_ID]" from SALSA dashboard. Email the PDF score report to the dealer principal while you\'re still in the meeting. A score below 80 is usually enough to close the deal on-site.', contact:'Owner / GM', category:'compliance', link:null },
+    tc5: { title:'Enroll Dealer in $HAUL Token Program',    action:'Explain: "Every vehicle we haul for you earns 100 $HAUL tokens. After 1,000 deliveries, you have governance rights in the CDLS cooperative. It\'s ownership in the platform that\'s hauling your inventory."', contact:'Owner', category:'revenue', link:null },
+    tc6: { title:'Activate CESAR Agent 1 for Dealer',       action:'Log into CESAR dashboard and manually trigger Agent 1 for this dealer\'s account. The 48-hour automated qualification process begins immediately — generates compliance profile + grant eligibility + route optimization.', contact:'[Internal — no dealer action needed]', category:'tech', link:null },
+    tc7: { title:'Check for Tesla Fleet API Eligibility',   action:'Ask: "Does your dealership operate any Tesla vehicles — service loaners, delivery fleet, demo cars?" Any Tesla in the fleet enables the Fleet API connector, which feeds directly into V2G dispatch optimization.', contact:'Fleet Manager / GM', category:'tech', link:'https://developer.tesla.com/docs/fleet-api' },
+    cl1: { title:'Present Founding Dealer Term Sheet',      action:'Pull up the term sheet. Walk through: $500K commitment, 20 founding members, direct co-investment alongside CalPERS Emerging Manager Program. Founding dealers get priority HVIP processing, lowest rate structure, and $CDLS governance tokens.', contact:'Owner / Investor Principal', category:'revenue', link:null },
+    cl2: { title:'Close on $299/Month Subscription',        action:'Frame it as: "Less than $10/day. One CASAER compliance audit that prevents one DMV violation pays for 5 years of subscription. Deal Jackets alone save your F&I team 3 hours per deal." Get credit card or ACH today.', contact:'Owner / Controller', category:'revenue', link:null },
+    cl3: { title:'Get SALSA Partnership Agreement Signed',  action:'Pull up DocuSign on your phone. The SALSA agreement is the gating document for all grant filing. Without it, CDLS legally cannot submit CC4A, CVRP, DERA, or SMUD applications on dealer\'s behalf. Get this before leaving.', contact:'Owner (legal signatory)', category:'grant', link:'https://docusign.com' },
+    cl4: { title:'Schedule Next Meeting On-Site',           action:'Before you walk out: open your calendar app and schedule the follow-up while the dealer watches. Specific date + time = 4× higher show rate than "I\'ll follow up." CESAR Agent 1 sends automated reminder 24 hours before.', contact:'Owner / GM', category:'general', link:null },
+    cl5: { title:'Ask for 3 Dealer Referrals',              action:'Script: "Who are 3 other dealers you respect in this market? Could you send them a quick text introducing me?" Warm referrals convert at 40% vs. 12% cold outreach. One referral request = potentially 3 more visits.', contact:'Owner', category:'revenue', link:null },
+    cl6: { title:'Add Visit Summary to SALSA CRM',          action:'Before driving away: open SALSA CRM and create the visit summary. Include: contact info collected, checklist completion status, outstanding items, next steps agreed, and any CASAER compliance flags observed.', contact:'[Self — do this in the parking lot]', category:'tech', link:null },
+  },
+
+  // ── GRANT ELIGIBILITY LOGIC ─────────────────────────────────────
+  grantRules: [
+    { grant:'HVIP ($330K/truck)', requires:['ca1','fc2'], description:'CARB ACF registered + valid CA Dealer License' },
+    { grant:'IRA Section 45W ($40K/truck)', requires:['hv1'], description:'HVIP pre-registered (must be commercial entity)' },
+    { grant:'IRA Section 30C ($100K/charger)', requires:['v2','v3'], description:'3-phase panel confirmed + SMUD account available' },
+    { grant:'CVRP ($7.5K/vehicle)', requires:['ca1','ca2'], description:'CARB ACF registered + active DMV license' },
+    { grant:'CC4A ($19.5K/customer)', requires:['cl3'], description:'SALSA partnership agreement signed' },
+    { grant:'LCFS Credits ($24.68/haul)', requires:['tc5','ca1'], description:'$HAUL token enrolled + CARB ACF active' },
+    { grant:'DERA ($100K)', requires:['ca2','v1'], description:'Valid dealer license + lot has commercial vehicle space' },
+    { grant:'SMUD V2G Rebates ($5K/charger)', requires:['v2','v3'], description:'3-phase panel + SMUD account confirmed' },
+    { grant:'CAISO ELRP ($2/kWh)', requires:['v2','v3','v5'], description:'3-phase + SMUD account + internet confirmed' },
+  ],
+
+  // ── OBJECTION HANDLING ──────────────────────────────────────────
+  objectionScripts: [
+    {
+      q:'We already have a hauler. Why would we switch?',
+      a:'I\'m not asking you to switch today — I\'m asking you to register for $330,000 in free government vouchers before September 9th. That takes 10 minutes and costs nothing. What you do with those vouchers is up to you. But if you don\'t register, you can\'t use them. Can I walk you through the form right now?'
+    },
+    {
+      q:'$299/month is too expensive.',
+      a:'One DMV citation for a missing Buyer\'s Guide is $1,000. One CDTFA audit for an unfiled Form 8300 is $25,000. One CARB violation is $37,500/day. Our $299/month actively monitors all 127 California compliance rules and generates deal jackets that make those violations essentially impossible. What\'s the most expensive compliance issue you\'ve dealt with in the last 3 years?'
+    },
+    {
+      q:'We don\'t have time for this right now.',
+      a:'The two things that take zero time and have hard deadlines: CARB ACF registration (required for HVIP, 10 minutes, free) — deadline is now, and HVIP pre-registration (also 10 minutes, free) — deadline is September 9, 2026. Everything else can wait. Can we do those two right now on your laptop?'
+    },
+    {
+      q:'We\'re not interested in electric trucks.',
+      a:'Totally understand. The Advanced Clean Fleets regulation doesn\'t ask if you\'re interested — it sets a mandatory adoption timeline. The question is whether you access $330K per truck in incentives or pay for the same trucks at full price. CDLS just helps you capture the incentives you\'re entitled to. The trucks are coming either way.'
+    },
+    {
+      q:'How do we know CDLS will be around in 5 years?',
+      a:'Fair question. We have $5M committed from CalPERS Emerging Manager Program and $10M from 20 founding dealer partners — that\'s $15M in committed capital. CalPERS doesn\'t commit to programs that won\'t be around. We can share the term sheet if you want to see the capitalization structure.'
+    },
+    {
+      q:'What if the V2G chargers damage our electrical system?',
+      a:'CDLS carries comprehensive liability insurance on all installed equipment, and Fermata Energy is the manufacturer — their FE-20 is certified to UL 1741 and IEEE 1547. SMUD requires Rule 21 compliance before any charger goes live. Your electrical system is actually protected by more regulatory oversight than your existing panels.'
+    },
+  ],
+
+  // ── QUICK REFERENCE FACTS ───────────────────────────────────────
+  quickFacts: [
+    { q:'HVIP deadline?',               a:'September 9, 2026. Pre-register FREE at californiahvip.org. Up to $330,000 per Class 8 ZEV truck (Tesla Semi). Deadline is hard — no extensions.' },
+    { q:'CARB ACF requirement?',        a:'Free registration at arb.ca.gov/acf. Required before ANY HVIP application. Takes 10 minutes. Need: business FEIN, CA Dealer License #, business address.' },
+    { q:'What is the Triple Arbitrage?', a:'(1) Regulatory Arbitrage: CARB ACF forces ZEV adoption, CDLS profits while competitors struggle. (2) Energy Arbitrage: Idle trucks earn $18K–$45K/yr via V2G grid services. (3) Capital Arbitrage: Incentive stacking reduces $720K truck to $92K net (54–97% cost reduction).' },
+    { q:'V2G revenue potential?',       a:'Node 001 (100 trucks): $3M/year from V2G alone. Per truck: $18K–$45K/year. CAISO ELRP: $2/kWh × 500kWh × 25 events = $25K/truck/summer. Plus ongoing LCFS credits.' },
+    { q:'CDLS vs. competitors?',        a:'CDLS carries 9 vehicles per load (vs. 6 for diesel competitors) using lightweight aluminum trailers — 9% better payload. Plus we generate $CARBON tokens and V2G revenue on every haul. No competitor does this.' },
+    { q:'CalPERS investment?',          a:'$5M committed from CalPERS Emerging Manager Program + $10M from 20 founding dealer partners = $15M committed capital. CalPERS LP close targeted with full dealer network.' },
+    { q:'SALSA deal jackets?',          a:'Auto-generates: vehicle title, smog cert, odometer disclosure, RISC, Form 8300 (if applicable), CARB ACF cert, advertising compliance record, blockchain cert (SHA-256 + Polygon L2), CASAER compliance score. Takes 2 minutes vs. 4–8 hours manually.' },
+    { q:'$HAUL token mechanics?',       a:'100 $HAUL tokens per vehicle delivered. 1,000 hours verified work = deed of title for modular housing unit (NRD Initiative). Tokens vest as cooperative equity in CDLS Platform.' },
+    { q:'Form 8300 rules?',             a:'Required: any cash/money order payment >$10,000. File with IRS within 15 days of transaction. SALSA auto-detects threshold and generates + files Form 8300 automatically.' },
+    { q:'SMUD Rule 21?',               a:'California regulation governing electric grid interconnection. Required for V2G bidirectional charging. CDLS handles full application — requires: SMUD account #, SLD diagram, load analysis, interconnection agreement. Takes 8–12 weeks to approve.' },
+    { q:'Dealer license bond requirement?', a:'California B&P Code §11710: minimum $50,000 surety bond for licensed dealers. Bond must be current and on file with DMV. CASAER flags expired bonds automatically.' },
+    { q:'Advanced Clean Fleets deadlines?', a:'2024: Large fleets (100+ trucks) begin ZEV reporting. 2025: Medium fleets begin. 2035: All new Class 8 trucks must be ZEV for in-state sale. Non-compliance: up to $37,500/day per vehicle.' },
+  ],
+};
+
+// ═══════════════════════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════════════════════
+let checked = JSON.parse(localStorage.getItem('cdls_checked')||'{}');
+let notes   = JSON.parse(localStorage.getItem('cdls_notes')  ||'{}');
+let analyses= JSON.parse(localStorage.getItem('cdls_analyses')||'[]');
+let currentDealer='', currentFilter='all', expandedNotes=new Set();
+let capturedPhoto=null, selectedContext=new Set(['general']);
+let kbExpanded={};
+
+// ═══════════════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded',()=>{
+  document.getElementById('dateBadge').textContent=
+    new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
+  render();
+  document.getElementById('dealerInput').addEventListener('keydown',e=>{if(e.key==='Enter')startDealer();});
+  document.getElementById('quickInput').addEventListener('keydown',e=>{if(e.key==='Enter')quickCapture();});
+});
+
+function startDealer(){
+  const v=document.getElementById('dealerInput').value.trim();
+  if(!v)return;
+  currentDealer=v;
+  document.getElementById('dealerCard').classList.add('visible');
+  document.getElementById('dealerCardName').textContent=currentDealer;
+  document.getElementById('dealerCardMeta').textContent=
+    'Started: '+new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'})
+    +'  ·  Julio Umanzor, CEO  ·  CDLS Platform 3.0';
+  updateScore();render();
+}
+
+function filterTab(f,el){
+  currentFilter=f;
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  render();
+}
+
+function toggleItem(id){
+  checked[id]=!checked[id];
+  localStorage.setItem('cdls_checked',JSON.stringify(checked));
+  updateScore();render();
+  if(checked[id])showFlash('✓ Done!');
+}
+
+function toggleNote(id){
+  if(expandedNotes.has(id))expandedNotes.delete(id);else expandedNotes.add(id);
+  render();
+}
+
+function saveNote(id,v){
+  notes[id]=v;
+  localStorage.setItem('cdls_notes',JSON.stringify(notes));
+}
+
+function quickCapture(){
+  const inp=document.getElementById('quickInput');
+  const v=inp.value.trim();
+  if(!v)return;
+  const c=JSON.parse(localStorage.getItem('cdls_captures')||'[]');
+  c.push({text:v,dealer:currentDealer||'General',time:new Date().toISOString()});
+  localStorage.setItem('cdls_captures',JSON.stringify(c));
+  inp.value='';
+  showFlash('📝 Captured!');
+}
+
+function updateScore(){
+  const all=CHECKLIST.flatMap(s=>s.items);
+  const total=all.length, done=all.filter(i=>checked[i.id]).length;
+  const pct=total?Math.round(done/total*100):0;
+  document.getElementById('progressCount').textContent=done+' / '+total+' complete';
+  document.getElementById('progressFill').style.width=pct+'%';
+  document.getElementById('scoreChecked').textContent=done;
+  document.getElementById('scoreRemain').textContent=total-done;
+  document.getElementById('scoreScore').textContent=pct+'%';
+}
+
+function showFlash(msg){
+  const f=document.getElementById('flash');
+  f.textContent=msg;f.className='flash show';
+  setTimeout(()=>f.classList.add('hide'),900);
+  setTimeout(()=>f.className='flash',1200);
+}
+
+// PHOTO
+function handlePhoto(inp){
+  const file=inp.files[0];if(!file)return;
+  const r=new FileReader();
+  r.onload=e=>{
+    capturedPhoto=e.target.result;
+    document.getElementById('photoPreview').src=capturedPhoto;
+    document.getElementById('photoWrap').style.display='block';
+    showFlash('📸 Photo ready!');
+  };
+  r.readAsDataURL(file);inp.value='';
+}
+
+function removePhoto(){
+  capturedPhoto=null;
+  document.getElementById('photoWrap').style.display='none';
+  document.getElementById('photoPreview').src='';
+}
+
+function toggleChip(el){
+  const c=el.dataset.ctx;
+  if(selectedContext.has(c)){selectedContext.delete(c);el.classList.remove('active');}
+  else{selectedContext.add(c);el.classList.add('active');}
+}
+
+function openAI(){
+  document.getElementById('aiOverlay').classList.add('open');
+  renderPrevAnalyses();
+}
+function closeAI(){document.getElementById('aiOverlay').classList.remove('open');}
+function closeAIifBg(e){if(e.target===document.getElementById('aiOverlay'))closeAI();}
+
+// ═══════════════════════════════════════════════════════════════════
+// OFFLINE AI ENGINE
+// ═══════════════════════════════════════════════════════════════════
+function runOfflineAnalysis(){
+  const all=CHECKLIST.flatMap(s=>s.items);
+  const done=all.filter(i=>checked[i.id]);
+  const pending=all.filter(i=>!checked[i.id]);
+  const pct=Math.round(done.length/all.length*100);
+  const ctxArr=[...selectedContext];
+
+  // ── BUILD NEXT STEPS (priority-ranked) ──────────────────────────
+  // Priority logic: urgent+unchecked > revenue+unchecked > section sequence
+  const urgentPending  = pending.filter(i=>i.tags.includes('urgent'));
+  const revenuePending = pending.filter(i=>i.tags.includes('revenue') && !i.tags.includes('urgent'));
+  const compliancePending = pending.filter(i=>i.tags.includes('compliance') && !i.tags.includes('urgent'));
+  const techPending    = pending.filter(i=>i.tags.includes('tech'));
+  const v2gPending     = pending.filter(i=>i.tags.includes('v2g'));
+
+  // Deduplicated priority order
+  const seen=new Set();
+  const prioritized=[];
+  [...urgentPending,...revenuePending,...compliancePending,...v2gPending,...techPending,...pending]
+    .forEach(i=>{ if(!seen.has(i.id)){seen.add(i.id);prioritized.push(i);} });
+
+  const top5=prioritized.slice(0,5);
+
+  // ── GRANT ELIGIBILITY ────────────────────────────────────────────
+  const eligibleGrants=KB.grantRules.filter(gr=>
+    gr.requires.every(req=>checked[req])
+  ).map(gr=>gr.grant);
+
+  const nearlyGrants=KB.grantRules.filter(gr=>
+    !gr.requires.every(req=>checked[req]) &&
+    gr.requires.filter(req=>!checked[req]).length===1
+  ).map(gr=>`${gr.grant} — 1 step away (need: ${gr.requires.filter(req=>!checked[req]).map(r=>r.toUpperCase()).join(', ')})`);
+
+  // ── URGENT FLAGS ─────────────────────────────────────────────────
+  const flags=[];
+  if(!checked.hv1) flags.push('HVIP Pre-Registration NOT done — $330K/truck at risk. Deadline: Sep 9, 2026');
+  if(!checked.ca1) flags.push('CARB ACF NOT registered — blocks ALL HVIP applications until complete');
+  if(!checked.ca2) flags.push('DMV Dealer License not verified — if expired, dealer is operating illegally');
+  if(!checked.cl3) flags.push('SALSA agreement not signed — CDLS cannot file grants on dealer\'s behalf');
+  if(pct < 25 && currentDealer) flags.push('Visit is <25% complete — prioritize urgent items before leaving lot');
+
+  // ── ASSESSMENT TEXT ──────────────────────────────────────────────
+  let assessment='';
+  if(pct === 0) assessment=`Starting visit${currentDealer?' at '+currentDealer:''}. Begin with compliance verification (DMV license + CARB ACF), then move to the HVIP pitch — that\'s the hook that opens every conversation.`;
+  else if(pct < 30) assessment=`Visit is ${pct}% complete at ${currentDealer||'this dealer'}. You\'re in the early stages. Focus on the urgent compliance items first — they create urgency and establish CDLS credibility before the revenue pitch.`;
+  else if(pct < 60) assessment=`Good progress — ${pct}% complete at ${currentDealer||'this dealer'}. ${done.length} items done, ${pending.length} remaining. You\'re past first contact. Now push on the revenue conversation and get the SALSA agreement signed.`;
+  else if(pct < 85) assessment=`Strong visit — ${pct}% complete. ${urgentPending.length} urgent items still pending. You\'re in the close phase. Focus on getting the term sheet reviewed and the SALSA partnership agreement signed before you leave.`;
+  else assessment=`Excellent visit — ${pct}% complete. Almost done. Final push: make sure the SALSA agreement is signed and the next meeting is scheduled. Document everything in the CRM before you leave the parking lot.`;
+
+  // ── PHOTO CONTEXT GUIDANCE ────────────────────────────────────────
+  let photoSection=null;
+  if(capturedPhoto && ctxArr.length){
+    const ctx=ctxArr.find(c=>KB.photoContext[c]) || 'general';
+    photoSection=KB.photoContext[ctx];
+  } else if(!capturedPhoto && ctxArr.length && ctxArr[0]!=='general'){
+    photoSection=KB.photoContext[ctxArr[0]||'general'];
+  }
+
+  // ── RENDER RESULTS ────────────────────────────────────────────────
+  const results=document.getElementById('aiResults');
+  results.classList.add('show');
+
+  let html=`
+    <div style="background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.3);
+      border-radius:10px;padding:12px 14px;margin-bottom:10px;font-size:13px;line-height:1.6;color:var(--text);">
+      <span style="font-family:var(--font-mono);font-size:9px;color:#C4B5FD;display:block;margin-bottom:4px;">
+        ⚡ OFFLINE AI · ${new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'})} · ${pct}% COMPLETE
+      </span>
+      ${assessment}
+    </div>`;
+
+  // Photo guidance
+  if(photoSection){
+    html+=`<div class="result-section">
+      <div class="result-section-title" style="color:var(--teal);">📸 ${capturedPhoto?'PHOTO ANALYSIS':'WHAT TO LOOK FOR'} — ${photoSection.title.toUpperCase()}</div>
+      <div class="photo-obs">`;
+    photoSection.checks.forEach((c,i)=>{
+      html+=`<div style="padding:3px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px;color:var(--muted);">
+        <span style="color:var(--teal);font-weight:600;">${i+1}.</span> ${c}</div>`;
+    });
+    if(photoSection.redFlags?.length){
+      html+=`<div style="margin-top:8px;font-family:var(--font-mono);font-size:10px;color:#FCA5A5;letter-spacing:.06em;">🚨 RED FLAGS TO WATCH FOR</div>`;
+      photoSection.redFlags.forEach(f=>{
+        html+=`<div style="font-size:12px;color:#FCA5A5;padding:3px 0;">⚠️ ${f}</div>`;
+      });
+    }
+    html+=`<div style="margin-top:8px;padding:8px;background:rgba(13,148,136,.1);border-radius:6px;font-size:12px;color:#5EEAD4;">
+      ➤ <strong>NEXT STEP:</strong> ${photoSection.nextStep}</div>`;
+    html+=`</div></div>`;
+  }
+
+  // Urgent flags
+  if(flags.length){
+    html+=`<div class="result-section">
+      <div class="result-section-title" style="color:#FCA5A5;">🚨 URGENT FLAGS</div>`;
+    flags.forEach(f=>{ html+=`<div class="flag-item">⚠️ ${f}</div>`; });
+    html+=`</div>`;
+  }
+
+  // Next steps
+  if(top5.length){
+    html+=`<div class="result-section">
+      <div class="result-section-title" style="color:var(--gold-light);">📋 TOP ${top5.length} NEXT STEPS</div>`;
+    const catColors={compliance:'#2563EB',revenue:'#D97706',v2g:'#0D9488',tech:'#7C3AED',grant:'#16A34A',general:'#7C3AED'};
+    top5.forEach((item,i)=>{
+      const act=KB.itemActions[item.id];
+      if(!act)return;
+      const col=catColors[act.category]||'#7C3AED';
+      html+=`<div class="ai-step" style="--step-col:${col};">
+        <div class="ai-step-num">STEP ${i+1} · ${act.category.toUpperCase()}</div>
+        <div class="ai-step-title">${act.title}</div>
+        <div class="ai-step-body">${act.action}</div>
+        ${act.contact?`<div style="font-size:11px;color:var(--teal);margin-top:4px;">👤 Talk to: ${act.contact}</div>`:''}
+        ${act.link?`<a href="${act.link}" target="_blank" class="ai-step-link">→ Open Resource ↗</a>`:''}
+      </div>`;
+    });
+    html+=`</div>`;
+  } else {
+    html+=`<div class="result-section">
+      <div style="font-size:13px;color:var(--green);text-align:center;padding:8px;">
+        🎉 All checklist items complete! Great visit.</div></div>`;
+  }
+
+  // Grant eligibility
+  if(eligibleGrants.length || nearlyGrants.length){
+    html+=`<div class="result-section">
+      <div class="result-section-title" style="color:var(--green);">💰 GRANT ELIGIBILITY STATUS</div>`;
+    if(eligibleGrants.length){
+      html+=`<div style="font-size:11px;color:var(--green);font-family:var(--font-mono);margin-bottom:5px;">ALREADY ELIGIBLE (can file now)</div>`;
+      eligibleGrants.forEach(g=>{ html+=`<div class="grant-elig-item">✅ ${g}</div>`; });
+    }
+    if(nearlyGrants.length){
+      html+=`<div style="font-size:11px;color:var(--gold);font-family:var(--font-mono);margin-top:8px;margin-bottom:5px;">ONE STEP AWAY</div>`;
+      nearlyGrants.forEach(g=>{ html+=`<div style="font-size:12px;color:var(--gold-light);padding:2px 0;">⟳ ${g}</div>`; });
+    }
+    html+=`</div>`;
+  }
+
+  // Pending items summary
+  if(pending.length){
+    html+=`<div class="result-section">
+      <div class="result-section-title" style="color:var(--dim);">REMAINING ITEMS (${pending.length})</div>`;
+    pending.forEach(item=>{
+      html+=`<div style="font-size:12px;color:var(--dim);padding:2px 0;
+        cursor:pointer;" onclick="closeAI();document.getElementById('sectionsContainer').scrollTop=0;">
+        ⬜ ${item.title}</div>`;
+    });
+    html+=`</div>`;
+  }
+
+  results.innerHTML=html;
+  document.getElementById('aiPanelBody').scrollTop=0;
+
+  // Save to history
+  analyses.unshift({
+    dealer:currentDealer||'General',time:new Date().toISOString(),
+    assessment,steps:top5.map(i=>KB.itemActions[i.id]).filter(Boolean),
+    photo:!!capturedPhoto, pct
+  });
+  if(analyses.length>12)analyses=analyses.slice(0,12);
+  localStorage.setItem('cdls_analyses',JSON.stringify(analyses));
+  renderPrevAnalyses();
+}
+
+function renderPrevAnalyses(){
+  const wrap=document.getElementById('prevWrap');
+  if(!analyses.length){wrap.innerHTML='';return;}
+  let html=`<div class="prev-title">PREVIOUS ANALYSES (${analyses.length})</div>`;
+  analyses.forEach((a,i)=>{
+    html+=`<div class="prev-item" onclick="loadPrev(${i})">
+      <div class="prev-meta">${a.dealer} · ${new Date(a.time).toLocaleDateString()} · ${a.pct||0}% complete${a.photo?' · 📸':''}</div>
+      <div class="prev-preview">${a.assessment||'Tap to view'}</div>
+    </div>`;
+  });
+  wrap.innerHTML=html;
+}
+
+function loadPrev(i){
+  const a=analyses[i];if(!a)return;
+  const r=document.getElementById('aiResults');r.classList.add('show');
+  const catColors={compliance:'#2563EB',revenue:'#D97706',v2g:'#0D9488',tech:'#7C3AED',grant:'#16A34A',general:'#7C3AED'};
+  let html=`<div style="background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.3);
+    border-radius:10px;padding:12px;margin-bottom:10px;font-size:12px;color:var(--muted);">
+    📅 Previous visit: ${new Date(a.time).toLocaleDateString()} — ${a.dealer}<br>
+    ${a.assessment||''}
+  </div>`;
+  (a.steps||[]).forEach((step,i)=>{
+    if(!step)return;
+    const col=catColors[step.category]||'#7C3AED';
+    html+=`<div class="ai-step" style="--step-col:${col};">
+      <div class="ai-step-num">STEP ${i+1} · ${(step.category||'').toUpperCase()}</div>
+      <div class="ai-step-title">${step.title||''}</div>
+      <div class="ai-step-body">${step.action||''}</div>
+    </div>`;
+  });
+  r.innerHTML=html;
+  document.getElementById('aiPanelBody').scrollTop=0;
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// KNOWLEDGE BASE TAB RENDER
+// ═══════════════════════════════════════════════════════════════════
+function renderKnowledgeBase(container){
+  // Objection Handling
+  let html=`<div class="kb-panel-wrap">
+    <div class="kb-panel-header" onclick="toggleKBPanel('objections')">
+      <span style="font-size:16px;">💬</span>
+      <span class="kb-panel-title">Objection Handling Scripts</span>
+      <span class="kb-panel-toggle ${kbExpanded.objections?'open':''}" id="kb-toggle-objections">▼</span>
+    </div>
+    <div class="kb-panel-body ${kbExpanded.objections?'open':''}" id="kb-body-objections">
+      <div class="kb-category">
+        <div class="kb-cat-title">TAP OBJECTION TO SEE YOUR SCRIPT</div>`;
+  KB.objectionScripts.forEach((o,i)=>{
+    html+=`<div class="kb-item" onclick="toggleKBItem('obj${i}')">
+      <div class="kb-item-q">❝ ${o.q}</div>
+      <div class="kb-item-a" id="kb-item-obj${i}">${o.a}</div>
+    </div>`;
+  });
+  html+=`</div></div></div>`;
+
+  // Quick Facts
+  html+=`<div class="kb-panel-wrap">
+    <div class="kb-panel-header" onclick="toggleKBPanel('facts')">
+      <span style="font-size:16px;">⚡</span>
+      <span class="kb-panel-title">Quick Reference Facts</span>
+      <span class="kb-panel-toggle ${kbExpanded.facts?'open':''}" id="kb-toggle-facts">▼</span>
+    </div>
+    <div class="kb-panel-body ${kbExpanded.facts?'open':''}" id="kb-body-facts">
+      <div class="kb-category">
+        <div class="kb-cat-title">TAP QUESTION FOR ANSWER</div>`;
+  KB.quickFacts.forEach((f,i)=>{
+    html+=`<div class="kb-item" onclick="toggleKBItem('fact${i}')">
+      <div class="kb-item-q">Q: ${f.q}</div>
+      <div class="kb-item-a" id="kb-item-fact${i}">${f.a}</div>
+    </div>`;
+  });
+  html+=`</div></div></div>`;
+
+  // Photo Context Guide
+  html+=`<div class="kb-panel-wrap">
+    <div class="kb-panel-header" onclick="toggleKBPanel('photo')">
+      <span style="font-size:16px;">📸</span>
+      <span class="kb-panel-title">Field Photo Guides</span>
+      <span class="kb-panel-toggle ${kbExpanded.photo?'open':''}" id="kb-toggle-photo">▼</span>
+    </div>
+    <div class="kb-panel-body ${kbExpanded.photo?'open':''}" id="kb-body-photo">`;
+  Object.entries(KB.photoContext).forEach(([key,ctx])=>{
+    html+=`<div class="kb-category">
+      <div class="kb-cat-title" style="color:var(--teal);">${ctx.title.toUpperCase()}</div>`;
+    ctx.checks.slice(0,3).forEach(c=>{
+      html+=`<div style="font-size:12px;color:var(--muted);padding:3px 0;border-bottom:1px solid var(--border);">▸ ${c}</div>`;
+    });
+    html+=`<div style="font-size:11px;color:#5EEAD4;padding:6px 0;">➤ ${ctx.nextStep}</div>`;
+    html+=`</div>`;
+  });
+  html+=`</div></div>`;
+
+  // Compliance Quick Reference
+  html+=`<div class="kb-panel-wrap">
+    <div class="kb-panel-header" onclick="toggleKBPanel('compliance')">
+      <span style="font-size:16px;">⚖️</span>
+      <span class="kb-panel-title">Compliance Penalties Reference</span>
+      <span class="kb-panel-toggle ${kbExpanded.compliance?'open':''}" id="kb-toggle-compliance">▼</span>
+    </div>
+    <div class="kb-panel-body ${kbExpanded.compliance?'open':''}" id="kb-body-compliance">
+      <div class="kb-category"><div class="kb-cat-title">VIOLATION → FINE</div>`;
+  const penalties=[
+    ['Missing Buyer\'s Guide (FTC)','$10,000+ per vehicle'],
+    ['Form 8300 not filed (IRS)','$25,000+ civil penalty per violation'],
+    ['CARB ACF non-compliance','$37,500/day per vehicle violation'],
+    ['DMV unlicensed operation','Misdemeanor + dealer license revocation'],
+    ['CDTFA unpaid sales tax','Back taxes + 50% fraud penalty'],
+    ['Labor Code wage theft','$200/employee/pay period + civil'],
+    ['Odometer rollback (federal)','Up to 3 years prison + $10,000/violation'],
+    ['Advertising violations (B&P)','$2,500–$25,000 per ad'],
+    ['Lapsed surety bond','Immediate license suspension by DMV'],
+    ['HVIP fraud','Criminal + civil + $10K fine per violation'],
+  ];
+  penalties.forEach(([viol,fine])=>{
+    html+=`<div style="display:flex;justify-content:space-between;padding:6px 0;
+      border-bottom:1px solid var(--border);font-size:12px;">
+      <div style="color:var(--muted);flex:1;">${viol}</div>
+      <div style="color:#FCA5A5;font-family:var(--font-mono);font-size:11px;text-align:right;min-width:100px;">${fine}</div>
+    </div>`;
+  });
+  html+=`</div></div></div>`;
+
+  container.innerHTML=html;
+}
+
+function toggleKBPanel(id){
+  kbExpanded[id]=!kbExpanded[id];
+  document.getElementById('kb-body-'+id).classList.toggle('open',kbExpanded[id]);
+  const t=document.getElementById('kb-toggle-'+id);
+  if(t)t.classList.toggle('open',kbExpanded[id]);
+}
+
+function toggleKBItem(id){
+  const el=document.getElementById('kb-item-'+id);
+  if(el)el.classList.toggle('open');
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// RENDER
+// ═══════════════════════════════════════════════════════════════════
+function buildLinks(links){
+  if(!links?.length)return'';
+  return'<div class="item-links">'+links.map(l=>
+    `<a href="${l.url}" target="_blank" class="item-link ${l.cls}" onclick="event.stopPropagation()">🔗 ${l.label}</a>`
+  ).join('')+'</div>';
+}
+
+function render(){
+  const container=document.getElementById('sectionsContainer');
+  container.innerHTML='';
+  if(currentFilter==='grants'){renderGrants(container);return;}
+  if(currentFilter==='knowledge'){renderKnowledgeBase(container);return;}
+
+  CHECKLIST.forEach(sec=>{
+    const filtered=sec.items.filter(item=>{
+      if(currentFilter==='all')return true;
+      if(currentFilter==='done')return checked[item.id];
+      if(currentFilter==='urgent')return item.tags.includes('urgent');
+      return item.tags.includes(currentFilter);
+    });
+    if(!filtered.length)return;
+
+    const secDone=filtered.filter(i=>checked[i.id]).length;
+    const secDiv=document.createElement('div');
+    secDiv.className='section';
+    const cClass=(secDone===filtered.length&&filtered.length>0)?'section-count done':'section-count';
+    secDiv.innerHTML=`<div class="section-header">
+      <span class="section-icon">${sec.icon}</span>
+      <span class="section-title">${sec.section}</span>
+      <span class="${cClass}">${secDone}/${filtered.length}</span>
+    </div>`;
+
+    filtered.forEach(item=>{
+      const div=document.createElement('div');
+      div.className='item'+(checked[item.id]?' checked':'')+(expandedNotes.has(item.id)?' has-note':'');
+      div.style.setProperty('--item-accent',item.accent);
+      const tagHTML=item.tags.map(t=>`<span class="tag tag-${t}">${t}</span>`).join('');
+      const noteVal=notes[item.id]||'';
+      div.innerHTML=`
+        <div class="check-circle" onclick="toggleItem('${item.id}')"><span class="check-mark">✓</span></div>
+        <div class="item-body">
+          <div class="item-title" onclick="toggleItem('${item.id}')">${item.title}</div>
+          <div class="item-sub">${item.sub}</div>
+          ${buildLinks(item.links)}
+          ${tagHTML?`<div class="item-tags">${tagHTML}</div>`:''}
+          <div class="item-actions">
+            <button class="action-btn note-btn" onclick="toggleNote('${item.id}')">
+              ${expandedNotes.has(item.id)?'Hide note':(noteVal?'📝 Note':'+ Add note')}
+            </button>
+          </div>
+          <div class="item-note-row">
+            <textarea class="item-note" placeholder="Field note..."
+              oninput="saveNote('${item.id}',this.value)">${noteVal}</textarea>
+          </div>
+        </div>`;
+      secDiv.appendChild(div);
+    });
+    container.appendChild(secDiv);
+  });
+
+  if(!container.children.length){
+    container.innerHTML=`<div style="text-align:center;padding:40px;color:var(--dim)">
+      <div style="font-size:36px;margin-bottom:12px">✅</div>
+      <div style="font-size:14px">Nothing to show.</div></div>`;
+  }
+  updateScore();
+}
+
+function renderGrants(container){
+  const s=document.createElement('div');
+  s.className='grants-summary';
+  s.innerHTML=`<div class="grants-summary-title">💰 CDLS GRANT CATALOG — ALL PROGRAMS</div>
+    <div class="grants-summary-sub">CDLS files all grants on behalf of enrolled dealers · Requires signed SALSA agreement</div>
+    <div class="grants-totals">
+      <div class="gtotal"><div class="gtotal-val">13</div><div class="gtotal-lbl">PROGRAMS</div></div>
+      <div class="gtotal"><div class="gtotal-val">$600K+</div><div class="gtotal-lbl">MAX/DEALER</div></div>
+      <div class="gtotal"><div class="gtotal-val">SALSA</div><div class="gtotal-lbl">FILES ALL</div></div>
+      <div class="gtotal"><div class="gtotal-val">5%</div><div class="gtotal-lbl">COMMISSION</div></div>
+    </div>`;
+  container.appendChild(s);
+  const hdr=document.createElement('div');
+  hdr.className='section-header';
+  hdr.innerHTML=`<span class="section-icon">🌱</span>
+    <span class="section-title">AVAILABLE PROGRAMS</span>
+    <span class="section-count">${GRANTS.length} programs</span>`;
+  container.appendChild(hdr);
+  GRANTS.forEach((g,i)=>{
+    const card=document.createElement('div');
+    card.className='grant-card';
+    card.style.setProperty('--gc-color',g.color);
+    card.style.animationDelay=(i*.04)+'s';
+    const sH=g.stackable.map(s=>`<span class="grant-stack-badge">⊕ ${s}</span>`).join('');
+    const lH=g.links.map(l=>`<a href="${l.url}" target="_blank" class="item-link ${l.cls}">🔗 ${l.label}</a>`).join('');
+    card.innerHTML=`
+      <div class="grant-header">
+        <div><div class="grant-name">${g.name}</div><div class="grant-agency">${g.agency}</div></div>
+        <div class="grant-amount">${g.amount}</div>
+      </div>
+      <div class="grant-desc">${g.desc}</div>
+      <div class="grant-meta"><span class="grant-deadline ${g.deadlineClass}">${g.deadline}</span>${sH}</div>
+      <div class="grant-links">${lH}</div>`;
+    container.appendChild(card);
+  });
+}
+function dismissInstallBanner(){
+  localStorage.setItem('cdls_banner_dismissed','1');
+  document.getElementById('installBanner').style.display='none';
+}
+
+// Show install banner logic
+(function(){
+  const dismissed=localStorage.getItem('cdls_banner_dismissed');
+  const isStandalone=window.navigator.standalone===true||
+    window.matchMedia('(display-mode:standalone)').matches;
+  // Show banner if: not dismissed, not already installed as PWA, running in Safari/browser
+  if(!dismissed && !isStandalone){
+    document.getElementById('installBanner').style.display='block';
+  }
+})();
+</script>
+</body>
+</html>

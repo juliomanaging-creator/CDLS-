@@ -1,0 +1,19 @@
+$path = "$env:USERPROFILE\Downloads"
+$rules = @{
+    "CDLS_ZEV_Logistics"        = "CDLS|ZEV_Logistics|Energy_Banking|Energize"
+    "CAESAR_Auditor_Platform"   = "CAESAR"
+    "Sovereign_Initiatives"     = "Sovereign"
+    "Grants_Tax_and_Incentives" = "8936|DOE|Greenhouse|Carbon|USDA|calca|UCLA"
+    "Dealership_and_Operations" = "GCAA|CMSA|SALSA|Vehicle_Transportation|DCAP|ASM|CAHSR"
+}
+
+foreach ($file in Get-ChildItem -Path $path -File) {
+    foreach ($category in $rules.Keys) {
+        if ($file.Name -match $rules[$category]) {
+            $dest = Join-Path $path $category
+            if (!(Test-Path $dest)) { New-Item -ItemType Directory -Path $dest | Out-Null }
+            Move-Item -Path $file.FullName -Destination $dest -Force
+            break
+        }
+    }
+}

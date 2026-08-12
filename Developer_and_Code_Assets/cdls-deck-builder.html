@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CDLS Deck Builder - AI Presentations</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    * { font-family: 'Inter', sans-serif; }
+    .gradient-text { background: linear-gradient(135deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .animate-float { animation: float 3s ease-in-out infinite; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    .slide-enter { animation: slideIn 0.3s ease-out; }
+    @keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+  </style>
+</head>
+<body class="bg-slate-900 min-h-screen">
+  <div id="app"></div>
+
+  <script>
+    // State
+    let state = {
+      step: 'home', // home, template, generating, editor, present
+      selectedTemplate: null,
+      prompt: '',
+      presentation: null,
+      currentSlide: 0,
+      theme: { name: 'Professional', bg: 'bg-slate-900', gradient: 'from-blue-600 to-indigo-600', light: false },
+      showThemes: false
+    };
+
+    // Templates
+    const TEMPLATES = {
+      investor: {
+        name: 'Investor Pitch',
+        icon: 'dollar-sign',
+        color: 'from-blue-600 to-indigo-600',
+        slides: [
+          { type: 'title', title: 'CA Dealer Logistics Syndicate', subtitle: 'Transforming California Auto Dealer Transportation' },
+          { type: 'problem', title: 'The Problem', points: ['$1.05/mile third-party hauling costs eating into margins', '95% visibility gap - no insight between investor meetings', 'CARB 2035 mandate requiring full fleet electrification'] },
+          { type: 'solution', title: 'Our Solution', points: ['Dealer-owned logistics cooperative reduces costs 25-35%', 'Digital engagement platform tracks stakeholder activity', 'Complete EV transition pathway with ROI tracking'] },
+          { type: 'metrics', title: 'Key Metrics', metrics: [{ label: 'Savings Per Vehicle', value: '$400-600' }, { label: 'CA Dealers', value: '1,200+' }, { label: 'Market Opportunity', value: '$2.4B' }] },
+          { type: 'traction', title: 'Traction & Validation', points: ['CNCDA partnership (largest dealer association in US)', 'South Bay Auto Auction pilot program', 'Letters of intent from 47 dealerships'] },
+          { type: 'team', title: 'Leadership Team', people: [{ name: 'Brian Maas', role: 'CNCDA President, 12+ years' }, { name: 'Tony Callaway', role: 'South Bay Auto Auction VP' }, { name: 'Chuck Tapp', role: 'Americas Auto Auction CEO' }] },
+          { type: 'ask', title: 'The Ask', subtitle: '$15M Series A', points: ['Fleet acquisition & EV infrastructure', 'Technology platform development', 'Market expansion across California'] },
+          { type: 'cta', title: 'Join the Syndicate', subtitle: 'Be part of the transformation in dealer logistics' }
+        ]
+      },
+      roi: {
+        name: 'ROI Analysis',
+        icon: 'trending-up',
+        color: 'from-emerald-600 to-teal-600',
+        slides: [
+          { type: 'title', title: 'Fleet ROI Analysis', subtitle: 'Your Personalized Savings Projection' },
+          { type: 'comparison', title: 'Current vs Syndicate', left: { label: 'Third Party Hauling', value: '$1.05/mi', desc: 'No control, variable pricing' }, right: { label: 'Syndicate Model', value: '$0.72/mi', desc: 'Member-owned, fixed costs' } },
+          { type: 'metrics', title: 'Your Annual Savings', metrics: [{ label: 'Per Vehicle', value: '$4,800' }, { label: 'Your 50 Vehicle Fleet', value: '$240,000' }, { label: '5 Year Projection', value: '$1.2M' }] },
+          { type: 'chart', title: 'Cumulative Savings Over Time', chartType: 'bar' },
+          { type: 'ev', title: 'EV Transition Benefits', points: ['$0.04/mile electricity vs $0.15/mile diesel', 'CARB compliance before 2035 deadline', 'Federal tax credits up to $40,000 per vehicle', 'Reduced maintenance costs (fewer moving parts)'] },
+          { type: 'cta', title: 'Start Saving Today', subtitle: 'Join 47 dealerships already committed' }
+        ]
+      },
+      dealRoom: {
+        name: 'Deal Summary',
+        icon: 'file-text',
+        color: 'from-purple-600 to-pink-600',
+        slides: [
+          { type: 'title', title: 'Investment Partnership', subtitle: 'CalPERS - CDLS Deal Room' },
+          { type: 'overview', title: 'Deal Overview', points: ['$15M Series A investment', 'Infrastructure-backed returns', '7-10 year partnership horizon', 'ESG-aligned transportation initiative'] },
+          { type: 'stakeholders', title: 'Key Decision Makers', people: [{ name: 'Investment Committee', role: 'Final approval authority' }, { name: 'ESG Review Board', role: 'Sustainability validation' }, { name: 'Legal & Compliance', role: 'Due diligence review' }] },
+          { type: 'timeline', title: 'Deal Timeline', milestones: [{ date: 'Week 1-2', item: 'Initial due diligence' }, { date: 'Week 3-4', item: 'Site visits & validation' }, { date: 'Week 5-6', item: 'Term sheet negotiation' }, { date: 'Week 7-8', item: 'Final approval & close' }] },
+          { type: 'next', title: 'Immediate Next Steps', points: ['Schedule follow-up call with investment committee', 'Provide detailed fleet acquisition plan', 'Arrange dealership site visits', 'Submit ESG impact documentation'] }
+        ]
+      }
+    };
+
+    const THEMES = [
+      { name: 'Professional', bg: 'bg-slate-900', gradient: 'from-blue-600 to-indigo-600', light: false },
+      { name: 'Modern', bg: 'bg-zinc-900', gradient: 'from-emerald-500 to-teal-500', light: false },
+      { name: 'Bold', bg: 'bg-black', gradient: 'from-orange-500 to-red-500', light: false },
+      { name: 'Clean', bg: 'bg-white', gradient: 'from-slate-600 to-slate-800', light: true },
+      { name: 'Royal', bg: 'bg-indigo-950', gradient: 'from-purple-500 to-pink-500', light: false }
+    ];
+
+    // Render functions
+    function renderSlide(slide, isPreview = false) {
+      const theme = state.theme;
+      const textColor = theme.light ? 'text-slate-800' : 'text-white';
+      const mutedColor = theme.light ? 'text-slate-600' : 'text-white/70';
+      const cardBg = theme.light ? 'bg-slate-100' : 'bg-white/10';
+      const titleSize = isPreview ? 'text-sm' : 'text-4xl md:text-5xl';
+      const subtitleSize = isPreview ? 'text-xs' : 'text-xl';
+
+      switch(slide.type) {
+        case 'title':
+          return `
+            <div class="flex flex-col items-center justify-center h-full text-center p-8">
+              <div class="inline-block px-4 py-1 rounded-full bg-gradient-to-r ${theme.gradient} text-white text-sm mb-6">
+                CA Dealer Logistics
+              </div>
+              <h1 class="${titleSize} font-bold ${textColor} mb-4">${slide.title}</h1>
+              <p class="${subtitleSize} ${mutedColor}">${slide.subtitle}</p>
+            </div>
+          `;
+
+        case 'problem':
+        case 'solution':
+        case 'traction':
+        case 'overview':
+        case 'ev':
+        case 'next':
+          return `
+            <div class="p-8 md:p-12 h-full">
+              <h2 class="${isPreview ? 'text-lg' : 'text-3xl md:text-4xl'} font-bold ${textColor} mb-8">${slide.title}</h2>
+              <div class="space-y-4 md:space-y-6">
+                ${(slide.points || []).map((point, i) => `
+                  <div class="flex items-start gap-4">
+                    <div class="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-gradient-to-r ${theme.gradient} flex items-center justify-center flex-shrink-0">
+                      <span class="text-white font-bold">${i + 1}</span>
+                    </div>
+                    <p class="${isPreview ? 'text-xs' : 'text-lg'} ${textColor} pt-1">${point}</p>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+
+        case 'metrics':
+          return `
+            <div class="p-8 md:p-12 h-full">
+              <h2 class="${isPreview ? 'text-lg' : 'text-3xl md:text-4xl'} font-bold ${textColor} mb-8">${slide.title}</h2>
+              <div class="grid grid-cols-3 gap-4 md:gap-8">
+                ${(slide.metrics || []).map(m => `
+                  <div class="${cardBg} rounded-2xl p-4 md:p-8 text-center">
+                    <div class="${isPreview ? 'text-lg' : 'text-3xl md:text-5xl'} font-bold bg-gradient-to-r ${theme.gradient} bg-clip-text text-transparent">
+                      ${m.value}
+                    </div>
+                    <div class="${isPreview ? 'text-xs' : 'text-sm md:text-base'} ${mutedColor} mt-2">${m.label}</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+
+        case 'comparison':
+          return `
+            <div class="p-8 md:p-12 h-full">
+              <h2 class="${isPreview ? 'text-lg' : 'text-3xl md:text-4xl'} font-bold ${textColor} mb-8">${slide.title}</h2>
+              <div class="grid grid-cols-2 gap-6 md:gap-12">
+                <div class="${theme.light ? 'bg-red-50 border-red-200' : 'bg-red-500/20 border-red-500/30'} border-2 rounded-2xl p-6 md:p-10 text-center">
+                  <div class="${isPreview ? 'text-xl' : 'text-4xl md:text-6xl'} font-bold text-red-500">${slide.left?.value}</div>
+                  <div class="${mutedColor} mt-2 font-medium">${slide.left?.label}</div>
+                  ${slide.left?.desc ? `<div class="${mutedColor} text-sm mt-1">${slide.left.desc}</div>` : ''}
+                </div>
+                <div class="${theme.light ? 'bg-green-50 border-green-200' : 'bg-green-500/20 border-green-500/30'} border-2 rounded-2xl p-6 md:p-10 text-center">
+                  <div class="${isPreview ? 'text-xl' : 'text-4xl md:text-6xl'} font-bold text-green-500">${slide.right?.value}</div>
+                  <div class="${mutedColor} mt-2 font-medium">${slide.right?.label}</div>
+                  ${slide.right?.desc ? `<div class="${mutedColor} text-sm mt-1">${slide.right.desc}</div>` : ''}
+                </div>
+              </div>
+              <div class="text-center mt-8">
+                <span class="inline-block px-6 py-2 bg-gradient-to-r ${theme.gradient} text-white rounded-full font-semibold">
+                  31% Savings
+                </span>
+              </div>
+            </div>
+          `;
+
+        case 'team':
+        case 'stakeholders':
+          return `
+            <div class="p-8 md:p-12 h-full">
+              <h2 class="${isPreview ? 'text-lg' : 'text-3xl md:text-4xl'} font-bold ${textColor} mb-8">${slide.title}</h2>
+              <div class="grid grid-cols-3 gap-4 md:gap-8">
+                ${(slide.people || []).map(p => `
+                  <div class="${cardBg} rounded-2xl p-4 md:p-8 text-center">
+                    <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-r ${theme.gradient} mx-auto mb-4 flex items-center justify-center">
+                      <i data-lucide="user" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <div class="${textColor} font-semibold">${p.name}</div>
+                    <div class="${mutedColor} text-sm mt-1">${p.role}</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+
+        case 'chart':
+          return `
+            <div class="p-8 md:p-12 h-full">
+              <h2 class="${isPreview ? 'text-lg' : 'text-3xl md:text-4xl'} font-bold ${textColor} mb-8">${slide.title}</h2>
+              <div class="${cardBg} rounded-2xl p-6 md:p-8 h-64 md:h-80 flex items-end justify-around">
+                ${[120, 280, 480, 720, 1000].map((h, i) => `
+                  <div class="flex flex-col items-center gap-2">
+                    <div class="text-xs ${mutedColor}">$${h}K</div>
+                    <div class="w-12 md:w-16 bg-gradient-to-t ${theme.gradient} rounded-t-lg" style="height: ${h/12}%"></div>
+                    <span class="text-xs ${mutedColor}">Year ${i + 1}</span>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+
+        case 'timeline':
+          return `
+            <div class="p-8 md:p-12 h-full">
+              <h2 class="${isPreview ? 'text-lg' : 'text-3xl md:text-4xl'} font-bold ${textColor} mb-8">${slide.title}</h2>
+              <div class="relative">
+                <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b ${theme.gradient}"></div>
+                <div class="space-y-6">
+                  ${(slide.milestones || []).map((m, i) => `
+                    <div class="flex items-start gap-6 ml-0">
+                      <div class="w-8 h-8 rounded-full bg-gradient-to-r ${theme.gradient} flex items-center justify-center flex-shrink-0 z-10">
+                        <span class="text-white text-sm font-bold">${i + 1}</span>
+                      </div>
+                      <div class="${cardBg} rounded-xl p-4 flex-1">
+                        <div class="font-semibold ${textColor}">${m.date}</div>
+                        <div class="${mutedColor}">${m.item}</div>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+          `;
+
+        case 'ask':
+          return `
+            <div class="p-8 md:p-12 h-full flex flex-col justify-center">
+              <h2 class="${isPreview ? 'text-lg' : 'text-3xl md:text-4xl'} font-bold ${textColor} mb-4">${slide.title}</h2>
+              <div class="${isPreview ? 'text-2xl' : 'text-5xl md:text-7xl'} font-bold bg-gradient-to-r ${theme.gradient} bg-clip-text text-transparent mb-8">
+                ${slide.subtitle}
+              </div>
+              <div class="space-y-3">
+                ${(slide.points || []).map(p => `
+                  <div class="flex items-center gap-3 ${textColor}">
+                    <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                    <span>${p}</span>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+
+        case 'cta':
+          return `
+            <div class="flex flex-col items-center justify-center h-full text-center p-8">
+              <h2 class="${isPreview ? 'text-xl' : 'text-4xl md:text-6xl'} font-bold ${textColor} mb-4">${slide.title}</h2>
+              <p class="${subtitleSize} ${mutedColor} mb-8 max-w-2xl">${slide.subtitle}</p>
+              <button class="px-8 py-4 bg-gradient-to-r ${theme.gradient} text-white rounded-full font-semibold flex items-center gap-2 hover:scale-105 transition-transform text-lg">
+                Get Started
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </button>
+            </div>
+          `;
+
+        default:
+          return `<div class="flex items-center justify-center h-full ${mutedColor}">Slide content</div>`;
+      }
+    }
+
+    function render() {
+      const app = document.getElementById('app');
+      
+      // Present mode
+      if (state.step === 'present' && state.presentation) {
+        app.innerHTML = `
+          <div class="fixed inset-0 ${state.theme.bg} z-50" id="presentMode">
+            <div class="h-full">
+              ${renderSlide(state.presentation.slides[state.currentSlide])}
+            </div>
+            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2">
+              ${state.presentation.slides.map((_, i) => `
+                <div class="w-2 h-2 rounded-full transition-all ${i === state.currentSlide ? `bg-gradient-to-r ${state.theme.gradient} w-8` : 'bg-white/30'}"></div>
+              `).join('')}
+            </div>
+            <button onclick="state.step='editor'; render();" class="absolute top-4 right-4 px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 text-white">
+              Exit
+            </button>
+            <div class="absolute bottom-6 right-6 text-white/50 text-sm">
+              ${state.currentSlide + 1} / ${state.presentation.slides.length} • Click or use arrow keys
+            </div>
+          </div>
+        `;
+        lucide.createIcons();
+        
+        // Keyboard navigation
+        document.onkeydown = (e) => {
+          if (e.key === 'ArrowRight' || e.key === ' ') {
+            state.currentSlide = Math.min(state.currentSlide + 1, state.presentation.slides.length - 1);
+            render();
+          } else if (e.key === 'ArrowLeft') {
+            state.currentSlide = Math.max(state.currentSlide - 1, 0);
+            render();
+          } else if (e.key === 'Escape') {
+            state.step = 'editor';
+            render();
+          }
+        };
+        
+        document.getElementById('presentMode').onclick = (e) => {
+          if (e.clientX > window.innerWidth / 2) {
+            state.currentSlide = Math.min(state.currentSlide + 1, state.presentation.slides.length - 1);
+          } else {
+            state.currentSlide = Math.max(state.currentSlide - 1, 0);
+          }
+          render();
+        };
+        return;
+      }
+      
+      document.onkeydown = null;
+
+      // Home
+      if (state.step === 'home') {
+        app.innerHTML = `
+          <div class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+            <header class="border-b border-white/10">
+              <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+                    <i data-lucide="sparkles" class="w-6 h-6 text-white"></i>
+                  </div>
+                  <span class="text-xl font-bold text-white">CDLS Deck Builder</span>
+                </div>
+                <div class="flex items-center gap-4">
+                  <button class="text-white/70 hover:text-white px-4 py-2">My Decks</button>
+                  <button class="bg-white/10 text-white px-4 py-2 rounded-lg hover:bg-white/20">Sign In</button>
+                </div>
+              </div>
+            </header>
+
+            <div class="max-w-4xl mx-auto px-6 py-16 md:py-24 text-center">
+              <div class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full px-4 py-2 mb-8">
+                <i data-lucide="sparkles" class="w-4 h-4 text-blue-400"></i>
+                <span class="text-blue-300 text-sm">AI-Powered Presentations</span>
+              </div>
+              
+              <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                Create stunning investor decks in
+                <span class="gradient-text"> seconds</span>
+              </h1>
+              
+              <p class="text-lg md:text-xl text-white/60 mb-12 max-w-2xl mx-auto">
+                Generate beautiful presentations for investor pitches, ROI analysis, and deal summaries with AI assistance.
+              </p>
+
+              <div class="bg-white/5 border border-white/10 rounded-2xl p-2 max-w-2xl mx-auto mb-8">
+                <div class="flex flex-col md:flex-row items-center gap-3">
+                  <input
+                    type="text"
+                    id="promptInput"
+                    placeholder="Describe your presentation... e.g., 'Investor pitch for EV logistics'"
+                    class="flex-1 w-full bg-transparent text-white placeholder-white/40 px-4 py-3 outline-none"
+                  />
+                  <button onclick="state.step='template'; render();" class="w-full md:w-auto bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold flex items-center justify-center gap-2 hover:opacity-90">
+                    <i data-lucide="wand-2" class="w-5 h-5"></i>
+                    Generate
+                  </button>
+                </div>
+              </div>
+
+              <p class="text-white/40 mb-4">Or start with a template</p>
+              <div class="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+                ${Object.entries(TEMPLATES).map(([key, t]) => `
+                  <button onclick="state.selectedTemplate='${key}'; state.step='template'; render();" class="group bg-white/5 border border-white/10 rounded-xl p-6 text-left hover:bg-white/10 hover:border-white/20 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-r ${t.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                      <i data-lucide="${t.icon}" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-white font-semibold mb-1">${t.name}</h3>
+                    <p class="text-white/50 text-sm">${t.slides.length} slides</p>
+                  </button>
+                `).join('')}
+              </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto px-6 py-16 border-t border-white/10">
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                ${[
+                  { icon: 'wand-2', title: 'AI Generated', desc: 'Content created instantly' },
+                  { icon: 'palette', title: 'Beautiful Themes', desc: '5+ professional designs' },
+                  { icon: 'share-2', title: 'Easy Sharing', desc: 'Share with stakeholders' },
+                  { icon: 'download', title: 'Export Ready', desc: 'PDF & PowerPoint' }
+                ].map(f => `
+                  <div class="text-center">
+                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <i data-lucide="${f.icon}" class="w-6 h-6 text-white/70"></i>
+                    </div>
+                    <h4 class="text-white font-medium mb-1">${f.title}</h4>
+                    <p class="text-white/50 text-sm">${f.desc}</p>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // Template Selection
+      else if (state.step === 'template') {
+        app.innerHTML = `
+          <div class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6 md:p-8">
+            <button onclick="state.step='home'; render();" class="flex items-center gap-2 text-white/60 hover:text-white mb-8">
+              <i data-lucide="chevron-left" class="w-5 h-5"></i> Back
+            </button>
+            
+            <div class="max-w-4xl mx-auto">
+              <h2 class="text-3xl font-bold text-white mb-2">Choose a template</h2>
+              <p class="text-white/60 mb-8">Select a starting point for your presentation</p>
+              
+              <div class="grid md:grid-cols-3 gap-6 mb-12">
+                ${Object.entries(TEMPLATES).map(([key, t]) => `
+                  <button onclick="state.selectedTemplate='${key}'; render();" class="group relative bg-white/5 border-2 rounded-2xl p-6 text-left transition-all ${state.selectedTemplate === key ? 'border-blue-500 bg-blue-500/10' : 'border-white/10 hover:border-white/30'}">
+                    ${state.selectedTemplate === key ? '<div class="absolute top-4 right-4 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center"><i data-lucide="check" class="w-4 h-4 text-white"></i></div>' : ''}
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-r ${t.color} flex items-center justify-center mb-4">
+                      <i data-lucide="${t.icon}" class="w-7 h-7 text-white"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-1">${t.name}</h3>
+                    <p class="text-white/50 text-sm mb-4">${t.slides.length} slides included</p>
+                    <div class="flex gap-1">
+                      ${t.slides.slice(0, 5).map(() => '<div class="w-8 h-5 bg-white/10 rounded"></div>').join('')}
+                    </div>
+                  </button>
+                `).join('')}
+              </div>
+
+              <h3 class="text-xl font-semibold text-white mb-4">Choose a theme</h3>
+              <div class="flex flex-wrap gap-4 mb-12">
+                ${THEMES.map((t, i) => `
+                  <button onclick="state.theme=THEMES[${i}]; render();" class="relative w-20 h-14 rounded-xl ${t.bg} border-2 transition-all ${state.theme.name === t.name ? 'border-blue-500 scale-110' : 'border-white/20 hover:border-white/40'}">
+                    <div class="absolute inset-2 rounded bg-gradient-to-r ${t.gradient} opacity-50"></div>
+                    ${state.theme.name === t.name ? '<div class="absolute -top-2 -right-2 w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center"><i data-lucide="check" class="w-3 h-3 text-white"></i></div>' : ''}
+                  </button>
+                `).join('')}
+              </div>
+
+              <button onclick="generatePresentation();" ${!state.selectedTemplate ? 'disabled' : ''} class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-4 rounded-xl font-semibold flex items-center justify-center gap-2 hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+                Generate Presentation
+              </button>
+            </div>
+          </div>
+        `;
+      }
+
+      // Generating
+      else if (state.step === 'generating') {
+        app.innerHTML = `
+          <div class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+            <div class="text-center">
+              <div class="relative w-24 h-24 mx-auto mb-8">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl animate-pulse"></div>
+                <div class="absolute inset-2 bg-slate-900 rounded-xl flex items-center justify-center">
+                  <i data-lucide="loader-2" class="w-10 h-10 text-white animate-spin"></i>
+                </div>
+              </div>
+              <h2 class="text-2xl font-bold text-white mb-2">Creating your presentation</h2>
+              <p class="text-white/60 mb-8">AI is generating ${TEMPLATES[state.selectedTemplate]?.slides.length || 0} slides...</p>
+              <div class="flex justify-center gap-2">
+                ${[0,1,2,3,4].map(i => `<div class="w-3 h-3 bg-blue-500 rounded-full animate-bounce" style="animation-delay: ${i * 0.1}s"></div>`).join('')}
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // Editor
+      else if (state.step === 'editor' && state.presentation) {
+        app.innerHTML = `
+          <div class="min-h-screen bg-slate-100 flex flex-col">
+            <header class="bg-white border-b px-4 py-3 flex items-center justify-between">
+              <div class="flex items-center gap-4">
+                <button onclick="state.step='home'; render();" class="p-2 hover:bg-slate-100 rounded-lg">
+                  <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                </button>
+                <input type="text" value="${state.presentation.title}" class="text-lg font-semibold bg-transparent border-none outline-none" />
+              </div>
+              <div class="flex items-center gap-2">
+                <button onclick="state.showThemes=!state.showThemes; render();" class="hidden md:flex items-center gap-2 px-4 py-2 hover:bg-slate-100 rounded-lg">
+                  <i data-lucide="palette" class="w-5 h-5"></i> Theme
+                </button>
+                <button class="hidden md:flex items-center gap-2 px-4 py-2 hover:bg-slate-100 rounded-lg">
+                  <i data-lucide="share-2" class="w-5 h-5"></i> Share
+                </button>
+                <button onclick="state.step='present'; render();" class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg">
+                  <i data-lucide="play" class="w-5 h-5"></i>
+                  <span class="hidden md:inline">Present</span>
+                </button>
+              </div>
+            </header>
+
+            ${state.showThemes ? `
+              <div class="absolute top-16 right-4 bg-white rounded-xl shadow-xl p-4 z-50 border">
+                <h4 class="font-semibold mb-3">Themes</h4>
+                <div class="grid grid-cols-5 gap-2">
+                  ${THEMES.map((t, i) => `
+                    <button onclick="state.theme=THEMES[${i}]; state.presentation.theme=THEMES[${i}]; render();" class="w-12 h-12 rounded-lg ${t.bg} border-2 ${state.theme.name === t.name ? 'border-blue-500' : 'border-transparent'}"></button>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            <div class="flex-1 flex flex-col md:flex-row overflow-hidden">
+              <!-- Slide Thumbnails -->
+              <div class="md:w-64 bg-white border-r p-4 overflow-x-auto md:overflow-y-auto flex md:flex-col gap-3">
+                ${state.presentation.slides.map((slide, i) => `
+                  <div onclick="state.currentSlide=${i}; render();" class="flex-shrink-0 cursor-pointer rounded-lg overflow-hidden border-2 transition-all ${state.currentSlide === i ? 'border-blue-500 shadow-lg' : 'border-transparent hover:border-slate-300'}">
+                    <div class="${state.theme.bg} w-32 md:w-full aspect-video p-1 relative">
+                      <div class="absolute bottom-1 left-1 bg-black/50 text-white text-xs px-1.5 py-0.5 rounded">${i + 1}</div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+
+              <!-- Main Canvas -->
+              <div class="flex-1 p-4 md:p-8 flex items-center justify-center bg-slate-200 overflow-auto">
+                <div class="${state.theme.bg} w-full max-w-5xl aspect-video rounded-2xl shadow-2xl overflow-hidden slide-enter">
+                  ${renderSlide(state.presentation.slides[state.currentSlide])}
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="bg-white border-t px-4 py-3 flex items-center justify-center gap-4">
+              <button onclick="state.currentSlide=Math.max(0, state.currentSlide-1); render();" ${state.currentSlide === 0 ? 'disabled' : ''} class="p-2 hover:bg-slate-100 rounded-lg disabled:opacity-30">
+                <i data-lucide="chevron-left" class="w-6 h-6"></i>
+              </button>
+              <span class="text-sm text-slate-600">${state.currentSlide + 1} / ${state.presentation.slides.length}</span>
+              <button onclick="state.currentSlide=Math.min(state.presentation.slides.length-1, state.currentSlide+1); render();" ${state.currentSlide === state.presentation.slides.length - 1 ? 'disabled' : ''} class="p-2 hover:bg-slate-100 rounded-lg disabled:opacity-30">
+                <i data-lucide="chevron-right" class="w-6 h-6"></i>
+              </button>
+            </div>
+          </div>
+        `;
+      }
+
+      lucide.createIcons();
+    }
+
+    // Generate presentation
+    function generatePresentation() {
+      state.step = 'generating';
+      render();
+      
+      setTimeout(() => {
+        const template = TEMPLATES[state.selectedTemplate];
+        state.presentation = {
+          title: template.slides[0].title,
+          slides: template.slides.map((slide, i) => ({ ...slide, id: `slide-${i}` })),
+          theme: state.theme
+        };
+        state.currentSlide = 0;
+        state.step = 'editor';
+        render();
+      }, 2500);
+    }
+
+    // Initial render
+    render();
+  </script>
+</body>
+</html>

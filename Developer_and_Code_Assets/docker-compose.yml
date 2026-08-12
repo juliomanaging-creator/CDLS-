@@ -1,0 +1,243 @@
+version: '3.8'
+
+# CDLS Platform - Production Docker Compose
+# Complete stack: PostgreSQL, Redis, API, Frontend, Monitoring
+
+services:
+  # ===========================================
+  # DATABASE LAYER
+  # ===========================================
+  
+  db:
+    image: postgres:15-alpine
+    container_name: cdls_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: cdls_platform
+      POSTGRES_USER: cdls_admin
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=en_US.UTF-8"
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/migrations:/docker-entrypoint-initdb.d
+      - ./database/backups:/backups
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cdls_admin -d cdls_platform"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - cdls_network
+  
+  # ===========================================
+  # CACHE LAYER (Redis for MCMC results)
+  # ===========================================
+  
+  redis:
+    image: redis:7-alpine
+    container_name: cdls_redis
+    restart: unless-stopped
+    command: redis-server --requirepass ${REDIS_PASSWORD} --maxmemory 2gb --maxmemory-policy allkeys-lru
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    networks:
+      - cdls_network
+  
+  # ===========================================
+  # BACKEND API SERVER
+  # ===========================================
+  
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      args:
+        NODE_ENV: production
+    container_name: cdls_api
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    environment:
+      # Database
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: cdls_platform
+      DB_USER: cdls_admin
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_URL: postgres://cdls_admin:${DB_PASSWORD}@db:5432/cdls_platform
+      
+      # Redis
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+      
+      # CAISO Integration
+      CALISO_API_KEY: ${CALISO_API_KEY}
+      CALISO_API_URL: https://api.caiso.com/oasis/SingleZip
+      
+      # SMUD Integration
+      SMUD_API_KEY: ${SMUD_API_KEY}
+      SMUD_API_URL: https://api.smud.org/grid/v1
+      
+      # Security
+      JWT_SECRET: ${JWT_SECRET}
+      ENCRYPTION_KEY: ${ENCRYPTION_KEY}
+      
+      # Application
+      NODE_ENV: production
+      PORT: 3001
+      LOG_LEVEL: info
+      
+      # MCMC Configuration
+      MCMC_ITERATIONS: 10000
+      MCMC_CONVERGENCE_THRESHOLD: 0.001
+      MCMC_CACHE_TTL: 300  # 5 minutes
+      
+      # Grid Optimization
+      GRID_SAFETY_BUFFER_SOC: 20  # Never discharge below 20%
+      GRID_ARBITRAGE_RATE: 0.18   # $0.18/kWh
+      GRID_MAX_DISCHARGE_RATE: 0.8  # 80% of battery capacity
+      
+    volumes:
+      - ./backend:/app
+      - /app/node_modules  # Prevent overwriting node_modules
+      - api_logs:/app/logs
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - cdls_network
+  
+  # ===========================================
+  # FRONTEND DASHBOARD
+  # ===========================================
+  
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        REACT_APP_API_URL: http://localhost:3001
+        NODE_ENV: production
+    container_name: cdls_frontend
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    environment:
+      REACT_APP_API_URL: ${API_URL:-http://localhost:3001}
+      REACT_APP_WS_URL: ${WS_URL:-ws://localhost:3001}
+    depends_on:
+      - api
+    networks:
+      - cdls_network
+  
+  # ===========================================
+  # MONITORING & OBSERVABILITY
+  # ===========================================
+  
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: cdls_prometheus
+    restart: unless-stopped
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    networks:
+      - cdls_network
+  
+  grafana:
+    image: grafana/grafana:latest
+    container_name: cdls_grafana
+    restart: unless-stopped
+    ports:
+      - "3002:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD}
+      GF_INSTALL_PLUGINS: grafana-clock-panel,grafana-simple-json-datasource
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards
+      - ./monitoring/grafana/datasources:/etc/grafana/provisioning/datasources
+    depends_on:
+      - prometheus
+    networks:
+      - cdls_network
+  
+  # ===========================================
+  # BACKUP SERVICE
+  # ===========================================
+  
+  backup:
+    image: postgres:15-alpine
+    container_name: cdls_backup
+    restart: unless-stopped
+    environment:
+      PGPASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./database/backups:/backups
+      - ./scripts/backup.sh:/backup.sh
+    command: >
+      sh -c "
+        while true; do
+          pg_dump -h db -U cdls_admin -d cdls_platform -F c -f /backups/cdls_platform_$$(date +%Y%m%d_%H%M%S).backup
+          find /backups -name '*.backup' -mtime +7 -delete
+          sleep 86400
+        done
+      "
+    depends_on:
+      - db
+    networks:
+      - cdls_network
+
+# ===========================================
+# NETWORKS
+# ===========================================
+
+networks:
+  cdls_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+# ===========================================
+# VOLUMES
+# ===========================================
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  prometheus_data:
+    driver: local
+  grafana_data:
+    driver: local
+  api_logs:
+    driver: local

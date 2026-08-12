@@ -1,0 +1,5 @@
+﻿Risk Category,Lithium‑Ion BESS,Distribution Transformers,Sovereign Engine
+Thermal Runaway,Yes,Yes,None
+Combustible Materials,Electrolyte,Mineral oil,None
+Failure Propagation,High,Moderate,Zero chemical propagation
+Residential Deployment,Limited,Not allowed,In‑wall compatible (θ‑TaN)

@@ -1,0 +1,1 @@
+& "C:\Users\MezaJ\.local\bin\python3.14.exe" -m pip install pyvis

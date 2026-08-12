@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="CDLS Decks">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#0f172a">
+  <title>CDLS Deck Builder</title>
+  
+  <!-- PWA Icons (inline base64 for offline) -->
+  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjMyIiBmaWxsPSIjMGYxNzJhIi8+PHBhdGggZD0iTTk2IDQ4bC04IDI0YTggOCAwIDAxLTUgNUw1OSA4NWwyNCA4YTggOCAwIDAxNSA1bDggMjQgOC0yNGE4IDggMCAwMTUtNWwyNC04LTI0LThhOCA4IDAgMDEtNS01TDk2IDQ4eiIgZmlsbD0iIzNiODJmNiIvPjwvc3ZnPg==">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      background: #0f172a;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+      overscroll-behavior: none;
+    }
+    
+    html { height: -webkit-fill-available; }
+    
+    :root {
+      --blue: #3b82f6;
+      --purple: #8b5cf6;
+      --green: #22c55e;
+      --red: #ef4444;
+      --slate-100: #f1f5f9;
+      --slate-600: #475569;
+      --slate-800: #1e293b;
+      --slate-900: #0f172a;
+      --safe-top: env(safe-area-inset-top);
+      --safe-bottom: env(safe-area-inset-bottom);
+    }
+    
+    .safe-top { padding-top: var(--safe-top); }
+    .safe-bottom { padding-bottom: var(--safe-bottom); }
+    
+    .gradient { background: linear-gradient(135deg, var(--blue), var(--purple)); }
+    .gradient-text { background: linear-gradient(135deg, var(--blue), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    
+    .btn {
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: transform 0.2s, opacity 0.2s;
+      -webkit-appearance: none;
+    }
+    .btn:active { transform: scale(0.98); }
+    .btn-primary { background: linear-gradient(135deg, var(--blue), var(--purple)); color: white; }
+    .btn-ghost { background: rgba(255,255,255,0.1); color: white; }
+    
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .card:active { transform: scale(0.98); }
+    .card.selected { border-color: var(--blue); background: rgba(59,130,246,0.15); }
+    
+    .slide-canvas {
+      aspect-ratio: 16/9;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+    
+    .icon { width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; }
+    .icon-sm { width: 18px; height: 18px; }
+    .icon-lg { width: 32px; height: 32px; }
+    
+    .animate-pulse { animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    
+    .animate-spin { animation: spin 1s linear infinite; }
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    
+    .animate-bounce { animation: bounce 0.6s ease-in-out infinite; }
+    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+    
+    .fade-in { animation: fadeIn 0.3s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    
+    /* Swipe hint */
+    .swipe-hint {
+      position: absolute;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.4);
+      font-size: 13px;
+      animation: swipeHint 2s ease-in-out infinite;
+    }
+    @keyframes swipeHint { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.8; } }
+    
+    /* Prevent text selection */
+    .no-select { -webkit-user-select: none; user-select: none; }
+    
+    /* Custom scrollbar for thumbnails */
+    .thumb-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .thumb-scroll::-webkit-scrollbar { display: none; }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script>
+    // SVG Icons
+    const icons = {
+      sparkles: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.9 5.8a2 2 0 01-1.3 1.3L3 12l5.8 1.9a2 2 0 011.3 1.3L12 21l1.9-5.8a2 2 0 011.3-1.3L21 12l-5.8-1.9a2 2 0 01-1.3-1.3L12 3z"/></svg>`,
+      wand: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4V2M15 16v-2M8 9h2M20 9h2M17.8 11.8 19 13M15 9h0M17.8 6.2 19 5M3 21l9-9M12.2 6.2 11 5"/></svg>`,
+      play: `<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 20,12 6,20"/></svg>`,
+      chevronLeft: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>`,
+      chevronRight: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>`,
+      check: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg>`,
+      dollar: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>`,
+      trending: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22,7 13.5,15.5 8.5,10.5 2,17"/><polyline points="16,7 22,7 22,13"/></svg>`,
+      file: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>`,
+      user: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`,
+      x: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`,
+      loader: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg>`,
+      checkCircle: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>`,
+      arrowRight: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>`,
+    };
+
+    function icon(name, cls = '') {
+      return `<span class="icon ${cls}">${icons[name] || ''}</span>`;
+    }
+
+    // State
+    let state = {
+      step: 'home',
+      selectedTemplate: null,
+      presentation: null,
+      currentSlide: 0,
+      theme: { name: 'Professional', bg: '#0f172a', gradient: 'linear-gradient(135deg, #2563eb, #7c3aed)', light: false }
+    };
+
+    // Touch handling for swipe
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    // Templates
+    const TEMPLATES = {
+      investor: {
+        name: 'Investor Pitch',
+        icon: 'dollar',
+        color: 'linear-gradient(135deg, #2563eb, #7c3aed)',
+        slides: [
+          { type: 'title', title: 'CA Dealer Logistics Syndicate', subtitle: 'Transforming California Auto Dealer Transportation' },
+          { type: 'points', title: 'The Problem', points: ['$1.05/mile third-party costs', '95% visibility gap between meetings', 'CARB 2035 EV mandate'] },
+          { type: 'points', title: 'Our Solution', points: ['Dealer-owned cooperative', '25-35% cost reduction', 'Complete EV pathway'] },
+          { type: 'metrics', title: 'Key Metrics', metrics: [{ v: '$400-600', l: 'Savings/Vehicle' }, { v: '1,200+', l: 'CA Dealers' }, { v: '$2.4B', l: 'Market Size' }] },
+          { type: 'points', title: 'Traction', points: ['CNCDA partnership', 'South Bay Auto pilot', '47 dealer LOIs'] },
+          { type: 'team', title: 'Team', people: [{ n: 'Brian Maas', r: 'CNCDA President' }, { n: 'Tony Callaway', r: 'South Bay VP' }, { n: 'Chuck Tapp', r: 'Americas AA CEO' }] },
+          { type: 'ask', title: 'The Ask', value: '$15M Series A', points: ['Fleet acquisition', 'Tech platform', 'CA expansion'] },
+          { type: 'cta', title: 'Join the Syndicate', subtitle: 'Transform dealer logistics' }
+        ]
+      },
+      roi: {
+        name: 'ROI Analysis',
+        icon: 'trending',
+        color: 'linear-gradient(135deg, #10b981, #14b8a6)',
+        slides: [
+          { type: 'title', title: 'Fleet ROI Analysis', subtitle: 'Your Savings Projection' },
+          { type: 'compare', title: 'Cost Comparison', left: { v: '$1.05/mi', l: 'Third Party' }, right: { v: '$0.72/mi', l: 'Syndicate' } },
+          { type: 'metrics', title: 'Annual Savings', metrics: [{ v: '$4,800', l: 'Per Vehicle' }, { v: '$240K', l: '50 Vehicles' }, { v: '$1.2M', l: '5 Year Total' }] },
+          { type: 'chart', title: 'Cumulative Savings' },
+          { type: 'points', title: 'EV Benefits', points: ['$0.04 vs $0.15/mile', 'CARB compliant', '$40K tax credits'] },
+          { type: 'cta', title: 'Start Saving Today', subtitle: 'Join 47 committed dealerships' }
+        ]
+      },
+      deal: {
+        name: 'Deal Summary',
+        icon: 'file',
+        color: 'linear-gradient(135deg, #8b5cf6, #ec4899)',
+        slides: [
+          { type: 'title', title: 'Investment Partnership', subtitle: 'CalPERS - CDLS Deal Room' },
+          { type: 'points', title: 'Deal Overview', points: ['$15M Series A', 'Infrastructure returns', '7-10 year horizon', 'ESG aligned'] },
+          { type: 'team', title: 'Decision Makers', people: [{ n: 'Investment Committee', r: 'Approval' }, { n: 'ESG Board', r: 'Sustainability' }, { n: 'Legal', r: 'Due Diligence' }] },
+          { type: 'timeline', title: 'Timeline', items: [{ w: '1-2', t: 'Due diligence' }, { w: '3-4', t: 'Site visits' }, { w: '5-6', t: 'Terms' }, { w: '7-8', t: 'Close' }] },
+          { type: 'points', title: 'Next Steps', points: ['Committee call', 'Fleet plan', 'Site visits', 'ESG docs'] }
+        ]
+      }
+    };
+
+    const THEMES = [
+      { name: 'Pro', bg: '#0f172a', gradient: 'linear-gradient(135deg, #2563eb, #7c3aed)', light: false },
+      { name: 'Modern', bg: '#18181b', gradient: 'linear-gradient(135deg, #10b981, #14b8a6)', light: false },
+      { name: 'Bold', bg: '#000', gradient: 'linear-gradient(135deg, #f97316, #ef4444)', light: false },
+      { name: 'Light', bg: '#fff', gradient: 'linear-gradient(135deg, #475569, #1e293b)', light: true },
+      { name: 'Royal', bg: '#1e1b4b', gradient: 'linear-gradient(135deg, #8b5cf6, #ec4899)', light: false }
+    ];
+
+    // Render slide
+    function renderSlide(slide) {
+      const t = state.theme;
+      const txt = t.light ? '#1e293b' : '#fff';
+      const muted = t.light ? '#64748b' : 'rgba(255,255,255,0.7)';
+      const card = t.light ? '#f1f5f9' : 'rgba(255,255,255,0.1)';
+
+      const base = `display:flex;flex-direction:column;height:100%;padding:24px;color:${txt};`;
+
+      switch(slide.type) {
+        case 'title':
+          return `<div style="${base}justify-content:center;align-items:center;text-align:center;">
+            <div style="padding:6px 16px;border-radius:50px;background:${t.gradient};color:#fff;font-size:12px;margin-bottom:20px;">CDLS</div>
+            <h1 style="font-size:28px;font-weight:700;margin-bottom:12px;line-height:1.2;">${slide.title}</h1>
+            <p style="font-size:16px;color:${muted};">${slide.subtitle}</p>
+          </div>`;
+
+        case 'points':
+          return `<div style="${base}">
+            <h2 style="font-size:24px;font-weight:700;margin-bottom:20px;">${slide.title}</h2>
+            ${(slide.points||[]).map((p,i)=>`<div style="display:flex;gap:12px;margin-bottom:12px;">
+              <div style="width:28px;height:28px;background:${t.gradient};border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px;flex-shrink:0;">${i+1}</div>
+              <p style="font-size:15px;padding-top:4px;line-height:1.4;">${p}</p>
+            </div>`).join('')}
+          </div>`;
+
+        case 'metrics':
+          return `<div style="${base}">
+            <h2 style="font-size:24px;font-weight:700;margin-bottom:20px;">${slide.title}</h2>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+              ${(slide.metrics||[]).map(m=>`<div style="background:${card};border-radius:12px;padding:16px;text-align:center;">
+                <div style="font-size:24px;font-weight:700;background:${t.gradient};-webkit-background-clip:text;-webkit-text-fill-color:transparent;">${m.v}</div>
+                <div style="font-size:11px;color:${muted};margin-top:4px;">${m.l}</div>
+              </div>`).join('')}
+            </div>
+          </div>`;
+
+        case 'compare':
+          return `<div style="${base}">
+            <h2 style="font-size:24px;font-weight:700;margin-bottom:20px;">${slide.title}</h2>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+              <div style="background:${t.light?'#fef2f2':'rgba(239,68,68,0.2)'};border:2px solid ${t.light?'#fecaca':'rgba(239,68,68,0.3)'};border-radius:12px;padding:20px;text-align:center;">
+                <div style="font-size:32px;font-weight:700;color:#ef4444;">${slide.left.v}</div>
+                <div style="color:${muted};font-size:12px;margin-top:4px;">${slide.left.l}</div>
+              </div>
+              <div style="background:${t.light?'#f0fdf4':'rgba(34,197,94,0.2)'};border:2px solid ${t.light?'#bbf7d0':'rgba(34,197,94,0.3)'};border-radius:12px;padding:20px;text-align:center;">
+                <div style="font-size:32px;font-weight:700;color:#22c55e;">${slide.right.v}</div>
+                <div style="color:${muted};font-size:12px;margin-top:4px;">${slide.right.l}</div>
+              </div>
+            </div>
+            <div style="text-align:center;margin-top:16px;"><span style="padding:8px 20px;background:${t.gradient};color:#fff;border-radius:50px;font-weight:600;font-size:14px;">31% Savings</span></div>
+          </div>`;
+
+        case 'team':
+          return `<div style="${base}">
+            <h2 style="font-size:24px;font-weight:700;margin-bottom:20px;">${slide.title}</h2>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+              ${(slide.people||[]).map(p=>`<div style="background:${card};border-radius:12px;padding:14px;text-align:center;">
+                <div style="width:40px;height:40px;background:${t.gradient};border-radius:50%;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;color:#fff;">${icon('user','icon-sm')}</div>
+                <div style="font-weight:600;font-size:13px;">${p.n}</div>
+                <div style="font-size:11px;color:${muted};margin-top:2px;">${p.r}</div>
+              </div>`).join('')}
+            </div>
+          </div>`;
+
+        case 'chart':
+          return `<div style="${base}">
+            <h2 style="font-size:24px;font-weight:700;margin-bottom:20px;">${slide.title}</h2>
+            <div style="background:${card};border-radius:12px;padding:20px;flex:1;display:flex;align-items:flex-end;justify-content:space-around;">
+              ${[100,220,380,560,800].map((h,i)=>`<div style="text-align:center;">
+                <div style="font-size:10px;color:${muted};margin-bottom:6px;">$${h}K</div>
+                <div style="width:36px;height:${h/6}px;background:${t.gradient};border-radius:6px 6px 0 0;"></div>
+                <div style="font-size:10px;color:${muted};margin-top:6px;">Y${i+1}</div>
+              </div>`).join('')}
+            </div>
+          </div>`;
+
+        case 'timeline':
+          return `<div style="${base}">
+            <h2 style="font-size:24px;font-weight:700;margin-bottom:20px;">${slide.title}</h2>
+            <div style="position:relative;padding-left:20px;">
+              <div style="position:absolute;left:13px;top:0;bottom:0;width:2px;background:${t.gradient};"></div>
+              ${(slide.items||[]).map((m,i)=>`<div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+                <div style="width:26px;height:26px;background:${t.gradient};border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:12px;z-index:1;">${i+1}</div>
+                <div style="background:${card};border-radius:10px;padding:12px 16px;flex:1;">
+                  <div style="font-weight:600;font-size:13px;">Week ${m.w}</div>
+                  <div style="color:${muted};font-size:12px;">${m.t}</div>
+                </div>
+              </div>`).join('')}
+            </div>
+          </div>`;
+
+        case 'ask':
+          return `<div style="${base}justify-content:center;">
+            <h2 style="font-size:24px;font-weight:700;margin-bottom:8px;">${slide.title}</h2>
+            <div style="font-size:44px;font-weight:700;background:${t.gradient};-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:20px;">${slide.value}</div>
+            ${(slide.points||[]).map(p=>`<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;"><span style="color:#22c55e;">${icon('checkCircle','icon-sm')}</span><span style="font-size:14px;">${p}</span></div>`).join('')}
+          </div>`;
+
+        case 'cta':
+          return `<div style="${base}justify-content:center;align-items:center;text-align:center;">
+            <h1 style="font-size:32px;font-weight:700;margin-bottom:12px;">${slide.title}</h1>
+            <p style="font-size:16px;color:${muted};margin-bottom:24px;">${slide.subtitle}</p>
+            <button style="padding:14px 32px;background:${t.gradient};color:#fff;border:none;border-radius:50px;font-size:16px;font-weight:600;">Get Started ${icon('arrowRight','icon-sm')}</button>
+          </div>`;
+
+        default:
+          return `<div style="${base}justify-content:center;align-items:center;"><p style="color:${muted};">Content</p></div>`;
+      }
+    }
+
+    // Main render
+    function render() {
+      const app = document.getElementById('app');
+
+      // Present mode
+      if (state.step === 'present' && state.presentation) {
+        const p = state.presentation;
+        app.innerHTML = `
+          <div id="presentMode" class="no-select" style="position:fixed;inset:0;background:${state.theme.bg};z-index:100;">
+            <div style="height:100%;" class="fade-in">${renderSlide(p.slides[state.currentSlide])}</div>
+            <div style="position:absolute;bottom:calc(24px + var(--safe-bottom));left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+              ${p.slides.map((_,i)=>`<div style="width:${i===state.currentSlide?'24px':'8px'};height:8px;border-radius:4px;background:${i===state.currentSlide?state.theme.gradient:'rgba(255,255,255,0.3)'};transition:all 0.3s;"></div>`).join('')}
+            </div>
+            <button onclick="state.step='editor';render();" style="position:absolute;top:calc(12px + var(--safe-top));right:12px;width:40px;height:40px;background:rgba(255,255,255,0.1);border:none;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;">
+              ${icon('x','icon-sm')}
+            </button>
+            <div class="swipe-hint">Swipe or tap to navigate</div>
+          </div>
+        `;
+
+        const el = document.getElementById('presentMode');
+        el.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, false);
+        el.addEventListener('touchend', e => {
+          touchEndX = e.changedTouches[0].screenX;
+          const diff = touchStartX - touchEndX;
+          if (Math.abs(diff) > 50) {
+            if (diff > 0) state.currentSlide = Math.min(state.currentSlide + 1, p.slides.length - 1);
+            else state.currentSlide = Math.max(state.currentSlide - 1, 0);
+            render();
+          }
+        }, false);
+        el.addEventListener('click', e => {
+          if (e.target.tagName === 'BUTTON') return;
+          if (e.clientX > window.innerWidth / 2) state.currentSlide = Math.min(state.currentSlide + 1, p.slides.length - 1);
+          else state.currentSlide = Math.max(state.currentSlide - 1, 0);
+          render();
+        });
+        return;
+      }
+
+      // Home
+      if (state.step === 'home') {
+        app.innerHTML = `
+          <div class="safe-top safe-bottom" style="min-height:100vh;background:linear-gradient(135deg,#0f172a,#1e293b);padding:20px;">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:32px;">
+              <div style="width:44px;height:44px;background:linear-gradient(135deg,#3b82f6,#8b5cf6);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;">
+                ${icon('sparkles')}
+              </div>
+              <span style="font-size:20px;font-weight:700;color:#fff;">CDLS Decks</span>
+            </div>
+
+            <h1 style="font-size:32px;font-weight:700;color:#fff;margin-bottom:12px;line-height:1.2;">
+              Create investor decks <span class="gradient-text">instantly</span>
+            </h1>
+            <p style="color:rgba(255,255,255,0.6);margin-bottom:32px;font-size:16px;">
+              AI-powered presentations for pitches, ROI, and deals.
+            </p>
+
+            <p style="color:rgba(255,255,255,0.4);font-size:14px;margin-bottom:12px;">Choose a template</p>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              ${Object.entries(TEMPLATES).map(([k,t])=>`
+                <div onclick="state.selectedTemplate='${k}';state.step='template';render();" class="card" style="display:flex;align-items:center;gap:16px;">
+                  <div style="width:48px;height:48px;background:${t.color};border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;">
+                    ${icon(t.icon)}
+                  </div>
+                  <div style="flex:1;">
+                    <h3 style="color:#fff;font-weight:600;font-size:16px;">${t.name}</h3>
+                    <p style="color:rgba(255,255,255,0.5);font-size:13px;">${t.slides.length} slides</p>
+                  </div>
+                  <span style="color:rgba(255,255,255,0.3);">${icon('chevronRight','icon-sm')}</span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      // Template
+      else if (state.step === 'template') {
+        const t = TEMPLATES[state.selectedTemplate];
+        app.innerHTML = `
+          <div class="safe-top safe-bottom" style="min-height:100vh;background:linear-gradient(135deg,#0f172a,#1e293b);padding:20px;">
+            <button onclick="state.step='home';render();" style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);background:none;border:none;margin-bottom:24px;font-size:15px;">
+              ${icon('chevronLeft','icon-sm')} Back
+            </button>
+
+            <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;">
+              <div style="width:56px;height:56px;background:${t.color};border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff;">
+                ${icon(t.icon,'icon-lg')}
+              </div>
+              <div>
+                <h2 style="color:#fff;font-size:22px;font-weight:700;">${t.name}</h2>
+                <p style="color:rgba(255,255,255,0.5);font-size:14px;">${t.slides.length} slides</p>
+              </div>
+            </div>
+
+            <p style="color:rgba(255,255,255,0.4);font-size:14px;margin-bottom:12px;">Select theme</p>
+            <div style="display:flex;gap:10px;margin-bottom:32px;overflow-x:auto;padding-bottom:8px;" class="thumb-scroll">
+              ${THEMES.map((th,i)=>`
+                <div onclick="state.theme=THEMES[${i}];render();" style="width:60px;height:44px;background:${th.bg};border-radius:10px;flex-shrink:0;border:2px solid ${state.theme.name===th.name?'#3b82f6':'rgba(255,255,255,0.2)'};position:relative;${state.theme.name===th.name?'transform:scale(1.05);':''}">
+                  <div style="position:absolute;inset:6px;background:${th.gradient};opacity:0.5;border-radius:6px;"></div>
+                  ${state.theme.name===th.name?`<div style="position:absolute;top:-6px;right:-6px;width:18px;height:18px;background:#3b82f6;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;">${icon('check','icon-sm')}</div>`:''}
+                </div>
+              `).join('')}
+            </div>
+
+            <button onclick="generate();" class="btn btn-primary" style="width:100%;padding:16px;">
+              ${icon('sparkles','icon-sm')} Generate Presentation
+            </button>
+          </div>
+        `;
+      }
+
+      // Generating
+      else if (state.step === 'generating') {
+        app.innerHTML = `
+          <div style="min-height:100vh;background:linear-gradient(135deg,#0f172a,#1e293b);display:flex;align-items:center;justify-content:center;padding:20px;">
+            <div style="text-align:center;">
+              <div style="position:relative;width:80px;height:80px;margin:0 auto 24px;">
+                <div style="position:absolute;inset:0;background:linear-gradient(135deg,#3b82f6,#8b5cf6);border-radius:16px;" class="animate-pulse"></div>
+                <div style="position:absolute;inset:6px;background:#0f172a;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;">
+                  <span class="animate-spin">${icon('loader','icon-lg')}</span>
+                </div>
+              </div>
+              <h2 style="font-size:20px;font-weight:700;color:#fff;margin-bottom:8px;">Creating presentation...</h2>
+              <p style="color:rgba(255,255,255,0.6);font-size:14px;">Generating ${TEMPLATES[state.selectedTemplate]?.slides.length || 0} slides</p>
+            </div>
+          </div>
+        `;
+      }
+
+      // Editor
+      else if (state.step === 'editor' && state.presentation) {
+        const p = state.presentation;
+        app.innerHTML = `
+          <div class="safe-top" style="min-height:100vh;background:#0f172a;display:flex;flex-direction:column;">
+            <header style="padding:12px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.1);">
+              <button onclick="state.step='home';state.presentation=null;render();" style="width:40px;height:40px;background:rgba(255,255,255,0.1);border:none;border-radius:10px;color:#fff;display:flex;align-items:center;justify-content:center;">
+                ${icon('chevronLeft','icon-sm')}
+              </button>
+              <span style="color:#fff;font-weight:600;font-size:15px;">${state.currentSlide + 1} / ${p.slides.length}</span>
+              <button onclick="state.step='present';render();" class="btn btn-primary" style="padding:10px 16px;font-size:14px;">
+                ${icon('play','icon-sm')} Present
+              </button>
+            </header>
+
+            <div style="flex:1;padding:16px;display:flex;align-items:center;justify-content:center;overflow:auto;">
+              <div class="slide-canvas fade-in" style="width:100%;max-width:500px;background:${state.theme.bg};">
+                ${renderSlide(p.slides[state.currentSlide])}
+              </div>
+            </div>
+
+            <div class="safe-bottom" style="padding:12px 16px;border-top:1px solid rgba(255,255,255,0.1);">
+              <div class="thumb-scroll" style="display:flex;gap:8px;">
+                ${p.slides.map((s,i)=>`
+                  <div onclick="state.currentSlide=${i};render();" style="width:64px;height:40px;background:${state.theme.bg};border-radius:8px;flex-shrink:0;border:2px solid ${state.currentSlide===i?'#3b82f6':'rgba(255,255,255,0.2)'};display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);font-size:12px;font-weight:600;">
+                    ${i+1}
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    function generate() {
+      state.step = 'generating';
+      render();
+      setTimeout(() => {
+        const t = TEMPLATES[state.selectedTemplate];
+        state.presentation = { title: t.name, slides: t.slides.map((s,i) => ({ ...s, id: i })) };
+        state.currentSlide = 0;
+        state.step = 'editor';
+        render();
+      }, 1800);
+    }
+
+    window.THEMES = THEMES;
+    render();
+  </script>
+</body>
+</html>

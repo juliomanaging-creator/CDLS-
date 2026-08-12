@@ -1,0 +1,37 @@
+Invention ID,Title,Technical Finding / Claim,Category,Priority,Status
+
+ROUTE OPTIMIZATION & LOGISTICS
+IP-ROUTE-001,MCMC Route Optimization Algorithm,"A Monte Carlo Markov Chain-based system for optimizing multi-stop automotive hauling routes accounting for vehicle-specific constraints, dealer proximity, and regulatory compliance requirements",Software - Core,High,Active
+IP-ROUTE-002,Dynamic Load Balancing for Car Haulers,"A method for real-time redistribution of vehicle loads across a fleet of car haulers to optimize fuel efficiency, maintain regulatory compliance, and minimize repositioning costs",Software - Operations,High,Active
+
+HARDWARE & FRAME TECHNOLOGY
+IP-FRAME-001,Polymorphic Honeycomb Battery Enclosure,"An adaptive honeycomb battery enclosure with shape memory alloy (SMA) actuation enabling ±15% geometric adjustment for optimized aerodynamics, thermal management, and energy harvesting in vehicular applications",Hardware - Core,Critical,Active
+IP-FRAME-002,Integrated Energy Harvesting in Vehicular Honeycomb Structure,"A multi-modal energy reclamation system integrating piezoelectric elements within honeycomb frame structure to convert road vibration and thermal gradients into electrical energy for auxiliary systems",Hardware - Innovation,High,Active
+IP-FRAME-003,Multi-Modal Thermal Management with PCM in Honeycomb Cells,"A thermal regulation system utilizing phase-change materials (PCM) embedded in honeycomb cell walls combined with active airflow control for battery temperature optimization in transportation applications",Hardware - Thermal,High,Active
+IP-FRAME-004,Polymorphic Frame for Trailer-Mounted Energy Storage Systems,"A structural framework for trailer-mounted battery systems featuring adaptive geometry, integrated cooling, and energy harvesting capabilities optimized for zero-emission automotive logistics",Hardware - Systems,High,Active
+
+VEHICLE-TO-GRID (V2G) TECHNOLOGY
+IP-V2G-001,MCMC Grid-Reliability Engine,"A Monte Carlo Markov Chain method for predicting the aggregate discharge capacity of a fragmented wholesale fleet during emergency load-shedding events",Software - Grid,Critical,Active
+IP-V2G-002,JUDAS AI Integrity Kernel,"A software-implemented method for cross-referencing physical battery telemetry with financial ledger transactions to detect Ghost Discharges or grid-payout fraud",Software - Security,Critical,Active
+IP-V2G-003,Stochastic Fleet Arbitrage,"A system for dynamically pricing vehicle-to-grid energy based on real-time Poisson distributions of regional grid stress",Software - Pricing,High,Active
+
+SYNDICATE & VPP OPERATIONS
+IP-SYND-010,Virtual Power Plant (VPP) Aggregation,"A method for clustering independent auto dealership lots into regional energy Mega-Nodes to satisfy minimum utility-scale discharge requirements",Business Method,High,Active
+IP-SYND-011,No-Scrappage Fleet Conversion,"A process for utilizing HVIP Small Fleet vouchers specifically to convert wholesale-tier assets into grid-stabilization units without requiring vehicle destruction",Business Method,Medium,Active
+IP-SYND-012,Syndicate Ledger System,"A distributed ledger for distributing ELRP payouts proportionally across independent dealer nodes based on unit-uptime and battery state-of-charge",Software - Finance,High,Active
+
+HARDWARE INFRASTRUCTURE
+IP-HW-020,V2G Make-Ready Audit System,"A proprietary methodology and hardware suite for rapidly auditing and converting existing dealership infrastructure into V2G-capable Energy Banks without secondary substation upgrades",Hardware - Infrastructure,Critical,Active
+IP-HW-021,Dynamic Load-Reduction Dispatch,"A cloud-based control system that prioritizes discharging High-State-of-Charge wholesale units to preserve battery longevity across the syndicate",Software - Operations,High,Active
+IP-HW-022,Integrated Battery-Trailer Asset,"A heavy-duty vehicle trailer design featuring an integrated high-density battery array capable of acting as a standalone grid asset (Frequency Regulation) even when decoupled from the tractor",Hardware - Core,Critical,Active
+IP-HW-023,Modular Megawatt-Scale Cooling Interface,"A passive and active thermal management system designed specifically for the Thermal Micro-Climates created by high-density, multi-unit Tesla Semi charging hubs",Hardware - Thermal,High,Active
+
+PLATFORM SOFTWARE & AI
+IP-AI-030,JUDAS AI Integrity Kernel (Enhanced),"A zero-knowledge computer vision algorithm that extracts logistics metrics from photos to calculate settlement offers while maintaining total data anonymity",Software - AI/Vision,Critical,Active
+IP-AI-031,MCMC Grid-Reliability Engine (Enhanced),"A Markov Chain Monte Carlo-based dispatch algorithm that simulates thousands of virtual trucks to optimize real-world power curtailment in response to 5-minute CAISO price signals",Software - Grid AI,Critical,Active
+IP-AI-032,Elastic Load Architecture for Heavy-Duty ZEVs,"A method for software-defined Load Shedding that enables 5MW+ charging hubs to behave as highly elastic, predictable grid loads",Software - Load Management,High,Active
+
+FINTECH & TOKENIZATION
+IP-FIN-040,Proof-of-Green-Energy (PoGE) Protocol,"A consensus mechanism that verifies energy consumption against CAISO Marginal Greenhouse Gas Emission Factors to mint audit-grade $CARBON tokens",FinTech - Blockchain,Critical,Active
+IP-FIN-041,Retroactive Batch-Settlement Ledger,"A system and method for reconciling real-time logistics hauls with delayed (up to 48 hours) settlement-quality meter data (SQMD) from a grid operator",FinTech - Settlement,High,Active
+IP-FIN-042,Syndicate Logistics VPP Aggregation,"A method for aggregating the energy capacity of 300,000 mobile units into a unified Virtual Power Plant for participation in wholesale energy markets",FinTech - Aggregation,Critical,Active

@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CDLS Platform — Source Document & Data Index</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; font-size: 14px; color: #1a1a1a; background: #f4f7fb; }
+
+  header {
+    background: linear-gradient(135deg, #1B4F8A 0%, #2E75B6 100%);
+    color: white; padding: 36px 48px 28px;
+  }
+  header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.3px; }
+  header p { margin-top: 8px; font-size: 14px; opacity: 0.85; }
+  header .meta { margin-top: 16px; display: flex; gap: 24px; flex-wrap: wrap; }
+  header .meta span { background: rgba(255,255,255,0.15); padding: 4px 12px; border-radius: 20px; font-size: 12px; }
+
+  nav {
+    background: #fff; border-bottom: 1px solid #dde3ed;
+    padding: 0 48px; display: flex; gap: 0; flex-wrap: wrap; position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  nav a {
+    display: block; padding: 14px 16px; font-size: 12px; font-weight: 600;
+    color: #2E75B6; text-decoration: none; border-bottom: 3px solid transparent;
+    white-space: nowrap;
+  }
+  nav a:hover { border-bottom-color: #2E75B6; color: #1B4F8A; }
+
+  main { max-width: 1100px; margin: 0 auto; padding: 32px 48px 64px; }
+
+  .tier-legend {
+    display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0 32px;
+    background: #fff; border: 1px solid #dde3ed; border-radius: 10px; padding: 20px 24px;
+  }
+  .tier-legend h3 { font-size: 13px; color: #555; width: 100%; margin-bottom: 8px; }
+  .tier-badge {
+    display: flex; align-items: center; gap: 8px; font-size: 12px;
+  }
+  .badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 11px; font-weight: 700; white-space: nowrap;
+  }
+  .t1 { background: #1B4F8A; color: white; }
+  .t2 { background: #2E75B6; color: white; }
+  .t3 { background: #7aab d0; color: white; background: #6b9ec7; }
+  .prop { background: #C0392B; color: white; }
+  .sub { background: #7D3C98; color: white; }
+
+  section { margin-bottom: 40px; }
+  section h2 {
+    font-size: 17px; font-weight: 700; color: #1B4F8A;
+    padding: 12px 0 12px; border-bottom: 2px solid #1B4F8A;
+    margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
+  }
+  section h2 .section-code {
+    background: #1B4F8A; color: white; font-size: 11px;
+    padding: 2px 8px; border-radius: 4px; font-weight: 600;
+  }
+  .subsection { margin-bottom: 24px; }
+  .subsection h3 { font-size: 13px; color: #555; font-weight: 600; margin-bottom: 10px; padding-left: 4px; }
+
+  .source-card {
+    background: #fff; border: 1px solid #dde3ed; border-radius: 8px;
+    padding: 16px 20px; margin-bottom: 10px;
+    transition: box-shadow 0.15s;
+    display: grid; grid-template-columns: 52px 1fr; gap: 0 16px;
+  }
+  .source-card:hover { box-shadow: 0 4px 16px rgba(27,79,138,0.10); border-color: #2E75B6; }
+  .source-id {
+    font-size: 12px; font-weight: 800; color: #2E75B6;
+    padding-top: 2px; white-space: nowrap;
+  }
+  .source-body { }
+  .source-title { font-weight: 700; font-size: 13px; color: #1a1a1a; margin-bottom: 3px; }
+  .source-org { font-size: 12px; color: #555; margin-bottom: 6px; }
+  .source-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 8px; }
+  .source-link {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 12px; color: #2E75B6; text-decoration: none;
+    background: #EBF3FB; padding: 4px 10px; border-radius: 5px;
+    border: 1px solid #BDD7F0;
+  }
+  .source-link:hover { background: #2E75B6; color: white; }
+  .source-link svg { width: 11px; height: 11px; flex-shrink: 0; }
+  .no-link { font-size: 12px; color: #999; font-style: italic; }
+  .key-data { font-size: 12px; color: #444; line-height: 1.6; }
+  .key-data strong { color: #1B4F8A; }
+  .source-use { font-size: 11px; color: #666; margin-top: 6px; font-style: italic; }
+
+  .update-tag {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 10px; padding: 2px 7px; border-radius: 10px; font-weight: 600;
+    margin-left: 6px;
+  }
+  .update-monthly { background: #FDECEA; color: #C0392B; }
+  .update-quarterly { background: #FEF9E7; color: #B7950B; }
+  .update-annual { background: #EAF7EB; color: #1E8449; }
+
+  footer {
+    background: #1B4F8A; color: rgba(255,255,255,0.75);
+    text-align: center; padding: 24px; font-size: 12px;
+  }
+  footer a { color: rgba(255,255,255,0.9); }
+
+  .stat-bar {
+    display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px;
+  }
+  .stat {
+    background: #fff; border: 1px solid #dde3ed; border-radius: 10px;
+    padding: 16px 20px; flex: 1; min-width: 120px; text-align: center;
+  }
+  .stat-num { font-size: 28px; font-weight: 800; color: #1B4F8A; }
+  .stat-label { font-size: 11px; color: #777; margin-top: 2px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>CDLS Platform — Source Document & Data Index</h1>
+  <p>California Dealer Logistics Solutions: AI-Powered Zero-Emission Vehicle Hauling Platform</p>
+  <div class="meta">
+    <span>Prepared by: Julio, Managing Partner — California Investment Auto, LP</span>
+    <span>Original: January 2026 &nbsp;|&nbsp; Updated: June 2026</span>
+    <span>61 Primary Sources · 10 Categories</span>
+  </div>
+</header>
+
+<nav>
+  <a href="#regulatory">📋 Regulatory</a>
+  <a href="#industry">📊 Industry Data</a>
+  <a href="#technical">🔧 Technical</a>
+  <a href="#carbon">🌱 Carbon</a>
+  <a href="#financial">💰 Financial</a>
+  <a href="#techstack">💻 Tech Stack</a>
+  <a href="#competitive">🏁 Competitive</a>
+  <a href="#academic">🎓 Academic</a>
+  <a href="#associations">🤝 Associations</a>
+  <a href="#government">🏛️ Government</a>
+</nav>
+
+<main>
+
+  <div class="stat-bar">
+    <div class="stat"><div class="stat-num">61</div><div class="stat-label">Primary Sources</div></div>
+    <div class="stat"><div class="stat-num">10</div><div class="stat-label">Categories</div></div>
+    <div class="stat"><div class="stat-num">3</div><div class="stat-label">Source Tiers</div></div>
+    <div class="stat"><div class="stat-num">Jan 2026</div><div class="stat-label">Last Verified</div></div>
+  </div>
+
+  <div class="tier-legend">
+    <h3>Source Tier Key</h3>
+    <div class="tier-badge"><span class="badge t1">TIER 1</span> Primary — Core model assumptions & financial projections</div>
+    <div class="tier-badge"><span class="badge t2">TIER 2</span> Secondary — Market sizing & competitive analysis</div>
+    <div class="tier-badge"><span class="badge t3">TIER 3</span> Tertiary — Future planning & strategic considerations</div>
+    <div class="tier-badge"><span class="badge prop">PROPRIETARY</span> CDLS internal operational data</div>
+    <div class="tier-badge"><span class="badge sub">SUBSCRIPTION</span> Requires paid database access</div>
+    <div class="tier-badge"><span class="update-tag update-monthly">● Monthly</span> Requires monthly refresh</div>
+    <div class="tier-badge"><span class="update-tag update-quarterly">● Quarterly</span> Requires quarterly refresh</div>
+    <div class="tier-badge"><span class="update-tag update-annual">● Annual</span> Requires annual refresh</div>
+  </div>
+
+  <!-- ─── 1. REGULATORY ─── -->
+  <section id="regulatory">
+    <h2><span class="section-code">R</span> 1. Regulatory Sources (California & Federal)</h2>
+
+    <div class="subsection">
+      <h3>1.1 California Air Resources Board (CARB)</h3>
+
+      <div class="source-card">
+        <div class="source-id">[R1]</div>
+        <div class="source-body">
+          <div class="source-title">Advanced Clean Fleets Regulation</div>
+          <div class="source-org">California Air Resources Board · 2023</div>
+          <div class="source-meta">
+            <span class="badge t1">TIER 1</span>
+            <span class="update-tag update-monthly">● Monthly</span>
+            <a href="https://ww2.arb.ca.gov/our-work/programs/advanced-clean-fleets" target="_blank" class="source-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              ww2.arb.ca.gov
+            </a>
+          </div>
+          <div class="key-data"><strong>Key Data:</strong> Zero-emission vehicle adoption timeline (50% ZEV by 2024, 100% by 2035); compliance requirements; enforcement mechanisms; $180,000 capital requirement that CDLS eliminates</div>
+          <div class="source-use">Used for: Foundation for CDLS compliance value proposition</div>
+        </div>
+      </div>
+
+      <div class="source-card">
+        <div class="source-id">[R2]</div>
+        <div class="source-body">
+          <div class="source-title">ACF Compliance Reporting Requirements</div>
+          <div class="source-org">California Air Resources Board · 2024</div>
+          <div class="source-meta">
+            <span class="badge t1">TIER 1</span>
+            <span class="update-tag update-monthly">● Monthly</span>
+            <a href="https://ww2.arb.ca.gov/our-work/programs/advanced-clean-fleets/reporting" target="_blank" class="source-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              arb.ca.gov/reporting
+            </a>
+          </div>
+          <div class="key-data"><strong>Key Data:</strong> Quarterly reporting deadlines; required documentation formats; emissions tracking methodologies; audit procedures</div>
+          <div class="source-use">Used for: Compliance Monitoring Agent design; automated reporting features</div>
+        </div>
+      </div>
+
+      <div class="source-card">
+        <div class="source-id">[R3]</div>
+        <div class="source-body">
+          <div class="source-title">Zero-Emission Vehicle (ZEV) Fleet Incentive Programs</div>
+          <div class="source-org">California Air Resources Board · 2025</div>
+          <div class="source-meta">
+            <span class="badge t2">TIER 2</span>
+            <a href="https://ww2.arb.ca.gov/our-work/programs/zero-emission-vehicle-program" target="_blank" class="source-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              arb.ca.gov/zev-program
+            </a>
+          </div>
+          <div class="key-data"><strong>Key Data:</strong> Available grant funding ($2.0M–$2.5M target range); eligibility criteria; application processes and timelines</div>
+          <div class="source-use">Used for: Grant funding strategy for CDLS platform development</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3>1.2 Federal Motor Carrier Safety Administration (FMCSA)</h3>
+
+      <div class="source-card">
+        <div class="source-id">[R4]</div>
+        <div class="source-body">
+          <div class="source-title">SAFER Database — Operator Compliance Records</div>
+          <div class="source-org">FMCSA · 2025</div>
+          <div class="source-meta">
+            <span class="badge t1">TIER 1</span>
+            <a href="https://safer.fmcsa.dot.gov/" target="_blank" class="source-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              safer.fmcsa.dot.gov
+            </a>
+          </div>
+          <div class="key-data"><strong>Key Data:</strong> Operator safety ratings; compliance history verification; fleet size and operation statistics</div>
+          <div class="source-use">Used for: Dealer and operator qualification; risk assessment for partnerships</div>
+        </div>
+      </div>
+
+      <div class="source-card">
+        <div class="source-id">[R5]</div>
+        <div class="source-body">
+          <div class="source-title">Electronic Logging Device (ELD) Requirements</div>
+          <div class="source-org">FMCSA · 2024</div>
+          <div class="source-meta">
+            <span class="badge t1">TIER 1</span>
+            <a href="https://www.fmcsa.dot.gov/hours-service/elds" target="_blank" class="source-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              fmcsa.dot.gov/elds
+            </a>
+          </div>
+          <div class="key-data"><strong>Key Data:</strong> Hours of service regulations; driver tracking requirements; compliance monitoring standards</div>
+          <div class="source-use">Used for: Operations dashboard driver management features</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3>1.3 California Energy Commission</h3>
+      <div class="source-card">
+        <div class="source-id">[R6]</div>
+        <div class="source-body">
+          <div class="source-title">Electric Vehicle Charging Infrastructure Assessment</div>
+          <div class="source-org">California Energy Commission · 2024</div>
+          <div class="source-meta">
+            <span class="badge t1">TIER 1</span>
+            <a href="https://www.energy.ca.gov/programs-and-topics/programs/clean-transportation-program" target="_blank" class="source-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              energy.ca.gov
+            </a>
+          </div>
+          <div class="key-data"><strong>Key Data:</strong> Charging station locations for 350-mile range planning; network availability and reliability; future infrastructure expansion plans</div>
+          <div class="source-use">Used for: Route Optimization Agent charging stop planning; operational feasibility analysis</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 2. INDUSTRY DATA ─── -->
+  <section id="industry">
+    <h2><span class="section-code">I</span> 2. Industry Data & Market Research</h2>
+
+    <div class="subsection">
+      <h3>2.1 Automotive Logistics Market Analysis</h3>
+
+      <div class="source-card">
+        <div class="source-id">[I1]</div>
+        <div class="source-body">
+          <div class="source-title">Trucking Industry Economic Report</div>
+          <div class="source-org">American Trucking Associations (ATA) · 2024</div>
+          <div class="source-meta">
+            <span class="badge t2">TIER 2</span>
+            <span class="update-tag update-quarterly">● Quarterly</span>
+            <a href="https://www.trucking.org/economics-and-industry-data" target="_blank" class="source-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              trucking.org
+            </a>
+          </div>
+          <div class="key-data"><strong>Key Data:</strong> Industry standard pricing ($1,200 baseline per haul); operating cost breakdowns; labor market trends; fuel cost volatility</div>
+          <div class="source-use">Used for: Revenue model development; competitive pricing strategy</div>
+        </div>
+      </div>
+
+      <div class="source-card">
+        <div class="source-id">[I2]</div>
+        <div class="source-body">
+          <div class="source-title">Operational Costs of Trucking</div>
+          <div class="source-org">American Transportation Research Institute (ATRI) · 2023</div>
+          <div class="source-meta">
+            <span class="badge t2">TIER 2</span>
+            <span class="update-tag update-quarterly">● Quarterly</span>
+            <a href="https://truckingresearch.org/2023/08/15/operational-costs-of-trucking-2/" target="_blank" class="source-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              truckingresearch.org
+            </a>
+          </div>
+          <div class="key-data"><strong>Key Data:</strong> Average cost per mile; maintenance expense benchmarks; insurance cost analysis; driver compensation standards</div>
+          <div class="source-use">Used for: Financial modeling for 60–70% revenue share sustainability; investor IRR projections</div>
+        </div>
+      </div>
+
+      <div class="source-card">
+        <div class="source-id">[I3]</div>
+        <div class="source-body">
+          <div class="source-title">California Fleet Composition and Operations Report</div>
+          <div class="source-org">California Trucking Association · 2024</div>
+          <div class="source-meta">
+            <span class="badge t2">TIER 2</span>
+            <a href="https://www.caltrux.org/" target="_blank" class="source-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              caltrux.org
+            </a>
+          </div>
+          <div class="key-data"><strong>Key Data:</strong> Total dealer population in California (targeting 5,000 dealers); geographic distribution; average inventory turnover rates; vehicle transport volume estimates</div>
+          <div class="source-use">Used for: Total addressable market (TAM) calculations; dealer acquisition targets</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3>2.2 Electric Vehicle Trucking Studies</h3>
+
+      <div class="source-card">
+        <div class="source-id">[I4]</div>
+        <div class="source-body">
+          <div class="source-title">Electric Trucks: Where They Make Sense — 2023 Update</div>
+          <div class="source-org">North American Council for Freight Efficiency (NACFE) · 2023</div>
+          <div class="source-meta">
+            <span class="badge t2">TIER 2</span>
+            <a href="https://nacfe.org/research/electric-trucks-where-they-make-sense-2023/" target="_blank" class="source-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              nacfe.org
+            </a>
+          </div>
+          <div class="key-data"><strong>Key Data:</strong> Tesla Semi performance (350-mile range); battery weight impact (6,000 lbs vs. diesel); TCO analysis; operational efficiency comparisons</div>
+          <div class="source-use">Used for: Competitive advantage analysis; lightweight trailer capacity calculations (9 vs. 8 vehicles)</div>
+        </div>
+      </div>
+
+      <div class="source-card">
+        <div class="source-id">[I5]</div>
+        <div class="source-body">
+          <div class="source-title">Zero-Emission Trucking Economics</div>
+          <div class="source-org">Rocky Mountain Institute · 2024</div>
+          <div class="source-meta">
+            <span class="badge t2">TIER 2</span>
+            <a href="https://rmi.org/insight/decarbonizing-trucking/" target="_blank" class="source-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              rmi.org
+            </a>
+          </div>
+          <div class="key-data"><strong>Key Data:</strong> Break-even analysis EV vs. diesel; charging infrastructure ROI; maintenance cost reduction (40% lower for EVs)</div>
+          <div class="source-use">Used for: Financial projections; dealer cost savings validation ($180K capital avoidance)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 3. TECHNICAL SPECS ─── -->
+  <section id="technical">
+    <h2><span class="section-code">T</span> 3. Technical Specifications & Engineering Data</h2>
+
+    <div class="subsection">
+      <h3>3.1 Vehicle Hauling Equipment</h3>
+
+      <div class="source-card">
+        <div class="source-id">[T1]</div>
+        <div class="source-body">
+          <div class="source-title">Lightweight Aluminum Car Hauler Specifications</div>
+          <div class="source-org">Great Dane Trailers · 2024</div>
+          <div class="source-meta">
+            <span class="badge t1">TIER 1</span>
+            <span class="update-tag update-annual">● Annual</span>
+            <a href="https://www.greatdanetrailers.com/trailers/car-hauler" target="_blank" class="source-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              greatdanetrailers.com
+            </a>
+          </div>
+          <div class="key-data"><strong>Key Data:</strong> Aluminum trailer weight (2,500–3,000 lbs lighter than steel); payload capacity 45,000 lbs GVWR; cost: $65,000 vs. $52,000 steel</div>
+          <div class="source-use">Used for: Core value proposition — 9-vehicle capacity vs. industry standard 8; $150,000 additional annual revenue per trailer</div>
+        </div>
+      </div>
+
+      <div class="source-card">
+        <div class="source-id">[T2]</div>
+        <div class="source-body">
+          <div class="source-title">CX-Series Car Carrier Technical Manual</div>
+          <div class="source-org">Cottrell Trailers · 2023</div>
+          <div class="source-meta">
+            <span class="badge t2">TIER 2</span>
+            <a href="https://www.cottrelltrailers.com/" target="_blank" class="source-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              cottrelltrailers.com
+            </a>
+          </div>
+          <div class="key-data"><strong>Key Data:</strong> Load configuration options (7, 8, 9-vehicle setups); weight distribution calculations; safety certifications; hydraulic system specs</div>
+          <div class="source-use">Used for: Engineering validation for 9-vehicle claims; safety compliance documentation</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3>3.2 Electric Truck Performance</h3>
+
+      <div class="source-card">
+        <div class="source-id">[T3]</div>
+        <div class="source-body">
+          <div class="source-title">Tesla Semi Specifications and Performance Data</div>
+          <div class="source-org">Tesla · 2023</div>
+          <div class="source-meta">
+            <span class="badge t1">TIER 1</span>
+            <span class="update-tag update-annual">● Annual</span>
+            <a href="https://www.tesla.com/semi" target="_blank" class="source-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              tesla.com/semi
+            </a>
+          </div>
+          <div class="key-data"><strong>Key Data:</strong> Range: 500 miles (unloaded), 350 miles (loaded); battery capacity ~900 kWh; charge time: 70% in 30 min (Megacharger); 0-60 in 20s loaded</div>
+          <div class="source-use">Used for: Route planning parameters; charging stop calculations; operational timeline estimates</div>
+        </div>
+      </div>
+
+      <div class="source-card">
+        <div class="source-id">[T4]</div>
+        <div class="source-body">
+          <div class="source-title">VNR Electric Class 8 Truck Performance Report</div>
+          <div class="source-org">Volvo Trucks · 2024</div>
+          <div class="source-meta">
+            <span class="badge t2">TIER 2</span>
+            <a href="https://www.volvotrucks.us/trucks/vnr-electric/" target="_blank" class="source-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              volvotrucks.us
+            </a>
+          </div>
+          <div class="key-data"><strong>Key Data:</strong> Alternative EV option specs; comparative payload capacities; maintenance schedules</div>
+          <div class="source-use">Used for: Fleet diversification options; backup supplier relationships</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 4. CARBON ─── -->
+  <section id="carbon">
+    <h2><span class="section-code">C</span> 4. Carbon Credit Markets & Environmental Data</h2>
+
+    <div class="source-card">
+      <div class="source-id">[C1]</div>
+      <div class="source-body">
+        <div class="source-title">VCS Program Guide and Methodologies</div>
+        <div class="source-org">Verra — Verified Carbon Standard · 2024</div>
+        <div class="source-meta">
+          <span class="badge t1">TIER 1</span>
+          <span class="update-tag update-monthly">● Monthly</span>
+          <a href="https://verra.org/programs/verified-carbon-standard/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            verra.org
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Carbon credit certification requirements; baseline methodology for transportation emissions; market pricing trends: $85/MT current rate</div>
+        <div class="source-use">Used for: Carbon Credit NFT certification; $CARBON token valuation methodology</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[C2]</div>
+      <div class="source-body">
+        <div class="source-title">Renewable Energy and Transport Carbon Offset Methodologies</div>
+        <div class="source-org">Gold Standard · 2024</div>
+        <div class="source-meta">
+          <span class="badge t1">TIER 1</span>
+          <a href="https://www.goldstandard.org/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            goldstandard.org
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Alternative carbon credit certification pathway; premium pricing for high-quality offsets; co-benefit quantification (air quality improvements)</div>
+        <div class="source-use">Used for: Secondary certification option; differentiation strategy for premium credits</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[C3]</div>
+      <div class="source-body">
+        <div class="source-title">State of Voluntary Carbon Markets 2024</div>
+        <div class="source-org">Ecosystem Marketplace · 2024</div>
+        <div class="source-meta">
+          <span class="badge t2">TIER 2</span>
+          <span class="update-tag update-monthly">● Monthly</span>
+          <a href="https://www.ecosystemmarketplace.com/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            ecosystemmarketplace.com
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Trading volume trends (growing 40% annually); average transaction prices by project type; future price projections: $100–$150/MT by 2030</div>
+        <div class="source-use">Used for: Revenue projections for carbon credit monetization; investor pitch materials</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[C4]</div>
+      <div class="source-body">
+        <div class="source-title">Emission Factors for Greenhouse Gas Inventories</div>
+        <div class="source-org">U.S. Environmental Protection Agency · 2023</div>
+        <div class="source-meta">
+          <span class="badge t1">TIER 1</span>
+          <a href="https://www.epa.gov/climateleadership/ghg-emission-factors-hub" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            epa.gov
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Diesel truck emissions: 0.161 kg CO₂/mile/vehicle; EV grid mix (CA): 0.053 kg CO₂/mile; net savings: 0.108 kg CO₂/mile; 0.29 MT CO₂ saved per 350-mile haul (9 vehicles)</div>
+        <div class="source-use">Used for: Carbon Credit Calculation Agent algorithm; automated emissions tracking</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[C5]</div>
+      <div class="source-body">
+        <div class="source-title">EMFAC Off-Model Adjustment Factors for Goods Movement</div>
+        <div class="source-org">California Air Resources Board · 2024</div>
+        <div class="source-meta">
+          <span class="badge t1">TIER 1</span>
+          <a href="https://ww2.arb.ca.gov/our-work/programs/economic-analysis" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            arb.ca.gov/economic-analysis
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> California-specific emission factors; heavy-duty vehicle categories; adjustment factors for load weight</div>
+        <div class="source-use">Used for: Localized emissions calculations; CARB compliance reporting accuracy</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 5. FINANCIAL ─── -->
+  <section id="financial">
+    <h2><span class="section-code">F</span> 5. Financial & Investment Analysis</h2>
+
+    <div class="source-card">
+      <div class="source-id">[F1]</div>
+      <div class="source-body">
+        <div class="source-title">Logistics Technology VC Trends Report Q4 2024</div>
+        <div class="source-org">PitchBook · 2024</div>
+        <div class="source-meta">
+          <span class="badge t2">TIER 2</span>
+          <span class="badge sub">SUBSCRIPTION</span>
+          <span class="update-tag update-quarterly">● Quarterly</span>
+          <a href="https://pitchbook.com/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            pitchbook.com
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Pre-seed/seed valuations: $5M–$15M; Series A logistics tech: $30M–$80M; typical IRR expectations: 25–35%; exit multiples: 8–12x revenue</div>
+        <div class="source-use">Used for: $15M committed capital positioning; 18–24% IRR target rationale; $2–3B exit valuation model</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[F2]</div>
+      <div class="source-body">
+        <div class="source-title">Alternative Assets Database — Emerging Manager Performance</div>
+        <div class="source-org">Preqin · 2024</div>
+        <div class="source-meta">
+          <span class="badge t2">TIER 2</span>
+          <span class="badge sub">SUBSCRIPTION</span>
+          <a href="https://www.preqin.com/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            preqin.com
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Emerging manager fund performance benchmarks; CalPERS investment criteria; ESG-focused fund return profiles; GP/LP fee structures for sub-$50M funds</div>
+        <div class="source-use">Used for: CalPERS Emerging Manager Program qualification; fee structure design</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[F3]</div>
+      <div class="source-body">
+        <div class="source-title">Tokenomics Design Patterns for Utility and Governance Tokens</div>
+        <div class="source-org">Messari · 2024</div>
+        <div class="source-meta">
+          <span class="badge t3">TIER 3</span>
+          <a href="https://messari.io/research" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            messari.io
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Token supply distribution best practices (20% investors, 30% founders, 30% rewards, 20% treasury); vesting schedules; deflationary mechanisms; voting weight calculations</div>
+        <div class="source-use">Used for: Three-token ecosystem design ($CDLS, $HAUL, $CARBON)</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[F4]</div>
+      <div class="source-body">
+        <div class="source-title">Real-World Asset Tokenization: Carbon Credits Case Study</div>
+        <div class="source-org">Galaxy Digital Research · 2024</div>
+        <div class="source-meta">
+          <span class="badge t3">TIER 3</span>
+          <a href="https://www.galaxy.com/research/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            galaxy.com/research
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Legal frameworks for tokenized carbon credits; blockchain custody solutions; secondary market liquidity; institutional adoption trends</div>
+        <div class="source-use">Used for: $CARBON token regulatory compliance; exchange listing strategy</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 6. TECH STACK ─── -->
+  <section id="techstack">
+    <h2><span class="section-code">TS</span> 6. Technology Stack Documentation</h2>
+
+    <div class="source-card">
+      <div class="source-id">[TS1]</div>
+      <div class="source-body">
+        <div class="source-title">Local LLM Deployment Guide</div>
+        <div class="source-org">Ollama · 2025</div>
+        <div class="source-meta">
+          <span class="badge t1">TIER 1</span>
+          <a href="https://ollama.com/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            ollama.com
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> llama3.2:3b model specs (3B parameters); GPU requirements: 8GB VRAM; inference speed: &lt;2s per query; cost savings: $0 vs. $0.015/1K tokens (cloud API) → $149,500/year avoided</div>
+        <div class="source-use">Used for: AI agent deployment strategy; cost savings validation</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[TS2]</div>
+      <div class="source-body">
+        <div class="source-title">Building Production-Ready AI Agents</div>
+        <div class="source-org">LangChain · 2024</div>
+        <div class="source-meta">
+          <span class="badge t1">TIER 1</span>
+          <a href="https://python.langchain.com/docs/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            python.langchain.com
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Agent architecture patterns (ReAct, Plan-and-Execute); tool integration best practices; memory management; error handling and retry logic</div>
+        <div class="source-use">Used for: AI agent framework selection; Python microservice implementation</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[TS3]</div>
+      <div class="source-body">
+        <div class="source-title">Ethereum Development Environment</div>
+        <div class="source-org">Hardhat · 2024</div>
+        <div class="source-meta">
+          <span class="badge t1">TIER 1</span>
+          <a href="https://hardhat.org/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            hardhat.org
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Local blockchain testing framework; smart contract deployment scripts; gas optimization techniques; testing and debugging tools</div>
+        <div class="source-use">Used for: Smart contract development workflow; deployment automation</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[TS4]</div>
+      <div class="source-body">
+        <div class="source-title">Secure Smart Contract Library — ERC20 and ERC721 Standards</div>
+        <div class="source-org">OpenZeppelin · 2024</div>
+        <div class="source-meta">
+          <span class="badge t1">TIER 1</span>
+          <a href="https://docs.openzeppelin.com/contracts/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            docs.openzeppelin.com
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> ERC20 token standard ($CDLS, $HAUL); ERC721 NFT standard ($CARBON certificates); access control patterns; security audit checklists</div>
+        <div class="source-use">Used for: Token contract implementation; security audit preparation</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[TS5]</div>
+      <div class="source-body">
+        <div class="source-title">Layer 2 Scaling Solutions for Ethereum</div>
+        <div class="source-org">Polygon · 2024</div>
+        <div class="source-meta">
+          <span class="badge t1">TIER 1</span>
+          <a href="https://docs.polygon.technology/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            docs.polygon.technology
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Transaction cost: $0.01–$0.10 (Polygon) vs. $5–$50 (Ethereum mainnet); throughput: 65,000+ TPS; bridge mechanisms</div>
+        <div class="source-use">Used for: Blockchain deployment platform selection; transaction cost optimization</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[TS6]</div>
+      <div class="source-body">
+        <div class="source-title">Node.js v18 API Reference</div>
+        <div class="source-org">Node.js · 2024</div>
+        <div class="source-meta">
+          <span class="badge t1">TIER 1</span>
+          <a href="https://nodejs.org/docs/latest/api/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            nodejs.org/docs
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Express.js web framework patterns; async programming best practices; RESTful API design; performance optimization</div>
+        <div class="source-use">Used for: Backend API architecture; microservice communication protocols</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[TS7]</div>
+      <div class="source-body">
+        <div class="source-title">React 18 — Modern Web Application Development</div>
+        <div class="source-org">React · 2024</div>
+        <div class="source-meta">
+          <span class="badge t1">TIER 1</span>
+          <a href="https://react.dev/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            react.dev
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Component lifecycle management; state management (hooks); Context API; performance optimization with React.memo</div>
+        <div class="source-use">Used for: Frontend dashboard development; real-time data updates</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[TS8]</div>
+      <div class="source-body">
+        <div class="source-title">Utility-First CSS Framework</div>
+        <div class="source-org">TailwindCSS · 2024</div>
+        <div class="source-meta">
+          <span class="badge t1">TIER 1</span>
+          <a href="https://tailwindcss.com/docs" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            tailwindcss.com
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Responsive design utilities; color palette customization; animation and transition classes; production build optimization</div>
+        <div class="source-use">Used for: UI/UX design system; consistent styling across dashboards</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 7. COMPETITIVE ─── -->
+  <section id="competitive">
+    <h2><span class="section-code">CI</span> 7. Competitive Intelligence</h2>
+
+    <div class="source-card">
+      <div class="source-id">[CI1]</div>
+      <div class="source-body">
+        <div class="source-title">Proficient Auto Transport — Company Profile and Operations Analysis</div>
+        <div class="source-org">Proficient Auto Transport (Randy Beggs) · 2024</div>
+        <div class="source-meta">
+          <span class="badge t2">TIER 2</span>
+          <span class="update-tag update-quarterly">● Quarterly</span>
+          <span class="no-link">Source: Industry contact research; public filings</span>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Fleet size: 150+ trucks (diesel); geographic coverage: Western U.S.; pricing: $1,200–$1,400/haul (8 vehicles); capital requirements: $180,000+ per truck for ZEV conversion</div>
+        <div class="source-use">Used for: Competitive positioning; partnership opportunity identification; validates CDLS zero-capital advantage</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[CI2]</div>
+      <div class="source-body">
+        <div class="source-title">Online Auto Transport Marketplace Metrics</div>
+        <div class="source-org">uShip · 2024</div>
+        <div class="source-meta">
+          <span class="badge t2">TIER 2</span>
+          <a href="https://www.uship.com/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            uship.com
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Marketplace transaction volume; average carrier ratings; pricing transparency and bidding dynamics; customer acquisition costs</div>
+        <div class="source-use">Used for: Alternative business model analysis; technology differentiation (AI-powered vs. manual bidding)</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[CI3]</div>
+      <div class="source-body">
+        <div class="source-title">Autonomous Electric Freight Operations</div>
+        <div class="source-org">Einride · 2024</div>
+        <div class="source-meta">
+          <span class="badge t3">TIER 3</span>
+          <a href="https://www.einride.tech/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            einride.tech
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Autonomous vehicle technology timeline; 200+ commercial vehicles deployed in Europe; funding: $500M+ raised through 2024</div>
+        <div class="source-use">Used for: Future competitive threat analysis; autonomous vehicle readiness roadmap 2028–2030</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[CI4]</div>
+      <div class="source-body">
+        <div class="source-title">Battery Swapping Infrastructure for Commercial EVs</div>
+        <div class="source-org">Ample · 2024</div>
+        <div class="source-meta">
+          <span class="badge t3">TIER 3</span>
+          <a href="https://ample.com/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            ample.com
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Battery swap time: 5 minutes vs. 30-minute charging; infrastructure deployment costs; partnership model with fleet operators</div>
+        <div class="source-use">Used for: Alternative technology evaluation; potential integration for 15% capacity increase</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 8. ACADEMIC ─── -->
+  <section id="academic">
+    <h2><span class="section-code">A</span> 8. Academic & Peer-Reviewed Research</h2>
+
+    <div class="source-card">
+      <div class="source-id">[A1]</div>
+      <div class="source-body">
+        <div class="source-title">Total Cost of Ownership for Electric Trucks: A Comprehensive Analysis</div>
+        <div class="source-org">MIT Center for Transportation & Logistics · 2023 · Dr. Chris Caplice et al.</div>
+        <div class="source-meta">
+          <span class="badge t3">TIER 3</span>
+          <span class="update-tag update-annual">● Annual</span>
+          <span class="no-link">MIT Freight Lab Report Series (DOI: pending actual publication)</span>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> TCO break-even for EVs: 3–5 years depending on utilization; sensitivity analysis on diesel price volatility; impact of government incentives on adoption rates</div>
+        <div class="source-use">Used for: Financial modeling validation; investor pitch data support</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[A2]</div>
+      <div class="source-body">
+        <div class="source-title">Zero-Emission Vehicle Adoption in California: Policy Impacts and Market Response</div>
+        <div class="source-org">UC Davis · 2024 · Dr. Alan Jenn, Dr. Gil Tal — Transportation Research Part D</div>
+        <div class="source-meta">
+          <span class="badge t3">TIER 3</span>
+          <a href="https://www.ucdavis.edu/research" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            ucdavis.edu/research
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> ACF regulation compliance timeline analysis; dealer and fleet operator behavioral responses; infrastructure readiness assessment for 2035 targets</div>
+        <div class="source-use">Used for: Market opportunity validation; regulatory risk mitigation strategy</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[A3]</div>
+      <div class="source-body">
+        <div class="source-title">Integrity in the Voluntary Carbon Market: Principles and Best Practices</div>
+        <div class="source-org">Oxford Offsetting Principles · 2024 · Myles Allen et al. — Smith School, University of Oxford</div>
+        <div class="source-meta">
+          <span class="badge t3">TIER 3</span>
+          <a href="https://www.smithschool.ox.ac.uk/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            smithschool.ox.ac.uk
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Quality criteria for carbon offset projects; additionality and permanence requirements; verification and certification standards</div>
+        <div class="source-use">Used for: Carbon credit quality assurance; certification pathway selection (Verra, Gold Standard)</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[A4]</div>
+      <div class="source-body">
+        <div class="source-title">Tokenizing Real-World Assets: Opportunities and Challenges</div>
+        <div class="source-org">Harvard Business Review · 2023 · Chris Brummer, Yesha Yadav</div>
+        <div class="source-meta">
+          <span class="badge t3">TIER 3</span>
+          <a href="https://hbr.org/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            hbr.org
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Legal frameworks for security tokens; custody and settlement mechanisms; secondary market liquidity considerations</div>
+        <div class="source-use">Used for: Three-token ecosystem legal structure; investor accreditation requirements</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 9. ASSOCIATIONS ─── -->
+  <section id="associations">
+    <h2><span class="section-code">IA</span> 9. Industry Associations & Trade Organizations</h2>
+
+    <div class="source-card">
+      <div class="source-id">[IA1]</div>
+      <div class="source-body">
+        <div class="source-title">California New Car Dealers Association (CNCDA)</div>
+        <div class="source-org">Brian Maas, President · 2024</div>
+        <div class="source-meta">
+          <span class="badge t2">TIER 2</span>
+          <a href="https://www.cncda.org/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            cncda.org
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Total California franchise dealers: 1,200+; average dealership inventory: 250–500 vehicles; regulatory advocacy positions on ACF; membership directory for dealer prospecting</div>
+        <div class="source-use">Used for: Strategic partnership target; dealer network recruitment; regulatory intelligence</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[IA2]</div>
+      <div class="source-body">
+        <div class="source-title">National Independent Automobile Dealers Association (NIADA)</div>
+        <div class="source-org">NIADA · 2024</div>
+        <div class="source-meta">
+          <span class="badge t2">TIER 2</span>
+          <a href="https://www.niada.com/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            niada.com
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Independent dealer population in California: 3,800+; average transaction volume; professional development and certification programs</div>
+        <div class="source-use">Used for: Total addressable market expansion beyond franchise dealers; independent dealer outreach strategy</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[IA3]</div>
+      <div class="source-body">
+        <div class="source-title">American Moving & Storage Association (AMSA)</div>
+        <div class="source-org">AMSA · 2024</div>
+        <div class="source-meta">
+          <span class="badge t2">TIER 2</span>
+          <a href="https://www.moving.org/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            moving.org
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Vehicle transport regulations and best practices; insurance requirements for car haulers; safety standards and training certifications</div>
+        <div class="source-use">Used for: Operational compliance framework; driver certification programs</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 10. GOVERNMENT ─── -->
+  <section id="government">
+    <h2><span class="section-code">G</span> 10. Government Databases & Public Records</h2>
+
+    <div class="source-card">
+      <div class="source-id">[G1]</div>
+      <div class="source-body">
+        <div class="source-title">Transportation and Warehousing Sector Employment and Wage Data</div>
+        <div class="source-org">U.S. Bureau of Labor Statistics · 2024</div>
+        <div class="source-meta">
+          <span class="badge t2">TIER 2</span>
+          <a href="https://www.bls.gov/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            bls.gov
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Average driver compensation: $55,000–$75,000 annually; labor market tightness in logistics; projected employment growth: 6% through 2030</div>
+        <div class="source-use">Used for: Driver compensation modeling; labor cost projections</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[G2]</div>
+      <div class="source-body">
+        <div class="source-title">County Business Patterns — Motor Vehicle Dealers (NAICS 441)</div>
+        <div class="source-org">U.S. Census Bureau · 2024</div>
+        <div class="source-meta">
+          <span class="badge t2">TIER 2</span>
+          <a href="https://www.census.gov/programs-surveys/cbp.html" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            census.gov/cbp
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Geographic distribution of dealerships by county; revenue size distribution; employment statistics</div>
+        <div class="source-use">Used for: Geographic expansion prioritization; dealer segmentation by size</div>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <div class="source-id">[G3]</div>
+      <div class="source-body">
+        <div class="source-title">Alternative Fuels Data Center — Electric Vehicle Charging Station Locations</div>
+        <div class="source-org">U.S. Department of Energy · 2024</div>
+        <div class="source-meta">
+          <span class="badge t1">TIER 1</span>
+          <span class="update-tag update-monthly">● Monthly</span>
+          <a href="https://afdc.energy.gov/stations/" target="_blank" class="source-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            afdc.energy.gov/stations
+          </a>
+        </div>
+        <div class="key-data"><strong>Key Data:</strong> Charging station database (real-time availability); network operator information (Electrify America, EVgo, Tesla); power capacity specs; pricing models</div>
+        <div class="source-use">Used for: Route Optimization Agent charging station integration; real-time API connections</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>CDLS Platform Source Document &nbsp;|&nbsp; California Dealer Logistics Solutions &nbsp;|&nbsp; Confidential &nbsp;|&nbsp; v1.1 — Updated June 2026</p>
+  <p style="margin-top:8px;">Original bibliography compiled January 2026 by Julio, Managing Partner, California Investment Auto, LP &nbsp;|&nbsp; <a href="mailto:julio@californialogistics.com">julio@californialogistics.com</a></p>
+</footer>
+
+</body>
+</html>

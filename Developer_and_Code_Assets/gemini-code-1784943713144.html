@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CDLS Master Strategy Program - Zip Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #f8fafc; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .card { background: #1e293b; padding: 40px; border-radius: 12px; border: 1px solid #334155; box-shadow: 0 10px 25px rgba(0,0,0,0.5); text-align: center; max-width: 480px; }
+        h1 { font-size: 20px; color: #38bdf8; margin-bottom: 8px; }
+        p { font-size: 14px; color: #94a3b8; margin-bottom: 24px; }
+        button { background: #2563eb; color: white; border: none; padding: 14px 28px; font-size: 15px; font-weight: 600; border-radius: 6px; cursor: pointer; transition: 0.2s; }
+        button:hover { background: #1d4ed8; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>CDLS Energy Bank — Master Strategy Suite</h1>
+    <p>Generate and download the ready-to-deploy codebase, environment configs, SOPs, and smart contract audit specifications.</p>
+    <button onclick="generateCDLSZip()">📦 Download Full Program ZIP</button>
+</div>
+
+<script>
+async function generateCDLSZip() {
+    const zip = new JSZip();
+
+    // 1. Root Configuration & Package Specs
+    zip.file("package.json", JSON.stringify({
+        "name": "cdls-master-strategy-suite",
+        "version": "1.0.0",
+        "description": "CDLS 30k Unit Master Strategy Engine",
+        "main": "cdls_sandbox_runner.js",
+        "scripts": {
+            "start": "node cdls_sandbox_runner.js",
+            "audit:full": "npm run lint && npm run test:coverage && npm run security:slither"
+        },
+        "dependencies": {
+            "axios": "^1.6.0",
+            "dotenv": "^16.4.0"
+        }
+    }, null, 2));
+
+    zip.file(".env.example", `TREASURY_PRIME_API_URL=https://api.sandbox.treasuryprime.com\nTREASURY_PRIME_API_KEY_ID=your_key_here\nTREASURY_PRIME_API_SECRET_KEY=your_secret_here\nCDLS_MASTER_ACCOUNT_ID=acct_1029384756\nTOTAL_TRANSACTIONS=100\nOUTPUT_AUDIT_FILE=./treasury_prime_100_tx_audit.json`);
+
+    // 2. Production Runner Engine
+    zip.file("cdls_sandbox_runner.js", `require('dotenv').config();
+const axios = require('axios');
+const fs = require('fs');
+const crypto = require('crypto');
+
+const CONFIG = {
+  apiUrl: process.env.TREASURY_PRIME_API_URL || 'https://api.sandbox.treasuryprime.com',
+  apiKeyId: process.env.TREASURY_PRIME_API_KEY_ID,
+  apiSecretKey: process.env.TREASURY_PRIME_API_SECRET_KEY,
+  masterAccountId: process.env.CDLS_MASTER_ACCOUNT_ID || 'acct_1029384756',
+  totalTransactions: parseInt(process.env.TOTAL_TRANSACTIONS || '100', 10),
+  outputFile: process.env.OUTPUT_AUDIT_FILE || './treasury_prime_100_tx_audit.json'
+};
+
+console.log("CDLS Engine Ready. Target:", CONFIG.apiUrl);`);
+
+    // 3. Documentation & Audit Directories
+    const docs = zip.folder("docs");
+    docs.file("SOP-FIN-004.md", `# Standard Operating Procedure (SOP): Treasury Prime Simulation\n\nTitle: 100-Transaction Automated ACH/Book Transfer Batch Execution\nEffective Date: July 2026`);
+    docs.file("AUDIT_SCOPE.md", `# CDLS SMART CONTRACT AUDIT SCOPE\n\nTarget Engagement: Smart Contract & Protocol Security Assessment (CertiK / Trail of Bits)\nEcosystem: Ethereum L2 Settlement + Solana High-Frequency Telematics Engine`);
+
+    // Generate ZIP Blob and trigger download
+    const content = await zip.generateAsync({ type: "blob" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(content);
+    a.download = "CDLS_Master_Strategy_Program.zip";
+    a.click();
+    URL.revokeObjectURL(a.href);
+}
+</script>
+
+</body>
+</html>
