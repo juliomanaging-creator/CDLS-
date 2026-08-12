@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDLS — Master Strategy & Agent Ecosystem</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text-main: #c9d1d9;
+            --text-heading: #f0f6fc;
+            --gold: #d4af37;
+            --gold-hover: #f3e5ab;
+            --accent-blue: #58a6ff;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1.5rem;
+        }
+
+        .brand {
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            color: var(--text-heading);
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+
+        p.subtitle {
+            color: #8b949e;
+            font-size: 1.05rem;
+            margin-top: 0.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            border-color: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            color: var(--text-heading);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: #8b949e;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-link:hover {
+            color: var(--gold-hover);
+        }
+
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #484f58;
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">CDLS Digital Ecosystem</div>
+            <h1>Master Strategy & Agent Hub</h1>
+            <p class="subtitle">Operational platforms, architecture mappings, and autonomous agent systems.</p>
+        </header>
+
+        <main class="grid">
+            <div class="card">
+                <div>
+                    <div class="card-tag">Core Platform</div>
+                    <div class="card-title">Master Agent Ecosystem</div>
+                    <div class="card-desc">Central management console tracking all registered operational agents, system protocols, and status monitors.</div>
+                </div>
+                <a href="master_agent_ecosystem.html" class="card-link">Launch Platform &rarr;</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="card-tag">Architecture</div>
+                    <div class="card-title">Ecosystem Architecture Map</div>
+                    <div class="card-desc">Interactive structural map detailing platform layers, routing models, and node topology.</div>
+                </div>
+                <a href="ecosystem_architecture_map.html" class="card-link">View Architecture &rarr;</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="card-tag">System Mapping</div>
+                    <div class="card-title">Codebase Dependency Map</div>
+                    <div class="card-desc">Comprehensive breakdown of codebase file linkages, module dependencies, and execution chains.</div>
+                </div>
+                <a href="codebase_dependency_map.html" class="card-link">View Dependencies &rarr;</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="card-tag">Logistics Showcase</div>
+                    <div class="card-title">EcoLuxury Model Showcase</div>
+                    <div class="card-desc">Zero-emission logistics strategic framework, behavioral calibration models, and fleet economics.</div>
+                </div>
+                <a href="CDLS_Demo_V1_EcoLuxury.html" class="card-link">View Showcase &rarr;</a>
+            </div>
+        </main>
+
+        <footer>
+            CDLS Ecosystem &bull; Deployed via GitHub Pages
+        </footer>
+    </div>
+</body>
+</html>
