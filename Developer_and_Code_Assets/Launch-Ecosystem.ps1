@@ -1,1 +1,20 @@
-﻿$repoPath="$env:USERPROFILE\OneDrive";Set-Location -Path $repoPath;Write-Host "`n========================================================" -ForegroundColor Yellow;Write-Host "   STEP 1: CREATING EXTENSION MANIFEST & POPUP DASHBOARD " -ForegroundColor Yellow;Write-Host "========================================================`n" -ForegroundColor Yellow;$devAssetsPath=Join-Path $repoPath "Developer_and_Code_Assets";if(-not (Test-Path -LiteralPath $devAssetsPath)){New-Item -ItemType Directory -Path $devAssetsPath | Out-Null};$manifestJson='{"manifest_version":3,"name":"CAESAR Platform Tab Manager","version":"1.0","description":"Interactive dropdown menu for open Edge tabs.","permissions":["tabs","activeTab"],"action":{"default_popup":"popup.html"}}';Set-Content -Path (Join-Path $devAssetsPath "manifest.json") -Value $manifestJson -Encoding UTF8;Write-Host "[OK] Created manifest.json" -ForegroundColor Green;Write-Host "`n========================================================" -ForegroundColor Yellow;Write-Host "   STEP 2: GENERATING SYSTEM DOCS & GRAPH EXPORT        " -ForegroundColor Yellow;Write-Host "========================================================`n" -ForegroundColor Yellow;$rootReadme="# CAESAR Auditor Platform & ZEV Logistics Ecosystem`n`nAn enterprise-grade multi-agent platform.`n`n## 🗺️ Repository Structure`n````n. `n├── CAESAR_Auditor_Platform/`n├── CDLS_ZEV_Logistics/`n├── Dealership_and_Operations/`n├── Developer_and_Code_Assets/`n├── Grants_Tax_and_Incentives/`n├── Sovereign_Initiatives/`n├── dependency_graph.json`n└── index.html`n````n`n## 🧜‍♂️ System Architecture (Mermaid)`n```mermaid`nflowchart TD`n  subgraph CAESAR_Auditor_Platform`n    direction TB`n    V2G[V2G Syndication]`n    CDLS[CDLS Agents Core]`n    Sales[Sales Enablement]`n    Shared[Shared Data Layer]`n    Bus[Integration Bus]`n    UI[UI / Frontend]`n    Utils[Agent Utils]`n    Orch[Orchestration]`n    Reports[Reporting & Exports]`n  end`n`n  V2G --> Shared`n  CDLS --> Bus`n  Sales --> Shared`n  Bus --> UI`n````n`n## 🌐 Live Web Portal`nhttps://juliomanaging-creator.github.io/CDLS-/";Set-Content -Path (Join-Path $repoPath "README.md") -Value $rootReadme -Encoding UTF8;Write-Host "[OK] Saved root README.md" -ForegroundColor Green;$graphExport=@{meta=@{generated_at=(Get-Date -Format "o");description="Dependency graph export"};adjacency_list=@(@{source="CDLS_Agents_Core";target="Integration_Bus";relationship="publishes_events"})};$graphExport | ConvertTo-Json -Depth 5 | Set-Content -Path (Join-Path $repoPath "dependency_graph.json") -Encoding UTF8;Write-Host "[OK] Saved dependency_graph.json" -ForegroundColor Green;Write-Host "`n========================================================" -ForegroundColor Yellow;Write-Host "   STEP 3: RUNNING MASTER SYNC & PUBLISHING TO GITHUB    " -ForegroundColor Yellow;Write-Host "========================================================`n" -ForegroundColor Yellow;$masterScript=Join-Path $devAssetsPath "Master-SyncAndDeploy.ps1";if(Test-Path -LiteralPath $masterScript){(Get-Content -LiteralPath $masterScript) -replace "ForegroundColor Gold","ForegroundColor Yellow" | Set-Content -LiteralPath $masterScript;powershell.exe -ExecutionPolicy Bypass -File $masterScript}else{git add .;git commit -m "Unified launch";$env:GIT_OPTIONAL_LOCKS="0";git push origin main};Write-Host "`n[OK] UNIFIED LAUNCH COMPLETE!" -ForegroundColor Green
+$repoPath = "$env:USERPROFILE\OneDrive"
+Set-Location -Path $repoPath
+
+Write-Host "`n========================================================" -ForegroundColor Yellow
+Write-Host "   STEP 1: GENERATING INTERACTIVE GRAPH & EXTENSION      " -ForegroundColor Yellow
+Write-Host "========================================================`n" -ForegroundColor Yellow
+
+$devAssetsPath = Join-Path $repoPath "Developer_and_Code_Assets"
+if (-not (Test-Path -LiteralPath $devAssetsPath)) { New-Item -ItemType Directory -Path $devAssetsPath | Out-Null }
+
+# 1. Manifest
+$manifestJson = @'
+{
+  "manifest_version": 3,
+  "name": "CAESAR Platform Tab Manager",
+  "version": "1.0",
+  "description": "Interactive dropdown and accordion menu for managing open Edge tabs.",
+  "permissions": ["tabs", "activeTab"],
+  "action": { "default_popup": "popup.html" }
+}

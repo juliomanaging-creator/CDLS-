@@ -1,13 +1,28 @@
 ﻿{
     "meta":  {
-                 "generated_at":  "2026-08-13T15:16:34.7838427-07:00",
-                 "description":  "Dependency graph export"
+                 "generated_at":  "2026-08-13T15:24:33.4396319-07:00",
+                 "description":  "Dependency graph export for CAESAR Auditor \u0026 ZEV Logistics."
              },
     "adjacency_list":  [
+                           {
+                               "target":  "Shared_Data_Layer",
+                               "source":  "V2G_Syndication",
+                               "relationship":  "reads_writes_schema"
+                           },
                            {
                                "target":  "Integration_Bus",
                                "source":  "CDLS_Agents_Core",
                                "relationship":  "publishes_events"
+                           },
+                           {
+                               "target":  "Shared_Data_Layer",
+                               "source":  "Sales_Enablement",
+                               "relationship":  "queries_crm_ledgers"
+                           },
+                           {
+                               "target":  "UI",
+                               "source":  "Integration_Bus",
+                               "relationship":  "feeds_frontends"
                            }
                        ]
 }

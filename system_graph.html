@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CAESAR Platform - Interactive System Architecture</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/standalone/umd/vis-network.min.js"></script>
+  <style>
+    :root {
+      --bg: #0b0e14;
+      --panel-bg: #121824;
+      --border: #232d3f;
+      --text: #c9d1d9;
+      --accent: #00ff88;
+      --blue: #58a6ff;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+    #sidebar {
+      width: 360px;
+      background: var(--panel-bg);
+      border-right: 1px solid var(--border);
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    h1 {
+      color: var(--accent);
+      font-size: 1.2rem;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+    .subtitle {
+      font-size: 0.8rem;
+      color: #8b949e;
+      margin-top: -5px;
+    }
+    .inspector-card {
+      background: #182030;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .node-title {
+      font-weight: 700;
+      color: #f0f6fc;
+      font-size: 1.1rem;
+    }
+    .node-path {
+      font-family: monospace;
+      font-size: 0.8rem;
+      color: var(--blue);
+      word-break: break-all;
+    }
+    .node-desc {
+      font-size: 0.85rem;
+      color: #a3b3c2;
+      line-height: 1.4;
+    }
+    .launch-btn {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      margin-top: auto;
+      transition: opacity 0.2s;
+    }
+    .launch-btn:hover { opacity: 0.9; }
+    #network {
+      flex: 1;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="sidebar">
+    <div>
+      <h1>PLATFORM ARCHITECTURE</h1>
+      <div class="subtitle">Code & Agent Task Inspector</div>
+    </div>
+
+    <div class="inspector-card" id="inspector">
+      <div class="node-title" id="nodeTitle">Select a Node or Agent</div>
+      <div class="node-path" id="nodePath">--</div>
+      <div class="node-desc" id="nodeDesc">
+        Select any component in the interactive architecture graph to inspect its task capability, code implementation, and direct subfolder path.
+      </div>
+      <a id="launchBtn" class="launch-btn" style="display: none;" target="_blank">Open Direct Target File &rarr;</a>
+    </div>
+  </div>
+
+  <div id="network"></div>
+
+  <script>
+    const nodes = new vis.DataSet([
+      { id: 1, label: 'CAESAR Auditor', group: 'caesar', shape: 'dot', size: 25, color: '#00ff88', path: 'CAESAR_Auditor_Platform/index.html', desc: 'Automated regulatory compliance and tax exemption verification engine.' },
+      { id: 2, label: 'ZEV Logistics Demo', group: 'zev', shape: 'diamond', size: 20, color: '#58a6ff', path: 'CDLS_ZEV_Logistics/CDLS_Demo_V1_EcoLuxury.html', desc: 'Interactive BESS telemetry & mobile battery storage deployment demo.' },
+      { id: 3, label: 'V2G Discharge Schedules', group: 'zev', shape: 'dot', size: 18, color: '#bc8cff', path: 'CDLS_ZEV_Logistics/index.html', desc: 'Bidirectional Vehicle-to-Grid power discharge algorithms.' },
+      { id: 4, label: 'Dealership Operations', group: 'ops', shape: 'square', size: 20, color: '#d4af37', path: 'Dealership_and_Operations/index.html', desc: 'VIN verification pipelines and commercial CRM workflows.' },
+      { id: 5, label: 'Master Deploy Pipeline', group: 'dev', shape: 'diamond', size: 18, color: '#ff7b72', path: 'Developer_and_Code_Assets/Master-SyncAndDeploy.ps1', desc: 'PowerShell sync script for SHA256 repo matching & GitHub Pages deploy.' },
+      { id: 6, label: 'Edge Extension Popup', group: 'dev', shape: 'square', size: 18, color: '#3fb950', path: 'Developer_and_Code_Assets/popup.html', desc: 'Active browser tab manager popup UI.' },
+      { id: 7, label: 'Grants & Tax TCO', group: 'fin', shape: 'dot', size: 22, color: '#f2cc60', path: 'Grants_Tax_and_Incentives/index.html', desc: 'EV vs Diesel Total Cost of Ownership (TCO) calculators.' },
+      { id: 8, label: 'Master Strategy Briefs', group: 'sov', shape: 'diamond', size: 24, color: '#f0883e', path: 'Sovereign_Initiatives/index.html', desc: 'Commercial partnership terms and 300k unit implementation roadmaps.' }
+    ]);
+
+    const edges = new vis.DataSet([
+      { from: 1, to: 7 },
+      { from: 2, to: 3 },
+      { from: 3, to: 1 },
+      { from: 4, to: 7 },
+      { from: 5, to: 6 },
+      { from: 8, to: 1 },
+      { from: 8, to: 4 }
+    ]);
+
+    const container = document.getElementById('network');
+    const data = { nodes: nodes, edges: edges };
+    const options = {
+      nodes: { font: { color: '#ffffff', size: 14 } },
+      edges: { color: { color: '#30363d', highlight: '#58a6ff' }, arrows: { to: { enabled: true } } },
+      physics: { stabilization: true, barnesHut: { gravitationalConstant: -3000 } }
+    };
+
+    const network = new vis.Network(container, data, options);
+
+    network.on("click", function (params) {
+      if (params.nodes.length > 0) {
+        const nodeId = params.nodes[0];
+        const selectedNode = nodes.get(nodeId);
+
+        document.getElementById('nodeTitle').textContent = selectedNode.label;
+        document.getElementById('nodePath').textContent = selectedNode.path;
+        document.getElementById('nodeDesc').textContent = selectedNode.desc;
+
+        const launchBtn = document.getElementById('launchBtn');
+        launchBtn.href = selectedNode.path;
+        launchBtn.style.display = 'block';
+      }
+    });
+
+    network.on("doubleClick", function (params) {
+      if (params.nodes.length > 0) {
+        const nodeId = params.nodes[0];
+        const selectedNode = nodes.get(nodeId);
+        window.location.href = selectedNode.path;
+      }
+    });
+  </script>
+</body>
+</html>
