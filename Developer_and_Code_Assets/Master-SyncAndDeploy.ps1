@@ -6,9 +6,9 @@ $downloadsPath = "$env:USERPROFILE\Downloads"
 $repoPath      = "$env:USERPROFILE\OneDrive"
 $organizerScript = Join-Path $downloadsPath "Organize-Downloads.ps1"
 
-Write-Host "`n========================================================" -ForegroundColor Gold
-Write-Host "   STEP 1: EXECUTING LOCAL DOWNLOADS ORGANIZER          " -ForegroundColor Gold
-Write-Host "========================================================`n" -ForegroundColor Gold
+Write-Host "`n========================================================" -ForegroundColor Yellow
+Write-Host "   STEP 1: EXECUTING LOCAL DOWNLOADS ORGANIZER          " -ForegroundColor Yellow
+Write-Host "========================================================`n" -ForegroundColor Yellow
 
 if (Test-Path -LiteralPath $organizerScript) {
     & $organizerScript
@@ -17,9 +17,9 @@ if (Test-Path -LiteralPath $organizerScript) {
     Write-Host "[SKIP] Organize-Downloads.ps1 not found in $downloadsPath" -ForegroundColor DarkGray
 }
 
-Write-Host "`n========================================================" -ForegroundColor Gold
-Write-Host "   STEP 2: SYNCING DOWNLOADS TO GITHUB REPO SUBFOLDERS  " -ForegroundColor Gold
-Write-Host "========================================================`n" -ForegroundColor Gold
+Write-Host "`n========================================================" -ForegroundColor Yellow
+Write-Host "   STEP 2: SYNCING DOWNLOADS TO GITHUB REPO SUBFOLDERS  " -ForegroundColor Yellow
+Write-Host "========================================================`n" -ForegroundColor Yellow
 
 $folderRouting = @{
     "Documents_PDFs"    = "Sovereign_Initiatives"
@@ -82,9 +82,9 @@ foreach ($file in $downloadFiles) {
     }
 }
 
-Write-Host "`n========================================================" -ForegroundColor Gold
-Write-Host "   STEP 3: GENERATING SUBDIRECTORY INDEX.HTML PAGES     " -ForegroundColor Gold
-Write-Host "========================================================`n" -ForegroundColor Gold
+Write-Host "`n========================================================" -ForegroundColor Yellow
+Write-Host "   STEP 3: GENERATING SUBDIRECTORY INDEX.HTML PAGES     " -ForegroundColor Yellow
+Write-Host "========================================================`n" -ForegroundColor Yellow
 
 $subdirs = @(
     "CAESAR_Auditor_Platform",
@@ -141,9 +141,9 @@ foreach ($dir in $subdirs) {
 }
 Write-Host "[OK] Directory index pages successfully generated." -ForegroundColor Green
 
-Write-Host "`n========================================================" -ForegroundColor Gold
-Write-Host "   STEP 4: STAGING, COMMITTING, AND PUSHING TO GITHUB   " -ForegroundColor Gold
-Write-Host "========================================================`n" -ForegroundColor Gold
+Write-Host "`n========================================================" -ForegroundColor Yellow
+Write-Host "   STEP 4: STAGING, COMMITTING, AND PUSHING TO GITHUB   " -ForegroundColor Yellow
+Write-Host "========================================================`n" -ForegroundColor Yellow
 
 Set-Location -Path $repoPath
 
