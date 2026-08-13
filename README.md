@@ -1,20 +1,12 @@
 ﻿# CAESAR Auditor Platform & ZEV Logistics Ecosystem
 
-An enterprise-grade, multi-agent platform.
+An enterprise-grade, multi-agent platform designed for zero-emission vehicle (ZEV) fleet logistics, bidirectional Vehicle-to-Grid (V2G) energy storage management, automated regulatory compliance auditing, and state tax exception tracking.
 
-## ??? Repository Structure
+---
 
-``n. 
-+-- CAESAR_Auditor_Platform/
-+-- CDLS_ZEV_Logistics/
-+-- Dealership_and_Operations/
-+-- Developer_and_Code_Assets/
-+-- Grants_Tax_and_Incentives/
-+-- Sovereign_Initiatives/
-+-- dependency_graph.json
-+-- index.html
-``n
-## ????? System Architecture (Mermaid)
+## 🗺️ Repository Structure & Core Subsystems---
+
+## 🧜‍♂️ System Architecture (Mermaid)
 
 `mermaid
 flowchart TD
@@ -45,11 +37,12 @@ flowchart TD
   Orch --> CDLS
   Orch --> Bus
   Utils --> Shared
-``n
-## ? Deployment Pipeline
+⚡ Quick Start & Deployment Pipeline
+To launch full ecosystem synchronization and live page builds:
 
-`powershell
-powershell.exe -ExecutionPolicy Bypass -File "Developer_and_Code_Assets\Master-SyncAndDeploy.ps1"
-``n
-## ?? Live Web Portal
+PowerShell
+powershell.exe -ExecutionPolicy Bypass -File "Developer_and_Code_Assets\Launch-Ecosystem.ps1"
+🌐 Live Web Portal
+Access the live dashboard at:
+
 https://juliomanaging-creator.github.io/CDLS-/

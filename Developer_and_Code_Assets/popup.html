@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Edge Tab Manager</title>
+  <style>
+    :root { --bg: #0d1117; --card-bg: #161b22; --border: #30363d; --text: #c9d1d9; --accent: #58a6ff; --hover: #21262d; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 14px; width: 380px; background: var(--bg); color: var(--text); }
+    .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    h1 { font-size: 1rem; margin: 0; color: #f0f6fc; }
+    .search-box { width: 100%; padding: 8px 12px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-size: 13px; box-sizing: border-box; margin-bottom: 12px; outline: none; }
+    .search-box:focus { border-color: var(--accent); }
+    .tab-list { max-height: 400px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
+    .tab-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; transition: border-color 0.2s; }
+    .tab-card.active { border-left: 4px solid var(--accent); }
+    .tab-header { padding: 10px; display: flex; align-items: center; gap: 10px; cursor: pointer; }
+    .tab-header:hover { background: var(--hover); }
+    .meta { flex: 1; min-width: 0; }
+    .title { font-size: 13px; font-weight: 600; color: #f0f6fc; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .url { font-size: 11px; color: #8b949e; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .badge { font-size: 10px; padding: 2px 6px; border-radius: 4px; background: rgba(88, 166, 255, 0.15); color: var(--accent); font-weight: 600; }
+    .accordion-body { padding: 10px; border-top: 1px solid var(--border); background: var(--bg); display: none; gap: 6px; }
+    .accordion-body.show { display: flex; }
+    .btn { background: var(--hover); border: 1px solid var(--border); color: var(--text); padding: 5px 10px; font-size: 11px; border-radius: 4px; cursor: pointer; font-weight: 600; }
+    .btn:hover { background: #30363d; color: #fff; }
+    .btn-switch { background: rgba(88, 166, 255, 0.2); border-color: var(--accent); color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Active Edge Tabs</h1>
+    <span id="tabCount" style="font-size: 12px; color: #8b949e;">0 Tabs</span>
+  </div>
+  <input type="text" id="searchInput" class="search-box" placeholder="Filter tabs by title or URL..." />
+  <div id="tabList" class="tab-list"></div>
+  <script>
+    let allTabs = [];
+    async function init() {
+      if (typeof chrome !== 'undefined' && chrome.tabs) {
+        allTabs = await chrome.tabs.query({ currentWindow: true });
+      } else {
+        allTabs = [
+          { title: "CAESAR_Auditor_Platform Index", url: "https://juliomanaging-creator.github.io/CDLS-/CAESAR_Auditor_Platform/", active: true, id: 101 },
+          { title: "CDLS ZEV Logistics Portal", url: "https://juliomanaging-creator.github.io/CDLS-/CDLS_ZEV_Logistics/", active: false, id: 102 }
+        ];
+      }
+      renderTabs(allTabs);
+    }
+    function renderTabs(tabs) {
+      const container = document.getElementById('tabList');
+      document.getElementById('tabCount').textContent = `${tabs.length} Tabs`;
+      container.innerHTML = '';
+      tabs.forEach(tab => {
+        const card = document.createElement('div');
+        card.className = 'tab-card' + (tab.active ? ' active' : '');
+        card.innerHTML = `
+          <div class="tab-header" role="button">
+            <div class="meta">
+              <div class="title">${escapeHtml(tab.title || 'Untitled Tab')}</div>
+              <div class="url">${escapeHtml(tab.url)}</div>
+            </div>
+            ${tab.active ? '<span class="badge">Active</span>' : ''}
+          </div>
+          <div class="accordion-body">
+            <button class="btn btn-switch" data-action="switch">Focus Tab</button>
+            <button class="btn" data-action="copy">Copy URL</button>
+          </div>
+        `;
+        const header = card.querySelector('.tab-header');
+        const body = card.querySelector('.accordion-body');
+        header.addEventListener('click', () => {
+          const isOpen = body.classList.contains('show');
+          document.querySelectorAll('.accordion-body').forEach(b => b.classList.remove('show'));
+          if (!isOpen) body.classList.add('show');
+        });
+        card.querySelectorAll('button[data-action]').forEach(btn => {
+          btn.addEventListener('click', (ev) => {
+            ev.stopPropagation();
+            const action = btn.getAttribute('data-action');
+            if (action === 'switch' && typeof chrome !== 'undefined' && chrome.tabs) chrome.tabs.update(tab.id, { active: true });
+            if (action === 'copy') navigator.clipboard.writeText(tab.url);
+          });
+        });
+        container.appendChild(card);
+      });
+    }
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      renderTabs(allTabs.filter(t => (t.title && t.title.toLowerCase().includes(query)) || (t.url && t.url.toLowerCase().includes(query))));
+    });
+    function escapeHtml(s) { return String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+    init();
+  </script>
+</body>
+</html>
