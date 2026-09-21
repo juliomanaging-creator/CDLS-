@@ -116,18 +116,38 @@ class SecuritySentinel:
             sys.executable, "-m", "piplicenses",
             "--format=json"
         ])
-        prohibited_licenses = ["GPL", "AGPL"]
+        
+        # Exclude dev-only CLI tools from distribution audits
+        dev_tools = ["semgrep", "bandit", "pip-audit", "detect-secrets", "pip-licenses"]
+        # Allow documented commercial dual-license exceptions
+        commercial_exceptions = ["pymupdf"]
+
         try:
             data = json.loads(out)
             for item in data:
+                name = item.get("Name", "").lower()
                 lic = item.get("License", "").upper()
-                if any(p in lic for p in prohibited_licenses):
-                    self.findings["licenses"].append({
-                        "package": item.get("Name"),
-                        "version": item.get("Version"),
-                        "license": item.get("License")
-                    })
-                    self.score_deductions += 10
+
+                if name in dev_tools:
+                    continue
+
+                # Flag strict AGPL / GPL while permitting LGPL dynamic linking
+                is_strict_gpl = ("GPL" in lic and "LGPL" not in lic) or ("AGPL" in lic)
+                
+                if is_strict_gpl:
+                    if name in commercial_exceptions:
+                        self.findings["licenses"].append({
+                            "package": item.get("Name"),
+                            "version": item.get("Version"),
+                            "license": f"{item.get('License')} (Commercial / Dual-License Exception)"
+                        })
+                    else:
+                        self.findings["licenses"].append({
+                            "package": item.get("Name"),
+                            "version": item.get("Version"),
+                            "license": item.get("License")
+                        })
+                        self.score_deductions += 10
         except Exception:
             pass
 
