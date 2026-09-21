@@ -1,0 +1,12 @@
+16:14:40 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+16:14:40 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+16:14:46 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+16:14:46 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+16:14:46 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+16:14:46 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+16:16:32 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+16:16:32 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+16:16:35 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+16:16:35 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+16:16:35 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+16:16:35 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)

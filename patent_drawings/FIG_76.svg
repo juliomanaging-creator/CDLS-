@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 816 1056" width="816" height="1056">
+  <style>
+    .patent-line { stroke: #000000; stroke-width: 2.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .patent-thin { stroke: #000000; stroke-width: 1.2; fill: none; }
+    .patent-box  { stroke: #000000; stroke-width: 2.0; fill: #FFFFFF; }
+    .patent-num  { font-family: 'Arial', sans-serif; font-size: 15px; font-weight: bold; fill: #000000; }
+    .patent-text { font-family: 'Arial', sans-serif; font-size: 13px; font-weight: bold; fill: #000000; text-anchor: middle; }
+    .patent-subtext { font-family: 'Arial', sans-serif; font-size: 10px; fill: #222222; text-anchor: middle; }
+    .fig-label   { font-family: 'Arial', sans-serif; font-size: 19px; font-weight: bold; fill: #000000; text-anchor: middle; }
+    .header-tag  { font-family: 'Arial', sans-serif; font-size: 10px; fill: #555555; letter-spacing: 1px; }
+  </style>
+
+  <!-- 37 CFR 1.84 Margin Boundary: 1.0 inch (96px) -->
+  <rect x="96" y="96" width="624" height="864" class="patent-thin" stroke-dasharray="3,6" opacity="0.2"/>
+
+  <!-- Identification Header -->
+  <text x="110" y="80" class="header-tag">FIG. 76 | CRYPTOGRAPHIC ZERO-KNOWLEDGE AUDIT ENGINE</text>
+  <text x="710" y="80" class="header-tag" text-anchor="end">35 U.S.C. § 112</text>
+
+  <!-- Main Drawing Artwork Canvas -->
+  <g transform="translate(150, 170)">
+    
+    <!-- Inspection Boundary Envelope -->
+    <rect x="20" y="20" width="460" height="490" class="patent-thin" stroke-dasharray="6,6"/>
+    <text x="30" y="40" class="patent-num">760</text>
+
+    <!-- Optical Sensor Capture Portal -->
+    <rect x="100" y="45" width="300" height="60" class="patent-box"/>
+    <text x="250" y="75" class="patent-text">OPTICAL IMAGING SENSOR</text>
+    <text x="250" y="92" class="patent-subtext">(TRANSFER BOUNDARY PORTAL)</text>
+    <text x="60" y="60" class="patent-num">762</text>
+    <line x1="80" y1="60" x2="100" y2="70" class="patent-thin"/>
+
+    <path d="M 250,105 L 250,145 M 245,135 L 250,145 L 255,135" class="patent-line"/>
+
+    <!-- Edge CV Classifier (YOLO v8 / ResNet) -->
+    <rect x="100" y="145" width="300" height="70" class="patent-box"/>
+    <text x="250" y="175" class="patent-text">EDGE CV DAMAGE INFERENCE</text>
+    <text x="250" y="195" class="patent-subtext">(BOUNDING BOX / DEFECT METRICS)</text>
+    <text x="60" y="160" class="patent-num">764</text>
+    <line x1="80" y1="160" x2="100" y2="170" class="patent-thin"/>
+
+    <!-- Dual Fork Arrow -->
+    <path d="M 250,215 L 250,250 M 250,250 L 150,250 L 150,285 M 145,275 L 150,285 L 155,275 M 250,250 L 350,250 L 350,285 M 345,275 L 350,285 L 355,275" class="patent-line"/>
+
+    <!-- Primary SHA-256 Engine -->
+    <rect x="50" y="285" width="180" height="75" class="patent-box"/>
+    <text x="140" y="320" class="patent-text">SHA-256 ENGINE</text>
+    <text x="140" y="340" class="patent-subtext">(RAW IMAGE COMMIT)</text>
+    <text x="20" y="300" class="patent-num">766</text>
+    <line x1="35" y1="305" x2="50" y2="315" class="patent-thin"/>
+
+    <!-- Zero-Knowledge Proof zk-SNARK Engine -->
+    <rect x="270" y="285" width="180" height="75" class="patent-box"/>
+    <text x="360" y="320" class="patent-text">ZKP COMMITMENT</text>
+    <text x="360" y="340" class="patent-subtext">(PEDERSEN / MERKLE)</text>
+    <text x="465" y="300" class="patent-num">768</text>
+    <line x1="460" y1="305" x2="450" y2="315" class="patent-thin"/>
+
+    <!-- Convergence Flow -->
+    <path d="M 140,360 L 140,405 L 250,405 M 360,360 L 360,405 L 250,405 M 250,405 L 250,430 M 245,420 L 250,430 L 255,420" class="patent-line"/>
+
+    <!-- Append-Only Non-Repudiation Audit Ledger -->
+    <rect x="90" y="430" width="320" height="65" class="patent-box"/>
+    <text x="250" y="460" class="patent-text">APPEND-ONLY AUDIT LEDGER</text>
+    <text x="250" y="480" class="patent-subtext">(GAGAS / COURT ADMISSIBLE)</text>
+    <text x="50" y="445" class="patent-num">770</text>
+    <line x1="70" y1="450" x2="90" y2="460" class="patent-thin"/>
+    
+  </g>
+
+  <!-- Statutory Figure Designation -->
+  <text x="408" y="930" class="fig-label">FIG. 76</text>
+</svg>

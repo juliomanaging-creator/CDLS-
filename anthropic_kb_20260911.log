@@ -1,0 +1,24 @@
+08:28:32 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+08:28:32 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+08:28:34 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+08:28:34 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+08:28:34 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+08:28:34 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+08:36:15 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+08:36:15 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+08:36:16 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+08:36:16 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+08:36:16 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+08:36:16 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+09:51:26 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+09:51:26 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+09:51:28 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+09:51:28 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+09:51:28 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+09:51:28 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+09:59:10 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+09:59:10 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+09:59:11 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+09:59:11 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+09:59:11 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+09:59:11 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)

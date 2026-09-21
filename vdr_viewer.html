@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CDLS Secure VDR: Optical Defense & Hardware Sentinel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.17.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd@2.2.3/dist/coco-ssd.min.js"></script>
+  <style>
+    @media print { html, body { display: none !important; } }
+    body { user-select: none; -webkit-user-select: none; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans">
+
+  <header class="bg-slate-900 border-b border-slate-800 px-6 py-3 flex items-center justify-between shadow-lg">
+    <div class="flex items-center gap-3">
+      <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800 text-[10px] font-bold uppercase tracking-wider">
+        Hardware Anti-Leak Active
+      </span>
+      <h1 id="doc-title" class="text-sm font-bold text-slate-200">Loading Document...</h1>
+    </div>
+
+    <div class="flex items-center gap-4 text-xs font-mono">
+      <div id="ai-status" class="flex items-center gap-1.5 text-slate-400">
+        <span class="h-2 w-2 rounded-full bg-slate-500"></span>
+        AI Sentinel: Standby
+      </div>
+      <div class="flex items-center gap-1.5 bg-slate-800 px-2 py-1 rounded border border-slate-700">
+        <button onclick="prevPage()" class="px-2 py-0.5 rounded bg-slate-700 hover:bg-slate-600 font-bold">&larr;</button>
+        <span id="page-indicator" class="px-2">Page 1 / 1</span>
+        <button onclick="nextPage()" class="px-2 py-0.5 rounded bg-slate-700 hover:bg-slate-600 font-bold">&rarr;</button>
+      </div>
+      <button onclick="killSession()" class="px-3 py-1 rounded bg-rose-700 hover:bg-rose-600 font-bold text-white shadow-sm">
+        Revoke Now
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-1 flex items-center justify-center p-6 relative overflow-auto bg-slate-950">
+    <div class="relative shadow-2xl rounded-lg overflow-hidden border border-slate-800 bg-white min-h-[600px] flex items-center justify-center">
+      <canvas id="display-canvas" class="block"></canvas>
+
+      <div id="blackout-screen" class="hidden absolute inset-0 bg-black flex flex-col items-center justify-center p-8 text-center z-50">
+        <div class="h-20 w-20 rounded-full bg-rose-950/80 border border-rose-500 flex items-center justify-center mb-4 animate-pulse">
+          <svg class="h-10 w-10 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+          </svg>
+        </div>
+        <h2 id="blackout-title" class="text-xl font-black text-rose-500 tracking-wider">SECURITY BLACKOUT</h2>
+        <p id="blackout-desc" class="text-xs text-slate-400 max-w-sm mt-1 font-mono">
+          Document view locked.
+        </p>
+      </div>
+    </div>
+
+    <video id="webcam-feed" autoplay playsinline muted class="hidden"></video>
+  </main>
+
+  <script>
+    const canvas = document.getElementById("display-canvas");
+    const ctx = canvas.getContext("2d");
+    const blackoutScreen = document.getElementById("blackout-screen");
+    const aiStatus = document.getElementById("ai-status");
+    const video = document.getElementById("webcam-feed");
+
+    let currentPage = 0;
+    let totalPages = 1;
+    let isCompromised = false;
+    let frameCount = 0;
+    let detector = null;
+    let currentImage = null;
+
+    window.addEventListener("keydown", (e) => {
+      if ((e.ctrlKey || e.metaKey) && ["p", "s", "c", "u"].includes(e.key.toLowerCase())) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        triggerSecurityBlackout("UNAUTHORIZED SHORTCUT", "Keyboard action prohibited by view-only policy.");
+      }
+      if (e.key === "PrintScreen") {
+        e.preventDefault();
+        navigator.clipboard.writeText("");
+        triggerSecurityBlackout("SCREEN CAPTURE ATTEMPT", "PrintScreen action suppressed.");
+      }
+    });
+    window.addEventListener("contextmenu", (e) => e.preventDefault());
+
+    function renderLoop() {
+      if (!isCompromised && currentImage) {
+        frameCount++;
+        ctx.drawImage(currentImage, 0, 0);
+        if (frameCount % 2 === 0) {
+          ctx.fillStyle = "rgba(0, 0, 0, 0.18)";
+          for (let y = 0; y < canvas.height; y += 4) {
+            ctx.fillRect(0, y, canvas.width, 1.5);
+          }
+        }
+      }
+      requestAnimationFrame(renderLoop);
+    }
+    requestAnimationFrame(renderLoop);
+
+    function triggerSecurityBlackout(title, desc) {
+      isCompromised = true;
+      document.getElementById("blackout-title").innerText = title;
+      document.getElementById("blackout-desc").innerText = desc;
+      blackoutScreen.classList.remove("hidden");
+      ctx.fillStyle = "#000000";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    function clearSecurityBlackout() {
+      if (isCompromised) {
+        isCompromised = false;
+        blackoutScreen.classList.add("hidden");
+        if (currentImage) ctx.drawImage(currentImage, 0, 0);
+      }
+    }
+
+    async function initViewer() {
+      try {
+        const res = await fetch(`http://127.0.0.1:8001/api/vdr/doc-info`, { credentials: "include" });
+        if (!res.ok) throw new Error("Revoked or Missing Cookie");
+        const info = await res.json();
+        document.getElementById("doc-title").innerText = info.title;
+        totalPages = info.pages;
+        await loadPage(0);
+        initWebcamAI();
+      } catch (err) {
+        triggerSecurityBlackout("ACCESS REVOKED", "This viewing link has been permanently rescinded.");
+      }
+    }
+
+    async function loadPage(idx) {
+      if (idx < 0 || idx >= totalPages) return;
+      currentPage = idx;
+      document.getElementById("page-indicator").innerText = `Page ${currentPage + 1} / ${totalPages}`;
+      try {
+        const res = await fetch(`http://127.0.0.1:8001/api/vdr/render-page?page_num=${currentPage}`, { credentials: "include" });
+        if (!res.ok) throw new Error("Revoked");
+        const blob = await res.blob();
+        const img = new Image();
+        img.src = URL.createObjectURL(blob);
+        img.onload = () => {
+          canvas.width = img.width;
+          canvas.height = img.height;
+          currentImage = img;
+          clearSecurityBlackout();
+        };
+      } catch (err) {
+        triggerSecurityBlackout("ACCESS REVOKED", "Document access terminated.");
+      }
+    }
+
+    function nextPage() { if (currentPage + 1 < totalPages) loadPage(currentPage + 1); }
+    function prevPage() { if (currentPage > 0) loadPage(currentPage - 1); }
+
+    async function killSession() {
+      if (confirm("Revoke access for this viewer immediately?")) {
+        await fetch(`http://127.0.0.1:8001/api/vdr/revoke`, { method: "POST", credentials: "include" });
+        triggerSecurityBlackout("ACCESS RESCINDED", "Document link revoked by administrator.");
+      }
+    }
+
+    async function initWebcamAI() {
+      try {
+        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+          aiStatus.innerHTML = `<span class="h-2 w-2 rounded-full bg-slate-500"></span> Sentinel Off (No Cam)`;
+          return;
+        }
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: { width: { ideal: 640 }, height: { ideal: 480 }, facingMode: "user" }
+        });
+        video.srcObject = stream;
+        detector = await cocoSsd.load();
+        aiStatus.innerHTML = `<span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span> Optical Sentinel Armed`;
+        aiStatus.classList.replace("text-slate-400", "text-emerald-400");
+        detectThreats();
+      } catch (err) {
+        aiStatus.innerHTML = `<span class="h-2 w-2 rounded-full bg-slate-500"></span> Watermark & Moiré Only`;
+        aiStatus.classList.replace("text-slate-400", "text-slate-500");
+      }
+    }
+
+    async function detectThreats() {
+      if (detector && video.readyState === 4) {
+        const predictions = await detector.detect(video);
+        let phoneDetected = false;
+        for (const pred of predictions) {
+          if (["cell phone", "camera"].includes(pred.class.toLowerCase()) && pred.score > 0.60) {
+            phoneDetected = true;
+            break;
+          }
+        }
+        if (phoneDetected) {
+          triggerSecurityBlackout("OPTICAL THREAT DETECTED", "Physical phone or camera detected in line of sight. Lower the device to resume.");
+        } else if (isCompromised) {
+          clearSecurityBlackout();
+        }
+      }
+      setTimeout(detectThreats, 150);
+    }
+
+    window.addEventListener("DOMContentLoaded", initViewer);
+  </script>
+</body>
+</html>

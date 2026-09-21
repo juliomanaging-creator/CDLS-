@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 816 1056" width="816" height="1056">
+  <style>
+    .patent-line { stroke: #000000; stroke-width: 2.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .patent-thin { stroke: #000000; stroke-width: 1.2; fill: none; }
+    .patent-box  { stroke: #000000; stroke-width: 2.0; fill: #FFFFFF; }
+    .patent-num  { font-family: 'Arial', sans-serif; font-size: 15px; font-weight: bold; fill: #000000; }
+    .patent-text { font-family: 'Arial', sans-serif; font-size: 13px; font-weight: bold; fill: #000000; text-anchor: middle; }
+    .patent-subtext { font-family: 'Arial', sans-serif; font-size: 10px; fill: #222222; text-anchor: middle; }
+    .fig-label   { font-family: 'Arial', sans-serif; font-size: 19px; font-weight: bold; fill: #000000; text-anchor: middle; }
+    .header-tag  { font-family: 'Arial', sans-serif; font-size: 10px; fill: #555555; letter-spacing: 1px; }
+  </style>
+
+  <!-- 37 CFR 1.84 Margin Boundary: 1.0 inch (96px) -->
+  <rect x="96" y="96" width="624" height="864" class="patent-thin" stroke-dasharray="3,6" opacity="0.2"/>
+
+  <!-- Identification Header -->
+  <text x="110" y="80" class="header-tag">FIG. 29 | REGULATORY TOPOLOGY & ENVELOPE ENCRYPTION</text>
+  <text x="710" y="80" class="header-tag" text-anchor="end">35 U.S.C. § 112</text>
+
+  <!-- Main Drawing Artwork Canvas -->
+  <g transform="translate(150, 170)">
+    
+    <!-- Cloud Gateway Boundary -->
+    <rect x="30" y="30" width="440" height="460" rx="10" class="patent-line"/>
+    <text x="480" y="45" class="patent-num">290</text>
+
+    <!-- Multi-Tenant Dealer DMS Ingestion -->
+    <rect x="60" y="60" width="170" height="100" class="patent-box"/>
+    <text x="145" y="105" class="patent-text">DEALER DMS</text>
+    <text x="145" y="125" class="patent-subtext">(TIERS A/B/C)</text>
+    <text x="30" y="80" class="patent-num">292</text>
+    <line x1="45" y1="80" x2="60" y2="90" class="patent-thin"/>
+
+    <!-- AAD-Bound AES-256-GCM Hardware Vault -->
+    <rect x="260" y="60" width="180" height="100" class="patent-box"/>
+    <text x="350" y="105" class="patent-text">AAD-BOUND AEAD</text>
+    <text x="350" y="125" class="patent-subtext">(ISOLATED DEKs)</text>
+    <text x="450" y="80" class="patent-num">294</text>
+    <line x1="445" y1="80" x2="430" y2="90" class="patent-thin"/>
+
+    <!-- Encryption Handshake -->
+    <line x1="230" y1="110" x2="260" y2="110" class="patent-line"/>
+
+    <path d="M 250,160 L 250,210 M 245,200 L 250,210 L 255,200" class="patent-line"/>
+
+    <!-- VIN Automated Query & Verification Engine -->
+    <rect x="80" y="210" width="340" height="90" class="patent-box"/>
+    <text x="250" y="250" class="patent-text">CARB VIN VERIFICATION ENGINE</text>
+    <text x="250" y="270" class="patent-subtext">(13 CCR § 2195–2199 COMPLIANCE)</text>
+    <text x="40" y="230" class="patent-num">296</text>
+    <line x1="60" y1="230" x2="80" y2="240" class="patent-thin"/>
+
+    <!-- Dual Direct Filing Pipes -->
+    <path d="M 170,300 L 170,350 M 165,340 L 170,350 L 175,340 M 330,300 L 330,350 M 325,340 L 330,350 L 335,340" class="patent-line"/>
+
+    <!-- CARB CTC Endpoint -->
+    <rect x="60" y="350" width="170" height="90" class="patent-box"/>
+    <text x="145" y="390" class="patent-text">CARB CTC API</text>
+    <text x="145" y="410" class="patent-subtext">(HD I/M PORTAL)</text>
+    <text x="30" y="370" class="patent-num">298</text>
+    <line x1="45" y1="370" x2="60" y2="380" class="patent-thin"/>
+
+    <!-- TRUCRS Compliance System -->
+    <rect x="270" y="350" width="170" height="90" class="patent-box"/>
+    <text x="355" y="390" class="patent-text">TRUCRS ENGINE</text>
+    <text x="355" y="410" class="patent-subtext">(FLEET REPORTING)</text>
+    <text x="450" y="370" class="patent-num">300</text>
+    <line x1="445" y1="370" x2="430" y2="380" class="patent-thin"/>
+    
+  </g>
+
+  <!-- Statutory Figure Designation -->
+  <text x="408" y="930" class="fig-label">FIG. 29</text>
+</svg>

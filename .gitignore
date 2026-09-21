@@ -1,0 +1,45 @@
+﻿# Environment & Secrets
+.env
+.env*
+*.env
+*.txt.txt
+
+# Personal Documents & Binaries
+*.pdf
+*.bin
+*.zip
+*.lnk
+*.jpg
+*.png
+
+# External and Operating Folders
+/Dealership_and_Operations/
+/Sovereign_Initiatives/
+/Developer_and_Code_Assets/
+/CAESAR_Auditor_Platform/
+/CDLS_ZEV_Logistics/
+/Personal_and_Financial/
+/Job Applications/
+/data-lake-setup/
+/Funds/
+/Security/
+/Camera Roll/
+/Documents/
+/Pictures/
+/Screenshots/
+
+# Python Runtime & Caches
+__pycache__/
+*.py[cod]
+.venv/
+env/
+venv/
+.pytest_cache/
+temp_audio/
+chroma_db/
+chroma_audio_store/
+
+# Local OS & Editor artifacts
+.vscode/
+desktop.ini
+Thumbs.db

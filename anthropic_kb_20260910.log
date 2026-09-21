@@ -1,0 +1,708 @@
+16:38:41 [categorization_agent] INFO     CategorizationAgent initialized in OFFLINE heuristic mode.
+16:38:41 [orchestrator        ] INFO     ============================================================
+16:38:41 [orchestrator        ] INFO     ANTHROPIC KNOWLEDGE BASE - PIPELINE STARTING
+16:38:41 [orchestrator        ] INFO     ============================================================
+16:38:41 [orchestrator        ] INFO     [1/5] Initializing database schema...
+16:38:42 [database_manager    ] WARNING  ChromaDB init error: [91mYou are using a deprecated configuration of Chroma.
+
+[94mIf you do not have data you wish to migrate, you only need to change how you construct
+your Chroma client. Please see the "New Clients" section of https://docs.trychroma.com/deployment/migration.
+________________________________________________________________________________________________
+
+If you do have data you wish to migrate, we have a migration tool you can use in order to
+migrate your data to the new Chroma architecture.
+Please `pip install chroma-migrate` and run `chroma-migrate` to migrate your data and then
+change how you construct your Chroma client.
+
+See https://docs.trychroma.com/deployment/migration for more information or join our discord at https://discord.gg/MMeYNTmh3x for help![0m, using in-memory fallback
+16:38:42 [database_manager    ] INFO     SQLite database initialized at ./anthropic_kb.db
+16:38:42 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+16:38:42 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+16:38:42 [ingestion_agent     ] INFO     Scraping 10 source URLs...
+16:38:43 [ingestion_agent     ] WARNING  HTTP error scraping https://www.anthropic.com/safety: Client error '404 Not Found' for url 'https://www.anthropic.com/safety'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+16:38:46 [ingestion_agent     ] INFO     Collected 9 unique documents (from 9 total)
+16:38:46 [orchestrator        ] INFO     [3/5] Starting categorization agent (parallel batching)...
+16:38:46 [orchestrator        ] INFO           Categorizing batch 1/1...
+16:38:46 [orchestrator        ] INFO     [4/5] Storing documents in database...
+16:38:46 [orchestrator        ] INFO     [5/5] Generating knowledge base summary...
+16:38:46 [orchestrator        ] INFO           Report saved to kb_summary_report.json
+16:38:46 [orchestrator        ] INFO     
+PIPELINE COMPLETE in 4.8s
+16:38:46 [orchestrator        ] INFO       Documents ingested:   9
+16:38:46 [orchestrator        ] INFO       Documents categorized: 9
+16:38:46 [orchestrator        ] INFO       Documents indexed:     9
+16:38:46 [orchestrator        ] INFO       Errors:               0
+16:38:46 [query_agent         ] INFO     Query: What are all of Claude's current capabilities and model versions?...
+16:45:09 [categorization_agent] INFO     CategorizationAgent initialized in OFFLINE heuristic mode.
+16:45:09 [orchestrator        ] INFO     ============================================================
+16:45:09 [orchestrator        ] INFO     ANTHROPIC KNOWLEDGE BASE - PIPELINE STARTING
+16:45:09 [orchestrator        ] INFO     ============================================================
+16:45:09 [orchestrator        ] INFO     [1/5] Initializing database schema...
+16:45:13 [database_manager    ] INFO     ChromaDB initialized with 0 existing documents
+16:45:13 [database_manager    ] INFO     SQLite database initialized at ./anthropic_kb.db
+16:45:13 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+16:45:13 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+16:45:13 [ingestion_agent     ] INFO     Scraping 10 source URLs...
+16:45:13 [ingestion_agent     ] WARNING  HTTP error scraping https://www.anthropic.com/safety: Client error '404 Not Found' for url 'https://www.anthropic.com/safety'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+16:45:14 [ingestion_agent     ] INFO     Collected 9 unique documents (from 9 total)
+16:45:14 [orchestrator        ] INFO     [3/5] Starting categorization agent (parallel batching)...
+16:45:14 [orchestrator        ] INFO           Categorizing batch 1/1...
+16:45:14 [orchestrator        ] INFO     [4/5] Storing documents in database...
+16:45:25 [orchestrator        ] INFO     [5/5] Generating knowledge base summary...
+16:45:25 [orchestrator        ] INFO           Report saved to kb_summary_report.json
+16:45:25 [orchestrator        ] INFO     
+PIPELINE COMPLETE in 15.7s
+16:45:25 [orchestrator        ] INFO       Documents ingested:   9
+16:45:25 [orchestrator        ] INFO       Documents categorized: 9
+16:45:25 [orchestrator        ] INFO       Documents indexed:     9
+16:45:25 [orchestrator        ] INFO       Errors:               0
+16:45:25 [query_agent         ] INFO     Query: What are all of Claude's current capabilities and model versions?...
+16:48:39 [categorization_agent] INFO     CategorizationAgent initialized in OFFLINE heuristic mode.
+16:48:39 [orchestrator        ] INFO     ============================================================
+16:48:39 [orchestrator        ] INFO     ANTHROPIC KNOWLEDGE BASE - PIPELINE STARTING
+16:48:39 [orchestrator        ] INFO     ============================================================
+16:48:39 [orchestrator        ] INFO     [1/5] Initializing database schema...
+16:48:39 [database_manager    ] INFO     ChromaDB initialized with 9 existing documents
+16:48:39 [database_manager    ] INFO     SQLite database initialized at ./anthropic_kb.db
+16:48:39 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+16:48:39 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+16:48:39 [ingestion_agent     ] INFO     Scraping 10 source URLs...
+16:48:40 [ingestion_agent     ] WARNING  HTTP error scraping https://www.anthropic.com/safety: Client error '404 Not Found' for url 'https://www.anthropic.com/safety'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+16:48:40 [ingestion_agent     ] INFO     Collected 9 unique documents (from 9 total)
+16:48:40 [orchestrator        ] INFO     [3/5] Starting categorization agent (parallel batching)...
+16:48:40 [orchestrator        ] INFO           Categorizing batch 1/1...
+16:48:40 [orchestrator        ] INFO     [4/5] Storing documents in database...
+16:48:42 [orchestrator        ] INFO     [5/5] Generating knowledge base summary...
+16:48:43 [orchestrator        ] INFO           Report saved to kb_summary_report.json
+16:48:43 [orchestrator        ] INFO     
+PIPELINE COMPLETE in 3.5s
+16:48:43 [orchestrator        ] INFO       Documents ingested:   9
+16:48:43 [orchestrator        ] INFO       Documents categorized: 9
+16:48:43 [orchestrator        ] INFO       Documents indexed:     9
+16:48:43 [orchestrator        ] INFO       Errors:               0
+16:48:43 [query_agent         ] INFO     Query: What are all of Claude's current capabilities and model versions?...
+16:51:20 [categorization_agent] INFO     CategorizationAgent initialized in OFFLINE heuristic mode.
+16:51:20 [orchestrator        ] INFO     ============================================================
+16:51:20 [orchestrator        ] INFO     ANTHROPIC KNOWLEDGE BASE - PIPELINE STARTING
+16:51:20 [orchestrator        ] INFO     ============================================================
+16:51:20 [orchestrator        ] INFO     [1/5] Initializing database schema...
+16:51:21 [database_manager    ] INFO     ChromaDB initialized with 9 existing documents
+16:51:21 [database_manager    ] INFO     SQLite database initialized at ./anthropic_kb.db
+16:51:21 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+16:51:21 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+16:51:21 [ingestion_agent     ] INFO     Scraping 10 source URLs...
+16:51:21 [ingestion_agent     ] WARNING  HTTP error scraping https://www.anthropic.com/safety: Client error '404 Not Found' for url 'https://www.anthropic.com/safety'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+16:51:21 [ingestion_agent     ] INFO     Collected 9 unique documents (from 9 total)
+16:51:21 [orchestrator        ] INFO     [3/5] Starting categorization agent (parallel batching)...
+16:51:21 [orchestrator        ] INFO           Categorizing batch 1/1...
+16:51:21 [orchestrator        ] INFO     [4/5] Storing documents in database...
+16:51:23 [orchestrator        ] INFO     [5/5] Generating knowledge base summary...
+16:51:23 [orchestrator        ] INFO           Report saved to kb_summary_report.json
+16:51:23 [orchestrator        ] INFO     
+PIPELINE COMPLETE in 3.1s
+16:51:23 [orchestrator        ] INFO       Documents ingested:   9
+16:51:23 [orchestrator        ] INFO       Documents categorized: 9
+16:51:23 [orchestrator        ] INFO       Documents indexed:     9
+16:51:23 [orchestrator        ] INFO       Errors:               0
+16:51:23 [query_agent         ] INFO     Query: What are all of Claude's current capabilities and model versions?...
+16:55:55 [categorization_agent] INFO     CategorizationAgent initialized in OFFLINE heuristic mode.
+16:55:55 [orchestrator        ] INFO     ============================================================
+16:55:55 [orchestrator        ] INFO     ANTHROPIC KNOWLEDGE BASE - PIPELINE STARTING
+16:55:55 [orchestrator        ] INFO     ============================================================
+16:55:55 [orchestrator        ] INFO     [1/5] Initializing database schema...
+16:55:55 [database_manager    ] INFO     ChromaDB initialized with 9 existing documents
+16:55:55 [database_manager    ] INFO     SQLite database initialized at ./anthropic_kb.db
+16:55:55 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+16:55:55 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+16:55:55 [ingestion_agent     ] INFO     Scraping 10 source URLs...
+16:55:56 [ingestion_agent     ] WARNING  HTTP error scraping https://www.anthropic.com/safety: Client error '404 Not Found' for url 'https://www.anthropic.com/safety'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+16:55:56 [ingestion_agent     ] INFO     Collected 9 unique documents (from 9 total)
+16:55:56 [orchestrator        ] INFO     [3/5] Starting categorization agent (parallel batching)...
+16:55:56 [orchestrator        ] INFO           Categorizing batch 1/1...
+16:55:56 [orchestrator        ] INFO     [4/5] Storing documents in database...
+16:55:58 [orchestrator        ] INFO     [5/5] Generating knowledge base summary...
+16:55:58 [orchestrator        ] INFO           Report saved to kb_summary_report.json
+16:55:58 [orchestrator        ] INFO     
+PIPELINE COMPLETE in 3.4s
+16:55:58 [orchestrator        ] INFO       Documents ingested:   9
+16:55:58 [orchestrator        ] INFO       Documents categorized: 9
+16:55:58 [orchestrator        ] INFO       Documents indexed:     9
+16:55:58 [orchestrator        ] INFO       Errors:               0
+16:55:58 [query_agent         ] INFO     Query: What are all of Claude's current capabilities and model versions?...
+16:58:06 [categorization_agent] INFO     CategorizationAgent initialized in OFFLINE heuristic mode.
+16:58:06 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+16:58:06 [orchestrator        ] INFO     ============================================================
+16:58:06 [orchestrator        ] INFO     ANTHROPIC KNOWLEDGE BASE - PIPELINE STARTING
+16:58:06 [orchestrator        ] INFO     ============================================================
+16:58:06 [orchestrator        ] INFO     [1/5] Initializing database schema...
+16:58:07 [database_manager    ] INFO     ChromaDB initialized with 9 existing documents
+16:58:07 [database_manager    ] INFO     SQLite database initialized at ./anthropic_kb.db
+16:58:07 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+16:58:07 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+16:58:07 [ingestion_agent     ] INFO     Scraping 10 source URLs...
+16:58:08 [ingestion_agent     ] WARNING  HTTP error scraping https://www.anthropic.com/safety: Client error '404 Not Found' for url 'https://www.anthropic.com/safety'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+16:58:08 [ingestion_agent     ] INFO     Collected 9 unique documents (from 9 total)
+16:58:08 [orchestrator        ] INFO     [3/5] Starting categorization agent (parallel batching)...
+16:58:08 [orchestrator        ] INFO           Categorizing batch 1/1...
+16:58:08 [orchestrator        ] INFO     [4/5] Storing documents in database...
+16:58:10 [orchestrator        ] INFO     [5/5] Generating knowledge base summary...
+16:58:10 [orchestrator        ] INFO           Report saved to kb_summary_report.json
+16:58:10 [orchestrator        ] INFO     
+PIPELINE COMPLETE in 3.9s
+16:58:10 [orchestrator        ] INFO       Documents ingested:   9
+16:58:10 [orchestrator        ] INFO       Documents categorized: 9
+16:58:10 [orchestrator        ] INFO       Documents indexed:     9
+16:58:10 [orchestrator        ] INFO       Errors:               0
+16:58:10 [query_agent         ] INFO     Query: What are all of Claude's current capabilities and model versions?...
+17:16:22 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+17:16:22 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+17:16:22 [orchestrator        ] INFO     ============================================================
+17:16:22 [orchestrator        ] INFO     UNIVERSAL KNOWLEDGE BASE - PIPELINE STARTING
+17:16:22 [orchestrator        ] INFO     ============================================================
+17:16:22 [orchestrator        ] INFO     [1/5] Initializing database schema...
+17:16:23 [database_manager    ] INFO     ChromaDB initialized with 9 existing documents
+17:16:23 [database_manager    ] INFO     SQLite database initialized at ./anthropic_kb.db
+17:16:23 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+17:16:23 [orchestrator        ] INFO           [OK] Database ready
+17:16:23 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+17:16:23 [ingestion_agent     ] INFO     Ingesting 3 web source targets...
+17:16:24 [ingestion_agent     ] INFO     Ingestion complete: 3 unique documents processed.
+17:16:24 [orchestrator        ] INFO           [OK] Ingested 3 documents
+17:16:24 [orchestrator        ] INFO     [3/5] Starting categorization agent...
+17:16:24 [categorization_agent] INFO     Categorized 3/3 documents.
+17:16:24 [orchestrator        ] INFO           [OK] Categorized 3 documents
+17:16:24 [orchestrator        ] INFO     [4/5] Storing documents in vector and relational databases...
+17:16:24 [orchestrator        ] INFO           [OK] Stored 3 documents
+17:16:24 [orchestrator        ] INFO     [5/5] Generating Master Knowledge Index...
+17:16:24 [orchestrator        ] INFO           [OK] Master Knowledge Index generated
+17:16:24 [orchestrator        ] INFO     
+============================================================
+17:16:24 [orchestrator        ] INFO     PIPELINE COMPLETE in 2.04s
+17:16:24 [orchestrator        ] INFO       Documents ingested:    3
+17:16:24 [orchestrator        ] INFO       Documents categorized: 3
+17:16:24 [orchestrator        ] INFO       Documents indexed:     3
+17:16:24 [orchestrator        ] INFO       Errors:                0
+17:16:24 [orchestrator        ] INFO     ============================================================
+17:16:24 [query_agent         ] INFO     Query: What is Retrieval-Augmented Generation and how does it work?...
+17:20:48 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+17:20:48 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+17:20:48 [orchestrator        ] INFO     ============================================================
+17:20:48 [orchestrator        ] INFO     UNIVERSAL KNOWLEDGE BASE - PIPELINE STARTING
+17:20:48 [orchestrator        ] INFO     ============================================================
+17:20:48 [orchestrator        ] INFO     [1/5] Initializing database schema...
+17:20:49 [database_manager    ] INFO     ChromaDB initialized with 10 existing documents
+17:20:49 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+17:20:49 [orchestrator        ] INFO           [OK] Database ready
+17:20:49 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+17:20:49 [ingestion_agent     ] INFO     Ingesting 3 web source targets...
+17:20:49 [ingestion_agent     ] INFO     Ingestion complete: 3 unique documents processed.
+17:20:49 [orchestrator        ] INFO           [OK] Ingested 3 documents
+17:20:49 [orchestrator        ] INFO     [3/5] Starting categorization agent...
+17:20:49 [categorization_agent] INFO     Categorized 3/3 documents.
+17:20:49 [orchestrator        ] INFO           [OK] Categorized 3 documents
+17:20:49 [orchestrator        ] INFO     [4/5] Storing documents in vector and relational databases...
+17:20:50 [orchestrator        ] INFO           [OK] Stored 3 documents
+17:20:50 [orchestrator        ] INFO     [5/5] Generating Master Knowledge Index...
+17:20:50 [orchestrator        ] INFO           [OK] Master Knowledge Index generated
+17:20:50 [orchestrator        ] INFO     
+============================================================
+17:20:50 [orchestrator        ] INFO     PIPELINE COMPLETE in 1.83s
+17:20:50 [orchestrator        ] INFO       Documents ingested:    3
+17:20:50 [orchestrator        ] INFO       Documents categorized: 3
+17:20:50 [orchestrator        ] INFO       Documents indexed:     3
+17:20:50 [orchestrator        ] INFO       Errors:                0
+17:20:50 [orchestrator        ] INFO     ============================================================
+17:20:50 [query_agent         ] INFO     Query: What is Retrieval-Augmented Generation and how does it work?...
+17:27:25 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+17:27:25 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+17:27:25 [orchestrator        ] INFO     ============================================================
+17:27:25 [orchestrator        ] INFO     UNIVERSAL KNOWLEDGE BASE - PIPELINE STARTING
+17:27:25 [orchestrator        ] INFO     ============================================================
+17:27:25 [orchestrator        ] INFO     [1/5] Initializing database schema...
+17:27:26 [database_manager    ] INFO     ChromaDB initialized with 10 existing documents
+17:27:26 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+17:27:26 [orchestrator        ] INFO           [OK] Database ready
+17:27:26 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+17:27:26 [ingestion_agent     ] INFO     Ingesting 2 web source targets...
+17:27:26 [ingestion_agent     ] INFO     Scanning 1 local target paths...
+17:27:26 [ingestion_agent     ] INFO     Ingestion complete: 2 unique items processed.
+17:27:26 [orchestrator        ] INFO           [OK] Ingested 2 items
+17:27:26 [orchestrator        ] INFO     [3/5] Starting categorization agent...
+17:27:26 [categorization_agent] INFO     Categorized 2/2 documents.
+17:27:26 [orchestrator        ] INFO           [OK] Categorized 2 items
+17:27:26 [orchestrator        ] INFO     [4/5] Storing items in vector and relational databases...
+17:27:27 [orchestrator        ] INFO           [OK] Stored 2 items
+17:27:27 [orchestrator        ] INFO     [5/5] Generating Master Knowledge Index...
+17:27:27 [orchestrator        ] INFO           [OK] Master Knowledge Index generated
+17:27:27 [orchestrator        ] INFO     
+============================================================
+17:27:27 [orchestrator        ] INFO     PIPELINE COMPLETE in 1.92s
+17:27:27 [orchestrator        ] INFO       Items ingested:        2
+17:27:27 [orchestrator        ] INFO       Items categorized:     2
+17:27:27 [orchestrator        ] INFO       Items indexed:         2
+17:27:27 [orchestrator        ] INFO       Errors:                0
+17:27:27 [orchestrator        ] INFO     ============================================================
+17:27:27 [query_agent         ] INFO     Query: What technical uncertainties and experimentation were conducted for the MagSafe ...
+17:35:01 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+17:35:01 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+17:35:01 [orchestrator        ] INFO     ============================================================
+17:35:01 [orchestrator        ] INFO     UNIVERSAL KNOWLEDGE BASE - PIPELINE STARTING
+17:35:01 [orchestrator        ] INFO     ============================================================
+17:35:01 [orchestrator        ] INFO     [1/5] Initializing database schema...
+17:35:02 [database_manager    ] INFO     ChromaDB initialized with 10 existing documents
+17:35:02 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+17:35:02 [orchestrator        ] INFO           [OK] Database ready
+17:35:02 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+17:35:02 [ingestion_agent     ] INFO     Ingesting 2 web source targets...
+17:35:03 [ingestion_agent     ] INFO     Scanning 1 local target paths...
+17:35:03 [ingestion_agent     ] INFO     Ingestion complete: 2 unique items processed.
+17:35:03 [orchestrator        ] INFO           [OK] Ingested 2 items
+17:35:03 [orchestrator        ] INFO     [3/5] Starting categorization agent...
+17:35:03 [categorization_agent] INFO     Categorized 2/2 documents.
+17:35:03 [orchestrator        ] INFO           [OK] Categorized 2 items
+17:35:03 [orchestrator        ] INFO     [4/5] Storing items in vector and relational databases...
+17:35:04 [orchestrator        ] INFO           [OK] Stored 2 items
+17:35:04 [orchestrator        ] INFO     [5/5] Generating Master Knowledge Index...
+17:35:04 [orchestrator        ] INFO           [OK] Master Knowledge Index generated
+17:35:04 [orchestrator        ] INFO     
+============================================================
+17:35:04 [orchestrator        ] INFO     PIPELINE COMPLETE in 2.91s
+17:35:04 [orchestrator        ] INFO       Items ingested:        2
+17:35:04 [orchestrator        ] INFO       Items categorized:     2
+17:35:04 [orchestrator        ] INFO       Items indexed:         2
+17:35:04 [orchestrator        ] INFO       Errors:                0
+17:35:04 [orchestrator        ] INFO     ============================================================
+17:35:04 [query_agent         ] INFO     Query: What technical uncertainties and experimentation were conducted for the MagSafe ...
+17:38:27 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+17:38:27 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+17:38:27 [orchestrator        ] INFO     ============================================================
+17:38:27 [orchestrator        ] INFO     UNIVERSAL KNOWLEDGE BASE - PIPELINE STARTING
+17:38:27 [orchestrator        ] INFO     ============================================================
+17:38:27 [orchestrator        ] INFO     [1/5] Initializing database schema...
+17:38:28 [database_manager    ] INFO     ChromaDB initialized with 10 existing documents
+17:38:28 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+17:38:28 [orchestrator        ] INFO           [OK] Database ready
+17:38:28 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+17:38:28 [ingestion_agent     ] INFO     Ingesting 2 web source targets...
+17:38:29 [ingestion_agent     ] INFO     Scanning 1 local target paths...
+17:38:29 [ingestion_agent     ] INFO     Ingestion complete: 2 unique items processed.
+17:38:29 [orchestrator        ] INFO           [OK] Ingested 2 items
+17:38:29 [orchestrator        ] INFO     [3/5] Starting categorization agent...
+17:38:29 [categorization_agent] INFO     Categorized 2/2 documents.
+17:38:29 [orchestrator        ] INFO           [OK] Categorized 2 items
+17:38:29 [orchestrator        ] INFO     [4/5] Storing items in vector and relational databases...
+17:38:30 [orchestrator        ] INFO           [OK] Stored 2 items
+17:38:30 [orchestrator        ] INFO     [5/5] Generating Master Knowledge Index...
+17:38:30 [orchestrator        ] INFO           [OK] Master Knowledge Index generated
+17:38:30 [orchestrator        ] INFO     
+============================================================
+17:38:30 [orchestrator        ] INFO     PIPELINE COMPLETE in 2.54s
+17:38:30 [orchestrator        ] INFO       Items ingested:        2
+17:38:30 [orchestrator        ] INFO       Items categorized:     2
+17:38:30 [orchestrator        ] INFO       Items indexed:         2
+17:38:30 [orchestrator        ] INFO       Errors:                0
+17:38:30 [orchestrator        ] INFO     ============================================================
+17:38:30 [query_agent         ] INFO     Query: What technical uncertainties and experimentation were conducted for the MagSafe ...
+17:45:52 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+17:45:52 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+17:45:52 [orchestrator        ] INFO     ============================================================
+17:45:52 [orchestrator        ] INFO     UNIVERSAL KNOWLEDGE BASE - PIPELINE STARTING
+17:45:52 [orchestrator        ] INFO     ============================================================
+17:45:52 [orchestrator        ] INFO     [1/5] Initializing database schema...
+17:45:53 [database_manager    ] INFO     ChromaDB initialized with 10 existing documents
+17:45:53 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+17:45:53 [orchestrator        ] INFO           [OK] Database ready
+17:45:53 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+17:45:53 [ingestion_agent     ] INFO     Ingesting 2 web source targets...
+17:45:54 [ingestion_agent     ] INFO     Scanning 1 local target paths...
+17:45:54 [ingestion_agent     ] INFO     Ingestion complete: 2 unique items processed.
+17:45:54 [orchestrator        ] INFO           [OK] Ingested 2 items
+17:45:54 [orchestrator        ] INFO     [3/5] Starting categorization agent...
+17:45:54 [categorization_agent] INFO     Categorized 2/2 documents.
+17:45:54 [orchestrator        ] INFO           [OK] Categorized 2 items
+17:45:54 [orchestrator        ] INFO     [4/5] Storing items in vector and relational databases...
+17:45:54 [orchestrator        ] INFO           [OK] Stored 2 items
+17:45:54 [orchestrator        ] INFO     [5/5] Generating Master Index & UX Findings...
+17:45:54 [rd_insights_agent   ] INFO     No R&D tracker records found in database.
+17:45:55 [orchestrator        ] INFO           [OK] Master Index and UX Intelligence reports generated
+17:45:55 [orchestrator        ] INFO     
+============================================================
+17:45:55 [orchestrator        ] INFO     PIPELINE COMPLETE in 2.12s
+17:45:55 [orchestrator        ] INFO       Items ingested:        2
+17:45:55 [orchestrator        ] INFO       Items categorized:     2
+17:45:55 [orchestrator        ] INFO       Items indexed:         2
+17:45:55 [orchestrator        ] INFO       Errors:                0
+17:45:55 [orchestrator        ] INFO     ============================================================
+17:45:55 [query_agent         ] INFO     Query: What technical uncertainties and experimentation were conducted for the MagSafe ...
+17:47:26 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+17:47:26 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+17:47:27 [database_manager    ] INFO     ChromaDB initialized with 10 existing documents
+17:47:27 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+17:47:27 [query_agent         ] INFO     Query: What CARB compliance automation experimentation was completed?...
+17:50:46 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+17:50:46 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+17:50:46 [orchestrator        ] INFO     ============================================================
+17:50:46 [orchestrator        ] INFO     UNIVERSAL KNOWLEDGE BASE - PIPELINE STARTING
+17:50:46 [orchestrator        ] INFO     ============================================================
+17:50:46 [orchestrator        ] INFO     [1/5] Initializing database schema...
+17:50:47 [database_manager    ] INFO     ChromaDB initialized with 10 existing documents
+17:50:47 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+17:50:47 [orchestrator        ] INFO           [OK] Database ready
+17:50:47 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+17:50:47 [ingestion_agent     ] INFO     Ingesting 2 web source targets...
+17:50:47 [ingestion_agent     ] INFO     Scanning 1 local target paths...
+17:50:47 [ingestion_agent     ] WARNING  Local target path does not exist: ./CDLS_RD_Time_Tracker_MERGED_FULL.xlsx (Checked: C:\Users\MezaJ\OneDrive\Desktop\multi-agent RAG (Retrieval-Augmented Generation\CDLS_RD_Time_Tracker_MERGED_FULL.xlsx)
+17:50:47 [ingestion_agent     ] INFO     Ingestion complete: 2 unique items processed.
+17:50:47 [orchestrator        ] INFO           [OK] Ingested 2 items
+17:50:47 [orchestrator        ] INFO     [3/5] Starting categorization agent...
+17:50:47 [categorization_agent] INFO     Categorized 2/2 documents.
+17:50:47 [orchestrator        ] INFO           [OK] Categorized 2 items
+17:50:47 [orchestrator        ] INFO     [4/5] Storing items in vector and relational databases...
+17:50:48 [orchestrator        ] INFO           [OK] Stored 2 items
+17:50:48 [orchestrator        ] INFO     [5/5] Generating Master Index & UX Findings...
+17:50:48 [rd_insights_agent   ] INFO     No R&D tracker records found in database.
+17:50:48 [orchestrator        ] INFO           [OK] Master Index and UX Intelligence reports generated
+17:50:48 [orchestrator        ] INFO     
+============================================================
+17:50:48 [orchestrator        ] INFO     PIPELINE COMPLETE in 2.33s
+17:50:48 [orchestrator        ] INFO       Items ingested:        2
+17:50:48 [orchestrator        ] INFO       Items categorized:     2
+17:50:48 [orchestrator        ] INFO       Items indexed:         2
+17:50:48 [orchestrator        ] INFO       Errors:                0
+17:50:48 [orchestrator        ] INFO     ============================================================
+17:50:48 [query_agent         ] INFO     Query: What technical uncertainties and experimentation were conducted for the MagSafe ...
+17:53:23 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+17:53:23 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+17:53:23 [orchestrator        ] INFO     ============================================================
+17:53:23 [orchestrator        ] INFO     UNIVERSAL KNOWLEDGE BASE - PIPELINE STARTING
+17:53:23 [orchestrator        ] INFO     ============================================================
+17:53:23 [orchestrator        ] INFO     [1/5] Initializing database schema...
+17:53:24 [database_manager    ] INFO     ChromaDB initialized with 10 existing documents
+17:53:24 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+17:53:24 [orchestrator        ] INFO           [OK] Database ready
+17:53:24 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+17:53:24 [ingestion_agent     ] INFO     Ingesting 2 web source targets...
+17:53:24 [ingestion_agent     ] INFO     Scanning 1 local target paths...
+17:53:57 [ingestion_agent     ] INFO     Parsing Excel workbook 'CDLS_RD_Time_Tracker_MERGED_FULL.xlsx' across 8 sheets...
+17:53:57 [ingestion_agent     ] INFO     Successfully extracted 77 structured R&D records from CDLS_RD_Time_Tracker_MERGED_FULL.xlsx
+17:53:57 [ingestion_agent     ] INFO     Ingestion complete: 79 unique items processed.
+17:53:57 [orchestrator        ] INFO           [OK] Ingested 79 items
+17:53:57 [orchestrator        ] INFO     [3/5] Starting categorization agent...
+17:53:57 [categorization_agent] INFO     Categorized 10/79 documents.
+17:53:57 [categorization_agent] INFO     Categorized 20/79 documents.
+17:53:57 [categorization_agent] INFO     Categorized 30/79 documents.
+17:53:57 [categorization_agent] INFO     Categorized 40/79 documents.
+17:53:57 [categorization_agent] INFO     Categorized 50/79 documents.
+17:53:57 [categorization_agent] INFO     Categorized 60/79 documents.
+17:53:57 [categorization_agent] INFO     Categorized 70/79 documents.
+17:53:57 [categorization_agent] INFO     Categorized 79/79 documents.
+17:53:57 [orchestrator        ] INFO           [OK] Categorized 79 items
+17:53:57 [orchestrator        ] INFO     [4/5] Storing items in vector and relational databases...
+17:54:16 [orchestrator        ] INFO           [OK] Stored 79 items
+17:54:16 [orchestrator        ] INFO     [5/5] Generating Master Index & UX Findings...
+17:54:16 [rd_insights_agent   ] INFO     Synthesizing UX findings from 77 R&D work logs...
+17:54:16 [rd_insights_agent   ] INFO     UX intelligence report compiled to UX_RESEARCH_FINDINGS.md
+17:54:16 [orchestrator        ] INFO           [OK] Master Index and UX Intelligence reports generated
+17:54:16 [orchestrator        ] INFO     
+============================================================
+17:54:16 [orchestrator        ] INFO     PIPELINE COMPLETE in 53.42s
+17:54:16 [orchestrator        ] INFO       Items ingested:        79
+17:54:16 [orchestrator        ] INFO       Items categorized:     79
+17:54:16 [orchestrator        ] INFO       Items indexed:         79
+17:54:16 [orchestrator        ] INFO       Errors:                0
+17:54:16 [orchestrator        ] INFO     ============================================================
+17:54:16 [query_agent         ] INFO     Query: What technical uncertainties and experimentation were conducted for the MagSafe ...
+18:01:34 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+18:01:34 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+18:01:34 [orchestrator        ] INFO     ============================================================
+18:01:34 [orchestrator        ] INFO     UNIVERSAL KNOWLEDGE BASE - PIPELINE STARTING
+18:01:34 [orchestrator        ] INFO     ============================================================
+18:01:34 [orchestrator        ] INFO     [1/5] Initializing database schema...
+18:01:34 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+18:01:34 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+18:01:34 [orchestrator        ] INFO           [OK] Database ready
+18:01:34 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+18:01:34 [ingestion_agent     ] INFO     Ingesting 2 web source targets...
+18:01:36 [ingestion_agent     ] INFO     Scanning 1 local target paths...
+18:01:36 [ingestion_agent     ] INFO     Parsing Excel workbook 'CDLS_RD_Time_Tracker_MERGED_FULL.xlsx' across 8 sheets...
+18:01:36 [ingestion_agent     ] INFO     Successfully extracted 77 structured R&D records from CDLS_RD_Time_Tracker_MERGED_FULL.xlsx
+18:01:36 [ingestion_agent     ] INFO     Ingestion complete: 79 unique items processed.
+18:01:36 [orchestrator        ] INFO           [OK] Ingested 79 items
+18:01:36 [orchestrator        ] INFO     [3/5] Starting categorization agent...
+18:01:36 [categorization_agent] INFO     Categorized 10/79 documents.
+18:01:36 [categorization_agent] INFO     Categorized 20/79 documents.
+18:01:36 [categorization_agent] INFO     Categorized 30/79 documents.
+18:01:36 [categorization_agent] INFO     Categorized 40/79 documents.
+18:01:36 [categorization_agent] INFO     Categorized 50/79 documents.
+18:01:36 [categorization_agent] INFO     Categorized 60/79 documents.
+18:01:36 [categorization_agent] INFO     Categorized 70/79 documents.
+18:01:36 [categorization_agent] INFO     Categorized 79/79 documents.
+18:01:36 [orchestrator        ] INFO           [OK] Categorized 79 items
+18:01:36 [orchestrator        ] INFO     [4/5] Storing items in vector and relational databases...
+18:01:53 [orchestrator        ] INFO           [OK] Stored 79 items
+18:01:53 [orchestrator        ] INFO     [5/5] Generating Master Index, UX Findings, and Patent Portfolio Doc...
+18:01:53 [rd_insights_agent   ] INFO     Synthesizing UX findings from 77 R&D work logs...
+18:01:53 [rd_insights_agent   ] INFO     UX intelligence report compiled to UX_RESEARCH_FINDINGS.md
+18:01:53 [ip_document_agent   ] ERROR    python-docx is not installed. Please run: pip install python-docx
+18:01:53 [orchestrator        ] INFO           [OK] Research Index, UX Report, and Patent Submission Doc generated
+18:01:53 [orchestrator        ] INFO     
+============================================================
+18:01:53 [orchestrator        ] INFO     PIPELINE COMPLETE in 19.37s
+18:01:53 [orchestrator        ] INFO       Items ingested:        79
+18:01:53 [orchestrator        ] INFO       Items categorized:     79
+18:01:53 [orchestrator        ] INFO       Items indexed:         79
+18:01:53 [orchestrator        ] INFO       Errors:                0
+18:01:53 [orchestrator        ] INFO     ============================================================
+18:01:53 [query_agent         ] INFO     Query: What technical uncertainties and experimentation were conducted for the MagSafe ...
+18:03:46 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+18:03:46 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+18:03:46 [orchestrator        ] INFO     ============================================================
+18:03:46 [orchestrator        ] INFO     UNIVERSAL KNOWLEDGE BASE - PIPELINE STARTING
+18:03:46 [orchestrator        ] INFO     ============================================================
+18:03:46 [orchestrator        ] INFO     [1/5] Initializing database schema...
+18:03:47 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+18:03:47 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+18:03:47 [orchestrator        ] INFO           [OK] Database ready
+18:03:47 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+18:03:47 [ingestion_agent     ] INFO     Ingesting 2 web source targets...
+18:03:48 [ingestion_agent     ] INFO     Scanning 1 local target paths...
+18:03:49 [ingestion_agent     ] INFO     Parsing Excel workbook 'CDLS_RD_Time_Tracker_MERGED_FULL.xlsx' across 8 sheets...
+18:03:49 [ingestion_agent     ] INFO     Successfully extracted 77 structured R&D records from CDLS_RD_Time_Tracker_MERGED_FULL.xlsx
+18:03:49 [ingestion_agent     ] INFO     Ingestion complete: 79 unique items processed.
+18:03:49 [orchestrator        ] INFO           [OK] Ingested 79 items
+18:03:49 [orchestrator        ] INFO     [3/5] Starting categorization agent...
+18:03:49 [categorization_agent] INFO     Categorized 10/79 documents.
+18:03:49 [categorization_agent] INFO     Categorized 20/79 documents.
+18:03:49 [categorization_agent] INFO     Categorized 30/79 documents.
+18:03:49 [categorization_agent] INFO     Categorized 40/79 documents.
+18:03:49 [categorization_agent] INFO     Categorized 50/79 documents.
+18:03:49 [categorization_agent] INFO     Categorized 60/79 documents.
+18:03:49 [categorization_agent] INFO     Categorized 70/79 documents.
+18:03:49 [categorization_agent] INFO     Categorized 79/79 documents.
+18:03:49 [orchestrator        ] INFO           [OK] Categorized 79 items
+18:03:49 [orchestrator        ] INFO     [4/5] Storing items in vector and relational databases...
+18:04:04 [orchestrator        ] INFO           [OK] Stored 79 items
+18:04:04 [orchestrator        ] INFO     [5/5] Generating Master Index, UX Findings, and Patent Portfolio Doc...
+18:04:04 [rd_insights_agent   ] INFO     Synthesizing UX findings from 77 R&D work logs...
+18:04:04 [rd_insights_agent   ] INFO     UX intelligence report compiled to UX_RESEARCH_FINDINGS.md
+18:04:05 [ip_document_agent   ] INFO     Generating patent disclosure document from 77 verified records...
+18:04:05 [ip_document_agent   ] INFO     Patent specification document saved to CDLS_IP_Patent_Portfolio_Submission.docx
+18:04:05 [orchestrator        ] INFO           [OK] Research Index, UX Report, and Patent Submission Doc generated
+18:04:05 [orchestrator        ] INFO     
+============================================================
+18:04:05 [orchestrator        ] INFO     PIPELINE COMPLETE in 18.46s
+18:04:05 [orchestrator        ] INFO       Items ingested:        79
+18:04:05 [orchestrator        ] INFO       Items categorized:     79
+18:04:05 [orchestrator        ] INFO       Items indexed:         79
+18:04:05 [orchestrator        ] INFO       Errors:                0
+18:04:05 [orchestrator        ] INFO     ============================================================
+18:04:05 [query_agent         ] INFO     Query: What technical uncertainties and experimentation were conducted for the MagSafe ...
+18:21:33 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+18:21:33 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+18:21:35 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+18:21:35 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+18:21:35 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+18:21:35 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+18:27:57 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+18:27:57 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+18:27:58 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+18:27:58 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+18:27:58 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+18:27:58 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+18:45:45 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+18:45:45 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+18:45:46 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+18:45:46 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+18:45:46 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+18:45:46 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+18:53:28 [orchestrator        ] INFO     ============================================================
+18:53:28 [orchestrator        ] INFO     UNIVERSAL KNOWLEDGE BASE - PIPELINE STARTING
+18:53:28 [orchestrator        ] INFO     ============================================================
+18:53:28 [orchestrator        ] INFO     [1/5] Initializing database schema...
+18:53:28 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+18:53:28 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+18:53:28 [orchestrator        ] INFO           [OK] Database ready
+18:53:28 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+18:53:28 [ingestion_agent     ] INFO     Ingesting 2 web source targets...
+18:53:29 [ingestion_agent     ] INFO     Scanning 1 local target paths...
+18:53:30 [ingestion_agent     ] INFO     Parsing Excel workbook 'CDLS_RD_Time_Tracker_MERGED_FULL.xlsx' across 8 sheets...
+18:53:30 [ingestion_agent     ] INFO     Successfully extracted 77 structured R&D records from CDLS_RD_Time_Tracker_MERGED_FULL.xlsx
+18:53:30 [ingestion_agent     ] INFO     Ingestion complete: 79 unique items processed.
+18:53:30 [orchestrator        ] INFO           [OK] Ingested 79 items
+18:53:30 [orchestrator        ] INFO     [3/5] Starting categorization agent...
+18:53:30 [categorization_agent] INFO     Categorized 10/79 documents.
+18:53:30 [categorization_agent] INFO     Categorized 20/79 documents.
+18:53:30 [categorization_agent] INFO     Categorized 30/79 documents.
+18:53:30 [categorization_agent] INFO     Categorized 40/79 documents.
+18:53:30 [categorization_agent] INFO     Categorized 50/79 documents.
+18:53:30 [categorization_agent] INFO     Categorized 60/79 documents.
+18:53:30 [categorization_agent] INFO     Categorized 70/79 documents.
+18:53:30 [categorization_agent] INFO     Categorized 79/79 documents.
+18:53:30 [orchestrator        ] INFO           [OK] Categorized 79 items
+18:53:30 [orchestrator        ] INFO     [4/5] Storing items in vector and relational databases...
+18:53:50 [orchestrator        ] INFO           [OK] Stored 79 items
+18:53:50 [orchestrator        ] INFO     [5/5] Generating Master Index, UX Findings, and Patent Portfolio Doc...
+18:53:50 [rd_insights_agent   ] INFO     Synthesizing UX findings from 77 R&D work logs...
+18:53:50 [rd_insights_agent   ] INFO     UX intelligence report compiled to UX_RESEARCH_FINDINGS.md
+18:53:50 [ip_document_agent   ] INFO     Generating patent disclosure document from 77 verified records...
+18:53:50 [ip_document_agent   ] INFO     Patent specification document saved to CDLS_IP_Patent_Portfolio_Submission.docx
+18:53:50 [orchestrator        ] INFO           [OK] Research Index, UX Report, and Patent Submission Doc generated
+18:53:50 [orchestrator        ] INFO     
+============================================================
+18:53:50 [orchestrator        ] INFO     PIPELINE COMPLETE in 22.34s
+18:53:50 [orchestrator        ] INFO       Items ingested:        79
+18:53:50 [orchestrator        ] INFO       Items categorized:     79
+18:53:50 [orchestrator        ] INFO       Items indexed:         79
+18:53:50 [orchestrator        ] INFO       Errors:                0
+18:53:50 [orchestrator        ] INFO     ============================================================
+19:06:25 [orchestrator        ] INFO     ============================================================
+19:06:25 [orchestrator        ] INFO     UNIVERSAL KNOWLEDGE BASE - PIPELINE STARTING
+19:06:25 [orchestrator        ] INFO     ============================================================
+19:06:25 [orchestrator        ] INFO     [1/5] Initializing database schema...
+19:06:25 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:06:25 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:06:25 [orchestrator        ] INFO           [OK] Database ready
+19:06:25 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+19:06:25 [ingestion_agent     ] INFO     Ingesting 2 web source targets...
+19:06:25 [ingestion_agent     ] INFO     Scanning 1 local target paths...
+19:06:25 [ingestion_agent     ] INFO     Parsing Excel workbook 'CDLS_RD_Time_Tracker_MERGED_FULL.xlsx' across 8 sheets...
+19:06:25 [ingestion_agent     ] INFO     Successfully extracted 77 structured R&D records from CDLS_RD_Time_Tracker_MERGED_FULL.xlsx
+19:06:25 [ingestion_agent     ] INFO     Ingestion complete: 77 unique items processed.
+19:06:25 [orchestrator        ] INFO           [OK] Ingested 77 items
+19:06:25 [orchestrator        ] INFO     [3/5] Starting categorization agent...
+19:06:25 [categorization_agent] INFO     Categorized 10/77 documents.
+19:06:25 [categorization_agent] INFO     Categorized 20/77 documents.
+19:06:25 [categorization_agent] INFO     Categorized 30/77 documents.
+19:06:25 [categorization_agent] INFO     Categorized 40/77 documents.
+19:06:25 [categorization_agent] INFO     Categorized 50/77 documents.
+19:06:25 [categorization_agent] INFO     Categorized 60/77 documents.
+19:06:25 [categorization_agent] INFO     Categorized 70/77 documents.
+19:06:25 [categorization_agent] INFO     Categorized 77/77 documents.
+19:06:25 [orchestrator        ] INFO           [OK] Categorized 77 items
+19:06:25 [orchestrator        ] INFO     [4/5] Storing items in vector and relational databases...
+19:06:44 [orchestrator        ] INFO           [OK] Stored 156 items
+19:06:44 [orchestrator        ] INFO     [5/5] Generating Master Index, UX Findings, and Patent Portfolio Doc...
+19:06:44 [rd_insights_agent   ] INFO     Synthesizing UX findings from 77 R&D work logs...
+19:06:44 [rd_insights_agent   ] INFO     UX intelligence report compiled to UX_RESEARCH_FINDINGS.md
+19:06:44 [ip_document_agent   ] INFO     Generating patent disclosure document from 77 verified records...
+19:06:44 [ip_document_agent   ] INFO     Patent specification document saved to CDLS_IP_Patent_Portfolio_Submission.docx
+19:06:44 [orchestrator        ] INFO           [OK] Research Index, UX Report, and Patent Submission Doc generated
+19:06:44 [orchestrator        ] INFO     
+============================================================
+19:06:44 [orchestrator        ] INFO     PIPELINE COMPLETE in 18.72s
+19:06:44 [orchestrator        ] INFO       Items ingested:        77
+19:06:44 [orchestrator        ] INFO       Items categorized:     77
+19:06:44 [orchestrator        ] INFO       Items indexed:         156
+19:06:44 [orchestrator        ] INFO       Errors:                0
+19:06:44 [orchestrator        ] INFO     ============================================================
+19:23:54 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+19:23:54 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+19:23:55 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:23:55 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:23:55 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:23:55 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:26:35 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+19:26:35 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+19:26:37 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:26:37 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:26:37 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:26:37 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:26:52 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+19:26:52 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+19:26:52 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:26:52 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:26:52 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:26:52 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:28:50 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+19:28:50 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+19:28:50 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:28:50 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:28:50 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:28:50 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:36:51 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+19:36:51 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+19:36:52 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:36:52 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:36:52 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:36:52 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:40:33 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+19:40:33 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+19:40:33 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:40:33 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:40:33 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:40:33 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:49:19 [orchestrator        ] INFO     ============================================================
+19:49:19 [orchestrator        ] INFO     UNIVERSAL KNOWLEDGE BASE - PIPELINE STARTING
+19:49:19 [orchestrator        ] INFO     ============================================================
+19:49:19 [orchestrator        ] INFO     [1/5] Initializing database schema...
+19:49:19 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:49:19 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:49:19 [orchestrator        ] INFO           [OK] Database ready
+19:49:19 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+19:49:19 [ingestion_agent     ] INFO     Ingesting 2 web source targets...
+19:49:20 [ingestion_agent     ] INFO     Scanning 1 local target paths...
+19:49:21 [ingestion_agent     ] INFO     Parsing Excel workbook 'CDLS_RD_Time_Tracker_MERGED_FULL.xlsx' across 8 sheets...
+19:49:21 [ingestion_agent     ] INFO     Successfully extracted 77 structured R&D records from CDLS_RD_Time_Tracker_MERGED_FULL.xlsx
+19:49:21 [ingestion_agent     ] INFO     Ingestion complete: 79 unique items processed.
+19:49:21 [orchestrator        ] INFO           [OK] Ingested 79 items
+19:49:21 [orchestrator        ] INFO     [3/5] Starting categorization agent...
+19:49:21 [categorization_agent] INFO     Categorized 10/79 documents.
+19:49:21 [categorization_agent] INFO     Categorized 20/79 documents.
+19:49:21 [categorization_agent] INFO     Categorized 30/79 documents.
+19:49:21 [categorization_agent] INFO     Categorized 40/79 documents.
+19:49:21 [categorization_agent] INFO     Categorized 50/79 documents.
+19:49:21 [categorization_agent] INFO     Categorized 60/79 documents.
+19:49:21 [categorization_agent] INFO     Categorized 70/79 documents.
+19:49:21 [categorization_agent] INFO     Categorized 79/79 documents.
+19:49:21 [orchestrator        ] INFO           [OK] Categorized 79 items
+19:49:21 [orchestrator        ] INFO     [4/5] Storing items in vector and relational databases...
+19:49:43 [orchestrator        ] INFO           [OK] Stored 79 items
+19:49:43 [orchestrator        ] INFO     [5/5] Generating Master Index, UX Findings, and Patent Portfolio Doc...
+19:49:43 [rd_insights_agent   ] INFO     Synthesizing UX findings from 77 R&D work logs...
+19:49:43 [rd_insights_agent   ] INFO     UX intelligence report compiled to UX_RESEARCH_FINDINGS.md
+19:49:43 [ip_document_agent   ] INFO     Generating patent disclosure document from 77 verified records...
+19:49:43 [ip_document_agent   ] INFO     Patent specification document saved to CDLS_IP_Patent_Portfolio_Submission.docx
+19:49:43 [orchestrator        ] INFO           [OK] Research Index, UX Report, and Patent Submission Doc generated
+19:49:43 [orchestrator        ] INFO     
+============================================================
+19:49:43 [orchestrator        ] INFO     PIPELINE COMPLETE in 24.17s
+19:49:43 [orchestrator        ] INFO       Items ingested:        79
+19:49:43 [orchestrator        ] INFO       Items categorized:     79
+19:49:43 [orchestrator        ] INFO       Items indexed:         79
+19:49:43 [orchestrator        ] INFO       Errors:                0
+19:49:43 [orchestrator        ] INFO     ============================================================
+19:51:41 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+19:51:41 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+19:51:41 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+19:51:42 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:51:42 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:51:42 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:51:42 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:51:42 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:51:42 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:51:42 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:51:42 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:51:43 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+19:51:43 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+19:51:43 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:51:43 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:51:43 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:51:43 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:58:46 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+19:58:46 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+19:58:47 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:58:47 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:58:47 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:58:47 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:59:42 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+19:59:42 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+19:59:43 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:59:43 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+19:59:43 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+19:59:43 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)

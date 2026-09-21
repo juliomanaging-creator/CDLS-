@@ -1,0 +1,55 @@
+12:21:09 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+12:21:09 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+12:21:09 [orchestrator        ] INFO     ============================================================
+12:21:09 [orchestrator        ] INFO     UNIVERSAL KNOWLEDGE BASE - PIPELINE STARTING
+12:21:09 [orchestrator        ] INFO     ============================================================
+12:21:09 [orchestrator        ] INFO     [1/5] Initializing database schema...
+12:21:10 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+12:21:10 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+12:21:10 [orchestrator        ] INFO           [OK] Database ready
+12:21:10 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+12:21:10 [ingestion_agent     ] INFO     Ingesting 2 web source targets...
+12:21:12 [ingestion_agent     ] INFO     Scanning 1 local target paths...
+12:21:13 [ingestion_agent     ] INFO     Parsing Excel workbook 'CDLS_RD_Time_Tracker_MERGED_FULL.xlsx' across 8 sheets...
+12:21:13 [ingestion_agent     ] INFO     Successfully extracted 77 structured R&D records from CDLS_RD_Time_Tracker_MERGED_FULL.xlsx
+12:21:13 [ingestion_agent     ] INFO     Ingestion complete: 79 unique items processed.
+12:21:13 [orchestrator        ] INFO           [OK] Ingested 79 items
+12:21:13 [orchestrator        ] INFO     [3/5] Starting categorization agent...
+12:21:13 [categorization_agent] INFO     Categorized 10/79 documents.
+12:21:13 [categorization_agent] INFO     Categorized 20/79 documents.
+12:21:13 [categorization_agent] INFO     Categorized 30/79 documents.
+12:21:13 [categorization_agent] INFO     Categorized 40/79 documents.
+12:21:13 [categorization_agent] INFO     Categorized 50/79 documents.
+12:21:13 [categorization_agent] INFO     Categorized 60/79 documents.
+12:21:13 [categorization_agent] INFO     Categorized 70/79 documents.
+12:21:13 [categorization_agent] INFO     Categorized 79/79 documents.
+12:21:13 [orchestrator        ] INFO           [OK] Categorized 79 items
+12:21:13 [orchestrator        ] INFO     [4/5] Storing items in vector and relational databases...
+12:21:31 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+12:21:31 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+12:21:36 [orchestrator        ] INFO           [OK] Stored 79 items
+12:21:36 [orchestrator        ] INFO     [5/5] Generating Master Index, UX Findings, and Patent Portfolio Doc...
+12:21:36 [rd_insights_agent   ] INFO     Synthesizing UX findings from 77 R&D work logs...
+12:21:36 [rd_insights_agent   ] INFO     UX intelligence report compiled to UX_RESEARCH_FINDINGS.md
+12:21:36 [ip_document_agent   ] INFO     Generating patent disclosure document from 77 verified records...
+12:21:36 [ip_document_agent   ] INFO     Patent specification document saved to CDLS_IP_Patent_Portfolio_Submission.docx
+12:21:36 [orchestrator        ] INFO           [OK] Research Index, UX Report, and Patent Submission Doc generated
+12:21:36 [orchestrator        ] INFO     
+============================================================
+12:21:36 [orchestrator        ] INFO     PIPELINE COMPLETE in 27.56s
+12:21:36 [orchestrator        ] INFO       Items ingested:        79
+12:21:36 [orchestrator        ] INFO       Items categorized:     79
+12:21:36 [orchestrator        ] INFO       Items indexed:         79
+12:21:36 [orchestrator        ] INFO       Errors:                0
+12:21:36 [orchestrator        ] INFO     ============================================================
+12:21:36 [query_agent         ] INFO     Query: What technical uncertainties and experimentation were conducted for the MagSafe ...
+12:21:37 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+12:21:37 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+12:21:37 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+12:21:37 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+12:28:49 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+12:28:49 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+12:28:54 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+12:28:54 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+12:28:54 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+12:28:54 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)

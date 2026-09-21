@@ -1,0 +1,27 @@
+{
+  "total_documents": 87,
+  "by_domain": {
+    "technology_and_software": 34,
+    "energy_and_infrastructure": 14,
+    "science_and_research": 14,
+    "general_research": 6,
+    "logistics_and_transport": 5,
+    "policy_and_legal": 5,
+    "finance_and_economics": 2,
+    "products": 2,
+    "api_and_integration": 1,
+    "custom": 1,
+    "model_capabilities": 1,
+    "research": 1,
+    "safety_and_alignment": 1
+  },
+  "by_content_type": {
+    "work_log_entry": 77,
+    "documentation": 6,
+    "webpage": 2,
+    "policy": 1,
+    "technical_repository": 1
+  },
+  "vector_documents": 87,
+  "generated_at": "2026-09-19T01:23:36.918173"
+}

@@ -1,0 +1,43 @@
+01:22:51 [categorization_agent] INFO     CategorizationAgent initialized in UNIVERSAL offline mode.
+01:22:51 [query_agent         ] INFO     QueryAgent operating in OFFLINE extractive mode (No API key).
+01:22:51 [orchestrator        ] INFO     ============================================================
+01:22:51 [orchestrator        ] INFO     UNIVERSAL KNOWLEDGE BASE - PIPELINE STARTING
+01:22:51 [orchestrator        ] INFO     ============================================================
+01:22:51 [orchestrator        ] INFO     [1/5] Initializing database schema...
+01:22:55 [database_manager    ] INFO     ChromaDB initialized with 87 existing documents
+01:22:55 [database_manager    ] INFO     Database initialized (Vector DB + Relational DB)
+01:22:55 [orchestrator        ] INFO           [OK] Database ready
+01:22:55 [orchestrator        ] INFO     [2/5] Starting ingestion agent...
+01:22:55 [ingestion_agent     ] INFO     Ingesting 2 web source targets...
+01:22:56 [ingestion_agent     ] INFO     Scanning 1 local target paths...
+01:22:58 [ingestion_agent     ] INFO     Parsing Excel workbook 'CDLS_RD_Time_Tracker_MERGED_FULL.xlsx' across 8 sheets...
+01:22:59 [ingestion_agent     ] INFO     Successfully extracted 77 structured R&D records from CDLS_RD_Time_Tracker_MERGED_FULL.xlsx
+01:22:59 [ingestion_agent     ] INFO     Ingestion complete: 79 unique items processed.
+01:22:59 [orchestrator        ] INFO           [OK] Ingested 79 items
+01:22:59 [orchestrator        ] INFO     [3/5] Starting categorization agent...
+01:22:59 [categorization_agent] INFO     Categorized 10/79 documents.
+01:22:59 [categorization_agent] INFO     Categorized 20/79 documents.
+01:22:59 [categorization_agent] INFO     Categorized 30/79 documents.
+01:22:59 [categorization_agent] INFO     Categorized 40/79 documents.
+01:22:59 [categorization_agent] INFO     Categorized 50/79 documents.
+01:22:59 [categorization_agent] INFO     Categorized 60/79 documents.
+01:22:59 [categorization_agent] INFO     Categorized 70/79 documents.
+01:22:59 [categorization_agent] INFO     Categorized 79/79 documents.
+01:22:59 [orchestrator        ] INFO           [OK] Categorized 79 items
+01:22:59 [orchestrator        ] INFO     [4/5] Storing items in vector and relational databases...
+01:23:36 [orchestrator        ] INFO           [OK] Stored 79 items
+01:23:36 [orchestrator        ] INFO     [5/5] Generating Master Index, UX Findings, and Patent Portfolio Doc...
+01:23:36 [rd_insights_agent   ] INFO     Synthesizing UX findings from 77 R&D work logs...
+01:23:36 [rd_insights_agent   ] INFO     UX intelligence report compiled to UX_RESEARCH_FINDINGS.md
+01:23:37 [ip_document_agent   ] INFO     Generating patent disclosure document from 77 verified records...
+01:23:37 [ip_document_agent   ] INFO     Patent specification document saved to CDLS_IP_Patent_Portfolio_Submission.docx
+01:23:37 [orchestrator        ] INFO           [OK] Research Index, UX Report, and Patent Submission Doc generated
+01:23:37 [orchestrator        ] INFO     
+============================================================
+01:23:37 [orchestrator        ] INFO     PIPELINE COMPLETE in 45.65s
+01:23:37 [orchestrator        ] INFO       Items ingested:        79
+01:23:37 [orchestrator        ] INFO       Items categorized:     79
+01:23:37 [orchestrator        ] INFO       Items indexed:         79
+01:23:37 [orchestrator        ] INFO       Errors:                0
+01:23:37 [orchestrator        ] INFO     ============================================================
+01:23:37 [query_agent         ] INFO     Query: What technical uncertainties and experimentation were conducted for the MagSafe ...

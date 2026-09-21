@@ -1,0 +1,52 @@
+services:
+  api:
+    image: cdls-api:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: cdls-api-server
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m
+    deploy:
+      resources:
+        limits:
+          cpus: '1.5'
+          memory: 2G
+    networks:
+      - cdls-internal
+    ports:
+      - "127.0.0.1:8000:8000"
+
+  vdr:
+    image: cdls-vdr:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.vdr
+    container_name: cdls-vdr-server
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+    networks:
+      - cdls-internal
+    ports:
+      - "127.0.0.1:8001:8001"
+
+networks:
+  cdls-internal:
+    driver: bridge
