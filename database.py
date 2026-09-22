@@ -1,67 +1,46 @@
 import os
-import psycopg2
-from psycopg2.extras import RealDictCursor
+from sqlalchemy import create_engine, Column, Integer, String, Numeric, Boolean, DateTime, ForeignKey, func
+from sqlalchemy.orm import declarative_base, sessionmaker, relationship
 
-def get_db_connection():
-    """Establishes a secure PostgreSQL connection with RealDictCursor."""
-    conn = psycopg2.connect(
-        host=os.getenv("DB_HOST", "localhost"),
-        database=os.getenv("DB_NAME", "cdls_grants_pilot"),
-        user=os.getenv("DB_USER", "postgres"),
-        password=os.getenv("DB_PASS", "postgres"),
-        cursor_factory=RealDictCursor
-    )
-    return conn
+# Secure database connection string from environment variables or local PostgreSQL defaults
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:postgres@localhost:5432/cdls_production")
 
-def run_migrations():
-    """Applies institutional schema migrations with foreign key constraints."""
-    conn = get_db_connection()
-    cursor = conn.cursor()
+# Initialize SQLAlchemy engine and session factory
+engine = create_engine(DATABASE_URL)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+Base = declarative_base()
+
+class Grant(Base):
+    """Represents institutional grants and funding allocations."""
+    __tablename__ = "grants"
     
-    try:
-        cursor.execute("CREATE EXTENSION IF NOT EXISTS \"uuid-ossp\";")
-        
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS tenants (
-                tenant_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-                name VARCHAR(255) NOT NULL,
-                agency_type VARCHAR(100) NOT NULL,
-                created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-            );
-        """)
+    id = Column(Integer, primary_key=True, index=True)
+    grant_name = Column(String, nullable=False)
+    agency_source = Column(String, nullable=False)  # e.g., GO-Biz, CEC
+    total_amount = Column(Numeric(12, 2), nullable=False)
+    disbursed_amount = Column(Numeric(12, 2), default=0.00)
+    status = Column(String, default="Active")  # Active, Completed, Pending
+    created_at = Column(DateTime, server_default=func.now())
 
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS grants (
-                grant_id VARCHAR(50) PRIMARY KEY,
-                tenant_id UUID REFERENCES tenants(tenant_id) ON DELETE CASCADE,
-                title VARCHAR(255) NOT NULL,
-                status VARCHAR(50) NOT NULL DEFAULT 'Under Review',
-                allocated NUMERIC(12, 2) NOT NULL DEFAULT 0.00,
-                compliance_score INT CHECK (compliance_score BETWEEN 0 AND 100),
-                created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-            );
-        """)
+    # Relationship to tracking milestones
+    milestones = relationship("Milestone", back_populates="grant", cascade="all, delete-orphan")
 
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS agent_audit_logs (
-                log_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-                grant_id VARCHAR(50) REFERENCES grants(grant_id) ON DELETE CASCADE,
-                agent_name VARCHAR(100) NOT NULL,
-                evaluation_summary TEXT NOT NULL,
-                risk_level VARCHAR(20) NOT NULL,
-                evaluated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-            );
-        """)
+class Milestone(Base):
+    """Represents specific project milestones and milestone-linked funding."""
+    __tablename__ = "milestones"
+    
+    id = Column(Integer, primary_key=True, index=True)
+    grant_id = Column(Integer, ForeignKey("grants.id"), nullable=False)
+    milestone_title = Column(String, nullable=False)
+    allocated_funds = Column(Numeric(12, 2), nullable=False)
+    is_completed = Column(Boolean, default=False)
 
-        conn.commit()
-        print("[SUCCESS] PostgreSQL schema migrations applied successfully.")
-    except Exception as e:
-        conn.rollback()
-        print(f"[ERROR] Migration failed: {e}")
-        raise
-    finally:
-        cursor.close()
-        conn.close()
+    grant = relationship("Grant", back_populates="milestones")
+
+def init_db():
+    """Creates database tables securely under current schema definitions."""
+    Base.metadata.create_all(bind=engine)
+    print("[SUCCESS] Database tables verified and created successfully.")
 
 if __name__ == "__main__":
-    run_migrations()
+    init_db()
