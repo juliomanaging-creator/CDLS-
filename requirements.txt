@@ -14,3 +14,5 @@ huggingface-hub>=1.31.0
 PyMuPDF>=1.28.0
 transformers>=5.14.0
 wrapt>=2.4.0
+jaraco.context>=6.1.0
+wheel>=0.46.2

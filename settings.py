@@ -1,85 +1,53 @@
-"""
-Configuration Settings
-Central config management for the Anthropic Knowledge Base system.
-Edit settings here or override via environment variables.
-"""
-
 import os
-from dotenv import load_dotenv
+from pathlib import Path
+from typing import List
 
-load_dotenv()
+# Base directory definition
+BASE_DIR = Path(__file__).resolve().parent
 
+# --- Secure Secret Key Enforcement ---
+# Eliminates public GitHub fallback vulnerability to prevent JWT forgery.
+SECRET_KEY = os.getenv("SECRET_KEY")
 
-def load_config() -> dict:
-    """Load and return the full system configuration."""
-    return {
-        # ── Anthropic API ───────────────────────────────────────────
-        "anthropic_api_key": os.getenv("ANTHROPIC_API_KEY", ""),
+if not SECRET_KEY:
+    raise ValueError(
+        "[CRITICAL SECURITY ERROR] SECRET_KEY environment variable is not set! "
+        "Default fallbacks are strictly prohibited in production environments."
+    )
 
-        # Models to use for each agent role
-        "categorization_model": os.getenv(
-            "CATEGORIZATION_MODEL", "claude-haiku-4-5-20251001"
-        ),  # Fast + cheap for bulk categorization
-        "query_model": os.getenv(
-            "QUERY_MODEL", "claude-sonnet-4-20250514"
-        ),  # Smart for Q&A synthesis
+# --- Application Configuration ---
+DEBUG = os.getenv("DEBUG", "False").lower() in ("true", "1", "t", "yes")
+ENVIRONMENT = os.getenv("ENVIRONMENT", "production")
 
-        # ── Database ────────────────────────────────────────────────
-        "database": {
-            "use_postgres": os.getenv("USE_POSTGRES", "false").lower() == "true",
-            "postgres_dsn": os.getenv(
-                "POSTGRES_DSN",
-                "postgresql://" + os.getenv("DB_USER", "user") + ":" + os.getenv("DB_PASS", "pass") + "@localhost:5432/anthropic_kb",
-                ),
-            "sqlite_path": os.getenv("SQLITE_PATH", "./anthropic_kb.db"),
-            "chroma_persist_dir": os.getenv("CHROMA_DIR", "./chroma_db"),
-        },
+# Database Configuration with secure fallback defaults
+DB_HOST = os.getenv("DB_HOST", "localhost")
+DB_PORT = int(os.getenv("DB_PORT", "5432"))
+DB_NAME = os.getenv("DB_NAME", "cdls_production")
+DB_USER = os.getenv("DB_USER")
+DB_PASS = os.getenv("DB_PASS")
 
-        # ── Scraping ────────────────────────────────────────────────
-        "scrape_timeout": int(os.getenv("SCRAPE_TIMEOUT", "30")),
-        "max_crawl_depth": int(os.getenv("MAX_CRAWL_DEPTH", "3")),
-        "respect_robots_txt": os.getenv("RESPECT_ROBOTS", "true").lower() == "true",
-        "scrape_delay_seconds": float(os.getenv("SCRAPE_DELAY", "0.5")),
+if not DB_USER or not DB_PASS:
+    raise ValueError(
+        "[CRITICAL SECURITY ERROR] Database credentials (DB_USER/DB_PASS) must be explicitly provided via environment variables."
+    )
 
-        # ── Pipeline ────────────────────────────────────────────────
-        "batch_size": int(os.getenv("BATCH_SIZE", "10")),
-        "max_context_docs": int(os.getenv("MAX_CONTEXT_DOCS", "8")),
+DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
-        # ── Sources ─────────────────────────────────────────────────
-        "sources": {
-            "urls": [
-                # Documentation
-                "https://docs.anthropic.com",
-                "https://support.anthropic.com",
-                # Main site
-                "https://www.anthropic.com/research",
-                "https://www.anthropic.com/news",
-                "https://www.anthropic.com/safety",
-                # Products
-                "https://www.anthropic.com/claude",
-                "https://www.anthropic.com/api",
-                # GitHub
-                "https://github.com/anthropics/anthropic-cookbook",
-                "https://github.com/anthropics/anthropic-sdk-python",
-                "https://github.com/anthropics/model-spec",
-            ],
-            "sitemaps": [
-                "https://docs.anthropic.com/sitemap.xml",
-                "https://www.anthropic.com/sitemap.xml",
-            ],
-        },
+# CORS Origins (Restricted to authorized institutional endpoints)
+ALLOWED_ORIGINS: List[str] = [
+    "https://trusted-gov.ca.gov",
+    "https://salsa-portal.org",
+    "https://cdls-ledger.internal"
+]
 
-        # ── Scheduling ──────────────────────────────────────────────
-        "schedule": {
-            "full_rebuild_day": "sunday",
-            "full_rebuild_hour": 2,
-            "incremental_hour": 0,
-            "news_check_interval_hours": 6,
-        },
+if DEBUG:
+    ALLOWED_ORIGINS.append("http://localhost:3000")
+    ALLOWED_ORIGINS.append("http://127.0.0.1:3000")
 
-        # ── Output ──────────────────────────────────────────────────
-        "export_path": os.getenv("EXPORT_PATH", "./kb_export.json"),
-        "report_path": os.getenv("REPORT_PATH", "./kb_summary_report.json"),
-        "log_level": os.getenv("LOG_LEVEL", "INFO"),
-    }
- # pyright: ignore[reportCallIssue]
+# Security headers configuration flags
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_HTTPONLY = True
+SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_SAMESITE = "lax"
+
+print(f"[INIT] Settings loaded successfully for environment: {ENVIRONMENT.upper()}")

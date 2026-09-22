@@ -23,7 +23,7 @@ from anthropic import Anthropic
 import os as _os
 from pathlib import Path as _Path
 
-def _safe_path(user_path: str, base_dir: str = None) -> str:
+def _safe_path(user_path: str, base_dir: str = None) -> str: or ""
     if base_dir is None:
         base_dir = str(_Path(__file__).resolve().parent)
     real = _os.path.realpath(_os.path.abspath(user_path))
@@ -415,7 +415,7 @@ Format clearly with headers."""
         )
         results["analyses"].append({
             "type": "domain_analysis",
-            "content": analysis_response.content[0].text
+            "content": analysis_response.content[0].text  # type: ignore
         })
 
         # Task 2: Answer one priority question
@@ -437,7 +437,7 @@ Be specific and comprehensive."""
         results["analyses"].append({
             "type": "priority_qa",
             "question": tasks[0],
-            "answer": qa_response.content[0].text
+            "answer": qa_response.content[0].text  # type: ignore
         })
 
         elapsed = round(time.time() - start, 1)
@@ -492,7 +492,7 @@ How the 6 domains can better work together.
 Focus on things that directly increase IRR, accelerate dealer adoption, or improve compliance automation."""
         }]
     )
-    return synthesis.content[0].text
+    return synthesis.content[0].text  # type: ignore
 
 
 def save_results(all_results: list, synthesis: str) -> str:
