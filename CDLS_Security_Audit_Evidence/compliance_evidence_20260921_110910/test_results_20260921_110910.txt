@@ -1,0 +1,36 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Python314\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\MezaJ\OneDrive\Desktop\multi-agent RAG (Retrieval-Augmented Generation
+configfile: pytest.ini
+plugins: anyio-4.15.1, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 0 items / 1 error
+
+=================================== ERRORS ====================================
+__________________________ ERROR collecting tests.py __________________________
+ImportError while importing test module 'C:\Users\MezaJ\OneDrive\Desktop\multi-agent RAG (Retrieval-Augmented Generation\tests.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Python314\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests.py:6: in <module>
+    from api_server import app as api_app
+api_server.py:23: in <module>
+    import chromadb
+..\..\..\AppData\Roaming\Python\Python314\site-packages\chromadb\__init__.py:11: in <module>
+    from chromadb.auth.token_authn import TokenTransportHeader
+..\..\..\AppData\Roaming\Python\Python314\site-packages\chromadb\auth\token_authn\__init__.py:24: in <module>
+    from chromadb.telemetry.opentelemetry import (
+..\..\..\AppData\Roaming\Python\Python314\site-packages\chromadb\telemetry\opentelemetry\__init__.py:13: in <module>
+    from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
+..\..\..\AppData\Roaming\Python\Python314\site-packages\opentelemetry\exporter\otlp\proto\grpc\trace_exporter\__init__.py:15: in <module>
+    from opentelemetry.exporter.otlp.proto.grpc.exporter import (  # noqa: F401
+..\..\..\AppData\Roaming\Python\Python314\site-packages\opentelemetry\exporter\otlp\proto\grpc\exporter.py:47: in <module>
+    from opentelemetry.exporter.otlp.proto.common._exporter_metrics import (
+E   ModuleNotFoundError: No module named 'opentelemetry.exporter.otlp.proto.common._exporter_metrics'
+=========================== short test summary info ===========================
+ERROR tests.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 2.47s ===============================

@@ -29,8 +29,8 @@ def load_config() -> dict:
             "use_postgres": os.getenv("USE_POSTGRES", "false").lower() == "true",
             "postgres_dsn": os.getenv(
                 "POSTGRES_DSN",
-                "postgresql://user:password@localhost:5432/anthropic_kb",
-            ),
+                "postgresql://" + os.getenv("DB_USER", "user") + ":" + os.getenv("DB_PASS", "pass") + "@localhost:5432/anthropic_kb",
+                ),
             "sqlite_path": os.getenv("SQLITE_PATH", "./anthropic_kb.db"),
             "chroma_persist_dir": os.getenv("CHROMA_DIR", "./chroma_db"),
         },
@@ -82,3 +82,4 @@ def load_config() -> dict:
         "report_path": os.getenv("REPORT_PATH", "./kb_summary_report.json"),
         "log_level": os.getenv("LOG_LEVEL", "INFO"),
     }
+ # pyright: ignore[reportCallIssue]

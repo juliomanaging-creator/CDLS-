@@ -43,7 +43,7 @@ class AgenticVoiceEngine:
             res = self.kb.query(query_embeddings=q_emb, n_results=top_k)
             matches = []
             if res and res["documents"] and res["documents"][0]:
-                for doc, meta in zip(res["documents"][0], res["metadatas"][0]):
+                for doc, meta in zip(res["documents"][0], [0]):
                     matches.append({"text": doc, "meta": meta})
                 return matches
         except Exception:

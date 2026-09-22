@@ -1,0 +1,15 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Python314\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\MezaJ\OneDrive\Desktop\multi-agent RAG (Retrieval-Augmented Generation
+configfile: pytest.ini
+plugins: anyio-4.15.1, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 4 items
+
+tests.py::test_database_foreign_keys_pragma PASSED                       [ 25%]
+tests.py::test_vdr_unauthenticated_access_denial PASSED                  [ 50%]
+tests.py::test_cors_origin_restriction PASSED                            [ 75%]
+tests.py::test_patent_drawings_route_sanitization PASSED                 [100%]
+
+============================= 4 passed in 16.82s ==============================

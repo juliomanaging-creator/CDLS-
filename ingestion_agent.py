@@ -13,6 +13,18 @@ from typing import Any, Optional
 from bs4 import BeautifulSoup
 import httpx
 
+import os as _os
+from pathlib import Path as _Path
+
+def _safe_path(user_path: str, base_dir: Optional[str] = None) -> str:
+    if base_dir is None:
+        base_dir = str(_Path(__file__).resolve().parent)
+    real = _os.path.realpath(_os.path.abspath(user_path))
+    allowed = _os.path.realpath(_os.path.abspath(base_dir))
+    if not real.startswith(allowed + _os.sep) and real != allowed:
+        raise ValueError(f"Path traversal attempt detected: {user_path!r}")
+    return real
+
 try:
     from logger import setup_logger  # type: ignore
     logger = setup_logger("ingestion_agent")

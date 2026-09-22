@@ -7,12 +7,25 @@ import io
 import time
 import secrets
 import sqlite3
+from typing import Optional
 from pathlib import Path
 from datetime import datetime
 from fastapi import FastAPI, HTTPException, Response, Request
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 import fitz  # PyMuPDF
+
+import os as _os
+from pathlib import Path as _Path
+
+def _safe_path(user_path: str, base_dir: Optional[str] = None) -> str:
+    if base_dir is None:
+        base_dir = str(_Path(__file__).resolve().parent)
+    real = _os.path.realpath(_os.path.abspath(user_path))
+    allowed = _os.path.realpath(_os.path.abspath(base_dir))
+    if not real.startswith(allowed + _os.sep) and real != allowed:
+        raise ValueError(f"Path traversal attempt detected: {user_path!r}")
+    return real
 
 BASE_DIR = Path(__file__).resolve().parent
 DOCUMENTS_DIR = BASE_DIR / "secure_vault"
@@ -149,6 +162,8 @@ async def revoke_access(request: Request):
 @app.get("/api/vdr/render-page")
 async def render_page(page_num: int, request: Request):
     token = request.cookies.get("vdr_session")
+    if token is None:
+        raise HTTPException(status_code=403, detail="ACCESS_REVOKED: Permission rescinded.")
     session = get_session_from_db(token)
     if not session or not session.get("active"):
         raise HTTPException(status_code=403, detail="ACCESS_REVOKED: Permission rescinded.")
@@ -178,6 +193,8 @@ async def render_page(page_num: int, request: Request):
 @app.get("/api/vdr/doc-info")
 async def get_doc_info(request: Request):
     token = request.cookies.get("vdr_session")
+    if token is None:
+        raise HTTPException(status_code=403, detail="Access revoked or session expired.")
     session = get_session_from_db(token)
     if not session or not session.get("active"):
         raise HTTPException(status_code=403, detail="Access revoked or session expired.")

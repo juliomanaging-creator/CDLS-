@@ -1,0 +1,11 @@
+========================================================
+ CDLS CONTAINER HARDENING AUDIT (CIS DOCKER CONTROLS)   
+ Execution Date: 2026-09-21 13:09:16Z
+========================================================
+
+[CIS 4.1] Non-root User Policy:
+  - Verified: Service containers execute under dedicated non-root profiles.
+[CIS 5.12] Read-Only Root Filesystem: PASS
+[CIS 5.3] Linux Kernel Capabilities (cap_drop: ALL): PASS
+[CIS 5.25] Restrict Privilege Escalation (no-new-privileges: true): PASS
+[CIS 5.10 / 5.11] Resource Boundaries (CPU/RAM Constraints): PASS

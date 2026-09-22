@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Universal Multi-Agent RAG: Auto-Repair, Sync, and Run Script
+Universal Multi-Agent RAG: Auto-Repair, Sync, and Run Script
 #>
 
 $ErrorActionPreference = "Stop"

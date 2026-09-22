@@ -1,0 +1,62 @@
+name: multi-agentragretrieval-augmentedgeneration
+services:
+  api:
+    build:
+      context: C:\Users\MezaJ\OneDrive\Desktop\multi-agent RAG (Retrieval-Augmented
+        Generation
+      dockerfile: Dockerfile.api
+    cap_drop:
+      - ALL
+    container_name: cdls-api-server
+    deploy:
+      resources:
+        limits:
+          cpus: 1.5
+          memory: "2147483648"
+    image: cdls-api:latest
+    networks:
+      cdls-internal: null
+    ports:
+      - mode: ingress
+        host_ip: 127.0.0.1
+        target: 8000
+        published: "8000"
+        protocol: tcp
+    read_only: true
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m
+  vdr:
+    build:
+      context: C:\Users\MezaJ\OneDrive\Desktop\multi-agent RAG (Retrieval-Augmented
+        Generation
+      dockerfile: Dockerfile.vdr
+    cap_drop:
+      - ALL
+    container_name: cdls-vdr-server
+    deploy:
+      resources:
+        limits:
+          cpus: 1
+          memory: "1073741824"
+    image: cdls-vdr:latest
+    networks:
+      cdls-internal: null
+    ports:
+      - mode: ingress
+        host_ip: 127.0.0.1
+        target: 8001
+        published: "8001"
+        protocol: tcp
+    read_only: true
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m
+networks:
+  cdls-internal:
+    name: multi-agentragretrieval-augmentedgeneration_cdls-internal
+    driver: bridge
